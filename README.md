@@ -1,6 +1,6 @@
 # Designer-Notes
 
-[![Build Status](https://travis-ci.com/jskyzero/Designer-Notes.svg?token=bb9bNFdxJEbTo2rrgfMi&branch=master)](https://travis-ci.com/jskyzero/Designer-Notes)
+[![Build Status](https://travis-ci.com/jskyzero/Designer-Notes.svg?branch=jekyll)](https://travis-ci.com/jskyzero/Designer-Notes)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/jskyzero/Designer-Notes)
 
 jskyzero's notes about how to be a game designer.
