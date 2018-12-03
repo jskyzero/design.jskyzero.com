@@ -69,7 +69,7 @@ exclude:
   - sleek.jpg
 
 include: ['_pages']
-permalink: /:title/
+permalink: /:year/:month/:day/:title/
 
 compress_html:
   clippings: all
