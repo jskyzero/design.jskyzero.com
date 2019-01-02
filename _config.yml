@@ -3,10 +3,12 @@ title: 設計者筆記 # your site title
 author: jskyzero # You :P
 description: > # Meta description of Homepage
   jskyzero's notes about game designer.
-baseurl: "/Designer-Notes" # the subpath of your site, e.g. /blog
 # url: "https://jskyzero.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-url: https://jskyzero.com
-img_url: /Designer-Notes/assets/img
+# baseurl: "/Designer-Notes" # the subpath of your site, e.g. /blog
+# img_url: /Designer-Notes/assets/img
+url: https://design.jskyzero.com
+baseurl: ""
+img_url: "/assets/img"
 excerpt_separator: <!--more-->
 
 # SEO PLUGIN
