@@ -4,7 +4,8 @@ author: jskyzero # You :P
 description: > # Meta description of Homepage
   jskyzero's notes about game designer.
 baseurl: "/Designer-Notes" # the subpath of your site, e.g. /blog
-url: "https://jskyzero.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+# url: "https://jskyzero.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://jskyzero.com
 img_url: /Designer-Notes/assets/img
 excerpt_separator: <!--more-->
 
