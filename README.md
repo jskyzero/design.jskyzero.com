@@ -3,12 +3,18 @@
 [![Build Status](https://travis-ci.com/jskyzero/Designer-Notes.svg?branch=jekyll)](https://travis-ci.com/jskyzero/Designer-Notes)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/jskyzero/Designer-Notes)
 
-jskyzero's notes about how to be a game designer.
+jskyzero's notes about game designer.
+
+
+![preview](assets/img/preview.jpg)
 
 
 ## How to use
 
+You can view it via website, or you can download the source file and run in your local machine.
+
 ### Before
+
 + Jekyll: `gem install jekyll`
 + NodeJS (8 or greater)
 + Gulp CLI (optional, but recommended): `npm install --global gulp-cli`
