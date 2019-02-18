@@ -18,6 +18,7 @@ You can view it via website, or you can download the source file and run in your
 + Jekyll: `gem install jekyll`
 + NodeJS (8 or greater)
 + Gulp CLI (optional, but recommended): `npm install --global gulp-cli`
+    + [`Gulp exits with 'ReferenceError: internalBinding is not defined'`issues](https://github.com/gulpjs/gulp/issues/2246) 
 
 ### Install & Run
 
