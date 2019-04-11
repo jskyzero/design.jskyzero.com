@@ -26,9 +26,11 @@ social:
 navigation: # Navigation links
   - {name: 'Home', link: '/'}
   - {name: 'Daily', link: '/daily'}
+  - {name: 'Program', link: 'https://blog.jskyzero.com'}
   - {name: 'Categories', link: '/categories'}
-  - {name: 'About', link: '/about'}
-  - {name: 'Contact', link: '/contact'}
+  # - {name: 'About', link: 'https://jskyzero.com'}
+  # - {name: 'About', link: '/about'}
+  # - {name: 'Contact', link: '/contact'}
 
 
 tagline: >

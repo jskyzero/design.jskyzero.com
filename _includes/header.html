@@ -9,9 +9,16 @@
       <nav class="header__links">
         <div class="container header__links-wrapper">
           {% for item in site.navigation %}
+            {% assign result = item.link | slice: 0, 1 %}
+            {% if result == "/" %}
             <a class="header__link" href="{{site.url}}{{ item.link | relative_url }}" itemprop="url">
-              <span itemprop="name">{{ item.name }}</span>
-            </a>
+                <span itemprop="name">{{ item.name }}</span>
+              </a>
+            {% else %}
+            <a class="header__link" href="{{ item.link | relative_url }}" itemprop="url">
+                <span itemprop="name">{{ item.name }}</span>
+              </a>
+            {% endif %}
           {% endfor %}
         </div>
       </nav>
