@@ -22,3 +22,5 @@ categories: [Summary]
 + The Pacing of PUBG 
   + BR（大逃殺）游戲其實是驚悚游戲
   + 延長懸念時間、四個特徵：明確賭注、無處不在的威脅、時間壓力、不斷升高的風險
++ Balancing for Skill
+  + 傻瓜策略帮助玩家入坑，但需要尽早失效，以免玩家无聊或者碰壁无法转向其他策略。
