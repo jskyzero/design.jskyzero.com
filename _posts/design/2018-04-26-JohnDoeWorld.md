@@ -3,7 +3,7 @@ layout: post
 title: JohnDoeWorld 项目总结
 featured-img: JohnDoeWorld
 mathjax: true
-categories: [JohnDoeWorld, Document, Summary]
+categories: [Document, Summary, Design]
 ---
 
 [JohnDoeWorld](https://github.com/jskyzero/JohnDoeWorld)基本上是咱和+C老哥两个人做的游戏，是ID@Xbox梦想校园行比赛的参赛作品，仅通过初赛。

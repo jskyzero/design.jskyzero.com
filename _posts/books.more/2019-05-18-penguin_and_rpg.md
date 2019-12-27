@@ -3,7 +3,7 @@ layout: post
 title: 《企鵝公路》與場景設計
 featured-img: penguin_highway
 mathjax: true
-categories: [Summary]
+categories: [Summary, BooksMore]
 ---
 
 是部蠻不錯的電影，這裏試著概述壹下影片中人物、故事，分析其中不錯的場景

@@ -3,7 +3,7 @@ layout: post
 title: 《額外加分》系列總結
 featured-img: bloodborne
 mathjax: true
-categories: [Summary]
+categories: [Summary, BooksMore]
 ---
 
 
