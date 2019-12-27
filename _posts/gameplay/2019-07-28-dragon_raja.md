@@ -3,7 +3,7 @@ layout: post
 title: "《龍族幻想》體驗報告"
 featured-img: dragon_raja
 mathjax: true
-categories: [DRAGON RAJA, Gameplay]
+categories: [Gameplay]
 ---
 
 從《代號：夏娃》的技術展示那個時候開始關注的游戲，總體評價應該是，唔，一款很優秀的商業化游戲。
