@@ -226,4 +226,6 @@ gulp.task('serve', function() {
   });
 });
 
-gulp.task('build', ['sass', 'js', 'jekyll-build', 'img', 'sw']);
+// gulp.task('build', ['sass', 'js', 'jekyll-build', 'img', 'sw']);
+gulp.task('build', ['sass', 'js', 'sw']);
+
