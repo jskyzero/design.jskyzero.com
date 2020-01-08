@@ -85,4 +85,5 @@ plugins:
   - jekyll-mermaid
 
 mermaid:
-  src: '{{site.baseurl}}/assets/js/mermaid.min.js'
+  # src: '{{site.baseurl}}/assets/js/mermaid.min.js'
+  src: 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.4/mermaid.min.js'
