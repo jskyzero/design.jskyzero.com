@@ -32,3 +32,4 @@ You can view it via website, or you can download the source file and run in your
 + serve: `bundle exec jekyll serve`
 + image/css: `gulp img` / `glup sass`
 + change file ext name: `for x in *.jpeg; do mv "$x" "${x%.jpeg}.jpg"; done`
++ mermaid: `./node_modules/.bin/mmdc -h`, `mmdc -i input.mmd -o output.svg`

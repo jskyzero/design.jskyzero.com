@@ -42,7 +42,7 @@ categories: [Summary, BooksMore]
 
 從結構劃分的角度來說，一般會可以理解為遊戲是需要一個輸入輸出的循環的，也就是：
 
-<div style="width:100%;overflow:scroll">
+<div style="overflow:scroll">
 {% mermaid %}
 graph TD;
   A[玩家] -->|輸入| B[遊戲];
