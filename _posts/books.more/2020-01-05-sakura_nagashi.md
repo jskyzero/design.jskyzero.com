@@ -12,7 +12,7 @@ categories: [Summary, BooksMore]
 
 # 桜流し / Sakura Nagashi
 
-## 前言
+## 前言：桜流し / Sakura Nagashi
 
 > *本文希望能對想要在遊戲行業从事工作——尤其是設計工作的同學提供一定的方向上的幫助和參考，全文會圍繞時間的推進我對遊戲本身、遊戲開發、遊戲行業的不同認知展開。*
 > 

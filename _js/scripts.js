@@ -14,7 +14,8 @@ $( document ).ready( function() {
     let index = document.getElementById("index");
     let h1 = document.getElementsByTagName("h1")[1];
     if (!h1) {
-        index.remove();
+        // console.log(undefined != index);
+        if (undefined != index) index.parentElement.removeChild(index);
     } else {
         h1.parentElement.insertBefore(index, h1.nextElementSibling);
     }

@@ -1,7 +1,7 @@
 {
-  "name": "sleek",
+  "name": "designer-notes",
   "version": "1.0.0",
-  "description": "Sleek is a modern Jekyll theme focused on speed performance & SEO best practices.",
+  "description": "jskyzero's notes about game designer.",
   "main": "gulpfile.js",
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
@@ -49,13 +49,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/janczizikow/sleek.git"
+    "url": "git+https://github.com/jskyzero/design.jskyzero.com.git"
   },
   "keywords": [],
-  "author": "Jan Czizikow",
+  "author": "jskzyero",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/janczizikow/sleek/issues"
+    "url": "https://github.com/jskyzero/design.jskyzero.com/issues"
   },
-  "homepage": "https://github.com/janczizikow/sleek#readme"
+  "homepage": "https://github.com/jskyzero/design.jskyzero.com#readme"
 }

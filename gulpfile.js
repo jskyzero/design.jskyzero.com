@@ -13,7 +13,7 @@ const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const clean = require('gulp-clean');
 const sass = require('gulp-sass');
-const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+// const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 const messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
@@ -53,7 +53,7 @@ function handleErrors() {
 // Build the Jekyll Site
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+    return cp.spawn( 'bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -137,7 +137,7 @@ gulp.task('critical', function (cb) {
 
 gulp.task('watch', function() {
   gulp.watch('_sass/**/*.scss', ['sass']);
-  gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*.md',  'pages_/*.md', '_include/*html'], ['rebuild']);
+  gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*.md','_posts/**/*.md',  'pages_/*.md', '_include/*html'], ['rebuild']);
   gulp.watch(src.js, ['js']);
 });
 
