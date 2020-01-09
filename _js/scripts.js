@@ -9,6 +9,15 @@ $( document ).ready( function() {
     ShowHideNav();
     formCheck();
 
+    
+    // console.log("change index dom position");
+    let index = document.getElementById("index");
+    let h1 = document.getElementsByTagName("h1")[1];
+    if (!h1) {
+        index.remove();
+    } else {
+        h1.parentElement.insertBefore(index, h1.nextElementSibling);
+    }
 } );
 
 // Close modal if ESC is pressed

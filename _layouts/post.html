@@ -61,8 +61,11 @@ layout: compress
     <div class="container">
       <article class="post-content" itemprop="articleBody">
 
-        {{ content }}
+        <div id="index">
+        {% include toc.html html=content %}
+        </div>
 
+        {{ content }}
       </article>
       <div class="post-content controls__inner">
         <div class="controls__item prev">
