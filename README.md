@@ -1,7 +1,7 @@
 # Designer-Notes
 
-[![Build Status](https://travis-ci.com/jskyzero/Designer-Notes.svg?branch=jekyll)](https://travis-ci.com/jskyzero/Designer-Notes)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/jskyzero/Designer-Notes)
+[![Build Status](https://travis-ci.com/jskyzero/design.jskyzero.com.svg?branch=jekyll)](https://travis-ci.com/jskyzero/design.jskyzero.com)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/jskyzero/design.jskyzero.com)
 
 jskyzero's notes about game designer.
 
