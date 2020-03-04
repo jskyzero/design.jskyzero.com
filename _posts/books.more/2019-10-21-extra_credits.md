@@ -26,7 +26,14 @@ categories: [Summary, BooksMore]
   + 傻瓜策略帮助玩家入坑，但需要尽早失效，以免玩家无聊或者碰壁无法转向其他策略。
 + NieR Automata Sacrifice and the Meaning of Kindness
   + 善行所付出的代價
-+ Overwatch and Asymmetric Level Design
-  + 關卡與角色的雙重平衡，不斷演變的衝突點
 + Prey - The Enemy Inside
   + 雙重心裡問答
++ Overwatch and Asymmetric Level Design
+  + 關卡與角色的雙重平衡，不斷演變的衝突點
++ Overwatch and Asymmetric Character Design
+  + 隊伍的構成
+  + 角色的屬性與地圖的契合
++ The Witcher III: Wild Hunt
+  + 場景（遊戲片段）的美
+  + 線索與開放世界
+  + 偵探與冒險精神主角特征
