@@ -6,12 +6,12 @@
 jskyzero's notes about game designer.
 
 
-![preview](assets/img/preview.jpg)
+![preview](https://lh3.googleusercontent.com/ZkEtoy_h4J4RxRq0Nvu7xrebqfA8fpIlrSXOJvryTkmxCvBDkXPWm2G2aEC4_QFtoZrWdpuY7eQaF9zCzyhpRUKXVy-uJQdLaiIkCVQEsQUYbzkfGAwZ3rnS9qvOaIyzeLSRiaK74EabSb9XRJMKX3636v43MU-p_hsMdAjC5HybBN-jpbWrk3Qb0btW-wIWDn3VINl-uzWs7NqfTmUqjyVsq2tXpQjKVQ5xQE2HB-j5D4kRv6M7P6Ind4MOuv9aYB8nt0MmRM9WqpdBQ8E9qSJ9hdiuIkTTVAz95_i2h--sLrvzXkj6k4g6-MR4upqsBH4ecEsQERu2DLGRhjCFVfAAfTKHKhaHHh-lyMXCU1JAG8r5Ls-LnNzvooLfK_yy8JMcRD1gIzBDuwj7leS_bng_3fzFsDAJTrKUXdPTgcFys2LjO3YkjDa1zaoZHR8tXOmi7R2n7OT4vM68u8vQVFI7XCDKU0jJvfaDWw8QP8kDabxZLx9oquK3o1s192PzRWt6W8kLTv44zqfed219yEpv6724vaRS5kBxs3G63NXi03l_DClr-GRyELY7P2Ph8FzNZAFJU4lku3c5zbyt1FwoqO-7pAf7WhHWPgRdlGAKCWUkoNQwmgtZk3slsWPuusSykm18L7xP3q1wUlcIdmqZx0YAqYj55Z0qyCykuAFqaFznwreI6DazR3FezyvpB9A9WOi0F19vpX1GGkBH0zu5N7e0NGx5a6iY_mf3WjhE_zyw0JRZUBY=w2001-h995-no)
 
 
 ## How to use
 
-You can view it via website, or you can download the source file and run in your local machine.
+You can view it via [website](https://design.jskyzero.com/), or you can download the source file and run in your local machine.
 
 ### Before
 
