@@ -5,3 +5,4 @@ source "https://rubygems.org"
 gemspec
 
 gem "jekyll-mermaid", "~> 1.0"
+gem "kramdown-parser-gfm"
