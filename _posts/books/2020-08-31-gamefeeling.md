@@ -1,8 +1,7 @@
 ---
 layout: post
 title: 《游戏感》總結
-# featured-img: game_feeling
-featured-img: sky
+featured-img: gamefeeling
 mathjax: true
 categories: [Books, Summary]
 ---
