@@ -4,16 +4,23 @@ FROM node:10
 COPY . /home/node
 WORKDIR /home/node
 
-# ENV http_proxy http://host.docker.internal:7890
-# ENV https_proxy http://host.docker.internal:7890
+ENV http_proxy http://host.docker.internal:7890
+ENV https_proxy http://host.docker.internal:7890
 RUN echo 'Acquire::http::proxy "http://host.docker.internal:7890";' > /etc/apt/apt.conf.d/40proxy
 
 
 RUN apt update
 RUN apt install -y ruby ruby-dev
 # RUN gem install jekyll bundler
-RUN npm install -g gulp-cli
-RUN npm install
+
+# RUN npm config set strict-ssl false
+# RUN npm config set proxy http://host.docker.internal:7890
+# RUN npm config set https-proxy http://host.docker.internal:7890
+
+# RUN npm install -g gulp-cli --registry=https://registry.npm.taobao.org
+
+# RUN apt-get install -y libvips-dev --no-install-recommends
+# RUN npm install --registry=https://registry.npm.taobao.org
 
 
 
