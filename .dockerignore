@@ -1,0 +1,4 @@
+.git
+.bundle
+node_modules
+npm-debug.log
