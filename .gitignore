@@ -6,8 +6,8 @@ _img
 # Gemfile.lock
 .idea/*
 npm-debug.log
-*.js.map
-maps
+# *.js.map
+# maps
 
 # OS Generated files #
 ######################

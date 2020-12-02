@@ -9,6 +9,13 @@ $( document ).ready( function() {
     ShowHideNav();
     formCheck();
 
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
     
     // console.log("change index dom position");
     let index = document.getElementById("index");

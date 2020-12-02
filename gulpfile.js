@@ -24,7 +24,8 @@ const prefix = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const critical = require('critical');
-const sw = require('sw-precache');
+// const sw = require('sw-precache');
+const sw = require('workbox-build');
 
 // Image Generation
 const responsive = require('gulp-responsive');
@@ -154,12 +155,39 @@ gulp.task('html', function() {
 });
 
 gulp.task('sw', function() {
-  const rootDir ='./';
+  // const rootDir ='./';
   const distDir = './_site';
 
-  sw.write(`${rootDir}/sw.js`, {
-    staticFileGlobs: [distDir + '/**/*.{js,html,css,png,jpg,svg}'],
-    stripPrefix: distDir
+  // sw.generateSW(`${rootDir}/sw.js`, {
+  //   staticFileGlobs: [distDir + '/**/*.{js,html,css,png,jpg,svg}'],
+  //   stripPrefix: distDir
+  // });
+
+  return sw.generateSW({
+    globDirectory: 'build',
+    globPatterns: [
+      distDir + '**/*.{html,json,js,css}',
+    ],
+    swDest: `assets/js/sw.js`,
+
+    // Define runtime caching rules.
+    runtimeCaching: [{
+      // Match any request that ends with .png, .jpg, .jpeg or .svg.
+      urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+
+      // Apply a cache-first strategy.
+      handler: 'CacheFirst',
+
+      options: {
+        // Use a custom cache name.
+        cacheName: 'images',
+
+        // Only cache 10 images.
+        expiration: {
+          maxEntries: 10,
+        },
+      },
+    }],
   });
 });
 
