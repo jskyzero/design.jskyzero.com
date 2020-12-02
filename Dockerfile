@@ -45,11 +45,6 @@ RUN bundle install
 COPY ./package.json /home/node/package.json
 RUN npm install --registry=https://registry.npm.taobao.org --ignore-scripts
 
-
-
-COPY . /home/node
-
-
 # RUN npm config set strict-ssl false
 # RUN npm config set proxy http://host.docker.internal:7890
 # RUN npm config set https-proxy http://host.docker.internal:7890
@@ -58,8 +53,13 @@ COPY . /home/node
 # RUN apt-get install -y libvips-dev --no-install-recommends
 # RUN npm install --registry=https://registry.npm.taobao.org
 
-# npm rebuild jpegtran-bin
-# npm rebuild node-sass
+RUN npm rebuild node-sass
+RUN npm rebuild sharp
+RUN export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=0 && npm rebuild puppeteer
+RUN npm rebuild gifsicle
+RUN npm rebuild jpegtran-bin
+RUN export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=0 && npm rebuild
+
 
 # export LC_ALL=C.UTF-8
 # export LANG=en_US.UTF-8
@@ -68,7 +68,6 @@ COPY . /home/node
 # bundle exec jekyll serve --host 0.0.0.0
 
 # replace this with your application's default port
-EXPOSE 4000
 
 
   # "proxies": {
@@ -79,12 +78,16 @@ EXPOSE 4000
   #   }
   # },
 
+EXPOSE 4000
+
+
+COPY . /home/node
+# # Run the specified command within the container.
+# CMD [ "bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0" ]
 
 # docker image build -t jskyzero/node10:0.0.1 .
 # docker container run -it -p 8000:4000 jskyzero/node10:0.0.1   /bin/bash
 # bundle exec jekyll serve --host 0.0.0.0
-
-# docker container run -it --network="host" -p 8000:4000 jskyzero/node10:0.0.1   /bin/bash
 
 
 
