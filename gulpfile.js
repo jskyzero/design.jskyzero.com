@@ -107,7 +107,7 @@ gulp.task('js', function() {
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(uglify())
-    .pipe(sourcemaps.write('./maps'))
+    .pipe(sourcemaps.write('./'))
     .pipe(size())
     .pipe(gulp.dest(dist.js))
     .pipe(browserSync.reload({stream: true}))
