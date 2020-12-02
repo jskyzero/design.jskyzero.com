@@ -1,4 +1,10 @@
 .git
+
 .bundle
+Gemfile.lock
+
 node_modules
+package-lock.json
+
 npm-debug.log
+_site
