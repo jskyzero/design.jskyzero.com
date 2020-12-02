@@ -9,7 +9,6 @@ $( document ).ready( function() {
     ShowHideNav();
     formCheck();
 
-    
     // console.log("change index dom position");
     let index = document.getElementById("index");
     let h1 = document.getElementsByTagName("h1")[1];

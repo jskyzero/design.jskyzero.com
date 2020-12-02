@@ -24,7 +24,7 @@
 {% if site.service_worker %}
 <script async>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function( registration ) {
+    navigator.serviceWorker.register('{{ "/assets/js/sw.js" | relative_url }}').then(function( registration ) {
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
     })
     .catch(function(error) {
