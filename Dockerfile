@@ -57,8 +57,8 @@ RUN npm rebuild node-sass
 RUN npm rebuild sharp
 RUN export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=0 && npm rebuild puppeteer
 RUN npm rebuild gifsicle
-RUN npm rebuild jpegtran-bin
-RUN export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=0 && npm rebuild
+# RUN npm rebuild jpegtran-bin
+# RUN export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=0 && npm rebuild
 
 
 # export LC_ALL=C.UTF-8
