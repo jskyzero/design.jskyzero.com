@@ -182,9 +182,9 @@ gulp.task('sw', function() {
         // Use a custom cache name.
         cacheName: 'images',
 
-        // Only cache 10 images.
+        // Only cache 100 images.
         expiration: {
-          maxEntries: 10,
+          maxEntries: 100,
         },
       },
     }],
