@@ -6,7 +6,7 @@ mathjax: true
 categories: [warriors, Gameplay]
 ---
 
-施工中的文章喵，打算聊一下塞尔达无双。
+最近在玩的游戏喵，打算聊一下塞尔达无双。
 
 <!--more-->
 
