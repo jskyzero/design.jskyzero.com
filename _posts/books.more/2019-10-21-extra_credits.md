@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 《額外加分》系列總結
+title: 《额外加分》系列总结
 featured-img: bloodborne
 mathjax: true
 categories: [Summary, BooksMore]
 ---
 
 
-額外加分系列超棒的，這裏打算做一些總結梳理，計劃定期更新。
+额外加分系列超棒的，这里打算做一些总结梳理，计划定期更新。
 
 <!--more-->
 
@@ -15,25 +15,25 @@ categories: [Summary, BooksMore]
 
 ## 2019.10~>2020.3
 
-+ Persona 5 and Jungian Psychology 
-  + 人格面具和榮格心理學
-  + 人格面具、阿尼瑪和阿尼姆斯、陰影、自性
-  + [分析心理学的概述](https://wiki.mbalib.com/wiki/%E5%88%86%E6%9E%90%E5%BF%83%E7%90%86%E5%AD%A6)
-+ The Pacing of PUBG 
-  + BR（大逃殺）游戲其實是驚悚游戲
-  + 延長懸念時間、四個特徵：明確賭注、無處不在的威脅、時間壓力、不斷升高的風險
++ Persona 5 and Jungian Psychology
+  + 人格面具和荣格心理学
+  + 人格面具、阿尼玛和阿尼姆斯、阴影、自性
+  + [分析心理学的概述](https://wiki.mbalib.com/wiki/%E5%88%86%E6%9E%90%E5%BF%83%E7%90%86%E5%AD% A6)
++ The Pacing of PUBG
+  + BR（大逃杀）游戏其实是惊悚游戏
+  + 延长悬念时间、四个特征：明确赌注、无处不在的威胁、时间压力、不断升高的风险
 + Balancing for Skill
   + 傻瓜策略帮助玩家入坑，但需要尽早失效，以免玩家无聊或者碰壁无法转向其他策略。
 + NieR Automata Sacrifice and the Meaning of Kindness
-  + 善行所付出的代價
+  + 善行所付出的代价
 + Prey - The Enemy Inside
-  + 雙重心裡問答
+  + 双重心里问答
 + Overwatch and Asymmetric Level Design
-  + 關卡與角色的雙重平衡，不斷演變的衝突點
+  + 关卡与角色的双重平衡，不断演变的冲突点
 + Overwatch and Asymmetric Character Design
-  + 隊伍的構成
-  + 角色的屬性與地圖的契合
+  + 队伍的构成
+  + 角色的属性与地图的契合
 + The Witcher III: Wild Hunt
-  + 場景（遊戲片段）的美
-  + 線索與開放世界
-  + 偵探與冒險精神主角特征
+  + 场景（游戏片段）的美
+  + 线索与开放世界
+  + 侦探与冒险精神主角特征
