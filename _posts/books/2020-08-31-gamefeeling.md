@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《游戏感》總結
+title: 《游戏感》总结
 featured-img: gamefeeling
 mathjax: true
 categories: [Books, Summary]

@@ -74,6 +74,7 @@ GEM
 
 PLATFORMS
   ruby
+  universal-darwin-20
   x64-mingw32
 
 DEPENDENCIES
@@ -83,4 +84,4 @@ DEPENDENCIES
   kramdown-parser-gfm
 
 BUNDLED WITH
-   2.1.4
+   2.2.1
