@@ -6,7 +6,7 @@ mathjax: true
 categories: [Summary, BooksMore]
 ---
 
-本文将讨论在一个内卷加剧、阶级固化的世代，如何正确的认知人的发展历程，以做到宠辱不惊、脚踏实地。
+本文将讨论在一个内卷加剧、阶级固化的世代，如何正确的认知人的发展历程，以持续做到宠辱不惊、脚踏实地。
 
 <!-- 无法阻止的，丧失的预感。与，不想忘记的事情。 -->
 
@@ -15,11 +15,11 @@ categories: [Summary, BooksMore]
 # 最後のキス / One Last Kiss
 
 
-> ⚠⚠⚠
+<!-- > ⚠⚠⚠
 > 
 > 本文仍在修订中
 > 
-> ⚠⚠⚠
+> ⚠⚠⚠ -->
 
 
 现代人似乎一直都很累，从出生开始，就仿佛在玩一个大型PVP游戏，从念书到工作，总在不停的比较、加剧的竞争中。当代社会劳动者的工作强度、被资本剥削的情形愈发增加。一方面，互联网等企业似乎是为数不多的高薪工作，另一方面，伴随着高薪的是996、007等剥夺人正常业余生活的工作安排。
@@ -32,21 +32,29 @@ categories: [Summary, BooksMore]
 
 > *做自己，成为我们能成为的样子，是生命唯一的目的。*
 
-> *---― Robert Louis Stevenson*
+> *--- Robert Louis Stevenson*
 
 
 ### 君所期望之物
 
 假如把“活着”理解为无数行动片段，那我们可以把目光聚焦在单个的行动上，但在讨论行动之前，我认为要先要先讨论欲望。
 
-我曾经抽象把人的行为，抽象的理解为，想要的事物，以及是否愿意支付获得想要事物的代价。这个模型很适合我这样凡事依赖自己，手中一无所有的人。能够很好地诠释我自己的怯弱与不作为。但是很多时候，明明有着无法割舍的珍贵之物，却最终轻易地，拱手葬送。这不由得经常让我怀疑起自己想要的究竟是什么，是否因为误解了自己又或者选择了短期的利益。“想要成为一流的内容制作者，想要给人们带来感动，以及感动以外的更多的东西。想作为正面的力量，推动行业向着正面的方向发展，希望人和人能多一些互相理解，少一些斗争。”，如此而已。
+我曾经抽象把人的行为，抽象的理解为，想要的事物，以及是否愿意支付获得想要事物的代价。这个模型很适合我这样凡事依赖自己，手中一无所有的人。能够很好地诠释我自己的怯弱与不作为。
 
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFI7XG4gIEFb5Lq657G755qE6KGM5Li6XSAtLT585p-Q56eN5oSP5ZGz5LiK55qE5oq96LGhfCBCKOWvueassuacm-WSjOS7o-S7t-eahOWIpOaWrSk7XG4gIEIgLS0-IEN75Luj5Lu3ID4g5qyy5pybfTtcbiAgQyAtLT585pivfCBEW-ihjOWKqOWPr-S7pei_m-ihjF07XG4gIEMgLS0-fOWQpnwgRVvooYzliqjml6Dms5Xov5vooYxdOyIsIm1lcm1haWQiOnsidGhlbWUiOiJkYXJrIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFI7XG4gIEFb5Lq657G755qE6KGM5Li6XSAtLT585p-Q56eN5oSP5ZGz5LiK55qE5oq96LGhfCBCKOWvueassuacm-WSjOS7o-S7t-eahOWIpOaWrSk7XG4gIEIgLS0-IEN75Luj5Lu3ID4g5qyy5pybfTtcbiAgQyAtLT585pivfCBEW-ihjOWKqOWPr-S7pei_m-ihjF07XG4gIEMgLS0-fOWQpnwgRVvooYzliqjml6Dms5Xov5vooYxdOyIsIm1lcm1haWQiOnsidGhlbWUiOiJkYXJrIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
+
+但是很多时候，明明有着无法割舍的珍贵之物，却最终轻易地，拱手葬送。这不由得经常让我怀疑起自己想要的究竟是什么，是否因为误解了自己又或者选择了短期的利益。
+
+> “想要成为一流的内容制作者，想要给人们带来感动，以及感动以外的更多的东西。
+> 
+> 想作为正面的力量，推动行业向着正面的方向发展，
+>
+> 希望人和人能多一些互相理解，少一些斗争。”，如此而已。
 
 为此，作为一名普通的行业从业者，自己只能选择认真的对待每一个工作上和生活上的决策，努力的活着，活下去。然后祈祷着、幻想着那些微小的正确能够累计起来，没有被间或的错误所中和，能够些许的，让自己靠近自己的目标丝毫。
 
 
-### 失败学
+### 失败学相关
 
 虽然大家视野内满是成功的人，但是成功实际上是一个相对概念，大部分的人（的大部分状态）都是失败的。于是，和教你如何成功的成功学对应，也存在着如何帮“失败人士”认清现实的失败学。
 
@@ -59,12 +67,10 @@ categories: [Summary, BooksMore]
 因而，认清失败的普遍性，不要妄自菲薄，放低姿态，踏实的走好接近目标的每一步。
 
 
-## 下半部分：关于工作
+## 下半部分：工作的思考
 
 
-> *工作是为了不用工作。*
-
-> *---― jskyzero*
+> 工作是为了不用工作。
 
 
 ### 工作的正面意义
