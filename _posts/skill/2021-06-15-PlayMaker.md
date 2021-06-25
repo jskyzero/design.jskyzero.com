@@ -23,8 +23,32 @@ categories: [Unity, Summary]
 
 同样的，PlayMaker可以用来组织条件和逻辑操作，也是是逻辑的一种组织方式。
 
+<div style="overflow:scroll">
+{% mermaid %}
+graph LR
+    A[解决方案] -->|包括| B(C# 编写逻辑代码)
+    A[解决方案] -->|包括| B1(PlayMaker 编写状态跳转)
+    
+    C{如何评价一种解决方案}
+    C -->D[表达能力强]
+    D -->D1["接口丰富，可自定义"]
+    D -->D2["逻辑组合流转，自由度高"]
+    D -->D3["变量，支持使用变量"]
+    D -->D4["逻辑条件完备"]
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW-ino-WGs-aWueahiF0gLS0-fOWMheaLrHwgQihDIyDnvJblhpnpgLvovpHku6PnoIEpXG4gICAgQVvop6PlhrPmlrnmoYhdIC0tPnzljIXmi6x8IEIxKFBsYXlNYWtlciDnvJblhpnnirbmgIHot7PovawpXG4gICAgXG4gICAgQ3vlpoLkvZXor4Tku7fkuIDnp43op6PlhrPmlrnmoYh9XG4gICAgQyAtLT5EW-ihqOi-vuiDveWKm-W8ul1cbiAgICBEIC0tPkQxW1wi5o6l5Y-j5Liw5a-M77yM5Y-v6Ieq5a6a5LmJXCJdXG4gICAgRCAtLT5EMltcIumAu-i-kee7hOWQiOa1gei9rO-8jOiHqueUseW6pumrmFwiXVxuICAgIEQgLS0-RDNbXCLlj5jph4_vvIzmlK_mjIHkvb_nlKjlj5jph49cIl1cbiAgICBEIC0tPkQ0W1wi6YC76L6R5p2h5Lu25a6M5aSHXCJdXG5cbiAgICBDIC0tPkVb5piT57u05oqkXVxuICAgIEUgLS0-RTFb5Y-v6K-75oCnXVxuICAgIEUgLS0-RTJb5piT5a2m5LmgXVxuICAgIEUgLS0-RTBb5Y-v5aSN55SoXVxuICAgIEUgLS0-RTNb6LCD6K-V5a655piTXVxuICAgIEUgLS0-RTRbXCLmmJPkv67mlLnvvIzkv67mlLnlj6_mjqdcIl1cblxuICAgIEMgLS0-Rlvorr7orqHkvJjpm4VdXG4gICAgRiAtLT5GMVvmlbDnkIbpgLvovpHmqKHlnotdXG4gICAgRiAtLT5GMlvohJrmnKznlJ_lkb3lkajmnJ9dICAiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/edit/##eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW-ino-WGs-aWueahiF0gLS0-fOWMheaLrHwgQihDIyDnvJblhpnpgLvovpHku6PnoIEpXG4gICAgQVvop6PlhrPmlrnmoYhdIC0tPnzljIXmi6x8IEIxKFBsYXlNYWtlciDnvJblhpnnirbmgIHot7PovawpXG4gICAgXG4gICAgQ3vlpoLkvZXor4Tku7fkuIDnp43op6PlhrPmlrnmoYh9XG4gICAgQyAtLT5EW-ihqOi-vuiDveWKm-W8ul1cbiAgICBEIC0tPkQxW1wi5o6l5Y-j5Liw5a-M77yM5Y-v6Ieq5a6a5LmJXCJdXG4gICAgRCAtLT5EMltcIumAu-i-kee7hOWQiOa1gei9rO-8jOiHqueUseW6pumrmFwiXVxuICAgIEQgLS0-RDNbXCLlj5jph4_vvIzmlK_mjIHkvb_nlKjlj5jph49cIl1cbiAgICBEIC0tPkQ0W1wi6YC76L6R5p2h5Lu25a6M5aSHXCJdXG5cbiAgICBDIC0tPkVb5piT57u05oqkXVxuICAgIEUgLS0-RTFb5Y-v6K-75oCnXVxuICAgIEUgLS0-RTJb5piT5a2m5LmgXVxuICAgIEUgLS0-RTBb5Y-vZnUneW9uZ11cbiAgICBFIC0tPkUzW-iwg-ivleWuueaYk11cbiAgICBFIC0tPkU0W1wi5piT5L-u5pS577yM5L-u5pS55Y-v5o6nXCJdXG5cbiAgICBDIC0tPkZb6K6-6K6h5LyY6ZuFXVxuICAgIEYgLS0-RjFb5pWw55CG6YC76L6R5qih5Z6LXVxuICAgIEYgLS0-RjJb6ISa5pys55Sf5ZG95ZGo5pyfXSAgIiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImRlZmF1bHRcIlxufSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
+    C -->E[易维护]
+    E -->E1[可读性]
+    E -->E2[易学习]
+    E -->E0[可fu'yong]
+    E -->E3[调试容易]
+    E -->E4["易修改，修改可控"]
+
+    C -->F[设计优雅]
+    F -->F1[数理逻辑模型]
+    F -->F2[脚本生命周期]  
+{% endmermaid %}
+</div>
+
 
 与C#编写逻辑代码相比，PlayMaker突出的优点
 + 学习成本低：可视化，无需了解编程知识。
@@ -44,7 +68,19 @@ PlayMaker的局限性：
 
 一个例子：
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW-eBr-aYr-eBreeahF0gLS0-fOW8gOeBr-WujOaIkHwgQlvnga_mmK_kuq7nmoRdXG4gICAgQiAtLT585YWz54Gv5a6M5oiQfCBBXG5cbiAgICBBMVvnga_mmK_nga3nmoRdIC0tPnzljIXlkKt8IEQo5byA54Gv5Yqo5L2cKVxuICAgIEQgLS0-IHzmiafooYzlrox8IEQxKOWFs-eBr-WujOaIkOS6i-S7tilcblxuICAgIEIxW-eBr-aYr-S6rueahF0tLT585YyF5ZCrfCBFKOWFs-eBr-WKqOS9nClcbiAgICBFIC0tPiB85omn6KGM5a6MfCBFMSjlhbPnga_lrozmiJDkuovku7YpIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/edit##eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW-eBr-aYr-eBreeahF0gLS0-fOW8gOeBr-WujOaIkHwgQlvnga_mmK_kuq7nmoRdXG4gICAgQiAtLT585YWz54Gv5a6M5oiQfCBBXG5cbiAgICBBMVvnga_mmK_nga3nmoRdIC0tPnzljIXlkKt8IEQo5byA54Gv5Yqo5L2cKVxuICAgIEQgLS0-IHzmiafooYzlrox8IEQxKOWFs-eBr-WujOaIkOS6i-S7tilcbiAgICBcbiAgICBCMVvnga_mmK_kuq7nmoRdLS0-fOWMheWQq3wgRSjlhbPnga_liqjkvZwpXG4gICAgRSAtLT4gfOaJp-ihjOWujHwgRTEo5YWz54Gv5a6M5oiQ5LqL5Lu2KSIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)
+<div style="overflow:scroll">
+{% mermaid %}
+graph TD
+    A[灯是灭的] -->|开灯完成| B[灯是亮的]
+    B -->|关灯完成| A
+
+    A1[灯是灭的] -->|包含| D(开灯动作)
+    D --> |执行完| D1(关灯完成事件)
+    
+    B1[灯是亮的]-->|包含| E(关灯动作)
+    E --> |执行完| E1(关灯完成事件)
+{% endmermaid %}
+</div>
 
 例子中我们可以看到：
 
