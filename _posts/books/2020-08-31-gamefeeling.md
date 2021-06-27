@@ -27,4 +27,3 @@ categories: [Books, Summary]
 
 ![]({{site.img_url}}/books/game_feeling/7.png)
 
-

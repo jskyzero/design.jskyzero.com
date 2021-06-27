@@ -12,11 +12,13 @@ categories: [warriors, Gameplay]
 
 # 塞尔达无双 灾厄启示录 / Hyrule Warriors: Age of Calamity
 
+
 ## 概述：简介 & 原因
 
 卖了300万份，极有可能超过NIOH成为光荣销量第一的游戏。
 
 明明是个IP衍生无双，除了IP是否还有什么值得参考的地方呢？
+
 
 ## 体验蓝图：游戏内容详细分析
 
@@ -26,6 +28,7 @@ categories: [warriors, Gameplay]
   + 角色能力开放
   + 关卡目标增加
 + 单局体验：割草+精英怪，互为调剂
+
 
 ## 系统：系统流转与投放
 
@@ -48,6 +51,7 @@ categories: [warriors, Gameplay]
 + 单局分为割草和精英怪两类
   + 割草：割草，要对付远程
   + 精英：如上角色动作互相克制。
+
 
 ## 运营活动：制作成本性价比
 

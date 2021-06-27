@@ -20,6 +20,7 @@ categories: [Summary, GamePlayMore]
 
 第二天下班就急匆匆往影院出發，選擇了騎自行車出行，大概是三公里的樣子，刻意繞開了下班的人群，但是被路途中大概四五座天橋弄得心態爆炸。
 
+
 ### 人物關係
 
 主人公是一位很有意思的人，最開始讓人覺得是自稱的研究人員，但是慢慢就覺得詳實的筆記記錄和科學的分析方法，確實是很難得的很厲害的人，不過在某些方面確實有些一根筋。
@@ -54,6 +55,7 @@ categories: [Summary, GamePlayMore]
 > *是大姐姐!*
 
 ![]({{site.img_url}}/books/penguin/ (5).jpg)
+
 
 ### 劇情與場景分析
 
@@ -125,6 +127,7 @@ categories: [Summary, GamePlayMore]
 
 ![]({{site.img_url}}/books/penguin/ (23).jpg)
 
+
 ### 企鵝公路
 
 
@@ -133,5 +136,4 @@ categories: [Summary, GamePlayMore]
 ![]({{site.img_url}}/books/penguin/ (25).jpg)
 
 嘛，企鵝公路是什麼呢，推薦你去親自看看，會比在這裡看我寫這些回味用的文字有趣多了2333。
-
 

@@ -20,6 +20,7 @@ categories: [honkai 3rd, Gameplay]
 
 崩壞三是上海米哈遊於15年推出的一款動作ACT手游，長期以來一直以高畫面質量、高話題性在ACT手游中佔據一席之地，本文試圖系統的拆分一下崩壞三，從中吸取有意義的經驗。
 
+
 ## 體驗藍圖：遊戲內容詳細分析
 
 + 新手期：基礎教學 / 慢熱轉向 / 情感鋪墊
@@ -36,6 +37,7 @@ categories: [honkai 3rd, Gameplay]
   + 主要是核心資源產出的節奏與玩家數值成長的問題
 
 ![](https://lh3.googleusercontent.com/Iw667i6XYi0RXgy4ChljX-eyqqaK5fCUzbNFvCE4_rWC44qnWeNvWwbhHZFHxNaQrYjynqqgZ5iimp0Pdzhb-ad4nmWFO1eJdWLEe4MovRhLJJq8BwLccilTval0ytX5VfDOIYraUlx4k3qbEwtsjKqgUrhq-co1IE4GY5VFcrwgLvAtRVkRwCU6II_kKBezd2jLHgosS7IY0ZmH_UM1ubry8GIPvICe9ch1AX5xNQMILg0bWYRIiCZhVIYQl-US4jlB6MTcM1XVo4ZfTOG5ykgcBJR-vAxtGqLPHbiEu2T9zJGmj3AUDs5UWFecV6_LmtDsG56O3FHFCX4wAAoS_Etly3atje8si5lXjGT79gmvRAm_0wDCC3aqUOBeUUzsAhq5N4y90yOaoqshC_434LMoyKHadCQlVYnmHK36M_KfoFcH1vUxyd6r5h7gcDOMcXKvbhzrDkaVikhte8sZmiCJv-GWYT88QoJtQVV9Vb1LFpw5c360TL2xxfruMOEluqtXe7e7CCaWzv_kadOOPAiRt5zIVy6PdBPiIwUgR01vHcFef5f9tPWWJza3E9a1knHgZ8jQk8iecCS-pyHZ0OY3_uJPWPFhGFymV_eSQRGTI7eVAnPUXD-8sn-ptBxcKW7mvbNodZFlGI6QfIVdgUUFaVZNmgCSCtP4gKYT9bVhxK-6SEljfkge4D3ihcqrxx5JkM1Kqdo1sx5TTXeisMUu5ItPeRlH5iX_Hhq3VPV4r3DosQ=w2436-h1125-no)
+
 
 ## 系統：系統流轉與投放
 
@@ -56,6 +58,7 @@ categories: [honkai 3rd, Gameplay]
 
 對於具體的定量分析，這裡也不展開，遊戲中因為兌換，黑核、白核、星石、徽章等都有著相當的靈活性轉換性，遊戲中主要是通過核心突破資源來做卡點。
 
+
 ## 單局：單局分析與擴充
 
 因為主要數值養成的用途是深淵、戰場的排名，以獲得更多好的獎勵，所以這裡的單局也只對這裡展開
@@ -70,6 +73,7 @@ categories: [honkai 3rd, Gameplay]
 
 這裡可能需要對裝備更新的時間和設計維度進行一個分析...先鴿了
 
+
 ## 運營活動：製作成本性價比
 
 崩三有著相當不錯和有深度的運營玩法
@@ -77,6 +81,7 @@ categories: [honkai 3rd, Gameplay]
 + 人偶玩法
 + 複用單局
 + 外部活動
+
 
 ## 關於戰雙：崩三模式的新風格初生代
 
