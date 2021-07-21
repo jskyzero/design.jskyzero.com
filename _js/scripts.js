@@ -10,6 +10,7 @@ let changeIndexPositon = function () {
   if (!h1) {
     // console.log(undefined != index);
     if (undefined != index) index.parentElement.removeChild(index);
+    $(':header').addClass("hide-before");
   } else {
     h1.parentElement.insertBefore(index, h1.nextElementSibling);
   }

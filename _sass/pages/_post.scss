@@ -44,9 +44,7 @@
     color: #777;
   }
 
-  /* 增加markdown标题编号*/ /* 首先在父元素中（在这里是类markdown-body的元素），初始化你想要编号的最大标题的计数。默认从h1开始编号。 */
   counter-reset: h1;
-  /* 然后父标题初始化子标题的计数，下面以此类推。 */
   h1 {
     counter-reset: h2;
   }
@@ -58,26 +56,34 @@
   }
   h4 {
     counter-reset: h5;
-  } /* 接着在每个标题前面自动加上编号 */
+  }
   h1:before {
     counter-increment: h1;
-    content: counter(h1) ". ";
+    // content: counter(h1) ". ";
   }
   h2:before {
     counter-increment: h2;
-    content: counter(h1) "." counter(h2) ". ";
+    // content: counter(h1) "." counter(h2) ". ";
+    content: counter(h2) ". ";
   }
   h3:before {
     counter-increment: h3;
-    content: counter(h1) "." counter(h2) "." counter(h3) ". ";
+    // content: counter(h1) "." counter(h2) "." counter(h3) ". ";
+    content: counter(h2) "." counter(h3) ". ";
   }
   h4:before {
     counter-increment: h4;
-    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". ";
+    // content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". ";
+    content: counter(h2) "." counter(h3) "." counter(h4) ". ";
   }
   h5:before {
     counter-increment: h5;
-    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+    // content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+  }
+
+  .hide-before:before {
+    content: none;
   }
 
   .md-toc {
@@ -95,20 +101,22 @@
 
   .md-toc-h1 {
     a:before {
-    counter-increment: h1toc;
-    content: counter(h1toc) ". ";
-   }
+      counter-increment: h1toc;
+      // content: counter(h1toc) ". ";
+    }
   }
   .md-toc-h2 {
     a:before {
       counter-increment: h2toc;
-      content: counter(h1toc) "." counter(h2toc) ". ";
+      content:counter(h2toc) ". ";
+      // content: counter(h1toc) "." counter(h2toc) ". ";
     }
   }
-  .md-toc-h3{
+  .md-toc-h3 {
     a:before {
       counter-increment: h3toc;
-      content: counter(h1toc) "." counter(h2toc) "."counter(h3toc) ". ";
+      content:counter(h2toc) "."counter(h3toc) ". ";
+      // content: counter(h1toc) "." counter(h2toc) "." counter(h3toc) ". ";
     }
   }
 }
