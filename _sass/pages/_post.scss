@@ -17,7 +17,9 @@
 
   img {
     background: white;
-    float: left;
+    // float: left;
+    max-width: calc(100% - 2rem);
+    // position: absolute;
   }
   
   p {
