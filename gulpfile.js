@@ -236,13 +236,26 @@ function post_img() {
     .pipe(gulp.dest('assets/img/posts/'));
 };
 
-function mv_img() {
-  return gulp.src('_img/*.{png,jpg}')
+function mv_img_1() {
+  return gulp.src('assets/img/*.{png,jpg}')
     .pipe(imagemin())
     .pipe(gulp.dest('assets/img/'));
 };
 
-exports.img = gulp.series(mv_img, post_img);
+function mv_img_2() {
+  return gulp.src('assets/img/**/*.{png,jpg}')
+    .pipe(imagemin())
+    .pipe(gulp.dest('assets/img/'));
+};
+
+function mv_img_3() {
+  return gulp.src('assets/img/**/**/*.{png,jpg}')
+    .pipe(imagemin())
+    .pipe(gulp.dest('assets/img/'));
+};
+
+exports.mv_img = gulp.series(mv_img_1, mv_img_2, mv_img_3);
+exports.img = gulp.series(post_img, mv_img_1, mv_img_2, mv_img_3);
 
 
 exports.clean = function () {
