@@ -254,6 +254,7 @@ function mv_img_3() {
     .pipe(gulp.dest('assets/img/'));
 };
 
+exports.post_img = post_img;
 exports.mv_img = gulp.series(mv_img_1, mv_img_2, mv_img_3);
 exports.img = gulp.series(post_img, mv_img_1, mv_img_2, mv_img_3);
 
