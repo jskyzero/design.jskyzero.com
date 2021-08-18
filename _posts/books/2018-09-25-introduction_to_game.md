@@ -3,7 +3,7 @@ layout: post
 title: 《游戏专业概论》总结
 featured-img: introduction_to_game
 mathjax: true
-categories: [Books, Summary]
+categories: [Books]
 ---
 
 本书从一门专业学科的角度讲述了游戏的起源、游戏的发展史、分类和研发流程。适合想从学术角度了解游戏的读者。

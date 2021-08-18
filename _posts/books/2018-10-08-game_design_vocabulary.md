@@ -3,7 +3,7 @@ layout: post
 title: 《游戏设计词汇表》总结
 featured-img: vocabulary
 mathjax: true
-categories: [Books, Summary]
+categories: [Books]
 ---
 
 本书提出了游戏的谓词、宾语、语境等颇有意思的概念。虽然和我一向喜欢把问题简单化的思路不同，不过也可以了解看看。

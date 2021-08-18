@@ -3,7 +3,7 @@ layout: post
 title: 《游戏感》总结
 featured-img: gamefeeling
 mathjax: true
-categories: [Books, Summary]
+categories: [Books]
 ---
 
 游戏感究竟是什么，如何确切的定义这种感觉，如何控制玩家的游戏感来制作游戏作品？
