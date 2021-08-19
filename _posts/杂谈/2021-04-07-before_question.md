@@ -3,7 +3,7 @@ layout: post
 title: 问答总结
 featured-img: fe
 mathjax: true
-categories: [总结]
+categories: [杂谈]
 ---
 
 如题，将总结自己在最近回答某游戏设计问题、展示自己的设计案的时候犯下的一些错误，引以为戒。

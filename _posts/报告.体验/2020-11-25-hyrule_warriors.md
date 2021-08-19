@@ -3,7 +3,7 @@ layout: post
 title: "《塞尔达无双》體驗報告"
 featured-img: hyrule_warriors
 mathjax: true
-categories: [warriors, 体验报告]
+categories: [体验报告]
 ---
 
 最近在玩的游戏喵，打算聊一下塞尔达无双。

@@ -3,7 +3,7 @@ layout: post
 title: "《崩坏3》體驗報告"
 featured-img: honkai_punishi
 mathjax: true
-categories: [honkai 3rd, 体验报告]
+categories: [体验报告]
 ---
 
 本文我們將對比《戰雙：帕尼什》來拆分一下動作遊戲《崩壞三》。
