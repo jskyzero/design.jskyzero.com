@@ -31,7 +31,7 @@ layout: compress
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
             {% for post in site.posts %}
-              {% unless post.categories contains 'Daily' %}
+              {% unless post.categories contains '日常' %}
                 {% include card.html %}
               {% endunless %}
             {% endfor %}

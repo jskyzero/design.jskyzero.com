@@ -31,11 +31,11 @@ layout: compress
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
             {% for post in site.posts %}
-              {% if post.categories contains 'Books'%}
+              {% if post.categories contains '读书报告'%}
                 {% include card.html %}
               {% endif %}
 
-              {% if post.categories contains 'BooksMore'%}
+              {% if post.categories contains '一期一会'%}
                 {% include card.html %}
               {% endif %}
             {% endfor %}
