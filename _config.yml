@@ -36,13 +36,12 @@ navigation: # Navigation links
 
 
 tagline: >
-  想做遊戲的初衷是『製造歡樂，傳播感動』，將相關的記錄和文章收錄到了這裡。
-
+  想做游戏的初衷是『制造欢乐，传播感动』，将相关的记录和文章收录到了这里。
 hero_img: posts/bg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
 # for daily
 daily:
-  tagline: 日常，以及不那麼日常。
+  tagline: 日常，以及不那么日常。
   hero_img: posts/bg.she.jpg
 # for books
 books:
