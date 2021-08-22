@@ -9,6 +9,7 @@ permalink: /categories/
 {% for category in categories %}
   <div class="archive-group">
     {% capture category_name %}{{ category | first }}{% endcapture %}
+    {% unless category_name contains '日常' %}
     <div id="#{{ category_name | slugize }}">
     <p></p>
     <h3 class="category-head">{{ category_name }}</h3>
@@ -21,6 +22,7 @@ permalink: /categories/
       <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
     </article>
     {% endfor %}
+    {% endunless %}
   </div>
 {% endfor %}
 </div>
