@@ -18,7 +18,7 @@ categories: [游戏开发]
 ![](https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat)
 ![](https://img.shields.io/badge/日期-2021/09/09-brightgreen.svg?style=flat)
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (3).jpg)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (3).JPG)
 
 + 本文最初为神秘组织编写。希望大家都能深入理解艺术与科学
 + 本文主要讨论游戏AI，或者[人工（キズナ）智障（アイ）](https://www.youtube.com/channel/UC4YaOt1yT-ZeyB0OmxHgolA)
@@ -36,7 +36,7 @@ categories: [游戏开发]
 >
 > 而表演……是为了取悦你。——《人偶自白》
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (6).jpg)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (6).JPG)
 
 总所周知，游戏AI为了良好游戏体验服务。——后边部分的定义基本是句废话，过分感性。不同游戏类型目标体验之间的差距，比人和人的差距还要大。
 
@@ -50,9 +50,9 @@ categories: [游戏开发]
 
 TODO 以下施工中
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (7).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (8).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (9).jpg)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (7).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (8).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (9).JPG)
 
 
 ## 随机的类型
@@ -64,26 +64,26 @@ TODO 以下施工中
 
 ### 均等分布
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (11).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (12).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (13).jpg)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (11).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (12).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (13).JPG)
 
 
 ### 高斯分布
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (14).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (15).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (16).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (17).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (18).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (19).jpg)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (14).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (15).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (16).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (17).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (18).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (19).JPG)
 
 
 ### 柏林噪声
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (20).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (21).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (22).jpg)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (20).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (21).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (22).JPG)
 
 
 ## 虚伪的随机
@@ -96,13 +96,13 @@ TODO 以下施工中
 
 ### 随机值筛选
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (24).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (25).jpg)
-![]({{site.img_url}}/skill/RandomInGameAI/1 (26).jpg)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (24).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (25).JPG)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (26).JPG)
 
 
 ## 总结与参考
 
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (1).jpg)
+![]({{site.img_url}}/skill/RandomInGameAI/1 (1).JPG)
 
