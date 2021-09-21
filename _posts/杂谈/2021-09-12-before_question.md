@@ -1,7 +1,8 @@
 ---
 layout: post
 title: 问答总结
-featured-img: fe
+featured-img: bg2
+# featured-img: fe
 mathjax: true
 categories: [杂谈]
 ---
