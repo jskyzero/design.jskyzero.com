@@ -251,14 +251,14 @@ categories: [杂谈]
 任何一件事都是循序渐进的、无法一蹴而就的，我们可以把复杂的目标拆分为阶段，完成每个阶段，最终完成大的目标。
 
 
-![]({{site.img_url}}/books/reading/2-1-1.png)
+![](/assets/img/books/reading/2-1-1.png)
 
 对于学习也是一样。
 
 
 ## 学习的具体阶段
 
-![]({{site.img_url}}/books/reading/2-1-2.png)
+![](/assets/img/books/reading/2-1-2.png)
 
 + 粗览
   + 快速浏览概念内容

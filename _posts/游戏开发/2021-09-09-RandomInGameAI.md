@@ -18,7 +18,7 @@ categories: [游戏开发]
 ![](https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat)
 ![](https://img.shields.io/badge/日期-2021/09/09-brightgreen.svg?style=flat)
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (3).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (3).JPG)
 
 + 本文最初为神秘组织编写。希望大家都能深入理解艺术与科学
 + 本文主要讨论游戏AI，或者[人工（キズナ）智障（アイ）](https://www.youtube.com/channel/UC4YaOt1yT-ZeyB0OmxHgolA)
@@ -36,7 +36,7 @@ categories: [游戏开发]
 >
 > 而表演……是为了取悦你。——《人偶自白》
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (6).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (6).JPG)
 
 总所周知，游戏AI为了良好游戏体验服务。——后边部分的定义基本是句废话，过分感性。不同游戏类型目标体验之间的差距，比人和人的差距还要大。
 
@@ -54,7 +54,7 @@ categories: [游戏开发]
 
 以动作游戏为例，考虑移动等行为本身的差异性、动作之间不同的衔接、动作释放的概率组成不同的考验等。下面我们给出更加具体的例子：
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (7).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (7).JPG)
 
 以怪物设计为例：
 
@@ -69,13 +69,13 @@ categories: [游戏开发]
   + 我们可以用随机的手法，使得单个动作能有更为丰富的体验
   + 比如移动的方向、时间、结束距离，是否衔接移动等等；动作直接的组合，以何等行为逻辑、哪些攻击手法组合呈现给玩家，也大有可为。
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (8).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (8).JPG)
 
 提到AI中的随机，反应性和随机性是绕不开的话题。
 
 这两种特性，或者说思考方式，是AI最常见的逻辑组织方式，配合差异性的动作，能够构建出表现丰富的AI体验，下面我们给出一个具体的例子：
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (9).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (9).JPG)
 
 > 只狼因为资源格式和数据组织解构大体沿用黑魂，可以用工具进行拆包、反编译得到其具体逻辑配置。
 > 展示的数据略去繁琐的处理过程，仅对设计进行讨论。
@@ -103,13 +103,13 @@ categories: [游戏开发]
 
 ### 均等分布
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (11).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (11).JPG)
 
 均等概率自然是最基础的随机模型。
 
 大部分时候，我们使用的都是离散的均等随机，即便是如图二，也只是把1标准单位拆为了1000份。
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (12).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (12).JPG)
 
 
 以弦一郎的AI为例，在特定距离内，拥有6种行为，按照预期概率进行分布。
@@ -123,14 +123,14 @@ categories: [游戏开发]
   + 弦一郎有三个阶段，三个阶段的招式是有差异的
   + 基本上难度是递进的，以至于在第三阶段见到第一阶段的技能会觉得处理得十分得心应手
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (13).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (13).JPG)
 
 最后我们对固定概率随机进行一个简单的小结。
 
 
 ### 高斯分布
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (14).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (14).JPG)
 
 正态分布本质上是一种对自然的拟合：
 
@@ -145,7 +145,7 @@ categories: [游戏开发]
 
 就像自然界中植物最终的高度，可能受到种子、土壤、水分、空气、光照等等因素的影响。最后综合到一起，就会变成正态分布。
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (15).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (15).JPG)
 
 很遗憾，这里本来是想找一些**<u>使用正态分布产生不同体型的怪物</u>**的例子的，但是作者失败了。
 
@@ -156,7 +156,7 @@ categories: [游戏开发]
 不得不再说一次，随机只是一种做法，采用不采用都可以，满足目标体验需求即可。
 
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (16).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (16).JPG)
 
 另外一边，怪物猎人：世界，中的大小金可以说是一个极佳的例子。
 
@@ -164,7 +164,7 @@ categories: [游戏开发]
 
 虽然无从论证到底是不是正态分布（刷大小金的过程中只要不是目标体型就重置了OTZ），但是呈正态分布大致也是没问题的。
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (17).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (17).JPG)
 
 自然而然地，想到了环境生物的差异体型。
 
@@ -175,7 +175,7 @@ categories: [游戏开发]
 这其实还是定制内容或者填充内容的选择问题，两者如上文所言，各有优劣。
 
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (18).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (18).JPG)
 
 那么对正态分布做一个总结，如上图。
 
@@ -187,7 +187,7 @@ categories: [游戏开发]
 + 随机分布均匀分布，而正态分布从中间到四周由密集到稀疏
 
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (19).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (19).JPG)
 
 这里也把生产过程做一个呈现，留意最终的随机生成方法：
 
@@ -209,21 +209,21 @@ categories: [游戏开发]
 
 ### 柏林噪声
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (20).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (20).JPG)
 
 到这里开始内容就逐渐“玄幻”起来，理想噪声的标准听起来，大概像是是：变化与方向无关；没有剧变；变化与距离无关（如果不对也很正常，门外汉的理解）。
 
 下方的折线图可以看出，柏林噪声或者柏林随机最重要的特性：连续！前面的随机都是离散的，会突变的。
 
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (21).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (21).JPG)
 
 这里给出两个可能的使用场景，就如之前的鱼一样，这里只是可以这么做，实际需不需要做，需要根据需求判断。
 
 只狼中有需要在白蛇神眼皮底下开溜的流程，恶魔之魂中的龙神boss战也是类似的玩法，这里两者都是默认固定周期摆动，实际上头部的旋转就可以使用柏林噪声的连续随机，当流程时间被拉得更长，做固定的几种动作已经没法满足，或者需要做大量随机待机的表现，就可以使用随机来“填充内容”。
 
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (22).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (22).JPG)
 
 总结一下柏林噪声的随机，最大的特征就是连续而不是离散，可以用在各种连续情况，右边介绍了一些基础的控制方式，这里不进行过多展开，有需要时再查阅即可。
 
@@ -240,7 +240,7 @@ categories: [游戏开发]
 
 ### 随机值筛选
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (24).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (24).JPG)
 
 想要说明白计算机的伪随机、或者自然环境下的真随机，有时并不是我们想要的随机这一点，有些复杂，会比较类似复杂的逻辑下特定情况出现的“人工愚蠢”的现象，这里作者用一个亲身经历的例子来说明这一点。
 
@@ -253,7 +253,7 @@ categories: [游戏开发]
 所以我们引入了“筛选”的概念，逻辑十分好懂，发现不合适的，就打回去，重新随。
 
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (25).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (25).JPG)
 
 比较复杂的地方在于，针对各种随机数据类型或者随机模型，如何判断是否不合适，上图给出了一些判断条件的例子。
 
@@ -264,7 +264,7 @@ categories: [游戏开发]
 + 统计学意义上大体随机
 
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (26).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (26).JPG)
 
 当然，规则也不是越复杂越好的，过于复杂可能导致随机本身失去意义。
 
@@ -274,7 +274,7 @@ categories: [游戏开发]
 ## 总结与参考
 
 
-![]({{site.img_url}}/skill/RandomInGameAI/1 (1).JPG)
+![](/assets/img/skill/RandomInGameAI/1 (1).JPG)
 
 
 最后对本文的内容做一个总结：如上图。

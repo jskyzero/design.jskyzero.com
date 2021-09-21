@@ -90,7 +90,7 @@ Happy hacking!
 
 insert like
 ```markdown
-![bg]({{site.img_url}}/HeavenFeel.jpg)
+![bg](/assets/img/HeavenFeel.jpg)
 ```
 
-![bg]({{site.img_url}}/HeavenFeel.jpg)
+![bg](/assets/img/HeavenFeel.jpg)

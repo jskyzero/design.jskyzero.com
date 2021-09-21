@@ -18,7 +18,7 @@ categories: [读书报告]
 本书从主题、角色、世界切入，讲述了游戏剧本编写的一些思路和方法。粗看起来，这本书更像是写给完全没经验的人看的，但实际上在对于一些剧本细节，比如角色划分、世界观设定等细节上的拆分都有可取之处。
 
 
-![]({{site.img_url}}/books/how_to_write_game_plot/plot.png)
+![](/assets/img/books/how_to_write_game_plot/plot.png)
 
 
 以下下简要总结原文。

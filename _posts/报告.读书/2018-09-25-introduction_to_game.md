@@ -38,7 +38,7 @@ categories: [读书报告]
 
 莫利斯在《裸狼》中曾经将人类活动，去除次要目的并加以限制理解成游戏：游戏是以重复和变化的手段进行探索的活动。可以说，探索是生命的本性，游戏也是生命的本性。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (1).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (1).jpg)
 
 + 游戏相关的理论：
 
@@ -57,7 +57,7 @@ categories: [读书报告]
 3. 自主性。
 4. 虚幻性。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (2).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (2).jpg)
 
 
 ### 游戏的发展与演变
@@ -94,7 +94,7 @@ categories: [读书报告]
 7. 个性化自定义。
 8. 故事沉浸。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (3).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (3).jpg)
 
 
 ### 游戏心理学
@@ -129,7 +129,7 @@ PVP需要有一个合适的水平评估算法和对手匹配机制，PVE类型�
 
 1942年2月，出于对弹道研究的需要，世界第一台计算机在美国宾夕法尼亚大学诞生，简称ENIAC，在其基础上诞生了第一台民用计算机UNIVAC，标志着计算机从实验室走向了大众。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (4).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (4).jpg)
 
 + 第一个电子游戏
 
@@ -171,7 +171,7 @@ PVP需要有一个合适的水平评估算法和对手匹配机制，PVE类型�
   + 1992年，id software推出历史上的第一部FPS游戏《德军总部3D》。
   + 1993年加入了真实时间的《Dune Ⅱ》标志着RTS游戏的诞生，时间因素使得其和SLG游戏划开了界限，
   + 1995年，拥有联网功能的《命令与征服》诞生，还有了名为《红色警戒》的资料篇。
-  + ![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (7).jpg)
+  + ![](/assets/img/books/introduction_to_game/introduction_to_game (7).jpg)
 
 
 ### 3D游戏时代
@@ -214,18 +214,18 @@ PVP需要有一个合适的水平评估算法和对手匹配机制，PVE类型�
 
 1971年，世界上第一台游戏机Computer Space诞生，它比较类似现在的街机游戏机。虽然最后失败，但是它的某位开发者参与成立了雅达利公司。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (5).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (5).jpg)
 
 + Pong
   + 1967年，“电视游戏”改革计划的提出，
   + 1972年，名为“Odyssey”（奥德赛）的家庭游戏主机正式上市，当时为其制作游戏的就是雅达利公司，一款名为Pong的乒乓游戏就是世界上第一款被公众接受的街机游戏。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (8).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (8).jpg)
 
 
 ### 雅达利的兴衰
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (6).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (6).jpg)
 
 + 兴盛
   + Pong的成功使得雅达利占据着当时电子游戏市场的绝对主导地位。
@@ -234,7 +234,7 @@ PVP需要有一个合适的水平评估算法和对手匹配机制，PVE类型�
   + 1976年，雅达利发行过一个名为《夜晚驾驶者》的3D主视角的街机游戏，
   + 1977年，雅达利自主研发的类似家用电脑的2600型家用游戏机上市，可以运行上百款游戏，取得前所未有的成功。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (9).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (9).jpg)
 
 + 衰
   + 1982年末，人们最初对电子游戏的热情开始减弱，有评论人士认为是市面上大量的劣质游戏造成的，终于在圣诞节出现大崩溃，
@@ -251,7 +251,7 @@ PVP需要有一个合适的水平评估算法和对手匹配机制，PVE类型�
   + 1965年，开始进军电子产业，最初有一些玩具上的尝试，
   + 1975年看到雅达利的设备后，与其他公司合作在1977年推出了自己的电视游戏平台ColorTVGame6，在当时卖出数百万台。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (10).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (10).jpg)
 
 + 街机
   + 1978年，任天堂将目光投向了街机市场，制作了数款街机游戏，
@@ -264,7 +264,7 @@ PVP需要有一个合适的水平评估算法和对手匹配机制，PVE类型�
 + 后续
   + 之后SFC、N64、GameCube、Wii、NSW等家用主机问世，任天堂也缔造了《萨尔达传説》、《超级马里奥兄弟》、《口袋妖怪》等经典电子游戏系列。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (11).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (11).jpg)
 
 
 ### 家用游戏机市场的群雄割据
@@ -294,7 +294,7 @@ PVP需要有一个合适的水平评估算法和对手匹配机制，PVE类型�
   + 1994年越来越多的游戏开始尝试3D，1994年世嘉发佈Sega Saturn，11天后，索尼发佈PlayStation，
   + 因爲对第三方厂商优惠的政策，SQUARE的《最终幻想Ⅶ》、《最终幻想Ⅷ》为其赢得了日本和世界的市场。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (12).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (12).jpg)
 
 + 领先世界的Virtual Boy
   + 1995年，任天堂的32位主机Virtual Boy投放市场，有著头戴式液晶眼镜用作显示器，买点也在立体游戏上，
@@ -313,11 +313,11 @@ PVP需要有一个合适的水平评估算法和对手匹配机制，PVE类型�
 + 2001年，微软XBOX发售，强悍无比的硬件组合和低廉的售价，以及优秀的网络游戏支持为XBOX赢得了市场，
 + 这段时期，2001年《最终幻想Ⅹ》，世嘉的《梦幻之星Online》，2003年《HALO》。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (14).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (14).jpg)
 
 + 新一代主机争夺战由XBOX360率先拉开，索尼匆匆推出的PS3一直处于弱势，任天堂又发佈Wii全新体感游戏机。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (13).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (13).jpg)
 
 
 ### 便携式掌机的发展
@@ -331,7 +331,7 @@ PVP需要有一个合适的水平评估算法和对手匹配机制，PVE类型�
 + 2004年索尼发佈PSP，任天堂也发佈NDS，虽然初期效率被PSP全面压过，但最终靠著双屏幕的创新理念和衆多新颖的游戏软件在之后的竞争中销量逐步上升。
 + 2011年任天堂推出3DS，具有全新的裸眼观察立体画面的功能，索尼也与同年发佈PSV，引入应用商店等概念，但在游戏软件的竞争中，索尼这次输给了任天堂。
 
-![]({{site.img_url}}/books/introduction_to_game/introduction_to_game (15).jpg)
+![](/assets/img/books/introduction_to_game/introduction_to_game (15).jpg)
 
 
 ### 手机游戏的发展

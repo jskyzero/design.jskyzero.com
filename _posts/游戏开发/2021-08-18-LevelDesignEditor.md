@@ -76,7 +76,7 @@ graph LR;
   + 比如：一个流程处理能告知用户先后经过什么阶段……
 
 
-![]({{site.img_url}}/skill/editor/1.jpg)
+![](/assets/img/skill/editor/1.jpg)
 
 > 图示：UWP UI中，差异化的按钮控件。观察不同的按钮会让用户采取不同的交互策略。
 

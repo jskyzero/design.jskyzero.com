@@ -31,7 +31,7 @@ style="
 
 > *如果有些錯誤是可以承擔的且收益大於代價的話，那麽你會愿意去主動犯錯嗎*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (26).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (26).jpg)
 
 不如先把抄襲相關的事情在這裏説了吧，《龍族幻想》是個商業性質的游戲，中國國内游戲抄襲，唔，并不是什麽新鮮的、一定會被制裁的事情，有從別人那裏聽到說項目組成員特別喜歡《尼爾》所以藉鑒了裏面的雙刀和一些招式？如果真的能把《尼爾》的動作給帶來就好了呢，那樣抄襲可能也是值得的吧，可惜現在來看有只是“抄個”皮毛樣子而已，這裏也不想仔細去做抄襲的鑒定和對比，判定是否有抄襲或者哪裏抄襲，只是想説，這游戲動作打擊感並不好，這點做得並不好。在創意領域，第一個人是天才，後面的人就會折價或者被人罵蠢材了，如果像這樣既視感非常之強的話，就算被罵也只是能説設計者本身的問題，至於設計者是如何自己權衡的，那就是另一個話題了。
 
@@ -42,7 +42,7 @@ style="
 
 > *體驗角色扮演——在東京塔上彈鋼琴*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (1).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (1).jpg)
 
 
 從屬性上來説，這是一款移動端的MMORPG（大型多人在綫角色扮演游戲），這裏大概分成内容向（關卡、場景、玩法）、動作向（職業、技能）和系統（成長、裝備、系統等）這樣幾個方面來分別概述。
@@ -59,7 +59,7 @@ style="
 
 > *水下場景的拍照動作展示*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (7).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (7).jpg)
 
 在場景方面要稍微誇一下，遊戲大概有20張主城地圖，每張都有一定的大小和視覺風格，大概是根據主線劇情演出來定的，因為遊戲中提供可以飛行的載具，拍照系統也提供自由拍照模式，能拍出很多不錯的照片，可以當拍照模擬器玩，喔說到了載具，雖然是遊戲中系統方面的數值重頭，但是外觀上也毫不吝嗇，各種特效拉滿。
 
@@ -77,7 +77,7 @@ style="
 
 > *幻境場景提供的默認拍照，櫻井明那一關Boss房間的感覺很像。*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (15).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (15).jpg)
 
 從職業定位上，大概有肉盾，輸出，法師，奶媽這幾種職業，我選擇的是奶媽，奶媽的職業體系是雙生，本以為會有一些很有趣的機制，但是也只是簡單的雙生共鳴。簡單的分析下技能。
 
@@ -123,72 +123,72 @@ style="
 
 > *仿照凱瑟琳捏的角色*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (2).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (2).jpg)
 
 > *最後最終確定的角色*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (3).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (3).jpg)
 
 > *氪金！首充禮包的外觀，事後發現很少有衣服有這麽好看還有這樣的光效了*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (5).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (5).jpg)
 
 > *繪梨衣是我的！雖然不喜歡這一版的繪梨衣，大概是潛意識裏面我不認為繪梨衣和諾諾很像吧。*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (6).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (6).jpg)
 
 
 > *在卡塞爾學院，背後是山派和巨大雕像。*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (8).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (8).jpg)
 
 > *東京街頭，燈火闌珊。*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (9).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (9).jpg)
 
 > *在試衣館。*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (10).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (10).jpg)
 
 > *在小鎮，民居櫻花樹下。*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (13).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (13).jpg)
 
 > *圖書館，場景提供的默認拍照。*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (14).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (14).jpg)
 
 
 > *木橋上，場景提供的默認拍照。*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (16).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (16).jpg)
 
 > *光翼展開！*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (17).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (17).jpg)
 
 > *俯瞰學院。*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (18).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (18).jpg)
 
 > *東京遠郊的白色死神（不是）*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (19).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (19).jpg)
 
 > *建築物的細節好棒。*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (20).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (20).jpg)
 
 > *在西伯利亞冰原（不是）*
 
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (22).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (22).jpg)
 
 > *在東京旅館*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (25).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (25).jpg)
 
 > *在東京塔*
 
-![]({{site.img_url}}/gameplay/dragon-raja/1 (27).jpg)
+![](/assets/img/gameplay/dragon-raja/1 (27).jpg)
 

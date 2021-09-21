@@ -39,14 +39,14 @@ categories: [体验报告]
   + 商店：提供金币和其他的转换
 + 主要消耗
 
-![]({{site.img_url}}/gameplay/hyrule_warriors/1.jpg)
+![](/assets/img/gameplay/hyrule_warriors/1.jpg)
 
 
 ## 单局：单局分析与扩充
 
 + 角色动作
 
-![]({{site.img_url}}/gameplay/hyrule_warriors/2.jpg)
+![](/assets/img/gameplay/hyrule_warriors/2.jpg)
 
 + 单局分为割草和精英怪两类
   + 割草：割草，要对付远程
