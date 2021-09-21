@@ -3,7 +3,8 @@ layout: post
 title: 用于AI的高级随机技术
 featured-img: dmc5
 mathjax: true
-categories: [游戏开发]
+categories: [游戏开发,游戏AI,随机]
+pro: true
 ---
 
 本文会深入讲解游戏AI的若干随机算法，并附带通俗易懂的例子，严谨的模拟试验，和技法实用运用指南。
@@ -11,12 +12,6 @@ categories: [游戏开发]
 <!--more-->
 
 # 用于AI的高级随机技术
-
-
-![](https://img.shields.io/badge/游戏AI-blue.svg?style=flat)
-![](https://img.shields.io/badge/随机-blue.svg?style=flat)
-![](https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat)
-![](https://img.shields.io/badge/日期-2021/09/09-brightgreen.svg?style=flat)
 
 ![](/assets/img/skill/RandomInGameAI/1 (3).JPG)
 
