@@ -20,12 +20,13 @@
 
   img {
     background: white;
+    border-radius: 5px;
     // float: left;
-    max-width: calc(100% - 2rem);
+    // max-width: calc(100% - 2rem);
     // position: absolute;
   }
   
-  p {
+  p:empty {
     text-indent: 2rem;
   }
 
