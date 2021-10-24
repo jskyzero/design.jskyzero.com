@@ -46,7 +46,7 @@ module Jekyll
       private
       
       def max_count
-        config['max_count'] || 5
+        config['max_count'] || 20
       end
       
       def is_git_repo?
