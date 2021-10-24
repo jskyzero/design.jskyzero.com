@@ -11,9 +11,9 @@ permalink: /categories/
     {% capture category_name %}{{ category | first }}{% endcapture %}
     {% unless category_name contains '日常' %}
     <div id="#{{ category_name | slugize }}">
-    <p></p>
-    <h3 class="category-head">{{ category_name }}</h3>
     <a name="{{ category_name | slugize }}"></a>
+    <!-- <p></p> -->
+    <h3 class="category-head">{{ category_name }} ({{ site.categories[category_name] | size}})</h3>
     </div>
     {% assign each_categories = site.categories[category_name] %}
     {% assign each_categories = each_categories | sort: "title" %}
