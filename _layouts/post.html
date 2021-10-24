@@ -40,8 +40,8 @@ layout: compress
       <h1 class="hero__title">{{ page.title }}</h1>
       <p class="hero__meta">
         <span>
-          <time>{{ page.date | date_to_string }}</time>&nbsp;~&gt;
-          <time>{{ page.last_modified_at | date_to_string }}</time>&nbsp;&middot;
+          <time>{{ page.date | date_to_string }} posted</time>&nbsp;&middot;
+          <time>{{ page.last_modified_at | date_to_string }} modified</time>&nbsp;&middot;
         </span>
         <span>
             <!-- length not right issue -->
@@ -63,7 +63,7 @@ layout: compress
       <article class="post-content" itemprop="articleBody">
 
         <div id="index">
-          {% include toc.html html=content item_class="md-toc-h%level%" class="md-toc" h_min=1 h_max=3%}
+          {% include toc.html html=content item_class="md-toc-h%level%" class="md-toc" h_min=1 h_max=3 %}
           {% include pro.html html=content %}
         </div>
 

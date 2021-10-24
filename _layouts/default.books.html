@@ -30,8 +30,7 @@ layout: compress
         <div class="container">
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
-            {% assign sorted_posts = site.posts | sort: 'date' | sort: 'last_modified_at_str' | reverse %}
-            {% for post in sorted_posts %}
+            {% for post in site.posts %}
               {% if post.categories contains '读书报告'%}
                 {% include card.html %}
               {% endif %}

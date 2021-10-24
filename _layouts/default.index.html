@@ -29,12 +29,19 @@ layout: compress
       <section class="blog">
         <div class="container">
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
-            {% assign sorted_posts = site.posts | sort: 'date' | sort: 'last_modified_at_str' | reverse %}
-            {% for post in sorted_posts %}
+            {% assign groups = site.posts | group_by: 'last_modified_at_str' | sort: 'name' | reverse %}
+            {% for group in groups %}
+            {% assign posts = group.items | sort: "date" | reverse %}
+            {% for post in posts %}
               {% unless post.categories contains '日常' %}
-                {% include card.html %}
+                {% if post.use_modified %}
+                  {% include card.html type="modified"%}
+                {% else %}
+                  {% include card.html %}
+                {% endif %}
               {% endunless %}
             {% endfor %}
+            {% endfor %} 
 
             <!-- {% include pagination.html %} -->
           </div>
