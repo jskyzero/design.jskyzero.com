@@ -40,7 +40,8 @@ layout: compress
       <h1 class="hero__title">{{ page.title }}</h1>
       <p class="hero__meta">
         <span>
-          <time>{{ page.date | date_to_string }}</time>&nbsp;&middot;
+          <time>{{ page.date | date_to_string }}</time>&nbsp;~&gt;
+          <time>{{ page.last_modified_at | date_to_string }}</time>&nbsp;&middot;
         </span>
         <span>
             <!-- length not right issue -->
@@ -68,6 +69,9 @@ layout: compress
 
         {{ content }}
       </article>
+
+      {% include revision.html %}
+
       <div class="post-content controls__inner">
         <div class="controls__item prev">
           {% if page.previous_in_category %}
@@ -98,6 +102,8 @@ layout: compress
         </div>
       </div>
     </div>
+
+
 
     {% if site.disqus.shortname %}
 

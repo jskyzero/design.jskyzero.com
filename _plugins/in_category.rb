@@ -1,6 +1,7 @@
 module Jekyll
   class WithinCategoryPostNavigation < Generator
     def generate(site)
+      puts("FINISH: in_category")
       site.categories.each_pair do |category, posts|
         posts.sort! { |a,b| b <=> a}
         posts.each do |post|

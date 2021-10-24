@@ -30,7 +30,9 @@
       <h2>{{ post.title | strip_html | truncate: 50 }}</h2>
       {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
       <span class="post-card__meta">
-        <time>{{ post.date | date: date_format }}</time>
+        <!-- <time>{{ post.last_modified_at_str }}</time> -->
+        <time>{{ post.last_modified_at | date: date_format }}</time>
+        <!-- <time>{{ post.date | date: date_format }}</time> -->
       </span>
     </div>
     {% if post.summary %}

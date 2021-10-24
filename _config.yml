@@ -88,9 +88,18 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-mermaid
+  - jekyll-last-modified-at
 
 mermaid:
   # src: '{{site.baseurl}}/assets/js/mermaid.min.js'
   # src: 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.4/mermaid.min.js'
   src: 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.10.2/mermaid.min.js'
-  
+
+
+# https://github.com/gjtorikian/jekyll-last-modified-at
+# Optional. The default date format, used if none is specified in the tag.
+# last-modified-at:
+#     date-format: '%d-%b-%y'
+
+# if open git_log
+git_log: false
