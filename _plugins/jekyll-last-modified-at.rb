@@ -9,10 +9,10 @@ module Recents
   class Generator < Jekyll::Generator
     def generate(site)
       items = site.posts.docs.select { |p| p.path.end_with? '.md' }
-      puts("FINISH: jekyll-last-modified-at")
       items.each do |page|
         page.data['last_modified_at_str'] = Jekyll::LastModifiedAt::Determinator.new(site.source, page.path, '%FT%T%:z').to_s
       end
+      puts("FINISH: jekyll-last-modified-at")
     end
   end
 end

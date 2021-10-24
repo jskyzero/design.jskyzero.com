@@ -102,4 +102,4 @@ mermaid:
 #     date-format: '%d-%b-%y'
 
 # if open git_log
-git_log: false
+git_log: true

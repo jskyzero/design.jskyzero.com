@@ -21,6 +21,7 @@ module Jekyll
             # item.data['last_modified_at_str'] = item.data['revisions'][0]['date']
           end
         end
+        puts("FINISH: revision")
       end
     end # Revision
 

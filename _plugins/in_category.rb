@@ -1,7 +1,6 @@
 module Jekyll
   class WithinCategoryPostNavigation < Generator
     def generate(site)
-      puts("FINISH: in_category")
       site.categories.each_pair do |category, posts|
         posts.sort! { |a,b| b <=> a}
         posts.each do |post|
@@ -20,6 +19,7 @@ module Jekyll
           post.data["previous_in_category"] = previous_in_category unless previous_in_category.nil?
         end
       end
+      puts("FINISH: in_category")
     end
   end
 end
