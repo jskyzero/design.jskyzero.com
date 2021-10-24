@@ -3,7 +3,7 @@ layout: post
 title: 用于AI的高级随机技术
 featured-img: dmc5
 mathjax: true
-categories: [游戏开发,游戏AI,随机]
+categories: [游戏开发,游戏AI]
 pro: true
 ---
 
