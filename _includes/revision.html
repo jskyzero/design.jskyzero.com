@@ -1,18 +1,5 @@
 {% if site.git_log %}
-<article class="post-content">
-  <p>修改日志</p> 
-  {% if page.revisions.size > 0 %}
-  <section>
-    <ul>
-      {% for rev in page.revisions %}
-      <li>
-        <div class="post-meta">{{ rev.date | date_to_string }} -
-          <span class="post-author">{{ rev.author }}</span> - {{ rev.message }}
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-</article>
+<pre class="post-content controls__inner git-log"><output>~: git log
+{% if page.revisions.size > 0 %}{% for rev in page.revisions %}{{ rev.date | date_to_string }} - {{ rev.author }} - {{ rev.message }}{% endfor %}{% endif %}
+</output></pre>
 {% endif %}

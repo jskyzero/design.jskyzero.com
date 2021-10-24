@@ -1,3 +1,36 @@
+.git-log {
+  padding: 1rem 1rem 1rem !important;
+  background-color: black;
+  margin: 0;
+  overflow: hidden;
+  padding: 2rem;
+  color: white;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #C8C8C8;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(black, 0.15),
+      rgba(black, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+  }
+  ::selection {
+    background: #0080FF;
+    text-shadow: none;
+  }
+  pre {
+    margin: 0;
+  }
+}
+
+
 .post-content {
   max-width: 52.5rem;
   margin: 0 auto;
