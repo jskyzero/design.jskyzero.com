@@ -20,7 +20,7 @@ module Recents
           page.data['use_modified'] = false
         end
       end
-      puts("FINISH: jekyll-last-modified-at")
+      puts("FINISH: post-data-last-modified-at")
     end
   end
 end

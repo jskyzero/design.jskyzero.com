@@ -19,7 +19,7 @@ module Jekyll
           post.data["previous_in_category"] = previous_in_category unless previous_in_category.nil?
         end
       end
-      puts("FINISH: in_category")
+      puts("FINISH: categories_in_category")
     end
   end
 end
