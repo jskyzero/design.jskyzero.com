@@ -1,5 +1,9 @@
 {% if site.git_log %}
 <pre class="post-content controls__inner git-log"><output>~: git log
 {% if page.revisions.size > 0 %}{% for rev in page.revisions %}{{ rev.date | date_to_string }} - {{ rev.author }} - {{ rev.message }}{% endfor %}{% endif %}
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
 </output></pre>
 {% endif %}
