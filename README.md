@@ -1,7 +1,9 @@
 # Designer-Notes
 
 [![Build Status](https://travis-ci.com/jskyzero/design.jskyzero.com.svg?branch=jekyll)](https://travis-ci.com/jskyzero/design.jskyzero.com)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/jskyzero/design.jskyzero.com)
+![GitHub last commit](https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/jskyzero/design.jskyzero.com/jekyll)
+
 
 jskyzero's notes about game designer.
 
@@ -44,4 +46,4 @@ You can view it via [website](https://design.jskyzero.com/), or you can download
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 
-This Theme forks from [janczizikow](https://github.com/janczizikow)'s [Sleek](https://github.com/janczizikow/sleek) under [MIT License](https://opensource.org/licenses/MIT).
+The Theme forks from [janczizikow](https://github.com/janczizikow)'s [Sleek](https://github.com/janczizikow/sleek) under [MIT License](https://opensource.org/licenses/MIT).
