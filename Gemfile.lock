@@ -79,6 +79,7 @@ GEM
 PLATFORMS
   ruby
   universal-darwin-20
+  universal-darwin-21
   x64-mingw32
 
 DEPENDENCIES
