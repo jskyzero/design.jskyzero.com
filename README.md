@@ -1,7 +1,9 @@
 # Designer-Notes
 
 [![Build Status](https://travis-ci.com/jskyzero/design.jskyzero.com.svg?branch=jekyll)](https://travis-ci.com/jskyzero/design.jskyzero.com)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/jskyzero/design.jskyzero.com)
+![GitHub last commit](https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/jskyzero/design.jskyzero.com/jekyll)
+
 
 jskyzero's notes about game designer.
 
@@ -13,12 +15,14 @@ jskyzero's notes about game designer.
 
 You can view it via [website](https://design.jskyzero.com/), or you can download the source file and run in your local machine.
 
+
 ### Before
 
 + Jekyll: `gem install jekyll`
 + NodeJS (8 or greater)
 + Gulp CLI (optional, but recommended): `npm install --global gulp-cli`
-    + [`Gulp exits with 'ReferenceError: internalBinding is not defined'`issues](https://github.com/gulpjs/gulp/issues/2246) 
+  + [`Gulp exits with 'ReferenceError: internalBinding is not defined'`issues](https://github.com/gulpjs/gulp/issues/2246)
+
 
 ### Install & Run
 
@@ -26,10 +30,20 @@ You can view it via [website](https://design.jskyzero.com/), or you can download
 2. Clone or download the repo into directory of your choice: `git clone https://github.com/your-github-username/sleek.git`
 3. Inside the directory run `bundle install` and `npm install`
 4. If you want to use [gulp.js](https://gulpjs.com/) run `gulp` or `npm start`
-    * if you don't want to use gulp you can run `bundle exec jekyll serve` instead
+    + if you don't want to use gulp you can run `bundle exec jekyll serve` instead
+
 
 ### Daily Use
+
 + serve: `bundle exec jekyll serve`
 + image/css: `gulp img` / `glup sass`
 + change file ext name: `for x in *.jpeg; do mv "$x" "${x%.jpeg}.jpg"; done`
 + mermaid: `./node_modules/.bin/mmdc -h`, `mmdc -i input.mmd -o output.svg`
+
+
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+
+The Theme forks from [janczizikow](https://github.com/janczizikow)'s [Sleek](https://github.com/janczizikow/sleek) under [MIT License](https://opensource.org/licenses/MIT).
