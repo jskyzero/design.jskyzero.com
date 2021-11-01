@@ -26,7 +26,7 @@ jobs:
         ref: jekyll
         fetch-depth: 0
     - name: Run with dest path
-      uses: helaili/jekyll-build@v2
+      uses: helaili/jekyll-action@2.2.0
       with:
         jekyll_build_options: --future
         target_branch: gh-pages
@@ -34,10 +34,3 @@ jobs:
         keep_history: true
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: GitHub Push
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        branch: master
-        directory: _book
-        force: true
-        github_token: ${{ secrets.GITHUB_TOKEN }}
