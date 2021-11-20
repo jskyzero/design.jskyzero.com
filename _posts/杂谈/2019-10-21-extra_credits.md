@@ -1,8 +1,7 @@
 ---
 layout: post
 title: 《额外加分》系列总结
-featured-img: bloodborne
-# 重复图片
+featured-img: bg3
 mathjax: true
 categories: [杂谈]
 ---
