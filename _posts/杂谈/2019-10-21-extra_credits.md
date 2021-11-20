@@ -2,12 +2,13 @@
 layout: post
 title: 《额外加分》系列总结
 featured-img: bloodborne
+# 重复图片
 mathjax: true
-categories: [读书报告]
+categories: [杂谈]
 ---
 
 
-额外加分系列超棒的，这里打算做一些总结梳理，计划定期更新。
+额外加分系列超棒的，这里打算做一些总结梳理，不定期更新。
 
 <!--more-->
 
@@ -19,7 +20,7 @@ categories: [读书报告]
 + Persona 5 and Jungian Psychology
   + 人格面具和荣格心理学
   + 人格面具、阿尼玛和阿尼姆斯、阴影、自性
-  + [分析心理学的概述](<https://wiki.mbalib.com/wiki/%E5%88%86%E6%9E%90%E5%BF%83%E7%90%86%E5%AD>% A6)
+  + [分析心理学的概述](https://wiki.mbalib.com/wiki/%E5%88%86%E6%9E%90%E5%BF%83%E7%90%86%E5%AD%A6)
 + The Pacing of PUBG
   + BR（大逃杀）游戏其实是惊悚游戏
   + 延长悬念时间、四个特征：明确赌注、无处不在的威胁、时间压力、不断升高的风险
