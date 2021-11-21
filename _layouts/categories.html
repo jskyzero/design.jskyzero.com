@@ -1,0 +1,42 @@
+---
+layout: page
+---
+
+
+<div>
+  {% assign categories = site.categories | sort %}
+  {% for category in categories %}
+  <div class="archive-group">
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    {% unless category_name contains '日常' %}
+    <div id="#{{ category_name | slugize }}">
+      <a name="{{ category_name | slugize }}"></a>
+      <!-- <p></p> -->
+      <h1 class="category-head">{{ category_name }} ({{ site.categories[category_name] | size}})</h1>
+    </div>
+    <div class="container">
+      <div class="post-list" itemscope="" itemtype="http://schema.org/Blog" 
+           style="padding-top: 1rem;">
+        {% assign each_categories = site.categories[category_name] %}
+        {% assign each_categories = each_categories | sort: "title" %}
+
+        {% assign groups = each_categories | group_by: 'last_modified_at_str' | sort: 'name' | reverse %}
+        {% for group in groups %}
+        {% assign posts = group.items | sort: "date" | reverse %}
+
+        {% for post in posts %}
+
+        {% if post.use_modified %}
+        {% include card-min.html type="modified"%}
+        {% else %}
+        {% include card-min.html %}
+        {% endif %}
+
+        {% endfor %}
+        {% endfor %} 
+      </div>
+    </div>
+    {% endunless %}
+  </div>
+  {% endfor %}
+</div>

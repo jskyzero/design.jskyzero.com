@@ -1,4 +1,5 @@
-<div class="post-card" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
+<div class="post-card" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting"
+    style="min-height: 0px;">
   {% if post.categories %}
     {% assign categories = post.categories %}
     <span class="post-card__label">
@@ -25,9 +26,10 @@
       </figure>
     {% endif %}
   </a>
-  <a class="post-card__inner" href="{{ post.url | relative_url }}">
+  <a class="post-card__inner" href="{{ post.url | relative_url }}"
+      style="padding: 0.5rem 0.5rem 0.5rem;">
     <div class="post-card__header">
-      <h2>{{ post.title | strip_html | truncate: 50 }}</h2>
+      <h4>{{ post.title | strip_html | truncate: 50 }}</h4>
       {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
       <span class="post-card__meta">
         {% if include.type != nil %}
@@ -38,10 +40,5 @@
         <!-- <time>{{ post.last_modified_at | date: date_format }}</time> -->
       </span>
     </div>
-    {% if post.summary %}
-      <p>{{ post.summary | strip_html | truncatewords:20 }}</p>
-    {% else %}
-      <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-    {% endif %}
   </a>
 </div>
