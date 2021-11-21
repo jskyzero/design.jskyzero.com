@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 动作设计参考
+title: 动作参考索引
 featured-img: bg4
 mathjax: true
 categories: [杂谈]
 ---
 
-本文汇总一些游戏中的动作，用于设计时参考查询。
+本文汇总ACT、ARPG、FTG、甚至于MOBA等类型游戏中出现的“动作”，用于设计时快速参考查询。
 
 <!--more-->
 
