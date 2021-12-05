@@ -41,6 +41,6 @@ jobs:
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
       with:
-        source: "_site"
+        source: "/github/workspace/../jekyll_build"
         target: "/home/jskyzero/workspace/design.jskyzero.com/_site"
 
