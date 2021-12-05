@@ -33,14 +33,11 @@ jobs:
         keep_history: true
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Copy repository contents via scp
-      uses: appleboy/scp-action@master
-      env:
-        HOST: ${{ secrets.HOST }}
+    - name: Executing remote command
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
-      with:
-        source: "/github/workspace/../jekyll_build"
-        target: "/home/jskyzero/workspace/design.jskyzero.com/_site"
-
+        script: cd ${{ secrets.PROJECT_PATH }} && git pull
