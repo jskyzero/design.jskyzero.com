@@ -77,6 +77,7 @@ exclude:
   - npm-debug.log
   - gulpfile.js
   - sleek.jpg
+  - _posts/日常
 
 include: ['_pages']
 permalink: /:year/:month/:day/:title/
