@@ -7,3 +7,4 @@ gemspec
 gem "jekyll-mermaid", "~> 1.0"
 gem "kramdown-parser-gfm"
 gem "jekyll-last-modified-at"
+gem "webrick", "~> 1.7"

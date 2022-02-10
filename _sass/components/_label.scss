@@ -2,15 +2,17 @@
   padding: 0px 10px;
   margin-bottom: 1rem;
   display: inline-block;
-  line-height: 20px;
-  font-size: .75rem;
+  line-height: 30px;
+  font-size: .95rem;
+  // line-height: 20px;
+  // font-size: .75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: rgba(255,255,255,0.8);
   border: 2px solid rgba(255,255,255,0.5);
   border-radius: 100px;
   transition: all 0.2s ease;
-  background-color: rgba(0,0,0,.1);
+  // background-color: rgba(49,50,55,.4);
 
   &:focus,
   &:hover {
