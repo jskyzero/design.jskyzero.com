@@ -32,11 +32,11 @@ layout: compress
 
             {% for post in site.posts %}
               {% if post.categories contains '读书报告'%}
-                {% include card.html %}
+                {% include card-index.html %}
               {% endif %}
 
               {% if post.categories contains '一期一会'%}
-                {% include card.html %}
+                {% include card-index.html %}
               {% endif %}
             {% endfor %}
 

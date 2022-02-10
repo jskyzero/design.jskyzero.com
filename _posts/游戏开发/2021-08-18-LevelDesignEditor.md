@@ -3,7 +3,7 @@ layout: post
 title: 好的编辑器的若干特性
 featured-img: besiege
 mathjax: true
-categories: [游戏开发, Unity]
+categories: [游戏开发]
 pro: true
 ---
 

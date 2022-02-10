@@ -35,9 +35,9 @@ layout: compress
             {% for post in posts %}
               {% unless post.categories contains '日常' %}
                 {% if post.use_modified %}
-                  {% include card.html type="modified"%}
+                  {% include card-index.html type="modified"%}
                 {% else %}
-                  {% include card.html %}
+                  {% include card-index.html %}
                 {% endif %}
               {% endunless %}
             {% endfor %}

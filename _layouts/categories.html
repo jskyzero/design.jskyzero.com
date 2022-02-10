@@ -11,31 +11,28 @@ layout: page
     {% unless category_name contains '日常' %}
     <div id="#{{ category_name | slugize }}">
       <a name="{{ category_name | slugize }}"></a>
-      <!-- <p></p> -->
-      <h1 class="category-head">{{ category_name }} ({{ site.categories[category_name] | size}})</h1>
-    </div>
-    <div class="container">
-      <div class="post-list" itemscope="" itemtype="http://schema.org/Blog" 
-           style="padding-top: 1rem;">
-        {% assign each_categories = site.categories[category_name] %}
-        {% assign each_categories = each_categories | sort: "title" %}
+      <h4 class="category-head">{{ category_name }} ({{ site.categories[category_name] | size}})</h4>
+      <div class="container">
+        <div class="post-list" itemscope="" itemtype="http://schema.org/Blog" 
+          style="padding-bottom: 2rem; padding-top: 0rem;">
+          |
+          {% assign each_categories = site.categories[category_name] %}
+          {% assign each_categories = each_categories | sort: "title" %}
 
-        {% assign groups = each_categories | group_by: 'last_modified_at_str' | sort: 'name' | reverse %}
-        {% for group in groups %}
-        {% assign posts = group.items | sort: "date" | reverse %}
+          {% assign groups = each_categories | group_by: 'last_modified_at_str' | sort: 'name' | reverse %}
+          {% for group in groups %}
+          {% assign posts = group.items | sort: "date" | reverse %}
 
-        {% for post in posts %}
+          {% for post in posts %}
 
-        {% if post.use_modified %}
-        {% include card-min.html type="modified"%}
-        {% else %}
-        {% include card-min.html %}
-        {% endif %}
+          &nbsp;&nbsp;<a>{{ post.title | strip_html | truncate: 50 }}</a> &nbsp;&nbsp;|
 
-        {% endfor %}
-        {% endfor %} 
+          {% endfor %}
+          {% endfor %}
+        </div>
       </div>
     </div>
+
     {% endunless %}
   </div>
   {% endfor %}
