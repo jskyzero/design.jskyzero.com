@@ -1,14 +1,5 @@
 <div class="post-card" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting"
     style="min-height: 0px;">
-  {% if post.categories %}
-    {% assign categories = post.categories %}
-    <span class="post-card__label">
-      {% for category in categories %}
-        <a href="{{site.baseurl}}/categories/#{{category|slugize}}" class="label"> {{ category }} </a>
-        {% unless forloop.last %}&nbsp;{% endunless %}
-      {% endfor %}
-    </span>
-  {% endif %}
   <a href="{{ post.url | relative_url }}">
     {% if post.featured-img %}
       <figure class="post-card__thumb">
