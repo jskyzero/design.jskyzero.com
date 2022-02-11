@@ -1,6 +1,6 @@
 {% if page.pro %}
 
-<p id="pro" style="display: flex; margin-top: 15px;">
+<p id="pro">
   {% if post.categories or page.categories %}
   <!-- <div class="categories"> -->
     {% if post %}
@@ -9,13 +9,13 @@
     {% assign categories = page.categories %}
     {% endif %}
     {% for category in categories %}
-    <img style="width: fit-content; margin-right: 8px;" src="https://img.shields.io/badge/{{category|slugize}}-blue.svg?style=flat" alt="">
+    <img src="https://img.shields.io/badge/{{category|slugize}}-blue.svg?style=flat" alt="">
     <!-- {% unless forloop.last %}&nbsp;{% endunless %} -->
     {% endfor %}
   <!-- </div> -->
   {% endif %}
-  <img style="width: fit-content; margin-right: 8px;" src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="">
-  <img style="width: fit-content; margin-right: 8px;" src="https://img.shields.io/badge/日期-{{ page.date | date: "%Y/%m/%d" }}-brightgreen.svg?style=flat" alt="">
+  <img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="">
+  <img src="https://img.shields.io/badge/日期-{{ page.date | date: "%Y/%m/%d" }}-brightgreen.svg?style=flat" alt="">
 </p>
 
 {% endif %}

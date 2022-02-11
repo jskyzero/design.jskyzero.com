@@ -37,6 +37,14 @@ img {max-width: 100%;}
 table {margin-bottom: 15px;}
 th {border-bottom: var(--border);}
 ul {padding-inline-start: 8px !important;}
+#pro {
+  display: flex; 
+  margin-top: 15px;
+  img {
+    width: fit-content;
+    margin-right: 8px;
+  }
+}
 .git-log {
   padding: 1rem 1rem 1rem !important;
   background-color: black;
@@ -65,6 +73,9 @@ ul {padding-inline-start: 8px !important;}
   }
   pre {
     margin: 0;
+  }
+  img{
+    border-width: 0;
   }
 }
 

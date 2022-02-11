@@ -1,6 +1,7 @@
 header_pages:
  - index.md
- - blog.md
+ - index.blog.md
+ - index.github.md
  - _posts/2018-11-15-project.md
 
 footer: 'Enjoy :)'
