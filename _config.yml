@@ -21,7 +21,7 @@ twitter_username: jskyzero
 github_username:  jskyzero
 
 # Build settings
-theme: jekyll-theme-console
+# theme: jekyll-theme-console
 plugins:
   - jekyll-feed
   - jekyll-mermaid

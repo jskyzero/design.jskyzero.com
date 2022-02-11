@@ -6,3 +6,4 @@ Gemfile.lock
 .jekyll-metadata
 node_modules
 .DS_Store
+_site
