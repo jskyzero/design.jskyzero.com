@@ -21,6 +21,7 @@ a { text-decoration: underline;  color: var(--link-color); }
 a:hover { color: var(--background-color); background-color: var(--base-color); }
 @media only screen and (max-device-width: 500px) { * { font-size: $mobile-font-size !important; } }
 
+
 /**
  * Layout
  */
@@ -30,6 +31,42 @@ footer { color: var(--text-color);  border-top: var(--border);  margin: 20px aut
 header { margin-top: 25px;  margin-bottom: 10px; }
 header p { text-align: left;  margin: 0; }
 footer { margin-bottom: 20px; }
+
+// jskyzero
+img {max-width: 100%;}
+table {margin-bottom: 15px;}
+th {border-bottom: var(--border);}
+ul {padding-inline-start: 8px !important;}
+.git-log {
+  padding: 1rem 1rem 1rem !important;
+  background-color: black;
+  margin: 0;
+  padding: 2rem;
+  color: white;
+  font: 0.8rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #C8C8C8;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(black, 0.15),
+      rgba(black, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+  }
+  ::selection {
+    background: #0080FF;
+    text-shadow: none;
+  }
+  pre {
+    margin: 0;
+  }
+}
 
 /**
  * Highlight/Markup
