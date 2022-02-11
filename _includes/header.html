@@ -1,0 +1,43 @@
+<header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
+  <div class="container">
+    <div class="header__inner">
+      <a class="header__logo" href="{{ '/' | relative_url }}">
+        <div class="header__logo--container">
+          {% include logo.svg %}
+        </div>
+      </a>
+      <nav class="header__links">
+        <div class="container header__links-wrapper">
+          {% for item in site.navigation %}
+          {% assign result = item.link | slice: 0, 1 %}
+          {% if result == "/" %}
+          <a class="header__link" href="{{ item.link | relative_url }}" itemprop="url">
+            <span itemprop="name">{{ item.name }}</span>
+          </a>
+          {% else %}
+          <a class="header__link" href="{{ item.link | relative_url }}" itemprop="url">
+            <span itemprop="name">{{ item.name }}</span>
+          </a>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </nav>
+      <div class="header__toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<a href="https://github.com/jskyzero/design.jskyzero.com" style="
+    border-bottom: none;
+    z-index: 4;
+    position: absolute;
+    margin-top: 60px;
+">
+  <img loading="lazy" width="149" height="149"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_left_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
+</a>

@@ -1,0 +1,9 @@
+{
+  // 控制是否在键入时自动显示建议。
+  // "editor.quickSuggestions": {
+  //   "other": false,
+  //   "comments": false,
+  //   "strings": false
+  // },
+  "editor.suggestOnTriggerCharacters": false
+}

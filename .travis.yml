@@ -1,0 +1,19 @@
+language: ruby
+cache: bundler
+sudo: false
+rvm: 2.3.3
+git:
+  depth: false
+
+# before_install: gem install safe_yaml
+install: script/bootstrap
+script: script/cibuild
+
+# deploy to gh_pages branch 
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: _site
+  on:
+    branch: jekyll

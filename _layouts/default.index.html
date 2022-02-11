@@ -1,0 +1,56 @@
+---
+layout: compress
+---
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+
+  {% include head.html %}
+
+  <body class="site">
+
+    {% if site.google_tag_manager %}
+
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+    {% endif %}
+
+    {% include header.html %}
+
+    <div class="hero lazyload" data-bg="{{relative_url}}/assets/img/{{ site.hero_img }}">
+      <div class="hero__wrap">
+        <h1 class="hero__title">{{ site.title | escape }}</h1>
+        <p class="hero__meta">{{ site.tagline }}</p>
+      </div>
+    </div>
+
+    <main class="site__content">
+      <section class="blog">
+        <div class="container">
+          <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
+            {% assign groups = site.posts | group_by: 'last_modified_at_str' | sort: 'name' | reverse %}
+            {% for group in groups %}
+            {% assign posts = group.items | sort: "date" | reverse %}
+            {% for post in posts %}
+              {% unless post.categories contains '日常' %}
+                {% if post.use_modified %}
+                  {% include card-index.html type="modified"%}
+                {% else %}
+                  {% include card-index.html %}
+                {% endif %}
+              {% endunless %}
+            {% endfor %}
+            {% endfor %} 
+
+            <!-- {% include pagination.html %} -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

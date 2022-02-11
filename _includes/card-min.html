@@ -1,0 +1,35 @@
+<div class="post-card" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting"
+    style="min-height: 0px;">
+  <a href="{{ post.url | relative_url }}">
+    {% if post.featured-img %}
+      <figure class="post-card__thumb">
+        <img
+          src="{{relative_url}}/assets/img/posts/{{post.featured-img}}_placehold.jpg",
+          data-srcset="{{relative_url}}/assets/img/posts/{{post.featured-img}}_thumb.jpg, {{relative_url}}/assets/img/posts/{{post.featured-img}}_thumb@2x.jpg 2x"
+          class="lazyload blur"
+          alt="{{post.title}}"
+        />
+        <noscript><img src="{{relative_url}}/assets/img/posts/{{post.featured-img}}_thumb.jpg" alt="{{ post.title }}"></noscript>
+      </figure>
+    {% else %}
+      <figure class="post-card__thumb">
+        <div class="dark-bg"></div>
+      </figure>
+    {% endif %}
+  </a>
+  <a class="post-card__inner" href="{{ post.url | relative_url }}"
+      style="padding: 0.5rem 0.5rem 0.5rem;">
+    <div class="post-card__header">
+      <h4>{{ post.title | strip_html | truncate: 50 }}</h4>
+      {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
+      <span class="post-card__meta">
+        {% if include.type != nil %}
+          <time>Modified on {{ post.last_modified_at | date: date_format}}</time>
+        {% else %}
+          <time>Posted on {{ post.date | date: date_format }}</time>
+        {% endif %}
+        <!-- <time>{{ post.last_modified_at | date: date_format }}</time> -->
+      </span>
+    </div>
+  </a>
+</div>
