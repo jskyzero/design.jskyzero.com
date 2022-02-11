@@ -1,0 +1,3560 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-02-11T13:55:08+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">PCG相关讨论</title><link href="https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2021/11/21/PCG.html" rel="alternate" type="text/html" title="PCG相关讨论" /><published>2021-11-21T00:00:00+00:00</published><updated>2021-11-21T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2021/11/21/PCG</id><content type="html" xml:base="https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2021/11/21/PCG.html"><![CDATA[<p>近些年由于玩家对新内容的不断需求，用于内容填充的PCG技术，经常出现在视野内，本文会就此进行一些讨论。</p>
+
+<!--more-->
+
+<h1 id="pcg相关讨论">PCG相关讨论</h1>
+
+<h2 id="目录">目录</h2>
+<p><img src="/assets/img/skill/PCG/2.jpg" alt="" /></p>
+
+<p>本文会</p>
+
+<ol>
+  <li>先分析一些使用PCG技术的游戏，看看大体思路。</li>
+  <li>统一讨论维度和语境，具体包括以上三个方面。</li>
+  <li>讨论在实际运用时候的思路。</li>
+</ol>
+
+<h2 id="案例分析">案例分析</h2>
+
+<p><img src="/assets/img/skill/PCG/3.jpg" alt="用途" /></p>
+
+<p>PCG，全称<code class="language-plaintext highlighter-rouge">Procedural Content Generation</code>，查了下，感觉<code class="language-plaintext highlighter-rouge">procedural</code>是<code class="language-plaintext highlighter-rouge">procedure</code>的形容词，而<code class="language-plaintext highlighter-rouge">procedure</code>不只有<code class="language-plaintext highlighter-rouge">process</code>的过程的含义，也有<code class="language-plaintext highlighter-rouge">program</code>程序的含义，释义是<code class="language-plaintext highlighter-rouge">一种既定的或官方的做事方式。</code></p>
+
+<p>硬扣字眼儿的话，很多东西都可以算作PCG，虽然大家对PCG的第一印象的<code class="language-plaintext highlighter-rouge">PCG的程度</code>可能比较强，但是这里作为正式的讨论，还是需要全面地看待，因而找了一些使用PCG游戏的例子。</p>
+
+<p>可以看到PCG可以运用在游戏的很多方面，比如：</p>
+
+<ul>
+  <li>故事：故事、任务</li>
+  <li>关卡：地图、整个关卡</li>
+  <li>玩法：武器系统、</li>
+  <li>角色：角色能力</li>
+</ul>
+
+<p>就结论而言，内容可以覆盖到MDA的各个方面，其内涵十分丰富。</p>
+
+<p>在此以外，我认为PCG是一个性价比的技术问题，所以使用时可以关注具体想解决的问题。</p>
+
+<p>最后，也有一些和PCG类似的方式、或者截然不同的思路，比如简单的随机和纯定制，在上层而言，都是各有利弊的方式。</p>
+
+<p><img src="/assets/img/skill/PCG/4.jpg" alt="洞穴" /></p>
+
+<p>接下来我们来具体看几个例子。</p>
+
+<p>首先一个3D的关卡生成的例子，我们可以留意需求PCG的出发点：探索&amp;无尽生成。</p>
+
+<p>具体生成的思路是：房间局部随机+中间件组合房间，很好理解。</p>
+
+<p><img src="/assets/img/skill/PCG/5.jpg" alt="L4D" /></p>
+
+<p>求生之路在具体生成的内容上和前一个例子就有了不同：</p>
+
+<ul>
+  <li>动态生成而不是静态生成</li>
+  <li>生成怪物而不是场景</li>
+</ul>
+
+<p>目的上，求生之路依然需求可重玩性，甚至提到了背板&amp;简单的随机都不足以解决问题，只有一个完备的机制才能带来纯的技巧考验。</p>
+
+<p>引入了玩家体验压力模型也很值得参考。</p>
+
+<p>具体实现上，大意是根据玩家位置采用预先刷新+动态刷新的思路。</p>
+
+<p><img src="/assets/img/skill/PCG/6.jpg" alt="其他" /></p>
+
+<p>这里我们再参考一下另外两个游戏。</p>
+
+<p>地牢探险和前面洞穴的生成类似，不过是先决定了主干道再装饰房间。再外层再加入其他机制来进一步提高体验。</p>
+
+<p>死亡细胞则和求生之路的“对简单随机的排斥有些抵触”不同，是设计好的组件随机挑选填充进关卡路线。死亡细胞这里已经对思路有了很细致的介绍。</p>
+
+<h2 id="讨论维度">讨论维度</h2>
+
+<p><img src="/assets/img/skill/PCG/7.jpg" alt="论文" /></p>
+
+<p>就上文的介绍而言，不同游戏中PCG技术使用的目的和方式是有差异的，为了确定一些明确的讨论维度，这里我们参考了某篇（标题隐藏在背景图中）论文中的划分思路：</p>
+
+<ul>
+  <li>可重玩性与适应性</li>
+</ul>
+
+<p>大多数PCG技术都是直接生成差异的内容来带来可重玩性，而适应性指的是针对玩家水平动态调整难度。</p>
+
+<ul>
+  <li>对MDA的影响</li>
+</ul>
+
+<p>PCG的作用究竟是在MDA的哪一层，美术层比较简单，动态层也容易理解，但是机制层就有不少维度，比如是玩家可以操控、玩家可以操控且选项无限……</p>
+
+<ul>
+  <li>玩家是否可以控制生成</li>
+</ul>
+
+<p>就像PCG的生成是有离线和实时的一样，也区分玩家可控制&amp;不可控制，可控制又细分为直接控制与间接控制。</p>
+
+<p>以上几点，如果去掉PCG技术这个游戏玩法未发生变化，那这个游戏就只是使用PCG技术的游戏，倘若去掉以后玩法不再成立，则可以称之为基于PCG的游戏。界限相对不明显，但是讨论维度很有参考价值。</p>
+
+<h2 id="实际运用">实际运用</h2>
+
+<p><img src="/assets/img/skill/PCG/8.jpg" alt="" /></p>
+
+<p>以上，聚焦一下，PCG其实是一种强性价比相关的技术，很多时候只是代替人的手工，而对于内容的丰富度或者说随机性，使用时也需要有一定把握，究竟在MDA的哪个层级、频率有多高。</p>
+
+<p>在实际运用时候，我们需要分开看待PVP和PVE，PVE相对单纯，拆分单局参考上文的一些思路即可；对于PVP，我们则需要考虑变化是否要到规则这一层，一般来说是最好不要，尤其是格斗游戏这类本身游戏深度已经很深不需要再加强的游戏。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[近些年由于玩家对新内容的不断需求，用于内容填充的PCG技术，经常出现在视野内，本文会就此进行一些讨论。]]></summary></entry><entry><title type="html">《MHWI》内容设计分析</title><link href="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/11/20/mhwi.html" rel="alternate" type="text/html" title="《MHWI》内容设计分析" /><published>2021-11-20T00:00:00+00:00</published><updated>2021-11-20T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/11/20/mhwi</id><content type="html" xml:base="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/11/20/mhwi.html"><![CDATA[<p>体系化拆解《怪物猎人 世界：冰原》，并从中学习。</p>
+
+<!--more-->
+
+<p><img src="/assets/img/gameplay/mhwi/01.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/02.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/03.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/04.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/05.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/06.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/07.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/08.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/09.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/10.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/11.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/12.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/13.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/14.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/15.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/16.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/17.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/18.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/19.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/20.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/21.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/22.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/23.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/24.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/25.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/26.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/27.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/28.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/29.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/30.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/31.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/32.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/33.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/34.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/35.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/36.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/37.jpg" alt="" /></p>
+
+<p><img src="/assets/img/gameplay/mhwi/38.jpg" alt="" /></p>]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[体系化拆解《怪物猎人 世界：冰原》，并从中学习。]]></summary></entry><entry><title type="html">动作参考索引</title><link href="https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/11/18/action_reference.html" rel="alternate" type="text/html" title="动作参考索引" /><published>2021-11-18T00:00:00+00:00</published><updated>2021-11-18T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/11/18/action_reference</id><content type="html" xml:base="https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/11/18/action_reference.html"><![CDATA[<p>本文汇总ACT、ARPG、FTG、甚至于MOBA等类型游戏中出现的“动作”，用于设计时快速参考查询。</p>
+
+<!--more-->
+
+<p>编写目标：</p>
+
+<ol>
+  <li>分类和武器先补全，剩下的再议</li>
+</ol>
+
+<h1 id="动作设计参考">动作设计参考</h1>
+
+<h2 id="动作设计">动作设计</h2>
+
+<h3 id="dnf">DNF</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>上挑</td>
+      <td>从下往上挥剑，浮空敌人</td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑、暗</td>
+      <td>鬼斩</td>
+      <td>从上往下斩击，带有暗属性的拖尾。</td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑、防御</td>
+      <td>格挡</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>崩山击</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>十字斩</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>刀魂之卡赞</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>波动斩</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>突刺</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>月光斩</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>银光落刃</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>阿修罗</td>
+      <td>刀剑、元素</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>狂战士</td>
+      <td>刀剑、血气</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼泣</td>
+      <td>刀剑、魂魄</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>剑魂</td>
+      <td>光剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>暗夜使者</td>
+      <td>匕首</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>死灵术士</td>
+      <td>权杖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>魔法师</td>
+      <td>法杖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>召唤师</td>
+      <td>法杖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>男格斗家</td>
+      <td>拳套</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>柔道</td>
+      <td>拳套</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>男魔法师</td>
+      <td>法杖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>圣职者</td>
+      <td>十字架</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>圣骑士</td>
+      <td>十字架</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>女圣骑士</td>
+      <td>十字架</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>缔造者</td>
+      <td>扫把</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>神枪手</td>
+      <td>手枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>枪剑士</td>
+      <td>枪剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>女鬼剑士</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>女格斗</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>守护者</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>黑暗骑士</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="真三国无双">真三国无双</h3>
+
+<h4 id="真三国无双5">真三国无双5</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>赵云</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>关羽</td>
+      <td>大刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>刘备</td>
+      <td>双手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>诸葛亮</td>
+      <td>羽扇</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>孙尚香</td>
+      <td>弓</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>周瑜</td>
+      <td>棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>陆逊</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>夏侯惇</td>
+      <td>大刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>曹操</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>吕布</td>
+      <td>方天画戟</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>貂蝉</td>
+      <td>长鞭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>戟（吕蒙、凌统、关平、曹仁、徐晃）</li>
+  <li>锤（黄盖、魏延、许褚、董卓）</li>
+  <li>枪（孙策、太史慈、马超、张郃）</li>
+  <li>剑（孙权、曹丕、袁绍）</li>
+  <li>刀（周泰、黄忠、夏侯渊）</li>
+  <li>弓（孙尚香、月英）</li>
+  <li>杖（庞统、张角）</li>
+  <li>鞭（貂蝉、甄宓）</li>
+</ul>
+
+<h4 id="真三国无双6">真三国无双6</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>蔡文姬</td>
+      <td>乐器</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>王元姬</td>
+      <td>飞镖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>钟会</td>
+      <td>飞剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="真三国无双7">真三国无双7</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>吕布</td>
+      <td>方天画戟</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="无双大蛇z">无双大蛇Z</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>达吕智</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>妲己</td>
+      <td>球</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="无双大蛇2u">无双大蛇2U</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>达吕智</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="勇者斗恶龙英雄集结">勇者斗恶龙：英雄集结</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>主角</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="鬼泣">鬼泣</h3>
+
+<h4 id="鬼泣4">鬼泣4</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>尼禄</td>
+      <td>剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>但丁</td>
+      <td>剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="鬼泣dmc">鬼泣DMC</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>但丁</td>
+      <td>剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>但丁</td>
+      <td>斧头</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>但丁</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>但丁</td>
+      <td>拳套</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="鬼泣5">鬼泣5</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>但丁</td>
+      <td>剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>但丁</td>
+      <td>双手大剑（摩托车）</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>尼禄</td>
+      <td>剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>尼禄</td>
+      <td>机械手</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>元素、召唤、暗</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="战神">战神</h3>
+
+<h4 id="战神3">战神3</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>奎托斯</td>
+      <td>链刃</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="新战神">新战神</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>奎托斯</td>
+      <td>手斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>奎托斯</td>
+      <td>链刃</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="猎天使魔女">猎天使魔女</h3>
+
+<h4 id="猎天使魔女1">猎天使魔女1</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>贝姐</td>
+      <td>手枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="猎天使魔女2">猎天使魔女2</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>贝姐</td>
+      <td>手枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="忍者龙剑传">忍者龙剑传</h3>
+
+<h4 id="忍者龙剑传1">忍者龙剑传1∑</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>龙</td>
+      <td>忍者刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="nioh">NIOH</h3>
+
+<h4 id="nioh1">NIOH1</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>威廉</td>
+      <td>刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>威廉</td>
+      <td>锁链</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>威廉</td>
+      <td>双刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>威廉</td>
+      <td>大太刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>威廉</td>
+      <td>旋棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>威廉</td>
+      <td>双手斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>威廉</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="nioh2">NIOH2</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>秀千代</td>
+      <td>刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>秀千代</td>
+      <td>大太刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>秀千代</td>
+      <td>双刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>秀千代</td>
+      <td>机关棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>秀千代</td>
+      <td>手甲</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>秀千代</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>秀千代</td>
+      <td>旋棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="怪物猎人">怪物猎人</h3>
+
+<h4 id="mhw">MHW</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>太刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>大剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>盾斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>斩斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>轻弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>重弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>双刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>操虫棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>锤子</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>狩猎笛</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>铳枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>弓箭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="mhwi">MHWI</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>太刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>大剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>盾斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>斩斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>轻弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>重弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>双刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>操虫棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>锤子</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>狩猎笛</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>铳枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>弓箭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="mhgu">MHGU</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>太刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>大剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>盾斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>斩斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>轻弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>重弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>双刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>操虫棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>锤子</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>狩猎笛</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>铳枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>弓箭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="mhr">MHR</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>太刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>大剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>盾斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>斩斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>轻弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>重弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>双刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>操虫棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>锤子</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>狩猎笛</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>铳枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>弓箭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="黑暗之魂">黑暗之魂</h3>
+
+<h4 id="黑暗之魂3">黑暗之魂3</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>灰烬</td>
+      <td>直剑、盾</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>灰烬</td>
+      <td>法杖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>灰烬</td>
+      <td>巨剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>灰烬</td>
+      <td>长戟</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>灰烬</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="血源">血源</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>斧子</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>手杖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>狩猎刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="血源老猎人">血源：老猎人</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>刀-弓箭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="恶魔之魂">恶魔之魂</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>冒险者</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="只狼">只狼</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>狼</td>
+      <td>忍者刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>狼</td>
+      <td>忍具</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="其他">其他</h3>
+
+<h4 id="尼尔机械纪元">尼尔机械纪元</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2B</td>
+      <td>长剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2B</td>
+      <td>短剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="忍者神龟">忍者神龟</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>乌龟</td>
+      <td>双截棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>乌龟</td>
+      <td>三截棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>乌龟</td>
+      <td>双手短叉</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="变形金刚">变形金刚</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>擎天柱</td>
+      <td>拳脚</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="格斗游戏">格斗游戏</h2>
+
+<h3 id="街霸">街霸</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>隆</td>
+      <td>拳脚</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="拳皇">拳皇</h3>
+
+<h3 id="罪恶装备">罪恶装备</h3>
+
+<h3 id="苍翼">苍翼</h3>
+
+<h3 id="真人快打">真人快打</h3>
+
+<h3 id="铁拳">铁拳</h3>
+
+<h3 id="侍魂">侍魂</h3>
+
+<h2 id="手机游戏">手机游戏</h2>
+
+<h3 id="崩坏3">崩坏3</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>琪亚娜</td>
+      <td>双手枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>芽衣</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>布洛妮娅</td>
+      <td>重炮</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>德莉莎</td>
+      <td>十字架</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>姬子</td>
+      <td>大剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>卡莲</td>
+      <td>双手枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>八重樱</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>符华</td>
+      <td>拳套</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>丽塔</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>希儿</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>幽兰黛尔</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="战双">战双</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>露西亚</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="原神">原神</h3>
+
+<h2 id="moba游戏">MOBA游戏</h2>
+
+<h3 id="dota2">DOTA2</h3>
+
+<h3 id="lol">LOL</h3>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总ACT、ARPG、FTG、甚至于MOBA等类型游戏中出现的“动作”，用于设计时快速参考查询。]]></summary></entry><entry><title type="html">《自制力》摘抄</title><link href="https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2021/11/14/possessiveness.html" rel="alternate" type="text/html" title="《自制力》摘抄" /><published>2021-11-14T00:00:00+00:00</published><updated>2021-11-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2021/11/14/possessiveness</id><content type="html" xml:base="https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2021/11/14/possessiveness.html"><![CDATA[<p>“我别无选择，因为我不能变得贫穷或者平凡，这不是我的风格！”本书教会你：如何控制你自己。</p>
+
+<!--more-->
+
+<h1 id="自制力">自制力</h1>
+
+<h2 id="前言">前言</h2>
+
+<blockquote>
+  <p>了解自己，控制自己。</p>
+</blockquote>
+
+<ul>
+  <li>什么资源最重要呢？当然是自己，也就是内心的自我。外因千变万化，其实都不重要，最重要的是内因，是自我的力量。</li>
+  <li>解决的唯一方法，需要你回头审视自己，尤其是内在的自我。性格决定我们的命运，一个不了解自己的人，他又怎么能够把握自己命运的走向呢？</li>
+  <li>我别无选择，因为我不能变得贫穷或者平凡，这不是我的风格！</li>
+</ul>
+
+<h2 id="障碍--失控">障碍 &amp; 失控</h2>
+
+<blockquote>
+  <p>不要好高骛远，要积极乐观。</p>
+</blockquote>
+
+<ul>
+  <li>永远在没有做好这件事的时候，就开始对另一件事充满期待，然后放弃现在，去追求虚幻的明天。结果就是他什么都做不好，始终在兴奋——失败——反醒——再次兴奋的恶性状态中循环，永远走不出来。</li>
+  <li>他们清楚地知道自己这样做是错误的，对于改善现在的生活是毫无益处的，他们会说：“呀，下次我要改正，相信我！”当下一次来临时，他早就忘了今天的誓言，仍然我行我素，继续旧的习惯。</li>
+  <li>人们做出改变的决定就是最典型的即时满足感，这才是目的。在什么都还没做之前，就让自己感觉良好，用以抚慰对于现实严重不满的心灵，但等感觉好了一点之后，得到满足的意志力就会消失，然后就不想改变了，退回到发誓之前的状态。</li>
+  <li>制定的目标越宏伟，希望越大，给自己带来的感觉就会越好，也就越容易让自己从现实的低潮中爬起来，站起来，找回一种自我满足的心理状态——虽然对改变现实毫无用处。</li>
+  <li>得了进步错觉综合征的人，他们最大的一个特点就是容易自我满足，不但满足于当前的状态，也容易过高地估计自己的能力。他们在看待自己的能力上不十分清醒，在做事时也不会全力以赴，只是点到为止，因而很难获得深层次的发展。</li>
+  <li>抱有此种心理的人文化素质较低，他们或自以为看破了世界，或者他们人生目标过高，理想与现实差距太大而变得无所适从。</li>
+  <li>他们精神孤独、身心受损或是妄自菲薄，企图依靠疯狂采购填补心灵的空虚，掩饰内心的自卑。对这类人而言，物质的享乐只是一种逃避现实的借口。</li>
+</ul>
+
+<h2 id="情绪">情绪</h2>
+
+<blockquote>
+  <p>情绪会波动，避开不良情绪，必要时转换心情。</p>
+</blockquote>
+
+<ul>
+  <li>心理学有一个著名效应被称为“踢猫效应”，讲的是关于人的情绪传染的问题。当一个人的内心有不满情绪出现的时候，如果肆无忌惮地爆发出来，就很容易把这种情绪带到生活中，“传播”并影响到其他人，一传十，十传百，波及的范围越来越广。</li>
+  <li>人的情绪、智力和体力状态都会随着时间呈现一种正弦曲线的波动，周期基本上是一个月。就像肚子的饱和饿一样，我们的情绪也有饱和饿的状态，不补充不行，不消化不行，不排泄也不行。</li>
+  <li>这表明，人在现实生活中的缺陷感越大，自卑感越重，人们就越敏感，寻求补偿的心理也就越迫切。因此，孱弱的人往往表现出比健全的人更加好胜。每个人克服自卑，寻求优越而获得补偿的方式各不相同，由此也就形成了完全不同的生活风格和人格。</li>
+  <li>他们会十分渴望获得成功，但是仅仅是渴望而已，而且他也不敢相信自己能有成功的那一天。与此相反，有些人不但渴望成功，还会制定计划并坚持去做，坚信自己一定会做到。他们是不恐惧行动的，反而渴望行动，在行动中体验快感，收获成就感。</li>
+  <li>有一些人怀着英雄色彩享受冲动的过程，他们感觉自己的身上弥漫着悲剧气氛。</li>
+  <li>你必须明白，尽管现实是“有缺陷的”，但它存在着改变未来的机会；虽然过去很完美，但它决定不了现在，也决定不了未来。你要提高勇气去面对现实，大胆地接受现实的挑战，而不是采取逃避的态度。</li>
+  <li>比如在奥运会上，我们经常发现，那些获得铜牌的选手往往比获得银牌的选手更开心。这是因为，铜牌得主运用的是下行假设，即如果我发挥得稍微差一点，就与奖牌失之交臂了；银牌得主运用的则是上行假设，即如果我发挥得更好一点，就能登上最高领奖台了。由此引发的，是两个人在结果出来后截然不同的情绪：铜牌得主兴高采烈，银牌得主则垂头丧气。</li>
+  <li>人类的自我意识、自我约束、毅力和全情投入等能力对人生的影响比智商更为重要。如果忽视了情绪智能因素的存在，对于我们的自身发展非常不利。要解决这个隐患，人们就应该在学校期间接受情绪智力的教育。</li>
+  <li>如果你不懂得等待，你会总想着投机取巧。做什么事情都会没有恒心，不安分守己，同时，你也会变成一个急功近利的人，做任何事情都想尽快达到目标。人一旦进入这种状态，就会终日心神不宁、焦躁不安，长此以往，生命的弹性就彻底消失了。</li>
+  <li>一个人在他的生活中不可能永远一帆风顺，事业和感情生活都是如此。当事情陷入瓶颈的时候，如果只停留在同一个角度思考问题，问题就会越来越严重，让你无法摆脱。相反，如果陷入困境时，不再强求自己，不再苛求自己，学会放松，学会换一种思维，你会发现什么呢？一个完全轻松的自己。你的大脑的创意会更丰富，经过洗涤的情绪会迅速地恢复，并能迅速找到问题的出口。</li>
+</ul>
+
+<h2 id="注意力">注意力</h2>
+
+<blockquote>
+  <p>集中注意力，合理休息。</p>
+</blockquote>
+
+<ul>
+  <li>大脑在主人的命令下，必须时刻扫描周围的环境，对新接触的一丁点令人兴奋的消息都保持警觉：“啊，这是什么？我真想 知道！”这是娱乐化大脑的典型特征。</li>
+  <li>大量的课程案例证明，冥想训练有提高大脑的前额叶皮质区神经元同步信号的能力，它的强度比常人高出30倍。另外，在劳累时选择打盹20~30分钟，也能够刷新你的大脑，极大地改善注意力状态。</li>
+  <li>现代传媒正在制造一个规模越来越大的“低智商社会”。“低智商社会”的一个最重要的特点就是：人们懒于思考，希望有人把思考后的答案直接告诉他们，他们只要照做就可以了。人们变得懒惰而轻信。对他们而言，思考是一件吃苦和十分麻烦的事情，所以他们不想思考，大脑不断地退化，失去创造和辨别能力，最后变得难以自立和自制。</li>
+  <li>催眠是一种身体放松而内在精神专注且安逸的治疗形态，所有的催眠都包含了两步，第一步是诱发你进入恍惚放松的状态，第二步则是提出一个“你的潜意识会把它转变为事实”的建议。也就是说，让你的潜意识接受暗示，而且将它实现。</li>
+  <li>把思维“归零”当成一种生活的常态，当成一种优秀的延续，当成一种时刻要做的事情。只有拿出归零的勇气，才能使你获得一种能力：“我敢不敢用一个新的东西取代自己原有的东西?”</li>
+</ul>
+
+<h2 id="自我设障">自我设障</h2>
+
+<blockquote>
+  <p>勇敢面对，多沟通交流。</p>
+</blockquote>
+
+<ul>
+  <li>自我设障(Self——Handicapping)，这是“低自我”概念者表现出的一种心理障碍——为了维护或提高自尊，做出对成功不利的行为或言辞，给自己的成功预先设置障碍。</li>
+  <li>它主要表现为思考问题的负面条件居多，经常由于失败唤起内在的消极情绪，对自己进行惩罚或批评，进行自我贬抑和自我否定。在行为上，它表现为怯于表达与展示自己，行为退缩，通过身体不适或其他方式使自己处于不利地位。这不但影响人们的心理健康，而且还影响人们对于社会的适应能力。</li>
+  <li>越是发生了你不想面对的情况，你就越要面对现实，挑战一定会成为现实的恶劣结果。在任何现实面前都要保持理智，你才能剔除障碍，这才是科学和理智的态度。</li>
+  <li>人的心灵就像一个容器，时间长了，里面难免会有一些沉渣，把它们倒掉就好了。如果不清空，就会堵塞出口，使得心灵越来越沉重。最重要的一点，要记得随手关上身后的门，该忘记的，你就必须要忘记。删除心灵的垃圾，每天刷新自己，这样才能使自己的生活不断地重获新生，保持一颗健康的心灵。</li>
+  <li>所有对过去的苛刻，都是对于未来的恐惧。在潜意识中，人们因为不敢面对未来，才对过去念念不忘，纠缠不休。其实，你根本就不需要对未来害怕，只要你能卸下过去的包袱！</li>
+  <li>他即将完全交付自己的身心，把未来的生活托付给另一个人，这意味着现状将完全改变，他将进入一种全新的生活，人在此时，一定会产生某种惧怕，这是正常的心理现象。</li>
+  <li>在99°C的基础上再加1°C，水才会沸腾。如果你的努力只坚持到99°C时就放弃，那么你永远也不能烧开这一壶水。再坚持一会儿，才能达到目的；如果就此放弃，你的工作成果和0°C没有区别。</li>
+  <li>当你不小心做了错事时，你会怎么办?逃避和否认就是一种设障的行为，面对问题、分析原因，才是接纳自我的表现，后者能够帮助你收获自尊体验，促进自我发展和别人对你的尊重。</li>
+  <li>交流是释放压力的有效途径，同时，交流的过程也是一个自我反思的过程。通过与他人交谈，可以迅速地获取心理支持，增强自信心。</li>
+</ul>
+
+<h2 id="欲望">欲望</h2>
+
+<blockquote>
+  <p>不要成为欲望的奴隶。</p>
+</blockquote>
+
+<ul>
+  <li>一旦我们的冲动得到了满足，在享受到片刻的满足后，立刻会被无聊取代，直到另一个欲望抓住你。生活在这种永无止境的饥渴中，难道不是一种痛苦吗？”</li>
+  <li>从阅读别人成功的事迹中得到快感，就好像有人通过阅读色情书籍得到快感一样。</li>
+  <li>如果你只是坐在那儿，告诉世人，明天开始你将变得多么伟大，那么你永远不会成功。因为你会被这种膨胀的欲望和虚假的渴望埋葬，从而缺乏行动力，并迅速地失去明天的机遇。</li>
+  <li>根据自己的习惯、是非观念和观察力的不同，人们对同样一件事情会有多种不同的看法及处理方式，又因为看法不同、处理方式不同，产生了不同的结果，导致人与人之间的命运大相径庭。</li>
+  <li>如果你不控制欲望，必然为欲望所控制。人生是如此简单，快乐也并不复杂，一切都要看我们自己。</li>
+</ul>
+
+<h2 id="拖延症">拖延症</h2>
+
+<blockquote>
+  <p>“立刻行动！”</p>
+</blockquote>
+
+<ul>
+  <li>越是重要的反而越拖延，越是临近时间点，就越想去做其他不相干的事情。</li>
+  <li>不容许任何人侵占或浪费自己的时间，结果最不珍惜时间的那个人反而是自己。</li>
+  <li>在执行一项工作的过程中，一旦有什么想法或突发事件，就抛下手中工作不管不顾，转而去处理其他事情。</li>
+  <li>某些拖延行为并非拖延者缺乏能力或者不够努力，而是某种形式的完美主义或者求全观念的反映，他们共同的心声是：“如果能多给我一些时间，我可以做得更好。”</li>
+  <li>拖延的产生与大脑前额叶皮层的功能有关。这个脑区负责大脑的执行功能，比如计划、冲动的控制和注意力，它还能起到过滤器的作用，降低来自其他脑区分散注意力的刺激。</li>
+  <li>当你面临拖延的困境时，采取“立刻行动”，可以直接打破拖延的神经对自己的操控。从另一个角度来说，如果你想回避某一项事情，你就应该从这项事情入手，而且要立即进行。</li>
+  <li>有些事情即便害怕也要去做，它的成败与别人无关，只与自己有关。当你成功时，没人真正向你喝彩；当你失败时，也无人有资格嘲笑你。</li>
+  <li>意识到一点错误都不犯是不可能的，那些伟大的成功者也都是在相当长的过程中完成他们的事业。</li>
+</ul>
+
+<h2 id="无力感">无力感</h2>
+
+<blockquote>
+  <p>改变自己。</p>
+</blockquote>
+
+<ul>
+  <li>一切痛苦的根源都是“想而不做”，缺乏面对的勇气。</li>
+  <li>“我无法从工作中得到快乐，也无法体会到幸福感，我总能感觉一种无形的压力。最近我想了很多，我一直在想：我的明天、我的理想，我自己到底想做什么？我试着问了自己很多次，可是我总是找不到答案，我觉得自己生病了，情绪经常不稳定，高低起伏不定，我知道自己存在很严重的抑郁症，这些我自己都能够察觉到。”，“我曾经试着去看心理医生，可是考虑到现实问题我放弃了，同时我也认为自己能够克服那些问题，不管怎样我还是无法改变自己的心态，自己的行为、思想，我是如此讨厌自己，痛恨自己为什么不行！我胆小、懦弱、意志力不够坚强，这些我自己都知道，我真的感觉力不从心，无法去改变自己的弱点，无力去改变现实！我现在真的不知道该怎么办了，我感觉十分痛苦，找不到人生的目标，并且觉得自己糟糕透了。”</li>
+  <li>去发现和观察比他境遇更差的生活。抽出一定的时间实现一个自己多年的愿望。放下目前不能放下的东西。</li>
+  <li>“习得性无力感”的研究是从20世纪60年代后期开始的，它表现的是人的内部动机问题，是指一种通过某种经验而形成的，会给以后的生活带来消极影响的特殊心理状态。也就是说，有了对外部事件无法控制的经验，就可能产生一种习得性无力感（个人经历了失败和挫折，面临问题时产生无能为力感），它使得人的动机水平下降。</li>
+  <li>在今天竞争激烈的现实生活中，想实现自身的价值有太多的困难。我们无力推翻这个世界已经形成的准则，却有足够的能力改变自己对于现实的认识。当你有勇气改变自己时，你一定可以从中吸取到新鲜的力量——它源于我们体内改善的思维活力，以及我们在自我管理方面的良好进步！</li>
+</ul>
+
+<h2 id="掌握时间">掌握时间</h2>
+
+<blockquote>
+  <p>选取最有价值的事情执行。</p>
+</blockquote>
+
+<ul>
+  <li>许多人靠自我麻醉来欺骗自己，这样，他们陷入一种怪圈式的循环：不停地制定规划，发誓要利用好时间，管控时间，但每次都无疾而终。</li>
+  <li>对自己的行为进行更多的思考，用精确的思考去合理把握时间，制定规划并有效地执行。</li>
+  <li>从所有可能的任务当中选择最重要的，并通过最有效的方式来完成它，而不是每件事都争取完成。</li>
+  <li>他在什么时候跑得最快呢？当然是比赛的时候。假如刘易斯时时刻刻都要求自己跑得最快，他早就累死了。长时间与时间赛跑就容易造成身心劳损，得不偿失。它最大的问题是神经紧张，生怕无法完成规定中的计划。</li>
+  <li>我们进行时间管理的重心并不是时间，而是“事件的优先级”。“我的时间”就是“我可以用来有序处理事件的时间”，而不是数学上的24小时的累加。</li>
+  <li>对我们的事业（生活中的重要目标）有很大帮助而且不能迟疑的事情，它的优先级应该是最高的；其次，能够推动自己的发展（对解决事情有重大帮助）却需要一个漫长过程的事情，它们可以列在次要位置或第二顺序；安排为低优先级的事情，则是那些无足轻重的内容（虽然值得一做或必须去做，但价值并不太高）。</li>
+  <li>只有20%的事情在对我们的生活起着80%的推动作用。</li>
+  <li>一个人的命运决定于晚上八点到十点之间在做什么，以及他利用这些时间的效率。人的命运还决定于他对于自己时间的判断：“一天只有24小时，我怎样来安排它们?如何才能让自己不感叹过去如流水，不惋惜昨天自己的稀里糊涂?”</li>
+  <li>预判干扰，抓大放小。坚定方向。</li>
+  <li>宇宙间万事万物时刻都在发生着变化，只有一样东西是不变的，那就是“变化”本身。你可以在潜意识中对自己灌输一个命令：“我早就想到了这一点，所以它的出现是我意料之中的，接下来我就会十分迅速地解决这些干扰。”</li>
+  <li>只有当你提前准备好了，安排出缓冲空间，在真正地遇到干扰和变化的时候，才不会显得慌乱和沮丧。你已经预先知道会有变化，而且变化也如你安排的一样出现，你也因此有了足够的时间和预案来解决这些变化产生的阻碍。</li>
+  <li>管理时间的重点并不是时间，而是确定事情的重要性和优先顺序，以免在遇到问题和变化时手足无措，进而产生情绪的失控。</li>
+</ul>
+
+<h2 id="压力">压力</h2>
+
+<blockquote>
+  <p>面对、分解压力，适时认输。</p>
+</blockquote>
+
+<ul>
+  <li>只要你选择了活着而非死亡，你就注定要承受生存所带来的各种各样的压力。</li>
+  <li>在这竞争激烈的现代社会，如果你天真地期待自己能够置身于乌托邦式的环境，那就是白日做梦。现实就是如此，我们只能直面现实。你不可能逃避，也无法视而不见。只有承认现实，接受现实，你才有机会融入现实，将压力释放出去。</li>
+  <li>如果没有压力，人的内心就会变得空虚，惰性的一面会开始膨胀。这同样是失控的前兆。必要的压力能够成为潜能释放的催化剂，让我们以积极的状态对待自己的活。</li>
+  <li>你要学会把压力分解、传递到你所在的团队或者其他人身上。相信我，这绝不是推诿，也许别人正想帮助你、正想分担你的压力。总之，别认为你是唯一能够做好这项工作、承担这件事情的人。</li>
+  <li>人们常犯的一个错误就是把自己的痛苦看作是全世界最大的痛苦，把自己的不幸当成最大的不幸。</li>
+  <li>千万别去追求什么完美。完美只是一种理想境界，我们只能去接近极限状态，但不可能做到。</li>
+  <li>我们必须拥有一些对自己来说最重要和最必要的，必须放弃一些对自己来说是不那么重要也不那么必要。只有谨守这个原则，我们才能轻装上路，建立压力的释放机制——将那些次要目标定期剔除掉。</li>
+  <li>欲望不可以放纵，心意也不可以完全满足。任何东西都有一个边界，唯独一个人的欲望和追求是没有边境的，自己不控制，它就会像一辆失控的汽车，速度越来越快，不停地向前飞驰，而你的双手早已离开了方向盘，直到在需要拐弯的时候，车毁人亡。</li>
+  <li>认输的本质是不进行无益的竞争。这种良好的心态将使我们避开锋芒，避免无谓的浪费，从而以退为进，赢得潜心发展的主动权。</li>
+  <li>你低下头时，并不是要放弃自己的追求，而是退一步去重新审时度势，找准正确的方向。因此，必要时的“后退”能使自己的心灵空间更加广阔，转移并卸掉压力，让身心得以充分的休息调整，更好地寻求成功的机遇。</li>
+</ul>
+
+<h2 id="欺骗自己">欺骗自己</h2>
+
+<blockquote>
+  <p>不卑不亢。</p>
+</blockquote>
+
+<ul>
+  <li>由于人与人之间的疏离和社会生活的碎片化，现代社会的人们在超越自我的追求中开始普遍地迷失方向，“生活虚无感”的体验越来越多。</li>
+  <li>要么在刺激中寻找自我，要么在刺激中麻醉自我，这些都是消极方法。</li>
+  <li>很多人经常被自己最热爱的东西摧毁——人们在从事最喜欢的事情时会不自觉地忽视它的不利信号。</li>
+  <li>有的人习惯性地把自己的一些不合理的观念或者是一些行为通过自我欺骗得到合理化，目的是在于减轻自我的内疚感，由此逃避自己要负的责任。比如失恋，有些人每一次恋爱，好像都是被对方抛弃的，事实却是他（她）在无意识中使用了一些言语和行为，用力把对方从自己的身边推开，从而减低了由于分手而产生的自责感。</li>
+  <li>即便是你无能，你也无须自卑。传统的学校、家庭教育过度强调了失败。其实这个世界上很多杰出人物都犯过无数次错误，你不要怕犯错误，犯错误多了，你就成功了，成功者都能够接受自己的失败和错误并收拾残局，他们视困难为挑战。</li>
+  <li>为了梦想努力，在什么时候都没错。但是你也要看清楚现实，这包括自身的现实、社会的现实和环境的现实。跳出现实制定计划，向往某种理想，只能给你带来人生的悲剧。</li>
+</ul>
+
+<h2 id="批评">批评</h2>
+
+<blockquote>
+  <p>自我认可。</p>
+</blockquote>
+
+<ul>
+  <li>只有我才能够决定我的自我价值。</li>
+  <li>自我中心意识是少数几种不受欢迎的人格特质。一个人如果有强烈的自我中心意识，就会把所有跟自己有关的事都看得特别重要。他们喜欢听自己说话，看重自己的时间——却丝毫不管别人的时间重不重要。他们对于自己的时间、爱与金钱都很重视，对于没有他们那么幸运的人，则吝于伸出同情之手。</li>
+  <li>悲观的情绪会抑制一个人的思想和行动能力，并使人们只有一个简单的想法。这个想法严重到他只希望能活着离开这个困境，而伴随这个想法的行动就是逃走，或是用真正的暴力取代想象中的暴力。</li>
+  <li>积极的情绪会催生一种从“拓延”到“构建”的能力，这种能力不仅可以帮助人们进行创造性的思维，还会促使人们运用各种资源应对艰难的时刻，而不是成为环境的破坏分子。</li>
+  <li>没有人有知道世间一切事物的能力，任谁也做不到。我们只知道发生的都已经发生了，无法改变，也不可能扭转。已经发生了的事情（错误），必定有它的原因。即使我们十分不满，接下来最应该做的，也只是改变后面的走向：通过分析原因，让未来的事情尽善尽美。</li>
+</ul>
+
+<h2 id="选择">选择</h2>
+
+<blockquote>
+  <p>方向比速度重要。</p>
+</blockquote>
+
+<ul>
+  <li>表面看起来：品种越多，顾客越多。但在最终选择要买的沙拉酱时，比例发生了戏剧性的逆转：在光顾30种沙拉酱摊的顾客中，最终只有3%的人掏钱，而30%的顾客在陈列5种沙拉酱的摊位前购买了沙拉酱。</li>
+  <li>随着选择数量的增加，人们感到做出错误决定的风险也随之增加，促使他们不愿做出任何决定。</li>
+  <li>几乎没有人会认为自己是错误的，因为没有人会故意做出一个不利于自己的决定。他们之所以选错，是由于不懂得如何选择。</li>
+  <li>方向比速度更重要，在没有选择对方向以前，单纯地谈论速度没有太大意义，有时对于我们而言，等待要优于行动，因为等待本身就是一种选择的过程。</li>
+  <li>所有的道路，不是别人给的，而是你自己选择的结果。你有什么样的选择，也就有了什么样的人生。你今天的现状是你几年前选择的结果，你今天的选择决定你几年后的职业状况。</li>
+  <li>重要的不是你现在所处的位置，而是迈出下一步的方向。位置决定了你现在的高度，方向却决定着你未来的成就。</li>
+  <li>决策过程从本质上来说，是一种情感过程。</li>
+  <li>我们要有勇气来改变可以改变的事情，有胸怀来接受不可改变的事情，并聪明地分辨两者的不同。</li>
+  <li>在抉择和判定时，我们要避免先入为主的思维定式，避免自己的主观倾向影响客观、精准地判定。</li>
+  <li>假如明天，我的所作所为被刊登在了一份报纸上，被我的亲朋好友读到，我是否感到羞愧？如果不会，你做的事才对得起你自己的良知。</li>
+  <li>做出选择只是第一步，甚至它什么都不是，只有落实到行动，拥有一个最有力的行动过程，你才能真正展示自己的力量。</li>
+  <li>人生目标往往是一种要么做到、要么做不到的东西，不存在中间状态。你要想超越竞争对手，你就不能以“差不多”的态度来执行战略计划，而是要持之以恒地高标准地做到最好，这是一种永久性的改变，不是一场临时性的运动。</li>
+  <li>人们要在对自己进行约束的问题上达成共识。如果不能达成共识，那你就不要自己骗自己奢谈人生战略，因为你根本不打算为你的人生目标付出任何自我约束的代价。</li>
+</ul>
+
+<h2 id="潜能">潜能</h2>
+
+<blockquote>
+  <p>自我催眠</p>
+</blockquote>
+
+<ul>
+  <li>如果你的潜意识建立积极的正面的信念，让潜意识完全确认后，你就会朝着这个方向去行动。你会发现你所期望的一切都在不经意间轻松获得。</li>
+  <li>每一个人的真正自我都会对别人具有强大的影响力和感染力。通常说某个人的“个性很有魅力”，其实是指他没有压制自我的创造性，具有表现自己的勇气。</li>
+  <li>有意识的自我批评、自我分析和反省是必要的，但是一种不断的、每日每时都进行的自我猜测或者对过去行为无休止的分析，最终只能导致行动的失败。</li>
+  <li>实际上，我们每天都会做梦。有人说自己没有做梦，其实是想不起来了。一个人每天平均要做4到5个梦，照这么计算每年大约要做1300个梦，而一辈子大约要做10万个梦。人是非常贪图安逸的，那些对自己不好的事情，我们会主动忘记。这叫作自我保护。</li>
+  <li>人生的主要课题就是发现真实的自己，然后看到别人的真诚。</li>
+</ul>
+
+<h2 id="意志力">意志力</h2>
+
+<blockquote>
+  <p>习惯成自然。</p>
+</blockquote>
+
+<ul>
+  <li>意志与记忆力有着紧密的关系。提高记忆力只有一条“黄金法则”。这条法则就是坚持不懈地进行有益的锻炼，让自己的记忆不断提升。</li>
+  <li>是什么合成了脑海中的印象呢？首先是注意力，还有理解力、想象力、鉴别力和强大的意志力。在所有这些记忆要素中，最关键的是最后一点，即意志力。</li>
+  <li>能够预先看到出现的结果会扩大意志力的范围。因此，只要我们的日常行为有条不紊，遵循固定的做事计划，它们就会成为自己有意识的决心。把行动置于自己有意识的控制之下，是一种习惯性的决心，它随时准备在某种情况下以某种方式做某些事情。</li>
+  <li>意志力是有限资源。当你下意识地抑制自己的冲动、想法、下意识地做出决定、抵制诱惑，全力以赴，你就会逐渐疲惫。</li>
+  <li>人的心态能够充分调动意志力，使意志力成为生活中稳固不变的因素。</li>
+  <li>只有积极投入，心绪才会变得热忱。你要马上开始，工作才能完成。</li>
+  <li>你的意志越坚定，不自律就越危险。大量的例子证实了这一点。你会发现一些精力非常充沛的人的一生就像扇动的翅膀，他们或成就伟业或一无所成。这看起来就像是躁狂抑郁症（周期性情绪过度高昂或低落的疾病）。</li>
+</ul>
+
+<h2 id="我可以">我可以</h2>
+
+<blockquote>
+  <p>目标要准确，主次要分清。</p>
+</blockquote>
+
+<ul>
+  <li>即便你的精神力(它包括注意力和意志力)十分强大，你也可能无法保持专注。</li>
+  <li>这个世界企图阻止你专注，每时每刻都是，它的手法是在你眼前散发无穷无尽的信息，这其中大多是无用的。你感觉到注意力涣散和心烦意乱，这都是不足为奇的。</li>
+  <li>希望有一天有一栋山上的小屋，这就是一个模糊不清的目标。问题在于‘有一天’不够明确，因为不够明确，成功的机会就不大。”</li>
+  <li>就像你对于未来要跟自己结婚的异性缺乏概念，很难想象你能够顺利地步入婚姻的殿堂。</li>
+  <li>任何关于人生或时间管理的建议，都可以被分解为一个最为根本的理念：忽视次要的事情，然后把自己的注意力放在有利于实现目标的重要事情上。</li>
+  <li>千万不要为了貌似紧急的事情而落下了真正重要的事。对于大部分任务而言，你所采取的行动里只有20%才是真正重要的，剩下的80%都是可以被忽略的细枝末节。</li>
+  <li>最值得你去拥有的一项生活技巧，就是区分出重要的事与不重要的事之间的差别。</li>
+  <li>说出来的时候会给你造成虚假实现的自我良好感，削弱实现计划的动力。</li>
+  <li>在下面八个方面订出今后五年中的主要目标：生涯、体力、家庭、个人态度、经济、公共事业、教育和娱乐。</li>
+  <li>经常与成功者或有关的专家交往。这是为了取得他们的帮助，要认真区分谁是
+不诚实的人，谁是真心要帮助你的人。</li>
+  <li>如果不在一开始就定下明确的目标，那么你将无所成就。如果你生命中的目标模糊不清，你的成就也将难以确定。要先弄清楚你自己需要什么，什么时候需要，你为什么需要，以及你打算如何得到。</li>
+  <li>但真的会在买了以后把凭证寄回的人是很少的。由于人们的过于自信，每个人在购买时都以为自己一定会把凭证寄回公司，但买了以后很快就会忘记。</li>
+  <li>自以为是表现在始终认为自己是对的，哪怕别人说的没有错，心里也不想去赞同人家，喜欢说大话；就是错了也比较难把它纠正回来；听不进别人的话，总认为别人不如自己，通常不考虑别人的感受。</li>
+</ul>
+
+<h2 id="人生使命">人生使命</h2>
+
+<blockquote>
+  <p>建立信仰，采取行动。</p>
+</blockquote>
+
+<ul>
+  <li>找到自己人生的“使命感”，就是建立信仰，确立价值观，并且利用意志力去释放自我潜力。</li>
+  <li>未来是动态的，尽管它还没有变成现实。但它具备无穷的可能性，你可以通过积极的争取把它变成一幅春意盎然的画卷，你也可以用一种慵懒和不在乎的态度重新失去它，使它成为一张乱七八糟的低劣之作。一切都取决于你。</li>
+  <li>成本。它包括机会成本，以及自己已经在一个事情上投入的时间、精力、智慧的成本。出于对成本的考虑，他会拒绝冒险，哪怕发现了自己最想从事的工作，他也很难迈出实际行动。</li>
+  <li>你总是出于现实考虑而选择自己去做的事，你会看到自己进入了一个“情绪是如此之坏”的怪圈：不管是努力还是懈怠，情绪都会变坏，而不会向积极的方向转变。</li>
+  <li>比如你给一家公司打工，说穿了就是受人剥削。更要命的是，这份工作是你讨厌的，根本不符合你的梦想。在工作中，老板以公司利润为出发点考虑问题，工资能压多低就压多低，工作却越来越多，除此之外，还会要求你搭上个人下班后的时间。在这种情况下，你的选择是两难的：努力工作，会成全老板的企图；不努力工作，自己的收入就会下降。你找不到快乐，试图融入的结果就是变得麻木，成为一台没有灵魂的工作机器。</li>
+  <li>人们最喜欢的并不是成功，更重要的是争取成功的过程。这就是使命感，是价值观在世俗中最直接的表现。幸福也正是作为我们人生的一种感受，才如此贴切地被置于一种至高无上的地位。幸福是人生的一个终极目的，它与成功无关。在追求理想的过程中感到幸福的人不会空虚、迷茫、无所事事和无所适从，他们健康、安详、乐观、旷达，脸上常常带着迷人的微笑，身边经常笼罩着悦人的光芒。</li>
+  <li>追求理想就是一场长跑，你不一定会赢，但一定要坚持下去，并且从中感受幸福。</li>
+  <li>要是你不敢行动，经常害怕，你永远停在那个关卡上。虽然你的理想足以让全世界的人为之感动流泪，但有什么用呢？你只是拥有一种虚幻的理想罢了，</li>
+  <li>“试着去做”是一种侥幸的心理，要想实现自己的目标，就不能犹豫，要集中全部精力，全身心地投入进去，才有机会实现自己的目标。如果你没有实现目标，那么你怪不得别人，也没有任何借口，只能在自己身上寻找原因。没有努力去做，在做事的过程中也没有充满使命感，甚至犹豫和反复，是多数人的通病。</li>
+</ul>
+
+<h2 id="成就感">成就感</h2>
+
+<blockquote>
+  <p>坚持就是胜利。</p>
+</blockquote>
+
+<ul>
+  <li>当你学会了如何思考，你就知道该怎样做出改变，尤其是有效的改变。</li>
+  <li>观察人们在上床时怎样脱鞋，你就能判断他第二天的状态。</li>
+  <li>在这个过程当中，最重要的就是要控制消极的和悲观的情绪，增加自制力。我们要有改变的勇气，才能体验到穿越隧道的成就感。</li>
+  <li>每天进步一点点，这就是有效改变的开始。你要学会每天只前进一小步就可以了。</li>
+  <li>你一定要做好“打长期战争”的心理准备，改变自己并不困难，能否长期坚持下去才是一场异常艰难的考验。</li>
+  <li>人们有一个很致命的弱点——惰性，当没有人管你、逼你的时候，惰性就很可能会控制你的行动。因此，如果你还想有所作为的话，就要自己强迫自己。</li>
+  <li>18岁到38岁之间的黄金年龄段，你是否有一个良好的自制力，对你的人生成就至关重要，这正好是我们开始工作并且积累财富的阶段。</li>
+  <li>人们常说性格决定命运。但是，性格又是什么呢？性格并不是一个空洞的命题，而是在我们的生活细节中展现。比如，它多数是我们在日常生活中已经自动化、习惯化的行为方式。行为方式就是人的性格的外在体现。</li>
+  <li>不管任何事情，一旦你形成了自动化的行为方式，做起来就不会有任何困难。好的习惯和坏的习惯，都是如此。</li>
+  <li>如果你成长在一个充满了犯错感的家庭，长大后你还会总有一些犯错感，它们阴魂不散，时刻附着你的身上。你总在说：“对不起！”并且不敢直接向别人提出任何要求。</li>
+  <li>在“内我体验”中关闭世界之门所能找到的暂时的满足——逃避生活的人经常这么做，他们把自己关起来，幻想有一天自己的状况会得到改观。</li>
+  <li>在本质上，成就感又来源于人与人之间的竞争意识。</li>
+</ul>
+
+<p>简短的对阅读体验的评价：我认为这本书在我心目中的地位可以和《代码补全》并列，如果要给人推荐书籍，我会推荐这两本。</p>]]></content><author><name></name></author><category term="读书报告" /><summary type="html"><![CDATA[“我别无选择，因为我不能变得贫穷或者平凡，这不是我的风格！”本书教会你：如何控制你自己。]]></summary></entry><entry><title type="html">《只狼》内容设计分析</title><link href="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/10/28/sekiro.html" rel="alternate" type="text/html" title="《只狼》内容设计分析" /><published>2021-10-28T00:00:00+00:00</published><updated>2021-10-28T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/10/28/sekiro</id><content type="html" xml:base="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/10/28/sekiro.html"><![CDATA[<p>向死而生！一款节奏防御、鼓励压制、强对策校验的动作冒险游戏。</p>
+
+<!--more-->
+
+<h1 id="只狼影逝二度--sekiro-shadows-die-twice">只狼：影逝二度 / Sekiro: Shadows Die Twice</h1>
+
+<p><img src="/assets/img/gameplay/sekiro/1.jpg" alt="" /></p>
+
+<p>副标题写的内容并不存在（有机会可能再补充）。</p>
+
+<h2 id="分析概述">分析概述</h2>
+
+<p><img src="/assets/img/gameplay/sekiro/2.jpg" alt="" /></p>
+
+<p>理由写了很多，做的很少。</p>
+
+<p><img src="/assets/img/gameplay/sekiro/3.jpg" alt="" /></p>
+
+<p>费尽心思找了6个logo。</p>
+
+<h2 id="宏观分析">宏观分析</h2>
+
+<h3 id="游戏简介卡">游戏简介卡</h3>
+<p><img src="/assets/img/gameplay/sekiro/4.jpg" alt="" /></p>
+
+<h3 id="拆解结构图">拆解结构图</h3>
+<p><img src="/assets/img/gameplay/sekiro/5.jpg" alt="" /></p>
+
+<h3 id="理论分析透镜">理论分析透镜</h3>
+<p><img src="/assets/img/gameplay/sekiro/6.jpg" alt="" /></p>
+
+<h3 id="3c镜头对比">3C镜头对比</h3>
+<p><img src="/assets/img/gameplay/sekiro/7.jpg" alt="" /></p>
+
+<h2 id="具象分析">具象分析</h2>
+
+<h3 id="系统流转">系统流转</h3>
+<p><img src="/assets/img/gameplay/sekiro/8.jpg" alt="" /></p>
+
+<h3 id="叙事节奏">叙事节奏</h3>
+<p><img src="/assets/img/gameplay/sekiro/9.jpg" alt="" /></p>
+
+<p>基本就是抄了别人的，有缘再改吧。</p>
+
+<h3 id="体验蓝图">体验蓝图</h3>
+<p><img src="/assets/img/gameplay/sekiro/10.jpg" alt="" /></p>
+
+<p>其余地图分析亦可以参考参考文章。</p>
+
+<h2 id="动作分析">动作分析</h2>
+
+<h3 id="主角">主角</h3>
+
+<p>描述均为60帧每秒，内容为PR逐帧分析，未严格测试。</p>
+
+<p><img src="https://i.imgur.com/EVR0LtW.gif" alt="不死斩.gif" /></p>
+
+<p><img src="/assets/img/gameplay/sekiro/11.jpg" alt="" /></p>
+
+<p><img src="https://i.imgur.com/NJ0rtq7.gif" alt="飞渡浮舟.gif" /></p>
+
+<p><img src="/assets/img/gameplay/sekiro/12.jpg" alt="" /></p>
+
+<p>后面懒得看了，暂时结束。</p>
+
+<p><img src="https://i.imgur.com/vb6WBHg.gif" alt="普通攻击.gif" /></p>
+
+<!-- + 10帧进入蓄力前戳pose
++ 10帧抬手到最高，再3帧后砍下
++ 10帧攻击
++ …… -->
+
+<p><img src="https://i.imgur.com/ci5Aqo5.gif" alt="旋风斩.gif" /></p>
+
+<p><img src="https://i.imgur.com/WjsQ4rz.gif" alt="寄鹰斩.gif" /></p>
+
+<p><img src="https://i.imgur.com/s5c6nFu.gif" alt="一字斩.gif" /></p>
+
+<p><img src="https://i.imgur.com/Y1XAmqb.gif" alt="叩拜连击拳.gif" /></p>
+
+<p><img src="https://i.imgur.com/KyMfBnE.gif" alt="忍伞.gif" /></p>
+
+<p><img src="https://i.imgur.com/nZhOjSY.gif" alt="巨型忍者突刺.gif" /></p>
+
+<p><img src="https://i.imgur.com/VL1GocN.gif" alt="密传龙闪.gif" /></p>
+
+<!-- <style>video {
+    width: 100%;
+    margin: 20 0;
+}</style>
+
+<video controls>
+  <source src="/assets/img/gameplay/sekiro/不死斩.mp4" type="video/mp4">
+</video> -->]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[向死而生！一款节奏防御、鼓励压制、强对策校验的动作冒险游戏。]]></summary></entry><entry><title type="html">《风来之国》内容设计分析</title><link href="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/09/21/eastward.html" rel="alternate" type="text/html" title="《风来之国》内容设计分析" /><published>2021-09-21T00:00:00+00:00</published><updated>2021-09-21T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/09/21/eastward</id><content type="html" xml:base="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/09/21/eastward.html"><![CDATA[<p>本年度最佳游戏！满足了我对RPG的一切幻想。本文接下来将对游戏的进行一些内容设计向的分析。</p>
+
+<!--more-->
+
+<h1 id="风来之国--eastward">风来之国 / EASTWARD</h1>
+
+<!-- ![](/assets/img/gameplay/eastward/1.jpg) -->
+
+<h2 id="special-experience-upgrade">SPECIAL! EXPERIENCE UPGRADE</h2>
+
+<p>本节为特殊插入内容，如果需要看正文请移步后文。</p>
+
+<p>最初“体验报告”系列文章，是用来记录最近玩过的游戏，并将分析和感悟记录下来的系列分析文章。但是很可惜，明明已经进行了内容和模块拆分，但是还是没能达成如此目的，大部分重视内容的游戏，对内容的记录过少。</p>
+
+<p>于是便有了全新的——“体验蓝图”系列。</p>
+
+<p>本系列希望能以更加具体、更加细致的方式，记录游戏的内容流程，并加以分析，从中学习到有益的部分。</p>
+
+<p>以下，便是本系列的初篇文章——</p>
+
+<p><img src="/assets/img/gameplay/eastward/1.jpg" alt="封面" /></p>
+
+<h2 id="分析概述">分析概述</h2>
+
+<p><img src="/assets/img/gameplay/eastward/2.jpg" alt="为什么要分析游戏" /></p>
+
+<p>分析游戏是为了从体验中反拆设计，学习、提高设计能力。</p>
+
+<p>而之所以会选取风来之国，是因为觉得它有可以学习的地方，具体来说，风来之国：</p>
+
+<ul>
+  <li>单位内容成本可控：选取了开发代价没那么高的内容的美学呈现形式：平面 + 像素 + 打光</li>
+  <li>游戏整体内容详实：有足以媲美3A级游戏的内容框架和内容呈现，即便游戏本身尚有不足之处</li>
+</ul>
+
+<p>以此为玩家带来了一段独特的旅途体验。</p>
+
+<p>本文的分析主要会聚焦在<strong><u>内容设计</u></strong>上——这也正是风来之国如此特别的原因。会使用一些诸如MDA和游戏感之类的理论框架。</p>
+
+<p><img src="/assets/img/gameplay/eastward/3.jpg" alt="目录" /></p>
+
+<p>本文会先进行一些<strong><u>宏观的叙述</u></strong>，比如讲讲游戏的主要体验，游戏传达的感受等等。</p>
+
+<p>然后会进行<strong><u>微观的分析</u></strong>，游戏整体的叙事体验、玩法体验等等。</p>
+
+<p><img src="/assets/img/gameplay/eastward/4.jpg" alt="剧透警告" /></p>
+
+<p>编写本文无法绕开对内容的讨论，阅读本文可能会对您的初次游玩体验<strong><u>造成不可逆的、灾难性的破坏。</u></strong></p>
+
+<p>考虑到游戏是个好游戏，自己的亲身体验说不定能带来更多的思考，因而大可以在这里先停下，待完整体验游戏后再继续阅读。</p>
+
+<h2 id="宏观分析">宏观分析</h2>
+
+<h3 id="游戏简介">游戏简介</h3>
+
+<p>先对游戏基本情况进行一个说明：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>类别</th>
+      <th>内容</th>
+      <th>批注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>发售日</td>
+      <td><a href="http://www.pixpil.com/archives/18434">2021/09/16</a></td>
+      <td>同期发售国产游戏《暗影火炬城》、《山海旅人》等</td>
+    </tr>
+    <tr>
+      <td>销量</td>
+      <td><a href="https://steamdb.info/app/977880/graphs/">约20-50万量级</a></td>
+      <td>接近<a href="https://steamdb.info/app/1288310/graphs/">《烟火》</a>，高于同期的<a href="https://steamdb.info/app/1161170/graphs/">《山海旅人》</a></td>
+    </tr>
+    <tr>
+      <td>开发商</td>
+      <td><a href="http://www.pixpil.com/about">Pixpil</a></td>
+      <td>位于上海的独立游戏工作室。15年立项时仅3人</td>
+    </tr>
+    <tr>
+      <td>发行商</td>
+      <td><a href="http://chucklefish.org/">Chucklefish</a></td>
+      <td>发行了《雨中冒险》和《星露谷物语》的英国工作室</td>
+    </tr>
+    <tr>
+      <td>发行商(国内)</td>
+      <td><a href="https://www.xd.com/">心动</a></td>
+      <td>页游到手游到TapTap，“专注长期价值”</td>
+    </tr>
+    <tr>
+      <td>评价</td>
+      <td>数据见批注</td>
+      <td><a href="https://steamdb.info/app/977880/graphs/">steam 😋 84.74%</a>；<a href="https://www.metacritic.com/game/pc/eastward">metacritic 84/100</a></td>
+    </tr>
+    <tr>
+      <td>游戏引擎</td>
+      <td><a href="https://moaiwebsite.github.io/">MOAI</a></td>
+      <td><a href="https://github.com/moai/moai-dev">开源</a>，基于C++，使用Lua编写脚本</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>阅读了Pixpil 17年的一篇<a href="http://www.pixpil.com/archives/93">关于开发工具的文章</a>，其中使用开源软件的风格十分讨喜，有些工具还颇为受用，有兴趣的同学可以自行查阅。</p>
+</blockquote>
+
+<p><img src="/assets/img/gameplay/eastward/6.jpg" alt="游戏拆解" /></p>
+
+<p>游戏属于一次性买断制的单机游戏，组织内容也采用经典的剧情玩法结合的形式。</p>
+
+<p>游戏的主轴是沉默大叔约翰带着神秘白发女孩珊的冒险故事，在此基础上插入了各种关卡玩法。</p>
+
+<p>另一方面，游戏也十分鼓励玩家在城镇、野外探索，给了内容体验上、数值收集上的奖励。</p>
+
+<h3 id="理论分析">理论分析</h3>
+
+<p><img src="/assets/img/gameplay/eastward/7.jpg" alt="体验枚举" /></p>
+
+<p>游戏的标准体验大致有如上七种。</p>
+
+<p><img src="/assets/img/gameplay/eastward/8.jpg" alt="体验出发的3C" /></p>
+
+<p>从以上玩家体验出发，向美学层，导向游戏的通用乐趣。向动态和机制层，依附与游戏的系统和规则设计。</p>
+
+<ul>
+  <li>幻想而非叙事</li>
+</ul>
+
+<p>从美学层的角度，游戏核心的感受应该是：幻想、叙事、和探索。而其中最重要的应该是幻想而非叙事。</p>
+
+<p>风来之国用了大量的支线任务、自由行动的选择来补足了“城镇”和“冒险”这一内容主题，其<strong><u>内涵是高于主线的叙事的</u></strong>，这也是我认为它的难能可贵之处。</p>
+
+<ul>
+  <li>可圈可点的系统规则</li>
+</ul>
+
+<p>从动态和机制层，为了保证基础体验的持续可发展，系统必须要有能支撑起30小时的“丰富度”，以各种成长和收集系统缓慢释放。</p>
+
+<p>中间值得一提的依然是<strong><u>支线NPC的设计</u></strong>，比如在大坝城的画家会随着剧情推进先后在不同地方作画，这些小细节极大提高了游戏幻想可信度的传达</p>
+
+<p>战斗能力和解密可以用大体完善 + 小有瑕疵来总结，辅以各种有趣的小游戏体验，整体是不错的。</p>
+
+<blockquote>
+  <p>顺口提一口小有瑕疵和对应的解决：</p>
+
+  <ol>
+    <li>解密的跟踪炸弹定位重复，而且用途不明显，需要修改关卡谜题和场景暗示</li>
+    <li>后期拼刀玩法虽然耳目一新，但是实际体验很差（纯摸奖），可以考虑时间缩放，调大窗口期</li>
+    <li>受击无敌保护有时起不到保护的作用，可能对于小怪还需要一个击退</li>
+  </ol>
+</blockquote>
+
+<p><img src="/assets/img/gameplay/eastward/9.jpg" alt="游戏感" /></p>
+
+<p>从游戏感的角度，游戏做的最为成功的是模拟空间的感受。通过剧情和战斗带来了一场精彩的冒险。实施操控方面可圈可点，游戏中有不同场景移动速度不同的控制操控感影响感受的例子，主要问题还是像拼刀之类的操作手感较差。而润色方便作为最差，对于感受向的还原尚可，但是没有一些<strong><u>耳目一新的独特物理交互感受</u></strong>，是可以补足的地方。</p>
+
+<p>游戏感理论还提到了感受延伸的五种体验，其中最为重要的依然是<strong><u>身份认知的延长</u></strong>。</p>
+
+<h3 id="3c镜头对比">3C镜头对比</h3>
+
+<p><img src="/assets/img/gameplay/eastward/10.jpg" alt="3C镜头对比" /></p>
+
+<p>简单看一下镜头的一些对比，</p>
+
+<ul>
+  <li>优点：风来之国的场景明显地传达了空间感和高低差的感受</li>
+  <li>缺点：有些地方会无法判断是否可以通行</li>
+</ul>
+
+<h2 id="具象分析">具象分析</h2>
+
+<h3 id="叙事体验">叙事体验</h3>
+
+<p><img src="/assets/img/gameplay/eastward/11.jpg" alt="叙事体验" /></p>
+
+<p>大致把UP主的流程以城镇为单位进行了划分，可以先简单看一下各个部分的时长。</p>
+
+<p>风来之国的叙事结构并不是标准的“英雄之旅”节奏的起承转合，这种非标准（或者说传统）的叙事结构一定程度上增加了玩家的理解门槛，也是一部分对剧情和后半部分虎头蛇尾的评价的原因。</p>
+
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiICBqb3VybmV5XG4gICAgdGl0bGUg6aOO5p2l5LmL5Zu95Y-Z5LqL6IqC5aWPXG4gICAgc2VjdGlvbiDlnLDlupXmnZHluoRcbiAgICAgIOWwj-mVh-aOoumZqTogMlxuICAgICAg5bqf5qW85pqC5YirOiAzXG4gICAgc2VjdGlvbiDmuKnmg4XlsbHosLdcbiAgICAgIOajruael-Wvu-eJqTogM1xuICAgICAg6YCD56a76buR5r2uOiA1IDog6buR5r2uXG4gICAgc2VjdGlvbiDlpKflkZfln45cbiAgICAgIOeGn-e7nOaJk-i1jDogNFxuICAgICAg6aOO56We5ZCv5YqoOiA3IDog6buR5r2uXG4gICAgICDlpKflnZ3mg6jliac6IDYgOiDpu5Hmva5cbiAgICBzZWN0aW9uIOeMqeiOseWdnlxuICAgICAg54yp6I6x5Z2eOiAzXG4gICAgc2VjdGlvbiDmnKrmnaXlsptcbiAgICAgIOacquadpeWymzogM1xuICAgIHNlY3Rpb24g5Y2h5oiO5YiX6L2mXG4gICAgICDljaHmiI7liJfovaY6IDQgOiDpu5Hmva4iLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOnRydWV9"><img src="https://mermaid.ink/img/eyJjb2RlIjoiICBqb3VybmV5XG4gICAgdGl0bGUg6aOO5p2l5LmL5Zu95Y-Z5LqL6IqC5aWPXG4gICAgc2VjdGlvbiDlnLDlupXmnZHluoRcbiAgICAgIOWwj-mVh-aOoumZqTogMlxuICAgICAg5bqf5qW85pqC5YirOiAzXG4gICAgc2VjdGlvbiDmuKnmg4XlsbHosLdcbiAgICAgIOajruael-Wvu-eJqTogM1xuICAgICAg6YCD56a76buR5r2uOiA1IDog6buR5r2uXG4gICAgc2VjdGlvbiDlpKflkZfln45cbiAgICAgIOeGn-e7nOaJk-i1jDogNFxuICAgICAg6aOO56We5ZCv5YqoOiA3IDog6buR5r2uXG4gICAgICDlpKflnZ3mg6jliac6IDYgOiDpu5Hmva5cbiAgICBzZWN0aW9uIOeMqeiOseWdnlxuICAgICAg54yp6I6x5Z2eOiAzXG4gICAgc2VjdGlvbiDmnKrmnaXlsptcbiAgICAgIOacquadpeWymzogM1xuICAgIHNlY3Rpb24g5Y2h5oiO5YiX6L2mXG4gICAgICDljaHmiI7liJfovaY6IDQgOiDpu5Hmva4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6dHJ1ZX0" alt="" /></a></p>
+
+<p>剧情上以车站到达的每一个村庄/小镇为划分单位，都会与本地的人经历初识、熟络、分别的阶段，会发生很多故事，并背负起这些羁绊。</p>
+
+<p>本来是很好的结构，但是从山谷黑潮将分别体验一下子拉高，大坝城又以长且丰满的内容——打赌的承接、风神启动的高潮、大坝的悲伤结局，继续将情绪维持在一个高点，这个高度和后续承接的失误，使得游戏的显得<strong><u>中部丰满而尾部不足</u></strong>。</p>
+
+<p>时间迷雾的猩莱坞、无限循环的未来岛，这两个都属于设定奇特——而非<strong><u>情感传达强</u></strong>的单元，虽然高纬度的奇特设定不失为一种内容生产的有效思考方向，但是情绪渲染就一下子降了下来。</p>
+
+<p>到了最后的无限大厦和卡戎列车，已经变为关卡玩法为主而非叙事为主，两者比例从一般的73已经变为了夸张的91开，最后的玩法设计可圈可点，但是情感上却失去了一个高潮释放和终结。</p>
+
+<h3 id="体验蓝图">体验蓝图</h3>
+
+<p><img src="/assets/img/gameplay/eastward/12.jpg" alt="体验蓝图" /></p>
+
+<blockquote>
+  <p>体验蓝图是一种规划玩家体验的工具，方便从全局控制玩家体验。来自USC的相关设计课程</p>
+</blockquote>
+
+<p>最后我们将玩法体验也放入表格，大致如上。</p>
+
+<p>风来之国的详实内容，来源于：玩法本身的扩展和重复、实打实的关卡内容（场景、怪物、BOSS）、点缀和调剂的独立玩法。</p>
+
+<p>这里不再对体验进行更细致的节奏分析，而是讨论一些具体的话题</p>
+
+<ul>
+  <li>玩法的可扩展性或者说可重复性。</li>
+</ul>
+
+<p>《游戏设计词汇表》一书中曾经将角色能力视为谓语，涵义越丰富的谓语，便可以承接更多的宾语，也就拥有了更多的扩展性。就比如游戏中的炸弹，炸开是一个可以承接墙壁、机关等等的谓语；珊的元素球可以触发蘑菇、各种遗迹类机关。在此丰富内涵“谓语”的基础上上可以方便的扩展出各种机关玩法。</p>
+
+<ul>
+  <li>游戏难度的控制和考验</li>
+</ul>
+
+<p>除了数值，在无限大厦甚至引入了时间限制的维度，对操作进行更进一步的考核。</p>
+
+<ul>
+  <li>血量数值的膨胀</li>
+</ul>
+
+<p>后期20颗血，没有加星的料理感觉已经回不上来了，或许恢复品的数值还需要一些增强的规则（比如塞尔达中的满月必定完美料理）。</p>
+
+<!-- 简单来说，风来之国的核心玩法/体验是
+
+1. 角色扮演：和NPC对话推动剧情
+2. 战斗：使用差异化的攻击方式战胜敌人
+3. 解密：使用能力破除机关，顺利前进
+4. 探索：找到地图上的隐藏内容
+5. ……
+
+以谓语的角度来理解，游戏角色为了支撑这些体验能力大致包括：
+
++ 基础：
+  + 移动
+  + 对话、分支选择
+  + NPC交互（存档、烹饪、购买物品等）
+  + 使用道具
++ 战斗：
+  + 使用武器
+    + 平底锅、手枪、喷火器、回旋镖；能量球
+  + 使用能力、炸弹
+    + 炸弹；眩晕、护盾、恢复
+  + 场景交互
+    + 推搬箱子、地藏、接电源
+  + 交换角色、分开组合角色
+
+从MDA的乐趣的角度来理解：感官、幻想、叙事、挑战、探索、投入 -->
+
+<!-- 
+感觉（感觉愉悦的游戏）：玩家享受令人难忘的视听效果。
+幻想（让人假扮的游戏）：虚幻想像的世界。
+叙事（作为戏剧的游戏）：驱使玩家不断回头的故事
+挑战（超越障碍的训练游戏）：敦促掌握一些东西。增强游戏的可重复玩的乐趣。
+团契（社交框架的游戏）：玩家在其中活跃的社区。这点为多人游戏所独有。
+发现（未知领域的游戏）：激励玩家探索游戏世界。
+表达（自我发现的游戏）：自己的创造角色，展现自己的创造力。
+提交（作为消遣的游戏）：整体连结到游戏，让人沉浸在其中。
+-->
+
+<h2 id="总结与参考">总结与参考</h2>
+
+<p>虽然游戏叙事节奏和玩法设计细节上存在一些问题，但是这不太影响游戏核心“幻想”体验的传达，我认为《风来之国》是一个很好的一次性内容向游戏的例子，相信未来的国产游戏能继承这些优点，换用自己的内容生产模式，甚至是3A级别的资产生产，做出伟大的作品。</p>
+
+<ul>
+  <li>游戏官网
+    <ul>
+      <li><a href="https://eastwardgame.com/zh/">https://eastwardgame.com/zh/</a></li>
+      <li><a href="http://www.pixpil.com/">http://www.pixpil.com/</a></li>
+    </ul>
+  </li>
+  <li>游戏WIKI
+    <ul>
+      <li><a href="https://eastwardwiki.com/Eastward_Wiki">https://eastwardwiki.com/Eastward_Wiki</a></li>
+    </ul>
+  </li>
+  <li>数据参考
+    <ul>
+      <li><a href="https://steamdb.info/">https://steamdb.info/</a></li>
+      <li><a href="https://howlongtobeat.com/">https://howlongtobeat.com/</a></li>
+    </ul>
+  </li>
+  <li>设计理论
+    <ul>
+      <li><a href="http://www.cs.northwestern.edu/~hunicke/MDA.pdf">http://www.cs.northwestern.edu/~hunicke/MDA.pdf</a></li>
+      <li><a href="http://www.game-feel.com/">http://www.game-feel.com/</a></li>
+    </ul>
+  </li>
+  <li>游戏流程
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1xf4y1n79Z">https://www.bilibili.com/video/BV1xf4y1n79Z</a></li>
+    </ul>
+  </li>
+</ul>]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[本年度最佳游戏！满足了我对RPG的一切幻想。本文接下来将对游戏的进行一些内容设计向的分析。]]></summary></entry><entry><title type="html">阅读记录</title><link href="https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/09/14/reading.html" rel="alternate" type="text/html" title="阅读记录" /><published>2021-09-14T00:00:00+00:00</published><updated>2021-09-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/09/14/reading</id><content type="html" xml:base="https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/09/14/reading.html"><![CDATA[<p>本文汇总一些摘抄记录、看到的有意思的对人生有启迪的话、一些网络上看到的言论。</p>
+
+<!--more-->
+
+<h1 id="书籍作品">书籍作品</h1>
+
+<p>首先这里是一些文学作品、理论读物的摘抄。</p>
+
+<h2 id="非暴力沟通">非暴力沟通</h2>
+
+<ul>
+  <li>我发现，我激励自己的方式无意中促成了自我憎恨。由于认为自己‘应该’做到许多事情，我不停地指责自己、命令自己、要求自己。这不可避免地导致内在的分裂与不满。而非暴力沟通提醒我倾听内心中不同的声音，以及它们所反映的需要——这促进了自我理解和内心的和谐。”</li>
+  <li>十岁那年，白人打了我，他们认为我太黑了；接着，黑人又打了我，他们认为我太白了。这样的耻辱也许会让任何人想报复社会。</li>
+  <li>语言是窗户，或者是墙，它们审判我们，或者让我们自由。</li>
+  <li>听到批评时，我们一般会申辩、退缩或反击。然而，一旦专注于彼此的观察、感受及需要，而不反驳他人，我们便能发现内心的柔情，对自己和他人产生全新的体会。</li>
+  <li>“如果有人倾听你，不对你评头论足，不替你担惊受怕，也不想改变你，这多美好啊……每当我得到人们的倾听和理解，我就可以用新的眼光看世界，并继续前进……这真神奇啊！一旦有人倾听，看起来无法解决的问题就有了解决办法，千头万绪的思路也会变得清晰起来。”</li>
+</ul>
+
+<p><img src="/assets/img/books/readings/NVC.jpg" alt="非暴力沟通逻辑" /></p>
+
+<ul>
+  <li>描述事情，不做评判，表达感受，说出请求。
+    <ul>
+      <li>我们将会直接说出我们的价值观，而不会指责他人。</li>
+      <li>如果真的想过上悲惨生活，就去与他人做比较。</li>
+      <li>不要试图用其他原因回避责任。</li>
+      <li>不要命令、胁迫他人。</li>
+    </ul>
+  </li>
+  <li>观察：区分观察和评论：不要把行为（数据）和意见（下结论）混为一谈。</li>
+  <li>感受：表达自己的感受，适当示弱。</li>
+  <li>需求：理解感受背后的需求，表达需求。</li>
+  <li>请求：需求具体，明确，留意反馈，不要命令（低效性）。</li>
+  <li>倾听时也考虑别人的表达；爱护自己，不得不=选择做；感激=行为，需要，兴趣</li>
+</ul>
+
+<p>简短的对阅读体验的评价：例子多到看的时候觉得无聊，习题设计核对答案不合理，只看第一章就行。</p>
+
+<h2 id="月亮与六便士">月亮与六便士</h2>
+
+<ul>
+  <li>有脑子的男人是不娶讨人喜欢的女人的。</li>
+  <li>热衷于同任何一个愿意倾听的人讨论自己的私事。</li>
+  <li>灾难不幸在大多数情况下只能使人们变得心胸狭小、报复心更强。</li>
+  <li>一个以手快自豪的扒手对于一个把装满贵重首饰的皮包丢在车上的粗心大意的女人一定会感到有些恼火的。</li>
+  <li>世界上最漂亮的女人我都见过了，可是我还没有看见过有比我夫人更美的呢。</li>
+  <li>她只差一点就称得起是个美人，但是正因为差了这一点儿，却连漂亮也算不上了。</li>
+  <li>为什么你认为美——世界上最宝贵的财富——会同沙滩上的石头一样，一个漫不经心的过路人随随便便地就能够捡起来？美是一种美妙、奇异的东西，艺术家只有通过灵魂的痛苦折磨才能从宇宙的混沌中塑造出来。在美被创造出来以后，它也不是为了叫每个人都能认出来的。想要认识它，一个人必须重复艺术家经历过的一番冒险。他唱给你的是一个美妙的旋律，要是想在自己心里重新听一遍就必须有知识、有敏锐的感觉和想象力。</li>
+  <li>女人对一个仍爱着她，可是她已经不爱的男人可以表现得比任何人都残忍。</li>
+  <li>世界是无情的、残酷的。我们生到人世间没有人知道为了什么，我们死后没有人知道到何处去。我们必须自甘卑屈。我们必须看到冷清寂寥的美妙。</li>
+  <li>作家更关心的是了解人性，而不是判断人性。</li>
+  <li>作品最能泄露一个人的真实思想和情感。</li>
+  <li>我们每个人生在世界上都是孤独的。每个人都被囚禁在一座铁塔里，只能靠一些符号同别人交流；而这些符号并没有共同的价值，因此它们的意义是模糊的、不确定的。我们非常可怜地想把自己心中地财富传送给别人，但是他们却没有接受这些财富的能力。</li>
+</ul>
+
+<!-- + 历史评价，平反的传记作品
++ 为什么要写传记
++ 作家聚会
++ 主角夫人聚会
+  + 有脑子的男人是不娶讨人喜欢的女人的。
++ 夫人约聚会去看主角
++ 嘈杂聚会看主角
++ 平静与不羁
++ 抛弃家人
+  + 热衷于同任何一个愿意倾听的人讨论自己的私事。
++ 离奇的抛弃
++ 帮助寻回
++ 破旧旅店
++ 我要画画
++ 荒唐妓女
++ 不计较他人看待的人
++ 告知答案
++ 打字谋生
++ 五年后
+  + 灾难不幸在大多数情况下只能使人们变得心胸狭小、报复心更强。
++ 看画家朋友
+  + 一个以手快自豪的扒手对于一个把装满贵重首饰的皮包丢在车上的粗心大意的女人一定会感到有些恼火的。
++ 画的欣赏
+  + 世界上最漂亮的女人我都见过了，可是我还没有看见过有比我夫人更美的呢。
+  + 她只差一点就称得起是个美人，但是正因为差了这一点儿，却连漂亮也算不上了。
+  + 为什么你认为美——世界上最宝贵的财富——会同沙滩上的石头一样，一个漫不经心的过路人随随便便地就能够捡起来？美是一种美妙、奇异的东西，艺术家只有通过灵魂的痛苦折磨才能从宇宙的混沌中塑造出来。在美被创造出来以后，它也不是为了叫每个人都能认出来的。想要认识它，一个人必须重复艺术家经历过的一番冒险。他唱给你的是一个美妙的旋律，要是想在自己心里重新听一遍就必须有知识、有敏锐的感觉和想象力。
++ 下棋会晤
++ 五年做了啥会谈
++ 买画会谈
++ 借钱绘画与温馨家庭
++ 圣诞节与发烧
++ 请求照顾
++ 鸠占鹊巢
++ 竟然真的占了
++ 苦痛后续
++ 为什么被占
++ 残忍的玩笑
+  + 女人对一个仍爱着她，可是她已经不爱的男人可以表现得比任何人都残忍。
++ 下棋
++ 舔狗
++ 自杀
++ 自杀惨痛
++ 死亡
++ 葬礼
++ 回家
+  + 世界是无情的、残酷的。我们生到人世间没有人知道为了什么，我们死后没有人知道到何处去。我们必须自甘卑屈。我们必须看到冷清寂寥的美妙。
++ 人变画
++ 论战
++ 论战后续
+  + 作家更关心的是了解人性，而不是判断人性。
++ 看画
+  + 作品最能泄露一个人的真实思想和情感。
+  + 我们每个人生在世界上都是孤独的。每个人都被囚禁在一座铁塔里，只能靠一些符号同别人交流；而这些符号并没有共同的价值，因此它们的意义是模糊的、不确定的。我们非常可怜地想把自己心中地财富传送给别人，但是他们却没有接受这些财富的能力。
++ 伟大的人
++ 画家评论
++ 小岛
++ 船长
++ 落魄生活
++ 借钱与画
++ 上岸
++ 外科医生
++ 再次结婚
++ 快乐生活
++ 做艺术家
++ 以生活追寻美
++ 医生
++ 死亡 -->
+
+<h1 id="人的一生应该如何度过">人的一生应该如何度过</h1>
+
+<p>「听过很多道理，依然过不好这一生」</p>
+
+<p>本文仅收录互联网看到的只言片语，解释权归原作者和读者所有，因为脱离了原来的语境和上下文，语句内涵正确性的解读可能没有意义。</p>
+
+<p>本文仅用于指导如何度过人的一生，说是指导，也并不是说每一句话都是对的，而是代表一些人对事物的解释和理解，参考这些理解或许是有意义的。</p>
+
+<p>人的决定是很复杂的，这里并不像妄议如何去度过一生才是正确的，而是记录一些代表这态度的观点以供参考，正如本文文件实际的标题：网络用语“你在教我做事”一样，可能没有人觉得自己不懂做事，也不希望别人来教，这其实很好，毕竟这里是自用于在社会劳工阶段，不知道自己应该怎么度过自己的未来而设立。</p>
+
+<h2 id="part-1">PART 1</h2>
+
+<ul>
+  <li>这个时代缺少的不是知识，而是注意力和意志力。</li>
+  <li>很多时候，「腐化」和「堕落」本身并不致命，但它们所滋生的孤单，抑郁和自我厌恶却是潜在的杀手。</li>
+  <li>你内心的贫庸，就是你失去追求卓越信念的那个瞬间。</li>
+  <li>究其原因是啥？两个字：要脸。三个字：凭什么？科比那句话说得好，总有人是冠军，为啥不是我？中国dota是把这句话牢牢刻在心里的。</li>
+  <li>别人稍一注意你，你就敞开心扉，你觉得这是坦率，其实这是孤独。</li>
+  <li>我终于意识到我初中物理得奖、高中生物得奖、大学瞎混也能GPA上3.5真的只是我记忆力好而已，我初中能背题、高中能背书、大学能背ppt……然而，记忆力好对科研并没有什么卵用。</li>
+  <li>毕竟在你看不见的地方，科学工作者都是以几乎放低到匍匐在地的姿态去仰视希望之光的。</li>
+</ul>
+
+<h2 id="part-2">PART 2</h2>
+
+<ul>
+  <li>你真正是谁并不重要，重要的是你的所做所为。</li>
+  <li>你真正喜欢想要的，没有一样，是可以轻易得到的。</li>
+  <li>若不抽出时间来创造自己想要的生活，你最终将不得不花费大量的时间来应付自己不想要的生活。</li>
+  <li>迄今为止，我所有的动力都是为了不让关心我的人失望。</li>
+  <li>懒惰只是借口，一种为了在失败时说出“只要我花时间去学习，我就能取得XXX”的借口。</li>
+  <li>恋爱谈久了，没有相互吸引的点，这段恋爱是没法再坚持下去的。</li>
+  <li>世界上最无奈的事，就是你没有法子让一个从来都不喜欢你的人喜欢上你。</li>
+  <li>一个能够把感情处理的很好或者经营的很好的人，归于他能够掌握一个基于社交直觉上的尺度对所表达的一个准确判断。</li>
+  <li>假设你的自卑感一直在持续，就对你的人生产生了消耗。</li>
+</ul>
+
+<h2 id="part-3">PART 3</h2>
+
+<blockquote>
+  <p>活成了一个废人，我不知道我的未来在哪里</p>
+</blockquote>
+
+<p>我有过类似经历，所以我研究过这个问题，研究了很久-，-所以给你点实际可操作的意见。</p>
+
+<p>你现在坐起来，穿衣服，出门走路，你爱想什么事情想什么事情，走十分钟就行，然后每天都在固定时间出门走十分钟。如果你对心理学有了解的话，也就是行为主义的解决方式。先让你有一点点的控制感，一上来就整复杂的，比较难。</p>
+
+<p>然后，哪门课看不懂，就一行一行看，拿尺子在下面划下划线，如果实在看不懂的地方，就拿笔反复抄写。后面的课看不懂，就去前面看基础课。我以前最没劲的时候是抄书的，高数书我抄了一年十个月。机械自动化是吧，控制原理和数电模电看不懂，就先回去看数学和大物。另外学不会可能不是你的问题，是教材不行。数学不要用同济教材，直接去网上找外国微积分教材，好理解太多了，不是一个档次。看不懂就去找课程，现在mooc、学堂在线、bilibili等，课程多的是，找个能听懂的。</p>
+
+<p>你可以不喜欢它，也可以放弃它，但你在你真正决定要做什么之前，尽量不要被它打倒。</p>
+
+<p>哲学分很多类，但不管怎么样，你要探索世界的形而上的本质，那你也需要基本的认知和了解，你躺着也是获取不到知识的，你每天出去走走看看世界，收敛你脑海中的想法，去观察。有人问黑格尔“你怎么证明这张桌子是没有意识的？”黑格尔用他厚重的大皮靴狠狠地踢了桌子两脚：“这世界上有比这重要得多的事情值得去研究。”奥卡姆剃刀怎么说来着？如无必要，勿增实体。什么东西真正影响着你？你是在追求理想，还是在放弃真实？哲学不是指引人的，而是追求真实。</p>
+
+<p>我理解你的痛苦，你需要找一个能帮助和支撑你感情的人，或者如果有钱，你可以找个咨询师，但如果没有，自己也是可以做事的。你需要从最低的地方，一点点建立控制感，哪怕是走路、吃饭，这些东西，推荐你看看《心灵奇旅》。</p>
+
+<p>自控方面最有用的书是《自控力》，可以买了看看，然后经常冥想，冥想是被正规心理学教材列为有效的方式之一，有相关论文认为它可以改变脑区。能专注本身就是一种能力，一种生理构成，你长时间瘫着，就需要慢慢养，包括习惯也是，《习惯的力量》里面提到习惯的本质是大脑的适应。运动的习惯是髓磷鞘的慢慢构成，意识到生理过程对你的绝大部分控制，然后从生理上去改变，是最靠谱的。</p>
+
+<p>没有人可以一开始就很强，如果你很弱，就从最弱的地方开始做，只要开始做，并且一直做就好了。学习本身就是一种习惯，而习惯的本质，是生理过程，你不会认为你一开始就能跑过运动健将，那你也不应该认为你一下就能学得很好。请认识到，如果你觉得你很差劲，那你就认同它，然后从最差劲的地方开始做。我以前是直接抄书的，或者拿尺子一行行划线，tb可以买到一种有波浪线的钢尺，很耐用。</p>
+
+<p>另外，你的自杀想法确实是一种自救，很多人都深陷停不下来的思维之困，那不是真正的你，只是思维，《当下的力量》里把它称为为“小我”。很多人都被脑海里不能停止的声音所困，你可以试试，什么都不想，然后就会发现这还挺难保持的，总会有一个声音响起来……那不是真正的你，但是由于你一直被思维所控，你只能通过全部毁灭——也就是自杀，来去除你的痛苦，但其实本质上你是在追求自救，而不是真正的自我毁灭，你需要认知到这一点。所以你只要能认真做一点点事，就对自己一定会有好处。顺带一提，所有的“灵修”本质上都是感受当下，不受思维所困，比较好的书是《当下的力量》。</p>
+
+<p>然后，你真想心理方面的，直接去医院挂号看是不是抑郁症，网上的测评卵用没有，医生开药就吃药，吃几个月就自然有效果，网上的任何量表都不如去正规医院。可以看一些靠谱的心理学公众号，比如李松蔚，它们是有帮助的。</p>
+
+<p>脑子里爱想啥想啥，该做啥做啥，不要想，只做你的事情，必然会有转机。也就是强迫症的一种疗法，叫森田疗法，核心是顺其自然，为所当为。说白了就是你身体上有啥毛病就有，你就干该干的事情。</p>
+
+<p>今天补充一个比较有用的小办法，就是每次看到书上写，见xx，引用xx，直接翻到那一页看一遍，然后双向标页码，这样很快就可以分辨出哪些更基础，应用范围更广，而且保证看的最多，反复看。以及以后做工具书的时候，可以省很多很多力气。</p>
+
+<p>上面的这些，包括很多老哥提供给你的，全都是“方法”，也就是说，如果你要去做一件事，那么怎么做，但也许你痛苦的地方不在“方法”，而在“意义”、或者“感受”。其实说实话，要做一件事的时候，自己总能找到方法的，所以其实更重要的是感受。负面情绪会无尽的消耗你自己。</p>
+
+<p>去看一部电影吧：《心灵捕手》，那不是你的错，不要再自责了，你不是一开始就想变成这样的，没有人会想要痛苦和虚无，也没有人天生就应该遭受折磨，孩提时期你也曾是对世界充满热情的。你已经用痛苦折磨了自己很久了，放下那些折磨你的东西吧。去看《心灵捕手》吧，暂且放下那种逼迫你的价值观，那种自我谴责的痛苦，和希望重新来一次的悔恨。那不是你生来就有的，是后天被社会所培育的，你不是蛊虫，最起码你自己可以让你自己轻松一点。</p>
+
+<p>所有调节情绪的方法里，效率最高，见效最快的就是跑步。</p>
+
+<p>出自 <a href="https://nga.178.com/read.php?&amp;tid=25965796&amp;pid=501279626&amp;to=1">NGA</a></p>
+
+<h2 id="part-4">PART 4</h2>
+
+<p>时常想起，曾在我生命中出现的姑娘们。她们无论在当时还是记忆里，都美好得一塌糊涂，优秀得让人目眩神迷。现如今，她们一定更漂亮、更从容、更丰富了，一定遇到了更多好玩的人，演绎了更多精彩的故事。</p>
+
+<p>一个曾短暂出现在我生活里的女孩子，订婚了。我的兄弟，爱一个姑娘两年半，最后收获了她跟他人订婚的”喜讯”。我常跟他说，那个人永远活在时间里了，你把她拉不出来，自己也回不去，就这样吧，让她安静的留在那里吧。她不会发福不会老去不会穿着职业套装高跟鞋不会带着家长里短柴油米醋的气息，她永远年轻永远漂亮穿着鲜艳长裙站在回忆里，对着你笑靥如花。这样难道不好吗？你总有一天要跟所有的记忆相安无事握手言和，那里面有她也有你，有她的青春也有你的年华。让它们留在那里吧。生活里每天都有相聚别离，号啕或欢欣。如果最初相识的姑娘注定无法走到最后，你会依然选择相遇在年少？还是在看遍春花夏月秋风冬雪后遇到她携手走进余下的旅途？</p>
+
+<p>这似乎是个不值得一提的问题，几乎所有人都喜欢”地老天荒”这样的词汇吧。但真的有那么简单吗？问题的关键在于，你想开头还是收尾？你们在成熟稳重、理智从容、笑不露齿、工作稳定、职业套装高跟鞋、西装革履的28岁30岁相遇，气味相投性情相依相见恨晚唯怨月老一度瞎了眼，一段佳话就此开始，郎才女貌珠联璧合天造地设等祝福潮水一般涌来。像是个完美的故事。她穿泛着光泽的高跟鞋、考究的套裙，妆容一丝不乱，带到你的朋友同事面前措辞得体，无可挑剔。她不会大喊大叫跟你无理取闹，不会要吃某家的小笼包让你穿越三条街道，不会很轻易的跟你赌气怀疑你是否跟其他女孩子有一腿。她包容体贴贤惠孝顺，入得厨房出得厅堂。</p>
+
+<p>可是随着日复一日的平庸到来，某个回望的瞬间，内心是否会有隐隐的遗憾？你是否想有一台时光机，回到她20岁22岁的年纪，在食堂、在图书馆、在主干道上，走上前去或礼貌或猥琐或忐忑的说一声：你好。</p>
+
+<p>那时候的她，穿着鲜艳的长裙素面朝天，穿着匡威白色帆布鞋，顶着刚洗完的湿漉漉头发冲去食堂打饭，一路上甩落无数男生的惊叹。她漂亮、骄傲、聪明，会为了舍友的一句话而耿耿于怀，会为言情剧哭得稀里哗啦，会看到玩具店里的可爱公仔走不动路，会期待某个特别的节日收到男生们的玫瑰花。她没那么得体，还没学会滴水不漏笑不露齿，带到朋友面前会捂着嘴一个劲儿的傻笑。她穿匡威帆布鞋，也喜欢淘宝上淘来的便宜凉拖，她不太喜欢化妆，穿着T恤短裤就往宿舍楼下冲，在路边那家麻辣烫一边流汗一边大呼好吃，她会撒娇会胡搅蛮缠不讲理会为脑子里突然蹦出的疯狂念头兴奋不已。</p>
+
+<p>那时候的你呢，没什么钱，脚上穿着攒了很久生活费买来的新球鞋，骑着拉风的山地车飞速驶过人群，在大排档跟一群狐朋狗友扯着政治足球和姑娘，面对递过来的啤酒瓶毫不犹豫一仰而尽，你那么年轻、那么张扬，脑子里满是自命不凡的想象，大声喊世界是我们的。你的发型土土的没有那么多发胶，还没有自己的第一套西装，你还没学会克制忍耐学会礼貌微笑，不高兴了随口就来一句：去他娘的。她路过操场，看到你打球的样子。汗水顺发梢滑过你红红彤彤的脸，你大声叫喊积极奔跑，仿佛身上有使不完的力气。</p>
+
+<p>你们相遇。没那么理智包容，也很难总是做到相互理解，她没那么精致的漂亮，你也离成熟睿智差得很远，一个愣头小子，一个天真的丫头，就那么说着天长地久生死相依的誓言，你们以为世界会按照自己想象的编排，不懂得生活中永远不变的就是一直在变。你们会吵架、会分手、会伤害、会分头走路、会把彼此留在回忆里不断折磨，但是亲爱的，那是你们最好的年纪。</p>
+
+<p>《艋舺》里说，”风往哪边吹，草就往哪边倒。年轻的时候我也以为自己是风，等到遍体鳞伤以后，才知道，原来我们都是草。”我们未必如草随风倒，却也只能这样，模模糊糊往前走。时间什么都安排好了。年轻时，总想看遍世间的风景，时不时涌出冒险的冲动，想拉着心爱的姑娘私奔，即刻就流浪到海涯天角。现在才明白，你什么风景都看不透，很可能也没有细水长流。你只能在一季季的春花夏月秋雨冬雪中，丈量自己生命的边界。有可能，姑娘都不会来，你就一个人走路，或缓或急，或愉悦或悲伤。我时常也会烂俗的想，未来的姑娘呦，你到底什么样。你丰满还是消瘦活泼还是文静？你留俏皮的短发还是如瀑的长丝？你是否也喜欢那些瑰丽奇妙的文字，沉溺于光怪陆离的影像故事？你是否也扛过了狼血和庸俗成功学疯狂的侵蚀，依然带着对生活令人发指的热爱，坚持做一个有趣的人？</p>
+
+<p>不管在28还是35岁相遇，拍落满身的风尘后，我们唯一能庆幸的，是彼此一定有很多好玩的故事、路途的见闻讲给对方听，那是一个个动人的传奇。未相逢于最好的年纪，却给了对方最丰富的自己。我不知道你会不会来，但仍大声唱着歌，走向你。想你清楚一件事。我很想有一个自己的家，里面有一张很漂亮的书桌，但是如果没有无所谓。我也很想有一张很舒服的沙发，但是如果没有无所谓。如果在家里面，有几个天真活泼的小孩子跑来跑去，我会很开心，但是如果没有无所谓。最重要的是，这个家有你，其他有没有无所谓……我要你知道我心里是怎么想的，我一定会娶你，问题是，你想不想嫁给我？</p>
+
+<h2 id="part-5">PART 5</h2>
+
+<p>ti8之于我的教训是，有的时候你只有 0.1s
+就需要做出选择，之后不得不承担对应的
+代价。可世事多么无常，甚至不教你享受
+过程，只教你面对结果</p>
+
+<blockquote>
+  <p>FROM ZH</p>
+</blockquote>
+
+<p>2：2的时候，觉得如果能赢，就是终于
+圆梦的童话。但果然生活的实相还是如同第五
+局这样丑陋仓皇，
+被大恶魔在高地上一波一波
+的摁住，推平，推平。</p>
+
+<blockquote>
+  <p>FROM SQ</p>
+</blockquote>
+
+<h2 id="part-6">PART 6</h2>
+
+<p>　　你凭什么上北大</p>
+
+<p>　　（2010年第24期《读者》）</p>
+
+<p>　　作者：贺舒婷（考分641，现为北京大学法学院本科生）</p>
+
+<p>　　未名湖边的桃花开了，就在前几天。</p>
+
+<p>　　我曾经无数次梦想过，花开时湖边折枝的人群里会有自己的身影。那个时候，我的心思和大家一样迫切，目光却比你们更加迷茫。那年我高三。</p>
+
+<p>　　高一那年，我差点就把自己废成了一块锈铁。上课时睡觉聊天看漫画，跟后面那些男生大呼小叫，把年轻女老师气得眼里含泪。高二分科，我选了文科。你无法想象我所在的中学有着多么烂的文科班——本科上线三人是个什么概念？更具讽刺性的是，那三个人全部是复读生。于是我在大家或无奈或鄙视的目光里，毅然决然地在文科报名表上写上了自己的名字。那真是我一生中字写得最好看的一次。</p>
+
+<p>　　我只是突然间觉醒了，觉得自己一辈子不能就那样过。事后很多人问我怎么回事，也许他们是想在我这里听到一个传奇般浪子回头的故事，而我当时所能想到的解释只有这一句：我只是觉得，我的一辈子不应该就那样吊儿郎当地过去。</p>
+
+<p>　　第一次月考，我考了年级第12名。这是一个听上去差强人意的成绩，可是，理智还是提醒我——那是一个本科上线三人的文科班。如果你不能把所有的人远远甩在后边，12名和120名有什么区别？至今我还记得那次考了第一的那个女生，瘦瘦小小，带副黑边眼镜，趴在书桌上的身影有些佝偻。而这个印象的得来，是因为所有的人永远只能看到她趴在桌上的身影。她一直是班里第一个来最后一个走的人。我一直对那种学生持有一种莫名的排斥情绪，总想你有什么了不起，不就是死读书吗？我要是像你这样刻苦学习早是市里第一了。事实上直到那次考试成绩出来的时候我仍然对她不屑一顾。然后，我迎来了一生中最重要的一次班会。我不知道要怎样去感谢那个班主任，因为如果不是她的那席话，如今的我在哪里都不一定。班会上，她说：“这次成绩非常能说明问题。应该考好的人都考好了。”然后她扫了我一眼，我明白她的潜台词也就是说在她看来我属于是没有理由考好的那一堆人里的。奇怪，我居然没有脸红。不知道是太久的堕落已经在不知不觉中磨光了原本敏感的自尊，还是下意识里对她的话不置可否。她继续说：“我知道有些人自以为很聪明，看不起那些刻苦的同学，总觉得人家是先天不足。可是我想说，你只是懦弱！你不敢尝试！你不敢像她一样地去努力！因为你怕自己努力了也比不上她！你宁可不去尝试，是因为有失败的风险！你连这一点风险都承担不起，因为在你心底，你根本就没有把握……”后面她又说了什么我已经想不起来了，我承认当时我是完完全全地懵了，反反复复回荡在脑子里就只有那么一句话——“你只是懦弱！”可是，我要承认——她的判断是正确的。</p>
+
+<p>　　那晚我在日记里写，试试吧，试试努力一个月会不会见效。当时我根本不敢对自己承诺什么结果，也的确承诺不起。我简直不敢相信那个从早晨六点早自习上课到晚上十点晚自习下课一动也不动坐在位置上安安稳稳踏踏实实的人竟然是我自己。</p>
+
+<p>　　然后，我迎来了那次期待已久的期中考试。至今我仍记得考完之后的感觉。抱着书走在回家的路上，茫然地看着人来人往，心里空空的没有着落。那的确是我一生中最特殊的一次考试，因为它关系着我此后的方向和道路选择。其实，考试结果想必大家已经猜到了。我的的确确让所有的人真正瞠目结舌了一次。是的，我考了第一。</p>
+
+<p>　　你永远也无法想象那个结果于我而言多么重要。知道成绩的时候我出乎意料地平静。当自己的名字出现在了成绩单的第一行时，我默默地对自己说：记住了，这世上没有什么事情是不可能的。</p>
+
+<p>　　后来我再也没有改变过那种态度和方法。其实所有的方法说白了都是没有方法的，只有一个词：刻苦。我坚守着我的不是方法的方法，也坚守着我的名字在成绩单上的位置，一直到高考前的最后一次考试，我始终是第一名。但是，真正的挑战还没有开始。</p>
+
+<p>　　即便我可以牢牢占据第一名的位置，即便我可以每次都把第二名甩下几十分，我知道，北大离我还是太远。所有的老师都坚信我将会是学校里有史以来考得最好的一个文科生，而在他们的概念里，考得最好的文科生，意味着你可以上山大，运气好点儿的话也许可以上复旦、人大。而我只要北大。我从来没有对任何人讲起过我的志愿——如果可以称之为志愿的话。</p>
+
+<p>　　高三第二学期，我们搬进了刚刚落成的教学楼。搬迁的那天，楼道里吵得很，拖桌子拉板凳的声音在走廊里不绝于耳。我一个人不言不语地跳过窗子，踏上了二楼窗框外那个大大的平台。对面是操场，初雪未融，空气湿冷，光秃秃的树枝直直地刺向天空。雪天的阳光凉凉地透过睫毛洒在眼睛里，眼睛静静地看着远远的天空，我说了一句话，只说了一句话。对着远处的天空，我默默在心里说：“等着吧，我要你见证一个奇迹。”我知道，这世上的确没有什么不可能的事情。</p>
+
+<p>　　我从来不知道压力大到一定程度时居然可以把人的潜力激发到那种地步的。我是一个极其不安分的人，可是那段时间我表现得无比耐心沉稳，踏实得象头老黄牛。事实上无数次我都面临崩溃的边缘了，高中五本历史书我翻来覆去背了整整六遍。当你把一本书也背上六遍的时候你就知道那时什么感觉了。边背边掉眼泪，我真的是差一点就背不下去了。只是，忍不住的时候，再忍一下。坚持的确是世界上最伟大的品质。</p>
+
+<p>　　呼啸而至的风卷着漫天的黄沙，在那个北方的春天里，我们一个个头发蓬乱，皮肤粗糙。死寂与喧嚣交替如同美国的执政党，规律得让人怀疑冥冥之中可有双奇异而魔力无穷的手。惶然而又茫然的我们在敬畏与期待中迎来又送走了一模、二模以至N模，每根神经都被冷酷无情的现实锤炼得坚不可摧，不论是吟惯了“杨柳岸、晓风残月”的诗情，还是习惯了信手涂鸦的画意。在这个来去匆匆的季节里，一切敏感纤细都是奢侈，徒留无数次的希望在无数次的失望前撞得粉身碎骨，无数次的激扬在无数次的颓丧下摔得头破血流。每个人都比昨天更加明白理想和现实之间那道不可逾越的鸿沟，同时也比昨天更加拼命努力挣扎。逼着自己埋进去，埋进书本，埋进试卷，埋进密不透风的黑茧——为的只是有朝一日破茧成蝶。青黑的眼圈，浮肿的眼带，干燥的手指，焦虑得起了水泡的嘴角。那个春天我不知道流行的是粉蓝果绿还是黛紫银灰。小镜子被悄悄收起，因为不忍见到自己憔悴的面容和黯淡的眼睛，因为怕有什么会在汪洋恣意般在干旱已久的脸上纵横开来——上帝，我是个女孩子啊。</p>
+
+<p>　　踏入考场的时候后我很平静。“尽吾志也而不能至者，可以无悔矣。”事实上我从来没有想过自己会考入北大以外的哪所学校。与其说这是一种自信，莫如说这是一种预感。我只是想，哪怕北大只招一个名额，为什么不可能是我？这世上没有什么事情是真正不可能发生的。</p>
+
+<p>　　考完后走在回家的路上，看着依然匆匆的人群，心里依然空无着落。眼睛因为泪雾而模糊，视野里的东西却越发清晰。我相信是因为一切真实的感知都要以泪水和苦痛作为代价。</p>
+
+<p>　　事实上我怀念那段日子，并且永远感激它。不只是因为在那段时间里我完成了自己的过渡与兑变，更是因为那时的一切深深烙在了我正处于可塑期的性格中，成为这一生永远的财富。人生中再也不会有哪个时期像那时一样专一地，单纯地，坚决地，几近固执而又饱含信仰和希冀地，心无旁骛乃至与世隔绝地，为了一个认定的目标而奋斗。当你在若干年后某个悠闲的下午，回想起自己曾经的努力和放弃，曾经的坚忍和耐力，曾经的执著和付出，曾经的汗水和泪水，那会是怎样一种感动和庆幸，怎样一种欣慰和尊敬——尊敬你自己。是的，在这个过程中，请允许我重复一遍，最重要的是你自己。我感谢父母感谢老师感谢同学感谢朋友感谢所有关心我帮助我的人，但我最感谢的，是我自己。“没有不可能”这是我在一点一滴的努力与尝试中获得到的东西。而且我也相信，这也将会是使我终生受益的东西。</p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些摘抄记录、看到的有意思的对人生有启迪的话、一些网络上看到的言论。]]></summary></entry><entry><title type="html">问答总结</title><link href="https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/09/12/before_question.html" rel="alternate" type="text/html" title="问答总结" /><published>2021-09-12T00:00:00+00:00</published><updated>2021-09-12T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/09/12/before_question</id><content type="html" xml:base="https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/09/12/before_question.html"><![CDATA[<p>本文用以记录自己犯过的一些错误，和回答过别人的一些问题。类似改错本的存在。</p>
+
+<!--more-->
+
+<!-- # 评价总览-续-2 -->
+
+<!-- 即便是老早就写下了这样的文章，自己却还是做得一塌糊涂，排在了倒数的位置。
+
+自己期望着稍微好一点的结果，好一点的中等水平，这样就可以继续维持现在的状态，继续呆在自己的安全区域。
+
+但是现实还是十分残酷的，残酷且真实。
+
+唔，或许是自己确实不太行，能力上的欠缺，态度上的不端正，两者应该都有吧。
+
+都有呢，都得改呢。 -->
+
+<!-- 虽然老早就写了这样的指导文章...自己还是排在了倒数的位置...
+
+目前能做的大概是从态度上、能力上两方面来调整。
+
+态度上，可能要从新安排规划自己的时间了，别再分心去干别的事情。
+
+能力上，自己也很欠缺，软硬都欠...
+
+在完蛋之前努力挣扎... -->
+
+<!-- # 评价总览-续-1 -->
+
+<h1 id="问答总结">问答总结</h1>
+
+<p>如题，将总结自己在最近回答某游戏设计问题、展示自己的设计案的时候犯下的一些错误，引以为戒。</p>
+
+<!-- 最近仍然是有着这样或者那样的反馈， -->
+
+<p>简单总结一下吧。</p>
+
+<ul>
+  <li>请揣测你的目标对象，并投其所好。</li>
+  <li>请注意展示的方法，先说思路和重点，金字塔思维。</li>
+  <li>请注意体验的深度和广度。</li>
+</ul>
+
+<h2 id="前言">前言</h2>
+
+<p>最近的某次问答收到的反馈，感觉暴露出的问题还是挺多的…所以单独开一篇来总结一下吧，希望以后少犯同样的错。</p>
+
+<h2 id="评价总览">评价总览</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>问题</th>
+      <th>评价</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>尝试设计一个团队话本Boss</td>
+      <td>文档清晰性需要提升，多个技能要分段，对玩家如何对抗这个boss缺乏清晰地描述</td>
+    </tr>
+    <tr>
+      <td>设计一个新英雄</td>
+      <td>有概念且与技能设计思路一致，但，缺乏必要的数值，例如生命，攻击，事实上似乎连射程都没有描述。也缺乏设计玩法的风格设计，不能验证玩法目标与设计的一致性</td>
+    </tr>
+    <tr>
+      <td>CS玩法以拆弹为主，多人PVP的地图</td>
+      <td>只有图示无法知道怎么玩的，甚至都没有标明拆弹点在哪里</td>
+    </tr>
+    <tr>
+      <td>吃鸡重新一套新的玩法规则</td>
+      <td>从FFA转到小队对抗的思路似乎可以，但方案太简略了，似乎并不能理解要做成什么样子</td>
+    </tr>
+    <tr>
+      <td>分析自由建造与游戏其他模块之间的关系</td>
+      <td>能清晰的表述两个游戏的建造特性，深度不足，另结论似乎不能从回答中推导出来</td>
+    </tr>
+    <tr>
+      <td>叙事手段</td>
+      <td>拆分的开头不错，形式手法都有涵盖，但似乎只有开头，还可以更加深入</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="概述">概述</h2>
+
+<p>暴露出来的最主要的问题可能是还是没有想清楚，没有想清楚一方面体现在细节，高度，另一方面也体现在没有验证。</p>
+
+<p>之前的解题思路是，读题，答题，完了，想到就写上什么，感觉还是太随心所欲，没有章法，一切只靠自己的感觉来约束，然后现在来看正常的回答思路应该是：</p>
+
+<ol>
+  <li>根据题目重要性和当前精力时间有一个初步预期。</li>
+  <li>审题
+    <ul>
+      <li>题目问的是个啥</li>
+      <li>需要回答的具体形式</li>
+      <li>题目希望考察的能力点</li>
+      <li>题目是否有多个问题，是否有附加条件</li>
+    </ul>
+  </li>
+  <li>答题
+    <ul>
+      <li>想法决定上限，质量决定下限</li>
+      <li>“直观感觉”的粗略构思</li>
+      <li>是否有其他角度</li>
+      <li>选取合适的工具、展示方式</li>
+      <li>开始答题</li>
+    </ul>
+  </li>
+  <li>检查
+    <ul>
+      <li>是否符合题目要求</li>
+      <li>是否有额外的角度</li>
+    </ul>
+  </li>
+  <li>反馈
+    <ul>
+      <li>拿到的评价</li>
+      <li>其他人的答案中不同的思路</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="一些具体而微的点">一些具体而微的点</h2>
+
+<ul>
+  <li>总体：
+    <ul>
+      <li>对于设计要有验证</li>
+      <li>描述要足够细致（具体），足够清晰</li>
+      <li>有因有果</li>
+    </ul>
+  </li>
+  <li>举例
+    <ul>
+      <li>boss、英雄的设计
+        <ul>
+          <li>多个技能要分段</li>
+          <li>缺乏必要的数值，例如生命，攻击，射程</li>
+        </ul>
+      </li>
+      <li>CS、吃鸡
+        <ul>
+          <li>玩法的展现</li>
+          <li>地图的细节（出生点，移动方向）</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="和其他人的对比">和其他人的对比</h2>
+
+<p>大概大家都是有不同游戏经历，不同能力点，现在从事不同项目不同岗位工作的人，所以自然对这些的想法和行为是不一样，感觉上有点丧失动力的样子，唔，不管怎样，还是请加油吧。</p>
+
+<h1 id="关于规划的一些建议">关于规划的一些建议</h1>
+
+<p>这里记录一下关于之前回答朋友的有关规划的问题。</p>
+
+<!-- # 规划的一些问题
+
+[TOC] -->
+
+<p>认真的看了规划，可以大概窥探出一些存在的问题，这里简要说一下。</p>
+
+<p>首先这份规划是很值得肯定的，但是在此以外也值得修复问题让这份规划变得更好。</p>
+
+<h2 id="关于呈现">关于呈现</h2>
+
+<ul>
+  <li>排版</li>
+</ul>
+
+<p>一般用TXT写文本文档用于一些朴素内容的说明，正常阅读而言有一定排版格式会比较好。</p>
+
+<p>正式的文档使用word、excel都是可以的，程序员一般会使用markdown、Latex等。</p>
+
+<p>这里而言，推荐使用excel制定成表格的形式。</p>
+
+<p>会方便后续内容的跟踪，也可以使用腾讯文档之内的在线文档，方便分享多人合作。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>主要内容</th>
+      <th>检验指标</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>XXXX-XXXX</td>
+      <td>XXXX知识点</td>
+      <td>XXXX输出</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>内容分布</li>
+</ul>
+
+<p>计划和想法、感想参杂在一起，一般而言计划是计划，其余的可以写进对应的备注说明里面。</p>
+
+<p>顾虑和说明是对计划补充的内容，正体应该是一个完整的计划。</p>
+
+<h2 id="关于计划本身">关于计划本身</h2>
+
+<ul>
+  <li>关于目标</li>
+</ul>
+
+<p>看起来的目标主要集中在Java相关知识点。这可能有两个问题。</p>
+
+<p>其一：这些知识属于技术层面而非计算机基础知识层面。譬如数学、离散数学、线性代数、操作系统、数据库、编译原理等基础学科也是必须要了解的。这些需要花的时间不比掌握一门具体的技术少。此外也没有足够的就业导向，除了做项目意外还有做题准备面试、了解行业动态等。</p>
+
+<p>建议是参考大学课程流出足够的时间复习、重新学习这些课程；预留时间给就业导向的内容（这里指并行进行或先后进行）。</p>
+
+<p>其二：这些知识受限于当前的视角，是否已经过时、是否属于举一反三的内容，这些可能会大幅修改，因而建议这里给出更上层的目标，比如学会使用、比如学习某些功能的框架解决某些问题，其下层对应这些具体的技术的掌握。</p>
+
+<ul>
+  <li>关于验收</li>
+</ul>
+
+<p>对于一个计划而言缺失对“输出”的描述，很可能会导致最后没有实际落地。</p>
+
+<p>建议的输出维度：博客文章、项目代码、题解等。</p>
+
+<p>没有验收可能也没有正反馈，总而言之做了一件事要有一件事的成果。</p>
+
+<ul>
+  <li>关于调整和备案</li>
+</ul>
+
+<p>计划本身不可能是没有问题的，因而需要动态调整，就像现在这样，虽然调整一般会根据实际情况来看，但是最好在心里做好预备方案，一般而言准备一个最好一个最坏的情况下的方案是没问题的。</p>
+
+<p>这些虽然一般不用写出来，但是这里鉴于实际情况的不确定问题，还是建议进行一些说明。</p>
+
+<ul>
+  <li>关于时间节点的描述</li>
+</ul>
+
+<p>目前对时间节点的描述相对含糊，建议更加具体，比如预期的总的学习时间究竟是多长，以及中间一些关键节点的具体时间。</p>
+
+<p>举个例子预期一年，前半年纯学习，后半年开始准备面试，一年内一定找到工作。</p>
+
+<h2 id="其他补充">其他补充</h2>
+<!-- 
++ 关于生活开销
+
+4K/月我觉得一般是不够的，以我没有特殊、外出娱乐开销的参考，一个月可能会逼近7K（房租3K，基本开销100/天，其他支出等）。
+
+考虑到这种情况，是否需要来深圳或者是否需要在南山区，鑫兄建议慎重考虑，比如有没有可能在深圳房价较低的地区租房、或者在武汉每月定期来深圳等。 -->
+
+<ul>
+  <li>关于效率和其他娱乐</li>
+</ul>
+
+<p>一般而言我不认为一个人可以长时间专注的学习，所以建议预留好休息的时间，顺带一提对于大型项目，一般实际干活的时间只有总时间的1/6，所以建议计划不要一开始排到100%，因为很可能是完成不了的，提前预留好生活的空闲、脚踏实地比较好。</p>
+
+<h1 id="文章反馈">文章反馈</h1>
+
+<p>朋友让帮忙看一下文章，给出的一些建议。</p>
+
+<h2 id="呈现上">呈现上</h2>
+
+<ul>
+  <li>排版：
+    <ul>
+      <li>当前世代知识溢出，知识除了自己成长更重要的是能为他人带来帮助，美观的排版非常重要。</li>
+      <li>标题，缩进，配图，字体等。</li>
+      <li>内容构成最好有对标论文的严谨性，比如目录、参考、应用，文章的可迁移（发表到其他平台）等。</li>
+      <li>对外发部可以给PDF。</li>
+    </ul>
+  </li>
+  <li>展示思路：
+    <ul>
+      <li>设计案：目的先行（包括后续回答一些问题时，要看到题目背后的意图）</li>
+      <li>常规展示常用的思路：
+        <ul>
+          <li>Situation Complication Question Answer</li>
+          <li>情景（展示价值、统一预设）、冲突（与目标的鸿沟）、问题（与观众共鸣）、答案（解决方案）</li>
+          <li>凤头猪肚豹尾，开头吸引，内容详实，结尾有力</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="内容上">内容上</h2>
+
+<p>总体是关于魂类游戏的体验，虽然单看总结会有些云里雾里。</p>
+
+<ul>
+  <li>特征总结这块：
+    <ul>
+      <li>动作系统可能不是类魂游戏的核心特征，动作系统带来的回合制体验可能是
+        <ul>
+          <li>参考，黑魂桌面模型、非ARPG的比如卡牌等魂Like游戏</li>
+        </ul>
+      </li>
+      <li>无难度选择应该不太算，可以自己给自己增加难度
+        <ul>
+          <li>可能这小节描述难度的多种构成和体验特征会好一些</li>
+        </ul>
+      </li>
+      <li>保存点的设计还有兼顾调节节奏、划分关卡的作用</li>
+      <li>地图设计的感受和范式（比如连通，上天入地，柳暗花明）、丰富奖励的维度</li>
+      <li>叙事的设计这块比较大
+        <ul>
+          <li>碎片化可能也不是简单的将碎片放上去就行，感觉还是信息的分层释放，不过这块比较开放</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>赏析游戏这块：
+    <ul>
+      <li>提到的点很多，可能需要聚焦落实到一些系统和特征感受，可以使用MDA之内的方法来拆分一下表达的点处在的维度。</li>
+      <li>仁王的说的大体没错，可以将上面的五个维度具体对比分别叙述，现在比较概括</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="学习一个新概念">学习一个新概念</h1>
+
+<p>我们说过知识的重要性，而且学习作为获取知识的途径，自然也是相当重要的，本文试图将学习划分为阶段，解决一些学习上的常见问题：</p>
+
+<ul>
+  <li>没有彻底掌握</li>
+  <li>不会学以致用</li>
+  <li>没法举一反三</li>
+</ul>
+
+<h2 id="循序渐进的阶段">循序渐进的阶段</h2>
+
+<p>任何一件事都是循序渐进的、无法一蹴而就的，我们可以把复杂的目标拆分为阶段，完成每个阶段，最终完成大的目标。</p>
+
+<p><img src="/assets/img/books/reading/2-1-1.png" alt="" /></p>
+
+<p>对于学习也是一样。</p>
+
+<h2 id="学习的具体阶段">学习的具体阶段</h2>
+
+<p><img src="/assets/img/books/reading/2-1-2.png" alt="" /></p>
+
+<ul>
+  <li>粗览
+    <ul>
+      <li>快速浏览概念内容</li>
+      <li>第一印象，初步认知</li>
+      <li>核心概念</li>
+    </ul>
+  </li>
+  <li>建模
+    <ul>
+      <li>完全理解概念内容</li>
+      <li>使用列表、脑图、等概念组织方式</li>
+      <li>关注细节内容的理解</li>
+    </ul>
+  </li>
+  <li>自述
+    <ul>
+      <li>能完整复述概念内容</li>
+      <li>找到内容间的线索</li>
+      <li>完整用自己的话复述内容</li>
+    </ul>
+  </li>
+  <li>手册
+    <ul>
+      <li>给出无脑使用概念的规则</li>
+      <li>总结问题情形，解决方式</li>
+      <li>泛用性，无脑性</li>
+    </ul>
+  </li>
+  <li>联系
+    <ul>
+      <li>组合跨领域理解概念</li>
+      <li>同领域其他概念的异同</li>
+      <li>不同领域概念层的类比</li>
+    </ul>
+  </li>
+  <li>阶
+    <ul>
+      <li>概念上下层</li>
+      <li>下层概念</li>
+      <li>上层逻辑</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+  <li><a href="https://zhuanlan.zhihu.com/p/100121940">罗斯福专业法、费曼4步学习法、达芬奇笔记</a></li>
+</ul>
+
+<h1 id="练习与复习">练习与复习</h1>
+
+<p>本文试图简单论证练习和复习的重要性和一些可行的具体措施。</p>
+
+<ul>
+  <li>练习：实际的使用以检验知识的掌握，在实际练习中加深理解。</li>
+  <li>复习：想办法让知识在脑海中停留的更久一些。</li>
+</ul>
+
+<h2 id="练习">练习</h2>
+
+<ul>
+  <li>练习的时机：“种下一棵树最好是十年前，其次是现在。”</li>
+  <li>练习的方式：从实际出发，提出知识的可能运用场景。</li>
+  <li>练习的反馈：从问题的解决中找到不足，加以改进。</li>
+</ul>
+
+<h2 id="复习">复习</h2>
+
+<ul>
+  <li><a href="https://zhuanlan.zhihu.com/p/25050071">人类记忆模型</a>：</li>
+</ul>
+
+<p><img src="https://pic4.zhimg.com/80/v2-6d66188890ea70ececb529bb77cae2d3_1440w.jpg" alt="" /></p>
+
+<ul>
+  <li><a href="https://zh.wikipedia.org/wiki/%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF">艾宾浩斯遗忘曲线</a></li>
+</ul>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ForgettingCurve.svg/500px-ForgettingCurve.svg.png" alt="" /></p>
+
+<ul>
+  <li>
+    <p>选取合适的时间节点：当日，本周，本月。</p>
+  </li>
+  <li>
+    <p>采取合适的检验手法：复述、练习等。</p>
+  </li>
+</ul>
+
+<!-- # 学会生活
+
+文明是一段时间内一个区域的人的生活状态，那么生活究竟是什么呢。
+
+活着又是什么呢，当下在做的事情，感受与意义，很容易让人迷失，对初入社会切换成社畜的学生而言。
+
+这里把生活分为几个方面
+
+## 衣
+
+能应对各种场景的着装储备。
+
++ 不同场景
+  + 温度：夏季、冬季
+  + 场合：日常、居家睡衣、严肃场合、运动衣
++ 使用&维护
+  + 合适的换衣、洗涤周期。
+  + 合适的购置新衣服周期。
+
+## 食
+
++ 一周两次水果拼盘
++ 多吃蔬菜
+
+
+## 住
+
++ 空间
+  + 衣柜
+  + 床
+  + 空闲空间
+  + 置物桌
++ 设施要求
+  + 窗
+  + 空调
+  + 洗衣机
+  + 卫生间、厨房
+  + 高质量网络
+
+
+## 行
+
++ 熟悉公共交通网络
+
+
+## 一些提升生活质量的行为
+
++ 放空早睡
++ 热水泡脚
++ 保持整理内务的频率 -->
+
+<h1 id="着装方法">着装方法</h1>
+
+<ul>
+  <li>和服打结
+    <ul>
+      <li><a href="https://sgm.co.jp/useful/kitsuke_obi/otoko/">男結び（角帯結び）</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1jx411S7i8">和服男士袴的穿着方法 ：浪人结、十文字纽结</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="着装搭配">着装搭配</h2>
+
+<p><img src="https://cdn.wimg.jp/coordinate/rke8s9/20181221101341434/20181221101341434_1000.jpg" alt="" /></p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文用以记录自己犯过的一些错误，和回答过别人的一些问题。类似改错本的存在。]]></summary></entry><entry><title type="html">用于AI的高级随机技术</title><link href="https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2021/09/09/RandomInGameAI.html" rel="alternate" type="text/html" title="用于AI的高级随机技术" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2021/09/09/RandomInGameAI</id><content type="html" xml:base="https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2021/09/09/RandomInGameAI.html"><![CDATA[<p>本文会深入讲解游戏AI的若干随机算法，并附带通俗易懂的例子，严谨的模拟试验，和技法实用运用指南。</p>
+
+<!--more-->
+
+<h1 id="用于ai的高级随机技术">用于AI的高级随机技术</h1>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (3).JPG" alt="" /></p>
+
+<ul>
+  <li>本文最初为神秘组织编写。希望大家都能深入理解艺术与科学</li>
+  <li>本文主要讨论游戏AI，或者<a href="https://www.youtube.com/channel/UC4YaOt1yT-ZeyB0OmxHgolA">人工（キズナ）智障（アイ）</a></li>
+  <li>本文最初以为会涉及计算机科学，实际没有，放在这里吓唬人</li>
+  <li>本文包含概率论，但是不用怕，<strong><u>作者概率论学得没你好</u></strong></li>
+  <li>本文参考了<a href="http://www.gameaipro.com/">Game AI Pro</a>的文章，知识是相通的，翻新了文中的试验，添加了与时俱进的例子</li>
+  <li>作者会从读者的角度揣测可能的疑问，并先手提出解答，如果遗漏可以联系作者</li>
+  <li>本文使用python语言，但是不要怕，反正正常人都看不懂，天书没有区别</li>
+  <li>本文例子大量使用神秘组织所推崇的游戏《SEKIRO》，很遗憾例子没能全部使用此游戏</li>
+</ul>
+
+<h2 id="随机的意义">随机的意义</h2>
+
+<blockquote>
+  <p>重复着无数相同的动作，我是为了表演而生，</p>
+
+  <p>而表演……是为了取悦你。——《人偶自白》</p>
+</blockquote>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (6).JPG" alt="" /></p>
+
+<p>总所周知，游戏AI为了良好游戏体验服务。——后边部分的定义基本是句废话，过分感性。不同游戏类型目标体验之间的差距，比人和人的差距还要大。</p>
+
+<p>为此，这里从玩家角度、引入消费时经常使用的“质量”的概念来分析一个游戏的体验</p>
+
+<ul>
+  <li>从切片、微观上来说，要讲究质：
+    <ul>
+      <li>体验要达到类型预期及格线，有基本的保真度</li>
+      <li>体验要结构完整，有始有终</li>
+      <li>部分好游戏的部分体验会“大大超出预期”</li>
+    </ul>
+  </li>
+  <li>从整体、宏观上来说，要讲究量：
+    <ul>
+      <li>高质量的内容以合适的节奏投放给玩家</li>
+      <li>投放本身也可以构成一种“涌现”的叙事</li>
+    </ul>
+  </li>
+</ul>
+
+<p>于是问题被转移到了高质量内容生产上，除了切实的生产新内容，合理的使用旧内容，比如<strong><u>利用随机</u></strong>，也能带来良好的体验。</p>
+
+<p>以动作游戏为例，考虑移动等行为本身的差异性、动作之间不同的衔接、动作释放的概率组成不同的考验等。下面我们给出更加具体的例子：</p>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (7).JPG" alt="" /></p>
+
+<p>以怪物设计为例：</p>
+
+<ul>
+  <li>从怪物整体上来看
+    <ul>
+      <li>我们可以切实的生产新的故事设定、区域环境、敌人兵种、敌人本身，构建一种有血有肉的敌人</li>
+      <li>比如：只狼故事初期遇到的苇名兵，回到3年前会遇到山贼、寺庙附近遇到僧兵，游戏后期遇到的使用火药的赤备队等。</li>
+      <li>我们也可以运用随机的手法，扩充单类敌人的体验，让不同感受的同种敌人交替出现</li>
+      <li>比如外观上的差异、体型的差异、武器的差异等</li>
+    </ul>
+  </li>
+  <li>从怪物自身上来看
+    <ul>
+      <li>我们需要生产怪物符合怪物性格的整套动作资产</li>
+      <li>比如休闲状态、攻击状态的移动、转换，特色的攻击动作、“打铁”玩法的格挡动作，其他演出动作等</li>
+      <li>我们可以用随机的手法，使得单个动作能有更为丰富的体验</li>
+      <li>比如移动的方向、时间、结束距离，是否衔接移动等等；动作直接的组合，以何等行为逻辑、哪些攻击手法组合呈现给玩家，也大有可为。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (8).JPG" alt="" /></p>
+
+<p>提到AI中的随机，反应性和随机性是绕不开的话题。</p>
+
+<p>这两种特性，或者说思考方式，是AI最常见的逻辑组织方式，配合差异性的动作，能够构建出表现丰富的AI体验，下面我们给出一个具体的例子：</p>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (9).JPG" alt="" /></p>
+
+<blockquote>
+  <p>只狼因为资源格式和数据组织解构大体沿用黑魂，可以用工具进行拆包、反编译得到其具体逻辑配置。
+展示的数据略去繁琐的处理过程，仅对设计进行讨论。</p>
+</blockquote>
+
+<p>以只狼中的某只基础小怪为例，它有8种基础行为（动作资源 + 逻辑脚本配置，最终构成基础行为）。</p>
+
+<p>这些行为<strong><u>以距离为条件划分</u></strong>：</p>
+
+<ul>
+  <li>距离较远：靠近</li>
+  <li>距离偏远：靠近 + 靠近攻击</li>
+  <li>距离适中：攻击</li>
+  <li>距离过近：攻击 + 远离攻击 + 远离</li>
+</ul>
+
+<p>类似的，后面我们还将看到BOSS的AI。</p>
+
+<h2 id="随机的类型">随机的类型</h2>
+
+<blockquote>
+  <p>不重复别人是重要的。</p>
+
+  <p>不重复自己是尤其重要的。——（中国作家）陈祖芬</p>
+</blockquote>
+
+<p>在了解了随机的目的与基本用法后，本章我们开始讨论具体的随机概率模型。</p>
+
+<h3 id="均等分布">均等分布</h3>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (11).JPG" alt="" /></p>
+
+<p>均等概率自然是最基础的随机模型。</p>
+
+<p>大部分时候，我们使用的都是离散的均等随机，即便是如图二，也只是把1标准单位拆为了1000份。</p>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (12).JPG" alt="" /></p>
+
+<p>以弦一郎的AI为例，在特定距离内，拥有6种行为，按照预期概率进行分布。</p>
+
+<p>值得一说的是：</p>
+
+<ul>
+  <li>不同环境的新判别标准
+    <ul>
+      <li>引入了除了距离外的新因素：架势值</li>
+      <li>就像一般会用的血量、时间等</li>
+    </ul>
+  </li>
+  <li>随时间的差异概率模型（解决长时间的内容疲倦问题）
+    <ul>
+      <li>弦一郎有三个阶段，三个阶段的招式是有差异的</li>
+      <li>基本上难度是递进的，以至于在第三阶段见到第一阶段的技能会觉得处理得十分得心应手</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (13).JPG" alt="" /></p>
+
+<p>最后我们对固定概率随机进行一个简单的小结。</p>
+
+<h3 id="高斯分布">高斯分布</h3>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (14).JPG" alt="" /></p>
+
+<p>正态分布本质上是一种对自然的拟合：</p>
+
+<ul>
+  <li>图1：
+    <ul>
+      <li>我们进行1000次随机1-6的掷骰子，得到的统计图</li>
+    </ul>
+  </li>
+  <li>图2：
+    <ul>
+      <li>我们每次进行3个1-6的掷骰子，将结果求和，重复1000*6*3次，得到的统计图</li>
+    </ul>
+  </li>
+  <li>图3：
+    <ul>
+      <li>我们将3个扩大到10个，次数扩大到1000*6*10次，得到的统计图</li>
+    </ul>
+  </li>
+</ul>
+
+<p>你会发现，当大量因素都对结果有或大或小影响，最终结果的将会呈现出正态分布。</p>
+
+<p>就像自然界中植物最终的高度，可能受到种子、土壤、水分、空气、光照等等因素的影响。最后综合到一起，就会变成正态分布。</p>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (15).JPG" alt="" /></p>
+
+<p>很遗憾，这里本来是想找一些<strong><u>使用正态分布产生不同体型的怪物</u></strong>的例子的，但是作者失败了。</p>
+
+<p>在只狼的樱龙BOSS战的前期阶段，需要杀大量的“小龙人”，很可惜，小龙人长得一样高。甚至有种诡异的美感</p>
+
+<p>在黑暗之魂3的幽邃主教群BOSS战中，需要杀大量的主教，很可惜，主教做了几种体型，前后参差，但是相同体型一样高。</p>
+
+<p>不得不再说一次，随机只是一种做法，采用不采用都可以，满足目标体验需求即可。</p>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (16).JPG" alt="" /></p>
+
+<p>另外一边，怪物猎人：世界，中的大小金可以说是一个极佳的例子。</p>
+
+<p>本身同一只怪物狩猎时间较长，又需要反复狩猎，于是引入了差异体型和对差异体型追求的大小金玩法。</p>
+
+<p>虽然无从论证到底是不是正态分布（刷大小金的过程中只要不是目标体型就重置了OTZ），但是呈正态分布大致也是没问题的。</p>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (17).JPG" alt="" /></p>
+
+<p>自然而然地，想到了环境生物的差异体型。</p>
+
+<p>怪物猎人：世界中会有普通或稀有的环境生物，也有各自的体型，也有一部分玩家会去追求这些。比如图上的摇曳鳗女王，只在夜晚的陆珊瑚地图出现（虽然大概是王溟波任务100%刷出），想要刷出来还是要费些功夫的。</p>
+
+<p>那么只狼中也是有杀锦鲤、收集鳞片的，理论上给鱼做一些随机体型，也是不错的，但是我们发现只狼中把体型这件事做得更为夸张，甚至还有剧情和选择，最后结局十分具有冲击性。</p>
+
+<p>这其实还是定制内容或者填充内容的选择问题，两者如上文所言，各有优劣。</p>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (18).JPG" alt="" /></p>
+
+<p>那么对正态分布做一个总结，如上图。</p>
+
+<p>需要一说的是，LOD级别，指的是不会被玩家注意到，去留意其行踪的填充级别（否则会穿帮！）</p>
+
+<p>右边我们以子弹命中为例子来更加具体的对比一下随机分布与正态分布：</p>
+
+<ul>
+  <li>随机分布永远都在指定范围内，而正态分布可能超出屏幕（三个标准差）外</li>
+  <li>随机分布均匀分布，而正态分布从中间到四周由密集到稀疏</li>
+</ul>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (19).JPG" alt="" /></p>
+
+<p>这里也把生产过程做一个呈现，留意最终的随机生成方法：</p>
+
+<ul>
+  <li>实现了个画三个圆和指定数据点的绘制函数</li>
+  <li>实现了个极坐标系转平面直角坐标系的绘制函数</li>
+  <li>实现了以指定方法生成指定个数，并绘制出来的生成函数</li>
+</ul>
+
+<p>接下来我们指定生成方法和个数：</p>
+
+<ul>
+  <li>随机分布：
+    <ul>
+      <li>随机角度0-360度</li>
+      <li>随机距离0-最大值</li>
+    </ul>
+  </li>
+  <li>正态分布：
+    <ul>
+      <li>随机角度0-360度（没错！角度仍然是均等随机！）</li>
+      <li>正态分布距离，最大值为三个标准差</li>
+    </ul>
+  </li>
+</ul>
+
+<p>就可以得到对应的分布图。</p>
+
+<h3 id="柏林噪声">柏林噪声</h3>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (20).JPG" alt="" /></p>
+
+<p>到这里开始内容就逐渐“玄幻”起来，理想噪声的标准听起来，大概像是是：变化与方向无关；没有剧变；变化与距离无关（如果不对也很正常，门外汉的理解）。</p>
+
+<p>下方的折线图可以看出，柏林噪声或者柏林随机最重要的特性：连续！前面的随机都是离散的，会突变的。</p>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (21).JPG" alt="" /></p>
+
+<p>这里给出两个可能的使用场景，就如之前的鱼一样，这里只是可以这么做，实际需不需要做，需要根据需求判断。</p>
+
+<p>只狼中有需要在白蛇神眼皮底下开溜的流程，恶魔之魂中的龙神boss战也是类似的玩法，这里两者都是默认固定周期摆动，实际上头部的旋转就可以使用柏林噪声的连续随机，当流程时间被拉得更长，做固定的几种动作已经没法满足，或者需要做大量随机待机的表现，就可以使用随机来“填充内容”。</p>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (22).JPG" alt="" /></p>
+
+<p>总结一下柏林噪声的随机，最大的特征就是连续而不是离散，可以用在各种连续情况，右边介绍了一些基础的控制方式，这里不进行过多展开，有需要时再查阅即可。</p>
+
+<p>现在柏林噪声更多的用在随机地图生成等场合，同样也需求连贯的随机。</p>
+
+<h2 id="虚伪的随机">虚伪的随机</h2>
+
+<blockquote>
+  <p>正确的结果，是从大量错误中得出来的；</p>
+
+  <p>没有大量错误作台阶，也就登不上最后正确结果的高座。——钱学森</p>
+</blockquote>
+
+<h3 id="随机值筛选">随机值筛选</h3>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (24).JPG" alt="" /></p>
+
+<p>想要说明白计算机的伪随机、或者自然环境下的真随机，有时并不是我们想要的随机这一点，有些复杂，会比较类似复杂的逻辑下特定情况出现的“人工愚蠢”的现象，这里作者用一个亲身经历的例子来说明这一点。</p>
+
+<p>某天晚上，作者在看所在项目的制作人体验作者配置的AI，好巧不巧，中间的AI机缘巧合连续闪避了多次，于是制作人提出致命问题：为什么它闪避了这么多次？这合理吗？</p>
+
+<p>当然，这是作者配置的问题，有很多方法可以解决，但是第一反应下，假设这种情况的只有跑开和闪避两种行为，概率五五开，大量试验下是一定会出现这种连续触发闪避的。</p>
+
+<p>作者自然不能跟制作人讲，这是一个统计学问题，你也不能跟你的玩家讲，“你这是个概率问题，我的AI逻辑十分精妙，这只是个巧合！”。</p>
+
+<p>所以我们引入了“筛选”的概念，逻辑十分好懂，发现不合适的，就打回去，重新随。</p>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (25).JPG" alt="" /></p>
+
+<p>比较复杂的地方在于，针对各种随机数据类型或者随机模型，如何判断是否不合适，上图给出了一些判断条件的例子。</p>
+
+<p>大概的通用规律是：</p>
+
+<ul>
+  <li>不可以重复出现、间隔出现</li>
+  <li>不可以同趋势出现、连续将近</li>
+  <li>统计学意义上大体随机</li>
+</ul>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (26).JPG" alt="" /></p>
+
+<p>当然，规则也不是越复杂越好的，过于复杂可能导致随机本身失去意义。</p>
+
+<p>可以使用一些工具检验你的检查条件是否会破坏随机完整性，已经有比较成熟的方案了，这里不展开叙述。</p>
+
+<h2 id="总结与参考">总结与参考</h2>
+
+<p><img src="/assets/img/skill/RandomInGameAI/1 (1).JPG" alt="" /></p>
+
+<p>最后对本文的内容做一个总结：如上图。</p>
+
+<p>还是想再次重申：随机是一种方法，它为了我们的目标体验而服务。</p>
+
+<p>若干参考，如下：</p>
+
+<ul>
+  <li><a href="https://github.com/jskyzero/GameAI.Random/blob/master/GameAI.Random.ipynb">文中模拟试验的源码</a>，<a href="https://jskyzero.github.io/GameAI.Random/">网页版</a></li>
+  <li><a href="http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter03_Advanced_Randomness_Techniques_for_Game_AI.pdf">Advanced Randomness Techniques for Game AI: Gaussian Randomness, Filtered Randomness, and Perlin Noise, Steve Rabin, Fernando Silva, Jay Goldblatt</a></li>
+</ul>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文会深入讲解游戏AI的若干随机算法，并附带通俗易懂的例子，严谨的模拟试验，和技法实用运用指南。]]></summary></entry><entry><title type="html">《人类政治文明发展史》总结</title><link href="https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2021/09/09/history-1.html" rel="alternate" type="text/html" title="《人类政治文明发展史》总结" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2021/09/09/history-1</id><content type="html" xml:base="https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2021/09/09/history-1.html"><![CDATA[<p>一切事物都是发展并且互相联系的——辩证唯物主义。（又出自——人教版高中历史必修一）</p>
+
+<!--more-->
+
+<h1 id="人类政治文明发展史总结">《人类政治文明发展史》总结</h1>
+
+<h2 id="中国古代">中国古代</h2>
+
+<p><img src="/assets/img/books/history-1/1.JPG" alt="" />
+<img src="/assets/img/books/history-1/2.JPG" alt="" />
+<img src="/assets/img/books/history-1/3.JPG" alt="" />
+<img src="/assets/img/books/history-1/4.JPG" alt="" />
+<img src="/assets/img/books/history-1/5.JPG" alt="" />
+<img src="/assets/img/books/history-1/6.JPG" alt="" />
+<img src="/assets/img/books/history-1/7.JPG" alt="" /></p>
+
+<p>后面决定放弃这种做法，快进到历史年表。</p>
+
+<h2 id="中国古代历史年表">中国古代历史年表</h2>
+
+<p><img src="/assets/img/books/history-1/0.png" alt="" /></p>
+
+<h2 id="四大文明古国">四大文明古国</h2>
+
+<p><img data-enlargeable="" width="100" style="cursor: zoom-in" src="/assets/img/books/history-1/0.1.png" /></p>]]></content><author><name></name></author><category term="读书报告" /><summary type="html"><![CDATA[一切事物都是发展并且互相联系的——辩证唯物主义。（又出自——人教版高中历史必修一）]]></summary></entry></feed>

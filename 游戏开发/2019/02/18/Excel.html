@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Excel使用与数据字段设计 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Excel使用与数据字段设计" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="本文將講述Excel的一些基礎用法，函數相關部分，以及如何設計表格的數據字段。" />
+<meta property="og:description" content="本文將講述Excel的一些基礎用法，函數相關部分，以及如何設計表格的數據字段。" />
+<link rel="canonical" href="https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2019/02/18/Excel.html" />
+<meta property="og:url" content="https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2019/02/18/Excel.html" />
+<meta property="og:site_name" content="设计者笔记" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Excel使用与数据字段设计" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2019-02-18T00:00:00+00:00","datePublished":"2019-02-18T00:00:00+00:00","description":"本文將講述Excel的一些基礎用法，函數相關部分，以及如何設計表格的數據字段。","headline":"Excel使用与数据字段设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2019/02/18/Excel.html"},"url":"https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2019/02/18/Excel.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main.css"></head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul><li><a href="/">/</a></li><li><a href="/program/">/Program</a></li><li><a href="/github/">/Github</a></li><li><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main>
+      <div id="index">
+  <ul class="md-toc">
+  <li class="md-toc-h1"><a href="#excel用法相關">EXCEL用法相關</a>
+    <ul>
+      <li class="md-toc-h2"><a href="#繪制圖表">繪制圖表</a></li>
+      <li class="md-toc-h2"><a href="#公式基礎">公式基礎</a></li>
+      <li class="md-toc-h2"><a href="#表格设计">表格设计</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#关系数据库字段设计">关系数据库字段设计</a></li>
+          <li class="md-toc-h3"><a href="#示例">示例</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  
+
+</div>
+
+<p>本文將講述Excel的一些基礎用法，函數相關部分，以及如何設計表格的數據字段。</p>
+
+<!--more-->
+
+<h1 id="excel用法相關">EXCEL用法相關</h1>
+
+<p>Microsoft Excel是當下最流行的個人數據處理軟件，這裏自然不太想展開說Excel是如何流行起來的，只是說在數據處理上，Excel足夠強大而且足夠友好，並不是每個人都有編程基礎，能接受諸如<code class="language-plaintext highlighter-rouge">json</code>、<code class="language-plaintext highlighter-rouge">xml</code>、<code class="language-plaintext highlighter-rouge">binary</code>的數據組織格式——而且在可讀性，修改性等等方便，也不見得這些會比Excel方便到哪裏去，當然這也不是說Excel就是萬能的——世界上真的存在萬能的解決方案嗎？一切都是取決於需求和當前環境，是在各方因素的糾纏下的一種取舍、讓步和折中，但是這並不影響些什麽，Excel還是很強大，並且可以做很多事情。</p>
+
+<h2 id="繪制圖表">繪制圖表</h2>
+
+<blockquote>
+  <p><em>我們可以轻松制作出的表格。</em></p>
+</blockquote>
+
+<p><img src="/assets/img/skill/excel/plot.png" alt="" /></p>
+
+<p>眾所周知，Excel的圖表功能很強大，簡單來說繪制一個圖表我們需要：</p>
+
+<ol>
+  <li>選擇數據源</li>
+  <li>繪制圖表（明確圖表類型）</li>
+  <li>修改圖表細節</li>
+</ol>
+
+<ul>
+  <li>描述文字，UI元素。</li>
+  <li>風格，顏色，元素位置。</li>
+</ul>
+
+<p>我們可以按住<code class="language-plaintext highlighter-rouge">CTRL</code>拖動選擇數據源（要修改也可以右鍵選擇數據源，然後拖動選擇），然後鍵入<code class="language-plaintext highlighter-rouge">CTRL</code>+<code class="language-plaintext highlighter-rouge">F1</code>快速新建表格。</p>
+
+<p>然後我們需要根據我們的目標選擇合適的圖表類型，比如廣泛使用的條形圖、折線圖等等，在設計面板的類型選項下面可以找到更改圖表類型。</p>
+
+<p>同樣的，我們在設計面板上可以找到圖表樣式、快速布局等等選項，單擊表格可以找到添加元素、樣式、篩選選項，右鍵表格也可以找到若按選項，雙擊則可以彈出選項設置框，總之需要調啥就找到設置然後調就是了。</p>
+
+<p>對於未處理的原始數據，我們可以使用數據透視圖，可以選擇原有數據進行求合匯總；對於多列元素，除了並列顯示，我們也可以采用組合的形式展現，比如組合折線圖和條形圖。</p>
+
+<h2 id="公式基礎">公式基礎</h2>
+
+<blockquote>
+  <p><em>一些簡單基本的函數。</em></p>
+</blockquote>
+
+<p><img src="/assets/img/skill/excel/function.jpg" alt="" /></p>
+
+<p>公式當然也是使用Excel避不開的一部分，內置的為各種場景定制的函數，極其詳實，讓人看到就心生退意，這裏挑一些簡單的說一下。</p>
+
+<p>我們自然註意到Excel是有一個行和列的，列的字母表示+行的行數就組成了單元格的id，然後就可以用到函數裏面，比如<code class="language-plaintext highlighter-rouge">A1</code>，<code class="language-plaintext highlighter-rouge">A2</code> ，<code class="language-plaintext highlighter-rouge">B1</code>這樣，然後指定範圍可以<code class="language-plaintext highlighter-rouge">A1:A10</code>，<code class="language-plaintext highlighter-rouge">A1:B10</code>這樣。跨視圖、表格的話大概這麽寫<code class="language-plaintext highlighter-rouge">'./[filename.xlsx]viewname'!A1</code>。</p>
+
+<p>基本的單元格是可以簡單的加減乘除冪運算（^）的，對於結果有一定格式化的手段，比如用<code class="language-plaintext highlighter-rouge">A1&amp;','&amp;B1</code>，或者是<code class="language-plaintext highlighter-rouge">A1&amp;TEXT(B1, "YYYY年M月D日")</code>這樣的。</p>
+
+<p>特別值得一提的是<code class="language-plaintext highlighter-rouge">VLOOKUP</code>函數，幾個參數的含義如下。</p>
+
+<p><img src="/assets/img/skill/excel/vlookup.jpg" alt="" /></p>
+
+<h2 id="表格设计">表格设计</h2>
+
+<p>接下來將講述關係型數據庫中字段的設計，然後給出一個實際工作中的例子並進一步熟悉Excel的使用。</p>
+
+<h3 id="关系数据库字段设计">关系数据库字段设计</h3>
+
+<p>先從範式開始講起吧，範式這個詞是指符合某種關係模式，然後有這麽幾種範式</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>要求</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1NF</td>
+      <td>每個屬性都是不可再分的</td>
+    </tr>
+    <tr>
+      <td>2NF</td>
+      <td>消除非主屬性對碼的部分函數依賴</td>
+    </tr>
+    <tr>
+      <td>3NF</td>
+      <td>消除非主屬性對碼的傳遞函數依賴</td>
+    </tr>
+    <tr>
+      <td>BCNF</td>
+      <td>消除主屬性對碼的部分和傳遞函數依賴</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>稍微解釋一下這幾個名詞，首先是：</p>
+
+<ul>
+  <li>碼：除了碼以外的所有屬性都完全函數依賴與的一個或一組屬性。</li>
+  <li>非主屬性：不在任何一個碼中的屬性。</li>
+  <li>主屬性：存在于任何一個碼中的屬性。</li>
+</ul>
+
+<p>然後是：</p>
+
+<ul>
+  <li>函數依賴：<code class="language-plaintext highlighter-rouge">y=f(x)</code>，唯一x確定y。</li>
+  <li>完全函數依賴：對於x的真子集不成立。</li>
+  <li>部分函數依賴：不是完全的函數依賴</li>
+</ul>
+
+<h3 id="示例">示例</h3>
+
+<p>這裏給出一個關於關卡與玩家的對於表格的例子，具體字段暫且不解釋其含義（似乎不解釋含義也很難理解究竟是在幹啥OTZ）</p>
+
+<p>我們先考慮拆分一個id的各個字段對應的屬性：</p>
+
+<p><img src="/assets/img/skill/excel/id.png" alt="" /></p>
+
+<p>然後將各個字段對應的子表格拆開：</p>
+
+<p>這是數據池表格，具體的value會再根據屬性表去更新。</p>
+
+<p><img src="/assets/img/skill/excel/table1.png" alt="" /></p>
+
+<p>分別是屬性對應表、職業枚舉名稱對應表、組隊方式對應表、地圖難度對應表</p>
+
+<p><img src="/assets/img/skill/excel/table2.png" alt="" /></p>
+
+<p>我是比較習慣使用名稱管理器，方面在子表中間查找。</p>
+
+<p><img src="/assets/img/skill/excel/name.png" alt="" /></p>
+
+<p>然後在子表1裏面我們就可以這樣根據id的子段去lookup</p>
+
+<pre><code class="language-excel">=INDEX(
+  DB_Table[name], 
+  MATCH(RIGHT(A2,4), 
+        DB_Table[total_id], 
+        0)
+  , 1)
+</code></pre>
+
+<p>在子表2裏面我們可以根據pair和name_id生產對於的id字段</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=100&amp;
+  TEXT(VLOOKUP(H2, 
+               Dungeon_Difficult_Table, 
+               2), "00")&amp;
+  INDEX(Role_Table[key], 
+        MATCH(VLOOKUP(H2, 
+                      Pair_Table, 
+                      COLUMN()), 
+              Role_Table[enum],
+              0))&amp;
+  TEXT(I2, "00")
+</code></pre></div></div>
+
+<p>簡單來看就是各種來回查找，其實邏輯並不算複雜。</p>
+
+
+
+<pre class="post-content controls__inner git-log"><output>~: git log
+21 Sep 2021 - jskyzero - 🔥 remove {{site.img_url}}
+19 Aug 2021 - jskyzero - ✨ update tags
+19 Aug 2021 - jskyzero - 🔀  change structure
+
+<img alt="Creative Commons License" src="/assets/img/cc.png" />
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre>
+
+
+<script src="/assets/js/main.js"></script>
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2019/02/18/Excel.html';
+this.page.identifier = 'https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2019/02/18/Excel.html';
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+    </main><footer>
+  <p>Enjoy :)</p>
+  <span>&copy; 2022 设计者笔记. All rights reserved.</span>
+</footer>
+</div>
+  </body>
+</html>

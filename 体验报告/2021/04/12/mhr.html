@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>《怪物猎人：崛起》體驗報告 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="《怪物猎人：崛起》體驗報告" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="伴随着3.0更新的落幕，炎火村的旅途也终于迎接结束。" />
+<meta property="og:description" content="伴随着3.0更新的落幕，炎火村的旅途也终于迎接结束。" />
+<link rel="canonical" href="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/2021/04/12/mhr.html" />
+<meta property="og:url" content="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/2021/04/12/mhr.html" />
+<meta property="og:site_name" content="设计者笔记" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="《怪物猎人：崛起》體驗報告" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-04-12T00:00:00+00:00","datePublished":"2021-04-12T00:00:00+00:00","description":"伴随着3.0更新的落幕，炎火村的旅途也终于迎接结束。","headline":"《怪物猎人：崛起》體驗報告","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/2021/04/12/mhr.html"},"url":"https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/2021/04/12/mhr.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main.css"></head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul><li><a href="/">/</a></li><li><a href="/program/">/Program</a></li><li><a href="/github/">/Github</a></li><li><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main>
+      <div id="index">
+  <ul class="md-toc">
+  <li class="md-toc-h1"><a href="#怪物猎人崛起--monster-hunter-rise">怪物猎人：崛起 / MONSTER HUNTER RISE</a>
+    <ul>
+      <li class="md-toc-h2"><a href="#概述简介--原因">概述：简介 &amp; 原因</a></li>
+      <li class="md-toc-h2"><a href="#体验蓝图游戏内容详细分析">体验蓝图：游戏内容详细分析</a></li>
+      <li class="md-toc-h2"><a href="#系统系统流转与投放">系统：系统流转与投放</a></li>
+      <li class="md-toc-h2"><a href="#单局单局分析与扩充">单局：单局分析与扩充</a></li>
+      <li class="md-toc-h2"><a href="#运营活动制作成本性价比">运营活动：制作成本性价比</a></li>
+      <li class="md-toc-h2"><a href="#其他参考">其他参考</a></li>
+    </ul>
+  </li>
+</ul>
+  
+
+</div>
+
+<p>伴随着3.0更新的落幕，炎火村的旅途也终于迎接结束。</p>
+
+<!--more-->
+
+<h1 id="怪物猎人崛起--monster-hunter-rise">怪物猎人：崛起 / MONSTER HUNTER RISE</h1>
+
+<h2 id="概述简介--原因">概述：简介 &amp; 原因</h2>
+
+<ul>
+  <li>火热动作游戏怪物猎人系列的最新作品</li>
+  <li>学习如何制作“续作”</li>
+</ul>
+
+<blockquote>
+  <p><strong><em>销量参考<a href="https://www.capcom.co.jp/ir/english/finance/million.html">卡普空财报</a></em></strong></p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Sales (millions of units) As of March 31, 2021</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Monster Hunter World</em></td>
+      <td>17.1</td>
+    </tr>
+    <tr>
+      <td><em>Monster Hunter World: Iceborne</em></td>
+      <td>7.7</td>
+    </tr>
+    <tr>
+      <td><em>Monster Hunter Portable 3rd/Freedom 3</em></td>
+      <td>4.9</td>
+    </tr>
+    <tr>
+      <td><em>Monster Hunter Rise</em></td>
+      <td>4.8（目前已经7.0+）</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong><em>关于续作的预测：题材更新、动作更新、机制简化</em></strong></p>
+</blockquote>
+
+<h2 id="体验蓝图游戏内容详细分析">体验蓝图：游戏内容详细分析</h2>
+
+<p>本作采用村任务（单人，仅下位难度）和集会所任务（多人）分开的模式。下面会展开分析下这种模式的利弊。</p>
+
+<p>因为游玩本作的时候，笔者已经有数千小时的前作游戏时长，并游玩了超过20小时的 DEMO且击败了【老猎人】认证的怨虎龙，因而再用笔者的难度体验做为初见玩家的一般体验的参考已经不太合适。</p>
+
+<p>内容依然是以任务作为内容的释放方式（组合怪物和场景，形成体验的基本单位）</p>
+
+<p>大体的怪物、场景序列如下：</p>
+
+<ul>
+  <li>村一星：废神社，采集和小型怪物</li>
+  <li>村二星：冰封群岛，青熊兽，眠狗龙王，白兔兽，镰鼬龙王</li>
+  <li>村三星：沙原、水没林，白龙夜行，河童蛙，搔鸟，土砂龙，毒狗龙王，水兽，伞鸟，奇怪龙</li>
+  <li>村四星：熔岩洞，人鱼龙，冰牙龙，雌火龙，飞雷龙，赤甲兽，岩龙，天狗兽，毒妖鸟</li>
+  <li>村五星：迅龙，雷狼龙，蛮颚龙，泡狐龙，火龙，怨虎龙</li>
+  <li>村六星：泥翁龙，雪鬼兽，轰龙，角龙</li>
+  <li>（步入上位/集会所四星，以下仅统计初见）</li>
+  <li>集会所五星：泥鱼龙</li>
+  <li>集会所七星：妃蜘蛛、金狮子</li>
+  <li>集会所八星：风神龙、雷神龙</li>
+  <li>集会所八星2.0：暴鳞龙、霞龙、钢龙、炎王龙、霸主·青熊兽、霸主·雌火龙、霸主·泡狐龙、</li>
+  <li>集会所八星3.0：百龙渊源雷神龙、霸主·火龙、霸主·角龙、霸主·雷狼龙、神秘红光天彗龙</li>
+</ul>
+
+<p>一些简单的结论：</p>
+
+<ol>
+  <li>高潮引爆的手法：惯例的使用百龙夜行玩法、标志性怪物作为关键节点。</li>
+  <li>上下位的区分度不够：新内容不足，以W作为对比，保留了一个全新区域和对应怪物。</li>
+  <li>1.0版本上位整体体验偏疲软，后期古龙有自由任务的仅有带场地玩法的雷神龙一只。</li>
+  <li>平台期挑战和奖励都部分缺失，真的有挑战性怪物仅几只复读粪怪，装备奖励也不够有诱惑性。</li>
+</ol>
+
+<p>此外，在NGA看到了一张有趣的血量图：</p>
+
+<p><img src="/assets/img/gameplay/mhr/hp.jpg" alt="" /></p>
+
+<p>从图示猜测起来，似乎是希望玩家以村下位、集会所下位、集会所上位的顺序进行攻略。</p>
+
+<p>制作组用了大连战的任务来作为挑战来试图分流玩家，让技术力达标的玩家先去集会所上位，但是大家并未领情，大量玩家反馈村任务简单的离谱，集会所上位任务又难得离谱。这里的分流设计没有做好，让习惯传统路线的玩家的难度曲线出现了陡增。</p>
+
+<p>从怪物的角度聊完，也看一看地图的角度：</p>
+
+<p>一张地图有约13个战斗区域，10-20种环境生物（装饰用、战斗用、鬼火鸟），路线设计较为讲究，提供重复玩的要素。</p>
+
+<p><img src="/assets/img/gameplay/mhr/map_001.png" alt="" /></p>
+
+<p>地图是如何满足玩家的重复游玩的呢：</p>
+
+<ul>
+  <li>隐藏道路设计</li>
+  <li>采集点、鬼火鸟、猎具生物的分布</li>
+  <li>路线选择和设计</li>
+  <li>路线移动对动作的考核</li>
+</ul>
+
+<p>对最后一点做一个小补充：笔者发现了一些有意思的设计，某些柱子、墙壁之间的距离，恰好是玩家使用翔虫跳跃最佳操作的极限移动距离。</p>
+
+<p>总结来说，感受上，MHR对释放做的不够，上下位的仪式感和区分度也较为缺失，这些使得虽然有大量怪物，却依然被玩家吐槽不耐玩，内容不足。</p>
+
+<h2 id="系统系统流转与投放">系统：系统流转与投放</h2>
+
+<p>这张流转图还是有很多问题的，但是就不改了。</p>
+
+<p><img src="/assets/img/gameplay/mhr/mhr.jpg" alt="" /></p>
+
+<p>简单来说，使用特定玩法的关键产出来使得玩家必须雨露均沾的涉及每个玩法。</p>
+
+<ul>
+  <li>
+    <p>关于百龙玩法：
+百龙玩法如果作为对标一些后期玩法，比如世界的调查任务/聚魔之地，GU的狞猛化/二名等，塔防形式的玩法与原核心玩法差距太大，以及没有挑战性，是主要的问题。</p>
+  </li>
+  <li>
+    <p>关于后期唯一追求：护士
+由于珠子现在为制作产出，坑较浅，护士成为了抽奖的无比深坑，毕业与否可能相差约2个技能，以攻击力替换约6/200 = 3%的输出差距。</p>
+  </li>
+</ul>
+
+<p>另外，护士的唯一产出是炼金，快速死亡完成炼金、重复读档来反复抽奖，这些行为也和玩法剥离开，进一步加速了玩家的机械劳动的疲倦。</p>
+
+<p>从系统角度来说，平台期预留的释放不足，对体验的规划不均，最终造成了玩家的体验缺失，是系统规划的主要问题。</p>
+
+<h2 id="单局单局分析与扩充">单局：单局分析与扩充</h2>
+
+<p>承接了一贯的单局玩法，做了一些扩充。</p>
+
+<ul>
+  <li>翔虫
+    <ul>
+      <li>类似于一个可以挂在空中的蜘蛛侠的蛛丝</li>
+      <li>移动：总体移动速度增加、空中移动范围大幅扩充</li>
+      <li>可以爬墙：大幅扩充了地图自由度，顺势加入了单局成长鬼火鸟的设计（血量上限可以翻倍，容错可以大幅提高）。</li>
+      <li>翔虫受身：脱离攻击范围且收刀，可以直接喝血药
+        <ul>
+          <li>加快了战斗节奏，同时怪物做了空中技能、跟踪的多端攻击用于限制。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>翔虫技
+    <ul>
+      <li>消耗翔虫使用的技能。
+        <ul>
+          <li>使用翔虫CD和技能抬手来限制技能强度。</li>
+        </ul>
+      </li>
+      <li>突出性能：当身判定、无敌帧数、霸体帧、空中位移、伤害、短期BUFF、御龙值积蓄</li>
+    </ul>
+  </li>
+  <li>御龙
+    <ul>
+      <li>作为骑乘、撞墙的系统的替换，有相当的正反馈和一定的操作深度。</li>
+      <li>攻击、翔虫闪避取消后摇</li>
+      <li>伤害偏高，单次攻击约为1%的伤害，单只骑乘可造成8%的伤害。</li>
+    </ul>
+  </li>
+</ul>
+
+<p>此外</p>
+
+<ul>
+  <li>W/WI的衣装被单局内的环境生物所替代。</li>
+  <li>使用替换技给玩家进行流派的选择。（多为不同招式打点替换、物理元素补正选择等）</li>
+</ul>
+
+<p>可以看出，一方面动作性上使用翔虫技做了扩充，使用替换技用于玩家流派选择，大部分武器都有了当身技、无敌帧、霸体帧，玩家性能突飞猛进，以太刀纳居为代表（主要原因：提高蓄力速度的【集中】技能一直很收敛，而本作太刀的居合姿态的前摇纳刀动作可以通过【纳刀术】技能大幅减少，而居合姿态后的派生对太刀单局资源积累、当身无敌应对单HIT招式，大幅提高了太刀性能）</p>
+
+<p>另一方面，猎人可以爬墙后，自由度有了质的提升，而本次单局内带来大幅成长（容错）、战斗便利性的鬼火鸟、忍具生物，也提供给了玩家探索的必要性，同时也是极佳的难度调节方式。</p>
+
+<h2 id="运营活动制作成本性价比">运营活动：制作成本性价比</h2>
+
+<p>将本体完整内容拆分为DLC被玩家普遍差评，主要原因是W/WI的DLC是锦上添花，而这里则是对本体内容的分期释放。</p>
+
+<p>此外的DLC多为贴图、服饰、动作的特殊奖励，因为任务本身并没有太大变化，吸引力也不足。</p>
+
+<h2 id="其他参考">其他参考</h2>
+
+<ul>
+  <li><a href="https://mhrise.kiranico.com/zh">kiranico 拆包数据</a></li>
+</ul>
+
+
+
+<pre class="post-content controls__inner git-log"><output>~: git log
+21 Sep 2021 - jskyzero - 🔥 remove {{site.img_url}}
+19 Aug 2021 - jskyzero - ✨ update tags
+19 Aug 2021 - jskyzero - 🔀  change structure
+
+<img alt="Creative Commons License" src="/assets/img/cc.png" />
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre>
+
+
+<script src="/assets/js/main.js"></script>
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/2021/04/12/mhr.html';
+this.page.identifier = 'https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/2021/04/12/mhr.html';
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+    </main><footer>
+  <p>Enjoy :)</p>
+  <span>&copy; 2022 设计者笔记. All rights reserved.</span>
+</footer>
+</div>
+  </body>
+</html>

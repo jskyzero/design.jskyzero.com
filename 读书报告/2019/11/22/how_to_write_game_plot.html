@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>《如何写游戏剧本》总结 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="《如何写游戏剧本》总结" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="剧本掌握的是感动、喜悦、愤怒、哀伤这类不可思议、魔法般的的东西，希望你寻找到属于你的“魔法”。" />
+<meta property="og:description" content="剧本掌握的是感动、喜悦、愤怒、哀伤这类不可思议、魔法般的的东西，希望你寻找到属于你的“魔法”。" />
+<link rel="canonical" href="https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2019/11/22/how_to_write_game_plot.html" />
+<meta property="og:url" content="https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2019/11/22/how_to_write_game_plot.html" />
+<meta property="og:site_name" content="设计者笔记" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-11-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="《如何写游戏剧本》总结" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2019-11-22T00:00:00+00:00","datePublished":"2019-11-22T00:00:00+00:00","description":"剧本掌握的是感动、喜悦、愤怒、哀伤这类不可思议、魔法般的的东西，希望你寻找到属于你的“魔法”。","headline":"《如何写游戏剧本》总结","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2019/11/22/how_to_write_game_plot.html"},"url":"https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2019/11/22/how_to_write_game_plot.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main.css"></head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul><li><a href="/">/</a></li><li><a href="/program/">/Program</a></li><li><a href="/github/">/Github</a></li><li><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main>
+      <div id="index">
+  <ul class="md-toc">
+  <li class="md-toc-h1"><a href="#如何写游戏剧本总结">《如何写游戏剧本》总结</a>
+    <ul>
+      <li class="md-toc-h2"><a href="#概览快速介绍文章内容">概览：快速介绍文章内容</a></li>
+      <li class="md-toc-h2"><a href="#原文还原知识体系">原文：还原知识体系</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#体验开发现场">体验开发现场</a></li>
+          <li class="md-toc-h3"><a href="#游戏剧本的主要成分">游戏剧本的主要成分</a></li>
+          <li class="md-toc-h3"><a href="#使用结构创造出更好的剧本">使用结构创造出更好的剧本</a></li>
+          <li class="md-toc-h3"><a href="#巧妙的文本">巧妙的文本</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#知识点面具体知识的细节展开">知识点面：具体知识的细节展开</a></li>
+      <li class="md-toc-h2"><a href="#参考其他外部资料">参考：其他外部资料</a></li>
+    </ul>
+  </li>
+</ul>
+  
+
+</div>
+
+<p>剧本掌握的是感动、喜悦、愤怒、哀伤这类不可思议、魔法般的的东西，希望你寻找到属于你的“魔法”。</p>
+
+<!--more-->
+
+<h1 id="如何写游戏剧本总结">《如何写游戏剧本》总结</h1>
+
+<h2 id="概览快速介绍文章内容">概览：快速介绍文章内容</h2>
+
+<p>本书从主题、角色、世界切入，讲述了游戏剧本编写的一些思路和方法。粗看起来，这本书更像是写给完全没经验的人看的，但实际上在对于一些剧本细节，比如角色划分、世界观设定等细节上的拆分都有可取之处。</p>
+
+<p><img src="/assets/img/books/how_to_write_game_plot/plot.png" alt="" /></p>
+
+<p>以下下简要总结原文。</p>
+
+<h2 id="原文还原知识体系">原文：还原知识体系</h2>
+
+<h3 id="体验开发现场">体验开发现场</h3>
+
+<ul>
+  <li>创作情节：准备短小情节，修改浓缩为一个</li>
+  <li>遵从策划书：按照设计主旨来创作</li>
+  <li>充实情节——序破急：开始、发展、高潮、结局</li>
+  <li>前辈的精神论：做出好的东西，同时满足要求</li>
+  <li>剧本是写给开发人员看的：需要符合开发人员需求</li>
+  <li>剧本是写给开发人员的看的信息：一些未表现出来的设定</li>
+  <li>游戏剧本的格式：一些游戏实现的信息描述</li>
+</ul>
+
+<h3 id="游戏剧本的主要成分">游戏剧本的主要成分</h3>
+
+<ul>
+  <li>主题与故事
+    <ul>
+      <li>游戏剧本的创作流程：来回跳跃进行创作</li>
+      <li>主题：给人印象，赋予游戏方向性</li>
+      <li>故事：结合游戏目的，将主题扩充为故事</li>
+      <li>主题和故事：发挥想象，查阅资料、积累创意库</li>
+      <li>如何表达主题：通过角色的选择和行为、故事的发展</li>
+    </ul>
+  </li>
+  <li>角色
+    <ul>
+      <li>角色：拥有个性、目的、意志、情感并依此生活，思考和行动的个体
+        <ul>
+          <li>使用“纠葛”体现角色意志、目的、情感
+            <ul>
+              <li>人与人的对立或者内心心境，外在：战斗、对立，竞争，冲突，内在：内心烦恼</li>
+            </ul>
+          </li>
+          <li>展现角色魅力，遵循统一行动准则</li>
+        </ul>
+      </li>
+      <li>角色设定
+        <ul>
+          <li>设定表：名字，年龄，职业，相貌，头发，体格，服装，性格，特技，弱点，口吻</li>
+        </ul>
+      </li>
+      <li>角色设定实例</li>
+    </ul>
+  </li>
+  <li>角色定位
+    <ul>
+      <li>角色的定位：分配立场，指导游戏中角色做什么</li>
+      <li>与游戏系统有直接关联的定位：主人公、待攻克角色、系统角色</li>
+      <li>与主人公对立的定位：敌人角色，难关角色，竞争者角色</li>
+      <li>与主人公同阵营的定位：情侣角色，伙伴角色，家人角色</li>
+      <li>让故事产生变化的定位：契机角色，救星角色，叛徒角色，贤者角色</li>
+      <li>补充和强化故事的定位：缓冲角色，深论角色，动物角色，闲杂角色</li>
+      <li>将角色和故事关联起来；角色元素关联到故事中</li>
+      <li>根据角色创作故事：从角色定位的角度梳理故事</li>
+    </ul>
+  </li>
+  <li>世界：
+    <ul>
+      <li>世界：世界观设定表</li>
+      <li>创建什么样的世界：规则与机制相结合</li>
+      <li>世界与角色、故事之间的关系：世界影响角色设定、故事发展</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="使用结构创造出更好的剧本">使用结构创造出更好的剧本</h3>
+
+<ul>
+  <li>结构的基础
+    <ul>
+      <li>什么是结构：规划整体结构，类比音乐的前奏和副歌</li>
+      <li>结构的种类：三幕式与分支</li>
+    </ul>
+  </li>
+  <li>结构的要素
+    <ul>
+      <li>开端：目的、玩法、介绍游戏</li>
+      <li>通往高潮的过程：四类章节：完成、推进、加深、额外</li>
+      <li>高潮：有趣的通向高潮</li>
+      <li>结局：产生的结果</li>
+    </ul>
+  </li>
+  <li>好结构和坏结构
+    <ul>
+      <li>为什么需要结构：更好的表达</li>
+      <li>要考虑听者的回应：通用过程：了解，疑问，代入，意外，期待，最高峰</li>
+      <li>实现高表现力的要点：传达目的，促进带入，挑起期待</li>
+    </ul>
+  </li>
+  <li>选项
+    <ul>
+      <li>选项：交互与局限</li>
+      <li>选项的种类：分类，故事发展、参数、无意义</li>
+      <li>选项与世界：选项增加代入感，不能破坏玩家热情</li>
+      <li>设计选项的要点：明确，有结果</li>
+      <li>选项出现的时机：发展中or结局</li>
+      <li>标志：FLAG</li>
+    </ul>
+  </li>
+  <li>让结构更有趣
+    <ul>
+      <li>在开端吸引玩家：受动、开拓</li>
+      <li>前置准备不能写成说明文：借由事件或者对话传达</li>
+      <li>场景序列：小场景单元单独序破急</li>
+      <li>其他技巧：支线、伏笔、谜团、预告、假动作、回想</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="巧妙的文本">巧妙的文本</h3>
+
+<ul>
+  <li>文本的基础
+    <ul>
+      <li>文本</li>
+      <li>台词：表达情感，说明情况，推进故事</li>
+      <li>旁白：阐述事实、表现心理或者情感、表现视觉物体上的东西、表现时间、推进故事</li>
+      <li>提示：指定背景、角色、时间、音乐、事件、分镜</li>
+    </ul>
+  </li>
+  <li>外观和台词
+    <ul>
+      <li>创作时顾及外观：文本观赏性，换行</li>
+      <li>台词的基本技巧：表情，情感，语境，言外之意</li>
+      <li>利用台词展示信息：比如时代，母语，年龄</li>
+      <li>写好台词的要点：反例：长，说明性，缺乏情感，措施：朗读</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="知识点面具体知识的细节展开">知识点面：具体知识的细节展开</h2>
+
+<ul>
+  <li>角色设定表</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>类别</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>名字</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>年龄</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>职业</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>相貌</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>头发</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>体格</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>服装</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>性格</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>特技</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>弱点</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>口吻</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>设定</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <p>角色定位划分</p>
+
+    <ul>
+      <li>与游戏系统有直接关联的定位：主人公、待攻克角色、系统角色</li>
+      <li>与主人公对立的定位：敌人角色，难关角色，竞争者角色</li>
+      <li>与主人公同阵营的定位：情侣角色，伙伴角色，家人角色</li>
+      <li>让故事产生变化的定位：契机角色，救星角色，叛徒角色，贤者角色</li>
+      <li>补充和强化故事的定位：缓冲角色，深论角色，动物角色，闲杂角色</li>
+    </ul>
+  </li>
+</ul>
+
+<p>具体就不展开了惹。</p>
+
+<ul>
+  <li>世界观设计表</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>类别</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>时间</td>
+      <td>时代、公历、特征</td>
+    </tr>
+    <tr>
+      <td>地点</td>
+      <td>舞台、国家、地区、特征</td>
+    </tr>
+    <tr>
+      <td>世界状态</td>
+      <td>战争？为什么？存在国家？国家总数、主要国家、宗教、民族</td>
+    </tr>
+    <tr>
+      <td>社会系统</td>
+      <td>政治体制、政治形势、经济体制形势、货币、货币单位</td>
+    </tr>
+    <tr>
+      <td>家族制度</td>
+      <td>什么样、婚姻制度</td>
+    </tr>
+    <tr>
+      <td>人们生活</td>
+      <td>贫富差距、主食、一般民众</td>
+    </tr>
+    <tr>
+      <td>一般社会理念</td>
+      <td>理想人物、谁收到尊敬、禁忌</td>
+    </tr>
+    <tr>
+      <td>世界法则</td>
+      <td>什么样，关键词</td>
+    </tr>
+    <tr>
+      <td>语言</td>
+      <td>现状，发音</td>
+    </tr>
+    <tr>
+      <td>交通手段</td>
+      <td>主要，此外</td>
+    </tr>
+    <tr>
+      <td>通信手段</td>
+      <td>主要，此外</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>结构的优化案例</li>
+</ul>
+
+<p>目的，信息传达，技巧，结构优化。</p>
+
+<ul>
+  <li>写好台词的要点</li>
+</ul>
+
+<p>避免说明性，动作，短小，信息。</p>
+
+<h2 id="参考其他外部资料">参考：其他外部资料</h2>
+
+<ul>
+  <li><a href="https://www.ituring.com.cn/book/2400">图灵社区：游戏剧本怎么写</a></li>
+  <li><a href="https://mubu.com/doc/nv-qZ8RFg0">毛线团团：《游戏剧本怎么写》读书笔记</a></li>
+</ul>
+
+
+
+<pre class="post-content controls__inner git-log"><output>~: git log
+21 Sep 2021 - jskyzero - 🔥 remove {{site.img_url}}
+19 Aug 2021 - jskyzero - 🔀  change structure
+
+<img alt="Creative Commons License" src="/assets/img/cc.png" />
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre>
+
+
+<script src="/assets/js/main.js"></script>
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2019/11/22/how_to_write_game_plot.html';
+this.page.identifier = 'https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2019/11/22/how_to_write_game_plot.html';
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+    </main><footer>
+  <p>Enjoy :)</p>
+  <span>&copy; 2022 设计者笔记. All rights reserved.</span>
+</footer>
+</div>
+  </body>
+</html>

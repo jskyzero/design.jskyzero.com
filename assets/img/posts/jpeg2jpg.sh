@@ -1,1 +1,0 @@
-for x in *.jpeg; do mv "$x" "${x%.jpeg}.jpg"; done
