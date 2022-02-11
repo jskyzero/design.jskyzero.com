@@ -1,0 +1,43 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Jekyll
+
+on:
+  push:
+    branches: [ jekyll ]
+  pull_request:
+    branches: [ jekyll ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    # strategy:
+    #   matrix:
+    #     # node-version: [10.x, 12.x, 14.x]
+    #     node-version: [10.21.0]
+
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: jekyll
+        fetch-depth: 0
+    - name: Run with dest path
+      uses: helaili/jekyll-action@2.2.0
+      with:
+        jekyll_build_options: --future
+        target_branch: gh-pages
+        keep_history: true
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Executing remote command
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.SSHKEY }}
+        script: cd ${{ secrets.PROJECT_PATH }} && git pull
