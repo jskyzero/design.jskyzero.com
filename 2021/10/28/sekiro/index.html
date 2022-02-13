@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>《只狼》内容设计分析 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="《只狼》内容设计分析" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="向死而生！一款节奏防御、鼓励压制、强对策校验的动作冒险游戏。" />
+<meta property="og:description" content="向死而生！一款节奏防御、鼓励压制、强对策校验的动作冒险游戏。" />
+<link rel="canonical" href="https://design.jskyzero.com/2021/10/28/sekiro/" />
+<meta property="og:url" content="https://design.jskyzero.com/2021/10/28/sekiro/" />
+<meta property="og:site_name" content="设计者笔记" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="《只狼》内容设计分析" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-10-28T00:00:00+00:00","datePublished":"2021-10-28T00:00:00+00:00","description":"向死而生！一款节奏防御、鼓励压制、强对策校验的动作冒险游戏。","headline":"《只狼》内容设计分析","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2021/10/28/sekiro/"},"url":"https://design.jskyzero.com/2021/10/28/sekiro/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main.css"></head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul><li><a href="/">/</a></li><li><a href="/program/">/Program</a></li><li><a href="/github/">/Github</a></li><li><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main>
+      <div id="index">
+  <ul class="md-toc">
+  <li class="md-toc-h1"><a href="#只狼影逝二度--sekiro-shadows-die-twice">只狼：影逝二度 / Sekiro: Shadows Die Twice</a>
+    <ul>
+      <li class="md-toc-h2"><a href="#分析概述">分析概述</a></li>
+      <li class="md-toc-h2"><a href="#宏观分析">宏观分析</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#游戏简介卡">游戏简介卡</a></li>
+          <li class="md-toc-h3"><a href="#拆解结构图">拆解结构图</a></li>
+          <li class="md-toc-h3"><a href="#理论分析透镜">理论分析透镜</a></li>
+          <li class="md-toc-h3"><a href="#3c镜头对比">3C镜头对比</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#具象分析">具象分析</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#系统流转">系统流转</a></li>
+          <li class="md-toc-h3"><a href="#叙事节奏">叙事节奏</a></li>
+          <li class="md-toc-h3"><a href="#体验蓝图">体验蓝图</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#动作分析">动作分析</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#主角">主角</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  
+
+<p id="pro">
+  
+  <!-- <div class="categories"> -->
+    
+    
+    <img src="https://img.shields.io/badge/体验蓝图-blue.svg?style=flat" alt="">
+    <!--  -->
+    
+  <!-- </div> -->
+  
+  <img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="">
+  <img src="https://img.shields.io/badge/日期-2021/10/28-brightgreen.svg?style=flat" alt="">
+</p>
+
+
+
+</div>
+
+<p>向死而生！一款节奏防御、鼓励压制、强对策校验的动作冒险游戏。</p>
+
+<!--more-->
+
+<h1 id="只狼影逝二度--sekiro-shadows-die-twice">只狼：影逝二度 / Sekiro: Shadows Die Twice</h1>
+
+<p><img src="/assets/img/gameplay/sekiro/1.jpg" alt="" /></p>
+
+<p>副标题写的内容并不存在（有机会可能再补充）。</p>
+
+<h2 id="分析概述">分析概述</h2>
+
+<p><img src="/assets/img/gameplay/sekiro/2.jpg" alt="" /></p>
+
+<p>理由写了很多，做的很少。</p>
+
+<p><img src="/assets/img/gameplay/sekiro/3.jpg" alt="" /></p>
+
+<p>费尽心思找了6个logo。</p>
+
+<h2 id="宏观分析">宏观分析</h2>
+
+<h3 id="游戏简介卡">游戏简介卡</h3>
+<p><img src="/assets/img/gameplay/sekiro/4.jpg" alt="" /></p>
+
+<h3 id="拆解结构图">拆解结构图</h3>
+<p><img src="/assets/img/gameplay/sekiro/5.jpg" alt="" /></p>
+
+<h3 id="理论分析透镜">理论分析透镜</h3>
+<p><img src="/assets/img/gameplay/sekiro/6.jpg" alt="" /></p>
+
+<h3 id="3c镜头对比">3C镜头对比</h3>
+<p><img src="/assets/img/gameplay/sekiro/7.jpg" alt="" /></p>
+
+<h2 id="具象分析">具象分析</h2>
+
+<h3 id="系统流转">系统流转</h3>
+<p><img src="/assets/img/gameplay/sekiro/8.jpg" alt="" /></p>
+
+<h3 id="叙事节奏">叙事节奏</h3>
+<p><img src="/assets/img/gameplay/sekiro/9.jpg" alt="" /></p>
+
+<p>基本就是抄了别人的，有缘再改吧。</p>
+
+<h3 id="体验蓝图">体验蓝图</h3>
+<p><img src="/assets/img/gameplay/sekiro/10.jpg" alt="" /></p>
+
+<p>其余地图分析亦可以参考参考文章。</p>
+
+<h2 id="动作分析">动作分析</h2>
+
+<h3 id="主角">主角</h3>
+
+<p>描述均为60帧每秒，内容为PR逐帧分析，未严格测试。</p>
+
+<p><img src="https://i.imgur.com/EVR0LtW.gif" alt="不死斩.gif" /></p>
+
+<p><img src="/assets/img/gameplay/sekiro/11.jpg" alt="" /></p>
+
+<p><img src="https://i.imgur.com/NJ0rtq7.gif" alt="飞渡浮舟.gif" /></p>
+
+<p><img src="/assets/img/gameplay/sekiro/12.jpg" alt="" /></p>
+
+<p>后面懒得看了，暂时结束。</p>
+
+<p><img src="https://i.imgur.com/vb6WBHg.gif" alt="普通攻击.gif" /></p>
+
+<!-- + 10帧进入蓄力前戳pose
++ 10帧抬手到最高，再3帧后砍下
++ 10帧攻击
++ …… -->
+
+<p><img src="https://i.imgur.com/ci5Aqo5.gif" alt="旋风斩.gif" /></p>
+
+<p><img src="https://i.imgur.com/WjsQ4rz.gif" alt="寄鹰斩.gif" /></p>
+
+<p><img src="https://i.imgur.com/s5c6nFu.gif" alt="一字斩.gif" /></p>
+
+<p><img src="https://i.imgur.com/Y1XAmqb.gif" alt="叩拜连击拳.gif" /></p>
+
+<p><img src="https://i.imgur.com/KyMfBnE.gif" alt="忍伞.gif" /></p>
+
+<p><img src="https://i.imgur.com/nZhOjSY.gif" alt="巨型忍者突刺.gif" /></p>
+
+<p><img src="https://i.imgur.com/VL1GocN.gif" alt="密传龙闪.gif" /></p>
+
+<!-- <style>video {
+    width: 100%;
+    margin: 20 0;
+}</style>
+
+<video controls>
+  <source src="/assets/img/gameplay/sekiro/不死斩.mp4" type="video/mp4">
+</video> -->
+
+
+
+
+<pre class="post-content controls__inner git-log"><output>~: git log
+18 Nov 2021 - jskyzero - 📝 finish sekiro
+29 Oct 2021 - jskyzero - 📝 begin action part
+28 Oct 2021 - jskyzero - 🎨 change to i.imgur.com
+28 Oct 2021 - jskyzero - ✨ test i.ibb.co
+28 Oct 2021 - jskyzero - ✨ add video & roll back
+28 Oct 2021 - jskyzero - 😁 add some description
+27 Oct 2021 - jskyzero - 📝 add 《只狼》内容设计分析
+
+<img alt="Creative Commons License" src="/assets/img/CC.png" />
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre>
+
+
+<script src="/assets/js/main.js"></script>
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2021/10/28/sekiro/';
+this.page.identifier = 'https://design.jskyzero.com/2021/10/28/sekiro/';
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+    </main><footer>
+  <p>Enjoy :)</p>
+  <span>&copy; 2022 设计者笔记. All rights reserved.</span>
+</footer>
+</div>
+  </body>
+</html>

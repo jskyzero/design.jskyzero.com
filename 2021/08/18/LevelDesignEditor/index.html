@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>好的编辑器的若干特性 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="好的编辑器的若干特性" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="游戏开发中的编辑器，应当具备些什么特性才能更好地为游戏设计师们赋能？让想法表达、工业化、创作作品更为容易。" />
+<meta property="og:description" content="游戏开发中的编辑器，应当具备些什么特性才能更好地为游戏设计师们赋能？让想法表达、工业化、创作作品更为容易。" />
+<link rel="canonical" href="https://design.jskyzero.com/2021/08/18/LevelDesignEditor/" />
+<meta property="og:url" content="https://design.jskyzero.com/2021/08/18/LevelDesignEditor/" />
+<meta property="og:site_name" content="设计者笔记" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-08-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="好的编辑器的若干特性" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-08-18T00:00:00+00:00","datePublished":"2021-08-18T00:00:00+00:00","description":"游戏开发中的编辑器，应当具备些什么特性才能更好地为游戏设计师们赋能？让想法表达、工业化、创作作品更为容易。","headline":"好的编辑器的若干特性","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2021/08/18/LevelDesignEditor/"},"url":"https://design.jskyzero.com/2021/08/18/LevelDesignEditor/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main.css"></head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul><li><a href="/">/</a></li><li><a href="/program/">/Program</a></li><li><a href="/github/">/Github</a></li><li><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main>
+      <div id="index">
+  <ul class="md-toc">
+  <li class="md-toc-h1"><a href="#好的编辑器的若干特性">好的编辑器的若干特性</a>
+    <ul>
+      <li class="md-toc-h2"><a href="#工具的必要性">工具的必要性</a></li>
+      <li class="md-toc-h2"><a href="#评价的维度">评价的维度</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#设计的角度">设计的角度</a></li>
+          <li class="md-toc-h3"><a href="#需求的角度">需求的角度</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#好的若干特性">好的若干特性</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#用户侧使用成本低">用户侧：使用成本低</a></li>
+          <li class="md-toc-h3"><a href="#设计侧表达能力强">设计侧：表达能力强</a></li>
+          <li class="md-toc-h3"><a href="#实现侧设计优雅">实现侧：设计优雅</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#总结为游戏开发赋能">总结：为游戏开发赋能</a></li>
+    </ul>
+  </li>
+</ul>
+  
+
+<p id="pro">
+  
+  <!-- <div class="categories"> -->
+    
+    
+    <img src="https://img.shields.io/badge/游戏开发-blue.svg?style=flat" alt="">
+    <!--  -->
+    
+  <!-- </div> -->
+  
+  <img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="">
+  <img src="https://img.shields.io/badge/日期-2021/08/18-brightgreen.svg?style=flat" alt="">
+</p>
+
+
+
+</div>
+
+<p>游戏开发中的编辑器，应当具备些什么特性才能更好地为游戏设计师们赋能？让想法表达、工业化、创作作品更为容易。</p>
+
+<!--more-->
+
+<h1 id="好的编辑器的若干特性">好的编辑器的若干特性</h1>
+<p><code class="language-plaintext highlighter-rouge">jskyzero</code> <code class="language-plaintext highlighter-rouge">2021/05/25</code></p>
+
+<h2 id="工具的必要性">工具的必要性</h2>
+
+<blockquote>
+  <p>设计师们设计内容，并借用工具表达设计，输出最终的产物。</p>
+</blockquote>
+
+<p>通常来看，从业者们会需要一个专业的工具或者软件，用来将想法转变为专业的产物，对于原画师，可能是绘图软件；对于作家，可能是纸笔或者写作软件；对于策划，则可能是EXCEL或者特异性的编辑器。从这个角度理解起来，工具的实用性能很大程度上改善工作的效率，“工欲善其事必先利其器”，而特异性的需求和其编辑器，就像DSL（领域特定语言）和其对应的编辑工具。</p>
+
+<p>对应起来，一个很基础的关于编辑器的问题是：为什么不直接写代码？而要去折腾一个新的编辑器和对应组织数据结构，这个问题暗示使用C#作为逻辑的描述语言：</p>
+
+<ul>
+  <li>借助UNITY引擎内部的MonoBehavior的“生命周期”逻辑，可以原生的访问所有接口。</li>
+  <li>C#作为一门面向对象的高级编程语言的表达能力、架构能力。</li>
+  <li>使用编程语言的调试灵活度。</li>
+</ul>
+
+<p>似乎直接使用原生语言，可以作为默认的、同时也是极其强大的解决方案。那么为什么我们需要一个领域特定语言来组织逻辑？</p>
+
+<p>很简单，为了聚焦解决问题。而不把精力浪费在掌握工具上，编程需要学习使用程序语言、不同的思考模式、以及大量的计算机科学知识，随着流程的工业化，会让专业的人来做专业的事情。<strong><u>对于设计师们，应当专注于设计，工具的表达应该最大化为了设计服务。</u></strong></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js"></script>
+<div class="mermaid">
+graph LR;
+    A[设计的表达] --&gt;|途径| B(编写逻辑代码);
+    B --&gt;|需求| B1(编程技能);
+    B --&gt;|需求| C1(设计能力);
+    A --&gt;|途径| C(使用编辑器);
+    C --&gt;|需求| C1;
+</div>
+
+<h2 id="评价的维度">评价的维度</h2>
+
+<p>如何评价一个编辑器是否好用？好或者坏，是一个主观的印象。类比其他软件产品，也许我们可以使用抽样调查、用户深度访谈、用户画像分析等手法。这里我们主要讨论两个思考角度：</p>
+
+<h3 id="设计的角度">设计的角度</h3>
+
+<p>《设计心理学》中提到，好的设计有两个特征：</p>
+
+<ul>
+  <li>可视性（discoverability）
+    <ul>
+      <li>操作可传达，<strong><u>可被用户发现。</u></strong></li>
+    </ul>
+  </li>
+  <li>易通性（understanding）
+    <ul>
+      <li>操作可理解，<strong><u>可让用户明白。</u></strong></li>
+    </ul>
+  </li>
+</ul>
+
+<p>后续又提到了六个原则：</p>
+
+<ul>
+  <li>示能
+    <ul>
+      <li>物品的特性与决定物品预设用途的主体之间能力之间的关系</li>
+      <li>比如：（批处理）脚本可以批量执行一系列指令；一个编辑器可以用来编辑存储特定数据。</li>
+    </ul>
+  </li>
+  <li>意符
+    <ul>
+      <li>告诉用户可以采取什么行为、如何操作。</li>
+      <li>比如：常规按钮是可以按下的，点击就行；开关按钮是有开关两个状态的，一般需要点击开关而不是文字；进度条按钮是一个可以拖动，有上下限的控件。</li>
+    </ul>
+  </li>
+  <li>约束
+    <ul>
+      <li>提示用户操作的范围</li>
+      <li>比如：数值类型的有效范围；枚举类型的可能选项；进度条按钮的最大值最小值。</li>
+    </ul>
+  </li>
+  <li>映射
+    <ul>
+      <li>控制和显示 <strong><u>契合自然映射</u></strong>，设备容易使用。</li>
+      <li>比如：拖动某个元素，运动应该与鼠标轨迹同向；自然卷动时，更像反向拖动页面来使视窗内显示合适的内容。</li>
+    </ul>
+  </li>
+  <li>反馈
+    <ul>
+      <li>沟通行为的结果。必须是即时的</li>
+      <li>比如：一个行为的响应应该尽可能地快，否则会给人无响应的印象；linux的哲学中曾有：没有消息就是最好的消息，但是没有消息本身一种反馈。</li>
+    </ul>
+  </li>
+  <li>系统的概念模型
+    <ul>
+      <li>高度简化的流程，告诉用户事物如何工作</li>
+      <li>比如：一个流程处理能告知用户先后经过什么阶段……</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/assets/img/skill/editor/1.jpg" alt="" /></p>
+
+<blockquote>
+  <p>图示：UWP UI中，差异化的按钮控件。观察不同的按钮会让用户采取不同的交互策略。</p>
+</blockquote>
+
+<p>总结来说：我们可以思考编辑器：</p>
+
+<ul>
+  <li>交互
+    <ul>
+      <li>交互的方式是否可被理解，</li>
+      <li>交互的候选范围、选项对应含义是否明晰。</li>
+      <li>交互是否即时有反馈</li>
+    </ul>
+  </li>
+  <li>系统的概念模型是否易懂</li>
+</ul>
+
+<h3 id="需求的角度">需求的角度</h3>
+
+<p>我们引入软件生命周期和主要参与人员的诉求来分析这个问题：</p>
+
+<p>软件生命周期：</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js"></script>
+<div class="mermaid">
+graph LR;
+    A[分析阶段] --&gt;|明确需求| B[设计阶段];
+    B --&gt;|模块接口设计| C[实现阶段];
+    C --&gt;|程式代码| D[测试阶段];
+    D --&gt;|修正| E[维护阶段];
+</div>
+
+<p>主要参与人员参与阶段：</p>
+
+<ul>
+  <li>编辑器设计师：分析阶段，设计阶段，维护阶段
+    <ul>
+      <li>诉求：编辑器功能逻辑明晰，UI交互合理……</li>
+    </ul>
+  </li>
+  <li>编辑器实现程序员：设计阶段，实现阶段，测试阶段，维护阶段
+    <ul>
+      <li>诉求：需求稳定，逻辑实现优雅，UI控件可以复用……</li>
+    </ul>
+  </li>
+  <li>编辑器使用用户：维护阶段
+    <ul>
+      <li>诉求：编辑器易学易用……</li>
+    </ul>
+  </li>
+</ul>
+
+<p>总结来说：我们可以认为编辑器在不同生命周期、对于参与使用的全部人员都应该带来良好的实现或者使用体验。</p>
+
+<h2 id="好的若干特性">好的若干特性</h2>
+
+<p>结合上述分析策略，我们给出如下评价关键词：</p>
+
+<h3 id="用户侧使用成本低">用户侧：使用成本低</h3>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js"></script>
+<div class="mermaid">
+graph TD;
+    E[使用成本低];
+    E --&gt;E2[易学习];
+    E --&gt;E1[可读性];
+    E --&gt;E0[可复用];
+    E --&gt;E4[易修改];
+    E --&gt;E3[调试容易];
+</div>
+
+<ul>
+  <li>易学习
+    <ul>
+      <li>行为模型易懂：例如使用状态机、树或图等图形手法来使得逻辑结构更容易理解。</li>
+      <li>工作流程通畅：从编辑器入口、编辑器使用、保存提交、验证等完整流程顺利。</li>
+      <li>具体行为的参数种类、候选范围、对应行为，是自解释的，或者有参考可看。</li>
+    </ul>
+  </li>
+  <li>可读性
+    <ul>
+      <li>合理使用图标、颜色等其他UI设计增强可读性。</li>
+      <li>信息的详略得当：比如适当的在一级菜单中显示子脚本内容。</li>
+    </ul>
+  </li>
+  <li>可复用
+    <ul>
+      <li>逻辑的复用简单：比如简单的拷贝、或者支持使用模板化等</li>
+    </ul>
+  </li>
+  <li>易修改
+    <ul>
+      <li>支持批量修改：提交编辑修改销量。</li>
+    </ul>
+  </li>
+  <li>调试容易
+    <ul>
+      <li>出现问题定位简单：比如有错误检查工具、报错提示导向问题等。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="设计侧表达能力强">设计侧：表达能力强</h3>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js"></script>
+<div class="mermaid">
+graph TD;
+    D[表达能力强];
+    D --&gt;D1["基础行为丰富"];
+    D --&gt;D2["行为组合自由"];
+    D --&gt;D3["支持使用变量"];
+    D --&gt;D4["逻辑条件完备"];
+</div>
+
+<ul>
+  <li>基础行为丰富
+    <ul>
+      <li>在需要解决的问题上，覆盖各个需要的场景。</li>
+    </ul>
+  </li>
+  <li>行为组合自由
+    <ul>
+      <li>可以方便的将行为之间进行组合：比如常见的顺序、延时模型等。</li>
+    </ul>
+  </li>
+  <li>支持使用变量
+    <ul>
+      <li>可以使用Flag等来进行更复杂的情况的映射。</li>
+    </ul>
+  </li>
+  <li>逻辑条件完备
+    <ul>
+      <li>支持与或非等逻辑操作。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="实现侧设计优雅">实现侧：设计优雅</h3>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js"></script>
+<div class="mermaid">
+graph TD;
+    F[设计优雅];
+    F --&gt;F1[执行逻辑模型];
+    F --&gt;F2[脚本生命周期];
+    F --&gt;F3[架构设计哲学];
+</div>
+
+<ul>
+  <li>执行逻辑模型
+    <ul>
+      <li>执行逻辑符合直觉，简单易懂。</li>
+    </ul>
+  </li>
+  <li>脚本生命周期
+    <ul>
+      <li>脚本使用与销毁自然，不需要额外管理代价。</li>
+    </ul>
+  </li>
+  <li>架构设计哲学
+    <ul>
+      <li>设计哲学先进。</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="总结为游戏开发赋能">总结：为游戏开发赋能</h2>
+
+<p>我一直相信，科学与逻辑的力量是强大的，希望编辑器可以引起游戏开发者的重视，用设计优秀、逻辑表达能力强、使用简单高效的编辑器，来使得游戏开发的过程更为高效，更好地表达出想法，制作出优秀的游戏。</p>
+
+
+
+<pre class="post-content controls__inner git-log"><output>~: git log
+10 Feb 2022 - jskyzero - ✨ change categories
+21 Sep 2021 - jskyzero - ✨ add pro tag
+21 Sep 2021 - jskyzero - 🔥 remove {{site.img_url}}
+19 Aug 2021 - jskyzero - update tags
+19 Aug 2021 - jskyzero - update 好的编辑器的若干特性
+19 Aug 2021 - jskyzero - ✨ update tags
+19 Aug 2021 - jskyzero - 🔀  change structure
+
+<img alt="Creative Commons License" src="/assets/img/CC.png" />
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre>
+
+
+<script src="/assets/js/main.js"></script>
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2021/08/18/LevelDesignEditor/';
+this.page.identifier = 'https://design.jskyzero.com/2021/08/18/LevelDesignEditor/';
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+    </main><footer>
+  <p>Enjoy :)</p>
+  <span>&copy; 2022 设计者笔记. All rights reserved.</span>
+</footer>
+</div>
+  </body>
+</html>

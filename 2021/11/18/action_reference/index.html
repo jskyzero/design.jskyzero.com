@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>动作参考索引 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="动作参考索引" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="本文汇总ACT、ARPG、FTG、甚至于MOBA等类型游戏中出现的“动作”，用于设计时快速参考查询。" />
+<meta property="og:description" content="本文汇总ACT、ARPG、FTG、甚至于MOBA等类型游戏中出现的“动作”，用于设计时快速参考查询。" />
+<link rel="canonical" href="https://design.jskyzero.com/2021/11/18/action_reference/" />
+<meta property="og:url" content="https://design.jskyzero.com/2021/11/18/action_reference/" />
+<meta property="og:site_name" content="设计者笔记" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="动作参考索引" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-11-18T00:00:00+00:00","datePublished":"2021-11-18T00:00:00+00:00","description":"本文汇总ACT、ARPG、FTG、甚至于MOBA等类型游戏中出现的“动作”，用于设计时快速参考查询。","headline":"动作参考索引","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2021/11/18/action_reference/"},"url":"https://design.jskyzero.com/2021/11/18/action_reference/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main.css"></head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul><li><a href="/">/</a></li><li><a href="/program/">/Program</a></li><li><a href="/github/">/Github</a></li><li><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main>
+      <div id="index">
+  <ul class="md-toc">
+  <li class="md-toc-h1"><a href="#动作设计参考">动作设计参考</a>
+    <ul>
+      <li class="md-toc-h2"><a href="#动作设计">动作设计</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#dnf">DNF</a></li>
+          <li class="md-toc-h3"><a href="#真三国无双">真三国无双</a></li>
+          <li class="md-toc-h3"><a href="#鬼泣">鬼泣</a></li>
+          <li class="md-toc-h3"><a href="#战神">战神</a></li>
+          <li class="md-toc-h3"><a href="#猎天使魔女">猎天使魔女</a></li>
+          <li class="md-toc-h3"><a href="#忍者龙剑传">忍者龙剑传</a></li>
+          <li class="md-toc-h3"><a href="#nioh">NIOH</a></li>
+          <li class="md-toc-h3"><a href="#怪物猎人">怪物猎人</a></li>
+          <li class="md-toc-h3"><a href="#黑暗之魂">黑暗之魂</a></li>
+          <li class="md-toc-h3"><a href="#其他">其他</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#格斗游戏">格斗游戏</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#街霸">街霸</a></li>
+          <li class="md-toc-h3"><a href="#拳皇">拳皇</a></li>
+          <li class="md-toc-h3"><a href="#罪恶装备">罪恶装备</a></li>
+          <li class="md-toc-h3"><a href="#苍翼">苍翼</a></li>
+          <li class="md-toc-h3"><a href="#真人快打">真人快打</a></li>
+          <li class="md-toc-h3"><a href="#铁拳">铁拳</a></li>
+          <li class="md-toc-h3"><a href="#侍魂">侍魂</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#手机游戏">手机游戏</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#崩坏3">崩坏3</a></li>
+          <li class="md-toc-h3"><a href="#战双">战双</a></li>
+          <li class="md-toc-h3"><a href="#原神">原神</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#moba游戏">MOBA游戏</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#dota2">DOTA2</a></li>
+          <li class="md-toc-h3"><a href="#lol">LOL</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  
+
+</div>
+
+<p>本文汇总ACT、ARPG、FTG、甚至于MOBA等类型游戏中出现的“动作”，用于设计时快速参考查询。</p>
+
+<!--more-->
+
+<p>编写目标：</p>
+
+<ol>
+  <li>分类和武器先补全，剩下的再议</li>
+</ol>
+
+<h1 id="动作设计参考">动作设计参考</h1>
+
+<h2 id="动作设计">动作设计</h2>
+
+<h3 id="dnf">DNF</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>上挑</td>
+      <td>从下往上挥剑，浮空敌人</td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑、暗</td>
+      <td>鬼斩</td>
+      <td>从上往下斩击，带有暗属性的拖尾。</td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑、防御</td>
+      <td>格挡</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>崩山击</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>十字斩</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>刀魂之卡赞</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>波动斩</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>突刺</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>月光斩</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼剑士</td>
+      <td>刀剑</td>
+      <td>银光落刃</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>阿修罗</td>
+      <td>刀剑、元素</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>狂战士</td>
+      <td>刀剑、血气</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼泣</td>
+      <td>刀剑、魂魄</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>剑魂</td>
+      <td>光剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>暗夜使者</td>
+      <td>匕首</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>死灵术士</td>
+      <td>权杖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>魔法师</td>
+      <td>法杖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>召唤师</td>
+      <td>法杖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>男格斗家</td>
+      <td>拳套</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>柔道</td>
+      <td>拳套</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>男魔法师</td>
+      <td>法杖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>圣职者</td>
+      <td>十字架</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>圣骑士</td>
+      <td>十字架</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>女圣骑士</td>
+      <td>十字架</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>缔造者</td>
+      <td>扫把</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>神枪手</td>
+      <td>手枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>枪剑士</td>
+      <td>枪剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>女鬼剑士</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>女格斗</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>守护者</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>黑暗骑士</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="真三国无双">真三国无双</h3>
+
+<h4 id="真三国无双5">真三国无双5</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>赵云</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>关羽</td>
+      <td>大刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>刘备</td>
+      <td>双手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>诸葛亮</td>
+      <td>羽扇</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>孙尚香</td>
+      <td>弓</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>周瑜</td>
+      <td>棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>陆逊</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>夏侯惇</td>
+      <td>大刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>曹操</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>吕布</td>
+      <td>方天画戟</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>貂蝉</td>
+      <td>长鞭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>戟（吕蒙、凌统、关平、曹仁、徐晃）</li>
+  <li>锤（黄盖、魏延、许褚、董卓）</li>
+  <li>枪（孙策、太史慈、马超、张郃）</li>
+  <li>剑（孙权、曹丕、袁绍）</li>
+  <li>刀（周泰、黄忠、夏侯渊）</li>
+  <li>弓（孙尚香、月英）</li>
+  <li>杖（庞统、张角）</li>
+  <li>鞭（貂蝉、甄宓）</li>
+</ul>
+
+<h4 id="真三国无双6">真三国无双6</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>蔡文姬</td>
+      <td>乐器</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>王元姬</td>
+      <td>飞镖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>钟会</td>
+      <td>飞剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="真三国无双7">真三国无双7</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>吕布</td>
+      <td>方天画戟</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="无双大蛇z">无双大蛇Z</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>达吕智</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>妲己</td>
+      <td>球</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="无双大蛇2u">无双大蛇2U</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>达吕智</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="勇者斗恶龙英雄集结">勇者斗恶龙：英雄集结</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>主角</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="鬼泣">鬼泣</h3>
+
+<h4 id="鬼泣4">鬼泣4</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>尼禄</td>
+      <td>剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>但丁</td>
+      <td>剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="鬼泣dmc">鬼泣DMC</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>但丁</td>
+      <td>剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>但丁</td>
+      <td>斧头</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>但丁</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>但丁</td>
+      <td>拳套</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="鬼泣5">鬼泣5</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>但丁</td>
+      <td>剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>但丁</td>
+      <td>双手大剑（摩托车）</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>尼禄</td>
+      <td>剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>尼禄</td>
+      <td>机械手</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>元素、召唤、暗</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="战神">战神</h3>
+
+<h4 id="战神3">战神3</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>奎托斯</td>
+      <td>链刃</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="新战神">新战神</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>奎托斯</td>
+      <td>手斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>奎托斯</td>
+      <td>链刃</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="猎天使魔女">猎天使魔女</h3>
+
+<h4 id="猎天使魔女1">猎天使魔女1</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>贝姐</td>
+      <td>手枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="猎天使魔女2">猎天使魔女2</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>贝姐</td>
+      <td>手枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="忍者龙剑传">忍者龙剑传</h3>
+
+<h4 id="忍者龙剑传1">忍者龙剑传1∑</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>龙</td>
+      <td>忍者刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="nioh">NIOH</h3>
+
+<h4 id="nioh1">NIOH1</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>威廉</td>
+      <td>刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>威廉</td>
+      <td>锁链</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>威廉</td>
+      <td>双刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>威廉</td>
+      <td>大太刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>威廉</td>
+      <td>旋棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>威廉</td>
+      <td>双手斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>威廉</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="nioh2">NIOH2</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>秀千代</td>
+      <td>刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>秀千代</td>
+      <td>大太刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>秀千代</td>
+      <td>双刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>秀千代</td>
+      <td>机关棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>秀千代</td>
+      <td>手甲</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>秀千代</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>秀千代</td>
+      <td>旋棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="怪物猎人">怪物猎人</h3>
+
+<h4 id="mhw">MHW</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>太刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>大剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>盾斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>斩斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>轻弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>重弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>双刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>操虫棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>锤子</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>狩猎笛</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>铳枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>弓箭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="mhwi">MHWI</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>太刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>大剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>盾斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>斩斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>轻弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>重弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>双刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>操虫棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>锤子</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>狩猎笛</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>铳枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>弓箭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="mhgu">MHGU</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>太刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>大剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>盾斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>斩斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>轻弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>重弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>双刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>操虫棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>锤子</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>狩猎笛</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>铳枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>弓箭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="mhr">MHR</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>太刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>大剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>盾斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>斩斧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>轻弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>重弩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>双刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>操虫棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>锤子</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>狩猎笛</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>铳枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>弓箭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="黑暗之魂">黑暗之魂</h3>
+
+<h4 id="黑暗之魂3">黑暗之魂3</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>灰烬</td>
+      <td>直剑、盾</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>灰烬</td>
+      <td>法杖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>灰烬</td>
+      <td>巨剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>灰烬</td>
+      <td>长戟</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>灰烬</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="血源">血源</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>斧子</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>手杖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猎人</td>
+      <td>狩猎刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="血源老猎人">血源：老猎人</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>刀-弓箭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="恶魔之魂">恶魔之魂</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>冒险者</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="只狼">只狼</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>狼</td>
+      <td>忍者刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>狼</td>
+      <td>忍具</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="其他">其他</h3>
+
+<h4 id="尼尔机械纪元">尼尔机械纪元</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2B</td>
+      <td>长剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2B</td>
+      <td>短剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="忍者神龟">忍者神龟</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>乌龟</td>
+      <td>双截棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>乌龟</td>
+      <td>三截棍</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>乌龟</td>
+      <td>双手短叉</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="变形金刚">变形金刚</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>擎天柱</td>
+      <td>拳脚</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="格斗游戏">格斗游戏</h2>
+
+<h3 id="街霸">街霸</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>隆</td>
+      <td>拳脚</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="拳皇">拳皇</h3>
+
+<h3 id="罪恶装备">罪恶装备</h3>
+
+<h3 id="苍翼">苍翼</h3>
+
+<h3 id="真人快打">真人快打</h3>
+
+<h3 id="铁拳">铁拳</h3>
+
+<h3 id="侍魂">侍魂</h3>
+
+<h2 id="手机游戏">手机游戏</h2>
+
+<h3 id="崩坏3">崩坏3</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>琪亚娜</td>
+      <td>双手枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>芽衣</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>布洛妮娅</td>
+      <td>重炮</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>德莉莎</td>
+      <td>十字架</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>姬子</td>
+      <td>大剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>卡莲</td>
+      <td>双手枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>八重樱</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>符华</td>
+      <td>拳套</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>丽塔</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>希儿</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>幽兰黛尔</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="战双">战双</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>露西亚</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="原神">原神</h3>
+
+<h2 id="moba游戏">MOBA游戏</h2>
+
+<h3 id="dota2">DOTA2</h3>
+
+<h3 id="lol">LOL</h3>
+
+
+
+
+<pre class="post-content controls__inner git-log"><output>~: git log
+21 Nov 2021 - jskyzero - 📝 update intro words
+20 Nov 2021 - jskyzero - 📝 update 分类和武器先补全，剩下的再议
+20 Nov 2021 - jskyzero - 📝 update target
+20 Nov 2021 - jskyzero - 🍱 update head img
+20 Nov 2021 - jskyzero - 📝 add more index
+19 Nov 2021 - jskyzero - 📝 add index
+19 Nov 2021 - jskyzero - 📝 🔥 add 动作设计参考 & remove useless file
+
+<img alt="Creative Commons License" src="/assets/img/CC.png" />
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre>
+
+
+<script src="/assets/js/main.js"></script>
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2021/11/18/action_reference/';
+this.page.identifier = 'https://design.jskyzero.com/2021/11/18/action_reference/';
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+    </main><footer>
+  <p>Enjoy :)</p>
+  <span>&copy; 2022 设计者笔记. All rights reserved.</span>
+</footer>
+</div>
+  </body>
+</html>

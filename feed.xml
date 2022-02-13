@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-02-12T05:14:53+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">PCG相关讨论</title><link href="https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2021/11/21/PCG.html" rel="alternate" type="text/html" title="PCG相关讨论" /><published>2021-11-21T00:00:00+00:00</published><updated>2021-11-21T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2021/11/21/PCG</id><content type="html" xml:base="https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2021/11/21/PCG.html"><![CDATA[<p>近些年由于玩家对新内容的不断需求，用于内容填充的PCG技术，经常出现在视野内，本文会就此进行一些讨论。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-02-13T15:35:11+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">PCG相关讨论</title><link href="https://design.jskyzero.com/2021/11/21/PCG/" rel="alternate" type="text/html" title="PCG相关讨论" /><published>2021-11-21T00:00:00+00:00</published><updated>2021-11-21T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/11/21/PCG</id><content type="html" xml:base="https://design.jskyzero.com/2021/11/21/PCG/"><![CDATA[<p>近些年由于玩家对新内容的不断需求，用于内容填充的PCG技术，经常出现在视野内，本文会就此进行一些讨论。</p>
 
 <!--more-->
 
@@ -102,7 +102,7 @@
 
 <p>以上，聚焦一下，PCG其实是一种强性价比相关的技术，很多时候只是代替人的手工，而对于内容的丰富度或者说随机性，使用时也需要有一定把握，究竟在MDA的哪个层级、频率有多高。</p>
 
-<p>在实际运用时候，我们需要分开看待PVP和PVE，PVE相对单纯，拆分单局参考上文的一些思路即可；对于PVP，我们则需要考虑变化是否要到规则这一层，一般来说是最好不要，尤其是格斗游戏这类本身游戏深度已经很深不需要再加强的游戏。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[近些年由于玩家对新内容的不断需求，用于内容填充的PCG技术，经常出现在视野内，本文会就此进行一些讨论。]]></summary></entry><entry><title type="html">《MHWI》内容设计分析</title><link href="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/11/20/mhwi.html" rel="alternate" type="text/html" title="《MHWI》内容设计分析" /><published>2021-11-20T00:00:00+00:00</published><updated>2021-11-20T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/11/20/mhwi</id><content type="html" xml:base="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/11/20/mhwi.html"><![CDATA[<p>体系化拆解《怪物猎人 世界：冰原》，并从中学习。</p>
+<p>在实际运用时候，我们需要分开看待PVP和PVE，PVE相对单纯，拆分单局参考上文的一些思路即可；对于PVP，我们则需要考虑变化是否要到规则这一层，一般来说是最好不要，尤其是格斗游戏这类本身游戏深度已经很深不需要再加强的游戏。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[近些年由于玩家对新内容的不断需求，用于内容填充的PCG技术，经常出现在视野内，本文会就此进行一些讨论。]]></summary></entry><entry><title type="html">《MHWI》内容设计分析</title><link href="https://design.jskyzero.com/2021/11/20/mhwi/" rel="alternate" type="text/html" title="《MHWI》内容设计分析" /><published>2021-11-20T00:00:00+00:00</published><updated>2021-11-20T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/11/20/mhwi</id><content type="html" xml:base="https://design.jskyzero.com/2021/11/20/mhwi/"><![CDATA[<p>体系化拆解《怪物猎人 世界：冰原》，并从中学习。</p>
 
 <!--more-->
 
@@ -180,7 +180,7 @@
 
 <p><img src="/assets/img/gameplay/mhwi/37.jpg" alt="" /></p>
 
-<p><img src="/assets/img/gameplay/mhwi/38.jpg" alt="" /></p>]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[体系化拆解《怪物猎人 世界：冰原》，并从中学习。]]></summary></entry><entry><title type="html">动作参考索引</title><link href="https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/11/18/action_reference.html" rel="alternate" type="text/html" title="动作参考索引" /><published>2021-11-18T00:00:00+00:00</published><updated>2021-11-18T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/11/18/action_reference</id><content type="html" xml:base="https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/11/18/action_reference.html"><![CDATA[<p>本文汇总ACT、ARPG、FTG、甚至于MOBA等类型游戏中出现的“动作”，用于设计时快速参考查询。</p>
+<p><img src="/assets/img/gameplay/mhwi/38.jpg" alt="" /></p>]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[体系化拆解《怪物猎人 世界：冰原》，并从中学习。]]></summary></entry><entry><title type="html">动作参考索引</title><link href="https://design.jskyzero.com/2021/11/18/action_reference/" rel="alternate" type="text/html" title="动作参考索引" /><published>2021-11-18T00:00:00+00:00</published><updated>2021-11-18T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/11/18/action_reference</id><content type="html" xml:base="https://design.jskyzero.com/2021/11/18/action_reference/"><![CDATA[<p>本文汇总ACT、ARPG、FTG、甚至于MOBA等类型游戏中出现的“动作”，用于设计时快速参考查询。</p>
 
 <!--more-->
 
@@ -1733,7 +1733,7 @@
 
 <h3 id="dota2">DOTA2</h3>
 
-<h3 id="lol">LOL</h3>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总ACT、ARPG、FTG、甚至于MOBA等类型游戏中出现的“动作”，用于设计时快速参考查询。]]></summary></entry><entry><title type="html">《自制力》摘抄</title><link href="https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2021/11/14/possessiveness.html" rel="alternate" type="text/html" title="《自制力》摘抄" /><published>2021-11-14T00:00:00+00:00</published><updated>2021-11-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2021/11/14/possessiveness</id><content type="html" xml:base="https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2021/11/14/possessiveness.html"><![CDATA[<p>“我别无选择，因为我不能变得贫穷或者平凡，这不是我的风格！”本书教会你：如何控制你自己。</p>
+<h3 id="lol">LOL</h3>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总ACT、ARPG、FTG、甚至于MOBA等类型游戏中出现的“动作”，用于设计时快速参考查询。]]></summary></entry><entry><title type="html">《自制力》摘抄</title><link href="https://design.jskyzero.com/2021/11/14/possessiveness/" rel="alternate" type="text/html" title="《自制力》摘抄" /><published>2021-11-14T00:00:00+00:00</published><updated>2021-11-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/11/14/possessiveness</id><content type="html" xml:base="https://design.jskyzero.com/2021/11/14/possessiveness/"><![CDATA[<p>“我别无选择，因为我不能变得贫穷或者平凡，这不是我的风格！”本书教会你：如何控制你自己。</p>
 
 <!--more-->
 
@@ -2046,7 +2046,7 @@
   <li>在本质上，成就感又来源于人与人之间的竞争意识。</li>
 </ul>
 
-<p>简短的对阅读体验的评价：我认为这本书在我心目中的地位可以和《代码补全》并列，如果要给人推荐书籍，我会推荐这两本。</p>]]></content><author><name></name></author><category term="读书报告" /><summary type="html"><![CDATA[“我别无选择，因为我不能变得贫穷或者平凡，这不是我的风格！”本书教会你：如何控制你自己。]]></summary></entry><entry><title type="html">《只狼》内容设计分析</title><link href="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/10/28/sekiro.html" rel="alternate" type="text/html" title="《只狼》内容设计分析" /><published>2021-10-28T00:00:00+00:00</published><updated>2021-10-28T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/10/28/sekiro</id><content type="html" xml:base="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/10/28/sekiro.html"><![CDATA[<p>向死而生！一款节奏防御、鼓励压制、强对策校验的动作冒险游戏。</p>
+<p>简短的对阅读体验的评价：我认为这本书在我心目中的地位可以和《代码补全》并列，如果要给人推荐书籍，我会推荐这两本。</p>]]></content><author><name></name></author><category term="读书报告" /><summary type="html"><![CDATA[“我别无选择，因为我不能变得贫穷或者平凡，这不是我的风格！”本书教会你：如何控制你自己。]]></summary></entry><entry><title type="html">《只狼》内容设计分析</title><link href="https://design.jskyzero.com/2021/10/28/sekiro/" rel="alternate" type="text/html" title="《只狼》内容设计分析" /><published>2021-10-28T00:00:00+00:00</published><updated>2021-10-28T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/10/28/sekiro</id><content type="html" xml:base="https://design.jskyzero.com/2021/10/28/sekiro/"><![CDATA[<p>向死而生！一款节奏防御、鼓励压制、强对策校验的动作冒险游戏。</p>
 
 <!--more-->
 
@@ -2139,7 +2139,7 @@
 
 <video controls>
   <source src="/assets/img/gameplay/sekiro/不死斩.mp4" type="video/mp4">
-</video> -->]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[向死而生！一款节奏防御、鼓励压制、强对策校验的动作冒险游戏。]]></summary></entry><entry><title type="html">《风来之国》内容设计分析</title><link href="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/09/21/eastward.html" rel="alternate" type="text/html" title="《风来之国》内容设计分析" /><published>2021-09-21T00:00:00+00:00</published><updated>2021-09-21T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/09/21/eastward</id><content type="html" xml:base="https://design.jskyzero.com/%E4%BD%93%E9%AA%8C%E8%93%9D%E5%9B%BE/2021/09/21/eastward.html"><![CDATA[<p>本年度最佳游戏！满足了我对RPG的一切幻想。本文接下来将对游戏的进行一些内容设计向的分析。</p>
+</video> -->]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[向死而生！一款节奏防御、鼓励压制、强对策校验的动作冒险游戏。]]></summary></entry><entry><title type="html">《风来之国》内容设计分析</title><link href="https://design.jskyzero.com/2021/09/21/eastward/" rel="alternate" type="text/html" title="《风来之国》内容设计分析" /><published>2021-09-21T00:00:00+00:00</published><updated>2021-09-21T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/09/21/eastward</id><content type="html" xml:base="https://design.jskyzero.com/2021/09/21/eastward/"><![CDATA[<p>本年度最佳游戏！满足了我对RPG的一切幻想。本文接下来将对游戏的进行一些内容设计向的分析。</p>
 
 <!--more-->
 
@@ -2432,7 +2432,7 @@
       <li><a href="https://www.bilibili.com/video/BV1xf4y1n79Z">https://www.bilibili.com/video/BV1xf4y1n79Z</a></li>
     </ul>
   </li>
-</ul>]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[本年度最佳游戏！满足了我对RPG的一切幻想。本文接下来将对游戏的进行一些内容设计向的分析。]]></summary></entry><entry><title type="html">阅读记录</title><link href="https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/09/14/reading.html" rel="alternate" type="text/html" title="阅读记录" /><published>2021-09-14T00:00:00+00:00</published><updated>2021-09-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/09/14/reading</id><content type="html" xml:base="https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/09/14/reading.html"><![CDATA[<p>本文汇总一些摘抄记录、看到的有意思的对人生有启迪的话、一些网络上看到的言论。</p>
+</ul>]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[本年度最佳游戏！满足了我对RPG的一切幻想。本文接下来将对游戏的进行一些内容设计向的分析。]]></summary></entry><entry><title type="html">阅读记录</title><link href="https://design.jskyzero.com/2021/09/14/reading/" rel="alternate" type="text/html" title="阅读记录" /><published>2021-09-14T00:00:00+00:00</published><updated>2021-09-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/09/14/reading</id><content type="html" xml:base="https://design.jskyzero.com/2021/09/14/reading/"><![CDATA[<p>本文汇总一些摘抄记录、看到的有意思的对人生有启迪的话、一些网络上看到的言论。</p>
 
 <!--more-->
 
@@ -2708,7 +2708,7 @@
 
 <p>　　考完后走在回家的路上，看着依然匆匆的人群，心里依然空无着落。眼睛因为泪雾而模糊，视野里的东西却越发清晰。我相信是因为一切真实的感知都要以泪水和苦痛作为代价。</p>
 
-<p>　　事实上我怀念那段日子，并且永远感激它。不只是因为在那段时间里我完成了自己的过渡与兑变，更是因为那时的一切深深烙在了我正处于可塑期的性格中，成为这一生永远的财富。人生中再也不会有哪个时期像那时一样专一地，单纯地，坚决地，几近固执而又饱含信仰和希冀地，心无旁骛乃至与世隔绝地，为了一个认定的目标而奋斗。当你在若干年后某个悠闲的下午，回想起自己曾经的努力和放弃，曾经的坚忍和耐力，曾经的执著和付出，曾经的汗水和泪水，那会是怎样一种感动和庆幸，怎样一种欣慰和尊敬——尊敬你自己。是的，在这个过程中，请允许我重复一遍，最重要的是你自己。我感谢父母感谢老师感谢同学感谢朋友感谢所有关心我帮助我的人，但我最感谢的，是我自己。“没有不可能”这是我在一点一滴的努力与尝试中获得到的东西。而且我也相信，这也将会是使我终生受益的东西。</p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些摘抄记录、看到的有意思的对人生有启迪的话、一些网络上看到的言论。]]></summary></entry><entry><title type="html">问答总结</title><link href="https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/09/12/before_question.html" rel="alternate" type="text/html" title="问答总结" /><published>2021-09-12T00:00:00+00:00</published><updated>2021-09-12T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/09/12/before_question</id><content type="html" xml:base="https://design.jskyzero.com/%E6%9D%82%E8%B0%88/2021/09/12/before_question.html"><![CDATA[<p>本文用以记录自己犯过的一些错误，和回答过别人的一些问题。类似改错本的存在。</p>
+<p>　　事实上我怀念那段日子，并且永远感激它。不只是因为在那段时间里我完成了自己的过渡与兑变，更是因为那时的一切深深烙在了我正处于可塑期的性格中，成为这一生永远的财富。人生中再也不会有哪个时期像那时一样专一地，单纯地，坚决地，几近固执而又饱含信仰和希冀地，心无旁骛乃至与世隔绝地，为了一个认定的目标而奋斗。当你在若干年后某个悠闲的下午，回想起自己曾经的努力和放弃，曾经的坚忍和耐力，曾经的执著和付出，曾经的汗水和泪水，那会是怎样一种感动和庆幸，怎样一种欣慰和尊敬——尊敬你自己。是的，在这个过程中，请允许我重复一遍，最重要的是你自己。我感谢父母感谢老师感谢同学感谢朋友感谢所有关心我帮助我的人，但我最感谢的，是我自己。“没有不可能”这是我在一点一滴的努力与尝试中获得到的东西。而且我也相信，这也将会是使我终生受益的东西。</p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些摘抄记录、看到的有意思的对人生有启迪的话、一些网络上看到的言论。]]></summary></entry><entry><title type="html">问答总结</title><link href="https://design.jskyzero.com/2021/09/12/before_question/" rel="alternate" type="text/html" title="问答总结" /><published>2021-09-12T00:00:00+00:00</published><updated>2021-09-12T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/09/12/before_question</id><content type="html" xml:base="https://design.jskyzero.com/2021/09/12/before_question/"><![CDATA[<p>本文用以记录自己犯过的一些错误，和回答过别人的一些问题。类似改错本的存在。</p>
 
 <!--more-->
 
@@ -3217,7 +3217,7 @@
 
 <h2 id="着装搭配">着装搭配</h2>
 
-<p><img src="https://cdn.wimg.jp/coordinate/rke8s9/20181221101341434/20181221101341434_1000.jpg" alt="" /></p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文用以记录自己犯过的一些错误，和回答过别人的一些问题。类似改错本的存在。]]></summary></entry><entry><title type="html">用于AI的高级随机技术</title><link href="https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2021/09/09/RandomInGameAI.html" rel="alternate" type="text/html" title="用于AI的高级随机技术" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2021/09/09/RandomInGameAI</id><content type="html" xml:base="https://design.jskyzero.com/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/2021/09/09/RandomInGameAI.html"><![CDATA[<p>本文会深入讲解游戏AI的若干随机算法，并附带通俗易懂的例子，严谨的模拟试验，和技法实用运用指南。</p>
+<p><img src="https://cdn.wimg.jp/coordinate/rke8s9/20181221101341434/20181221101341434_1000.jpg" alt="" /></p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文用以记录自己犯过的一些错误，和回答过别人的一些问题。类似改错本的存在。]]></summary></entry><entry><title type="html">用于AI的高级随机技术</title><link href="https://design.jskyzero.com/2021/09/09/RandomInGameAI/" rel="alternate" type="text/html" title="用于AI的高级随机技术" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/09/09/RandomInGameAI</id><content type="html" xml:base="https://design.jskyzero.com/2021/09/09/RandomInGameAI/"><![CDATA[<p>本文会深入讲解游戏AI的若干随机算法，并附带通俗易懂的例子，严谨的模拟试验，和技法实用运用指南。</p>
 
 <!--more-->
 
@@ -3533,7 +3533,7 @@
 <ul>
   <li><a href="https://github.com/jskyzero/GameAI.Random/blob/master/GameAI.Random.ipynb">文中模拟试验的源码</a>，<a href="https://jskyzero.github.io/GameAI.Random/">网页版</a></li>
   <li><a href="http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter03_Advanced_Randomness_Techniques_for_Game_AI.pdf">Advanced Randomness Techniques for Game AI: Gaussian Randomness, Filtered Randomness, and Perlin Noise, Steve Rabin, Fernando Silva, Jay Goldblatt</a></li>
-</ul>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文会深入讲解游戏AI的若干随机算法，并附带通俗易懂的例子，严谨的模拟试验，和技法实用运用指南。]]></summary></entry><entry><title type="html">《人类政治文明发展史》总结</title><link href="https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2021/09/09/history-1.html" rel="alternate" type="text/html" title="《人类政治文明发展史》总结" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2021/09/09/history-1</id><content type="html" xml:base="https://design.jskyzero.com/%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/2021/09/09/history-1.html"><![CDATA[<p>一切事物都是发展并且互相联系的——辩证唯物主义。（又出自——人教版高中历史必修一）</p>
+</ul>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文会深入讲解游戏AI的若干随机算法，并附带通俗易懂的例子，严谨的模拟试验，和技法实用运用指南。]]></summary></entry><entry><title type="html">《人类政治文明发展史》总结</title><link href="https://design.jskyzero.com/2021/09/09/history-1/" rel="alternate" type="text/html" title="《人类政治文明发展史》总结" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/09/09/history-1</id><content type="html" xml:base="https://design.jskyzero.com/2021/09/09/history-1/"><![CDATA[<p>一切事物都是发展并且互相联系的——辩证唯物主义。（又出自——人教版高中历史必修一）</p>
 
 <!--more-->
 

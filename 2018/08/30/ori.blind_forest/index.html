@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>《奧日與黑暗森林》體驗報告 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="《奧日與黑暗森林》體驗報告" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="死了1800+次，不過還是堅持著玩下來。遊戲還是很棒的。" />
+<meta property="og:description" content="死了1800+次，不過還是堅持著玩下來。遊戲還是很棒的。" />
+<link rel="canonical" href="https://design.jskyzero.com/2018/08/30/ori.blind_forest/" />
+<meta property="og:url" content="https://design.jskyzero.com/2018/08/30/ori.blind_forest/" />
+<meta property="og:site_name" content="设计者笔记" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="《奧日與黑暗森林》體驗報告" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2018-08-30T00:00:00+00:00","datePublished":"2018-08-30T00:00:00+00:00","description":"死了1800+次，不過還是堅持著玩下來。遊戲還是很棒的。","headline":"《奧日與黑暗森林》體驗報告","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2018/08/30/ori.blind_forest/"},"url":"https://design.jskyzero.com/2018/08/30/ori.blind_forest/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main.css"></head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul><li><a href="/">/</a></li><li><a href="/program/">/Program</a></li><li><a href="/github/">/Github</a></li><li><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main>
+      <div id="index">
+  <ul class="md-toc">
+  <li class="md-toc-h1"><a href="#奧日與黑暗森林--ori-and-the-blind-forest">奧日與黑暗森林 / Ori and the Blind Forest</a>
+    <ul>
+      <li class="md-toc-h2"><a href="#簡介">簡介</a></li>
+      <li class="md-toc-h2"><a href="#流程">流程</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#動作設計">動作設計</a></li>
+          <li class="md-toc-h3"><a href="#關卡設計">關卡設計</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#後記">後記</a></li>
+    </ul>
+  </li>
+</ul>
+  
+
+</div>
+
+<p>死了1800+次，不過還是堅持著玩下來。遊戲還是很棒的。</p>
+
+<!--more-->
+
+<h1 id="奧日與黑暗森林--ori-and-the-blind-forest">奧日與黑暗森林 / Ori and the Blind Forest</h1>
+
+<h2 id="簡介">簡介</h2>
+
+<p>最開始是被畫面所吸引，隨即發現遊戲的整個藝術風格都很棒，也是自己喜歡的2D平面遊戲，很久之前開了個頭，被開頭的故事打動，但是因為卡關並沒有玩下去。</p>
+
+<p>直到之前的真空期，又撿起來玩了下，然後沉迷進去玩了幾天，一口氣通關。</p>
+
+<p>回頭來想，遊戲是很棒的遊戲，從畫面風格、劇情主旨、關卡設計、機制設計、音樂，等等方面來說都很棒，摘了段Steam的介紹，我覺得說的還是很中肯的。（不會說話的某人學著點）</p>
+
+<blockquote>
+  <p>「Ori and the Blind Forest」是 Moon Studios 為個人電腦量身訂做的動作平台遊戲。在這個充滿美麗視覺效果的遊戲中，訴說著一位勇敢小孤兒的冒險故事。遊戲充滿手繪的美術畫作、細緻生動的角色動畫表現，以及由交響樂團實際演奏的背景配樂。在「Ori and the Blind Forest」感情洋溢的故事內容中，將會探索愛與犧牲，以及人們內心那股永不消逝的希望。</p>
+
+  <p>摘自<em>Steam: Ori and the Blind Forest</em> 介紹</p>
+</blockquote>
+
+<h2 id="流程">流程</h2>
+
+<p>先說明一下，我玩的決定版，沒有漢化，以至於我根本不理解裡面的名詞字面上的含義，可能也只能就現在去臨時看下攻略網站中對這個的稱謂。</p>
+
+<p>大概是開場，然後一些相對簡單的冒險，到達某課樹后告知要去水、風、火三個地方，這三個部分都是先設法到達類似祭壇一類的地方，然後破解內部機關，然後最後一段逃生。決定版還有一個隱藏區域，有新的技能，內容也不少。</p>
+
+<p>劇情就不敘述了，上面也說過玩的是英文版，不能很好地理解每段台詞的意思，但是大概的意味和含義，即便不懂文字，通過場景、音樂、動作等方面也能傳達得到。</p>
+
+<h3 id="動作設計">動作設計</h3>
+
+<p>這裡打算重點說一下ORI的動作行為，尤其是關於反射。</p>
+
+<p>基礎上來說，ORI可以左右移動，下蹲，跳躍。跳躍最高可以點到三段跳，三段跳能夠提供一定的滯空時間，滯空還是不錯的，會使得各種操作單位的銜接變得更加“舒服”。在與墻壁的交互上，最開始時先是可以再墻壁上跳躍，但是經常要瘋狂按跳躍鍵，說實在的按得手都會有點酸。然後是可以自由在墻壁上停止與上下移動，這標誌著一定利用墻壁的、需要精準操作的設計的出現，然後就是蓄力跳躍，可以用來突破上方或者側面的障礙物，同時跳躍位移也較長。對了差點漏了滑翔，可以減緩下落速度，在有氣流的地方就可以沿氣流上升。另外還有決定版的衝刺和手雷，這裡就不展開講了。</p>
+
+<p>先說一下攻擊吧，遊戲中的攻擊是半自動，同時有一個消耗能量的蓄力範圍攻擊，總體上攻擊並不是重點。怪物和怪物的攻擊可以很輕鬆的使用反射——那麼我們來說下反射吧。</p>
+
+<p>反射這種操作之前在遊戲附贈的概念設計視屏中第一次見，但是沒想到在遊戲中實際玩到會是這種感覺，反射可以對物體、怪物、子彈使用，然後選擇反向彈射的角度，一方面可以把落腳物向反方向推：比如讓怪物、子彈去到需要的地方，另一方面可以推動自身移動，如果能夠接力的物體的密度和滯空時間足夠，可以在空中相當行雲流水的移動。甚至火山的解密，就是從底部上到頭，還有各種驚險的在死亡的陷阱中取得開門的石牌。體驗還是很刺激的。</p>
+
+<h3 id="關卡設計">關卡設計</h3>
+
+<p>從本質上來講，ORI仍然是平台跳躍遊戲，抽象來看的地圖就像一個個長方形通過轉角連接起來，值得一提的是雖然基本體驗單位都是跳躍移動，但是ORI玩起來不太會有重複的感覺。地圖中組合大量使用高低差，墻壁或者木板，尖刺或者怪物，結合上各個區域不同的畫面風格和音樂旋律，也確實不太容易讓人感到重複。</p>
+
+<p>關於戰鬥的部分之前動作部分有些許提及，這裡重點說一些關卡設計中新穎的點以及一些體驗上的感受。</p>
+
+<h4 id="新穎的關卡設計">新穎的關卡設計</h4>
+
+<p>從具體的行進路線上來講，基本上就是在長方形的空間中，直接的I型，不直接的各種S形。隨著主線推進不斷解鎖的新的能力，這些能力也為關卡的設計提供了一定的空間。</p>
+
+<p>最基本的ORI是只有移動和跳躍的，這時候的關卡也還比較基本和簡單，仍然沒有走出傳統的平面遊戲的框架，但是由於怪物上的分佈以及高傷害的機關，很容易就變成無限送命的情況，必須合理利用靈魂鏈接存檔，縮短操作困難、可能會死亡的部分的間隔。前期包括基本的移動，跳躍，拉推箱子——拉推箱子就已經開始有些不錯的設計，比如墊高腳底，阻擋激光射線等等。</p>
+
+<p>如果沒記錯的話，後期主線會解鎖的能力包括墻壁跳躍、二段跳、反彈、墻壁爬行，蓄力跳躍，會通過技能點點出三段跳。</p>
+
+<ul>
+  <li>墻壁跳躍給了跳躍更多緩衝的餘地，也是的更加難的平台跳躍的關卡的出現。</li>
+  <li>二段、三段跳增加了跳躍的舉例，高度上雖然沒有改變，但是也給跳躍失敗留下了緩衝的空間。</li>
+  <li>反彈差不多是遊戲的靈魂動作了，使得移動冒險可以非常之華麗，使用方法及其多樣。</li>
+  <li>墻壁爬行使得更多依靠墻壁的關卡的得以出現，同時使得與墻壁相關的關卡的難度可以上升。</li>
+  <li>蓄力跳躍使得玩家可以擊破上方的或者側面的墻壁，同時就位移距離來看也是相當優秀的。</li>
+</ul>
+
+<p>在像目標地移動的過程中，玩家經常會碰到需要解鎖的門，這需要玩家去收集石塊或者湊齊能量。同時因為因為經驗值足夠而升級可以獲得能力點用來增強能力，同時有著屬性點，在各種隱藏和難以到達的地點。</p>
+
+<p>上面也提過大概的關卡流程，具體在玩法上：</p>
+
+<ul>
+  <li>水
+    <ul>
+      <li>以樹木心臟、血管為包裝，可以從血管A端進入B端出現。</li>
+      <li>逃生關卡依賴反彈，可以解鎖潛水，開始水下探索。</li>
+    </ul>
+  </li>
+  <li>風
+    <ul>
+      <li>以古代廢墟為包裝，可以使用古代石塊改變重力在天花板上行走、冷卻火熱的墻壁。</li>
+      <li>逃生關卡依賴滑行，可以解鎖氣流，之前的很多地方可以利用上升氣流滑行。</li>
+    </ul>
+  </li>
+  <li>火
+    <ul>
+      <li>以火山、熔岩為包裝，可以逐步阻止洞穴內熔岩下流。</li>
+      <li>逃生關卡依賴之前全部能力，可以通關遊戲。</li>
+    </ul>
+  </li>
+</ul>
+
+<p>每一部分通關后，都會因為改變使得玩家可以去到之前無法到達的地方，感覺上是鼓勵玩家手動的從當前點移動到目標點，順路去收集。</p>
+
+<h4 id="體驗上的平衡">體驗上的平衡</h4>
+
+<ul>
+  <li>難度與樂趣</li>
+</ul>
+
+<p>整體來說，ORI還是相當容易死亡的一款遊戲，經常會陷入復活就死、復活就死的死胡同，或者因為不清楚關卡的破解方式而瘋狂送命，由於有些機關、陷阱，是送命型，只要一點點走錯，就會死掉，這種還是十分困難的，連續好幾個操作有百分之50概率成功的組合，就會導致最終成功的概率很低。</p>
+
+<p>另一方面，後期隨著存檔代價減小、技能形式多樣化，以及血量、藍量上限的提升，遊戲的難度還是會慢慢降下來的，也或許應該這麼說，隨著玩家操作的熟練、收集的完善、屬性的提升，遊戲的難度最終下降回落。</p>
+
+<p>但是整體來說，ORI還是相當容易死亡的一款遊戲，最好頻繁的或者選擇性的在關鍵地方存檔——尤其是對我這樣的手殘玩家來說。</p>
+
+<p>似乎有朋友說，“ORI還好，卡關還有風景看有音樂聽。”，這句話似乎也沒錯，總體來說，操作難度雖然偏高，需要玩家使用死亡來學習，但是最終過關，還是相當有成就感的一件事。</p>
+
+<ul>
+  <li>遠路與近路</li>
+</ul>
+
+<p>ORI的地圖總體佈局上還是相當不錯的，主要的任務地點都會讓你走一段路，同時路上還有一些相對的分支可以探索，或者以後探索，並且整體上沒什麼重複感。</p>
+
+<p>但是對於這樣的遊戲，可能遠路和近路不管是宏觀上還是微觀上都會是一個選擇問題，宏觀上，是否要筆直筆直的朝目的地奔過去，是否要去探索要去收集，微觀上，是否應該採取直接的路線，是否要到平台的角落去看一看，這對於每個玩家可能都是問題，並且抉擇可能有很大的隨機性。</p>
+
+<p>但是不管玩家怎麼選，遊戲還是能夠玩下去的，無外乎是困難的玩下去，亦或是輕鬆的玩下去，無外乎是錯過隱藏要素但是快速地去到想要去的地方，還是在途中有意外的收穫。（有些隱藏道路必須靠近才會顯現。）</p>
+
+<ul>
+  <li>死亡與升華</li>
+</ul>
+
+<p>前面也說過，死亡是非常頻繁的，非常，非常頻繁。</p>
+
+<p>設定上來說，ORI就是很弱小的，所以失敗死亡似乎也很合理，如此傳奇的冒險，如此危機四伏的森林，一遍就奇跡般的通過，好像也不太說的過去。另一方面，由於平台跳躍本身對操作就是有一定的要求的，落地點靠前一點或者靠後一點，都不行，考慮到運氣和偶然性，重複練習、挑戰也是必須的。</p>
+
+<p>遊戲系統上也提供了靈魂鏈接，來方便這一點，畢竟這個遊戲的目的並不是難倒玩家，後期也可以通過技能把存檔的代價降到十分之低。我的話基本上每次過了一小個單位都會試著存檔，畢竟不太想之前的進度白費，而且也可以地圖上固定的地方獲得能量水晶補充存檔消耗。</p>
+
+<p>對於每個部分最後的那段逃生，似乎沒法手動存檔了，在進度過半的時候會自動幫忙保存一次，每次那段都是十分驚險，與死亡相鄰，或者說就是在死亡中偶爾運氣不錯一次，才能終於通過，逃生結束那一瞬間，就會覺得之前的死亡，全部都pay off，這種感覺還是相當不錯的。</p>
+
+<h2 id="後記">後記</h2>
+
+<p>唔目前就想到這麼多，遊戲通關到現在也有段時間了，一拖下去就沒得下限了OTZ。</p>
+
+
+
+<pre class="post-content controls__inner git-log"><output>~: git log
+19 Aug 2021 - jskyzero - 🔀  change structure
+
+<img alt="Creative Commons License" src="/assets/img/CC.png" />
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre>
+
+
+<script src="/assets/js/main.js"></script>
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2018/08/30/ori.blind_forest/';
+this.page.identifier = 'https://design.jskyzero.com/2018/08/30/ori.blind_forest/';
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+    </main><footer>
+  <p>Enjoy :)</p>
+  <span>&copy; 2022 设计者笔记. All rights reserved.</span>
+</footer>
+</div>
+  </body>
+</html>
