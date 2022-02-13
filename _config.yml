@@ -27,8 +27,7 @@ plugins:
 
 mermaid:
   # src: '{{site.baseurl}}/assets/js/mermaid.min.js'
-  src: 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.10.2/mermaid.min.js'
-
+  src: 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js'
 
 # # SITE CONFIGURATION
 # title: 设计者笔记 # your site title
@@ -111,7 +110,9 @@ exclude:
   - sleek.jpg
 
 # include: ['_pages']
-# permalink: /:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+# permalink: /:title/
+
 
 # compress_html:
 #   clippings: all
@@ -121,11 +122,6 @@ exclude:
 #   - jekyll-seo-tag
 #   - jekyll-mermaid
 #   - jekyll-last-modified-at
-
-# mermaid:
-#   # src: '{{site.baseurl}}/assets/js/mermaid.min.js'
-#   # src: 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.4/mermaid.min.js'
-#   src: 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.10.2/mermaid.min.js'
 
 
 # # https://github.com/gjtorikian/jekyll-last-modified-at

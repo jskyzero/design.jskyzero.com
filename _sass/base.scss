@@ -53,6 +53,9 @@ ul {padding-inline-start: 8px !important;}
   color: white;
   font: 0.8rem Inconsolata, monospace;
   text-shadow: 0 0 5px #C8C8C8;
+  a {
+    color: white;
+  }
   &::after {
     content: "";
     position: absolute;
