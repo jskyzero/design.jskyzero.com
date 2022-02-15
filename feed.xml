@@ -1,7 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-02-15T04:49:28+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">游戏设计所需要的能力</title><link href="https://design.jskyzero.com/2022/02/15/game_design_ability/" rel="alternate" type="text/html" title="游戏设计所需要的能力" /><published>2022-02-15T00:00:00+00:00</published><updated>2022-02-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/02/15/game_design_ability</id><content type="html" xml:base="https://design.jskyzero.com/2022/02/15/game_design_ability/"><![CDATA[<p>本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-02-15T13:38:41+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">游戏设计所需要的能力</title><link href="https://design.jskyzero.com/2022/02/15/Game_Design_Ability/" rel="alternate" type="text/html" title="游戏设计所需要的能力" /><published>2022-02-15T00:00:00+00:00</published><updated>2022-02-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/02/15/Game_Design_Ability</id><content type="html" xml:base="https://design.jskyzero.com/2022/02/15/Game_Design_Ability/"><![CDATA[<p>本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。</p>
 
 <h1 id="游戏设计所需要的能力">游戏设计所需要的能力</h1>
+
+<h2 id="why-read-this--为什么要读这篇文章">Why Read This / 为什么要读这篇文章</h2>
+
+<p>我知道这个世界上有一万篇教你如何设计游戏的文章，文章中包含着方法论、技巧指南、和辅助证明成功案例的纸醉金迷。</p>
+
+<p>那些文章当然很好，读起来令人心潮澎湃，仿佛照着这上面的做，明天就可以像文章作者一样成功。但是一段时间过后，你的工作、生活真的改变了吗？</p>
+
+<p>本文试图提出一个模型，用于解剖游戏设计、分析其中各个所需要的能力——以及这些能力所占的比例，真正的帮助你理解市面上纷纷攘攘的案例，辅助你不被这些因素干扰脚步、坚实稳定的走在自己的成长之路上。</p>
+
+<h2 id="development-model--开发模型">Development Model / 开发模型</h2>
+
+<ul>
+  <li>阶段划分</li>
+</ul>
+
+<p>一个软件制品有着自己的<a href="https://wiki.mbalib.com/wiki/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">软件生命周期</a>，大致包括：问题，需求，设计，实现，测试，维护几个过程。从大的角度来讲，游戏也是一种软件制品，在游戏开发中也会划分阶段，以移动端游戏的开发为例，大致会有：概念阶段验证概念模型、试玩版本提供核心体验、轻测/重测版本验证长期数据。软件生命周期阶段的规划，主要是带有产出约束，用于有序推进软件开发，而移动端游戏每一个阶段都像是包含一个软件生命周期，更注重每个阶段需要验证的风险点。</p>
+
+<ul>
+  <li>角色划分</li>
+</ul>
 
 <h2 id="通用能力">通用能力</h2>
 
@@ -79,7 +99,7 @@
   <li>营销推广</li>
 </ul>
 
-<p>达到营销目的。</p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。]]></summary></entry><entry><title type="html">PCG相关讨论</title><link href="https://design.jskyzero.com/2021/11/21/PCG/" rel="alternate" type="text/html" title="PCG相关讨论" /><published>2021-11-21T00:00:00+00:00</published><updated>2021-11-21T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/11/21/PCG</id><content type="html" xml:base="https://design.jskyzero.com/2021/11/21/PCG/"><![CDATA[<p>近些年由于玩家对新内容的不断需求，用于内容填充的PCG技术，经常出现在视野内，本文会就此进行一些讨论。</p>
+<p>达到营销目的。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。]]></summary></entry><entry><title type="html">PCG相关讨论</title><link href="https://design.jskyzero.com/2021/11/21/PCG/" rel="alternate" type="text/html" title="PCG相关讨论" /><published>2021-11-21T00:00:00+00:00</published><updated>2021-11-21T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/11/21/PCG</id><content type="html" xml:base="https://design.jskyzero.com/2021/11/21/PCG/"><![CDATA[<p>近些年由于玩家对新内容的不断需求，用于内容填充的PCG技术，经常出现在视野内，本文会就此进行一些讨论。</p>
 
 <!--more-->
 
