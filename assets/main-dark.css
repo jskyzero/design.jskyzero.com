@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** Dark theme variables */
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700");
 :root { --base-color: #DBDBDB; --border: dashed 1px rgba(219, 219, 219, 0.9); --selection-background: rgba(219, 219, 219, 0.99); --selection-text: #000; --background-color: #000; --text-color: var(--base-color); --placeholder-color: var(--base-color); --link-color: var(--base-color); --code-color-1: #aaaaaa; --code-color-2: #ffffcc; --code-color-3: #F00000; --code-color-4: #F0A0A0; --code-color-5: #b38aff; --code-color-6: #5ba711; --code-color-7: #e4e477; --code-color-8: #000080; --code-color-9: #05ca05; --code-color-10: #888888; --code-color-11: #555555; --code-color-12: #800080; --code-color-13: #00d4d4; --code-color-14: #00c1c1; --code-color-15: #ed9d13; --code-color-16: #1e90ff; --code-color-17: #800000; --code-color-18: #bbbbbb; }
@@ -52,6 +53,24 @@ ul { padding-inline-start: 8px !important; }
 .git-log pre { margin: 0; }
 
 .git-log img { border-width: 0; }
+
+body { /* 接着在每个标题前面自动加上编号 */ }
+
+body h1 { counter-reset: h2; }
+
+body h2 { counter-reset: h3; }
+
+body h3 { counter-reset: h4; }
+
+body h4 { counter-reset: h5; }
+
+body h2:before { counter-increment: h2; content: counter(h2) " "; }
+
+body h3:before { counter-increment: h3; content: counter(h2) "." counter(h3) " "; }
+
+body h4:before { counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) " "; }
+
+body h5:before { counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " "; }
 
 /** Highlight/Markup */
 ::selection { background: var(--selection-background); color: var(--selection-text); }

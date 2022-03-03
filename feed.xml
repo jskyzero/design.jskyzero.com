@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-02-15T17:06:20+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-03-03T09:03:40+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计所需要的能力</title><link href="https://design.jskyzero.com/2022/02/15/Game_Design_Ability/" rel="alternate" type="text/html" title="游戏设计所需要的能力" /><published>2022-02-15T00:00:00+00:00</published><updated>2022-02-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/02/15/Game_Design_Ability</id><content type="html" xml:base="https://design.jskyzero.com/2022/02/15/Game_Design_Ability/"><![CDATA[<p>本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。</p>
 
 <h1 id="游戏设计所需要的能力">游戏设计所需要的能力</h1>
@@ -13,95 +13,110 @@
 
 <h2 id="development-model--开发模型">Development Model / 开发模型</h2>
 
-<ul>
-  <li>阶段划分</li>
-</ul>
+<h3 id="阶段划分">阶段划分</h3>
 
-<p>一个软件制品有着自己的<a href="https://wiki.mbalib.com/wiki/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">软件生命周期</a>，大致包括：问题，需求，设计，实现，测试，维护几个过程。从大的角度来讲，游戏也是一种软件制品，在游戏开发中也会划分阶段，以移动端游戏的开发为例，大致会有：概念阶段验证概念模型、试玩版本提供核心体验、轻测/重测版本验证长期数据。软件生命周期阶段的规划，主要是带有产出约束，用于有序推进软件开发，而移动端游戏每一个阶段都像是包含一个软件生命周期，更注重每个阶段需要验证的风险点。</p>
+<p>一个软件制品有着自己的<a href="https://wiki.mbalib.com/wiki/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">软件生命周期</a>，大致包括：问题，需求，设计，实现，测试，维护几个过程。</p>
 
-<ul>
-  <li>角色划分</li>
-</ul>
+<p>从大的角度来讲，游戏也是一种软件制品，在游戏开发中也会划分阶段，以移动端游戏的开发为例，大致会有：概念阶段验证概念模型、试玩版本提供核心体验、轻测/重测版本验证长期数据。</p>
 
-<p>以下施工中3</p>
+<p>软件生命周期阶段的规划，主要是带有产出约束，用于有序推进软件开发，而移动端游戏每一个阶段都像是包含一个软件生命周期，更注重每个阶段需要验证的风险点。</p>
 
-<h2 id="通用能力">通用能力</h2>
+<h3 id="角色划分">角色划分</h3>
 
-<ul>
-  <li>学习能力</li>
-</ul>
+<p>从大的工作种类进行划分，一般会将游戏开发中涉及到的角色分为：策划、美术、开发。分别负责游戏的设计、资产、逻辑。</p>
 
-<p>对新知识的理解、运用能力</p>
+<p>从一个工作的切片进行剖析，策划同学需要（理解问题然后）提出需求，将需求传达给美术以及开发同学，并在制作全程维持沟通，以及最后的验收。</p>
 
-<ul>
-  <li>沟通合作能力</li>
-</ul>
+<p>工种的细分实际上是因为游戏制作需要的能力太多：设计能力（理解需求并解决需求）、美学能力（抽象感受并再现）、规划能力（抽象数据逻辑管理），这些能力多到一个人无法专精掌控。</p>
 
-<p>交流传达信息、统一立场，推进项目进展。</p>
+<h3 id="开发结果盈利">开发结果：盈利</h3>
 
-<ul>
-  <li>创造能力</li>
-</ul>
+<p>从资本的角度来看，游戏是一种流量变现工具。大家所熟知的另外一种直接变现便是广告。</p>
 
-<p>新的视角、解决方案。</p>
+<p>从公司的角度来看，游戏只是一个商品，不管是卖拷贝还是卖服务，游戏是要用来赚钱的，是要用来将消费的钱，用各种方式置换到自己口袋里。</p>
 
-<ul>
-  <li>用户导向</li>
-</ul>
+<p>当然，在盈利以上，我很乐意给游戏赋予个人表达、情感体验等等上层的东西，但是为了使一帮人长久的聚在一起，除了热爱以外，盈利可能是绕不开的话题。</p>
 
-<p>满足用户需求</p>
+<h2 id="ability-model--能力模型">Ability Model / 能力模型</h2>
 
-<h2 id="专业知识">专业知识</h2>
+<blockquote>
+  <p>客观能力 X 主观意愿 X 合作过程 = 结果</p>
+</blockquote>
+
+<h3 id="硬实力说话客观能力">硬实力说话：客观能力</h3>
+
+<p>打铁还需自身硬。</p>
+
+<h4 id="持续变强的能力">持续变强的能力</h4>
+
+<p>没有人能一开始就很强，只是别人付出的更多。大多数人的努力程度都还远远没有到拼天赋的程度。</p>
 
 <ul>
-  <li>游戏市场</li>
+  <li>对新知识的理解、运用能力</li>
+  <li>对新技术的接纳程度、主动了解程度</li>
 </ul>
 
-<p>了解行业市场环境。</p>
+<h4 id="创造新内容的能力">创造新内容的能力</h4>
+
+<p>设计需要创造力。</p>
 
 <ul>
-  <li>游戏理解</li>
+  <li>新的思考视角</li>
+  <li>一个改进流程的解决问题的新方案</li>
 </ul>
 
-<p>对专业品类的深入了解。</p>
+<h4 id="了解过去的能力">了解过去的能力</h4>
+
+<p>知己知彼，百战不殆；人类总是在重复过去的错误。</p>
 
 <ul>
-  <li>逻辑思维</li>
+  <li>了解行业市场环境。</li>
+  <li>了解专业品类历史。</li>
+  <li>了解当前项目开发周期、运营情况</li>
 </ul>
 
-<p>理性逻辑能力。</p>
+<h4 id="专业设计能力">专业设计能力</h4>
+
+<p>干活了。</p>
 
 <ul>
-  <li>关联专业</li>
+  <li>“尖叫度”</li>
+  <li>理性逻辑</li>
 </ul>
 
-<p>相关行业的专业知识。</p>
+<h3 id="能力放大器主观意愿">能力放大器：主观意愿</h3>
 
-<h2 id="专用能力">专用能力</h2>
+<p>“状态不好，下次再聊”</p>
+
+<h4 id="行动的意义">行动的意义</h4>
+
+<p>为什么要做这个设计</p>
 
 <ul>
-  <li>版本规划</li>
+  <li>满足用户需求</li>
+  <li>个人表达</li>
 </ul>
 
-<p>指定计划并执行。</p>
+<h4 id="调整自身状态">调整自身状态</h4>
+
+<p>三英战吕布，不要当吕布。</p>
 
 <ul>
-  <li>专业设计</li>
+  <li>工作规划，指定计划并执行。</li>
+  <li>学会生活</li>
 </ul>
 
-<p>运用工具设计实现。</p>
+<h3 id="拥抱现实协同合作">拥抱现实：协同合作</h3>
+
+<p>君子性非异也，善假于物也。</p>
+
+<h4 id="沟通合作能力">沟通合作能力</h4>
 
 <ul>
-  <li>运营分析</li>
-</ul>
-
-<p>分析趋势发现问题。</p>
-
-<ul>
-  <li>营销推广</li>
-</ul>
-
-<p>达到营销目的。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。]]></summary></entry><entry><title type="html">PCG相关讨论</title><link href="https://design.jskyzero.com/2021/11/21/PCG/" rel="alternate" type="text/html" title="PCG相关讨论" /><published>2021-11-21T00:00:00+00:00</published><updated>2021-11-21T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/11/21/PCG</id><content type="html" xml:base="https://design.jskyzero.com/2021/11/21/PCG/"><![CDATA[<p>近些年由于玩家对新内容的不断需求，用于内容填充的PCG技术，经常出现在视野内，本文会就此进行一些讨论。</p>
+  <li>交流传达信息</li>
+  <li>统一立场</li>
+  <li>推进项目进展。</li>
+</ul>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。]]></summary></entry><entry><title type="html">PCG相关讨论</title><link href="https://design.jskyzero.com/2021/11/21/PCG/" rel="alternate" type="text/html" title="PCG相关讨论" /><published>2021-11-21T00:00:00+00:00</published><updated>2021-11-21T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/11/21/PCG</id><content type="html" xml:base="https://design.jskyzero.com/2021/11/21/PCG/"><![CDATA[<p>近些年由于玩家对新内容的不断需求，用于内容填充的PCG技术，经常出现在视野内，本文会就此进行一些讨论。</p>
 
 <!--more-->
 
