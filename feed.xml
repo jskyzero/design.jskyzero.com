@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-03-04T06:26:48+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-03-04T13:35:18+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计所需要的能力</title><link href="https://design.jskyzero.com/2022/02/15/Game_Design_Ability/" rel="alternate" type="text/html" title="游戏设计所需要的能力" /><published>2022-02-15T00:00:00+00:00</published><updated>2022-02-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/02/15/Game_Design_Ability</id><content type="html" xml:base="https://design.jskyzero.com/2022/02/15/Game_Design_Ability/"><![CDATA[<p>本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。</p>
 
 <h1 id="游戏设计所需要的能力">游戏设计所需要的能力</h1>
@@ -44,6 +44,21 @@
 <blockquote>
   <p>客观能力 X 主观意愿 X 合作过程 = 结果</p>
 </blockquote>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js"></script>
+<div class="mermaid">
+graph TD
+    A[客观能力]
+    A --&gt; A1[学习]
+    A --&gt; A2[创新]
+    A --&gt; A3[视野]
+    A --&gt; A4[专业]
+    B[主观意愿]
+    B --&gt; B1[意义]
+    B --&gt; B2[心态]
+    C[合作能力]
+    C --&gt; C1[合作]
+</div>
 
 <h3 id="pure-ability---硬实力说话客观能力">Pure Ability   硬实力说话：客观能力</h3>
 
