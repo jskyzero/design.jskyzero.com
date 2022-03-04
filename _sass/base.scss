@@ -83,6 +83,10 @@ ul {padding-inline-start: 8px !important;}
 }
 
 body {
+
+  counter-reset: h1;
+counter-reset: h2;
+
 h1 {
   counter-reset: h2;
 }
