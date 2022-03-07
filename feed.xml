@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-03-07T12:19:51+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-03-07T13:00:59+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">动作设计参考库</title><link href="https://design.jskyzero.com/2022/03/07/action_reference/" rel="alternate" type="text/html" title="动作设计参考库" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/action_reference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/action_reference/"><![CDATA[<p>本文打算记录大量游戏中的动作设计。用于相关参考。</p>
 
 <h1 id="动作设计参考库">动作设计参考库</h1>
 
-<h2 id="老头环艾尔登法环">老头环/艾尔登法环</h2>
+<h2 id="最新体验的">最新体验的</h2>
+
+<h3 id="老头环艾尔登法环">老头环/艾尔登法环</h3>
 
 <ul>
   <li>分类：
@@ -41,7 +43,240 @@
       <li><a href="https://eldenring.wiki.fextralife.com/Weapons">武器参考</a></li>
     </ul>
   </li>
-</ul>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文打算记录大量游戏中的动作设计。用于相关参考。]]></summary></entry><entry><title type="html">游戏设计所需要的能力</title><link href="https://design.jskyzero.com/2022/02/15/Game_Design_Ability/" rel="alternate" type="text/html" title="游戏设计所需要的能力" /><published>2022-02-15T00:00:00+00:00</published><updated>2022-02-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/02/15/Game_Design_Ability</id><content type="html" xml:base="https://design.jskyzero.com/2022/02/15/Game_Design_Ability/"><![CDATA[<p>本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。</p>
+</ul>
+
+<h3 id="地平线2地平线-西之禁地">地平线2/地平线 西之禁地</h3>
+
+<ul>
+  <li>分类：
+    <ul>
+      <li>远程武器：猎手弓、射手弓、爆破弹弓、射钉枪、爆破枪</li>
+      <li>属性：酸蚀、冰霜、火焰、爆破、等离子</li>
+    </ul>
+  </li>
+  <li>动作说明：
+    <ul>
+      <li>R1-R1-R1-R1：长矛横向基础四连</li>
+      <li>R1-停顿-R1 * N：单体</li>
+      <li>R1-R1-停顿-R1 * N：范围击退</li>
+      <li>R1-R1-R1-停顿-R1 * N：快速充能</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="actarpg">ACT/ARPG</h2>
+
+<h3 id="dnf--地下城与勇士">DNF / 地下城与勇士</h3>
+
+<ul>
+  <li>分类：
+    <ul>
+      <li>剑士、枪手、格斗家、法师、圣职者、刺客、缔造者、守护者、枪剑士</li>
+    </ul>
+  </li>
+  <li>动作说明：
+    <ul>
+      <li>30、35、40、45、一次觉醒、60、二次觉醒、三次觉醒</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="无双系列">无双系列</h3>
+
+<ul>
+  <li>分类：
+    <ul>
+      <li>5：枪、刀、剑（双手）、扇、弓、棍、剑（单手）、鞭、戟、杖、锤</li>
+      <li>6：乐器、飞镖、飞剑</li>
+      <li>大蛇Z：镰刀、球……</li>
+      <li>勇者斗恶龙：英雄集结（为啥在这？）</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="dmc系列">DMC系列</h3>
+
+<ul>
+  <li>分类：
+    <ul>
+      <li>4：</li>
+      <li>DMC：剑、斧头、镰刀、拳套</li>
+      <li>5：剑、双手大剑、召唤</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="战神系列">战神系列</h3>
+
+<ul>
+  <li>分类
+    <ul>
+      <li>3：链刃</li>
+      <li>4：斧子、链刃</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="猎天使魔女系列">猎天使魔女系列</h3>
+
+<ul>
+  <li>概览</li>
+</ul>
+
+<h3 id="忍者龙剑传">忍者龙剑传</h3>
+
+<ul>
+  <li>概览</li>
+</ul>
+
+<h3 id="仁王系列">仁王系列</h3>
+
+<ul>
+  <li>概览
+    <ul>
+      <li>1：刀，锁链，双刀，大太刀，旋棍，双手斧，长枪</li>
+      <li>2：刀，大太刀，双刀，机关棍，手甲，长枪，旋，</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="怪物猎人系列">怪物猎人系列</h3>
+
+<ul>
+  <li>概览：
+    <ul>
+      <li>太刀，大剑，盾斧，斩斧，轻弩，重弩，双刀，操虫棍，锤子，单手剑，狩猎笛，长枪，铳枪，弓，</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="魂系列">魂系列</h3>
+
+<ul>
+  <li>概览：
+    <ul>
+      <li>血源、黑魂3、恶魔之魂</li>
+      <li>只狼</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="白金系列">白金系列</h3>
+
+<ul>
+  <li>尼尔机械纪元</li>
+  <li>忍者神龟</li>
+  <li>变形金刚</li>
+</ul>
+
+<h2 id="ftg">FTG</h2>
+
+<h3 id="街霸">街霸</h3>
+
+<h3 id="拳皇">拳皇</h3>
+
+<h3 id="罪恶装备">罪恶装备</h3>
+
+<h3 id="苍翼">苍翼</h3>
+
+<h3 id="真人快打">真人快打</h3>
+
+<h3 id="铁拳">铁拳</h3>
+
+<h3 id="侍魂">侍魂</h3>
+
+<h2 id="手机游戏">手机游戏</h2>
+
+<h3 id="崩坏3">崩坏3</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>琪亚娜</td>
+      <td>双手枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>芽衣</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>布洛妮娅</td>
+      <td>重炮</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>德莉莎</td>
+      <td>十字架</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>姬子</td>
+      <td>大剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>卡莲</td>
+      <td>双手枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>八重樱</td>
+      <td>单手剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>符华</td>
+      <td>拳套</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>丽塔</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>希儿</td>
+      <td>镰刀</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>幽兰黛尔</td>
+      <td>长枪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="战双">战双</h3>
+
+<h3 id="原神">原神</h3>
+
+<h2 id="moba游戏">MOBA游戏</h2>
+
+<h3 id="dota2">DOTA2</h3>
+
+<h3 id="lol">LOL</h3>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文打算记录大量游戏中的动作设计。用于相关参考。]]></summary></entry><entry><title type="html">游戏设计所需要的能力</title><link href="https://design.jskyzero.com/2022/02/15/Game_Design_Ability/" rel="alternate" type="text/html" title="游戏设计所需要的能力" /><published>2022-02-15T00:00:00+00:00</published><updated>2022-02-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/02/15/Game_Design_Ability</id><content type="html" xml:base="https://design.jskyzero.com/2022/02/15/Game_Design_Ability/"><![CDATA[<p>本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。</p>
 
 <h1 id="游戏设计所需要的能力">游戏设计所需要的能力</h1>
 
