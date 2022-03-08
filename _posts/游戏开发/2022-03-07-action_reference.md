@@ -13,7 +13,7 @@ categories: [游戏开发]
 ## 最新体验的
 
 
-### 老头环/艾尔登法环
+### 老头环
 
 
 + 分类：
@@ -41,10 +41,10 @@ categories: [游戏开发]
   + [武器参考](https://eldenring.wiki.fextralife.com/Weapons)
 
 
-### 地平线2/地平线 西之禁地
+### 地平线2
 
 + 分类：
-  + 远程武器：猎手弓、射手弓、爆破弹弓、射钉枪、爆破枪
+  + 远程武器：猎手弓、射手弓、爆破弹弓、射钉枪、爆破枪、绳索枪
   + 属性：酸蚀、冰霜、火焰、爆破、等离子
 + 动作说明：
   + R1-R1-R1-R1：长矛横向基础四连
@@ -53,100 +53,171 @@ categories: [游戏开发]
   + R1-R1-R1-停顿-R1 * N：快速充能
 
 
-## ACT/ARPG
+## 网游
 
 
-### DNF / 地下城与勇士
+### DNF
 
 + 分类：
   + 剑士、枪手、格斗家、法师、圣职者、刺客、缔造者、守护者、枪剑士
 + 动作说明：
-  + 30、35、40、45、一次觉醒、60、二次觉醒、三次觉醒
+  + 技能分布：30、35、40、45、一次觉醒、60、二次觉醒、三次觉醒
+  + 鬼剑士：剑魂（剑气）、鬼泣（鬼神、暗）、狂战士（血气）、阿修罗（元素）
+  + 神枪手：漫游枪手（浪漫）、弹药专家（属性）、机械师（召唤）、重炮师（重火力）
+  + 格斗家：柔道（抓取）、散打（硬打）、毒王（异常）、气功（气功）
+  + 圣职者：圣骑士（圣光）、驱魔师（物法）、蓝拳（格斗）、复仇者（暗）
+  + 圣职者（女）：圣骑士（圣光）、异端审判者（火焰）、巫女（东方）、异端者（暗）
+  + 暗夜使者：刺客（连击）、死灵法师（暗、召唤）、忍者（火焰）、影舞者（背后攻击）
+  + 魔法师：元素（元素）、魔道（搞怪）、召唤（召唤）、战法（符文）
++ 参考
+  + [FANDOM 地下城与勇士 维基百科](https://dnf.fandom.com/zh/wiki/%E8%81%8C%E4%B8%9A)
 
 
-### 无双系列
+## 主机/PC单机
+
+
+### 无双 系列
 
 + 分类：
-  + 5：枪、刀、剑（双手）、扇、弓、棍、剑（单手）、鞭、戟、杖、锤
-  + 6：乐器、飞镖、飞剑
-  + 大蛇Z：镰刀、球……
-  + 勇者斗恶龙：英雄集结（为啥在这？）
+  + 5（太旧了，同太旧了被开除：6、7）：枪、刀、剑（双手）、扇、弓、棍、剑（单手）、鞭、戟、杖、锤
+  + 8：长柄双刀，鸳鸯钺，羽扇，翳扇，偃月刀，月牙铲，细剑，迅雷剑，锡杖，锁镰，锁分铜，碎棒，双钺，双扇，双矛，双流星，双节棍，双剑，双鞭，双钩，鞭箭弓，手斧，伸细剑，射刃枪，扇刃，三尖刀，圈，峨嵋刺，枪，蛇矛，朴刀，投牙弓，龙枪，两刃枪，狼牙棒，昊转锤，九环刀，火尘双刀，九齿钯，将剑，击剑，戟，棍，三节棍，鬼神手甲，钢鞭剑，飞刀，飞镖，钩爪，方天戟，多节鞭，铁笛，盾牌剑，十字戟，短戟，刀，弧刀，大铡刀，大钺，大剑，大斧
++ 动作说明
+  + [游戏动画设计-真三国无双8 35种武器 双视图招式参考](https://www.bilibili.com/video/BV1os411c71p)
++ 参考
+  + [『真・三國無双８』武将动作演示合集](https://www.bilibili.com/video/BV1QW411h7rH)
+  + [《塞尔达无双：灾厄启示录》全角色动作技能演示](https://www.bilibili.com/video/BV1qi4y1L7nc)
+  + [《女神异闻录5对决：幽灵先锋》全角色动作合集](https://www.bilibili.com/video/BV1ZU4y1W7yj)
+  + 姑且把 Omega Force（ω-Force）的其他作品的流程也放在这里
+    + [勇者斗恶龙：英雄集结](https://www.bilibili.com/video/BV1xE411D77b)
+    + [勇者斗恶龙：英雄集结2](https://www.bilibili.com/video/BV1Up411o7bX)
+    + [无双大蛇Z](https://www.bilibili.com/video/BV174411F7Pg)
+    + [无双大蛇2U](https://www.bilibili.com/video/BV1bW411t7Xr)
+    + [战国无双5](https://www.bilibili.com/video/BV1L64y197XB)
+    + [塞尔达无双：灾厄启示录](https://www.bilibili.com/video/BV17A411x7LD)
+    + [女神异闻录5对决：幽灵先锋](https://www.bilibili.com/video/BV1RA411v7fX)
+    + 其他比如：剑风传奇无双、火纹无双、刀剑乱舞无双暂略
 
 
-### DMC系列
+### 4大ACT
+
+
+#### 鬼泣
 
 + 分类：
-  + 4：
-  + DMC：剑、斧头、镰刀、拳套
-  + 5：剑、双手大剑、召唤
+  + 待补充
++ 动作：
+  + [《鬼泣4:特别版》全角色动作展示](https://www.bilibili.com/video/BV1CW411Q7q3)
+  + [《鬼泣DMC》人物慢动作赏析合集](https://www.bilibili.com/video/BV1mb411K7BN?p=7)
+  + [《鬼泣5》『但丁』](https://www.bilibili.com/video/BV1nb411575p)
+  + [《鬼泣5》『尼禄』](https://www.bilibili.com/video/BV1Jb41157yY)
++ 参考：
+  + 待补充
 
 
-### 战神系列
+#### 战神
 
-+ 分类
-  + 3：链刃
-  + 4：斧子、链刃
-
-
-### 猎天使魔女系列
-
-+ 概览
++ 动作：
+  + [战神3武器招式（部分）](https://www.bilibili.com/video/BV1is411B7Ej)
+  + [战神3华丽连技）](https://www.bilibili.com/video/BV1Js411m7mx)
+  + [新战神招式展示小合集](https://www.bilibili.com/video/BV1bb411j732)
 
 
-### 忍者龙剑传
-
-+ 概览
-
-
-### 仁王系列
+#### 猎天使魔女
 
 + 概览
+  + [猎天使魔女1进阶技巧](https://www.bilibili.com/video/BV1aQ4y167f4)
+  + [猎天使魔女2 全武器动画鉴赏](https://www.bilibili.com/video/BV1nJ411X7or)
+
+
+#### 忍者龙剑传
+
++ 概览
+  + [忍龙3全武器动作展示](https://www.bilibili.com/video/BV1m44y1i7YU)
+
+
+### 仁王 系列
+
++ 概览（不准）
   + 1：刀，锁链，双刀，大太刀，旋棍，双手斧，长枪
-  + 2：刀，大太刀，双刀，机关棍，手甲，长枪，旋，
+  + 2：刀，大太刀，双刀，机关棍，手甲，长枪，旋棍
++ 动作
+  + [Nioh: Sanada Yukimura - All weapons showcase](https://www.youtube.com/watch?v=rlgslxpQ0iQ)
+  + [【仁王2】长枪全招式慢动作演示](https://www.bilibili.com/video/BV1kp4y1b7zP)，其他武器翻翻也有。
 
 
-### 怪物猎人系列
+### 怪物猎人 系列
 
 + 概览：
   + 太刀，大剑，盾斧，斩斧，轻弩，重弩，双刀，操虫棍，锤子，单手剑，狩猎笛，长枪，铳枪，弓，
++ 动作
+  + [表演动作](https://www.bilibili.com/video/BV1gE411s7po)
+  + [世界 全武器动作](https://www.bilibili.com/video/BV1Fx411W76R)
+  + [冰原 全武器新动作](https://www.bilibili.com/video/BV134411W7GS)
+  + [XX/GU 狩技](https://www.bilibili.com/video/BV12t411S7jg)
+  + [RISE 替换技](https://www.bilibili.com/video/BV1D5411P7vr)
+  + [Rise 全14种武器替换动作及虫技演示](https://www.bilibili.com/video/BV17f4y1x7pL)
 
 
-### 魂系列
+### 魂 系列
 
-+ 概览：
-  + 血源、黑魂3、恶魔之魂
-  + 只狼
++ 动作
+  + [血源诅咒 老猎人 全武器、法术、装备展示](https://www.bilibili.com/video/BV15x411x74z)
+  + [黑暗之魂1重置版 全装备与全法术展示](https://www.bilibili.com/video/BV1ms411j75P)
+  + [黑暗之魂2原罪学者 全装备与全法术展示](https://www.bilibili.com/video/BV1Rx411e7nh)
+  + [黑暗之魂3 全装备与全法术展示](https://www.bilibili.com/video/BV1ss411B7d6)
+  + [只狼：影逝二度 全义手忍具、流派招式、体术、忍术展示](https://www.bilibili.com/video/BV1bb411T7Po)
 
 
-### 白金系列
+### 白金其他系列
 
-+ 尼尔机械纪元
-+ 忍者神龟
-+ 变形金刚
++ 动作
+  + 猎天使魔女四大那儿已经有了
+  + [变形金刚：毁灭行动 流程](https://www.bilibili.com/video/BV1Jt411y7KY)
+  + [忍者神龟：曼哈顿变种 流程](https://www.bilibili.com/video/BV1Js411i7iB)
+  + 尼尔：自动人形
+    + [【尼尔：机械纪元】2B全武器动作鑑賞動画 All actions（Moveset）](https://www.bilibili.com/video/BV1us411G7QQ)
+    + []（
+  + 异界锁链
+    + [《异界锁链》全部技能＆雷基恩＆同步攻击展示](https://www.bilibili.com/video/BV1CJ411N7rk)
+
+
+### 其他
+
++ 破晓传说
+  + [体验版 破晓传说全角色技能展示合集](https://www.bilibili.com/video/BV1664y1e7RB)
 
 
 ## FTG
 
++ 动作
+  + [【灵魂能力6/刀魂6】全角色爆衣展示](https://www.bilibili.com/video/BV1Yb411w7J7)
+
 
 ### 街霸
+
++ 参考
+  + [受击动作参考 街霸5隆](https://www.bilibili.com/video/BV1Fx41147YZ)
 
 
 ### 拳皇
 
 
-### 罪恶装备
+### 其他
 
 
-### 苍翼
+#### 罪恶装备
 
 
-### 真人快打
+#### 苍翼
 
 
-### 铁拳
+#### 真人快打
 
 
-### 侍魂
+#### 铁拳
+
+
+#### 侍魂
 
 
 ## 手机游戏
@@ -180,6 +251,15 @@ categories: [游戏开发]
 
 ### DOTA2
 
++ [DOTA2全英雄技能](https://www.bilibili.com/video/BV1rb411r7CT)
+
 
 ### LOL
 
+
+### LOLM
+
+
+## 动作常识
+
++ [日本剑术专家重现仁王2招式动作](https://www.bilibili.com/video/BV11q4y1f7k4)
