@@ -21,18 +21,18 @@ permalink: /project/
 
 |时间|标签|课题|
 |--|--|--|
-|持续进行|游戏设计|[动作速查](https://design.jskyzero.com/2021/11/18/action_reference/)|
+|本周|游戏设计|[动作速查](https://design.jskyzero.com/2021/11/18/action_reference/)|
 |持续进行|游戏设计|[补完《游戏感》](https://design.jskyzero.com/2020/08/31/gamefeeling/)|
-|持续进行|游戏设计|地图设计：白模与UE4|
-|持续进行|游戏设计|动作设计：BOX与节奏|
-|下周|游戏设计|市场洞察|
-|进行中|游戏设计|[游戏策划能力](https://design.jskyzero.com/2022/02/15/game_design_ability/)|
-|下下周|游戏设计|AI体系架构|
-|下下周|游戏设计|AI深度学习|
+|待排期|游戏设计|市场洞察|
+|待排期|游戏设计|地图设计：白模与UE4|
+|待排期|游戏设计|动作设计：BOX与节奏|
+|待排期|游戏设计|AI体系架构|
+|待排期|游戏设计|AI深度学习|
 |待排期|游戏设计|MARKOV CHAIN|
 |待排期|不务正业|RUST ENGINE|
 |待排期|游戏设计|GLAGAME、ROGUELIKE|
 |待排期|游戏设计|PPT文章迁移|
+|已完成|游戏设计|[游戏策划能力](https://design.jskyzero.com/2022/02/15/game_design_ability/)|
 
 
 ## 計劃表-其三.后续

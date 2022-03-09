@@ -18,6 +18,21 @@ You can view it via [website](https://design.jskyzero.com/), or you can download
 + change file ext name: `for x in *.jpeg; do mv "$x" "${x%.jpeg}.jpg"; done`
 + mermaid: `./node_modules/.bin/mmdc -h`, `mmdc -i input.mmd -o output.svg`
 
++ CompatibilityError
+
+```ruby
+# Encoding::CompatibilityError: incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)
+
+# /opt/homebrew/lib/ruby/gems/3.1.0/gems/listen-3.7.1/lib/listen/silencer.rb
+
+def _ignore?(path)
+      if path.encoding.to_s == 'ASCII-8BIT'
+        path = path.force_encoding(Encoding::ISO_8859_1).encode!('utf-8')
+      end
+      ignore_patterns.any? { |pattern| path =~ pattern }
+    end
+```
+
 
 ## License
 
