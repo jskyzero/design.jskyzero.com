@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-03-08T07:02:38+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-03-09T06:09:33+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">动作设计参考库</title><link href="https://design.jskyzero.com/2022/03/07/action_reference/" rel="alternate" type="text/html" title="动作设计参考库" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/action_reference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/action_reference/"><![CDATA[<p>本文打算记录大量游戏中的动作设计。用于相关参考。</p>
 
 <h1 id="动作设计参考库">动作设计参考库</h1>
@@ -239,7 +239,7 @@
   </li>
 </ul>
 
-<h3 id="白金其他系列">白金其他系列</h3>
+<h3 id="白金工作室-系列">白金工作室 系列</h3>
 
 <ul>
   <li>动作
@@ -280,31 +280,20 @@
       <li><a href="https://www.bilibili.com/video/BV1Yb411w7J7">【灵魂能力6/刀魂6】全角色爆衣展示</a></li>
     </ul>
   </li>
-</ul>
-
-<h3 id="街霸">街霸</h3>
-
-<ul>
+  <li>街霸</li>
   <li>参考
     <ul>
       <li><a href="https://www.bilibili.com/video/BV1Fx41147YZ">受击动作参考 街霸5隆</a></li>
     </ul>
   </li>
+  <li>拳皇</li>
+  <li>其他</li>
+  <li>罪恶装备</li>
+  <li>苍翼</li>
+  <li>真人快打</li>
+  <li>铁拳</li>
+  <li>侍魂</li>
 </ul>
-
-<h3 id="拳皇">拳皇</h3>
-
-<h3 id="其他-1">其他</h3>
-
-<h4 id="罪恶装备">罪恶装备</h4>
-
-<h4 id="苍翼">苍翼</h4>
-
-<h4 id="真人快打">真人快打</h4>
-
-<h4 id="铁拳">铁拳</h4>
-
-<h4 id="侍魂">侍魂</h4>
 
 <h2 id="手机游戏">手机游戏</h2>
 
