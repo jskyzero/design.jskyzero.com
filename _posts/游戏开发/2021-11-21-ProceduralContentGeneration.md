@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 过程内容生成相关讨论
+title: 程序内容生成相关讨论
 featured-img: terraria
 mathjax: true
 categories: [游戏开发]
