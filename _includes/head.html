@@ -21,7 +21,7 @@
     {%- endif -%}
   {%- endif -%}
 
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+  {% if site.google_tag_manager %}
     {%- include google-analytics.html -%}
-  {%- endif -%}
+  {% endif %}
 </head>
