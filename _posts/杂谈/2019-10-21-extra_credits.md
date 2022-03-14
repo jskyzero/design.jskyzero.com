@@ -11,6 +11,12 @@ categories: [杂谈]
 
 <!--more-->
 
+## 2022.03
+
+
++ [日本剑术专家重现仁王2招式动作](https://www.bilibili.com/video/BV11q4y1f7k4)
++ [黑暗之魂3 冲击力-韧性机制](https://www.bilibili.com/video/av84266583)
+
 
 ## 2019.10~>2020.3
 
@@ -36,3 +42,4 @@ categories: [杂谈]
   + 场景（游戏片段）的美
   + 线索与开放世界
   + 侦探与冒险精神主角特征
+

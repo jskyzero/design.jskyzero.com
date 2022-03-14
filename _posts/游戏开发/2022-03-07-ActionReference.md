@@ -39,6 +39,7 @@ categories: [游戏开发]
 + 祷告、战技：略过
 + 参考
   + [武器参考](https://eldenring.wiki.fextralife.com/Weapons)
+  + [91种全战灰效果](https://www.bilibili.com/video/BV1q3411W7AJ)
 
 
 ### 地平线2
@@ -244,4 +245,3 @@ categories: [游戏开发]
 
 ## 动作常识
 
-+ [日本剑术专家重现仁王2招式动作](https://www.bilibili.com/video/BV11q4y1f7k4)
