@@ -38,6 +38,8 @@ th { border-bottom: var(--border); }
 
 ul { padding-inline-start: 8px !important; }
 
+p { text-indent: 24px; }
+
 #pro { display: flex; margin-top: 15px; }
 
 #pro img { width: fit-content; margin-right: 8px; }
