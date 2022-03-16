@@ -37,6 +37,7 @@ img {max-width: 100%;}
 table {margin-bottom: 15px;}
 th {border-bottom: var(--border);}
 ul {padding-inline-start: 8px !important;}
+p {text-indent:24px;}
 #pro {
   display: flex; 
   margin-top: 15px;
@@ -85,7 +86,7 @@ ul {padding-inline-start: 8px !important;}
 body {
 
   counter-reset: h1;
-counter-reset: h2;
+  counter-reset: h2;
 
 h1 {
   counter-reset: h2;
