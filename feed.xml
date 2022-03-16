@@ -1,5 +1,166 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-03-16T03:06:55+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">动作设计参考库</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作设计参考库" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<p>本文打算记录大量游戏中的动作设计。用于相关参考。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-03-16T07:34:06+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">宅向内容设计</title><link href="https://design.jskyzero.com/2022/03/16/otaku/" rel="alternate" type="text/html" title="宅向内容设计" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/otaku</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/otaku/"><![CDATA[<p>本文汇总一些宅向内容设计，用于回味参考。</p>
+
+<h1 id="宅向内容设计">宅向内容设计</h1>
+
+<h2 id="gundam与uc纪元">GUNDAM与UC纪元</h2>
+
+<p>最近补了<a href="https://zh.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E4%B8%96%E7%B4%80">UC纪元（Universal Century，简称U.C.）</a>的一些高达作品，做一个记录。</p>
+
+<p>机动战士是指量产巨型作战机器人，而高达则是机动战士中的特殊型号，在王牌驾驶的操作下，往往能有左右战局的能力。</p>
+
+<p>如此设定下有着相当多的作品，而UC世界观便是一切的起点：</p>
+
+<h3 id="uc纪元">UC纪元</h3>
+
+<ul>
+  <li>无印：殖民地造反，造反后被篡权，地球与之战斗。</li>
+  <li>Z：地球左派右派内战。</li>
+  <li>ZZ：内战损耗太多，殖民地反干地球。</li>
+  <li>逆袭的夏亚：殖民地妄图摧毁地球。</li>
+  <li>口袋里的战争：小孩子介入到间谍的作战。</li>
+  <li>第80MS小队：一只小队与原住民、敌人之间的爱情与战争。</li>
+  <li>UC：精神感应框架与UC起点。</li>
+  <li>闪光的哈撒韦：匿名反政府组织。</li>
+  <li>F91：宇宙巴比伦建国战争，衔接后续海盗系列。</li>
+  <li>V：赞斯卡尔战争</li>
+</ul>
+
+<p>看了以后发现最初入坑的SEED的许多经典桥段都是从UC宇宙中抄袭的，完蛋。</p>
+
+<h3 id="gundam动画">GUNDAM动画</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>动画名</th>
+      <th>高达名字</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>无印</td>
+      <td>元祖高达</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Z</td>
+      <td>MK2 Z</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>ZZ</td>
+      <td>Z ZZ</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>V V2</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>神高达</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>W</td>
+      <td>飞翼EW</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>X DX</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>倒A</td>
+      <td>月光</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>SEED</td>
+      <td>Freedom</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>SEED Destiny</td>
+      <td>Destiny</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>O &amp;&amp; OO</td>
+      <td>O &amp;&amp; OO</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>……</td>
+      <td>……</td>
+      <td>……</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些宅向内容设计，用于回味参考。]]></summary></entry><entry><title type="html">游戏相关视频</title><link href="https://design.jskyzero.com/2022/03/16/game_video/" rel="alternate" type="text/html" title="游戏相关视频" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/game_video</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/game_video/"><![CDATA[<p>本文汇总一些游戏文化科普、设计解析等视频中的知识点，方便复习查阅。</p>
+
+<!--more-->
+
+<h2 id="202203">2022.03</h2>
+
+<ul>
+  <li><a href="https://www.bilibili.com/video/BV11q4y1f7k4">日本剑术专家重现仁王2招式动作</a></li>
+  <li><a href="https://www.bilibili.com/video/av84266583">黑暗之魂3 冲击力-韧性机制</a></li>
+</ul>
+
+<h2 id="20191020203">2019.10~&gt;2020.3</h2>
+
+<ul>
+  <li>Persona 5 and Jungian Psychology
+    <ul>
+      <li>人格面具和荣格心理学</li>
+      <li>人格面具、阿尼玛和阿尼姆斯、阴影、自性</li>
+      <li><a href="https://wiki.mbalib.com/wiki/%E5%88%86%E6%9E%90%E5%BF%83%E7%90%86%E5%AD%A6">分析心理学的概述</a></li>
+    </ul>
+  </li>
+  <li>The Pacing of PUBG
+    <ul>
+      <li>BR（大逃杀）游戏其实是惊悚游戏</li>
+      <li>延长悬念时间、四个特征：明确赌注、无处不在的威胁、时间压力、不断升高的风险</li>
+    </ul>
+  </li>
+  <li>Balancing for Skill
+    <ul>
+      <li>傻瓜策略帮助玩家入坑，但需要尽早失效，以免玩家无聊或者碰壁无法转向其他策略。</li>
+    </ul>
+  </li>
+  <li>NieR Automata Sacrifice and the Meaning of Kindness
+    <ul>
+      <li>善行所付出的代价</li>
+    </ul>
+  </li>
+  <li>Prey - The Enemy Inside
+    <ul>
+      <li>双重心里问答</li>
+    </ul>
+  </li>
+  <li>Overwatch and Asymmetric Level Design
+    <ul>
+      <li>关卡与角色的双重平衡，不断演变的冲突点</li>
+    </ul>
+  </li>
+  <li>Overwatch and Asymmetric Character Design
+    <ul>
+      <li>队伍的构成</li>
+      <li>角色的属性与地图的契合</li>
+    </ul>
+  </li>
+  <li>The Witcher III: Wild Hunt
+    <ul>
+      <li>场景（游戏片段）的美</li>
+      <li>线索与开放世界</li>
+      <li>侦探与冒险精神主角特征</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些游戏文化科普、设计解析等视频中的知识点，方便复习查阅。]]></summary></entry><entry><title type="html">动作设计参考库</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作设计参考库" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<p>本文打算记录大量游戏中的动作设计。用于相关参考。</p>
 
 <h1 id="动作设计参考库">动作设计参考库</h1>
 
@@ -1743,829 +1904,4 @@ graph TD
 
 <p>没吃饭，吐了三次</p>
 
-<p>就这样吧。</p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些摘抄记录、看到的有意思的对人生有启迪的话、一些网络上看到的言论。]]></summary></entry><entry><title type="html">问答总结</title><link href="https://design.jskyzero.com/2021/09/12/before_question/" rel="alternate" type="text/html" title="问答总结" /><published>2021-09-12T00:00:00+00:00</published><updated>2021-09-12T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/09/12/before_question</id><content type="html" xml:base="https://design.jskyzero.com/2021/09/12/before_question/"><![CDATA[<p>本文用以记录自己犯过的一些错误，和回答过别人的一些问题。类似改错本的存在。</p>
-
-<!--more-->
-
-<!-- # 评价总览-续-2 -->
-
-<!-- 即便是老早就写下了这样的文章，自己却还是做得一塌糊涂，排在了倒数的位置。
-
-自己期望着稍微好一点的结果，好一点的中等水平，这样就可以继续维持现在的状态，继续呆在自己的安全区域。
-
-但是现实还是十分残酷的，残酷且真实。
-
-唔，或许是自己确实不太行，能力上的欠缺，态度上的不端正，两者应该都有吧。
-
-都有呢，都得改呢。 -->
-
-<!-- 虽然老早就写了这样的指导文章...自己还是排在了倒数的位置...
-
-目前能做的大概是从态度上、能力上两方面来调整。
-
-态度上，可能要从新安排规划自己的时间了，别再分心去干别的事情。
-
-能力上，自己也很欠缺，软硬都欠...
-
-在完蛋之前努力挣扎... -->
-
-<!-- # 评价总览-续-1 -->
-
-<h1 id="问答总结">问答总结</h1>
-
-<p>如题，将总结自己在最近回答某游戏设计问题、展示自己的设计案的时候犯下的一些错误，引以为戒。</p>
-
-<!-- 最近仍然是有着这样或者那样的反馈， -->
-
-<p>简单总结一下吧。</p>
-
-<ul>
-  <li>请揣测你的目标对象，并投其所好。</li>
-  <li>请注意展示的方法，先说思路和重点，金字塔思维。</li>
-  <li>请注意体验的深度和广度。</li>
-</ul>
-
-<h2 id="前言">前言</h2>
-
-<p>最近的某次问答收到的反馈，感觉暴露出的问题还是挺多的…所以单独开一篇来总结一下吧，希望以后少犯同样的错。</p>
-
-<h2 id="评价总览">评价总览</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>问题</th>
-      <th>评价</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>尝试设计一个团队话本Boss</td>
-      <td>文档清晰性需要提升，多个技能要分段，对玩家如何对抗这个boss缺乏清晰地描述</td>
-    </tr>
-    <tr>
-      <td>设计一个新英雄</td>
-      <td>有概念且与技能设计思路一致，但，缺乏必要的数值，例如生命，攻击，事实上似乎连射程都没有描述。也缺乏设计玩法的风格设计，不能验证玩法目标与设计的一致性</td>
-    </tr>
-    <tr>
-      <td>CS玩法以拆弹为主，多人PVP的地图</td>
-      <td>只有图示无法知道怎么玩的，甚至都没有标明拆弹点在哪里</td>
-    </tr>
-    <tr>
-      <td>吃鸡重新一套新的玩法规则</td>
-      <td>从FFA转到小队对抗的思路似乎可以，但方案太简略了，似乎并不能理解要做成什么样子</td>
-    </tr>
-    <tr>
-      <td>分析自由建造与游戏其他模块之间的关系</td>
-      <td>能清晰的表述两个游戏的建造特性，深度不足，另结论似乎不能从回答中推导出来</td>
-    </tr>
-    <tr>
-      <td>叙事手段</td>
-      <td>拆分的开头不错，形式手法都有涵盖，但似乎只有开头，还可以更加深入</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="概述">概述</h2>
-
-<p>暴露出来的最主要的问题可能是还是没有想清楚，没有想清楚一方面体现在细节，高度，另一方面也体现在没有验证。</p>
-
-<p>之前的解题思路是，读题，答题，完了，想到就写上什么，感觉还是太随心所欲，没有章法，一切只靠自己的感觉来约束，然后现在来看正常的回答思路应该是：</p>
-
-<ol>
-  <li>根据题目重要性和当前精力时间有一个初步预期。</li>
-  <li>审题
-    <ul>
-      <li>题目问的是个啥</li>
-      <li>需要回答的具体形式</li>
-      <li>题目希望考察的能力点</li>
-      <li>题目是否有多个问题，是否有附加条件</li>
-    </ul>
-  </li>
-  <li>答题
-    <ul>
-      <li>想法决定上限，质量决定下限</li>
-      <li>“直观感觉”的粗略构思</li>
-      <li>是否有其他角度</li>
-      <li>选取合适的工具、展示方式</li>
-      <li>开始答题</li>
-    </ul>
-  </li>
-  <li>检查
-    <ul>
-      <li>是否符合题目要求</li>
-      <li>是否有额外的角度</li>
-    </ul>
-  </li>
-  <li>反馈
-    <ul>
-      <li>拿到的评价</li>
-      <li>其他人的答案中不同的思路</li>
-    </ul>
-  </li>
-</ol>
-
-<h2 id="一些具体而微的点">一些具体而微的点</h2>
-
-<ul>
-  <li>总体：
-    <ul>
-      <li>对于设计要有验证</li>
-      <li>描述要足够细致（具体），足够清晰</li>
-      <li>有因有果</li>
-    </ul>
-  </li>
-  <li>举例
-    <ul>
-      <li>boss、英雄的设计
-        <ul>
-          <li>多个技能要分段</li>
-          <li>缺乏必要的数值，例如生命，攻击，射程</li>
-        </ul>
-      </li>
-      <li>CS、吃鸡
-        <ul>
-          <li>玩法的展现</li>
-          <li>地图的细节（出生点，移动方向）</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="和其他人的对比">和其他人的对比</h2>
-
-<p>大概大家都是有不同游戏经历，不同能力点，现在从事不同项目不同岗位工作的人，所以自然对这些的想法和行为是不一样，感觉上有点丧失动力的样子，唔，不管怎样，还是请加油吧。</p>
-
-<h1 id="关于规划的一些建议">关于规划的一些建议</h1>
-
-<p>这里记录一下关于之前回答朋友的有关规划的问题。</p>
-
-<!-- # 规划的一些问题
-
-[TOC] -->
-
-<p>认真的看了规划，可以大概窥探出一些存在的问题，这里简要说一下。</p>
-
-<p>首先这份规划是很值得肯定的，但是在此以外也值得修复问题让这份规划变得更好。</p>
-
-<h2 id="关于呈现">关于呈现</h2>
-
-<ul>
-  <li>排版</li>
-</ul>
-
-<p>一般用TXT写文本文档用于一些朴素内容的说明，正常阅读而言有一定排版格式会比较好。</p>
-
-<p>正式的文档使用word、excel都是可以的，程序员一般会使用markdown、Latex等。</p>
-
-<p>这里而言，推荐使用excel制定成表格的形式。</p>
-
-<p>会方便后续内容的跟踪，也可以使用腾讯文档之内的在线文档，方便分享多人合作。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>时间</th>
-      <th>主要内容</th>
-      <th>检验指标</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>XXXX-XXXX</td>
-      <td>XXXX知识点</td>
-      <td>XXXX输出</td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>内容分布</li>
-</ul>
-
-<p>计划和想法、感想参杂在一起，一般而言计划是计划，其余的可以写进对应的备注说明里面。</p>
-
-<p>顾虑和说明是对计划补充的内容，正体应该是一个完整的计划。</p>
-
-<h2 id="关于计划本身">关于计划本身</h2>
-
-<ul>
-  <li>关于目标</li>
-</ul>
-
-<p>看起来的目标主要集中在Java相关知识点。这可能有两个问题。</p>
-
-<p>其一：这些知识属于技术层面而非计算机基础知识层面。譬如数学、离散数学、线性代数、操作系统、数据库、编译原理等基础学科也是必须要了解的。这些需要花的时间不比掌握一门具体的技术少。此外也没有足够的就业导向，除了做项目意外还有做题准备面试、了解行业动态等。</p>
-
-<p>建议是参考大学课程流出足够的时间复习、重新学习这些课程；预留时间给就业导向的内容（这里指并行进行或先后进行）。</p>
-
-<p>其二：这些知识受限于当前的视角，是否已经过时、是否属于举一反三的内容，这些可能会大幅修改，因而建议这里给出更上层的目标，比如学会使用、比如学习某些功能的框架解决某些问题，其下层对应这些具体的技术的掌握。</p>
-
-<ul>
-  <li>关于验收</li>
-</ul>
-
-<p>对于一个计划而言缺失对“输出”的描述，很可能会导致最后没有实际落地。</p>
-
-<p>建议的输出维度：博客文章、项目代码、题解等。</p>
-
-<p>没有验收可能也没有正反馈，总而言之做了一件事要有一件事的成果。</p>
-
-<ul>
-  <li>关于调整和备案</li>
-</ul>
-
-<p>计划本身不可能是没有问题的，因而需要动态调整，就像现在这样，虽然调整一般会根据实际情况来看，但是最好在心里做好预备方案，一般而言准备一个最好一个最坏的情况下的方案是没问题的。</p>
-
-<p>这些虽然一般不用写出来，但是这里鉴于实际情况的不确定问题，还是建议进行一些说明。</p>
-
-<ul>
-  <li>关于时间节点的描述</li>
-</ul>
-
-<p>目前对时间节点的描述相对含糊，建议更加具体，比如预期的总的学习时间究竟是多长，以及中间一些关键节点的具体时间。</p>
-
-<p>举个例子预期一年，前半年纯学习，后半年开始准备面试，一年内一定找到工作。</p>
-
-<h2 id="其他补充">其他补充</h2>
-<!-- 
-+ 关于生活开销
-
-4K/月我觉得一般是不够的，以我没有特殊、外出娱乐开销的参考，一个月可能会逼近7K（房租3K，基本开销100/天，其他支出等）。
-
-考虑到这种情况，是否需要来深圳或者是否需要在南山区，鑫兄建议慎重考虑，比如有没有可能在深圳房价较低的地区租房、或者在武汉每月定期来深圳等。 -->
-
-<ul>
-  <li>关于效率和其他娱乐</li>
-</ul>
-
-<p>一般而言我不认为一个人可以长时间专注的学习，所以建议预留好休息的时间，顺带一提对于大型项目，一般实际干活的时间只有总时间的1/6，所以建议计划不要一开始排到100%，因为很可能是完成不了的，提前预留好生活的空闲、脚踏实地比较好。</p>
-
-<h1 id="文章反馈">文章反馈</h1>
-
-<p>朋友让帮忙看一下文章，给出的一些建议。</p>
-
-<h2 id="呈现上">呈现上</h2>
-
-<ul>
-  <li>排版：
-    <ul>
-      <li>当前世代知识溢出，知识除了自己成长更重要的是能为他人带来帮助，美观的排版非常重要。</li>
-      <li>标题，缩进，配图，字体等。</li>
-      <li>内容构成最好有对标论文的严谨性，比如目录、参考、应用，文章的可迁移（发表到其他平台）等。</li>
-      <li>对外发部可以给PDF。</li>
-    </ul>
-  </li>
-  <li>展示思路：
-    <ul>
-      <li>设计案：目的先行（包括后续回答一些问题时，要看到题目背后的意图）</li>
-      <li>常规展示常用的思路：
-        <ul>
-          <li>Situation Complication Question Answer</li>
-          <li>情景（展示价值、统一预设）、冲突（与目标的鸿沟）、问题（与观众共鸣）、答案（解决方案）</li>
-          <li>凤头猪肚豹尾，开头吸引，内容详实，结尾有力</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="内容上">内容上</h2>
-
-<p>总体是关于魂类游戏的体验，虽然单看总结会有些云里雾里。</p>
-
-<ul>
-  <li>特征总结这块：
-    <ul>
-      <li>动作系统可能不是类魂游戏的核心特征，动作系统带来的回合制体验可能是
-        <ul>
-          <li>参考，黑魂桌面模型、非ARPG的比如卡牌等魂Like游戏</li>
-        </ul>
-      </li>
-      <li>无难度选择应该不太算，可以自己给自己增加难度
-        <ul>
-          <li>可能这小节描述难度的多种构成和体验特征会好一些</li>
-        </ul>
-      </li>
-      <li>保存点的设计还有兼顾调节节奏、划分关卡的作用</li>
-      <li>地图设计的感受和范式（比如连通，上天入地，柳暗花明）、丰富奖励的维度</li>
-      <li>叙事的设计这块比较大
-        <ul>
-          <li>碎片化可能也不是简单的将碎片放上去就行，感觉还是信息的分层释放，不过这块比较开放</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>赏析游戏这块：
-    <ul>
-      <li>提到的点很多，可能需要聚焦落实到一些系统和特征感受，可以使用MDA之内的方法来拆分一下表达的点处在的维度。</li>
-      <li>仁王的说的大体没错，可以将上面的五个维度具体对比分别叙述，现在比较概括</li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="学习一个新概念">学习一个新概念</h1>
-
-<p>我们说过知识的重要性，而且学习作为获取知识的途径，自然也是相当重要的，本文试图将学习划分为阶段，解决一些学习上的常见问题：</p>
-
-<ul>
-  <li>没有彻底掌握</li>
-  <li>不会学以致用</li>
-  <li>没法举一反三</li>
-</ul>
-
-<h2 id="循序渐进的阶段">循序渐进的阶段</h2>
-
-<p>任何一件事都是循序渐进的、无法一蹴而就的，我们可以把复杂的目标拆分为阶段，完成每个阶段，最终完成大的目标。</p>
-
-<p><img src="/assets/img/books/reading/2-1-1.png" alt="" /></p>
-
-<p>对于学习也是一样。</p>
-
-<h2 id="学习的具体阶段">学习的具体阶段</h2>
-
-<p><img src="/assets/img/books/reading/2-1-2.png" alt="" /></p>
-
-<ul>
-  <li>粗览
-    <ul>
-      <li>快速浏览概念内容</li>
-      <li>第一印象，初步认知</li>
-      <li>核心概念</li>
-    </ul>
-  </li>
-  <li>建模
-    <ul>
-      <li>完全理解概念内容</li>
-      <li>使用列表、脑图、等概念组织方式</li>
-      <li>关注细节内容的理解</li>
-    </ul>
-  </li>
-  <li>自述
-    <ul>
-      <li>能完整复述概念内容</li>
-      <li>找到内容间的线索</li>
-      <li>完整用自己的话复述内容</li>
-    </ul>
-  </li>
-  <li>手册
-    <ul>
-      <li>给出无脑使用概念的规则</li>
-      <li>总结问题情形，解决方式</li>
-      <li>泛用性，无脑性</li>
-    </ul>
-  </li>
-  <li>联系
-    <ul>
-      <li>组合跨领域理解概念</li>
-      <li>同领域其他概念的异同</li>
-      <li>不同领域概念层的类比</li>
-    </ul>
-  </li>
-  <li>阶
-    <ul>
-      <li>概念上下层</li>
-      <li>下层概念</li>
-      <li>上层逻辑</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="参考">参考</h2>
-
-<ul>
-  <li><a href="https://zhuanlan.zhihu.com/p/100121940">罗斯福专业法、费曼4步学习法、达芬奇笔记</a></li>
-</ul>
-
-<h1 id="练习与复习">练习与复习</h1>
-
-<p>本文试图简单论证练习和复习的重要性和一些可行的具体措施。</p>
-
-<ul>
-  <li>练习：实际的使用以检验知识的掌握，在实际练习中加深理解。</li>
-  <li>复习：想办法让知识在脑海中停留的更久一些。</li>
-</ul>
-
-<h2 id="练习">练习</h2>
-
-<ul>
-  <li>练习的时机：“种下一棵树最好是十年前，其次是现在。”</li>
-  <li>练习的方式：从实际出发，提出知识的可能运用场景。</li>
-  <li>练习的反馈：从问题的解决中找到不足，加以改进。</li>
-</ul>
-
-<h2 id="复习">复习</h2>
-
-<ul>
-  <li><a href="https://zhuanlan.zhihu.com/p/25050071">人类记忆模型</a>：</li>
-</ul>
-
-<p><img src="https://pic4.zhimg.com/80/v2-6d66188890ea70ececb529bb77cae2d3_1440w.jpg" alt="" /></p>
-
-<ul>
-  <li><a href="https://zh.wikipedia.org/wiki/%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF">艾宾浩斯遗忘曲线</a></li>
-</ul>
-
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ForgettingCurve.svg/500px-ForgettingCurve.svg.png" alt="" /></p>
-
-<ul>
-  <li>
-    <p>选取合适的时间节点：当日，本周，本月。</p>
-  </li>
-  <li>
-    <p>采取合适的检验手法：复述、练习等。</p>
-  </li>
-</ul>
-
-<!-- # 学会生活
-
-文明是一段时间内一个区域的人的生活状态，那么生活究竟是什么呢。
-
-活着又是什么呢，当下在做的事情，感受与意义，很容易让人迷失，对初入社会切换成社畜的学生而言。
-
-这里把生活分为几个方面
-
-## 衣
-
-能应对各种场景的着装储备。
-
-+ 不同场景
-  + 温度：夏季、冬季
-  + 场合：日常、居家睡衣、严肃场合、运动衣
-+ 使用&维护
-  + 合适的换衣、洗涤周期。
-  + 合适的购置新衣服周期。
-
-## 食
-
-+ 一周两次水果拼盘
-+ 多吃蔬菜
-
-
-## 住
-
-+ 空间
-  + 衣柜
-  + 床
-  + 空闲空间
-  + 置物桌
-+ 设施要求
-  + 窗
-  + 空调
-  + 洗衣机
-  + 卫生间、厨房
-  + 高质量网络
-
-
-## 行
-
-+ 熟悉公共交通网络
-
-
-## 一些提升生活质量的行为
-
-+ 放空早睡
-+ 热水泡脚
-+ 保持整理内务的频率 -->
-
-<h1 id="着装方法">着装方法</h1>
-
-<ul>
-  <li>和服打结
-    <ul>
-      <li><a href="https://sgm.co.jp/useful/kitsuke_obi/otoko/">男結び（角帯結び）</a></li>
-      <li><a href="https://www.bilibili.com/video/BV1jx411S7i8">和服男士袴的穿着方法 ：浪人结、十文字纽结</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="着装搭配">着装搭配</h2>
-
-<p><img src="https://cdn.wimg.jp/coordinate/rke8s9/20181221101341434/20181221101341434_1000.jpg" alt="" /></p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文用以记录自己犯过的一些错误，和回答过别人的一些问题。类似改错本的存在。]]></summary></entry><entry><title type="html">用于AI的高级随机技术</title><link href="https://design.jskyzero.com/2021/09/09/RandomInGameAI/" rel="alternate" type="text/html" title="用于AI的高级随机技术" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/09/09/RandomInGameAI</id><content type="html" xml:base="https://design.jskyzero.com/2021/09/09/RandomInGameAI/"><![CDATA[<p>本文会深入讲解游戏AI的若干随机算法，并附带通俗易懂的例子，严谨的模拟试验，和技法实用运用指南。</p>
-
-<!--more-->
-
-<h1 id="用于ai的高级随机技术">用于AI的高级随机技术</h1>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (3).JPG" alt="" /></p>
-
-<ul>
-  <li>本文最初为神秘组织编写。希望大家都能深入理解艺术与科学</li>
-  <li>本文主要讨论游戏AI，或者<a href="https://www.youtube.com/channel/UC4YaOt1yT-ZeyB0OmxHgolA">人工（キズナ）智障（アイ）</a></li>
-  <li>本文最初以为会涉及计算机科学，实际没有，放在这里吓唬人</li>
-  <li>本文包含概率论，但是不用怕，<strong><u>作者概率论学得没你好</u></strong></li>
-  <li>本文参考了<a href="http://www.gameaipro.com/">Game AI Pro</a>的文章，知识是相通的，翻新了文中的试验，添加了与时俱进的例子</li>
-  <li>作者会从读者的角度揣测可能的疑问，并先手提出解答，如果遗漏可以联系作者</li>
-  <li>本文使用python语言，但是不要怕，反正正常人都看不懂，天书没有区别</li>
-  <li>本文例子大量使用神秘组织所推崇的游戏《SEKIRO》，很遗憾例子没能全部使用此游戏</li>
-</ul>
-
-<h2 id="随机的意义">随机的意义</h2>
-
-<blockquote>
-  <p>重复着无数相同的动作，我是为了表演而生，</p>
-
-  <p>而表演……是为了取悦你。——《人偶自白》</p>
-</blockquote>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (6).JPG" alt="" /></p>
-
-<p>总所周知，游戏AI为了良好游戏体验服务。——后边部分的定义基本是句废话，过分感性。不同游戏类型目标体验之间的差距，比人和人的差距还要大。</p>
-
-<p>为此，这里从玩家角度、引入消费时经常使用的“质量”的概念来分析一个游戏的体验</p>
-
-<ul>
-  <li>从切片、微观上来说，要讲究质：
-    <ul>
-      <li>体验要达到类型预期及格线，有基本的保真度</li>
-      <li>体验要结构完整，有始有终</li>
-      <li>部分好游戏的部分体验会“大大超出预期”</li>
-    </ul>
-  </li>
-  <li>从整体、宏观上来说，要讲究量：
-    <ul>
-      <li>高质量的内容以合适的节奏投放给玩家</li>
-      <li>投放本身也可以构成一种“涌现”的叙事</li>
-    </ul>
-  </li>
-</ul>
-
-<p>于是问题被转移到了高质量内容生产上，除了切实的生产新内容，合理的使用旧内容，比如<strong><u>利用随机</u></strong>，也能带来良好的体验。</p>
-
-<p>以动作游戏为例，考虑移动等行为本身的差异性、动作之间不同的衔接、动作释放的概率组成不同的考验等。下面我们给出更加具体的例子：</p>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (7).JPG" alt="" /></p>
-
-<p>以怪物设计为例：</p>
-
-<ul>
-  <li>从怪物整体上来看
-    <ul>
-      <li>我们可以切实的生产新的故事设定、区域环境、敌人兵种、敌人本身，构建一种有血有肉的敌人</li>
-      <li>比如：只狼故事初期遇到的苇名兵，回到3年前会遇到山贼、寺庙附近遇到僧兵，游戏后期遇到的使用火药的赤备队等。</li>
-      <li>我们也可以运用随机的手法，扩充单类敌人的体验，让不同感受的同种敌人交替出现</li>
-      <li>比如外观上的差异、体型的差异、武器的差异等</li>
-    </ul>
-  </li>
-  <li>从怪物自身上来看
-    <ul>
-      <li>我们需要生产怪物符合怪物性格的整套动作资产</li>
-      <li>比如休闲状态、攻击状态的移动、转换，特色的攻击动作、“打铁”玩法的格挡动作，其他演出动作等</li>
-      <li>我们可以用随机的手法，使得单个动作能有更为丰富的体验</li>
-      <li>比如移动的方向、时间、结束距离，是否衔接移动等等；动作直接的组合，以何等行为逻辑、哪些攻击手法组合呈现给玩家，也大有可为。</li>
-    </ul>
-  </li>
-</ul>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (8).JPG" alt="" /></p>
-
-<p>提到AI中的随机，反应性和随机性是绕不开的话题。</p>
-
-<p>这两种特性，或者说思考方式，是AI最常见的逻辑组织方式，配合差异性的动作，能够构建出表现丰富的AI体验，下面我们给出一个具体的例子：</p>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (9).JPG" alt="" /></p>
-
-<blockquote>
-  <p>只狼因为资源格式和数据组织解构大体沿用黑魂，可以用工具进行拆包、反编译得到其具体逻辑配置。
-展示的数据略去繁琐的处理过程，仅对设计进行讨论。</p>
-</blockquote>
-
-<p>以只狼中的某只基础小怪为例，它有8种基础行为（动作资源 + 逻辑脚本配置，最终构成基础行为）。</p>
-
-<p>这些行为<strong><u>以距离为条件划分</u></strong>：</p>
-
-<ul>
-  <li>距离较远：靠近</li>
-  <li>距离偏远：靠近 + 靠近攻击</li>
-  <li>距离适中：攻击</li>
-  <li>距离过近：攻击 + 远离攻击 + 远离</li>
-</ul>
-
-<p>类似的，后面我们还将看到BOSS的AI。</p>
-
-<h2 id="随机的类型">随机的类型</h2>
-
-<blockquote>
-  <p>不重复别人是重要的。</p>
-
-  <p>不重复自己是尤其重要的。——（中国作家）陈祖芬</p>
-</blockquote>
-
-<p>在了解了随机的目的与基本用法后，本章我们开始讨论具体的随机概率模型。</p>
-
-<h3 id="均等分布">均等分布</h3>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (11).JPG" alt="" /></p>
-
-<p>均等概率自然是最基础的随机模型。</p>
-
-<p>大部分时候，我们使用的都是离散的均等随机，即便是如图二，也只是把1标准单位拆为了1000份。</p>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (12).JPG" alt="" /></p>
-
-<p>以弦一郎的AI为例，在特定距离内，拥有6种行为，按照预期概率进行分布。</p>
-
-<p>值得一说的是：</p>
-
-<ul>
-  <li>不同环境的新判别标准
-    <ul>
-      <li>引入了除了距离外的新因素：架势值</li>
-      <li>就像一般会用的血量、时间等</li>
-    </ul>
-  </li>
-  <li>随时间的差异概率模型（解决长时间的内容疲倦问题）
-    <ul>
-      <li>弦一郎有三个阶段，三个阶段的招式是有差异的</li>
-      <li>基本上难度是递进的，以至于在第三阶段见到第一阶段的技能会觉得处理得十分得心应手</li>
-    </ul>
-  </li>
-</ul>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (13).JPG" alt="" /></p>
-
-<p>最后我们对固定概率随机进行一个简单的小结。</p>
-
-<h3 id="高斯分布">高斯分布</h3>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (14).JPG" alt="" /></p>
-
-<p>正态分布本质上是一种对自然的拟合：</p>
-
-<ul>
-  <li>图1：
-    <ul>
-      <li>我们进行1000次随机1-6的掷骰子，得到的统计图</li>
-    </ul>
-  </li>
-  <li>图2：
-    <ul>
-      <li>我们每次进行3个1-6的掷骰子，将结果求和，重复1000*6*3次，得到的统计图</li>
-    </ul>
-  </li>
-  <li>图3：
-    <ul>
-      <li>我们将3个扩大到10个，次数扩大到1000*6*10次，得到的统计图</li>
-    </ul>
-  </li>
-</ul>
-
-<p>你会发现，当大量因素都对结果有或大或小影响，最终结果的将会呈现出正态分布。</p>
-
-<p>就像自然界中植物最终的高度，可能受到种子、土壤、水分、空气、光照等等因素的影响。最后综合到一起，就会变成正态分布。</p>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (15).JPG" alt="" /></p>
-
-<p>很遗憾，这里本来是想找一些<strong><u>使用正态分布产生不同体型的怪物</u></strong>的例子的，但是作者失败了。</p>
-
-<p>在只狼的樱龙BOSS战的前期阶段，需要杀大量的“小龙人”，很可惜，小龙人长得一样高。甚至有种诡异的美感</p>
-
-<p>在黑暗之魂3的幽邃主教群BOSS战中，需要杀大量的主教，很可惜，主教做了几种体型，前后参差，但是相同体型一样高。</p>
-
-<p>不得不再说一次，随机只是一种做法，采用不采用都可以，满足目标体验需求即可。</p>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (16).JPG" alt="" /></p>
-
-<p>另外一边，怪物猎人：世界，中的大小金可以说是一个极佳的例子。</p>
-
-<p>本身同一只怪物狩猎时间较长，又需要反复狩猎，于是引入了差异体型和对差异体型追求的大小金玩法。</p>
-
-<p>虽然无从论证到底是不是正态分布（刷大小金的过程中只要不是目标体型就重置了OTZ），但是呈正态分布大致也是没问题的。</p>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (17).JPG" alt="" /></p>
-
-<p>自然而然地，想到了环境生物的差异体型。</p>
-
-<p>怪物猎人：世界中会有普通或稀有的环境生物，也有各自的体型，也有一部分玩家会去追求这些。比如图上的摇曳鳗女王，只在夜晚的陆珊瑚地图出现（虽然大概是王溟波任务100%刷出），想要刷出来还是要费些功夫的。</p>
-
-<p>那么只狼中也是有杀锦鲤、收集鳞片的，理论上给鱼做一些随机体型，也是不错的，但是我们发现只狼中把体型这件事做得更为夸张，甚至还有剧情和选择，最后结局十分具有冲击性。</p>
-
-<p>这其实还是定制内容或者填充内容的选择问题，两者如上文所言，各有优劣。</p>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (18).JPG" alt="" /></p>
-
-<p>那么对正态分布做一个总结，如上图。</p>
-
-<p>需要一说的是，LOD级别，指的是不会被玩家注意到，去留意其行踪的填充级别（否则会穿帮！）</p>
-
-<p>右边我们以子弹命中为例子来更加具体的对比一下随机分布与正态分布：</p>
-
-<ul>
-  <li>随机分布永远都在指定范围内，而正态分布可能超出屏幕（三个标准差）外</li>
-  <li>随机分布均匀分布，而正态分布从中间到四周由密集到稀疏</li>
-</ul>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (19).JPG" alt="" /></p>
-
-<p>这里也把生产过程做一个呈现，留意最终的随机生成方法：</p>
-
-<ul>
-  <li>实现了个画三个圆和指定数据点的绘制函数</li>
-  <li>实现了个极坐标系转平面直角坐标系的绘制函数</li>
-  <li>实现了以指定方法生成指定个数，并绘制出来的生成函数</li>
-</ul>
-
-<p>接下来我们指定生成方法和个数：</p>
-
-<ul>
-  <li>随机分布：
-    <ul>
-      <li>随机角度0-360度</li>
-      <li>随机距离0-最大值</li>
-    </ul>
-  </li>
-  <li>正态分布：
-    <ul>
-      <li>随机角度0-360度（没错！角度仍然是均等随机！）</li>
-      <li>正态分布距离，最大值为三个标准差</li>
-    </ul>
-  </li>
-</ul>
-
-<p>就可以得到对应的分布图。</p>
-
-<h3 id="柏林噪声">柏林噪声</h3>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (20).JPG" alt="" /></p>
-
-<p>到这里开始内容就逐渐“玄幻”起来，理想噪声的标准听起来，大概像是是：变化与方向无关；没有剧变；变化与距离无关（如果不对也很正常，门外汉的理解）。</p>
-
-<p>下方的折线图可以看出，柏林噪声或者柏林随机最重要的特性：连续！前面的随机都是离散的，会突变的。</p>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (21).JPG" alt="" /></p>
-
-<p>这里给出两个可能的使用场景，就如之前的鱼一样，这里只是可以这么做，实际需不需要做，需要根据需求判断。</p>
-
-<p>只狼中有需要在白蛇神眼皮底下开溜的流程，恶魔之魂中的龙神boss战也是类似的玩法，这里两者都是默认固定周期摆动，实际上头部的旋转就可以使用柏林噪声的连续随机，当流程时间被拉得更长，做固定的几种动作已经没法满足，或者需要做大量随机待机的表现，就可以使用随机来“填充内容”。</p>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (22).JPG" alt="" /></p>
-
-<p>总结一下柏林噪声的随机，最大的特征就是连续而不是离散，可以用在各种连续情况，右边介绍了一些基础的控制方式，这里不进行过多展开，有需要时再查阅即可。</p>
-
-<p>现在柏林噪声更多的用在随机地图生成等场合，同样也需求连贯的随机。</p>
-
-<h2 id="虚伪的随机">虚伪的随机</h2>
-
-<blockquote>
-  <p>正确的结果，是从大量错误中得出来的；</p>
-
-  <p>没有大量错误作台阶，也就登不上最后正确结果的高座。——钱学森</p>
-</blockquote>
-
-<h3 id="随机值筛选">随机值筛选</h3>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (24).JPG" alt="" /></p>
-
-<p>想要说明白计算机的伪随机、或者自然环境下的真随机，有时并不是我们想要的随机这一点，有些复杂，会比较类似复杂的逻辑下特定情况出现的“人工愚蠢”的现象，这里作者用一个亲身经历的例子来说明这一点。</p>
-
-<p>某天晚上，作者在看所在项目的制作人体验作者配置的AI，好巧不巧，中间的AI机缘巧合连续闪避了多次，于是制作人提出致命问题：为什么它闪避了这么多次？这合理吗？</p>
-
-<p>当然，这是作者配置的问题，有很多方法可以解决，但是第一反应下，假设这种情况的只有跑开和闪避两种行为，概率五五开，大量试验下是一定会出现这种连续触发闪避的。</p>
-
-<p>作者自然不能跟制作人讲，这是一个统计学问题，你也不能跟你的玩家讲，“你这是个概率问题，我的AI逻辑十分精妙，这只是个巧合！”。</p>
-
-<p>所以我们引入了“筛选”的概念，逻辑十分好懂，发现不合适的，就打回去，重新随。</p>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (25).JPG" alt="" /></p>
-
-<p>比较复杂的地方在于，针对各种随机数据类型或者随机模型，如何判断是否不合适，上图给出了一些判断条件的例子。</p>
-
-<p>大概的通用规律是：</p>
-
-<ul>
-  <li>不可以重复出现、间隔出现</li>
-  <li>不可以同趋势出现、连续将近</li>
-  <li>统计学意义上大体随机</li>
-</ul>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (26).JPG" alt="" /></p>
-
-<p>当然，规则也不是越复杂越好的，过于复杂可能导致随机本身失去意义。</p>
-
-<p>可以使用一些工具检验你的检查条件是否会破坏随机完整性，已经有比较成熟的方案了，这里不展开叙述。</p>
-
-<h2 id="总结与参考">总结与参考</h2>
-
-<p><img src="/assets/img/skill/RandomInGameAI/1 (1).JPG" alt="" /></p>
-
-<p>最后对本文的内容做一个总结：如上图。</p>
-
-<p>还是想再次重申：随机是一种方法，它为了我们的目标体验而服务。</p>
-
-<p>若干参考，如下：</p>
-
-<ul>
-  <li><a href="https://github.com/jskyzero/GameAI.Random/blob/master/GameAI.Random.ipynb">文中模拟试验的源码</a>，<a href="https://jskyzero.github.io/GameAI.Random/">网页版</a></li>
-  <li><a href="http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter03_Advanced_Randomness_Techniques_for_Game_AI.pdf">Advanced Randomness Techniques for Game AI: Gaussian Randomness, Filtered Randomness, and Perlin Noise, Steve Rabin, Fernando Silva, Jay Goldblatt</a></li>
-</ul>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文会深入讲解游戏AI的若干随机算法，并附带通俗易懂的例子，严谨的模拟试验，和技法实用运用指南。]]></summary></entry></feed>
+<p>就这样吧。</p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些摘抄记录、看到的有意思的对人生有启迪的话、一些网络上看到的言论。]]></summary></entry></feed>
