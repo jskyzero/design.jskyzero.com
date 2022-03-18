@@ -15,10 +15,16 @@ categories: [杂谈]
 
 
 + [日本剑术专家重现仁王2招式动作](https://www.bilibili.com/video/BV11q4y1f7k4)
+  + 如何描述招式的动作？
+    + “两次从下而上的攻击，袈裟斩（kesagiri），横切斩（yokogiri）”
 + [黑暗之魂3 冲击力-韧性机制](https://www.bilibili.com/video/av84266583)
+  + 冲击力-硬直对应表，多种情况下换表：比如出招霸体，韧性：韧性清空时换表
+  + 魂1：大多数只有空与非空；只狼：大多数只有冲击力。
++ [剑道基础教学](https://www.bilibili.com/video/BV1ox411b77h)
+  + 构、击打
 
 
-## 2019.10~>2020.3
+## 2019.10~>2020. 3
 
 + Persona 5 and Jungian Psychology
   + 人格面具和荣格心理学
