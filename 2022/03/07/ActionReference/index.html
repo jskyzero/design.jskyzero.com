@@ -45,6 +45,7 @@
   <ul class="md-toc">
   <li class="md-toc-h1"><a href="#动作设计参考库">动作设计参考库</a>
     <ul>
+      <li class="md-toc-h2"><a href="#标准体验">标准体验</a></li>
       <li class="md-toc-h2"><a href="#最新体验的">最新体验的</a>
         <ul>
           <li class="md-toc-h3"><a href="#老头环">老头环</a></li>
@@ -93,6 +94,29 @@
 <p>本文打算记录大量游戏中的动作设计。用于相关参考。</p>
 
 <h1 id="动作设计参考库">动作设计参考库</h1>
+
+<h2 id="标准体验">标准体验</h2>
+
+<ul>
+  <li>移动（连续控制）
+    <ul>
+      <li>远离攻击：使用若干手段远离或者抵消减弱敌方攻击。</li>
+      <li>打点控制：（精确地）调整人物位置、攻击朝向等，使得下次攻击刚好命中目标部位</li>
+    </ul>
+  </li>
+  <li>按键（离散按下）
+    <ul>
+      <li>搓招/Combo类：指定时间窗口连续完成一系列指令输入</li>
+      <li>当身技/返技类：配合敌方动作判定，自身动作可以产生额外效果</li>
+    </ul>
+  </li>
+  <li>决策（脑内思考）
+    <ul>
+      <li>抉：结合当前情景，从候选行为中选择最优行为</li>
+      <li>量表计算类：（显性或者隐性地）统计攻击造成的计数量表增加，并合理利用计数满额后的硬直等。</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="最新体验的">最新体验的</h2>
 
@@ -491,6 +515,7 @@
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+29 Mar 2022 - jskyzero - 📝 add 标准体验
 14 Mar 2022 - jskyzero - 📝 add content
 10 Mar 2022 - jskyzero - 🎨 change file name
 

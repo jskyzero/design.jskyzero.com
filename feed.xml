@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-03-18T08:09:09+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-03-29T05:00:48+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">宅向内容设计</title><link href="https://design.jskyzero.com/2022/03/16/otaku/" rel="alternate" type="text/html" title="宅向内容设计" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/otaku</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/otaku/"><![CDATA[<p>本文汇总一些宅向内容设计，用于回味参考。</p>
 
 <h1 id="宅向内容设计">宅向内容设计</h1>
@@ -181,6 +181,29 @@
 </ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些游戏文化科普、设计解析等视频中的知识点，方便复习查阅。]]></summary></entry><entry><title type="html">动作设计参考库</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作设计参考库" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<p>本文打算记录大量游戏中的动作设计。用于相关参考。</p>
 
 <h1 id="动作设计参考库">动作设计参考库</h1>
+
+<h2 id="标准体验">标准体验</h2>
+
+<ul>
+  <li>移动（连续控制）
+    <ul>
+      <li>远离攻击：使用若干手段远离或者抵消减弱敌方攻击。</li>
+      <li>打点控制：（精确地）调整人物位置、攻击朝向等，使得下次攻击刚好命中目标部位</li>
+    </ul>
+  </li>
+  <li>按键（离散按下）
+    <ul>
+      <li>搓招/Combo类：指定时间窗口连续完成一系列指令输入</li>
+      <li>当身技/返技类：配合敌方动作判定，自身动作可以产生额外效果</li>
+    </ul>
+  </li>
+  <li>决策（脑内思考）
+    <ul>
+      <li>抉：结合当前情景，从候选行为中选择最优行为</li>
+      <li>量表计算类：（显性或者隐性地）统计攻击造成的计数量表增加，并合理利用计数满额后的硬直等。</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="最新体验的">最新体验的</h2>
 
