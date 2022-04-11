@@ -1,9 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-08T10:18:27+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">虚幻5游乐场</title><link href="https://design.jskyzero.com/2022/04/08/UE5Playground/" rel="alternate" type="text/html" title="虚幻5游乐场" /><published>2022-04-08T00:00:00+00:00</published><updated>2022-04-08T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/08/UE5Playground</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/08/UE5Playground/"><![CDATA[<p>心动不如行动，现在下载虚幻5上车。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-11T12:07:10+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">简明虚幻5教程</title><link href="https://design.jskyzero.com/2022/04/08/UE5Playground/" rel="alternate" type="text/html" title="简明虚幻5教程" /><published>2022-04-08T00:00:00+00:00</published><updated>2022-04-08T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/08/UE5Playground</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/08/UE5Playground/"><![CDATA[<p>虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。</p>
 
-<h1 id="虚幻5游乐场">虚幻5游乐场</h1>
+<h1 id="简明虚幻5教程">简明虚幻5教程</h1>
 
-<h2 id="ai">AI</h2>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[心动不如行动，现在下载虚幻5上车。]]></summary></entry><entry><title type="html">游戏相关视频</title><link href="https://design.jskyzero.com/2022/03/16/game_video/" rel="alternate" type="text/html" title="游戏相关视频" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/game_video</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/game_video/"><![CDATA[<p>本文汇总一些游戏文化科普、设计解析等视频中的知识点，方便复习查阅。</p>
+<h2 id="专题">专题</h2>
+
+<h3 id="加入ai让你的游戏物体自己动起来">加入AI，让你的游戏物体自己动起来</h3>
+
+<p>本节介绍：</p>
+
+<ol>
+  <li>虚幻引擎中的AI架构概述</li>
+  <li>编写黑板与行为树AI</li>
+  <li>编写自定义节点</li>
+</ol>
+
+<h4 id="概要">概要</h4>
+
+<p>新建的特定类型的项目，默认场景一般都会有供活动的场景、一些光照等美学表现、玩家和系统逻辑。简单来说，我们想给这些加个会动的玩意，就像我们的玩家，但是它是自己动（通过AI）。</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js"></script>
+<div class="mermaid">
+graph TD
+    A[场景]
+    A --&gt; B1[场景物体]
+    A --&gt; B2[光照]
+    A --&gt; B3[玩家]
+    A --&gt;|试图新增| B4[会动的角色]
+</div>
+
+<p>以动作类游戏举例，你在关卡中遇到的怪物、BOSS等，本质都是<code class="language-plaintext highlighter-rouge">会动的角色</code>。</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js"></script>
+<div class="mermaid">
+graph LR
+    B4[NPC]
+
+    B4 --&gt;|关联| B5[蓝图]
+    B5 --&gt;|启动| C[AI]
+
+    C --&gt;|使用| C1[行为树]
+    C --&gt;|使用| C2[黑板变量]
+
+    C1 --&gt;|支持| D1[自定义节点]
+</div>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。]]></summary></entry><entry><title type="html">游戏相关视频</title><link href="https://design.jskyzero.com/2022/03/16/game_video/" rel="alternate" type="text/html" title="游戏相关视频" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/game_video</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/game_video/"><![CDATA[<p>本文汇总一些游戏文化科普、设计解析等视频中的知识点，方便复习查阅。</p>
 
 <!--more-->
 
