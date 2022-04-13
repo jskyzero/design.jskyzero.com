@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-12T05:37:23+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-13T05:29:57+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">简明虚幻5教程</title><link href="https://design.jskyzero.com/2022/04/08/UE5Playground/" rel="alternate" type="text/html" title="简明虚幻5教程" /><published>2022-04-08T00:00:00+00:00</published><updated>2022-04-08T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/08/UE5Playground</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/08/UE5Playground/"><![CDATA[<p>虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。</p>
 
 <h1 id="简明虚幻5教程">简明虚幻5教程</h1>
@@ -303,7 +303,7 @@ graph TD
   <li>投技的实现：投技框与受击框有交集……（后略）</li>
 </ul>
 
-<h3 id="典型体验">典型体验</h3>
+<h4 id="典型体验">典型体验</h4>
 
 <p>玩家不断在重复着：感知、认知、行动的过程。</p>
 
@@ -331,7 +331,7 @@ graph TD
     <tr>
       <td>行动</td>
       <td>搓招/Combo类</td>
-      <td>指定时间窗口连续完成一系列指令输入</td>
+      <td>连续完成一系列指令输入，通常控制在僵直时窗口内，输入方式可能会需要摇杆组合按键</td>
     </tr>
     <tr>
       <td>感知</td>
@@ -341,7 +341,7 @@ graph TD
     <tr>
       <td>认知</td>
       <td>抉</td>
-      <td>结合当前情景，从候选行为中选择最优行为</td>
+      <td>结合当前情景——多为敌我位置、状态，从可选行为中选择最优行为</td>
     </tr>
     <tr>
       <td>认知</td>
@@ -351,7 +351,17 @@ graph TD
   </tbody>
 </table>
 
+<h4 id="典型打击感">典型打击感</h4>
+
+<ul>
+  <li>攻击动作：开始、攻击、结束</li>
+  <li>攻击特效：（略）</li>
+  <li>受击动作：（略）</li>
+</ul>
+
 <h2 id="参考库">参考库</h2>
+
+<p>本部分我们开始正式的动作积累与讨论：</p>
 
 <h3 id="最新体验的">最新体验的</h3>
 
@@ -483,7 +493,7 @@ graph TD
 
 <h4 id="4大act">4大ACT</h4>
 
-<h6 id="鬼泣">鬼泣</h6>
+<h5 id="鬼泣">鬼泣</h5>
 
 <ul>
   <li>分类：
@@ -506,7 +516,7 @@ graph TD
   </li>
 </ul>
 
-<h6 id="战神">战神</h6>
+<h5 id="战神">战神</h5>
 
 <ul>
   <li>动作：
@@ -518,7 +528,7 @@ graph TD
   </li>
 </ul>
 
-<h6 id="猎天使魔女">猎天使魔女</h6>
+<h5 id="猎天使魔女">猎天使魔女</h5>
 
 <ul>
   <li>概览
@@ -529,7 +539,7 @@ graph TD
   </li>
 </ul>
 
-<h6 id="忍者龙剑传">忍者龙剑传</h6>
+<h5 id="忍者龙剑传">忍者龙剑传</h5>
 
 <ul>
   <li>概览
