@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-15T03:59:08+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-15T04:20:58+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">简明虚幻5教程</title><link href="https://design.jskyzero.com/2022/04/08/UE5Playground/" rel="alternate" type="text/html" title="简明虚幻5教程" /><published>2022-04-08T00:00:00+00:00</published><updated>2022-04-08T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/08/UE5Playground</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/08/UE5Playground/"><![CDATA[<p>虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。</p>
 
 <h1 id="简明虚幻5教程">简明虚幻5教程</h1>
@@ -750,6 +750,54 @@ graph TD
 <h4 id="原神">原神</h4>
 
 <h3 id="moba游戏">MOBA游戏</h3>
+
+<h4 id="王者荣耀">王者荣耀</h4>
+
+<ul>
+  <li><a href="https://pvp.qq.com/web201605/herolist.shtml">王者荣耀首页 &gt; 英雄介绍</a></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>英雄</th>
+      <th>选项</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>桑启</td>
+      <td>概览</td>
+      <td>法杖；绿色，自然；草，飞来飞去</td>
+    </tr>
+    <tr>
+      <td>暃（Fēi）</td>
+      <td>概览</td>
+      <td>弯刀；王子，华贵；可以上墙</td>
+    </tr>
+    <tr>
+      <td>澜</td>
+      <td>概览</td>
+      <td>双刀；刺客，蓝色；变成鲨鱼</td>
+    </tr>
+    <tr>
+      <td>夏侯惇</td>
+      <td>概览</td>
+      <td>大刀；肉盾；护盾、眩晕</td>
+    </tr>
+    <tr>
+      <td>芈月</td>
+      <td>概览</td>
+      <td>法球；蝙蝠、紫色；吸血、无法选中</td>
+    </tr>
+    <tr>
+      <td>瑶</td>
+      <td>概览</td>
+      <td>法杖；法球；附身</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="dota2">DOTA2</h4>
 
