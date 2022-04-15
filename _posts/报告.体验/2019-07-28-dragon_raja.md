@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "《龍族幻想》體驗報告"
+title: "设计漫谈：龙族幻想"
 featured-img: dragon_raja
 mathjax: true
 categories: [体验报告]

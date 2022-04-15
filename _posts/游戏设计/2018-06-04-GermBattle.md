@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GermBattle 项目总结
+title: 宝可梦 X AR：GermBattle
 featured-img: germbattle
 mathjax: true
 categories: [游戏设计]

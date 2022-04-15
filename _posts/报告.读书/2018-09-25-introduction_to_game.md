@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《游戏专业概论》总结
+title: 学术视角：《游戏专业概论》
 featured-img: introduction_to_game
 mathjax: true
 categories: [读书报告]

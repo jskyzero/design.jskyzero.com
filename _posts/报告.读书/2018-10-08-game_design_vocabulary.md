@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《游戏设计词汇表》总结
+title: 设计工具书：《游戏设计词汇表》
 featured-img: vocabulary
 mathjax: true
 categories: [读书报告]

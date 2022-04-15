@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《自制力》摘抄
+title: 获得《自制力》
 featured-img: possessiveness
 mathjax: true
 categories: [读书报告]

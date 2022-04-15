@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 游戏相关视频
+title: 分析游戏的文章的笔记
 featured-img: bg3
 mathjax: true
 categories: [杂谈]

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: JohnDoeWorld 项目总结
+title: 战斗 X 冒险：JohnDoeWorld
 featured-img: JohnDoeWorld
 mathjax: true
 categories: [游戏设计]
 ---
 
-[JohnDoeWorld](https://github.com/jskyzero/JohnDoeWorld)基本上是我和+C老哥两个人做的游戏，是ID@Xbox梦想校园行比赛的参赛作品，仅通过初赛。
+[JohnDoeWorld](https://github.com/jskyzero/JohnDoeWorld)基本上是我和+C老哥两个人做的游戏，是ID@ X box梦想校园行比赛的参赛作品，仅通过初赛。
 
 <!--more-->
 
@@ -31,7 +31,7 @@ categories: [游戏设计]
   + 技能编程系统
   + 良好的手感
   + 完整的流程
-+ 《杜某的世界》是ID@Xbox梦想校园行比赛活动的参赛作品。
++ 《杜某的世界》是ID@ X box梦想校园行比赛活动的参赛作品。
 
 
 ## MDA 分析

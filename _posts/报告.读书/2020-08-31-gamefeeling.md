@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《游戏感》总结
+title: 拆解游戏：《游戏感》
 featured-img: gamefeeling
 mathjax: true
 categories: [读书报告]

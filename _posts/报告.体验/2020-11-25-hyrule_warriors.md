@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "《塞尔达无双》體驗報告"
+title: "设计漫谈：塞尔达无双"
 featured-img: hyrule_warriors
 mathjax: true
 categories: [体验报告]

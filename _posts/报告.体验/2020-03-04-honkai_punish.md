@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "《崩坏3》體驗報告"
+title: "设计漫谈：崩三&战双"
 featured-img: honkai_punishi
 mathjax: true
 categories: [体验报告]
