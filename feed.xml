@@ -1,5 +1,180 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-15T04:24:04+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">简明虚幻5教程</title><link href="https://design.jskyzero.com/2022/04/08/UE5Playground/" rel="alternate" type="text/html" title="简明虚幻5教程" /><published>2022-04-08T00:00:00+00:00</published><updated>2022-04-08T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/08/UE5Playground</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/08/UE5Playground/"><![CDATA[<p>虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-15T05:10:45+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">学习的一些方法论</title><link href="https://design.jskyzero.com/2022/04/15/study/" rel="alternate" type="text/html" title="学习的一些方法论" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/study</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/study/"><![CDATA[<h1 id="学习一个新概念">学习一个新概念</h1>
+
+<p>我们说过知识的重要性，而且学习作为获取知识的途径，自然也是相当重要的，本文试图将学习划分为阶段，解决一些学习上的常见问题：</p>
+
+<ul>
+  <li>没有彻底掌握</li>
+  <li>不会学以致用</li>
+  <li>没法举一反三</li>
+</ul>
+
+<h2 id="循序渐进的阶段">循序渐进的阶段</h2>
+
+<p>任何一件事都是循序渐进的、无法一蹴而就的，我们可以把复杂的目标拆分为阶段，完成每个阶段，最终完成大的目标。</p>
+
+<p><img src="/assets/img/books/reading/2-1-1.png" alt="" /></p>
+
+<p>对于学习也是一样。</p>
+
+<h2 id="学习的具体阶段">学习的具体阶段</h2>
+
+<p><img src="/assets/img/books/reading/2-1-2.png" alt="" /></p>
+
+<ul>
+  <li>粗览
+    <ul>
+      <li>快速浏览概念内容</li>
+      <li>第一印象，初步认知</li>
+      <li>核心概念</li>
+    </ul>
+  </li>
+  <li>建模
+    <ul>
+      <li>完全理解概念内容</li>
+      <li>使用列表、脑图、等概念组织方式</li>
+      <li>关注细节内容的理解</li>
+    </ul>
+  </li>
+  <li>自述
+    <ul>
+      <li>能完整复述概念内容</li>
+      <li>找到内容间的线索</li>
+      <li>完整用自己的话复述内容</li>
+    </ul>
+  </li>
+  <li>手册
+    <ul>
+      <li>给出无脑使用概念的规则</li>
+      <li>总结问题情形，解决方式</li>
+      <li>泛用性，无脑性</li>
+    </ul>
+  </li>
+  <li>联系
+    <ul>
+      <li>组合跨领域理解概念</li>
+      <li>同领域其他概念的异同</li>
+      <li>不同领域概念层的类比</li>
+    </ul>
+  </li>
+  <li>阶
+    <ul>
+      <li>概念上下层</li>
+      <li>下层概念</li>
+      <li>上层逻辑</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+  <li><a href="https://zhuanlan.zhihu.com/p/100121940">罗斯福专业法、费曼4步学习法、达芬奇笔记</a></li>
+</ul>
+
+<h1 id="练习与复习">练习与复习</h1>
+
+<p>本文试图简单论证练习和复习的重要性和一些可行的具体措施。</p>
+
+<ul>
+  <li>练习：实际的使用以检验知识的掌握，在实际练习中加深理解。</li>
+  <li>复习：想办法让知识在脑海中停留的更久一些。</li>
+</ul>
+
+<h2 id="练习">练习</h2>
+
+<ul>
+  <li>练习的时机：“种下一棵树最好是十年前，其次是现在。”</li>
+  <li>练习的方式：从实际出发，提出知识的可能运用场景。</li>
+  <li>练习的反馈：从问题的解决中找到不足，加以改进。</li>
+</ul>
+
+<h2 id="复习">复习</h2>
+
+<ul>
+  <li><a href="https://zhuanlan.zhihu.com/p/25050071">人类记忆模型</a>：</li>
+</ul>
+
+<p><img src="https://pic4.zhimg.com/80/v2-6d66188890ea70ececb529bb77cae2d3_1440w.jpg" alt="" /></p>
+
+<ul>
+  <li><a href="https://zh.wikipedia.org/wiki/%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF">艾宾浩斯遗忘曲线</a></li>
+</ul>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ForgettingCurve.svg/500px-ForgettingCurve.svg.png" alt="" /></p>
+
+<ul>
+  <li>
+    <p>选取合适的时间节点：当日，本周，本月。</p>
+  </li>
+  <li>
+    <p>采取合适的检验手法：复述、练习等。</p>
+  </li>
+</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[学习一个新概念]]></summary></entry><entry><title type="html">如何从「生活」中找参考</title><link href="https://design.jskyzero.com/2022/04/15/life/" rel="alternate" type="text/html" title="如何从「生活」中找参考" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/life</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/life/"><![CDATA[<!-- # 学会生活
+
+文明是一段时间内一个区域的人的生活状态，那么生活究竟是什么呢。
+
+活着又是什么呢，当下在做的事情，感受与意义，很容易让人迷失，对初入社会切换成社畜的学生而言。
+
+这里把生活分为几个方面
+
+## 衣
+
+能应对各种场景的着装储备。
+
++ 不同场景
+  + 温度：夏季、冬季
+  + 场合：日常、居家睡衣、严肃场合、运动衣
++ 使用&维护
+  + 合适的换衣、洗涤周期。
+  + 合适的购置新衣服周期。
+
+## 食
+
++ 一周两次水果拼盘
++ 多吃蔬菜
+
+
+## 住
+
++ 空间
+  + 衣柜
+  + 床
+  + 空闲空间
+  + 置物桌
++ 设施要求
+  + 窗
+  + 空调
+  + 洗衣机
+  + 卫生间、厨房
+  + 高质量网络
+
+
+## 行
+
++ 熟悉公共交通网络
+
+
+## 一些提升生活质量的行为
+
++ 放空早睡
++ 热水泡脚
++ 保持整理内务的频率 -->
+
+<h1 id="着装方法">着装方法</h1>
+
+<ul>
+  <li>和服打结
+    <ul>
+      <li><a href="https://sgm.co.jp/useful/kitsuke_obi/otoko/">男結び（角帯結び）</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1jx411S7i8">和服男士袴的穿着方法 ：浪人结、十文字纽结</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="着装搭配">着装搭配</h2>
+
+<p><img src="https://cdn.wimg.jp/coordinate/rke8s9/20181221101341434/20181221101341434_1000.jpg" alt="" /></p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[&lt;!– # 学会生活]]></summary></entry><entry><title type="html">简明虚幻5教程</title><link href="https://design.jskyzero.com/2022/04/08/UE5Playground/" rel="alternate" type="text/html" title="简明虚幻5教程" /><published>2022-04-08T00:00:00+00:00</published><updated>2022-04-08T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/08/UE5Playground</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/08/UE5Playground/"><![CDATA[<p>虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。</p>
 
 <h1 id="简明虚幻5教程">简明虚幻5教程</h1>
 
@@ -45,7 +220,7 @@ graph LR
     C --&gt;|使用| C2[黑板变量]
 
     C1 --&gt;|支持| D1[自定义节点]
-</div>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。]]></summary></entry><entry><title type="html">游戏相关视频</title><link href="https://design.jskyzero.com/2022/03/16/game_video/" rel="alternate" type="text/html" title="游戏相关视频" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/game_video</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/game_video/"><![CDATA[<p>本文汇总一些游戏文化科普、设计解析等视频中的知识点，方便复习查阅。</p>
+</div>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。]]></summary></entry><entry><title type="html">分析游戏的文章的笔记</title><link href="https://design.jskyzero.com/2022/03/16/game_video/" rel="alternate" type="text/html" title="分析游戏的文章的笔记" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/game_video</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/game_video/"><![CDATA[<p>本文汇总一些游戏文化科普、设计解析等视频中的知识点，方便复习查阅。</p>
 
 <!--more-->
 
@@ -124,9 +299,9 @@ graph LR
       <li>侦探与冒险精神主角特征</li>
     </ul>
   </li>
-</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些游戏文化科普、设计解析等视频中的知识点，方便复习查阅。]]></summary></entry><entry><title type="html">宅向内容设计</title><link href="https://design.jskyzero.com/2022/03/16/otaku/" rel="alternate" type="text/html" title="宅向内容设计" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/otaku</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/otaku/"><![CDATA[<p>本文汇总一些宅向内容设计，用于回味参考。</p>
+</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些游戏文化科普、设计解析等视频中的知识点，方便复习查阅。]]></summary></entry><entry><title type="html">从GUNDAM的设计中学到了点啥</title><link href="https://design.jskyzero.com/2022/03/16/gunpla/" rel="alternate" type="text/html" title="从GUNDAM的设计中学到了点啥" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/gunpla</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/gunpla/"><![CDATA[<!-- 本文汇总一些宅向内容设计，用于回味参考。 -->
 
-<h1 id="宅向内容设计">宅向内容设计</h1>
+<h1 id="从gundam的设计中学到了点啥">从GUNDAM的设计中学到了点啥</h1>
 
 <h2 id="gundam与uc纪元">GUNDAM与UC纪元</h2>
 
@@ -225,7 +400,7 @@ graph LR
       <td>……</td>
     </tr>
   </tbody>
-</table>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些宅向内容设计，用于回味参考。]]></summary></entry><entry><title type="html">动作游戏设计参考</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作游戏设计参考" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<p>本文将从动作游戏的核心体验出发，分析记录一些优秀游戏的动作种类，用于设计参考。</p>
+</table>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">动作游戏设计参考</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作游戏设计参考" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<p>本文将从动作游戏的核心体验出发，分析记录一些优秀游戏的动作种类，用于设计参考。</p>
 
 <h1 id="动作游戏设计参考">动作游戏设计参考</h1>
 
@@ -1144,7 +1319,7 @@ graph TD
 
 <p><img src="/assets/img/gameplay/mhwi/37.jpg" alt="" /></p>
 
-<p><img src="/assets/img/gameplay/mhwi/38.jpg" alt="" /></p>]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[体系化拆解《怪物猎人 世界：冰原》，并从中学习。]]></summary></entry><entry><title type="html">《自制力》摘抄</title><link href="https://design.jskyzero.com/2021/11/14/possessiveness/" rel="alternate" type="text/html" title="《自制力》摘抄" /><published>2021-11-14T00:00:00+00:00</published><updated>2021-11-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/11/14/possessiveness</id><content type="html" xml:base="https://design.jskyzero.com/2021/11/14/possessiveness/"><![CDATA[<p>“我别无选择，因为我不能变得贫穷或者平凡，这不是我的风格！”本书教会你：如何控制你自己。</p>
+<p><img src="/assets/img/gameplay/mhwi/38.jpg" alt="" /></p>]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[体系化拆解《怪物猎人 世界：冰原》，并从中学习。]]></summary></entry><entry><title type="html">获得《自制力》</title><link href="https://design.jskyzero.com/2021/11/14/possessiveness/" rel="alternate" type="text/html" title="获得《自制力》" /><published>2021-11-14T00:00:00+00:00</published><updated>2021-11-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/11/14/possessiveness</id><content type="html" xml:base="https://design.jskyzero.com/2021/11/14/possessiveness/"><![CDATA[<p>“我别无选择，因为我不能变得贫穷或者平凡，这不是我的风格！”本书教会你：如何控制你自己。</p>
 
 <!--more-->
 
@@ -1457,390 +1632,4 @@ graph TD
   <li>在本质上，成就感又来源于人与人之间的竞争意识。</li>
 </ul>
 
-<p>简短的对阅读体验的评价：我认为这本书在我心目中的地位可以和《代码补全》并列，如果要给人推荐书籍，我会推荐这两本。</p>]]></content><author><name></name></author><category term="读书报告" /><summary type="html"><![CDATA[“我别无选择，因为我不能变得贫穷或者平凡，这不是我的风格！”本书教会你：如何控制你自己。]]></summary></entry><entry><title type="html">《只狼》内容设计分析</title><link href="https://design.jskyzero.com/2021/10/28/sekiro/" rel="alternate" type="text/html" title="《只狼》内容设计分析" /><published>2021-10-28T00:00:00+00:00</published><updated>2021-10-28T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/10/28/sekiro</id><content type="html" xml:base="https://design.jskyzero.com/2021/10/28/sekiro/"><![CDATA[<p>向死而生！一款节奏防御、鼓励压制、强对策校验的动作冒险游戏。</p>
-
-<!--more-->
-
-<h1 id="只狼影逝二度--sekiro-shadows-die-twice">只狼：影逝二度 / Sekiro: Shadows Die Twice</h1>
-
-<p><img src="/assets/img/gameplay/sekiro/1.jpg" alt="" /></p>
-
-<p>副标题写的内容并不存在（有机会可能再补充）。</p>
-
-<h2 id="分析概述">分析概述</h2>
-
-<p><img src="/assets/img/gameplay/sekiro/2.jpg" alt="" /></p>
-
-<p>理由写了很多，做的很少。</p>
-
-<p><img src="/assets/img/gameplay/sekiro/3.jpg" alt="" /></p>
-
-<p>费尽心思找了6个logo。</p>
-
-<h2 id="宏观分析">宏观分析</h2>
-
-<h3 id="游戏简介卡">游戏简介卡</h3>
-<p><img src="/assets/img/gameplay/sekiro/4.jpg" alt="" /></p>
-
-<h3 id="拆解结构图">拆解结构图</h3>
-<p><img src="/assets/img/gameplay/sekiro/5.jpg" alt="" /></p>
-
-<h3 id="理论分析透镜">理论分析透镜</h3>
-<p><img src="/assets/img/gameplay/sekiro/6.jpg" alt="" /></p>
-
-<h3 id="3c镜头对比">3C镜头对比</h3>
-<p><img src="/assets/img/gameplay/sekiro/7.jpg" alt="" /></p>
-
-<h2 id="具象分析">具象分析</h2>
-
-<h3 id="系统流转">系统流转</h3>
-<p><img src="/assets/img/gameplay/sekiro/8.jpg" alt="" /></p>
-
-<h3 id="叙事节奏">叙事节奏</h3>
-<p><img src="/assets/img/gameplay/sekiro/9.jpg" alt="" /></p>
-
-<p>基本就是抄了别人的，有缘再改吧。</p>
-
-<h3 id="体验蓝图">体验蓝图</h3>
-<p><img src="/assets/img/gameplay/sekiro/10.jpg" alt="" /></p>
-
-<p>其余地图分析亦可以参考参考文章。</p>
-
-<h2 id="动作分析">动作分析</h2>
-
-<h3 id="主角">主角</h3>
-
-<p>描述均为60帧每秒，内容为PR逐帧分析，未严格测试。</p>
-
-<p><img src="https://i.imgur.com/EVR0LtW.gif" alt="不死斩.gif" /></p>
-
-<p><img src="/assets/img/gameplay/sekiro/11.jpg" alt="" /></p>
-
-<p><img src="https://i.imgur.com/NJ0rtq7.gif" alt="飞渡浮舟.gif" /></p>
-
-<p><img src="/assets/img/gameplay/sekiro/12.jpg" alt="" /></p>
-
-<p>后面懒得看了，暂时结束。</p>
-
-<p><img src="https://i.imgur.com/vb6WBHg.gif" alt="普通攻击.gif" /></p>
-
-<!-- + 10帧进入蓄力前戳pose
-+ 10帧抬手到最高，再3帧后砍下
-+ 10帧攻击
-+ …… -->
-
-<p><img src="https://i.imgur.com/ci5Aqo5.gif" alt="旋风斩.gif" /></p>
-
-<p><img src="https://i.imgur.com/WjsQ4rz.gif" alt="寄鹰斩.gif" /></p>
-
-<p><img src="https://i.imgur.com/s5c6nFu.gif" alt="一字斩.gif" /></p>
-
-<p><img src="https://i.imgur.com/Y1XAmqb.gif" alt="叩拜连击拳.gif" /></p>
-
-<p><img src="https://i.imgur.com/KyMfBnE.gif" alt="忍伞.gif" /></p>
-
-<p><img src="https://i.imgur.com/nZhOjSY.gif" alt="巨型忍者突刺.gif" /></p>
-
-<p><img src="https://i.imgur.com/VL1GocN.gif" alt="密传龙闪.gif" /></p>
-
-<!-- <style>video {
-    width: 100%;
-    margin: 20 0;
-}</style>
-
-<video controls>
-  <source src="/assets/img/gameplay/sekiro/不死斩.mp4" type="video/mp4">
-</video> -->]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[向死而生！一款节奏防御、鼓励压制、强对策校验的动作冒险游戏。]]></summary></entry><entry><title type="html">《风来之国》内容设计分析</title><link href="https://design.jskyzero.com/2021/09/21/eastward/" rel="alternate" type="text/html" title="《风来之国》内容设计分析" /><published>2021-09-21T00:00:00+00:00</published><updated>2021-09-21T00:00:00+00:00</updated><id>https://design.jskyzero.com/2021/09/21/eastward</id><content type="html" xml:base="https://design.jskyzero.com/2021/09/21/eastward/"><![CDATA[<p>本年度最佳游戏！满足了我对RPG的一切幻想。本文接下来将对游戏的进行一些内容设计向的分析。</p>
-
-<!--more-->
-
-<h1 id="风来之国--eastward">风来之国 / EASTWARD</h1>
-
-<!-- ![](/assets/img/gameplay/eastward/1.jpg) -->
-
-<h2 id="special-experience-upgrade">SPECIAL! EXPERIENCE UPGRADE</h2>
-
-<p>本节为特殊插入内容，如果需要看正文请移步后文。</p>
-
-<p>最初“体验报告”系列文章，是用来记录最近玩过的游戏，并将分析和感悟记录下来的系列分析文章。但是很可惜，明明已经进行了内容和模块拆分，但是还是没能达成如此目的，大部分重视内容的游戏，对内容的记录过少。</p>
-
-<p>于是便有了全新的——“体验蓝图”系列。</p>
-
-<p>本系列希望能以更加具体、更加细致的方式，记录游戏的内容流程，并加以分析，从中学习到有益的部分。</p>
-
-<p>以下，便是本系列的初篇文章——</p>
-
-<p><img src="/assets/img/gameplay/eastward/1.jpg" alt="封面" /></p>
-
-<h2 id="分析概述">分析概述</h2>
-
-<p><img src="/assets/img/gameplay/eastward/2.jpg" alt="为什么要分析游戏" /></p>
-
-<p>分析游戏是为了从体验中反拆设计，学习、提高设计能力。</p>
-
-<p>而之所以会选取风来之国，是因为觉得它有可以学习的地方，具体来说，风来之国：</p>
-
-<ul>
-  <li>单位内容成本可控：选取了开发代价没那么高的内容的美学呈现形式：平面 + 像素 + 打光</li>
-  <li>游戏整体内容详实：有足以媲美3A级游戏的内容框架和内容呈现，即便游戏本身尚有不足之处</li>
-</ul>
-
-<p>以此为玩家带来了一段独特的旅途体验。</p>
-
-<p>本文的分析主要会聚焦在<strong><u>内容设计</u></strong>上——这也正是风来之国如此特别的原因。会使用一些诸如MDA和游戏感之类的理论框架。</p>
-
-<p><img src="/assets/img/gameplay/eastward/3.jpg" alt="目录" /></p>
-
-<p>本文会先进行一些<strong><u>宏观的叙述</u></strong>，比如讲讲游戏的主要体验，游戏传达的感受等等。</p>
-
-<p>然后会进行<strong><u>微观的分析</u></strong>，游戏整体的叙事体验、玩法体验等等。</p>
-
-<p><img src="/assets/img/gameplay/eastward/4.jpg" alt="剧透警告" /></p>
-
-<p>编写本文无法绕开对内容的讨论，阅读本文可能会对您的初次游玩体验<strong><u>造成不可逆的、灾难性的破坏。</u></strong></p>
-
-<p>考虑到游戏是个好游戏，自己的亲身体验说不定能带来更多的思考，因而大可以在这里先停下，待完整体验游戏后再继续阅读。</p>
-
-<h2 id="宏观分析">宏观分析</h2>
-
-<h3 id="游戏简介">游戏简介</h3>
-
-<p>先对游戏基本情况进行一个说明：</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>类别</th>
-      <th>内容</th>
-      <th>批注</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>发售日</td>
-      <td><a href="http://www.pixpil.com/archives/18434">2021/09/16</a></td>
-      <td>同期发售国产游戏《暗影火炬城》、《山海旅人》等</td>
-    </tr>
-    <tr>
-      <td>销量</td>
-      <td><a href="https://steamdb.info/app/977880/graphs/">约20-50万量级</a></td>
-      <td>接近<a href="https://steamdb.info/app/1288310/graphs/">《烟火》</a>，高于同期的<a href="https://steamdb.info/app/1161170/graphs/">《山海旅人》</a></td>
-    </tr>
-    <tr>
-      <td>开发商</td>
-      <td><a href="http://www.pixpil.com/about">Pixpil</a></td>
-      <td>位于上海的独立游戏工作室。15年立项时仅3人</td>
-    </tr>
-    <tr>
-      <td>发行商</td>
-      <td><a href="http://chucklefish.org/">Chucklefish</a></td>
-      <td>发行了《雨中冒险》和《星露谷物语》的英国工作室</td>
-    </tr>
-    <tr>
-      <td>发行商(国内)</td>
-      <td><a href="https://www.xd.com/">心动</a></td>
-      <td>页游到手游到TapTap，“专注长期价值”</td>
-    </tr>
-    <tr>
-      <td>评价</td>
-      <td>数据见批注</td>
-      <td><a href="https://steamdb.info/app/977880/graphs/">steam 😋 84.74%</a>；<a href="https://www.metacritic.com/game/pc/eastward">metacritic 84/100</a></td>
-    </tr>
-    <tr>
-      <td>游戏引擎</td>
-      <td><a href="https://moaiwebsite.github.io/">MOAI</a></td>
-      <td><a href="https://github.com/moai/moai-dev">开源</a>，基于C++，使用Lua编写脚本</td>
-    </tr>
-  </tbody>
-</table>
-
-<blockquote>
-  <p>阅读了Pixpil 17年的一篇<a href="http://www.pixpil.com/archives/93">关于开发工具的文章</a>，其中使用开源软件的风格十分讨喜，有些工具还颇为受用，有兴趣的同学可以自行查阅。</p>
-</blockquote>
-
-<p><img src="/assets/img/gameplay/eastward/6.jpg" alt="游戏拆解" /></p>
-
-<p>游戏属于一次性买断制的单机游戏，组织内容也采用经典的剧情玩法结合的形式。</p>
-
-<p>游戏的主轴是沉默大叔约翰带着神秘白发女孩珊的冒险故事，在此基础上插入了各种关卡玩法。</p>
-
-<p>另一方面，游戏也十分鼓励玩家在城镇、野外探索，给了内容体验上、数值收集上的奖励。</p>
-
-<h3 id="理论分析">理论分析</h3>
-
-<p><img src="/assets/img/gameplay/eastward/7.jpg" alt="体验枚举" /></p>
-
-<p>游戏的标准体验大致有如上七种。</p>
-
-<p><img src="/assets/img/gameplay/eastward/8.jpg" alt="体验出发的3C" /></p>
-
-<p>从以上玩家体验出发，向美学层，导向游戏的通用乐趣。向动态和机制层，依附与游戏的系统和规则设计。</p>
-
-<ul>
-  <li>幻想而非叙事</li>
-</ul>
-
-<p>从美学层的角度，游戏核心的感受应该是：幻想、叙事、和探索。而其中最重要的应该是幻想而非叙事。</p>
-
-<p>风来之国用了大量的支线任务、自由行动的选择来补足了“城镇”和“冒险”这一内容主题，其<strong><u>内涵是高于主线的叙事的</u></strong>，这也是我认为它的难能可贵之处。</p>
-
-<ul>
-  <li>可圈可点的系统规则</li>
-</ul>
-
-<p>从动态和机制层，为了保证基础体验的持续可发展，系统必须要有能支撑起30小时的“丰富度”，以各种成长和收集系统缓慢释放。</p>
-
-<p>中间值得一提的依然是<strong><u>支线NPC的设计</u></strong>，比如在大坝城的画家会随着剧情推进先后在不同地方作画，这些小细节极大提高了游戏幻想可信度的传达</p>
-
-<p>战斗能力和解密可以用大体完善 + 小有瑕疵来总结，辅以各种有趣的小游戏体验，整体是不错的。</p>
-
-<blockquote>
-  <p>顺口提一口小有瑕疵和对应的解决：</p>
-
-  <ol>
-    <li>解密的跟踪炸弹定位重复，而且用途不明显，需要修改关卡谜题和场景暗示</li>
-    <li>后期拼刀玩法虽然耳目一新，但是实际体验很差（纯摸奖），可以考虑时间缩放，调大窗口期</li>
-    <li>受击无敌保护有时起不到保护的作用，可能对于小怪还需要一个击退</li>
-  </ol>
-</blockquote>
-
-<p><img src="/assets/img/gameplay/eastward/9.jpg" alt="游戏感" /></p>
-
-<p>从游戏感的角度，游戏做的最为成功的是模拟空间的感受。通过剧情和战斗带来了一场精彩的冒险。实施操控方面可圈可点，游戏中有不同场景移动速度不同的控制操控感影响感受的例子，主要问题还是像拼刀之类的操作手感较差。而润色方便作为最差，对于感受向的还原尚可，但是没有一些<strong><u>耳目一新的独特物理交互感受</u></strong>，是可以补足的地方。</p>
-
-<p>游戏感理论还提到了感受延伸的五种体验，其中最为重要的依然是<strong><u>身份认知的延长</u></strong>。</p>
-
-<h3 id="3c镜头对比">3C镜头对比</h3>
-
-<p><img src="/assets/img/gameplay/eastward/10.jpg" alt="3C镜头对比" /></p>
-
-<p>简单看一下镜头的一些对比，</p>
-
-<ul>
-  <li>优点：风来之国的场景明显地传达了空间感和高低差的感受</li>
-  <li>缺点：有些地方会无法判断是否可以通行</li>
-</ul>
-
-<h2 id="具象分析">具象分析</h2>
-
-<h3 id="叙事体验">叙事体验</h3>
-
-<p><img src="/assets/img/gameplay/eastward/11.jpg" alt="叙事体验" /></p>
-
-<p>大致把UP主的流程以城镇为单位进行了划分，可以先简单看一下各个部分的时长。</p>
-
-<p>风来之国的叙事结构并不是标准的“英雄之旅”节奏的起承转合，这种非标准（或者说传统）的叙事结构一定程度上增加了玩家的理解门槛，也是一部分对剧情和后半部分虎头蛇尾的评价的原因。</p>
-
-<p><a href="https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiICBqb3VybmV5XG4gICAgdGl0bGUg6aOO5p2l5LmL5Zu95Y-Z5LqL6IqC5aWPXG4gICAgc2VjdGlvbiDlnLDlupXmnZHluoRcbiAgICAgIOWwj-mVh-aOoumZqTogMlxuICAgICAg5bqf5qW85pqC5YirOiAzXG4gICAgc2VjdGlvbiDmuKnmg4XlsbHosLdcbiAgICAgIOajruael-Wvu-eJqTogM1xuICAgICAg6YCD56a76buR5r2uOiA1IDog6buR5r2uXG4gICAgc2VjdGlvbiDlpKflkZfln45cbiAgICAgIOeGn-e7nOaJk-i1jDogNFxuICAgICAg6aOO56We5ZCv5YqoOiA3IDog6buR5r2uXG4gICAgICDlpKflnZ3mg6jliac6IDYgOiDpu5Hmva5cbiAgICBzZWN0aW9uIOeMqeiOseWdnlxuICAgICAg54yp6I6x5Z2eOiAzXG4gICAgc2VjdGlvbiDmnKrmnaXlsptcbiAgICAgIOacquadpeWymzogM1xuICAgIHNlY3Rpb24g5Y2h5oiO5YiX6L2mXG4gICAgICDljaHmiI7liJfovaY6IDQgOiDpu5Hmva4iLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOnRydWV9"><img src="https://mermaid.ink/img/eyJjb2RlIjoiICBqb3VybmV5XG4gICAgdGl0bGUg6aOO5p2l5LmL5Zu95Y-Z5LqL6IqC5aWPXG4gICAgc2VjdGlvbiDlnLDlupXmnZHluoRcbiAgICAgIOWwj-mVh-aOoumZqTogMlxuICAgICAg5bqf5qW85pqC5YirOiAzXG4gICAgc2VjdGlvbiDmuKnmg4XlsbHosLdcbiAgICAgIOajruael-Wvu-eJqTogM1xuICAgICAg6YCD56a76buR5r2uOiA1IDog6buR5r2uXG4gICAgc2VjdGlvbiDlpKflkZfln45cbiAgICAgIOeGn-e7nOaJk-i1jDogNFxuICAgICAg6aOO56We5ZCv5YqoOiA3IDog6buR5r2uXG4gICAgICDlpKflnZ3mg6jliac6IDYgOiDpu5Hmva5cbiAgICBzZWN0aW9uIOeMqeiOseWdnlxuICAgICAg54yp6I6x5Z2eOiAzXG4gICAgc2VjdGlvbiDmnKrmnaXlsptcbiAgICAgIOacquadpeWymzogM1xuICAgIHNlY3Rpb24g5Y2h5oiO5YiX6L2mXG4gICAgICDljaHmiI7liJfovaY6IDQgOiDpu5Hmva4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6dHJ1ZX0" alt="" /></a></p>
-
-<p>剧情上以车站到达的每一个村庄/小镇为划分单位，都会与本地的人经历初识、熟络、分别的阶段，会发生很多故事，并背负起这些羁绊。</p>
-
-<p>本来是很好的结构，但是从山谷黑潮将分别体验一下子拉高，大坝城又以长且丰满的内容——打赌的承接、风神启动的高潮、大坝的悲伤结局，继续将情绪维持在一个高点，这个高度和后续承接的失误，使得游戏的显得<strong><u>中部丰满而尾部不足</u></strong>。</p>
-
-<p>时间迷雾的猩莱坞、无限循环的未来岛，这两个都属于设定奇特——而非<strong><u>情感传达强</u></strong>的单元，虽然高纬度的奇特设定不失为一种内容生产的有效思考方向，但是情绪渲染就一下子降了下来。</p>
-
-<p>到了最后的无限大厦和卡戎列车，已经变为关卡玩法为主而非叙事为主，两者比例从一般的73已经变为了夸张的91开，最后的玩法设计可圈可点，但是情感上却失去了一个高潮释放和终结。</p>
-
-<h3 id="体验蓝图">体验蓝图</h3>
-
-<p><img src="/assets/img/gameplay/eastward/12.jpg" alt="体验蓝图" /></p>
-
-<blockquote>
-  <p>体验蓝图是一种规划玩家体验的工具，方便从全局控制玩家体验。来自USC的相关设计课程</p>
-</blockquote>
-
-<p>最后我们将玩法体验也放入表格，大致如上。</p>
-
-<p>风来之国的详实内容，来源于：玩法本身的扩展和重复、实打实的关卡内容（场景、怪物、BOSS）、点缀和调剂的独立玩法。</p>
-
-<p>这里不再对体验进行更细致的节奏分析，而是讨论一些具体的话题</p>
-
-<ul>
-  <li>玩法的可扩展性或者说可重复性。</li>
-</ul>
-
-<p>《游戏设计词汇表》一书中曾经将角色能力视为谓语，涵义越丰富的谓语，便可以承接更多的宾语，也就拥有了更多的扩展性。就比如游戏中的炸弹，炸开是一个可以承接墙壁、机关等等的谓语；珊的元素球可以触发蘑菇、各种遗迹类机关。在此丰富内涵“谓语”的基础上上可以方便的扩展出各种机关玩法。</p>
-
-<ul>
-  <li>游戏难度的控制和考验</li>
-</ul>
-
-<p>除了数值，在无限大厦甚至引入了时间限制的维度，对操作进行更进一步的考核。</p>
-
-<ul>
-  <li>血量数值的膨胀</li>
-</ul>
-
-<p>后期20颗血，没有加星的料理感觉已经回不上来了，或许恢复品的数值还需要一些增强的规则（比如塞尔达中的满月必定完美料理）。</p>
-
-<!-- 简单来说，风来之国的核心玩法/体验是
-
-1. 角色扮演：和NPC对话推动剧情
-2. 战斗：使用差异化的攻击方式战胜敌人
-3. 解密：使用能力破除机关，顺利前进
-4. 探索：找到地图上的隐藏内容
-5. ……
-
-以谓语的角度来理解，游戏角色为了支撑这些体验能力大致包括：
-
-+ 基础：
-  + 移动
-  + 对话、分支选择
-  + NPC交互（存档、烹饪、购买物品等）
-  + 使用道具
-+ 战斗：
-  + 使用武器
-    + 平底锅、手枪、喷火器、回旋镖；能量球
-  + 使用能力、炸弹
-    + 炸弹；眩晕、护盾、恢复
-  + 场景交互
-    + 推搬箱子、地藏、接电源
-  + 交换角色、分开组合角色
-
-从MDA的乐趣的角度来理解：感官、幻想、叙事、挑战、探索、投入 -->
-
-<!-- 
-感觉（感觉愉悦的游戏）：玩家享受令人难忘的视听效果。
-幻想（让人假扮的游戏）：虚幻想像的世界。
-叙事（作为戏剧的游戏）：驱使玩家不断回头的故事
-挑战（超越障碍的训练游戏）：敦促掌握一些东西。增强游戏的可重复玩的乐趣。
-团契（社交框架的游戏）：玩家在其中活跃的社区。这点为多人游戏所独有。
-发现（未知领域的游戏）：激励玩家探索游戏世界。
-表达（自我发现的游戏）：自己的创造角色，展现自己的创造力。
-提交（作为消遣的游戏）：整体连结到游戏，让人沉浸在其中。
--->
-
-<h2 id="总结与参考">总结与参考</h2>
-
-<p>虽然游戏叙事节奏和玩法设计细节上存在一些问题，但是这不太影响游戏核心“幻想”体验的传达，我认为《风来之国》是一个很好的一次性内容向游戏的例子，相信未来的国产游戏能继承这些优点，换用自己的内容生产模式，甚至是3A级别的资产生产，做出伟大的作品。</p>
-
-<ul>
-  <li>游戏官网
-    <ul>
-      <li><a href="https://eastwardgame.com/zh/">https://eastwardgame.com/zh/</a></li>
-      <li><a href="http://www.pixpil.com/">http://www.pixpil.com/</a></li>
-    </ul>
-  </li>
-  <li>游戏WIKI
-    <ul>
-      <li><a href="https://eastwardwiki.com/Eastward_Wiki">https://eastwardwiki.com/Eastward_Wiki</a></li>
-    </ul>
-  </li>
-  <li>数据参考
-    <ul>
-      <li><a href="https://steamdb.info/">https://steamdb.info/</a></li>
-      <li><a href="https://howlongtobeat.com/">https://howlongtobeat.com/</a></li>
-    </ul>
-  </li>
-  <li>设计理论
-    <ul>
-      <li><a href="http://www.cs.northwestern.edu/~hunicke/MDA.pdf">http://www.cs.northwestern.edu/~hunicke/MDA.pdf</a></li>
-      <li><a href="http://www.game-feel.com/">http://www.game-feel.com/</a></li>
-    </ul>
-  </li>
-  <li>游戏流程
-    <ul>
-      <li><a href="https://www.bilibili.com/video/BV1xf4y1n79Z">https://www.bilibili.com/video/BV1xf4y1n79Z</a></li>
-    </ul>
-  </li>
-</ul>]]></content><author><name></name></author><category term="体验蓝图" /><summary type="html"><![CDATA[本年度最佳游戏！满足了我对RPG的一切幻想。本文接下来将对游戏的进行一些内容设计向的分析。]]></summary></entry></feed>
+<p>简短的对阅读体验的评价：我认为这本书在我心目中的地位可以和《代码补全》并列，如果要给人推荐书籍，我会推荐这两本。</p>]]></content><author><name></name></author><category term="读书报告" /><summary type="html"><![CDATA[“我别无选择，因为我不能变得贫穷或者平凡，这不是我的风格！”本书教会你：如何控制你自己。]]></summary></entry></feed>
