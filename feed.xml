@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-15T05:10:45+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-15T18:07:24+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">学习的一些方法论</title><link href="https://design.jskyzero.com/2022/04/15/study/" rel="alternate" type="text/html" title="学习的一些方法论" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/study</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/study/"><![CDATA[<h1 id="学习一个新概念">学习一个新概念</h1>
 
 <p>我们说过知识的重要性，而且学习作为获取知识的途径，自然也是相当重要的，本文试图将学习划分为阶段，解决一些学习上的常见问题：</p>
@@ -194,7 +194,7 @@
 
 <p>新建的特定类型的项目，默认场景中，一般都会有：供活动的场景、一些光照等美学表现、玩家和系统逻辑。简单来说，我们想给这些东西加个会动的玩意，就像我们的玩家，但是它是自己动（通过AI）。</p>
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script src="/assets/js/mermaid.min.js"></script>
 <div class="mermaid">
 graph TD
     A[场景]
@@ -208,7 +208,7 @@ graph TD
 
 <p>简单来说，我们需要先有个角色，然后把他和其他部分关联起来。</p>
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script src="/assets/js/mermaid.min.js"></script>
 <div class="mermaid">
 graph LR
     B4[NPC]
@@ -418,7 +418,7 @@ graph LR
 
 <p>这里我们试图使用MDA的框架来拆解动作游戏：</p>
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script src="/assets/js/mermaid.min.js"></script>
 <div class="mermaid">
 graph TD
     R[动作游戏]
@@ -1034,7 +1034,7 @@ graph TD
   <p>客观能力 X 主观意愿 X 合作过程 = 结果</p>
 </blockquote>
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script src="/assets/js/mermaid.min.js"></script>
 <div class="mermaid">
 graph TD
     A[客观能力]

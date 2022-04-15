@@ -91,7 +91,7 @@
 <p>将关卡类比成“黑盒子”，对于一个关卡，我们输入了先前的一些游戏数据和玩家的一些操作指令，得到的输出是关卡的动态的感知（视觉、听觉、触觉等）的输出与修改之后的玩家数据，不过在这个过程中，关卡的动态输出和玩家的操作指令一般是即时的。</p>
 
 <div style="overflow:scroll">
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><div class="mermaid">
+<script src="/assets/js/mermaid.min.js"></script><div class="mermaid">
 graph LR;
     Data[游戏数据] --生成--&gt; Game[关卡];
     Player[玩家] --操作指令--&gt; Game[关卡];
@@ -107,7 +107,7 @@ graph LR;
 <p>我们可以将一个关卡根据功能上的相似性进行划分，例如环境，人物，怪物，再具体拆分开来，如下：</p>
 
 <div style="overflow:scroll">
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><div class="mermaid">
+<script src="/assets/js/mermaid.min.js"></script><div class="mermaid">
 graph TD;
     Game[关卡]--&gt;Player[玩家];
     Game[关卡]--&gt;Monster[怪物];
@@ -128,7 +128,7 @@ graph TD;
 <p>一般来说，重视动作的关卡，通关条件是消灭指定怪物，但是现在关卡的玩法更加多样，有的关卡只需要在规定时间内存活下来，或者是在以房间为组织的关卡中到达指定房间等等，对于玩家而言，在关卡内的目的一般除了通关关卡外，一般还会希望在关卡获得一定的收益。</p>
 
 <div style="overflow:scroll">
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><div class="mermaid">
+<script src="/assets/js/mermaid.min.js"></script><div class="mermaid">
 graph TD;
     End[关卡结束条件] --&gt; KillAll[消灭怪物];
     End[关卡结束条件] --&gt; Surival[限定条件下的生存];
@@ -191,7 +191,7 @@ graph TD;
 <p>简单的来说，DNF的核心玩法是动作与养成，动作是指关卡中的动作成分，也就是你释放的各种技能来击杀怪物这个过程，养成的通俗来讲就是通关关卡后的收益，这个收益将可以逐渐增强角色的战斗能力，使得角色可以挑战更难的副本，拿更加好的奖励。</p>
 
 <div style="overflow:scroll">
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><div class="mermaid">
+<script src="/assets/js/mermaid.min.js"></script><div class="mermaid">
 graph TD;
     Play[玩法] --&gt; Acton[动作];
     Play[玩法] --&gt; Role[养成];
@@ -210,7 +210,7 @@ graph TD;
 
 <p>DNF中的背景故事十分庞大，主线剧情已经变更过很多版本，但是大体上的地图的区域目前还保留着，关卡就是这些这些背景设定的一个良好呼应和展现方式，当然除了剧情以外，关卡和其他诸多板块都有所交叉。</p>
 <div style="overflow:scroll">
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><div class="mermaid">
+<script src="/assets/js/mermaid.min.js"></script><div class="mermaid">
 graph LR;
 Game[关卡] --呼应和展现--&gt; Plot[剧情];
 Game[关卡] --载体和途径--&gt; People[社交];
