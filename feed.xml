@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-17T16:25:04+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-17T17:03:00+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">学习的一些方法论</title><link href="https://design.jskyzero.com/2022/04/15/study/" rel="alternate" type="text/html" title="学习的一些方法论" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/study</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/study/"><![CDATA[<h1 id="学习一个新概念">学习一个新概念</h1>
 
 <p>我们说过知识的重要性，而且学习作为获取知识的途径，自然也是相当重要的，本文试图将学习划分为阶段，解决一些学习上的常见问题：</p>
@@ -327,13 +327,13 @@ graph LR
       <td>无印</td>
       <td>元祖高达</td>
       <td>1979</td>
-      <td> </td>
+      <td>UC起点</td>
     </tr>
     <tr>
       <td>Z</td>
       <td>MK2 Z</td>
       <td>1985</td>
-      <td> </td>
+      <td>UC续</td>
     </tr>
     <tr>
       <td>ZZ</td>
@@ -420,7 +420,7 @@ graph LR
   <li>主流宇宙作品：UC纪元</li>
 </ul>
 
-<p><a href="https://zh.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E4%B8%96%E7%B4%80">UC纪元（Universal Century，简称U.C.）</a>的一些高达作品，做一个记录。</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E4%B8%96%E7%B4%80">UC纪元（Universal Century，简称U.C.）</a>的一些高达作品，额外做一个说明。</p>
 
 <p>机动战士是指量产巨型作战机器人，而高达则是机动战士中的特殊型号，在王牌驾驶的操作下，往往能有左右战局的能力。</p>
 
@@ -439,7 +439,56 @@ graph LR
   <li>V：赞斯卡尔战争</li>
 </ul>
 
-<p>（看了以后发现最初入坑的SEED的许多经典桥段都是从UC宇宙中抄袭的，完蛋。</p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[高达机型设计赏析]]></summary></entry><entry><title type="html">动作游戏设计参考</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作游戏设计参考" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<p>本文将从动作游戏的核心体验出发，分析记录一些优秀游戏的动作种类，用于设计参考。</p>
+<p>（看了以后发现最初入坑的SEED的许多经典桥段都是从UC宇宙中抄袭的，完蛋。</p>
+
+<!-- 色卡style -->
+<style>
+div.color {
+    width: 20px;
+    height: 10px;
+    border: 1px  solid white;
+    display: inline-block;
+}
+</style>
+
+<h2 id="zgmf-x10a-自由高达">ZGMF-X10A 自由高达</h2>
+
+<div class="color" style="background-color:rgb(223, 223, 238);"></div>
+<div class="color" style="background-color:rgb(76, 74, 179);"></div>
+<div class="color" style="background-color:rgb(32, 31, 36);"></div>
+
+<p>基拉·大和在强袭高达爆炸后从拉克丝手处接过的机体，四倍于强袭的出力让基拉直接化身成为人棍王（指把敌方杂兵削成人棍）。SEED系的“偶像剧”标签，也许部分也来自于主角机实力渲染强得过分。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>部分</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>核心视觉</td>
+      <td>高机动力：5对机翼与肩甲、腿部出气口</td>
+    </tr>
+    <tr>
+      <td>核心视觉</td>
+      <td>五彩大炮：机翼隐藏的与裙甲展开的大炮</td>
+    </tr>
+    <tr>
+      <td>核心视觉</td>
+      <td>人棍王：指自由飞过，光剑已经把敌机削成人棍</td>
+    </tr>
+    <tr>
+      <td>翅膀</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>裙甲</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[高达机型设计赏析]]></summary></entry><entry><title type="html">动作游戏设计参考</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作游戏设计参考" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<p>本文将从动作游戏的核心体验出发，分析记录一些优秀游戏的动作种类，用于设计参考。</p>
 
 <h1 id="动作游戏设计参考">动作游戏设计参考</h1>
 
