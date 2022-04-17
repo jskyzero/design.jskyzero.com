@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-15T18:07:24+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-17T16:25:04+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">学习的一些方法论</title><link href="https://design.jskyzero.com/2022/04/15/study/" rel="alternate" type="text/html" title="学习的一些方法论" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/study</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/study/"><![CDATA[<h1 id="学习一个新概念">学习一个新概念</h1>
 
 <p>我们说过知识的重要性，而且学习作为获取知识的途径，自然也是相当重要的，本文试图将学习划分为阶段，解决一些学习上的常见问题：</p>
@@ -299,19 +299,132 @@ graph LR
       <li>侦探与冒险精神主角特征</li>
     </ul>
   </li>
-</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些游戏文化科普、设计解析等视频中的知识点，方便复习查阅。]]></summary></entry><entry><title type="html">从GUNDAM的设计中学到了点啥</title><link href="https://design.jskyzero.com/2022/03/16/gunpla/" rel="alternate" type="text/html" title="从GUNDAM的设计中学到了点啥" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/gunpla</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/gunpla/"><![CDATA[<!-- 本文汇总一些宅向内容设计，用于回味参考。 -->
+</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[本文汇总一些游戏文化科普、设计解析等视频中的知识点，方便复习查阅。]]></summary></entry><entry><title type="html">高达机型设计赏析</title><link href="https://design.jskyzero.com/2022/03/16/gunpla/" rel="alternate" type="text/html" title="高达机型设计赏析" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/gunpla</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/gunpla/"><![CDATA[<h1 id="高达机型设计赏析">高达机型设计赏析</h1>
 
-<h1 id="从gundam的设计中学到了点啥">从GUNDAM的设计中学到了点啥</h1>
+<p><a href="https://zh.wikipedia.org/wiki/GUNDAM%E7%B3%BB%E5%88%97%E4%BD%9C%E5%93%81">《高达系列》</a>为富野由悠季自1979年所制作机动战士高达一作所派生出来的一连串续作、外传及其他系列的总称。本身品牌市值据估计逾500亿日元。</p>
 
-<h2 id="gundam与uc纪元">GUNDAM与UC纪元</h2>
+<p>最近在沉迷GUNPLA，本文打算分析一下其中的帅气高达的设计特征。</p>
 
-<p>最近补了<a href="https://zh.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E4%B8%96%E7%B4%80">UC纪元（Universal Century，简称U.C.）</a>的一些高达作品，做一个记录。</p>
+<p>注：GUNPLA，在动画GUNDAM系列剧中登场的兵器如MOBILE SUIT、MOBILE ARMOR、船舰等被模型化的塑胶模型系列。</p>
+
+<h2 id="时间线">时间线</h2>
+
+<ul>
+  <li>动画时间线</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>动画名</th>
+      <th>主角机</th>
+      <th>时间</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>无印</td>
+      <td>元祖高达</td>
+      <td>1979</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Z</td>
+      <td>MK2 Z</td>
+      <td>1985</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>ZZ</td>
+      <td>Z ZZ</td>
+      <td>1986</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>V V2</td>
+      <td>1993</td>
+      <td>UC衰退</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>神高达</td>
+      <td>1994</td>
+      <td>平成三部曲</td>
+    </tr>
+    <tr>
+      <td>W</td>
+      <td>飞翼零式</td>
+      <td>1995</td>
+      <td>平成三部曲</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>X DX</td>
+      <td>1996</td>
+      <td>平成三部曲</td>
+    </tr>
+    <tr>
+      <td>倒A</td>
+      <td>月光</td>
+      <td>1999</td>
+      <td>二十周年</td>
+    </tr>
+    <tr>
+      <td>SEED</td>
+      <td>Freedom</td>
+      <td>2002</td>
+      <td>入坑作</td>
+    </tr>
+    <tr>
+      <td>SEED Destiny</td>
+      <td>Destiny</td>
+      <td>2005</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>O &amp;&amp; OO</td>
+      <td>O &amp;&amp; OO</td>
+      <td>2007</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>AGE</td>
+      <td>AGE</td>
+      <td>2011</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>创战者</td>
+      <td>创战者</td>
+      <td>2013</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>铁血的奥尔芬斯</td>
+      <td>巴巴托斯</td>
+      <td>2015</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>……</td>
+      <td>……</td>
+      <td>……</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>主流宇宙作品：UC纪元</li>
+</ul>
+
+<p><a href="https://zh.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E4%B8%96%E7%B4%80">UC纪元（Universal Century，简称U.C.）</a>的一些高达作品，做一个记录。</p>
 
 <p>机动战士是指量产巨型作战机器人，而高达则是机动战士中的特殊型号，在王牌驾驶的操作下，往往能有左右战局的能力。</p>
 
 <p>如此设定下有着相当多的作品，而UC世界观便是一切的起点：</p>
-
-<h3 id="uc纪元">UC纪元</h3>
 
 <ul>
   <li>无印：殖民地造反，造反后被篡权，地球与之战斗。</li>
@@ -326,81 +439,7 @@ graph LR
   <li>V：赞斯卡尔战争</li>
 </ul>
 
-<p>看了以后发现最初入坑的SEED的许多经典桥段都是从UC宇宙中抄袭的，完蛋。</p>
-
-<h3 id="gundam动画">GUNDAM动画</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>动画名</th>
-      <th>高达名字</th>
-      <th>备注</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>无印</td>
-      <td>元祖高达</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Z</td>
-      <td>MK2 Z</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ZZ</td>
-      <td>Z ZZ</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>V</td>
-      <td>V V2</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>G</td>
-      <td>神高达</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>W</td>
-      <td>飞翼EW</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>X</td>
-      <td>X DX</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>倒A</td>
-      <td>月光</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>SEED</td>
-      <td>Freedom</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>SEED Destiny</td>
-      <td>Destiny</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>O &amp;&amp; OO</td>
-      <td>O &amp;&amp; OO</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>……</td>
-      <td>……</td>
-      <td>……</td>
-    </tr>
-  </tbody>
-</table>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">动作游戏设计参考</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作游戏设计参考" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<p>本文将从动作游戏的核心体验出发，分析记录一些优秀游戏的动作种类，用于设计参考。</p>
+<p>（看了以后发现最初入坑的SEED的许多经典桥段都是从UC宇宙中抄袭的，完蛋。</p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[高达机型设计赏析]]></summary></entry><entry><title type="html">动作游戏设计参考</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作游戏设计参考" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<p>本文将从动作游戏的核心体验出发，分析记录一些优秀游戏的动作种类，用于设计参考。</p>
 
 <h1 id="动作游戏设计参考">动作游戏设计参考</h1>
 
