@@ -38,9 +38,9 @@ plugins:
   - jekyll-seo-tag
 
 mermaid:
-  # src: '{{site.baseurl}}/assets/js/mermaid.min.js'
+  src: '/assets/js/mermaid.min.js'
   # src: 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js'
-  src: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'
+  # src: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'
 
 
 
