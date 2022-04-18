@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-17T17:03:00+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-18T03:25:34+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">学习的一些方法论</title><link href="https://design.jskyzero.com/2022/04/15/study/" rel="alternate" type="text/html" title="学习的一些方法论" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/study</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/study/"><![CDATA[<h1 id="学习一个新概念">学习一个新概念</h1>
 
 <p>我们说过知识的重要性，而且学习作为获取知识的途径，自然也是相当重要的，本文试图将学习划分为阶段，解决一些学习上的常见问题：</p>
@@ -310,7 +310,7 @@ graph LR
 <h2 id="时间线">时间线</h2>
 
 <ul>
-  <li>动画时间线</li>
+  <li>TV 动画时间线</li>
 </ul>
 
 <table>
@@ -330,19 +330,19 @@ graph LR
       <td>UC起点</td>
     </tr>
     <tr>
-      <td>Z</td>
+      <td>Zeta</td>
       <td>MK2 Z</td>
       <td>1985</td>
       <td>UC续</td>
     </tr>
     <tr>
-      <td>ZZ</td>
+      <td>Double Zeta</td>
       <td>Z ZZ</td>
       <td>1986</td>
       <td> </td>
     </tr>
     <tr>
-      <td>V</td>
+      <td>Victory</td>
       <td>V V2</td>
       <td>1993</td>
       <td>UC衰退</td>
@@ -366,7 +366,7 @@ graph LR
       <td>平成三部曲</td>
     </tr>
     <tr>
-      <td>倒A</td>
+      <td>Turn A</td>
       <td>月光</td>
       <td>1999</td>
       <td>二十周年</td>
@@ -481,11 +481,11 @@ div.color {
     </tr>
     <tr>
       <td>翅膀</td>
-      <td> </td>
+      <td>5对机翼+隐藏“鲸鱼”离子加农炮</td>
     </tr>
     <tr>
       <td>裙甲</td>
-      <td> </td>
+      <td>三段式接口可以展开“旗鱼”电磁炮</td>
     </tr>
   </tbody>
 </table>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[高达机型设计赏析]]></summary></entry><entry><title type="html">动作游戏设计参考</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作游戏设计参考" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<p>本文将从动作游戏的核心体验出发，分析记录一些优秀游戏的动作种类，用于设计参考。</p>
