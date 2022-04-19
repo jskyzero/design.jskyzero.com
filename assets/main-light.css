@@ -30,6 +30,8 @@ header p { text-align: left; margin: 0; }
 
 footer { margin-bottom: 20px; }
 
+p { margin: 8px 0px; }
+
 blockquote { font-style: italic; }
 
 img { max-width: 100%; }

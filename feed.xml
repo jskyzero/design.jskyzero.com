@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-18T16:35:41+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-04-19T04:33:53+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">学习的一些方法论</title><link href="https://design.jskyzero.com/2022/04/15/study/" rel="alternate" type="text/html" title="学习的一些方法论" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/study</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/study/"><![CDATA[<h1 id="学习一个新概念">学习一个新概念</h1>
 
 <p>我们说过知识的重要性，而且学习作为获取知识的途径，自然也是相当重要的，本文试图将学习划分为阶段，解决一些学习上的常见问题：</p>
@@ -1203,6 +1203,8 @@ graph TD
 
 <h4 id="王者荣耀">王者荣耀</h4>
 
+<p>参考资料</p>
+
 <ul>
   <li><a href="https://pvp.qq.com/web201605/herolist.shtml">王者荣耀首页 &gt; 英雄介绍</a></li>
 </ul>
@@ -1211,40 +1213,120 @@ graph TD
   <thead>
     <tr>
       <th>英雄</th>
-      <th>选项</th>
+      <th>武器</th>
       <th>说明</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>桑启</td>
-      <td>概览</td>
-      <td>法杖；绿色，自然；草，飞来飞去</td>
-    </tr>
-    <tr>
-      <td>暃（Fēi）</td>
-      <td>概览</td>
-      <td>弯刀；王子，华贵；可以上墙</td>
-    </tr>
-    <tr>
-      <td>澜</td>
-      <td>概览</td>
-      <td>双刀；刺客，蓝色；变成鲨鱼</td>
-    </tr>
-    <tr>
-      <td>夏侯惇</td>
-      <td>概览</td>
-      <td>大刀；肉盾；护盾、眩晕</td>
-    </tr>
-    <tr>
-      <td>芈月</td>
-      <td>概览</td>
-      <td>法球；蝙蝠、紫色；吸血、无法选中</td>
+      <td>法杖</td>
+      <td>绿色，自然；草，飞来飞去</td>
     </tr>
     <tr>
       <td>瑶</td>
-      <td>概览</td>
-      <td>法杖；法球；附身</td>
+      <td>法杖</td>
+      <td>法球；附身</td>
+    </tr>
+    <tr>
+      <td>大乔</td>
+      <td>长柄灯笼</td>
+      <td>水系；灯笼、大型水旋涡传送</td>
+    </tr>
+    <tr>
+      <td>张飞</td>
+      <td>长柄蛇矛</td>
+      <td>战士；变身</td>
+    </tr>
+    <tr>
+      <td>牛魔</td>
+      <td>犄角</td>
+      <td>牛头人（不）；冲刺、劈开大地</td>
+    </tr>
+    <tr>
+      <td>金蝉</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鲁班大师</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>盾山</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>明世隐</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>苏烈</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>鬼谷子</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>东皇太一</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>太乙真人</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>蔡文姬</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>钟馗</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>孙膑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>刘婵</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>庄周</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>暃（Fēi）</td>
+      <td>弯刀</td>
+      <td>王子，华贵；可以上墙</td>
+    </tr>
+    <tr>
+      <td>澜</td>
+      <td>双刀</td>
+      <td>刺客，蓝色；变成鲨鱼</td>
+    </tr>
+    <tr>
+      <td>夏侯惇</td>
+      <td>大刀</td>
+      <td>肉盾；护盾、眩晕</td>
+    </tr>
+    <tr>
+      <td>芈月</td>
+      <td>法球</td>
+      <td>蝙蝠、紫色；吸血、无法选中</td>
     </tr>
   </tbody>
 </table>
