@@ -13,6 +13,8 @@ categories: [杂谈]
 
 ## 2022.03
 
++ [ULTRAMAN 机动奥特曼 第二季](https://www.bilibili.com/bangumi/play/ss41511)
+  + 第二集16:30，第六集6：00，摔跤格斗
 + [《艾尔登法环》：“这可比BOTW劲儿大多了”](https://uynad.github.io/2022/03/05/review/20220306-ring/)
 + [日本剑术专家重现仁王2招式动作](https://www.bilibili.com/video/BV11q4y1f7k4)
   + 如何描述招式的动作？
