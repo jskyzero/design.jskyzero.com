@@ -30,7 +30,9 @@ jobs:
     #   fatal: unsafe repository ('/github/workspace' is owned by someone else)
     - name: git config
       run: |
-        git config --global --add safe.directory /github/workspace
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        git config --global --list
+
 
     # Use GitHub Actions' cache to shorten build times and decrease load on servers
     - uses: actions/cache@v2
