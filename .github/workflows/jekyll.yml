@@ -26,6 +26,12 @@ jobs:
         ref: jekyll
         fetch-depth: 0
 
+    # fix git error: 
+    #   fatal: unsafe repository ('/github/workspace' is owned by someone else)
+    - name: git config
+      run: |
+        git config --global --add safe.directory /github/workspace
+
     # Use GitHub Actions' cache to shorten build times and decrease load on servers
     - uses: actions/cache@v2
       with:

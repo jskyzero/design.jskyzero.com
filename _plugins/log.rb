@@ -54,9 +54,9 @@ module Jekyll
       def is_git_repo?
         @@is_git_repo ||= begin
           Dir.chdir(site_source) do
-            puts Executor.sh("pwd")
-            puts Executor.sh("git", "--version")
-            puts Executor.sh("git", "rev-parse", "--is-inside-work-tree")
+            # puts Executor.sh("pwd")
+            # puts Executor.sh("git", "--version")
+            # puts Executor.sh("git", "rev-parse", "--is-inside-work-tree")
             Executor.sh("git", "rev-parse", "--is-inside-work-tree").eql? "true"
           end
         rescue
