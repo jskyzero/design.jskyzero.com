@@ -35,14 +35,14 @@ module Jekyll
       end
 
       def revisions
-        # puts is_git_repo?
+        puts is_git_repo?
         return nil unless is_git_repo?
         logs = Executor.sh('git', 'log', '--pretty=%ci|%an|%s', '--max-count=' + max_count.to_s, relative_path_from_git_dir)
         logs.lines.map do |line|
           parts = line.split('|')
           {"date" => parts[0], "author" => parts[1], "message" => parts[2..-1].join('|')}
         end
-        # puts logs
+        puts logs
       end
 
       private
@@ -56,7 +56,7 @@ module Jekyll
           Dir.chdir(site_source) do
             # puts Executor.sh("pwd")
             # puts Executor.sh("git", "--version")
-            # puts Executor.sh("git", "rev-parse", "--is-inside-work-tree")
+            puts Executor.sh("git", "rev-parse", "--is-inside-work-tree")
             Executor.sh("git", "rev-parse", "--is-inside-work-tree").eql? "true"
           end
         rescue
