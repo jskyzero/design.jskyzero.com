@@ -11,8 +11,8 @@
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="动作游戏设计参考" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="本文将从动作游戏的核心体验出发，分析记录一些优秀游戏的动作种类，用于设计参考。" />
-<meta property="og:description" content="本文将从动作游戏的核心体验出发，分析记录一些优秀游戏的动作种类，用于设计参考。" />
+<meta name="description" content="本文将从分析动作游戏的核心特征出发，分析记录一些优秀游戏的动作形式与体验，用于设计时快速查阅参考。" />
+<meta property="og:description" content="本文将从分析动作游戏的核心特征出发，分析记录一些优秀游戏的动作形式与体验，用于设计时快速查阅参考。" />
 <link rel="canonical" href="https://design.jskyzero.com/2022/03/07/ActionReference/" />
 <meta property="og:url" content="https://design.jskyzero.com/2022/03/07/ActionReference/" />
 <meta property="og:site_name" content="设计者笔记" />
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="动作游戏设计参考" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-07T00:00:00+00:00","datePublished":"2022-03-07T00:00:00+00:00","description":"本文将从动作游戏的核心体验出发，分析记录一些优秀游戏的动作种类，用于设计参考。","headline":"动作游戏设计参考","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/03/07/ActionReference/"},"url":"https://design.jskyzero.com/2022/03/07/ActionReference/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-07T00:00:00+00:00","datePublished":"2022-03-07T00:00:00+00:00","description":"本文将从分析动作游戏的核心特征出发，分析记录一些优秀游戏的动作形式与体验，用于设计时快速查阅参考。","headline":"动作游戏设计参考","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/03/07/ActionReference/"},"url":"https://design.jskyzero.com/2022/03/07/ActionReference/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" type="text/css" href="/assets/main.css"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
@@ -43,9 +43,10 @@
   <ul class="md-toc">
   <li class="md-toc-h1"><a href="#动作游戏设计参考">动作游戏设计参考</a>
     <ul>
-      <li class="md-toc-h2"><a href="#学术讨论">学术讨论</a>
+      <li class="md-toc-h2"><a href="#前言">前言</a>
         <ul>
-          <li class="md-toc-h3"><a href="#典型构成">典型构成</a></li>
+          <li class="md-toc-h3"><a href="#学术讨论">学术讨论</a></li>
+          <li class="md-toc-h3"><a href="#典型术语">典型术语</a></li>
         </ul>
       </li>
       <li class="md-toc-h2"><a href="#参考库">参考库</a>
@@ -65,21 +66,67 @@
 
 </div>
 
-<p>本文将从动作游戏的核心体验出发，分析记录一些优秀游戏的动作种类，用于设计参考。</p>
+<p>本文将从分析动作游戏的核心特征出发，分析记录一些优秀游戏的动作形式与体验，用于设计时快速查阅参考。</p>
+
+<p>本文将会很长很长，阅读时请做好心里准备，分清“逻辑段落”与“工具参考段落”。本文中间必然存在各种疏漏，欢迎指出。</p>
 
 <h1 id="动作游戏设计参考">动作游戏设计参考</h1>
 
-<h2 id="学术讨论">学术讨论</h2>
+<h2 id="前言">前言</h2>
 
-<p>本节我想先讨论一些远离具体的设计的有关理解，作为一些基础铺垫。深入理解了核心特征与乐趣以后，方便做出更好的设计。</p>
+<h3 id="学术讨论">学术讨论</h3>
 
-<p>广义上，任何以动作为主要表现内容的游戏，都可以算作动作游戏。狭义上，我会认为动作游戏：</p>
+<p>本节我想先讨论一些远离具体的设计的、有关动作游戏的宏观理解（也许是本文除去参考部分唯一的游戏理解输出部分），这些作为一些基础铺垫，帮助我们深入理解动作游戏的核心特征与乐趣，然后做出更好的设计。</p>
 
-<p>1.攻击判定遵循严格框体检测。
-2.受击动画（和受击僵直）清晰明确。
-3.有浮空、投技、眩晕之类的典型动作机制体验。</p>
+<ul>
+  <li>广义动作游戏</li>
+</ul>
 
-<h3 id="典型构成">典型构成</h3>
+<p>本文无意对动作游戏的今生往世做细致详细的介绍，但是动作游戏是一个不同人理解起来相当容易产生歧义的游戏类型。归根结底，动作游戏的历史和内涵过于丰富，广泛存在于不同类型游戏的体验与机制上。从这个角度，我们可以得到维基百科对动作游戏的广义定义：任何以动作为主要表现内容的游戏，都可以算作动作游戏。比如一些跨类别的动作游戏“影子”的例子：MOBA游戏中英雄的技能、射击游戏中近战动作……</p>
+
+<ul>
+  <li>狭义（日式）动作游戏</li>
+</ul>
+
+<p>以广义去探讨，可能会像面对一整片森林去观察某种特定植物，未必能得到想要的答案，如果你认真看了目录中的游戏枚举，你会发现其中大多为日系动作游戏，维基百科中存在于另一个关于<a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B2%E3%83%BC%E3%83%A0">日式狭义动作的定义</a>：分为2D和3D，2D分为横版卷轴、纵向卷轴、俯视角、固定画面；3D分为无双类、硬核动作、怪猎、魂like，格斗类作为掌上明珠单独枚举。</p>
+
+<p>正如<a href="https://zhuanlan.zhihu.com/p/25481394">旗舰评论所言</a>：“这些强调反应与操作的零散游戏类型集合，本身就是动作游戏设计的发展史：帧数、框体判定、攻防投三角循环、跳跃空战、群体AI……”，甚至逼近动作游戏的设计本质：“狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。”</p>
+
+<ul>
+  <li>动作游戏的哲学与本质</li>
+</ul>
+
+<p>“动作”伴随着人类从动物形成社会的全过程，早已写入了人类的基因。当动作这个概念进行抽象并用于游戏娱乐，动作游戏诞生了。</p>
+
+<p>动作游戏本质非常简单：玩家 控制 游戏角色 播放 动作。</p>
+
+<p>但是为了使这个过程变得有趣，设计上必须使得控制这件事变得有意义，也就是上文所说的“奖惩导向”：在玩家做出正确的控制时奖励，做出错误控制时惩罚。奖惩导向最基本也最广泛的例子是血量。</p>
+
+<p>在基本的意义导向方针以后，还需要给玩家丰富的考核场景，这里其实有着另一个哲学：场合少选项多、场合多选项少（当然也可以俩都多）。从这个角度出发：“动作游戏就是设计场合与突破场合的方法”。（大意，出自某老牌日本ACT设计师，但是一时找不到出处，后面补充）；“关注自身（选项）还是关注敌人（考验场合）”</p>
+
+<p>可能还有很多，后面补充在这里。</p>
+
+<p>另一个角度，我会认为动作游戏：</p>
+
+<p>1.奖惩的基础：动画清晰明确、判定精准可读（比如空间上遵循严格框体检测、时间上处于动画的合适位置）
+2.奖励收益最大化：，受击动画僵直时长：combo；浮空、投技、眩晕等</p>
+
+<ul>
+  <li>动作游戏的核心乐趣</li>
+</ul>
+
+<p>控制感：内涵较为丰富，1.符合直接的控制 2.丰富的控制选项 3.丰富的考核选项
+打击感：聚焦于动作本身的美学呈现。</p>
+
+<ul>
+  <li>动作游戏与射击游戏的比较</li>
+</ul>
+
+<p>从感受上来说，都是对于显示的模拟，一种是古朴一种是现代。
+从制作上来说，射击易于制作
+从玩家角度，射击易于掌握，同样都作为广泛基础类型</p>
+
+<h3 id="典型术语">典型术语</h3>
 
 <p>这里我们试图使用MDA的框架来拆解动作游戏：</p>
 
@@ -735,6 +782,7 @@ graph TD
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+29 Apr 2022 - jskyzero - 📝 update 动作游戏设计参考
 19 Apr 2022 - jskyzero - update MOBA游戏 王者荣耀
 15 Apr 2022 - jskyzero - 📝 add 王者荣耀
 15 Apr 2022 - jskyzero - Merge branch 'jekyll' of https://github.com/jskyzero/design.jskyzero.com into jekyll
