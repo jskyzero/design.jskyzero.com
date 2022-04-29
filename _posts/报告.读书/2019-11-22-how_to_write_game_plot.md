@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《如何写游戏剧本》
+title: 简明剧作：《如何写游戏剧本》
 featured-img: how_to_write_game_plot
 mathjax: true
 categories: [读书报告]
