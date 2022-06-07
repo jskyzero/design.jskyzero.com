@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-06-07T05:33:14+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-06-07T07:44:00+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏AI开发技巧</title><link href="https://design.jskyzero.com/2022/05/24/GameAISkill/" rel="alternate" type="text/html" title="游戏AI开发技巧" /><published>2022-05-24T00:00:00+00:00</published><updated>2022-05-24T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/05/24/GameAISkill</id><content type="html" xml:base="https://design.jskyzero.com/2022/05/24/GameAISkill/"><![CDATA[<p>一些游戏AI设计制作时候的思维方式和技巧，主要来自<strong>GameAIPro</strong>的<a href="http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter05_Structural_Architecture_Common_Tricks_of_the_Trade.pdf">这篇文章</a></p>
 
 <h1 id="游戏ai开发技巧">游戏AI开发技巧</h1>
 
-<h2 id="分治法">分治法</h2>
+<h2 id="mn复杂度的解法分治">M*N复杂度的解法：分治</h2>
 
 <p>游戏AI开发的一个核心难点就是应对逐渐上升的复杂度。</p>
 
-<p>当新的环境，或者新的行为添加到现有体系，其复杂度多为乘法系数上升。</p>
+<p>当新的环境，或者新的行为添加到现有体系，其复杂度多为M*N乘法系数上升。</p>
+
+<p><img src="/assets/img/skill/GameAISkill/1-1.svg" alt="" /></p>
 
 <blockquote>
   <p>举例：
@@ -15,7 +17,9 @@
 由于技能B可以衔接在任意一种行为后（，当然也可能是前），将会增加4种需要思考的情况</p>
 </blockquote>
 
-<p>而使用分治法，则可以有效降低这种情况下需要扩张的新组合选项。</p>
+<p>而使用分治法，则可以有效降低这种情况下扩张的新组合选项个数，使其变为N的常数级。</p>
+
+<p><img src="/assets/img/skill/GameAISkill/1-2.svg" alt="" /></p>
 
 <blockquote>
   <p>举例：
@@ -24,13 +28,100 @@
 则只需要增加2种需要思考的情况</p>
 </blockquote>
 
-<h2 id="栈">栈</h2>
+<p>同样的思路也出现在<strong>状态机</strong>与<strong>分层状态机</strong>上。</p>
 
-<h2 id="评估函数">评估函数</h2>
+<h2 id="捡完芝麻再捡起西瓜栈">捡完芝麻再捡起西瓜：栈</h2>
 
-<h2 id="知识管理">知识管理</h2>
+<p><img src="/assets/img/skill/GameAISkill/2-1.svg" alt="" /></p>
 
-<h2 id="模块化">模块化</h2>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章]]></summary></entry><entry><title type="html">如何从「生活」中找参考</title><link href="https://design.jskyzero.com/2022/04/15/life/" rel="alternate" type="text/html" title="如何从「生活」中找参考" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/life</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/life/"><![CDATA[<!-- # 学会生活
+<p>栈是一种常见的数据结构，其核心特征是先进后出（，类似的数据结构队列是先进先出）。</p>
+
+<p>利用先进后出的特性，我们可以为AI引入<strong>上下文</strong>的时间维度概念。</p>
+
+<blockquote>
+  <p>举例：
+怪物在执行【靠近】-&gt;【攻击】的逻辑
+【靠近】过程中发现一个攻击利器：棒球棒，可以触发【捡武器】行为
+如果没有历史信息：
+  可能会重新进行决策来判断当前行为
+如果有历史信息（以栈结构为例）：
+  【捡武器】入栈，
+  【捡武器】出栈，继续【靠近】-&gt;【攻击】</p>
+
+</blockquote>
+
+<h2 id="多维度复杂条件的决策评估函数">多维度复杂条件的决策：评估函数</h2>
+
+<p>我们迟早会遇到多种条件复合的决策情形，这会相当复杂而且容易出错。</p>
+
+<blockquote>
+  <p>举例：
+条件：自身血量，目标血量，自身与目标距离
+行为：攻击，逃跑，……</p>
+</blockquote>
+
+<p>可以列出一张枚举表格：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>条件A</th>
+      <th>条件B</th>
+      <th>条件C</th>
+      <th>行为</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A1情况</td>
+      <td>B1情况</td>
+      <td>C1情况</td>
+      <td>特定行为</td>
+    </tr>
+    <tr>
+      <td>A1情况</td>
+      <td>B2情况</td>
+      <td>C1情况</td>
+      <td>特定行为</td>
+    </tr>
+    <tr>
+      <td>A1情况</td>
+      <td>B1情况</td>
+      <td>C2情况</td>
+      <td>特定行为</td>
+    </tr>
+    <tr>
+      <td>A1情况</td>
+      <td>B2情况</td>
+      <td>C2情况</td>
+      <td>特定行为</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>多数情况下，我们是没能力使用枚举维护复杂复合情况下的决策的，也或者说这是性价比比较低的方式。</p>
+
+<p>事实上，我们是建立复合参数到固定行为的一种映射，所以我们可以使用<strong>函数</strong>的思想。</p>
+
+<p>将每一个条件（离散值或者连续值）进行值的映射，并为其赋予一个乘法缩放系数，再通过值的求和来考虑所有条件的影响。</p>
+
+<p>这样，我们就可以通过最终值来决策。避免决策调试与配置的复杂度。</p>
+
+<h2 id="通过知识引入智能黑板变量">通过知识引入智能：黑板变量</h2>
+
+<p>什么是智能？一个简单的解释是能够运用历史经验。也即储存知识。</p>
+
+<p>我们可以使用变量来记录象征着知识的值，这不仅可以方便我们在运行时记录知识。</p>
+
+<p>也可以方便灵活使用变量来提高计算与配置的效率</p>
+
+<h2 id="适合的人干适合的事模块化">适合的人干适合的事：模块化</h2>
+
+<p>好的关卡是模块化的，好的AI也是，这不仅是第一部分说到的分治的思想。也包括：</p>
+
+<p>将复杂度下放到其他逻辑模块。</p>
+
+<p>将知识储存到场景中。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章]]></summary></entry><entry><title type="html">如何从「生活」中找参考</title><link href="https://design.jskyzero.com/2022/04/15/life/" rel="alternate" type="text/html" title="如何从「生活」中找参考" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/life</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/life/"><![CDATA[<!-- # 学会生活
 
 文明是一段时间内一个区域的人的生活状态，那么生活究竟是什么呢。
 
