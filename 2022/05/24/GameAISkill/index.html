@@ -11,8 +11,8 @@
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="游戏AI开发技巧" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="一些实用技巧。" />
-<meta property="og:description" content="一些实用技巧。" />
+<meta name="description" content="一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章" />
+<meta property="og:description" content="一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章" />
 <link rel="canonical" href="https://design.jskyzero.com/2022/05/24/GameAISkill/" />
 <meta property="og:url" content="https://design.jskyzero.com/2022/05/24/GameAISkill/" />
 <meta property="og:site_name" content="设计者笔记" />
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="游戏AI开发技巧" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-24T00:00:00+00:00","datePublished":"2022-05-24T00:00:00+00:00","description":"一些实用技巧。","headline":"游戏AI开发技巧","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/05/24/GameAISkill/"},"url":"https://design.jskyzero.com/2022/05/24/GameAISkill/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-24T00:00:00+00:00","datePublished":"2022-05-24T00:00:00+00:00","description":"一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章","headline":"游戏AI开发技巧","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/05/24/GameAISkill/"},"url":"https://design.jskyzero.com/2022/05/24/GameAISkill/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" type="text/css" href="/assets/main.css"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
@@ -55,11 +55,30 @@
 
 </div>
 
-<p>一些实用技巧。</p>
+<p>一些游戏AI设计制作时候的思维方式和技巧，主要来自<strong>GameAIPro</strong>的<a href="http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter05_Structural_Architecture_Common_Tricks_of_the_Trade.pdf">这篇文章</a></p>
 
 <h1 id="游戏ai开发技巧">游戏AI开发技巧</h1>
 
 <h2 id="分治法">分治法</h2>
+
+<p>游戏AI开发的一个核心难点就是应对逐渐上升的复杂度。</p>
+
+<p>当新的环境，或者新的行为添加到现有体系，其复杂度多为乘法系数上升。</p>
+
+<blockquote>
+  <p>举例：
+当现有移动，防御，技能A，技能B，4种行为后增加一种技能C
+由于技能B可以衔接在任意一种行为后（，当然也可能是前），将会增加4种需要思考的情况</p>
+</blockquote>
+
+<p>而使用分治法，则可以有效降低这种情况下需要扩张的新组合选项。</p>
+
+<blockquote>
+  <p>举例：
+将移动，防御，划分为休闲动作
+将技能A，技能B划分为攻击行为，2种行为大类后增加一种技能C
+则只需要增加2种需要思考的情况</p>
+</blockquote>
 
 <h2 id="栈">栈</h2>
 
@@ -72,6 +91,7 @@
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+07 Jun 2022 - jskyzero - add 分治法
 07 Jun 2022 - jskyzero - add some index
 24 May 2022 - jskyzero - 📝 add 游戏AI开发技巧
 

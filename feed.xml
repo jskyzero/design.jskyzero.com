@@ -1,9 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-06-07T05:04:17+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">游戏AI开发技巧</title><link href="https://design.jskyzero.com/2022/05/24/GameAISkill/" rel="alternate" type="text/html" title="游戏AI开发技巧" /><published>2022-05-24T00:00:00+00:00</published><updated>2022-05-24T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/05/24/GameAISkill</id><content type="html" xml:base="https://design.jskyzero.com/2022/05/24/GameAISkill/"><![CDATA[<p>一些实用技巧。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-06-07T05:33:14+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">游戏AI开发技巧</title><link href="https://design.jskyzero.com/2022/05/24/GameAISkill/" rel="alternate" type="text/html" title="游戏AI开发技巧" /><published>2022-05-24T00:00:00+00:00</published><updated>2022-05-24T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/05/24/GameAISkill</id><content type="html" xml:base="https://design.jskyzero.com/2022/05/24/GameAISkill/"><![CDATA[<p>一些游戏AI设计制作时候的思维方式和技巧，主要来自<strong>GameAIPro</strong>的<a href="http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter05_Structural_Architecture_Common_Tricks_of_the_Trade.pdf">这篇文章</a></p>
 
 <h1 id="游戏ai开发技巧">游戏AI开发技巧</h1>
 
 <h2 id="分治法">分治法</h2>
+
+<p>游戏AI开发的一个核心难点就是应对逐渐上升的复杂度。</p>
+
+<p>当新的环境，或者新的行为添加到现有体系，其复杂度多为乘法系数上升。</p>
+
+<blockquote>
+  <p>举例：
+当现有移动，防御，技能A，技能B，4种行为后增加一种技能C
+由于技能B可以衔接在任意一种行为后（，当然也可能是前），将会增加4种需要思考的情况</p>
+</blockquote>
+
+<p>而使用分治法，则可以有效降低这种情况下需要扩张的新组合选项。</p>
+
+<blockquote>
+  <p>举例：
+将移动，防御，划分为休闲动作
+将技能A，技能B划分为攻击行为，2种行为大类后增加一种技能C
+则只需要增加2种需要思考的情况</p>
+</blockquote>
 
 <h2 id="栈">栈</h2>
 
@@ -11,7 +30,7 @@
 
 <h2 id="知识管理">知识管理</h2>
 
-<h2 id="模块化">模块化</h2>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[一些实用技巧。]]></summary></entry><entry><title type="html">如何从「生活」中找参考</title><link href="https://design.jskyzero.com/2022/04/15/life/" rel="alternate" type="text/html" title="如何从「生活」中找参考" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/life</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/life/"><![CDATA[<!-- # 学会生活
+<h2 id="模块化">模块化</h2>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章]]></summary></entry><entry><title type="html">如何从「生活」中找参考</title><link href="https://design.jskyzero.com/2022/04/15/life/" rel="alternate" type="text/html" title="如何从「生活」中找参考" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/life</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/life/"><![CDATA[<!-- # 学会生活
 
 文明是一段时间内一个区域的人的生活状态，那么生活究竟是什么呢。
 
