@@ -1,5 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-05-30T04:36:44+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">游戏AI开发技巧</title><link href="https://design.jskyzero.com/2022/05/24/GameAISkill/" rel="alternate" type="text/html" title="游戏AI开发技巧" /><published>2022-05-24T00:00:00+00:00</published><updated>2022-05-24T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/05/24/GameAISkill</id><content type="html" xml:base="https://design.jskyzero.com/2022/05/24/GameAISkill/"><![CDATA[<p>占个位，慢慢填坑。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[占个位，慢慢填坑。]]></summary></entry><entry><title type="html">如何从「生活」中找参考</title><link href="https://design.jskyzero.com/2022/04/15/life/" rel="alternate" type="text/html" title="如何从「生活」中找参考" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/life</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/life/"><![CDATA[<!-- # 学会生活
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-06-07T05:04:17+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">游戏AI开发技巧</title><link href="https://design.jskyzero.com/2022/05/24/GameAISkill/" rel="alternate" type="text/html" title="游戏AI开发技巧" /><published>2022-05-24T00:00:00+00:00</published><updated>2022-05-24T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/05/24/GameAISkill</id><content type="html" xml:base="https://design.jskyzero.com/2022/05/24/GameAISkill/"><![CDATA[<p>一些实用技巧。</p>
+
+<h1 id="游戏ai开发技巧">游戏AI开发技巧</h1>
+
+<h2 id="分治法">分治法</h2>
+
+<h2 id="栈">栈</h2>
+
+<h2 id="评估函数">评估函数</h2>
+
+<h2 id="知识管理">知识管理</h2>
+
+<h2 id="模块化">模块化</h2>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[一些实用技巧。]]></summary></entry><entry><title type="html">如何从「生活」中找参考</title><link href="https://design.jskyzero.com/2022/04/15/life/" rel="alternate" type="text/html" title="如何从「生活」中找参考" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/life</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/life/"><![CDATA[<!-- # 学会生活
 
 文明是一段时间内一个区域的人的生活状态，那么生活究竟是什么呢。
 
@@ -220,7 +232,13 @@ graph LR
     C --&gt;|使用| C2[黑板变量]
 
     C1 --&gt;|支持| D1[自定义节点]
-</div>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。]]></summary></entry><entry><title type="html">高达机型设计赏析</title><link href="https://design.jskyzero.com/2022/03/16/gunpla/" rel="alternate" type="text/html" title="高达机型设计赏析" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/gunpla</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/gunpla/"><![CDATA[<h1 id="高达机型设计赏析">高达机型设计赏析</h1>
+</div>
+
+<h3 id="ui制作">UI制作</h3>
+
+<h3 id="动作逻辑">动作逻辑</h3>
+
+<h3 id="关卡">关卡</h3>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。]]></summary></entry><entry><title type="html">高达机型设计赏析</title><link href="https://design.jskyzero.com/2022/03/16/gunpla/" rel="alternate" type="text/html" title="高达机型设计赏析" /><published>2022-03-16T00:00:00+00:00</published><updated>2022-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/16/gunpla</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/16/gunpla/"><![CDATA[<h1 id="高达机型设计赏析">高达机型设计赏析</h1>
 
 <p><a href="https://zh.wikipedia.org/wiki/GUNDAM%E7%B3%BB%E5%88%97%E4%BD%9C%E5%93%81">《高达系列》</a>为富野由悠季自1979年所制作机动战士高达一作所派生出来的一连串续作、外传及其他系列的总称。本身品牌市值据估计逾500亿日元。</p>
 
