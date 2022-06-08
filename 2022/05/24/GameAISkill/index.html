@@ -44,7 +44,7 @@
   <li class="md-toc-h1"><a href="#游戏ai开发技巧">游戏AI开发技巧</a>
     <ul>
       <li class="md-toc-h2"><a href="#mn复杂度的解法分治">M*N复杂度的解法：分治</a></li>
-      <li class="md-toc-h2"><a href="#捡完芝麻再捡起西瓜栈">捡完芝麻再捡起西瓜：栈</a></li>
+      <li class="md-toc-h2"><a href="#捡完芝麻不丢西瓜栈">捡完芝麻不丢西瓜：栈</a></li>
       <li class="md-toc-h2"><a href="#多维度复杂条件的决策评估函数">多维度复杂条件的决策：评估函数</a></li>
       <li class="md-toc-h2"><a href="#通过知识引入智能黑板变量">通过知识引入智能：黑板变量</a></li>
       <li class="md-toc-h2"><a href="#适合的人干适合的事模块化">适合的人干适合的事：模块化</a></li>
@@ -84,27 +84,33 @@
 则只需要增加2种需要思考的情况</p>
 </blockquote>
 
-<p>同样的思路也出现在<strong>状态机</strong>与<strong>分层状态机</strong>上。</p>
+<p>同样的思路也出现在<strong>状态机</strong>与<strong>分层状态机</strong>上：状态机互相的连线在状态过多时无法维护，也不能很好的支持复用，于是有了分层状态机。</p>
 
-<h2 id="捡完芝麻再捡起西瓜栈">捡完芝麻再捡起西瓜：栈</h2>
-
-<p><img src="/assets/img/skill/GameAISkill/2-1.svg" alt="" /></p>
+<h2 id="捡完芝麻不丢西瓜栈">捡完芝麻不丢西瓜：栈</h2>
 
 <p>栈是一种常见的数据结构，其核心特征是先进后出（，类似的数据结构队列是先进先出）。</p>
+
+<p><img src="/assets/img/skill/GameAISkill/2-1.svg" alt="" /></p>
 
 <p>利用先进后出的特性，我们可以为AI引入<strong>上下文</strong>的时间维度概念。</p>
 
 <blockquote>
   <p>举例：
 怪物在执行【靠近】-&gt;【攻击】的逻辑
-【靠近】过程中发现一个攻击利器：棒球棒，可以触发【捡武器】行为
-如果没有历史信息：
-  可能会重新进行决策来判断当前行为
-如果有历史信息（以栈结构为例）：
-  【捡武器】入栈，
-  【捡武器】出栈，继续【靠近】-&gt;【攻击】</p>
-
+【靠近】过程中发现一个攻击利器：棒球棒，可以触发【捡武器】行为</p>
 </blockquote>
+
+<p><img src="/assets/img/skill/GameAISkill/2-2.svg" alt="" /></p>
+
+<p>如果没有历史信息：可能会重新进行决策来判断当前行为，这可能会带来行为的更改！之前要攻击，现在可能就是移动发呆了。</p>
+
+<p><img src="/assets/img/skill/GameAISkill/2-3.svg" alt="" /></p>
+
+<p>如果有历史信息（以栈结构为例）：则可以继续上一次没有执行玩的动作（其中捡完武器，是否重新决策是可选环节）</p>
+
+<p><img src="/assets/img/skill/GameAISkill/2-4.svg" alt="" /></p>
+
+<p>本质上是上下文知识的记忆，只是运用栈的结构，可以自然的实现行为与历史相关这一目的。</p>
 
 <h2 id="多维度复杂条件的决策评估函数">多维度复杂条件的决策：评估函数</h2>
 
@@ -116,48 +122,76 @@
 行为：攻击，逃跑，……</p>
 </blockquote>
 
-<p>可以列出一张枚举表格：</p>
+<p>方便理解，我们列出一张枚举表格：</p>
 
 <table>
   <thead>
     <tr>
-      <th>条件A</th>
-      <th>条件B</th>
-      <th>条件C</th>
+      <th>自身血量</th>
+      <th>目标血量</th>
+      <th>距离</th>
       <th>行为</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>A1情况</td>
-      <td>B1情况</td>
-      <td>C1情况</td>
-      <td>特定行为</td>
+      <td>血量健康</td>
+      <td>血量健康</td>
+      <td>近</td>
+      <td>攻击</td>
     </tr>
     <tr>
-      <td>A1情况</td>
-      <td>B2情况</td>
-      <td>C1情况</td>
-      <td>特定行为</td>
+      <td>血量健康</td>
+      <td>血量健康</td>
+      <td>远</td>
+      <td>攻击</td>
     </tr>
     <tr>
-      <td>A1情况</td>
-      <td>B1情况</td>
-      <td>C2情况</td>
-      <td>特定行为</td>
+      <td>血量健康</td>
+      <td>血量不健康</td>
+      <td>近</td>
+      <td>攻击</td>
     </tr>
     <tr>
-      <td>A1情况</td>
-      <td>B2情况</td>
-      <td>C2情况</td>
-      <td>特定行为</td>
+      <td>血量健康</td>
+      <td>血量不健康</td>
+      <td>远</td>
+      <td>攻击</td>
+    </tr>
+    <tr>
+      <td>血量不健康</td>
+      <td>血量健康</td>
+      <td>近</td>
+      <td>逃跑</td>
+    </tr>
+    <tr>
+      <td>血量不健康</td>
+      <td>血量健康</td>
+      <td>远</td>
+      <td>逃跑</td>
+    </tr>
+    <tr>
+      <td>血量不健康</td>
+      <td>血量不健康</td>
+      <td>近</td>
+      <td>攻击</td>
+    </tr>
+    <tr>
+      <td>血量不健康</td>
+      <td>血量不健康</td>
+      <td>远</td>
+      <td>逃跑</td>
     </tr>
   </tbody>
 </table>
 
-<p>多数情况下，我们是没能力使用枚举维护复杂复合情况下的决策的，也或者说这是性价比比较低的方式。</p>
+<p>根据怪物血量的性格（胆小怕死或者无畏自杀），擅长发起攻击的距离，等等要素，我们可以一一决策各种情形下的行为。多样化的行为！这正是游戏AI的魅力。</p>
 
-<p>事实上，我们是建立复合参数到固定行为的一种映射，所以我们可以使用<strong>函数</strong>的思想。</p>
+<p>但是多数情况下，我们是没能力使用枚举维护复杂复合情况下的决策的（参考第一部分使用分治降低复杂度），也或者说：这是性价比比较低的方式。</p>
+
+<p>本质上，我们是建立复合参数到固定行为的一种映射，所以我们可以使用<strong>函数</strong>的思想。</p>
+
+<p><img src="/assets/img/skill/GameAISkill/3-1.svg" alt="" /></p>
 
 <p>将每一个条件（离散值或者连续值）进行值的映射，并为其赋予一个乘法缩放系数，再通过值的求和来考虑所有条件的影响。</p>
 
@@ -183,6 +217,7 @@
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+08 Jun 2022 - jskyzero - update 游戏AI开发技巧
 07 Jun 2022 - jskyzero - update 游戏AI开发技巧
 07 Jun 2022 - jskyzero - add 分治法
 07 Jun 2022 - jskyzero - add some index
