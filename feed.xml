@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-06-09T10:36:42+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-06-10T01:50:11+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏AI开发技巧</title><link href="https://design.jskyzero.com/2022/05/24/GameAISkill/" rel="alternate" type="text/html" title="游戏AI开发技巧" /><published>2022-05-24T00:00:00+00:00</published><updated>2022-05-24T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/05/24/GameAISkill</id><content type="html" xml:base="https://design.jskyzero.com/2022/05/24/GameAISkill/"><![CDATA[<p>一些游戏AI设计制作时候的思维方式和技巧，主要来自<strong>GameAIPro</strong>的<a href="http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter05_Structural_Architecture_Common_Tricks_of_the_Trade.pdf">这篇文章</a></p>
 
 <h1 id="游戏ai开发技巧">游戏AI开发技巧</h1>
@@ -50,7 +50,7 @@
 
 <p><img src="/assets/img/skill/GameAISkill/2-3.svg" alt="" /></p>
 
-<p>如果有历史信息（以栈结构为例）：则可以继续上一次没有执行玩的动作（其中捡完武器，是否重新决策是可选环节）</p>
+<p>如果有历史信息（以栈结构为例）：则可以继续上一次没有执行完的动作（其中捡完武器，是否重新决策是可选环节）</p>
 
 <p><img src="/assets/img/skill/GameAISkill/2-4.svg" alt="" /></p>
 
