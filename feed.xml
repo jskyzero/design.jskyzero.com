@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-06-17T08:08:55+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">动作游戏设计基础</title><link href="https://design.jskyzero.com/2022/06/17/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏设计基础" /><published>2022-06-17T00:00:00+00:00</published><updated>2022-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/06/17/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2022/06/17/ActionGameDesign/"><![CDATA[<p>本文将从分析动作游戏的核心特征出发，分析记录一些优秀游戏的动作形式与体验，用于设计时快速查阅参考。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-06-17T08:42:51+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">动作游戏设计基础</title><link href="https://design.jskyzero.com/2022/06/17/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏设计基础" /><published>2022-06-17T00:00:00+00:00</published><updated>2022-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/06/17/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2022/06/17/ActionGameDesign/"><![CDATA[<!-- 本文将从分析动作游戏的核心特征出发，分析记录一些优秀游戏的动作形式与体验，用于设计时快速查阅参考。 -->
 
 <p>本文将会很长很长，阅读时请做好心里准备，分清“逻辑段落”与“工具参考段落”。本文中间必然存在各种疏漏，欢迎指出。</p>
 
@@ -7,7 +7,7 @@
 
 <h2 id="学术讨论">学术讨论</h2>
 
-<p>本节我想先讨论一些远离具体的设计的、有关动作游戏的宏观理解（也许是本文除去参考部分唯一的游戏理解输出部分），这些作为一些基础铺垫，帮助我们深入理解动作游戏的核心特征与乐趣，然后做出更好的设计。</p>
+<p>本节我想先讨论一些远离具体的设计的、有关动作游戏的宏观理解（也许是本文除去参考部分唯一的游戏理解输出部分），这些作为一些基础铺垫，帮助我们<strong>深入理解动作游戏的核心特征与乐趣</strong>，然后做出更好的设计。</p>
 
 <ul>
   <li>广义动作游戏</li>
@@ -21,7 +21,7 @@
 
 <p>以广义去探讨，可能会像面对一整片森林去观察某种特定植物，未必能得到想要的答案，如果你认真看了目录中的游戏枚举，你会发现其中大多为日系动作游戏，维基百科中存在于另一个关于<a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B2%E3%83%BC%E3%83%A0">日式狭义动作的定义</a>：分为2D和3D，2D分为横版卷轴、纵向卷轴、俯视角、固定画面；3D分为无双类、硬核动作、怪猎、魂like，格斗类作为掌上明珠单独枚举。</p>
 
-<p>正如<a href="https://zhuanlan.zhihu.com/p/25481394">旗舰评论所言</a>：“这些强调反应与操作的零散游戏类型集合，本身就是动作游戏设计的发展史：帧数、框体判定、攻防投三角循环、跳跃空战、群体AI……”，甚至逼近动作游戏的设计本质：“狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。”</p>
+<p>正如<a href="https://zhuanlan.zhihu.com/p/25481394">旗舰评论所言</a>：“这些强调反应与操作的零散游戏类型集合，本身就是动作游戏设计的发展史：帧数、框体判定、攻防投三角循环、跳跃空战、群体AI……”，甚至逼近动作游戏的设计本质：<strong>“狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。”</strong></p>
 
 <ul>
   <li>动作游戏的哲学与本质</li>
@@ -31,7 +31,7 @@
 
 <p>动作游戏本质非常简单：玩家 控制 游戏角色 播放 动作。</p>
 
-<p>但是为了使这个过程变得有趣，设计上必须使得控制这件事变得有意义，也就是上文所说的“奖惩导向”：在玩家做出正确的控制时奖励，做出错误控制时惩罚。奖惩导向最基本也最广泛的例子是血量。</p>
+<p>但是为了使这个过程变得有趣，设计上<strong>必须使得控制这件事变得有意义</strong>，也就是上文所说的“奖惩导向”：在玩家<strong>做出正确的控制时奖励，做出错误控制时惩罚</strong>。奖惩导向最基本也最广泛的例子是血量。</p>
 
 <p>在基本的意义导向方针以后，还需要给玩家丰富的考核场景，这里其实有着另一个哲学：场合少选项多、场合多选项少（当然也可以俩都多）。从这个角度出发：“动作游戏就是设计场合与突破场合的方法”。（大意，出自某老牌日本ACT设计师，但是一时找不到出处，后面补充）；“关注自身（选项）还是关注敌人（考验场合）”</p>
 
@@ -175,7 +175,7 @@ graph TD
   <li>攻击动作：开始、攻击、结束</li>
   <li>攻击特效：（略）</li>
   <li>受击动作：（略）</li>
-</ul>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文将从分析动作游戏的核心特征出发，分析记录一些优秀游戏的动作形式与体验，用于设计时快速查阅参考。]]></summary></entry><entry><title type="html">一则关于动作游戏的分析摘录</title><link href="https://design.jskyzero.com/2022/06/17/about_action_game/" rel="alternate" type="text/html" title="一则关于动作游戏的分析摘录" /><published>2022-06-17T00:00:00+00:00</published><updated>2022-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/06/17/about_action_game</id><content type="html" xml:base="https://design.jskyzero.com/2022/06/17/about_action_game/"><![CDATA[<p>那么它就是：<a href="https://zhuanlan.zhihu.com/p/25481394">从魂到仁王：两个游戏类型的重构史</a></p>
+</ul>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">一则关于动作游戏的分析摘录</title><link href="https://design.jskyzero.com/2022/06/17/about_action_game/" rel="alternate" type="text/html" title="一则关于动作游戏的分析摘录" /><published>2022-06-17T00:00:00+00:00</published><updated>2022-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/06/17/about_action_game</id><content type="html" xml:base="https://design.jskyzero.com/2022/06/17/about_action_game/"><![CDATA[<p>那么它就是：<a href="https://zhuanlan.zhihu.com/p/25481394">从魂到仁王：两个游戏类型的重构史</a></p>
 
 <ul>
   <li>北美的实际首发销量超过38万套，经过几个月的酝酿期后，一举拿下包括Gamespot年度游戏在内的多项大奖。包含廉价版在内，PS3独占的恶魔之魂全球总计销量超过130万套，为黑暗之魂创造口碑、销量双重奇迹<strong>奠定了坚实的基础。</strong></li>
@@ -1112,16 +1112,18 @@ div.color {
 
 <h2 id="后记">后记</h2>
 
-<p>鸽了，差不多可以了）</p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[高达机型设计赏析]]></summary></entry><entry><title type="html">动作设计参考与赏析</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作设计参考与赏析" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<h1 id="动作设计参考与赏析">动作设计参考与赏析</h1>
+<p>鸽了，差不多可以了）</p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[高达机型设计赏析]]></summary></entry><entry><title type="html">动作设计参考与赏析</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作设计参考与赏析" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的动作设计。</p>
 
-<p>本部分我们开始正式的动作积累与讨论，开始之前想重申：</p>
+<h1 id="动作设计参考与赏析">动作设计参考与赏析</h1>
+
+<p>在正式的动作积累与讨论之前想重申——如何学习一个动作？</p>
 
 <ol>
-  <li>主要关注动作种类和形式</li>
-  <li>次要关注动作机制和实现</li>
+  <li>动作种类和形式（本文主要）</li>
+  <li>动作机制和实现（本文次要或者无）</li>
 </ol>
 
-<p>换言之，这里只解决一个问题，要做一个动作的时候，参考美学表现、节奏、打击感blabla</p>
+<p>换言之，本文只解决一个问题，要做一个动作的时候，参考美学表现、节奏、打击感等。</p>
 
 <h2 id="最新体验的">最新体验的</h2>
 
@@ -1669,7 +1671,7 @@ div.color {
 
 <h4 id="lol">LOL</h4>
 
-<h4 id="lolm">LOLM</h4>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[动作设计参考与赏析]]></summary></entry><entry><title type="html">游戏设计所需要的能力</title><link href="https://design.jskyzero.com/2022/02/15/GameDesignAbility/" rel="alternate" type="text/html" title="游戏设计所需要的能力" /><published>2022-02-15T00:00:00+00:00</published><updated>2022-02-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/02/15/GameDesignAbility</id><content type="html" xml:base="https://design.jskyzero.com/2022/02/15/GameDesignAbility/"><![CDATA[<p>本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。</p>
+<h4 id="lolm">LOLM</h4>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的动作设计。]]></summary></entry><entry><title type="html">游戏设计所需要的能力</title><link href="https://design.jskyzero.com/2022/02/15/GameDesignAbility/" rel="alternate" type="text/html" title="游戏设计所需要的能力" /><published>2022-02-15T00:00:00+00:00</published><updated>2022-02-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/02/15/GameDesignAbility</id><content type="html" xml:base="https://design.jskyzero.com/2022/02/15/GameDesignAbility/"><![CDATA[<p>本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。</p>
 
 <h1 id="游戏设计所需要的能力">游戏设计所需要的能力</h1>
 
