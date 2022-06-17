@@ -1,7 +1,8 @@
 ---
 layout: post
-title: 简明虚幻5教程
+title: 简明虚幻引擎5教程
 categories: [游戏开发]
+long-term-maintenance: true
 ---
 
 虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。

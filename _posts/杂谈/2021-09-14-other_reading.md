@@ -4,6 +4,7 @@ title: 零碎摘抄的汇总
 featured-img: bg1
 mathjax: true
 categories: [杂谈]
+long-term-maintenance: true
 ---
 
 本文汇总一些摘抄记录、看到的有意思的对人生有启迪的话、一些网络上看到的言论。

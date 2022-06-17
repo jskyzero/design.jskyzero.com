@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 游戏AI开发技巧
+title: 游戏AI架构的常用技巧
 categories: [游戏开发]
 ---
 
@@ -8,7 +8,7 @@ categories: [游戏开发]
 一些游戏AI设计制作时候的思维方式和技巧，主要来自**GameAIPro**的[这篇文章](http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter05_Structural_Architecture_Common_Tricks_of_the_Trade.pdf)
 
 
-# 游戏AI开发技巧
+# 游戏AI架构的常用技巧
 
 
 ## M*N复杂度的解法：分治
@@ -136,6 +136,6 @@ categories: [游戏开发]
 > 场景中包含可交互物与交互方法，这样就把交互逻辑与逻辑主题分开，方便组合、更新。
 
 
-## 总结
+## 总结：灵活使用解决问题
 
 AI有着多种技术架构与架构对应擅长的逻辑表达，有些时候面临的是工具的表达能力的问题。但是更多时候面对的是复杂情况的逻辑实现问题，灵活使用上述思维方式和技巧，能解决对应的复杂问题。

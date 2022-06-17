@@ -14,8 +14,17 @@ layout: default
     <li>{{ category }}</li>
     {%- for post in posts -%}
     <li>
+      {%- if post.long-term-maintenance -%}
+ 
+      {%- assign date_format = " LONG-TERM" -%}
+      [{{ date_format }}] <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+
+      {%- else -%}
+
       {%- assign date_format = "%Y-%m-%d" -%}
       [{{ post.date | date: date_format }}] <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+
+      {%- endif -%}
     </li>
     {%- endfor -%}
   </ul>

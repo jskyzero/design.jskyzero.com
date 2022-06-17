@@ -5,6 +5,7 @@ featured-img: bg2
 # featured-img: fe
 mathjax: true
 categories: [杂谈]
+long-term-maintenance: true
 ---
 
 本文用以记录自己犯过的一些错误，和回答过别人的一些问题。类似改错本的存在。
