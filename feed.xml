@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-06-17T06:49:38+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-06-17T08:08:55+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">动作游戏设计基础</title><link href="https://design.jskyzero.com/2022/06/17/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏设计基础" /><published>2022-06-17T00:00:00+00:00</published><updated>2022-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/06/17/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2022/06/17/ActionGameDesign/"><![CDATA[<p>本文将从分析动作游戏的核心特征出发，分析记录一些优秀游戏的动作形式与体验，用于设计时快速查阅参考。</p>
 
 <p>本文将会很长很长，阅读时请做好心里准备，分清“逻辑段落”与“工具参考段落”。本文中间必然存在各种疏漏，欢迎指出。</p>
@@ -1114,8 +1114,6 @@ div.color {
 
 <p>鸽了，差不多可以了）</p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[高达机型设计赏析]]></summary></entry><entry><title type="html">动作设计参考与赏析</title><link href="https://design.jskyzero.com/2022/03/07/ActionReference/" rel="alternate" type="text/html" title="动作设计参考与赏析" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/03/07/ActionReference</id><content type="html" xml:base="https://design.jskyzero.com/2022/03/07/ActionReference/"><![CDATA[<h1 id="动作设计参考与赏析">动作设计参考与赏析</h1>
 
-<h2 id="参考库">参考库</h2>
-
 <p>本部分我们开始正式的动作积累与讨论，开始之前想重申：</p>
 
 <ol>
@@ -1125,7 +1123,34 @@ div.color {
 
 <p>换言之，这里只解决一个问题，要做一个动作的时候，参考美学表现、节奏、打击感blabla</p>
 
-<h3 id="最新体验的">最新体验的</h3>
+<h2 id="最新体验的">最新体验的</h2>
+
+<h4 id="街霸vi">街霸VI</h4>
+
+<ul>
+  <li>前瞻：<a href="https://www.bilibili.com/video/BV1JB4y1s7qi">轻松上手一键出招！《街头霸王6》前瞻与系统介绍</a>
+    <ul>
+      <li>现代模式（一键出招）
+        <ul>
+          <li>必杀技：方向键+必杀技按钮</li>
+          <li>超必杀技：方向键+2按钮</li>
+          <li>自动连招：Assit按钮+攻击</li>
+        </ul>
+      </li>
+      <li>斗气系统，6格斗气槽
+        <ul>
+          <li>出场满、自动恢复、打人或招架成功打加速恢复</li>
+          <li>斗气招架：按住持续消耗，自动格挡，格挡成功恢复斗气；绝佳时机格挡，停止对方动作，慢动作演出，增加利于反击时间</li>
+          <li>斗气迸发：接住攻击，释放打断；版边自动撞墙</li>
+          <li>超载：EX技能</li>
+          <li>突进：斗气招架（1格）or普通攻击（3格） 快速前冲</li>
+          <li>格挡反击：（2格）取消防御硬直反击</li>
+        </ul>
+      </li>
+      <li>超级必杀技槽：3格，3种必杀技（继承）</li>
+    </ul>
+  </li>
+</ul>
 
 <h4 id="老头环">老头环</h4>
 
@@ -1187,7 +1212,7 @@ div.color {
   </li>
 </ul>
 
-<h3 id="网游">网游</h3>
+<h2 id="网游">网游</h2>
 
 <h4 id="dnf">DNF</h4>
 
@@ -1216,7 +1241,7 @@ div.color {
   </li>
 </ul>
 
-<h3 id="主机pc单机">主机/PC单机</h3>
+<h2 id="主机pc单机">主机/PC单机</h2>
 
 <h4 id="无双-系列">无双 系列</h4>
 
@@ -1394,7 +1419,7 @@ div.color {
   </li>
 </ul>
 
-<h3 id="ftg">FTG</h3>
+<h2 id="ftg">FTG</h2>
 
 <ul>
   <li>动作
@@ -1417,7 +1442,7 @@ div.color {
   <li>侍魂</li>
 </ul>
 
-<h3 id="手机游戏">手机游戏</h3>
+<h2 id="手机游戏">手机游戏</h2>
 
 <h4 id="崩坏3">崩坏3</h4>
 
@@ -1504,7 +1529,7 @@ div.color {
 
 <h4 id="原神">原神</h4>
 
-<h3 id="moba游戏">MOBA游戏</h3>
+<h2 id="moba游戏">MOBA游戏</h2>
 
 <h4 id="王者荣耀">王者荣耀</h4>
 
