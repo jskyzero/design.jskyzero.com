@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-07-14T11:34:11+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">怪物猎人中的战斗数值设计</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="怪物猎人中的战斗数值设计" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<p>最近玩曙光的时候又碰巧讨论到玩家伤害和防御力，于是打算整理成文，方便后续参考。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-07-15T08:11:28+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">怪物猎人的战斗数值设计</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="怪物猎人的战斗数值设计" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<p>近期怪物猎人崛起曙光DLC发售，截止本文发售时已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将对怪物猎人的经典数值规则进行一个介绍，力求展现出设计的精妙之处与独特魅力；本文不希望用大量数据劝退读者，希望零基础的业余读者也能享受并读懂。</p>
 
 <!--more-->
 
-<h1 id="怪物猎人中的战斗数值设计">怪物猎人中的战斗数值设计</h1>
+<h1 id="怪物猎人的战斗数值设计">怪物猎人的战斗数值设计</h1>
 
-<p>在正式开始内容之前有一些必须强调的事情：</p>
-<ol>
-  <li>本文基于：猎人同好的亲身测试、登录PC以后的拆包数据，这些规则可能会随着版本更迭而产生变动，希望讨论聚焦于做法的逻辑哲学，而非做法本身的严格正确性。</li>
-  <li>本文很可能存在纰漏和个人主观意见，欢迎指正和讨论。</li>
-</ol>
+<!-- 在正式开始内容之前有一些必须强调的事情：
+1. 本文基于：猎人同好的亲身测试、登录PC以后的拆包数据，这些规则可能会随着版本更迭而产生变动，希望讨论聚焦于做法的逻辑哲学，而非做法本身的严格正确性。
+2. 本文很可能存在纰漏和个人主观意见，欢迎指正和讨论。 -->
+
+<h2 id="前言动作向左rpg向右">前言：动作向左，RPG向右</h2>
 
 <h2 id="伤害计算">伤害计算</h2>
 
@@ -21,7 +21,7 @@
 
 <h2 id="怪物属性">怪物属性</h2>
 
-<p>本节我们讨论前面遗漏的一些怪物属性。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[最近玩曙光的时候又碰巧讨论到玩家伤害和防御力，于是打算整理成文，方便后续参考。]]></summary></entry><entry><title type="html">一则关于动作游戏的分析摘录</title><link href="https://design.jskyzero.com/2022/06/17/about_action_game/" rel="alternate" type="text/html" title="一则关于动作游戏的分析摘录" /><published>2022-06-17T00:00:00+00:00</published><updated>2022-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/06/17/about_action_game</id><content type="html" xml:base="https://design.jskyzero.com/2022/06/17/about_action_game/"><![CDATA[<p>那么它就是：<a href="https://zhuanlan.zhihu.com/p/25481394">从魂到仁王：两个游戏类型的重构史</a></p>
+<p>本节我们讨论前面遗漏的一些怪物属性。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期怪物猎人崛起曙光DLC发售，截止本文发售时已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将对怪物猎人的经典数值规则进行一个介绍，力求展现出设计的精妙之处与独特魅力；本文不希望用大量数据劝退读者，希望零基础的业余读者也能享受并读懂。]]></summary></entry><entry><title type="html">一则关于动作游戏的分析摘录</title><link href="https://design.jskyzero.com/2022/06/17/about_action_game/" rel="alternate" type="text/html" title="一则关于动作游戏的分析摘录" /><published>2022-06-17T00:00:00+00:00</published><updated>2022-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/06/17/about_action_game</id><content type="html" xml:base="https://design.jskyzero.com/2022/06/17/about_action_game/"><![CDATA[<p>那么它就是：<a href="https://zhuanlan.zhihu.com/p/25481394">从魂到仁王：两个游戏类型的重构史</a></p>
 
 <ul>
   <li>北美的实际首发销量超过38万套，经过几个月的酝酿期后，一举拿下包括Gamespot年度游戏在内的多项大奖。包含廉价版在内，PS3独占的恶魔之魂全球总计销量超过130万套，为黑暗之魂创造口碑、销量双重奇迹<strong>奠定了坚实的基础。</strong></li>

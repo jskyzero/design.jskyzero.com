@@ -7,21 +7,21 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>怪物猎人中的战斗数值设计 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+  <title>怪物猎人的战斗数值设计 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="怪物猎人中的战斗数值设计" />
+<meta property="og:title" content="怪物猎人的战斗数值设计" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="最近玩曙光的时候又碰巧讨论到玩家伤害和防御力，于是打算整理成文，方便后续参考。" />
-<meta property="og:description" content="最近玩曙光的时候又碰巧讨论到玩家伤害和防御力，于是打算整理成文，方便后续参考。" />
+<meta name="description" content="近期怪物猎人崛起曙光DLC发售，截止本文发售时已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将对怪物猎人的经典数值规则进行一个介绍，力求展现出设计的精妙之处与独特魅力；本文不希望用大量数据劝退读者，希望零基础的业余读者也能享受并读懂。" />
+<meta property="og:description" content="近期怪物猎人崛起曙光DLC发售，截止本文发售时已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将对怪物猎人的经典数值规则进行一个介绍，力求展现出设计的精妙之处与独特魅力；本文不希望用大量数据劝退读者，希望零基础的业余读者也能享受并读懂。" />
 <link rel="canonical" href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" />
 <meta property="og:url" content="https://design.jskyzero.com/2022/07/14/mhrsb_math/" />
 <meta property="og:site_name" content="设计者笔记" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-07-14T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="怪物猎人中的战斗数值设计" />
+<meta property="twitter:title" content="怪物猎人的战斗数值设计" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-14T00:00:00+00:00","datePublished":"2022-07-14T00:00:00+00:00","description":"最近玩曙光的时候又碰巧讨论到玩家伤害和防御力，于是打算整理成文，方便后续参考。","headline":"怪物猎人中的战斗数值设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/07/14/mhrsb_math/"},"url":"https://design.jskyzero.com/2022/07/14/mhrsb_math/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-14T00:00:00+00:00","datePublished":"2022-07-14T00:00:00+00:00","description":"近期怪物猎人崛起曙光DLC发售，截止本文发售时已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将对怪物猎人的经典数值规则进行一个介绍，力求展现出设计的精妙之处与独特魅力；本文不希望用大量数据劝退读者，希望零基础的业余读者也能享受并读懂。","headline":"怪物猎人的战斗数值设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/07/14/mhrsb_math/"},"url":"https://design.jskyzero.com/2022/07/14/mhrsb_math/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" type="text/css" href="/assets/main.css"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
@@ -41,8 +41,9 @@
 <main>
       <div id="index">
   <ul class="md-toc">
-  <li class="md-toc-h1"><a href="#怪物猎人中的战斗数值设计">怪物猎人中的战斗数值设计</a>
+  <li class="md-toc-h1"><a href="#怪物猎人的战斗数值设计">怪物猎人的战斗数值设计</a>
     <ul>
+      <li class="md-toc-h2"><a href="#前言动作向左rpg向右">前言：动作向左，RPG向右</a></li>
       <li class="md-toc-h2"><a href="#伤害计算">伤害计算</a></li>
       <li class="md-toc-h2"><a href="#防御力">防御力</a></li>
       <li class="md-toc-h2"><a href="#怪物属性">怪物属性</a></li>
@@ -69,17 +70,17 @@
 
 </div>
 
-<p>最近玩曙光的时候又碰巧讨论到玩家伤害和防御力，于是打算整理成文，方便后续参考。</p>
+<p>近期怪物猎人崛起曙光DLC发售，截止本文发售时已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将对怪物猎人的经典数值规则进行一个介绍，力求展现出设计的精妙之处与独特魅力；本文不希望用大量数据劝退读者，希望零基础的业余读者也能享受并读懂。</p>
 
 <!--more-->
 
-<h1 id="怪物猎人中的战斗数值设计">怪物猎人中的战斗数值设计</h1>
+<h1 id="怪物猎人的战斗数值设计">怪物猎人的战斗数值设计</h1>
 
-<p>在正式开始内容之前有一些必须强调的事情：</p>
-<ol>
-  <li>本文基于：猎人同好的亲身测试、登录PC以后的拆包数据，这些规则可能会随着版本更迭而产生变动，希望讨论聚焦于做法的逻辑哲学，而非做法本身的严格正确性。</li>
-  <li>本文很可能存在纰漏和个人主观意见，欢迎指正和讨论。</li>
-</ol>
+<!-- 在正式开始内容之前有一些必须强调的事情：
+1. 本文基于：猎人同好的亲身测试、登录PC以后的拆包数据，这些规则可能会随着版本更迭而产生变动，希望讨论聚焦于做法的逻辑哲学，而非做法本身的严格正确性。
+2. 本文很可能存在纰漏和个人主观意见，欢迎指正和讨论。 -->
+
+<h2 id="前言动作向左rpg向右">前言：动作向左，RPG向右</h2>
 
 <h2 id="伤害计算">伤害计算</h2>
 
@@ -97,6 +98,7 @@
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+15 Jul 2022 - jskyzero - 📝 实在是写不动，告辞
 14 Jul 2022 - jskyzero - 📝 update 怪物猎人中的战斗数值设计
 14 Jul 2022 - jskyzero - 📝 add 怪物猎人系列中的战斗数值设计
 
