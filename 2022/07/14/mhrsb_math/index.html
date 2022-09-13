@@ -11,8 +11,8 @@
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="怪物猎人的战斗数值设计" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="近期怪物猎人崛起曙光DLC发售，截止本文发售时已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将对怪物猎人的经典数值规则进行一个简要介绍。" />
-<meta property="og:description" content="近期怪物猎人崛起曙光DLC发售，截止本文发售时已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将对怪物猎人的经典数值规则进行一个简要介绍。" />
+<meta name="description" content="近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍。" />
+<meta property="og:description" content="近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍。" />
 <link rel="canonical" href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" />
 <meta property="og:url" content="https://design.jskyzero.com/2022/07/14/mhrsb_math/" />
 <meta property="og:site_name" content="设计者笔记" />
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="怪物猎人的战斗数值设计" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-14T00:00:00+00:00","datePublished":"2022-07-14T00:00:00+00:00","description":"近期怪物猎人崛起曙光DLC发售，截止本文发售时已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将对怪物猎人的经典数值规则进行一个简要介绍。","headline":"怪物猎人的战斗数值设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/07/14/mhrsb_math/"},"url":"https://design.jskyzero.com/2022/07/14/mhrsb_math/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-14T00:00:00+00:00","datePublished":"2022-07-14T00:00:00+00:00","description":"近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍。","headline":"怪物猎人的战斗数值设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/07/14/mhrsb_math/"},"url":"https://design.jskyzero.com/2022/07/14/mhrsb_math/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" type="text/css" href="/assets/main.css"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
@@ -43,7 +43,7 @@
   <ul class="md-toc">
   <li class="md-toc-h1"><a href="#怪物猎人的战斗数值设计">怪物猎人的战斗数值设计</a>
     <ul>
-      <li class="md-toc-h2"><a href="#前言动作向左rpg向右">前言：动作向左，RPG向右</a></li>
+      <li class="md-toc-h2"><a href="#为什么我们需要战斗数值">为什么我们需要战斗数值</a></li>
       <li class="md-toc-h2"><a href="#伤害公式改变玩家行为">伤害公式改变玩家行为</a>
         <ul>
           <li class="md-toc-h3"><a href="#用强大的招式击中弱点受击部位">用强大的招式击中弱点受击部位</a></li>
@@ -81,7 +81,7 @@
 
 </div>
 
-<p>近期怪物猎人崛起曙光DLC发售，截止本文发售时已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将对怪物猎人的经典数值规则进行一个简要介绍。</p>
+<p>近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍。</p>
 
 <!--more-->
 
@@ -93,7 +93,7 @@
 
 <h1 id="怪物猎人的战斗数值设计">怪物猎人的战斗数值设计</h1>
 
-<h2 id="前言动作向左rpg向右">前言：动作向左，RPG向右</h2>
+<h2 id="为什么我们需要战斗数值">为什么我们需要战斗数值</h2>
 
 <p>动作游戏专注于动作性的呈现：流畅的控制感，强力的打击效果。有着独特的魅力；而RPG游戏则有着引人入胜的剧情、数值的成长感。</p>
 
@@ -184,6 +184,7 @@
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+13 Sep 2022 - jskyzero - add 动作设计参考与赏析·BOSS篇
 02 Sep 2022 - jskyzero - update 怪物猎人的战斗数值设计
 16 Aug 2022 - jskyzero - 📝 update 怪物猎人的战斗数值设计
 21 Jul 2022 - jskyzero - update 怪物猎人的战斗数值设计
