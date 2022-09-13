@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 动作设计参考与赏析
+title: 动作设计参考与赏析·玩家篇
 categories: [游戏开发]
 long-term-maintenance: true
 ---
