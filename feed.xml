@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-09-13T02:22:33+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-09-16T02:11:32+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">动作设计参考与赏析·BOSS篇</title><link href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/" rel="alternate" type="text/html" title="动作设计参考与赏析·BOSS篇" /><published>2022-09-13T00:00:00+00:00</published><updated>2022-09-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/13/ActionReferenceBoss</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的动作设计·BOSS的。</p>
 
 <h1 id="动作设计参考与赏析">动作设计参考与赏析</h1>
@@ -1123,6 +1123,257 @@ div.color {
     <tr>
       <td>核心视觉</td>
       <td>超高出力的双手长管枪</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="附录">附录</h2>
+
+<p>截止至2022年9月16日在下所拥有的模型</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>机型</th>
+      <th>数量</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RG 普通版 RG05 ZGMF-X10A 自由高达</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG08 RX-178 高达Mk-Ⅱ 奥古配色</td>
+      <td>3</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG10 MSZ-006 Z高达</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG12 RX-78GP01 高达试做1号机 玉帘</td>
+      <td>–</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG14 ZGMF-X20A 强袭自由高达</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG17 XXXG-00W0 飞翼高达零式 EW</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG18 GN-0000+GNR-010 00 RAISER</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG24 MBF-P01-Re2 异端高达金色机天 蜜纳</td>
+      <td>0</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG25 RX-0 独角兽高达</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG32 RX-93 ν高达</td>
+      <td>4</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG33 ZGMF-X56S/α 威力型脉冲高达</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG34 MSN-02 吉翁号</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG35 XXXG-01W 飞翼高达</td>
+      <td>2</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG36 RX-93-ν2 Hi-ν高达</td>
+      <td>6</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 RG37 GF13-017NJⅡ 神高达</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG 其他限定版 RX-93ff ν高达</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>RG EVA系列 EVA 初号机</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG82 高达Mk-Ⅱ2.0版</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG111 RX-78-2 高达 2.0版</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG162 RX-93 ν高达 Ver.Ka</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG171 RX-78-2 高达 Ver. 3.0</td>
+      <td>2</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG188 RX-78-02 高达 Ver.GTO</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG190 自由高达 Ver.2.0</td>
+      <td>3</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG196 MSZ-010 ZZ高达 Ver.KA</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG205 力天使高达</td>
+      <td>2</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG213 飞翼零式高达EW Ver.Ka</td>
+      <td>2</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG214 金恩</td>
+      <td>0</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG215 天蚀高达</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MG 网络限定版 雪崩型能天使高达</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h177 倒A高达</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h191 RX-78-2 高达 (新生版)</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h193 高达Mk-II[奥古] (新生版)</td>
+      <td>3</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h195 卡碧尼（新生版）</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h200 百式（新生版）</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h202 陆战型吉姆</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h210 陆战型高达 (新版)</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h222 叙述高达 C装备</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>高达水星魔女 HG TWFM 高达Lfrith/魔灵高达</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>高达BF/BD/GBB/BC HG GBB 飞翼高达天翔零式</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>高达BF/BD/GBB/BC HGBF 瞬变高达冰川</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EG 高达系列 ν高达</td>
+      <td>4</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EG 高达系列 RX-78-2 高达</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EG 高达系列 RX-78-2高达(全武器套装)</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>30 MINUTES MISSIONS Espossito eEXM-30 Espossito α</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>30 MINUTES MISSIONS Forestieri eEXM-S01U Forestieri 01</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>30 MINUTES MISSIONS Revernova bEXM-28 Revernova[绿色]</td>
+      <td>1</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>30 MINUTES MISSIONS Spinatio EXM-A9k Spinatio(骑士样式)</td>
+      <td>1</td>
+      <td>–</td>
     </tr>
   </tbody>
 </table>
