@@ -11,8 +11,8 @@
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="怪物猎人的战斗数值设计" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍。" />
-<meta property="og:description" content="近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍。" />
+<meta name="description" content="得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。" />
+<meta property="og:description" content="得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。" />
 <link rel="canonical" href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" />
 <meta property="og:url" content="https://design.jskyzero.com/2022/07/14/mhrsb_math/" />
 <meta property="og:site_name" content="设计者笔记" />
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="怪物猎人的战斗数值设计" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-14T00:00:00+00:00","datePublished":"2022-07-14T00:00:00+00:00","description":"近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍。","headline":"怪物猎人的战斗数值设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/07/14/mhrsb_math/"},"url":"https://design.jskyzero.com/2022/07/14/mhrsb_math/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-14T00:00:00+00:00","datePublished":"2022-07-14T00:00:00+00:00","description":"得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。","headline":"怪物猎人的战斗数值设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/07/14/mhrsb_math/"},"url":"https://design.jskyzero.com/2022/07/14/mhrsb_math/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" type="text/css" href="/assets/main.css"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
@@ -43,7 +43,6 @@
   <ul class="md-toc">
   <li class="md-toc-h1"><a href="#怪物猎人的战斗数值设计">怪物猎人的战斗数值设计</a>
     <ul>
-      <li class="md-toc-h2"><a href="#为什么我们需要战斗数值">为什么我们需要战斗数值</a></li>
       <li class="md-toc-h2"><a href="#伤害公式改变玩家行为">伤害公式改变玩家行为</a>
         <ul>
           <li class="md-toc-h3"><a href="#用强大的招式击中弱点受击部位">用强大的招式击中弱点受击部位</a></li>
@@ -57,7 +56,11 @@
         </ul>
       </li>
       <li class="md-toc-h2"><a href="#更多关于怪物">更多关于怪物</a></li>
-      <li class="md-toc-h2"><a href="#其它遗漏与参考">其它遗漏与参考</a></li>
+      <li class="md-toc-h2"><a href="#其它遗漏与参考">其它遗漏与参考</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#动作向左rpg向右">动作向左、RPG向右</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -81,7 +84,9 @@
 
 </div>
 
-<p>近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍。</p>
+<p>得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。</p>
+
+<!-- 近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。 -->
 
 <!--more-->
 
@@ -93,23 +98,13 @@
 
 <h1 id="怪物猎人的战斗数值设计">怪物猎人的战斗数值设计</h1>
 
-<h2 id="为什么我们需要战斗数值">为什么我们需要战斗数值</h2>
-
-<p>动作游戏专注于动作性的呈现：流畅的控制感，强力的打击效果。有着独特的魅力；而RPG游戏则有着引人入胜的剧情、数值的成长感。</p>
-
-<p><img src="/assets/img/gameplay/mhrsb/1.svg" alt="" /></p>
-
-<p>以<a href="https://m.douban.com/book/subject/35006358/">游戏感</a>的框架来说：动作游戏会更加专注于<strong>实时操控带来的反馈</strong>，而RPG则能在模拟空间带来更多诸如<strong>故事体验</strong>、<strong>人物成长的体验</strong>，于是当玩家对游戏能带来的体验有着更高期待时，ARPG诞生了，它保留了ACT的核心战斗带来的操控感，又引入RPG带来更好的叙事与更长的数值成长周期。再结合不同的体验侧重与机制设计，成功产生了各式各样的名家名作。</p>
-
-<p>今天我们要聊的是怪物猎人，这是一款玩家与大型怪物战斗的ARPG。RPG中的“数值”体验的引入不仅带来了成长的体验延长了整个游戏的生命周期，也为ACT的单局带来了更多策略和战斗行为的改变。</p>
-
 <h2 id="伤害公式改变玩家行为">伤害公式改变玩家行为</h2>
 
 <p>“要帅，还是要强”似乎是ARPG中一个永恒争论的话题，反应了玩家对于帅气动作和数值的追求与选择，但是事实上，任何能改变伤害数字的规则都会对玩家的决策和行为带来影响，本节我们会层层深入介绍怪物猎人伤害的产生过程，以及说明这些数值是如何影响玩家决策的。</p>
 
 <h3 id="用强大的招式击中弱点受击部位">用强大的招式击中弱点受击部位</h3>
 
-<p>基础公式：攻击力 * 动作值 * 肉质</p>
+<p>基础公式：攻击力 <em>动作值</em> 肉质</p>
 
 <ul>
   <li>攻击力</li>
@@ -178,12 +173,21 @@
 
 <h2 id="其它遗漏与参考">其它遗漏与参考</h2>
 
-<p>各项参考</p>
+<h3 id="动作向左rpg向右">动作向左、RPG向右</h3>
+
+<p>动作游戏专注于动作性的呈现：流畅的控制感，强力的打击效果——有着独特的魅力；而RPG游戏则有着引人入胜的剧情、数值的成长感。</p>
+
+<p><img src="/assets/img/gameplay/mhrsb/1.svg" alt="" /></p>
+
+<p>以<a href="https://m.douban.com/book/subject/35006358/">游戏感</a>的框架来说：动作游戏会更加专注于<strong>实时操控带来的反馈</strong>，而RPG则能在模拟空间带来更多诸如<strong>故事体验</strong>、<strong>人物成长的体验</strong>，于是当玩家对游戏能带来的体验有着更高期待时，ARPG诞生了，它保留了ACT的核心战斗带来的操控感，又引入RPG带来更好的叙事与更长的数值成长周期。再结合不同的体验侧重与机制设计，成功产生了各式各样的名家名作。</p>
+
+<p>上面我们要聊的是怪物猎人，这就是一款核心玩法基于猎人狩猎大型怪物、很好的平衡了动作性与数值成长的ARPG。“数值成长”体验的引入不仅带来了成长的体验延长了整个游戏的生命周期，也为ACT的单局带来了更多策略和战斗行为的改变。</p>
 
 
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+18 Sep 2022 - jskyzero - update mh part
 13 Sep 2022 - jskyzero - add 动作设计参考与赏析·BOSS篇
 02 Sep 2022 - jskyzero - update 怪物猎人的战斗数值设计
 16 Aug 2022 - jskyzero - 📝 update 怪物猎人的战斗数值设计
