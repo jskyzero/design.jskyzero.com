@@ -32,6 +32,8 @@ def _ignore?(path)
       ignore_patterns.any? { |pattern| path =~ pattern }
     end
 ```
++ draw a picture: `xmind`, `draw.io`, `marmaid`
+
 
 
 ## License
