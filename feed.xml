@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-09-27T13:04:19+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-09-28T08:47:11+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">《卧龙》气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="《卧龙》气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍气势槽的战斗机制，粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
 
 <h1 id="卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</h1>
@@ -9,7 +9,7 @@
 
 <p>留意左上注释和屏幕下方UI槽：</p>
 
-<p><img src="https://imgur.com/813cnfP.gif" alt="卧龙战斗" /></p>
+<p><img src="https://lh3.googleusercontent.com/pw/AL9nZEUOLFUN86wW4whMJg9Hcz5KgVhaDi0lvCf1_GpF8UfpHB5X12sPXHYbUYrROuNjDo4mV39GCzSM_unysFMTS6NeIarbttaxaXEWaACiFyvm_ZYg8v_Pnb0dgTgQnlRkP-56szV0PUzVq1VG7vlyfxoEcA=w999-h582-no" alt="卧龙战斗" /></p>
 
 <p>本作的制作人安田文彦先生（仁王）和开发制作人山际真晃先生（血源）前段时间接受了相当多的媒体采访，其中反复提到了战斗中「行云流水般的攻防转换」，在200帧（15帧/秒，<strong>约14秒</strong>）的GIF中，双方以气势槽为媒介的<strong>攻守形势转换达6次之多。</strong></p>
 
