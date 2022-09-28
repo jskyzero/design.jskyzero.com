@@ -15,7 +15,7 @@ categories: [游戏分析]
 
 留意左上注释和屏幕下方UI槽：
 
-![卧龙战斗](https://imgur.com/813cnfP.gif)
+![卧龙战斗](https://lh3.googleusercontent.com/pw/AL9nZEUOLFUN86wW4whMJg9Hcz5KgVhaDi0lvCf1_GpF8UfpHB5X12sPXHYbUYrROuNjDo4mV39GCzSM_unysFMTS6NeIarbttaxaXEWaACiFyvm_ZYg8v_Pnb0dgTgQnlRkP-56szV0PUzVq1VG7vlyfxoEcA=w999-h582-no)
 
 本作的制作人安田文彦先生（仁王）和开发制作人山际真晃先生（血源）前段时间接受了相当多的媒体采访，其中反复提到了战斗中「行云流水般的攻防转换」，在200帧（15帧/秒，**约14秒**）的GIF中，双方以气势槽为媒介的**攻守形势转换达6次之多。**
 
