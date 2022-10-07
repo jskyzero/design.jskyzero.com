@@ -4,6 +4,7 @@ title: 获得《自制力》
 featured-img: possessiveness
 mathjax: true
 categories: [读书报告]
+pro: true
 ---
 
 “我别无选择，因为我不能变得贫穷或者平凡，这不是我的风格！”本书教会你：如何控制你自己。

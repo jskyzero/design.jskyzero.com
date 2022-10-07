@@ -4,7 +4,6 @@ title: 好的编辑器的若干特性
 featured-img: besiege
 mathjax: true
 categories: [游戏开发]
-pro: true
 ---
 
 游戏开发中的编辑器，应当具备些什么特性才能更好地为游戏设计师们赋能？让想法表达、工业化、创作作品更为容易。

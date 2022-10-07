@@ -2,7 +2,6 @@
 layout: post
 title: 游戏设计所需要的能力
 categories: [游戏开发]
-pro: true
 ---
 
 本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。

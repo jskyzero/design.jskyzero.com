@@ -4,7 +4,6 @@ title: 程序内容生成相关讨论
 featured-img: terraria
 mathjax: true
 categories: [游戏开发]
-pro: true
 ---
 
 近些年由于玩家对新内容的不断需求，用于内容填充的PCG技术，经常出现在视野内，本文会就此进行一些讨论。

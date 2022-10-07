@@ -18,9 +18,18 @@ You can view it via [website](https://design.jskyzero.com/), or you can download
 + change file ext name: `for x in *.jpeg; do mv "$x" "${x%.jpeg}.jpg"; done`
 + mermaid: `./node_modules/.bin/mmdc -h`, `mmdc -i input.mmd -o output.svg`
 
-+ CompatibilityError
++ CompatibilityError:
 
 ```ruby
+# Encoding::CompatibilityError: incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)
+
+# /opt/homebrew/lib/ruby/gems/3.1.0/gems/listen-3.7.1/lib/listen/adapter/darwin.rb:69:in `_process_event'
+
+rel_path = path.relative_path_from(dir).to_s.force_encoding('utf-8')
+
+```
+
+<!-- ```ruby
 # Encoding::CompatibilityError: incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)
 
 # /opt/homebrew/lib/ruby/gems/3.1.0/gems/listen-3.7.1/lib/listen/silencer.rb
@@ -31,9 +40,8 @@ def _ignore?(path)
       end
       ignore_patterns.any? { |pattern| path =~ pattern }
     end
-```
+``` -->
 + draw a picture: `xmind`, `draw.io`, `marmaid`
-
 
 
 ## License
