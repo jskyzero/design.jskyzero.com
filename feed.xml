@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-09-28T08:47:11+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-10-07T11:24:07+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">《卧龙》气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="《卧龙》气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍气势槽的战斗机制，粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
 
 <h1 id="卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</h1>
@@ -15,22 +15,31 @@
 
 <h3 id="角色行为拆分">角色行为拆分</h3>
 
-<p>单论主角的攻击行为、甚至按键控制方式，都是和前作仁王类似的，可以参考下图</p>
+<p>单论主角的攻击行为——甚至按键控制方式，都是和前作仁王类似的，可以参考下图</p>
 
-<p><img src="/assets/img/gameplay/wolong/1.png" alt="" /></p>
+<p><img src="/assets/img/gameplay/wolong/2.png" alt="" /></p>
+
+<p>整体思路依然是高自由度的动作搭配：
+|NIOH2叫法|NIOH2依附对象|WOLONG叫法|WOLONG依附对象|
+|–|–|–|–|
+||||</p>
 
 <h3 id="demo中其他可公开的情报">DEMO中其他可公开的情报</h3>
 
 <ul>
-  <li>
-    <p>单局成长，与关卡节奏</p>
-  </li>
-  <li>
-    <p>跳跃，与地图设计</p>
-  </li>
-  <li>
-    <p>五行，与属性克制</p>
-  </li>
+  <li>单局成长与探索度挂钩</li>
+</ul>
+
+<p>与上面气势值名称类似的还有一个士气值，</p>
+
+<ul>
+  <li>跳跃来带的立体地图设计</li>
+</ul>
+
+<p>跳跃目前带来了一些新的行动可能性</p>
+
+<ul>
+  <li>五行属性系统</li>
 </ul>
 
 <p>作为一个“没有创造力”的玩家，DEMO关卡直到通关我都没有发现这个机制（另外没有发现的是可以召唤赵云NPC帮打）。</p>
@@ -563,6 +572,7 @@ graph TD
 
 <blockquote>
   <p>举例：</p>
+
   <ol>
     <li>记录本次释放指定行为的次数，控制释放总数</li>
     <li>记录环境信息或者对方行为信息，采取对应的行为</li>
@@ -573,6 +583,7 @@ graph TD
 
 <blockquote>
   <p>举例：</p>
+
   <ol>
     <li>缓存复合结果到变量，而不在每个使用到的地方复合求值</li>
     <li>传递变量让同一个节点产生差异性的行为，以此做到更好的抽象与复用</li>
@@ -588,6 +599,7 @@ graph TD
 
 <blockquote>
   <p>举例：</p>
+
   <ol>
     <li>复杂的转向、动作组合跳转，直接使用定制动作配置</li>
     <li>寻路放到单独的寻路模块、镜头放入镜头模块，AI只作为内容的使用方</li>
