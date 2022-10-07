@@ -11,8 +11,8 @@
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="《卧龙》气势槽设计杂谈" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="近期WOLONG上线测试版，本文会介绍气势槽的战斗机制，粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。" />
-<meta property="og:description" content="近期WOLONG上线测试版，本文会介绍气势槽的战斗机制，粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。" />
+<meta name="description" content="近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。" />
+<meta property="og:description" content="近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。" />
 <link rel="canonical" href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" />
 <meta property="og:url" content="https://design.jskyzero.com/2022/09/22/wolong_action_system/" />
 <meta property="og:site_name" content="设计者笔记" />
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="《卧龙》气势槽设计杂谈" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-22T00:00:00+00:00","datePublished":"2022-09-22T00:00:00+00:00","description":"近期WOLONG上线测试版，本文会介绍气势槽的战斗机制，粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。","headline":"《卧龙》气势槽设计杂谈","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/09/22/wolong_action_system/"},"url":"https://design.jskyzero.com/2022/09/22/wolong_action_system/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-22T00:00:00+00:00","datePublished":"2022-09-22T00:00:00+00:00","description":"近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。","headline":"《卧龙》气势槽设计杂谈","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/09/22/wolong_action_system/"},"url":"https://design.jskyzero.com/2022/09/22/wolong_action_system/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" type="text/css" href="/assets/main.css"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
@@ -43,10 +43,11 @@
   <ul class="md-toc">
   <li class="md-toc-h1"><a href="#卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</a>
     <ul>
-      <li class="md-toc-h2"><a href="#卧龙气势槽">《卧龙》气势槽</a>
+      <li class="md-toc-h2"><a href="#卧龙气势槽部分">《卧龙》气势槽部分</a>
         <ul>
-          <li class="md-toc-h3"><a href="#看个例子">看个例子</a></li>
-          <li class="md-toc-h3"><a href="#角色行为拆分">角色行为拆分</a></li>
+          <li class="md-toc-h3"><a href="#体验概览看个例子">体验概览：看个例子</a></li>
+          <li class="md-toc-h3"><a href="#必要铺垫角色行为拆分">必要铺垫：角色行为拆分</a></li>
+          <li class="md-toc-h3"><a href="#正戏气势槽">正戏：气势槽</a></li>
           <li class="md-toc-h3"><a href="#demo中其他可公开的情报">DEMO中其他可公开的情报</a></li>
         </ul>
       </li>
@@ -70,30 +71,94 @@
 
 </div>
 
-<p>近期WOLONG上线测试版，本文会介绍气势槽的战斗机制，粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
+<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
 
 <h1 id="卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</h1>
 
-<h2 id="卧龙气势槽">《卧龙》气势槽</h2>
+<h2 id="卧龙气势槽部分">《卧龙》气势槽部分</h2>
 
-<h3 id="看个例子">看个例子</h3>
+<h3 id="体验概览看个例子">体验概览：看个例子</h3>
 
-<p>留意左上注释和屏幕下方UI槽：</p>
+<p>给出一段高熟练玩家与精英怪的战斗GIF，留意左上行为注释和<strong>屏幕下方中间UI槽</strong>（气势槽）：</p>
 
 <p><img src="https://lh3.googleusercontent.com/pw/AL9nZEUOLFUN86wW4whMJg9Hcz5KgVhaDi0lvCf1_GpF8UfpHB5X12sPXHYbUYrROuNjDo4mV39GCzSM_unysFMTS6NeIarbttaxaXEWaACiFyvm_ZYg8v_Pnb0dgTgQnlRkP-56szV0PUzVq1VG7vlyfxoEcA=w999-h582-no" alt="卧龙战斗" /></p>
 
 <p>本作的制作人安田文彦先生（仁王）和开发制作人山际真晃先生（血源）前段时间接受了相当多的媒体采访，其中反复提到了战斗中「行云流水般的攻防转换」，在200帧（15帧/秒，<strong>约14秒</strong>）的GIF中，双方以气势槽为媒介的<strong>攻守形势转换达6次之多。</strong></p>
 
-<h3 id="角色行为拆分">角色行为拆分</h3>
+<h3 id="必要铺垫角色行为拆分">必要铺垫：角色行为拆分</h3>
 
 <p>单论主角的攻击行为——甚至按键控制方式，都是和前作仁王类似的，可以参考下图</p>
 
 <p><img src="/assets/img/gameplay/wolong/2.png" alt="" /></p>
 
-<p>整体思路依然是高自由度的动作搭配：
-|NIOH2叫法|NIOH2依附对象|WOLONG叫法|WOLONG依附对象|
-|–|–|–|–|
-||||</p>
+<p>动作之间的整体思路依然是：允许玩家进行<strong>高自定义可能</strong>的动作搭配：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>NIOH2角色能力</th>
+      <th>NIOH2依附系统</th>
+      <th>WOLONG角色能力</th>
+      <th>WOLONG依附系统</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>普通攻击</td>
+      <td>主武器</td>
+      <td>轻重攻击</td>
+      <td>主武器</td>
+    </tr>
+    <tr>
+      <td>武技</td>
+      <td>主武器</td>
+      <td>武器技能</td>
+      <td>主武器</td>
+    </tr>
+    <tr>
+      <td>忍术、阴阳术</td>
+      <td>术整备</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>妖怪技</td>
+      <td>魂核</td>
+      <td>仙术</td>
+      <td>仙术选择</td>
+    </tr>
+    <tr>
+      <td>妖怪化</td>
+      <td>守护灵</td>
+      <td>神兽召唤</td>
+      <td>神兽</td>
+    </tr>
+    <tr>
+      <td>妖反</td>
+      <td>守护灵</td>
+      <td>化解</td>
+      <td>主武器</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>但是在依附角色主武器的动作种类方面，WOLONG进行了<strong>非常大幅的削减</strong>，甚至基于测试版的体验来看，其动作量级甚至可能不如NIOH单武器的上中下三段的一段：</p>
+
+<p><img src="/assets/img/gameplay/wolong/3.png" alt="" /></p>
+
+<blockquote>
+  <p>一些关于NIOH玩法的补充说明：</p>
+
+  <p>NIOH在数值未崩坏、上混沌削精输出流程未形成前，其在基础ACT立回上增加的核心技巧点便是<strong>体力的控制</strong>，“攻击行为消耗体力、空精将会虚弱，维持自己的体力并削弱敌人的体力！”。作为玩家体力的重要恢复手段——残心，1代携三种架势首次进入玩家视野时也获得了很多人的认可。</p>
+
+  <p>NIOH2在1的基础上又增加了妖怪技（新的动作种类，独立资源槽）和妖反（处理无法防御的红光技能），也把“作为游戏真正主角的妖怪们”的精力槽的存在感进行了增强：空精转阶段、可以削精力槽上限、上限打空会带来虚弱与输出窗口。甚至于，高周目数值压力增加，也靠一个空精时短时间移除怪物免伤的“一难BUFF”。</p>
+</blockquote>
+
+<p>上面提到过WOLONG安田文彦先生与山际真晃先生的参访，其中也有提到，WOLONG移除了体力槽的限制。</p>
+
+<p>动作种类少了、又没了体力槽，那WOLONG玩啥呢？</p>
+
+<h3 id="正戏气势槽">正戏：气势槽</h3>
 
 <h3 id="demo中其他可公开的情报">DEMO中其他可公开的情报</h3>
 
@@ -128,6 +193,7 @@ DS、DS1、DS2、DS3、Blood、SEKIRO、ER  -->
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+07 Oct 2022 - jskyzero - finish 必要铺垫：角色行为拆分
 07 Oct 2022 - jskyzero - update pro tag
 28 Sep 2022 - jskyzero - 🍱 update gif
 27 Sep 2022 - jskyzero - update 角色能力

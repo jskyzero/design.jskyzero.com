@@ -30,7 +30,10 @@ header p { text-align: left; margin: 0; }
 
 footer { margin-bottom: 20px; }
 
+/** jskyzero */
 p { margin: 8px 0px; }
+
+strong { text-decoration: underline; }
 
 blockquote { font-style: italic; }
 
