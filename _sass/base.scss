@@ -32,8 +32,11 @@ header { margin-top: 25px;  margin-bottom: 10px; }
 header p { text-align: left;  margin: 0; }
 footer { margin-bottom: 20px; }
 
-// jskyzero
+/**
+ * jskyzero
+ */
 p {margin: 8px 0px;}
+strong{text-decoration: underline;}
 blockquote {font-style: italic;}
 img {max-width: 100%;}
 table {margin-bottom: 15px;}
@@ -48,6 +51,7 @@ ul {padding-inline-start: 8px !important;}
     margin-right: 8px;
   }
 }
+
 .git-log {
   padding: 1rem 1rem 1rem !important;
   background-color: black;
@@ -121,8 +125,6 @@ h5:before {
 }
 }
 
-
-// jskzyero end
 
 /**
  * Highlight/Markup
