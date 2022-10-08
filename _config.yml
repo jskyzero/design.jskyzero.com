@@ -19,8 +19,8 @@ index_categories:
   - 一期一会
   - 游戏设计
 
-style: dark # dark (default) or light
-listen_for_clients_preferred_style: true # true or false (default)
+style: light # dark (default) or light
+listen_for_clients_preferred_style: false # true or false (default)
 
 title: 设计者笔记
 email: jskyzero@outlook.com
