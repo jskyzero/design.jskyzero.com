@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-10-08T04:39:18+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-10-10T16:10:23+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">《卧龙》气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="《卧龙》气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
 
 <h1 id="卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</h1>
 
-<h2 id="卧龙气势槽部分">《卧龙》气势槽部分</h2>
-
-<h3 id="体验概览看个例子">体验概览：看个例子</h3>
+<h2 id="体验概览看个例子">体验概览：看个例子</h2>
 
 <p>给出一段高熟练玩家与精英怪的战斗GIF，留意左上行为注释和<strong>屏幕下方中间UI槽</strong>（气势槽）：</p>
 
@@ -13,7 +11,7 @@
 
 <p>本作的制作人安田文彦先生（仁王）和开发制作人山际真晃先生（血源）前段时间接受了相当多的媒体采访，其中反复提到了战斗中「行云流水般的攻防转换」，在200帧（15帧/秒，<strong>约14秒</strong>）的GIF中，双方以气势槽为媒介的<strong>攻守形势转换达6次之多。</strong></p>
 
-<h3 id="必要铺垫角色行为拆分">必要铺垫：角色行为拆分</h3>
+<h2 id="铺垫1角色行为拆分">铺垫1：角色行为拆分</h2>
 
 <p>单论主角的攻击行为——甚至按键控制方式，都是和前作仁王类似的，可以参考下图</p>
 
@@ -25,9 +23,9 @@
   <thead>
     <tr>
       <th>NIOH2角色能力</th>
-      <th>NIOH2依附系统</th>
+      <th>依附选择</th>
       <th>WOLONG角色能力</th>
-      <th>WOLONG依附系统</th>
+      <th>依附选择</th>
     </tr>
   </thead>
   <tbody>
@@ -74,21 +72,87 @@
 
 <p><img src="/assets/img/gameplay/wolong/3.png" alt="" /></p>
 
+<p>“测试版没全放出来吧？”，可能有人会这么说，不要急，让我们看完体力槽再一起说说。</p>
+
+<h2 id="铺垫2玩家与怪物的体力槽">铺垫2：玩家与怪物的体力槽</h2>
+
+<p>上面提到过WOLONG的安田文彦先生与山际真晃先生的参与的采访，其中也有提到，在WOLONG里会取消NIOH的体（精）力槽。</p>
+
+<p>体力槽的设计我们并不陌生，NIOH的模仿对象：FromSoftware的魂系游戏就有着体力槽和“回合制的游戏体验”，ARPG领域另一个知名系列：Capcom的怪物猎人系列也有着体力槽。</p>
+
+<p>回顾体力设计的本质，它为动作游戏<strong>引入了一些偏RPG的体验</strong>，释放某种攻击行为不再只考验单纯的操作（在正确时间正确释放指令），释放操作前还需要考虑体力的消耗，以及是否过分消耗体力——这可能会陷入危险。</p>
+
+<p><img src="/assets/img/gameplay/wolong/4.png" alt="" /></p>
+
+<p>除了从玩家角度提到的体力槽，近些年来的一些作品也在怪物身上加了体力槽，有些是作为攻击频率隐形的限制，有一些像内嵌不可见的CD；另一些则是将“体力为空陷入危机”这个<strong>规则扩展到了怪物</strong>，给玩家带来了除了将血槽打空的其他目标。</p>
+
+<p>比如只狼的架势槽（虽然架势槽不是常规攻击消耗，好像有部分招式会消耗？），NIOH1面对人形怪的精力槽是一个更好的例子，双方都需要保留“残心”——留余量的精力量表，以免被对面击空精力出现破绽。打空精的玩法在NIOH2得到了更进一步扩充和完善。</p>
+
+<p><img src="/assets/img/gameplay/wolong/5.png" alt="" /></p>
+
 <blockquote>
   <p>一些关于NIOH玩法的补充说明：</p>
 
   <p>NIOH在数值未崩坏、上混沌削精输出流程未形成前，其在基础ACT立回上增加的核心技巧点便是<strong>体力的控制</strong>，“攻击行为消耗体力、空精将会虚弱，维持自己的体力并削弱敌人的体力！”。作为玩家体力的重要恢复手段——残心，1代携三种架势首次进入玩家视野时也获得了很多人的认可。</p>
 
-  <p>NIOH2在1的基础上又增加了妖怪技（新的动作种类，独立资源槽）和妖反（处理无法防御的红光技能），也把“作为游戏真正主角的妖怪们”的精力槽的存在感进行了增强：空精转阶段、可以削精力槽上限、上限打空会带来虚弱与输出窗口。甚至于，高周目数值压力增加，也靠一个空精时短时间移除怪物免伤的“一难BUFF”。</p>
+  <p>NIOH2在1的基础上又增加了妖怪技（新的动作种类，独立资源槽）和妖反（处理无法防御的红光技能），也把“作为游戏真正主角的妖怪们”的精力槽的存在感进行了增强：空精转阶段、可以削精力槽上限、<strong>上限打空会带来虚弱与输出窗口</strong>。甚至于，高周目数值压力增加，也靠一个空精时短时间移除怪物免伤的“一难BUFF”。</p>
 </blockquote>
 
-<p>上面提到过WOLONG安田文彦先生与山际真晃先生的参访，其中也有提到，WOLONG移除了体力槽的限制。</p>
+<h2 id="正戏气势槽">正戏：气势槽</h2>
 
 <p>动作种类少了、又没了体力槽，那WOLONG玩啥呢？</p>
 
-<h3 id="正戏气势槽">正戏：气势槽</h3>
+<p>假设现在我们有“三国仁王”这个命题，简单思考一下，在动作方面：感受上，势必要引入中华武学的独特体验；机制上，也需要“继往开来”——继承优秀的动作的框架，同时添加新的系统带来新的体验。新的系统如何添加呢，先看看现有的情况：</p>
 
-<h3 id="demo中其他可公开的情报">DEMO中其他可公开的情报</h3>
+<ul>
+  <li>
+    <p>不仅用于玩家也用于怪物的体力槽</p>
+  </li>
+  <li>
+    <p>化繁为简，统一量表</p>
+  </li>
+</ul>
+
+<p>NIOH1中主要的行为中，普通攻击和武技都是消耗体力，NIOH2中加了妖怪技和对应的妖力槽，大致消耗可以参考下表：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>NIOH2角色能力</th>
+      <th>NIOH2消耗资源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>普通攻击</td>
+      <td>体力</td>
+    </tr>
+    <tr>
+      <td>武技</td>
+      <td>体力</td>
+    </tr>
+    <tr>
+      <td>忍术、阴阳术</td>
+      <td>消耗品</td>
+    </tr>
+    <tr>
+      <td>妖怪技</td>
+      <td>妖气值</td>
+    </tr>
+    <tr>
+      <td>妖怪化</td>
+      <td>妖怪化计量表</td>
+    </tr>
+    <tr>
+      <td>妖反</td>
+      <td>妖气值</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>乍看起来逻辑是：各自动作种类的系统玩各自系统的。能否将这些消耗统一到一个量表呢？</p>
+
+<h2 id="demo中其他可公开的情报">DEMO中其他可公开的情报</h2>
 
 <ul>
   <li>单局成长与探索度挂钩</li>
