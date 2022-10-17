@@ -16,22 +16,20 @@ permalink: /project/
 
 <!-- <iframe src="//player.bilibili.com/player.html?aid=843822693&bvid=BV1A54y1x7Dj&cid=294940961&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 500px; max-width: 100%；align:center; padding:20px 0;"> </iframe> -->
 
-## 计划表-其四(╬◣д◢)
+## 计划表-其四
 `jskyzero` `2022/02/14`
 
 |时间|标签|课题|
 |--|--|--|
-|本周|游戏设计|[动作速查](https://design.jskyzero.com/2021/11/18/action_reference/)|
-|持续进行|游戏设计|[补完《游戏感》](https://design.jskyzero.com/2020/08/31/gamefeeling/)|
-|待排期|游戏设计|市场洞察|
+|持续进行|游戏设计|[动作速查](https://design.jskyzero.com/2021/11/18/action_reference/)|
 |待排期|游戏设计|地图设计：白模与UE4|
 |待排期|游戏设计|动作设计：BOX与节奏|
-|待排期|游戏设计|AI体系架构|
+|已完成|游戏设计|[AI体系架构](https://design.jskyzero.com/2022/05/24/GameAISkill/)|
 |待排期|游戏设计|AI深度学习|
-|待排期|游戏设计|MARKOV CHAIN|
-|待排期|不务正业|RUST ENGINE|
-|待排期|游戏设计|GLAGAME、ROGUELIKE|
-|待排期|游戏设计|PPT文章迁移|
+|放弃|游戏设计|市场洞察|
+|放弃|游戏设计|MARKOV CHAIN|
+|放弃|游戏设计|PPT文章迁移|
+|放弃|游戏设计|[补完《游戏感》](https://design.jskyzero.com/2020/08/31/gamefeeling/)|
 |已完成|游戏设计|[游戏策划能力](https://design.jskyzero.com/2022/02/15/game_design_ability/)|
 
 
