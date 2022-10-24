@@ -20,6 +20,10 @@ categories: [读书报告]
 
 接下来本文将按照《游戏专业概论》的框架，试着去梳理一些较为基础同时较为重要的部分。 -->
 
+## 增补：
+
++ [电子游戏历史时间轴](https://docs.google.com/spreadsheets/d/1Qn2FbIvwM0Zo8SEOjTSupAfoRp8XLzDtNAyhMo7EnPY/edit?usp=sharing)
+
 
 ## 游戏起源
 
@@ -127,7 +131,7 @@ PVP需要有一个合适的水平评估算法和对手匹配机制，PVE类型�
 
 + 第一台计算机
 
-1942年2月，出于对弹道研究的需要，世界第一台计算机在美国宾夕法尼亚大学诞生，简称ENIAC，在其基础上诞生了第一台民用计算机UNIVAC，标志着计算机从实验室走向了大众。
+1946年2月，出于对弹道研究的需要，世界第一台计算机在美国宾夕法尼亚大学诞生，简称ENIAC，在其基础上诞生了第一台民用计算机UNIVAC，标志着计算机从实验室走向了大众。
 
 ![](/assets/img/books/introduction_to_game/introduction_to_game (4).jpg)
 
