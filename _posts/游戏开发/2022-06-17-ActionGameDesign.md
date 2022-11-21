@@ -2,6 +2,7 @@
 layout: post
 title: 动作游戏设计基础
 categories: [游戏开发]
+long-term-maintenance: true
 ---
 
 <!-- 本文将从分析动作游戏的核心特征出发，分析记录一些优秀游戏的动作形式与体验，用于设计时快速查阅参考。 -->
