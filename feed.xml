@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-11-21T14:04:49+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2022-11-22T06:49:53+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">《卧龙》气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="《卧龙》气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
 
 <h1 id="卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</h1>
@@ -193,9 +193,9 @@
 
 <p>资源槽可以通过规则层面的变化，改变玩家的决策、从而丰富玩家的体验。合理的机制能为战斗增彩。</p>
 
-<p>WOLONG中气势槽统一了各项系统的消耗，在战斗中反映着局面的瞬息万变，期待WOLONG的正式发售。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。]]></summary></entry><entry><title type="html">动作设计参考与赏析·BOSS篇</title><link href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/" rel="alternate" type="text/html" title="动作设计参考与赏析·BOSS篇" /><published>2022-09-13T00:00:00+00:00</published><updated>2022-09-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/13/ActionReferenceBoss</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。</p>
+<p>WOLONG中气势槽统一了各项系统的消耗，在战斗中反映着局面的瞬息万变，期待WOLONG的正式发售。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。]]></summary></entry><entry><title type="html">动作设计参考·BOSS篇</title><link href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/" rel="alternate" type="text/html" title="动作设计参考·BOSS篇" /><published>2022-09-13T00:00:00+00:00</published><updated>2022-09-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/13/ActionReferenceBoss</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。</p>
 
-<h1 id="动作设计参考与赏析">动作设计参考与赏析</h1>
+<h1 id="动作设计参考boss篇">动作设计参考·BOSS篇</h1>
 
 <h2 id="魂like">魂Like</h2>
 
@@ -210,8 +210,6 @@
 <h3 id="只狼">只狼</h3>
 
 <h3 id="艾尔登法环">艾尔登法环</h3>
-
-<!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQVAQysx1wWH7l_wc4sdyRyTRlROYyvVV5lYq8SvvACNrIAdKw9NeL05Wl07v5QfQQ9wBcQiuaiT4Of/pubhtml?widget=true&amp;headers=false"></iframe> -->
 
 <h2 id="鬼泣like">鬼泣Like</h2>
 
@@ -233,7 +231,11 @@
 
 <h3 id="怪物猎人崛起">怪物猎人崛起</h3>
 
-<h3 id="怪物猎人崛起曙光">怪物猎人崛起曙光</h3>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。]]></summary></entry><entry><title type="html">怪物猎人的AI设计</title><link href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" rel="alternate" type="text/html" title="怪物猎人的AI设计" /><published>2022-07-22T00:00:00+00:00</published><updated>2022-07-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/22/mhrsb_ai</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/22/mhrsb_ai/"><![CDATA[<p>本文通过爵银龙的的行为为例，讨论怪物猎人的经典AI设计。</p>
+<h3 id="怪物猎人崛起曙光">怪物猎人崛起曙光</h3>
+
+<h2 id="横板">横板</h2>
+
+<h3 id="空洞骑士">空洞骑士</h3>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。]]></summary></entry><entry><title type="html">怪物猎人的AI设计</title><link href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" rel="alternate" type="text/html" title="怪物猎人的AI设计" /><published>2022-07-22T00:00:00+00:00</published><updated>2022-07-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/22/mhrsb_ai</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/22/mhrsb_ai/"><![CDATA[<p>本文通过爵银龙的的行为为例，讨论怪物猎人的经典AI设计。</p>
 
 <!--more-->
 
