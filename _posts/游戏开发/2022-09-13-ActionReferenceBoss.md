@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 动作设计参考与赏析·BOSS篇
+title: 动作设计参考·BOSS篇
 categories: [游戏开发]
 long-term-maintenance: true
 ---
@@ -8,8 +8,7 @@ long-term-maintenance: true
 本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。
 
 
-# 动作设计参考与赏析
-
+# 动作设计参考·BOSS篇
 
 ## 魂Like
 
@@ -30,8 +29,6 @@ long-term-maintenance: true
 
 
 ### 艾尔登法环
-
-<!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQVAQysx1wWH7l_wc4sdyRyTRlROYyvVV5lYq8SvvACNrIAdKw9NeL05Wl07v5QfQQ9wBcQiuaiT4Of/pubhtml?widget=true&amp;headers=false"></iframe> -->
 
 
 ## 鬼泣Like
@@ -65,3 +62,7 @@ long-term-maintenance: true
 
 
 ### 怪物猎人崛起曙光
+
+## 横板
+
+### 空洞骑士

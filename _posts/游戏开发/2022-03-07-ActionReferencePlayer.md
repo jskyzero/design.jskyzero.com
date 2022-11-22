@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 动作设计参考与赏析·玩家篇
+title: 动作设计参考·角色篇
 categories: [游戏开发]
 long-term-maintenance: true
 ---
@@ -8,18 +8,21 @@ long-term-maintenance: true
 本文希望充当一个索引，方便概览大量动作游戏中的动作设计。
 
 
-# 动作设计参考与赏析
+# 动作设计参考
 
+本文只解决一个问题，要做一个动作的时候，参考美学表现、节奏、打击感等。
+
+<!-- 
 在正式的动作积累与讨论之前想重申——如何学习一个动作？
 
 1. 动作种类和形式（本文主要）
 2. 动作机制和实现（本文次要或者无）
+-->
 
-换言之，本文只解决一个问题，要做一个动作的时候，参考美学表现、节奏、打击感等。
 
-## 最新体验的
+## NEW
 
-#### 街霸VI
+### 街霸VI
 
 + 前瞻：[轻松上手一键出招！《街头霸王6》前瞻与系统介绍](https://www.bilibili.com/video/BV1JB4y1s7qi)
   + 现代模式（一键出招）
@@ -36,7 +39,7 @@ long-term-maintenance: true
   + 超级必杀技槽：3格，3种必杀技（继承）
 
 
-#### 老头环
+### 艾尔登法环
 
 + 分类：
   + 近战武器：短剑、直剑、大剑、特大剑、刺剑、重刺剑、曲剑、大曲剑、打刀、双头剑、斧、大斧、槌、连枷、大槌、特大武器、矛、大矛、戟、镰刀、软鞭、拳头、小弓、长弓、大弓、弩、手杖、圣印记、火把、小盾、中盾、大盾
@@ -62,9 +65,9 @@ long-term-maintenance: true
 + 参考
   + [武器参考](https://eldenring.wiki.fextralife.com/Weapons)
   + [91种全战灰效果](https://www.bilibili.com/video/BV1q3411W7AJ)
+  + [全武器展示+攻击派生展示](https://www.bilibili.com/video/BV1B54y1Z7VW)
 
-
-#### 地平线2
+### 地平线2 西之绝境 
 
 + 分类：
   + 远程武器：猎手弓、射手弓、爆破弹弓、射钉枪、爆破枪、绳索枪
@@ -74,12 +77,13 @@ long-term-maintenance: true
   + R1-停顿-R1 * N：单体
   + R1-R1-停顿-R1 * N：范围击退
   + R1-R1-R1-停顿-R1 * N：快速充能
++ 参考
+  + [近战连招技能展示合集](https://www.bilibili.com/video/BV1Cu411D7M8)
+  + [坚堡城墙-格斗场 极难难度](https://www.bilibili.com/video/BV1g44y1P7fv)
 
+## 常规
 
-## 网游
-
-
-#### DNF
+### DNF
 
 + 分类：
   + 剑士、枪手、格斗家、法师、圣职者、刺客、缔造者、守护者、枪剑士
@@ -96,10 +100,9 @@ long-term-maintenance: true
   + [FANDOM 地下城与勇士 维基百科](https://dnf.fandom.com/zh/wiki/%E8%81%8C%E4%B8%9A)
 
 
-## 主机/PC单机
 
 
-#### 无双 系列
+### 无双
 
 + 分类：
   + 5（太旧了，同太旧了被开除：6、7）：枪、刀、剑（双手）、扇、弓、棍、剑（单手）、鞭、戟、杖、锤
@@ -121,44 +124,39 @@ long-term-maintenance: true
     + 其他比如：剑风传奇无双、火纹无双、刀剑乱舞无双暂略
 
 
-#### 4大ACT
 
-
-##### 鬼泣
+#### 鬼泣
 
 + 分类：
   + 待补充
-+ 动作：
++ 参考：
   + [《鬼泣4:特别版》全角色动作展示](https://www.bilibili.com/video/BV1CW411Q7q3)
   + [《鬼泣DMC》人物慢动作赏析合集](https://www.bilibili.com/video/BV1mb411K7BN?p=7)
   + [《鬼泣5》『但丁』](https://www.bilibili.com/video/BV1nb411575p)
   + [《鬼泣5》『尼禄』](https://www.bilibili.com/video/BV1Jb41157yY)
+
+#### 战神
+
 + 参考：
-  + 待补充
-
-
-##### 战神
-
-+ 动作：
   + [战神3武器招式（部分）](https://www.bilibili.com/video/BV1is411B7Ej)
-  + [战神3华丽连技）](https://www.bilibili.com/video/BV1Js411m7mx)
+  + [战神3华丽连技](https://www.bilibili.com/video/BV1Js411m7mx)
   + [新战神招式展示小合集](https://www.bilibili.com/video/BV1bb411j732)
+  + [【战神5】全符文攻击演示](https://www.bilibili.com/video/BV1KP4y1m7Fa)
 
-
-##### 猎天使魔女
+#### 猎天使魔女
 
 + 概览
   + [猎天使魔女1进阶技巧](https://www.bilibili.com/video/BV1aQ4y167f4)
   + [猎天使魔女2 全武器动画鉴赏](https://www.bilibili.com/video/BV1nJ411X7or)
 
 
-##### 忍者龙剑传
+#### 忍者龙剑传
 
 + 概览
   + [忍龙3全武器动作展示](https://www.bilibili.com/video/BV1m44y1i7YU)
 
 
-#### 仁王 系列
+### 仁王
 
 + 概览（不准）
   + 1：刀，锁链，双刀，大太刀，旋棍，双手斧，长枪
@@ -168,7 +166,7 @@ long-term-maintenance: true
   + [【仁王2】长枪全招式慢动作演示](https://www.bilibili.com/video/BV1kp4y1b7zP)，其他武器翻翻也有。
 
 
-#### 怪物猎人 系列
+### 怪物猎人
 
 + 概览：
   + 太刀，大剑，盾斧，斩斧，轻弩，重弩，双刀，操虫棍，锤子，单手剑，狩猎笛，长枪，铳枪，弓，
@@ -181,7 +179,7 @@ long-term-maintenance: true
   + [Rise 全14种武器替换动作及虫技演示](https://www.bilibili.com/video/BV17f4y1x7pL)
 
 
-#### 魂 系列
+### 黑暗之魂
 
 + 动作
   + [血源诅咒 老猎人 全武器、法术、装备展示](https://www.bilibili.com/video/BV15x411x74z)
@@ -191,7 +189,7 @@ long-term-maintenance: true
   + [只狼：影逝二度 全义手忍具、流派招式、体术、忍术展示](https://www.bilibili.com/video/BV1bb411T7Po)
 
 
-#### 白金工作室 系列
+### 白金工作室
 
 + 动作
   + 猎天使魔女四大那儿已经有了
@@ -202,14 +200,7 @@ long-term-maintenance: true
   + 异界锁链
     + [《异界锁链》全部技能＆雷基恩＆同步攻击展示](https://www.bilibili.com/video/BV1CJ411N7rk)
 
-
-#### 其他
-
-+ 破晓传说
-  + [体验版 破晓传说全角色技能展示合集](https://www.bilibili.com/video/BV1664y1e7RB)
-
-
-## FTG
+### 其他
 
 + 动作
   + [【灵魂能力6/刀魂6】全角色爆衣展示](https://www.bilibili.com/video/BV1Yb411w7J7)
@@ -223,12 +214,13 @@ long-term-maintenance: true
 + 真人快打
 + 铁拳
 + 侍魂
++ 破晓传说
+  + [体验版 破晓传说全角色技能展示合集](https://www.bilibili.com/video/BV1664y1e7RB)
+
+## 手游
 
 
-## 手机游戏
-
-
-#### 崩坏3
+### 崩坏3
 
 |角色|特征|技能|描述|
 |--|--|--|--|
@@ -245,16 +237,16 @@ long-term-maintenance: true
 |幽兰黛尔|长枪|||
 
 
-#### 战双
+### 战双
 
 
-#### 原神
+### 原神
 
 
-## MOBA游戏
+<!-- ## MOBA游戏
 
 
-#### 王者荣耀
+### 王者荣耀
 
 参考资料
 
@@ -287,13 +279,13 @@ long-term-maintenance: true
 |芈月|法球|蝙蝠、紫色；吸血、无法选中|
 
 
-#### DOTA2
+### DOTA2
 
 + [DOTA2全英雄技能](https://www.bilibili.com/video/BV1rb411r7CT)
 
 
-#### LOL
+### LOL
 
 
-#### LOLM
+### LOLM -->
 
