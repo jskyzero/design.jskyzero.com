@@ -1,11 +1,12 @@
 @charset "UTF-8";
 /** Light theme variables */
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap");
 :root { --base-color: #000; --border: dashed 1px rgba(0, 0, 0, 1); --selection-background: rgba(0, 0, 0, 0.99); --selection-text: #FFF; --background-color: #FFF; --text-color: var(--base-color); --placeholder-color: var(--base-color); --link-color: var(--base-color); --code-color-1: #aaaaaa; --code-color-2: #ffffcc; --code-color-3: #F00000; --code-color-4: #F0A0A0; --code-color-5: #0000aa; --code-color-6: #4c8317; --code-color-7: #aa0000; --code-color-8: #000080; --code-color-9: #00aa00; --code-color-10: #888888; --code-color-11: #555555; --code-color-12: #800080; --code-color-13: #00aaaa; --code-color-14: #009999; --code-color-15: #aa5500; --code-color-16: #1e90ff; --code-color-17: #800000; --code-color-18: #bbbbbb; }
 
 /** Style variables */
 /** Global */
-body { background-color: var(--background-color); margin: 0 auto; padding: 0; font-family: "Source Code Pro", monospace; font-size: 12.5px; color: var(--text-color); text-align: left; line-height: 1.5 !important; }
+body { background-color: var(--background-color); margin: 0 auto; padding: 0; font-family: "Source Code Pro", "Noto Sans SC", monospace; font-size: 12.5px; color: var(--text-color); text-align: left; line-height: 1.5 !important; }
 
 h1, h2, h3, h4, h5, h6 { font-size: 12.5px; margin: 0px; margin-top: 22px; font-weight: bold; color: var(--text-color); }
 
@@ -105,7 +106,7 @@ body h5:before { counter-increment: h5; content: counter(h2) "." counter(h3) "."
 /** Form */
 input, select, textarea { padding: 0; margin: 0; -webkit-appearance: none; -webkit-border-radius: 0; border: none; }
 
-input[type=text], select, textarea { width: 100%; resize: none; background-color: var(--background-color); color: var(--text-color); caret-color: var(--text-color); font-size: 12.5px; font-family: "Source Code Pro", monospace; line-height: 1.5; }
+input[type=text], select, textarea { width: 100%; resize: none; background-color: var(--background-color); color: var(--text-color); caret-color: var(--text-color); font-size: 12.5px; font-family: "Source Code Pro", "Noto Sans SC", monospace; line-height: 1.5; }
 
 input, select, textarea, textarea::-webkit-input-placeholder { text-indent: 0px; }
 
@@ -115,7 +116,7 @@ input, select, textarea, textarea::-webkit-input-placeholder { text-indent: 0px;
 
 ::-ms-input-placeholder { color: var(--placeholder-color); }
 
-input[type=submit] { font-size: 12.5px; font-family: "Source Code Pro", monospace; line-height: 1.5; cursor: pointer; color: var(--link-color); background-color: var(--background-color); }
+input[type=submit] { font-size: 12.5px; font-family: "Source Code Pro", "Noto Sans SC", monospace; line-height: 1.5; cursor: pointer; color: var(--link-color); background-color: var(--background-color); }
 
 input[type=submit]:hover { color: var(--background-color); background-color: var(--base-color); }
 
@@ -128,7 +129,7 @@ textarea { vertical-align: top; }
 
 figure.highlight { margin: 5px 0; }
 
-pre { background-color: var(--background-color); border: none; padding: 0; margin: 0; overflow: auto; font-size: 12.5px; color: var(--text-color); line-height: 1.7 !important; font-family: "Source Code Pro", monospace !important; }
+pre { background-color: var(--background-color); border: none; padding: 0; margin: 0; overflow: auto; font-size: 12.5px; color: var(--text-color); line-height: 1.7 !important; font-family: "Source Code Pro", "Noto Sans SC", monospace !important; }
 
 .highlight .hll { background-color: var(--code-color-2); }
 
