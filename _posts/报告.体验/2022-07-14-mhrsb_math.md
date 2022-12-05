@@ -2,6 +2,7 @@
 layout: post
 title: "怪物猎人的战斗数值设计"
 categories: [游戏分析]
+long-term-maintenance: true
 ---
 
 得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。
