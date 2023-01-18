@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 动作设计参考·角色篇
-categories: [游戏开发]
+# categories: [游戏开发]
 long-term-maintenance: true
 ---
 
@@ -21,6 +21,7 @@ long-term-maintenance: true
 
 
 ## NEW
+
 
 ### 街霸VI
 
@@ -67,7 +68,8 @@ long-term-maintenance: true
   + [91种全战灰效果](https://www.bilibili.com/video/BV1q3411W7AJ)
   + [全武器展示+攻击派生展示](https://www.bilibili.com/video/BV1B54y1Z7VW)
 
-### 地平线2 西之绝境 
+
+### 地平线2 西之绝境
 
 + 分类：
   + 远程武器：猎手弓、射手弓、爆破弹弓、射钉枪、爆破枪、绳索枪
@@ -81,7 +83,9 @@ long-term-maintenance: true
   + [近战连招技能展示合集](https://www.bilibili.com/video/BV1Cu411D7M8)
   + [坚堡城墙-格斗场 极难难度](https://www.bilibili.com/video/BV1g44y1P7fv)
 
+
 ## 常规
+
 
 ### DNF
 
@@ -98,8 +102,6 @@ long-term-maintenance: true
   + 魔法师：元素（元素）、魔道（搞怪）、召唤（召唤）、战法（符文）
 + 参考
   + [FANDOM 地下城与勇士 维基百科](https://dnf.fandom.com/zh/wiki/%E8%81%8C%E4%B8%9A)
-
-
 
 
 ### 无双
@@ -124,7 +126,6 @@ long-term-maintenance: true
     + 其他比如：剑风传奇无双、火纹无双、刀剑乱舞无双暂略
 
 
-
 #### 鬼泣
 
 + 分类：
@@ -135,6 +136,7 @@ long-term-maintenance: true
   + [《鬼泣5》『但丁』](https://www.bilibili.com/video/BV1nb411575p)
   + [《鬼泣5》『尼禄』](https://www.bilibili.com/video/BV1Jb41157yY)
 
+
 #### 战神
 
 + 参考：
@@ -142,6 +144,7 @@ long-term-maintenance: true
   + [战神3华丽连技](https://www.bilibili.com/video/BV1Js411m7mx)
   + [新战神招式展示小合集](https://www.bilibili.com/video/BV1bb411j732)
   + [【战神5】全符文攻击演示](https://www.bilibili.com/video/BV1KP4y1m7Fa)
+
 
 #### 猎天使魔女
 
@@ -200,6 +203,7 @@ long-term-maintenance: true
   + 异界锁链
     + [《异界锁链》全部技能＆雷基恩＆同步攻击展示](https://www.bilibili.com/video/BV1CJ411N7rk)
 
+
 ### 其他
 
 + 动作
@@ -216,6 +220,7 @@ long-term-maintenance: true
 + 侍魂
 + 破晓传说
   + [体验版 破晓传说全角色技能展示合集](https://www.bilibili.com/video/BV1664y1e7RB)
+
 
 ## 手游
 

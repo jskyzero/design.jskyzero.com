@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 动作游戏设计基础
-categories: [游戏开发]
+# categories: [游戏开发]
 long-term-maintenance: true
 ---
 
@@ -9,7 +9,9 @@ long-term-maintenance: true
 
 本文将会很长很长，阅读时请做好心里准备，分清“逻辑段落”与“工具参考段落”。本文中间必然存在各种疏漏，欢迎指出。
 
+
 # 动作游戏设计基础
+
 
 ## 学术讨论
 

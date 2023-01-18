@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 动作设计参考·BOSS篇
-categories: [游戏开发]
+# categories: [游戏开发]
 long-term-maintenance: true
 ---
 
@@ -9,6 +9,7 @@ long-term-maintenance: true
 
 
 # 动作设计参考·BOSS篇
+
 
 ## 魂Like
 
@@ -48,11 +49,15 @@ long-term-maintenance: true
 
 ### 猎天使魔女2
 
+
 ## 战神
+
 
 ### 战神诸神黄昏
 
+
 ## 怪猎Like
+
 
 ### 怪物猎人世界
 
@@ -144,12 +149,15 @@ long-term-maintenance: true
   + 黑龙
   + 历战王 冰咒龙
 
+
 ### 怪物猎人崛起
 
 
 ### 怪物猎人崛起曙光
 
+
 ## 横板
+
 
 ### 空洞骑士
 
