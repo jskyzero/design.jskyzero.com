@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-01-07T15:40:26+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-01-18T14:22:39+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">《卧龙》气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="《卧龙》气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
 
 <h1 id="卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</h1>
@@ -382,7 +382,7 @@
   <li>躁郁的毛里克</li>
 </ul>
 
-<p>参考：<a href="https://hkss.huijiwiki.com/wiki/Boss_(%E7%A9%BA%E6%B4%9E%E9%AA%91%E5%A3%AB)">空洞骑士 WIKI BOSS</a></p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。]]></summary></entry><entry><title type="html">怪物猎人的AI设计</title><link href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" rel="alternate" type="text/html" title="怪物猎人的AI设计" /><published>2022-07-22T00:00:00+00:00</published><updated>2022-07-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/22/mhrsb_ai</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/22/mhrsb_ai/"><![CDATA[<p>本文通过爵银龙的的行为为例，讨论怪物猎人的经典AI设计。</p>
+<p>参考：<a href="https://hkss.huijiwiki.com/wiki/Boss_(%E7%A9%BA%E6%B4%9E%E9%AA%91%E5%A3%AB)">空洞骑士 WIKI BOSS</a></p>]]></content><author><name></name></author><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。]]></summary></entry><entry><title type="html">怪物猎人的AI设计</title><link href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" rel="alternate" type="text/html" title="怪物猎人的AI设计" /><published>2022-07-22T00:00:00+00:00</published><updated>2022-07-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/22/mhrsb_ai</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/22/mhrsb_ai/"><![CDATA[<p>本文通过爵银龙的的行为为例，讨论怪物猎人的经典AI设计。</p>
 
 <!--more-->
 
@@ -390,7 +390,7 @@
 
 <p>目前可以公开的情报：</p>
 
-<p>怪物会根据玩家位置或者武器释放不同的攻击。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[本文通过爵银龙的的行为为例，讨论怪物猎人的经典AI设计。]]></summary></entry><entry><title type="html">怪物猎人的战斗数值设计</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="怪物猎人的战斗数值设计" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<p>得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。</p>
+<p>怪物会根据玩家位置或者武器释放不同的攻击。</p>]]></content><author><name></name></author><summary type="html"><![CDATA[本文通过爵银龙的的行为为例，讨论怪物猎人的经典AI设计。]]></summary></entry><entry><title type="html">怪物猎人的战斗数值设计</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="怪物猎人的战斗数值设计" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<p>得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。</p>
 
 <!-- 近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。 -->
 
@@ -487,7 +487,7 @@
 
 <p>以<a href="https://m.douban.com/book/subject/35006358/">游戏感</a>的框架来说：动作游戏会更加专注于<strong>实时操控带来的反馈</strong>，而RPG则能在模拟空间带来更多诸如<strong>故事体验</strong>、<strong>人物成长的体验</strong>，于是当玩家对游戏能带来的体验有着更高期待时，ARPG诞生了，它保留了ACT的核心战斗带来的操控感，又引入RPG带来更好的叙事与更长的数值成长周期。再结合不同的体验侧重与机制设计，成功产生了各式各样的名家名作。</p>
 
-<p>上面我们要聊的是怪物猎人，这就是一款核心玩法基于猎人狩猎大型怪物、很好的平衡了动作性与数值成长的ARPG。“数值成长”体验的引入不仅带来了成长的体验延长了整个游戏的生命周期，也为ACT的单局带来了更多策略和战斗行为的改变。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。]]></summary></entry><entry><title type="html">动作游戏设计基础</title><link href="https://design.jskyzero.com/2022/06/17/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏设计基础" /><published>2022-06-17T00:00:00+00:00</published><updated>2022-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/06/17/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2022/06/17/ActionGameDesign/"><![CDATA[<!-- 本文将从分析动作游戏的核心特征出发，分析记录一些优秀游戏的动作形式与体验，用于设计时快速查阅参考。 -->
+<p>上面我们要聊的是怪物猎人，这就是一款核心玩法基于猎人狩猎大型怪物、很好的平衡了动作性与数值成长的ARPG。“数值成长”体验的引入不仅带来了成长的体验延长了整个游戏的生命周期，也为ACT的单局带来了更多策略和战斗行为的改变。</p>]]></content><author><name></name></author><summary type="html"><![CDATA[得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。]]></summary></entry><entry><title type="html">动作游戏设计基础</title><link href="https://design.jskyzero.com/2022/06/17/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏设计基础" /><published>2022-06-17T00:00:00+00:00</published><updated>2022-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/06/17/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2022/06/17/ActionGameDesign/"><![CDATA[<!-- 本文将从分析动作游戏的核心特征出发，分析记录一些优秀游戏的动作形式与体验，用于设计时快速查阅参考。 -->
 
 <p>本文将会很长很长，阅读时请做好心里准备，分清“逻辑段落”与“工具参考段落”。本文中间必然存在各种疏漏，欢迎指出。</p>
 
@@ -663,7 +663,7 @@ graph TD
   <li>攻击动作：开始、攻击、结束</li>
   <li>攻击特效：（略）</li>
   <li>受击动作：（略）</li>
-</ul>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">一则关于动作游戏的分析摘录</title><link href="https://design.jskyzero.com/2022/06/17/about_action_game/" rel="alternate" type="text/html" title="一则关于动作游戏的分析摘录" /><published>2022-06-17T00:00:00+00:00</published><updated>2022-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/06/17/about_action_game</id><content type="html" xml:base="https://design.jskyzero.com/2022/06/17/about_action_game/"><![CDATA[<p>那么它就是：<a href="https://zhuanlan.zhihu.com/p/25481394">从魂到仁王：两个游戏类型的重构史</a></p>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">一则关于动作游戏的分析摘录</title><link href="https://design.jskyzero.com/2022/06/17/about_action_game/" rel="alternate" type="text/html" title="一则关于动作游戏的分析摘录" /><published>2022-06-17T00:00:00+00:00</published><updated>2022-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/06/17/about_action_game</id><content type="html" xml:base="https://design.jskyzero.com/2022/06/17/about_action_game/"><![CDATA[<p>那么它就是：<a href="https://zhuanlan.zhihu.com/p/25481394">从魂到仁王：两个游戏类型的重构史</a></p>
 
 <ul>
   <li>北美的实际首发销量超过38万套，经过几个月的酝酿期后，一举拿下包括Gamespot年度游戏在内的多项大奖。包含廉价版在内，PS3独占的恶魔之魂全球总计销量超过130万套，为黑暗之魂创造口碑、销量双重奇迹<strong>奠定了坚实的基础。</strong></li>
@@ -1133,4 +1133,4 @@ graph LR
 
 <h3 id="动作逻辑">动作逻辑</h3>
 
-<h3 id="关卡">关卡</h3>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。]]></summary></entry></feed>
+<h3 id="关卡">关卡</h3>]]></content><author><name></name></author><summary type="html"><![CDATA[虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。]]></summary></entry></feed>
