@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 程序内容生成相关讨论
+title: PCG技术相关讨论
 featured-img: terraria
 mathjax: true
 categories: [游戏开发]
