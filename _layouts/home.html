@@ -11,7 +11,7 @@ layout: default
 {% assign posts = site.categories[category] %}
 {%- if posts.size > 0 -%}
   <ul>
-    <li>{{ category }}</li>
+    <p>{{ category }}</p>
     {%- for post in posts -%}
     <li>
       {%- if post.long-term-maintenance -%}
