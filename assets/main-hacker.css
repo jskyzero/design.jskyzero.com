@@ -40,7 +40,7 @@ blockquote { font-style: italic; }
 
 img { max-width: 100%; }
 
-table { margin-bottom: 15px; }
+table { margin-bottom: 15px; width: 100%; }
 
 th { border-bottom: var(--border); }
 
