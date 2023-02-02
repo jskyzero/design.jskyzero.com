@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-02-02T08:41:30+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-02-02T11:07:11+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">《卧龙》气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="《卧龙》气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
 
 <h1 id="卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</h1>
@@ -408,6 +408,146 @@
       <td>奥波路波</td>
       <td>持续弹幕 组合</td>
       <td>八方向弹幕</td>
+    </tr>
+    <tr>
+      <td>神之驯服者</td>
+      <td>人+宠物 组合</td>
+      <td>跳劈 滚动/喷射</td>
+    </tr>
+    <tr>
+      <td>乌姆</td>
+      <td>场地攻击 破防</td>
+      <td>跟踪电/地图炮电</td>
+    </tr>
+    <tr>
+      <td>守望者骑士</td>
+      <td>团体战斗</td>
+      <td>二连斩断 滚动 冲刺/后撤</td>
+    </tr>
+    <tr>
+      <td>守护者大黄蜂</td>
+      <td>镜像角色</td>
+      <td>突刺/下突刺 扔出收回 丝线攻击 后撤/跳跃</td>
+    </tr>
+    <tr>
+      <td>残破容器</td>
+      <td>镜像角色 地图攻击</td>
+      <td>冲刺斩/空中版 下刺 4连抡 地图炮 后撤/跳跃</td>
+    </tr>
+    <tr>
+      <td>空洞骑士</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>辐光</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>剧团团长格林</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>蜂巢骑士</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>骨钉兄弟奥罗与马托</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>绘画大师席奥</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>伟大骨钉贤者斯莱</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>胡长老</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>加利安</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>戈布</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>马科斯</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>马尔穆</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>无眼</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>泽若</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>岗哨大黄蜂</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>暴怒守卫</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>战斗姐妹</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>有翼诺斯克</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>纯粹容器</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>无上辐光</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>灰色王子左特</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>白色防御者</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
+    </tr>
+    <tr>
+      <td>梦魇之王格林</td>
+      <td>UNKOWN</td>
+      <td>UNKOWN</td>
     </tr>
   </tbody>
 </table>
