@@ -178,8 +178,38 @@ long-term-maintenance: true
 |收藏家 |拘禁/场地召唤/持续加码 |跳挠 上跳 |
 |诺斯克 |扭曲怪物 |跳砸 冲刺 喷射/飞天持续喷射 |
 |螳螂领主 |车轮战/组合招式 位置预判|下戳 突刺 持续圆盘 |
-|叛徒领主 |刀波 |突刺 斜下戳 刀波|
-|奥波路波 |持续弹幕 组合 |八方向弹幕|
+|叛徒领主 |刀波 |突刺 斜下戳 刀波 |
+|奥波路波 |持续弹幕 组合 |八方向弹幕 |
+|神之驯服者 |人+宠物 组合|跳劈 滚动/喷射 |
+|乌姆 |场地攻击 破防|跟踪电/地图炮电 |
+|守望者骑士 |团体战斗 |二连斩断 滚动 冲刺/后撤 |
+|守护者大黄蜂 |镜像角色 |突刺/下突刺 扔出收回 丝线攻击 后撤/跳跃 |
+|残破容器 |镜像角色 地图攻击|冲刺斩/空中版 下刺 4连抡 地图炮 后撤/跳跃 |
+|空洞骑士 |UNKOWN |UNKOWN |
+|辐光 |UNKOWN |UNKOWN |
+|剧团团长格林 |UNKOWN |UNKOWN |
+|蜂巢骑士 |UNKOWN |UNKOWN |
+|骨钉兄弟奥罗与马托 |UNKOWN |UNKOWN |
+|绘画大师席奥 |UNKOWN |UNKOWN |
+|伟大骨钉贤者斯莱 |UNKOWN |UNKOWN |
+|胡长老 |UNKOWN |UNKOWN |
+|加利安 |UNKOWN |UNKOWN |
+|戈布 |UNKOWN |UNKOWN |
+|马科斯 |UNKOWN |UNKOWN |
+|马尔穆 |UNKOWN |UNKOWN |
+|无眼 |UNKOWN |UNKOWN |
+|泽若 |UNKOWN |UNKOWN |
+|岗哨大黄蜂 |UNKOWN |UNKOWN |
+|暴怒守卫 |UNKOWN |UNKOWN |
+|战斗姐妹 |UNKOWN |UNKOWN |
+|有翼诺斯克 |UNKOWN |UNKOWN |
+|纯粹容器 |UNKOWN |UNKOWN |
+|无上辐光 |UNKOWN |UNKOWN |
+|灰色王子左特 |UNKOWN |UNKOWN |
+|白色防御者 |UNKOWN |UNKOWN |
+|梦魇之王格林 |UNKOWN |UNKOWN |
+
+
 
 
 
