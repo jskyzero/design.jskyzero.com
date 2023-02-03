@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-02-02T11:07:11+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-02-03T12:11:21+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">《卧龙》气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="《卧龙》气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
 
 <h1 id="卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</h1>
@@ -451,8 +451,8 @@
     </tr>
     <tr>
       <td>蜂巢骑士</td>
-      <td>UNKOWN</td>
-      <td>UNKOWN</td>
+      <td>地图炮 特色召唤</td>
+      <td>地图炮尖刺3连 呕吐蜂群 突刺 瞬移</td>
     </tr>
     <tr>
       <td>骨钉兄弟奥罗与马托</td>
@@ -471,48 +471,48 @@
     </tr>
     <tr>
       <td>胡长老</td>
-      <td>UNKOWN</td>
-      <td>UNKOWN</td>
+      <td> </td>
+      <td>大锤齐砸/依次砸下 传送</td>
     </tr>
     <tr>
       <td>加利安</td>
-      <td>UNKOWN</td>
-      <td>UNKOWN</td>
+      <td> </td>
+      <td>旋转镰刀/弹球 传送</td>
     </tr>
     <tr>
       <td>戈布</td>
-      <td>UNKOWN</td>
-      <td>UNKOWN</td>
+      <td> </td>
+      <td>八方向刺/二连/三连 瞬移</td>
     </tr>
     <tr>
       <td>马科斯</td>
-      <td>UNKOWN</td>
-      <td>UNKOWN</td>
+      <td> </td>
+      <td>跟踪刺 旋转盾</td>
     </tr>
     <tr>
       <td>马尔穆</td>
-      <td>UNKOWN</td>
-      <td>UNKOWN</td>
+      <td> </td>
+      <td>跟踪弹球 瞬移</td>
     </tr>
     <tr>
       <td>无眼</td>
-      <td>UNKOWN</td>
-      <td>UNKOWN</td>
+      <td> </td>
+      <td>横向幽魂 瞬移</td>
     </tr>
     <tr>
       <td>泽若</td>
-      <td>UNKOWN</td>
-      <td>UNKOWN</td>
+      <td> </td>
+      <td>双跟踪刺/收回</td>
     </tr>
     <tr>
       <td>岗哨大黄蜂</td>
-      <td>UNKOWN</td>
-      <td>UNKOWN</td>
+      <td>场地陷阱 防反</td>
+      <td>突刺 扔出收回 丝线攻击 格挡防反</td>
     </tr>
     <tr>
       <td>暴怒守卫</td>
-      <td>UNKOWN</td>
-      <td>UNKOWN</td>
+      <td>增强普通版</td>
+      <td>颜色发生变化</td>
     </tr>
     <tr>
       <td>战斗姐妹</td>
@@ -536,8 +536,8 @@
     </tr>
     <tr>
       <td>灰色王子左特</td>
-      <td>UNKOWN</td>
-      <td>UNKOWN</td>
+      <td> </td>
+      <td>乱冲倒地/直接倒地 跳砸/跳位移砸 下冲 吐召唤物/吐自爆 跑动</td>
     </tr>
     <tr>
       <td>白色防御者</td>
@@ -567,19 +567,28 @@
 <ul>
   <li>战斗阶段
     <ul>
-      <li>开场 特色演出：睡觉、象征意义的动作、开场CG</li>
-      <li>战中 分阶段</li>
-      <li>战后 演出、仪式感</li>
+      <li>开场：特色演出（睡觉、象征意义的动作、开场CG）</li>
+      <li>战中：分阶段</li>
+      <li>战后：演出、仪式感</li>
     </ul>
   </li>
   <li>人物设定
     <ul>
       <li>剪影轮廓（高矮胖瘦）</li>
       <li>武器</li>
-      <li>意义设定</li>
+      <li>意义</li>
     </ul>
   </li>
-  <li>招式设计</li>
+  <li>招式设计
+    <ul>
+      <li>组合变种</li>
+      <li>假动作</li>
+      <li>防反</li>
+      <li>场地攻击</li>
+      <li>召唤</li>
+      <li>位移</li>
+    </ul>
+  </li>
 </ul>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。]]></summary></entry><entry><title type="html">怪物猎人的AI设计</title><link href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" rel="alternate" type="text/html" title="怪物猎人的AI设计" /><published>2022-07-22T00:00:00+00:00</published><updated>2022-07-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/22/mhrsb_ai</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/22/mhrsb_ai/"><![CDATA[<p>本文通过爵银龙的的行为为例，讨论怪物猎人的经典AI设计。</p>
 
 <!--more-->
