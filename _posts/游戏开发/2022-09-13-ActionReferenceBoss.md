@@ -188,24 +188,24 @@ long-term-maintenance: true
 |空洞骑士 |UNKOWN |UNKOWN |
 |辐光 |UNKOWN |UNKOWN |
 |剧团团长格林 |UNKOWN |UNKOWN |
-|蜂巢骑士 |UNKOWN |UNKOWN |
+|蜂巢骑士 |地图炮 特色召唤 |地图炮尖刺3连 呕吐蜂群 突刺 瞬移 |
 |骨钉兄弟奥罗与马托 |UNKOWN |UNKOWN |
 |绘画大师席奥 |UNKOWN |UNKOWN |
 |伟大骨钉贤者斯莱 |UNKOWN |UNKOWN |
-|胡长老 |UNKOWN |UNKOWN |
-|加利安 |UNKOWN |UNKOWN |
-|戈布 |UNKOWN |UNKOWN |
-|马科斯 |UNKOWN |UNKOWN |
-|马尔穆 |UNKOWN |UNKOWN |
-|无眼 |UNKOWN |UNKOWN |
-|泽若 |UNKOWN |UNKOWN |
-|岗哨大黄蜂 |UNKOWN |UNKOWN |
-|暴怒守卫 |UNKOWN |UNKOWN |
+|胡长老 | |大锤齐砸/依次砸下 传送 |
+|加利安 | |旋转镰刀/弹球 传送 |
+|戈布 | |八方向刺/二连/三连 瞬移 |
+|马科斯 | |跟踪刺 旋转盾 |
+|马尔穆 | |跟踪弹球 瞬移|
+|无眼 | |横向幽魂 瞬移 |
+|泽若 | |双跟踪刺/收回 |
+|岗哨大黄蜂 |场地陷阱 防反 |突刺 扔出收回 丝线攻击 格挡防反|
+|暴怒守卫 |增强普通版 |颜色发生变化 |
 |战斗姐妹 |UNKOWN |UNKOWN |
 |有翼诺斯克 |UNKOWN |UNKOWN |
 |纯粹容器 |UNKOWN |UNKOWN |
 |无上辐光 |UNKOWN |UNKOWN |
-|灰色王子左特 |UNKOWN |UNKOWN |
+|灰色王子左特 | |乱冲倒地/直接倒地 跳砸/跳位移砸 下冲 吐召唤物/吐自爆 跑动 |
 |白色防御者 |UNKOWN |UNKOWN |
 |梦魇之王格林 |UNKOWN |UNKOWN |
 
@@ -225,11 +225,17 @@ long-term-maintenance: true
 ### 设计维度
 
 + 战斗阶段
-  + 开场 特色演出：睡觉、象征意义的动作、开场CG
-  + 战中 分阶段
-  + 战后 演出、仪式感
+  + 开场：特色演出（睡觉、象征意义的动作、开场CG）
+  + 战中：分阶段
+  + 战后：演出、仪式感
 + 人物设定
   + 剪影轮廓（高矮胖瘦）
   + 武器
-  + 意义设定
+  + 意义
 + 招式设计
+  + 组合变种
+  + 假动作
+  + 防反
+  + 场地攻击
+  + 召唤
+  + 位移
