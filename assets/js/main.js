@@ -12,4 +12,12 @@ let changeIndexPositon = function () {
   }
 }
 
-changeIndexPositon();
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  changeIndexPositon();
+
+  // highlightBlock
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
