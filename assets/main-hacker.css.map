@@ -3,8 +3,8 @@
 	"file": "main-hacker.css",
 	"sources": [
 		"main-hacker.scss",
-		"_sass/_hacker.scss",
-		"_sass/base.scss"
+		"_theme/_sass/_hacker.scss",
+		"_theme/_sass/base.scss"
 	],
 	"sourcesContent": [
 		"@import \"hacker\";\n@import \"base\";\n",

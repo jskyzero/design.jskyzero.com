@@ -3,9 +3,9 @@
 	"file": "main.css",
 	"sources": [
 		"main.scss",
-		"_sass/_light.scss",
-		"_sass/base.scss",
-		"_sass/_dark.scss"
+		"_theme/_sass/_light.scss",
+		"_theme/_sass/base.scss",
+		"_theme/_sass/_dark.scss"
 	],
 	"sourcesContent": [
 		"@import \"light\";\n@import \"base\";\n\n@media (prefers-color-scheme: dark) {\n\t@import \"dark\";\n}\n",

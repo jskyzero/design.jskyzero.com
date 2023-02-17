@@ -3,8 +3,8 @@
 	"file": "main-dark.css",
 	"sources": [
 		"main-dark.scss",
-		"_sass/_dark.scss",
-		"_sass/base.scss"
+		"_theme/_sass/_dark.scss",
+		"_theme/_sass/base.scss"
 	],
 	"sourcesContent": [
 		"@import \"dark\";\n@import \"base\";\n",

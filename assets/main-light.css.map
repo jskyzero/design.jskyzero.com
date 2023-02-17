@@ -3,8 +3,8 @@
 	"file": "main-light.css",
 	"sources": [
 		"main-light.scss",
-		"_sass/_light.scss",
-		"_sass/base.scss"
+		"_theme/_sass/_light.scss",
+		"_theme/_sass/base.scss"
 	],
 	"sourcesContent": [
 		"@import \"light\";\n@import \"base\";\n",
