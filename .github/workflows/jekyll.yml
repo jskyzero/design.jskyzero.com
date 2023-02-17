@@ -35,7 +35,7 @@ jobs:
 
 
     # Use GitHub Actions' cache to shorten build times and decrease load on servers
-    - uses: actions/cache@v2
+    - uses: actions/cache@v3
       with:
         path: vendor/bundle
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
@@ -43,7 +43,7 @@ jobs:
           ${{ runner.os }}-gems-
 
     - name: jekyll build
-      uses: helaili/jekyll-action@2.2.0
+      uses: helaili/jekyll-action@2
       with:
         pre_build_commands: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
