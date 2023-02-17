@@ -50,7 +50,7 @@ ul { padding-inline-start: 8px !important; }
 
 #pro img { width: fit-content; margin-right: 8px; }
 
-.git-log { padding: 1rem 1rem 1rem !important; background-color: black; margin: 0; padding: 2rem; color: white; font: 0.8rem Inconsolata, monospace; text-shadow: 0 0 5px #C8C8C8; }
+.git-log { padding: 1rem 1rem 1rem !important; background-color: black; border-radius: 1rem; margin: 1rem 0rem; padding: 2rem; color: white; font: 0.8rem Inconsolata, monospace; text-shadow: 0 0 5px #C8C8C8; }
 
 .git-log a { color: white; }
 
