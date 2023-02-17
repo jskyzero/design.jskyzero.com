@@ -209,11 +209,6 @@ long-term-maintenance: true
 |白色防御者 | |UNKOWN |
 |梦魇之王格林 | |UNKOWN |
 
-
-
-
-
-
 参考：
 + [空洞骑士 WIKI BOSS](https://hkss.huijiwiki.com/wiki/Boss_(%E7%A9%BA%E6%B4%9E%E9%AA%91%E5%A3%AB))
 + [空洞骑士Boss合集](https://www.bilibili.com/video/BV15t411X7DP)
