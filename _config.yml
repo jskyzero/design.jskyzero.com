@@ -43,6 +43,11 @@ mermaid:
   # src: 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js'
   # src: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'
 
+layouts_dir         : _theme/_layouts
+includes_dir        : _theme/_includes
+plugins_dir         : _theme/_plugins
+sass:
+  sass_dir          : _theme/_sass
 
 
 # # SITE CONFIGURATION
