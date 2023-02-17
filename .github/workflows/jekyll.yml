@@ -43,7 +43,7 @@ jobs:
           ${{ runner.os }}-gems-
 
     - name: jekyll build
-      uses: helaili/jekyll-action@2
+      uses: helaili/jekyll-action@v2
       with:
         pre_build_commands: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
