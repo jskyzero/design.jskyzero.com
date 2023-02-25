@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-02-24T05:36:49+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-02-25T13:17:36+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
 
-<p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏PVE怪物设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
+<p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏怪物动作设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
 
 <h1 id="只狼狮子猿动作设计分析">《只狼》狮子猿动作设计分析</h1>
 
@@ -25,11 +25,11 @@
 
 <h3 id="动作资产多到奢侈">动作资产多到奢侈</h3>
 
-<p>狮子猿一阶段TTK大概3-4分钟，总动作资产要超过80个。如果只考虑攻击动作的话，大概<code class="language-plaintext highlighter-rouge">210秒/30种招式</code>=7秒一个新招式。奢侈！</p>
+<p>狮子猿一阶段TTK大概3-4分钟，总动作资产要超过80个。如果只考虑攻击动作的话，大概<code class="language-plaintext highlighter-rouge">210秒/30种招式</code>=7秒一个新招式。（奢侈！X1）</p>
 
 <p>作为数据对比的话（以下数据可能有较大错误，不对正确性负责），怪猎MHRSB的爵银龙对于普通玩家大约TTK是12分钟，参考<a href="https://www.bilibili.com/video/BV1JF411c7f7">爵银龙的常见招式派生解析</a>，爵银龙有4个状态每个状态大概7种攻击，每个状态3分半的话，可能是30秒一个新招式。</p>
 
-<p>就招式招式复读的情况来说，两者都会出现。怪猎本身TTK就长，连状态本身都能复读。两者本身动作玩法不同。</p>
+<p>就招式招式复读的情况来说，两者都会出现。怪猎本身TTK就长，连状态本身都能复读。毕竟两者本身动作玩法不同。</p>
 
 <blockquote>
   <p>下一节就会告诉你，对于狮子猿（和爵银龙），甚至不能仅仅考虑攻击招式。</p>
@@ -37,7 +37,18 @@
 
 <h3 id="占比过半的演出动作">“占比过半”的演出动作</h3>
 
-<p>图上：绿色表示<strong>非攻击动作的基础动作</strong>——这里管叫做“演出”动作，黄色和红色表示攻击动作，其中黄色代表“花样动作”——<strong>不太容易记住</strong>的“花里胡哨”的攻击动作，而红色则代表能<strong>给人留下深刻印象</strong>的“标志性”动作，图上不包含一些周边动作——后文甚至也有一小节单独讲这部分。</p>
+<p>图上使用不同颜色代表不同性质的动作：</p>
+
+<ul>
+  <li>绿色表示<strong>非攻击动作的基础动作</strong>——这里管叫做“演出”动作，</li>
+  <li>黄色和红色表示攻击动作
+    <ul>
+      <li>其中黄色代表“花样动作”——<strong>不太容易记住</strong>的“花里胡哨”的攻击动作，</li>
+      <li>而红色则代表能<strong>给人留下深刻印象</strong>的“标志性”动作，</li>
+    </ul>
+  </li>
+  <li>图上不包含一些周边动作——后文甚至也有一小节单独讲这部分。</li>
+</ul>
 
 <p>从颜色的分布上，我们可以初步看出各中动作之间的比例：</p>
 
@@ -48,20 +59,24 @@
 <p>其中非攻击性动作的<strong>演出动作竟然占比来到了40%</strong>，考虑到攻击动作中势必也会有个性体现的演出，四舍五入玩家的感受中已经过半了！非常夸张！（奢侈！X2）</p>
 
 <blockquote>
-  <p>当然，玩家的感受，是动作受到AI控制后播放、玩家与之交互的结果，和直接的动作比例是有差别的。这也是为什么会将攻击动作划分为：容易记住的、不容易记住的两部分来展开叙述。</p>
+  <p>当然，玩家的感受，是动作受到AI控制后播放、玩家与之交互的结果，和直接的动作比例是有差别的。也是为了突出存在感的高低，我们将攻击动作划分为：容易记住的标志动作、不容易记住的花样动作来展开叙述。</p>
 </blockquote>
 
 <h3 id="深度深派生广的招式">“深度深、派生广”的招式</h3>
 
-<p>图上连线代表着动画的Pose衔接，为了方便查看，这里给三大出招派生路线添加了背景色，这些招式派生十分复杂，<strong>攻击深度可以轻松突破5</strong>，怪不得打狮子猿时，能感受到“连绵不绝的攻击”带来的强烈压迫感。</p>
+<p>图上连线代表着动画的Pose衔接，为了方便查看，这里给三大出招派生路线添加了背景色，这些招式派生十分复杂，<strong>可以轻松形成连续5次攻击动作的连招</strong>，怪不得打狮子猿时，能感受到“连绵不绝的攻击”带来的强烈压迫感。</p>
 
-<p>更为可怕的是，看过动画以后会发现，动画中有意<strong>通过关键Pose来做衔接</strong>，可以回复idle，也可以衔接下一个攻击，派生可能性非常多。</p>
+<p>更为可怕的是，动画中有意<strong>通过关键Pose来做衔接</strong>，可以回复idle，也可以衔接下一个攻击，派生可能性非常多。</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion/3.jpg" alt="" /></p>
 
 <h2 id="演出动作">“演出”动作</h2>
 
 <p>本节我们来讨论<strong>非攻击动作的基础动作</strong>，虽然叫演出动作，却不是登场演出，死亡演出之类的演出动作，这个命名方式希望关注这些动作：虽然作为基础动作，却含有大量个性演出的信息。</p>
 
 <h3 id="5个待机">5个“待机”</h3>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion/4.jpg" alt="" /></p>
 
 <p>本文的初衷就是能力有限找不到狮子猿的待机Pose，拆包的动画第一个看到就是待机，一个猿类的待机，身体与地面平行，很标准的idle，也很适合用做各种攻击的起手</p>
 
@@ -79,13 +94,9 @@
 
 <h3 id="走跑跳转向">走、跑、跳、转向</h3>
 
-<p>其他基础动画像基础待机一样，存在感被压制到了最低，几乎只会播放一次，不会持续停留，淹没在了诸多演出性质更强的移动动作中。</p>
+<p>本以为idle你能藏，你基础的走跑跳我总能看得明白吧？看完以后发现还是天真了，走跑跳都玩出花。基础版本的动画像基础待机一样，存在感被压制到了最低，几乎只会播放一次，不会持续停留，淹没在了诸多演出性质更强的移动动作中。</p>
 
-<ul>
-  <li>3个跑与2个后跳</li>
-</ul>
-
-<p>本以为idle你能藏，你基础的走跑跳我总能看得明白吧？看完以后发现还是天真了，走跑跳都玩出花。</p>
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion/8.jpg" alt="" /></p>
 
 <ul>
   <li>转向动作：只狼标准的是【转90度、转180度两种】X【左右转两种】共计四个动画</li>
@@ -109,7 +120,7 @@
 
 <p>值得一提的是向后跳跃，有一个非常有个性的旋转后跳。</p>
 
-<p>在攻击动作里面，也有一个带攻击框体的拍地后跳，也让跳跃很难重复播放。</p>
+<p>在攻击动作里面，也<strong>有一个带攻击框体的拍地四方向跳</strong>，也让跳跃很难重复播放。</p>
 
 <ul>
   <li>跑：2个前跑与1个后跑</li>
@@ -123,61 +134,126 @@
 
 <p>攻击行为的中流砥柱，普普通通填充了玩家的面对的大部分攻击题目，潜移默化地影响着玩家的战斗感受，花样动作的数量和质量决定了一个Boss是否“踏实”，具有足够的深度——让玩家越重玩越能发现新东西。</p>
 
-<p>这里记录一些看到动画表现以后有启发的部分。</p>
+<p>这里记录一些看到动画表现以后<strong>有启发的部分</strong>。</p>
 
 <h3 id="帧数分布pose的停顿">帧数分布：Pose的停顿</h3>
 
-<p>早期设计动作，大家一般会分为【前摇，攻击，后摇】3部分来描述动作的三个阶段。格斗游戏的帧数表中会叫：发生Startup 持续Active 恢复Recovery</p>
+<p>早期设计动作，大家一般会分为【前摇，攻击，后摇】3部分来描述动作的三个阶段。格斗游戏的帧数表中会管这三个阶段：发生Startup 持续Active 恢复Recovery，<a href="https://www.youtube.com/watch?v=ZC8znF3t718">樱井政博的“攻击动作分解”</a>中对其也有介绍。</p>
 
-<p>狮子猿的攻击动画当然也满足这个规律，但是看动作比较多以后，发现它在关键帧停顿这件事上做得更为刻意和夸张，停顿时长能达到0.16秒到0.33秒（5-10帧，30帧/秒），3个阶段被扩充到了5个【起手，攻击前Pose，攻击，后摇Pose，后摇】。</p>
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion/5.jpg" alt="" /></p>
 
-<p>甚至在“相同性质”的攻击上，经常给出不同的攻击前Pose和后摇Pose，以此来丰富体验。</p>
+<p>狮子猿的攻击动画当然也满足这个规律，但是看动作比较多以后，发现它<strong>在关键帧停顿</strong>这件事上做得更为刻意和夸张，停顿时长普遍有0.16秒到0.33秒（5-10帧，30帧/秒），这么理解下来，3个阶段被扩充到了5个：【起手，攻击前Pose，攻击，后摇Pose，后摇】。</p>
+
+<p>甚至在“相同性质”的攻击上，会给出不同的攻击前Pose和后摇Pose（比如四方向拍地攻击的拍地前预备Pose和后摇Pose），以此来进一步丰富玩家体验。（奢侈！X4）</p>
 
 <h3 id="用作衔接后摇pose">用作衔接：后摇Pose</h3>
 
-<p>上文有提到过用关键的Pose来衔接攻击，具体的做法就是利用后摇Pose。</p>
+<p>上文有提到过用关键的Pose来衔接攻击，具体的做法就是<strong>利用后摇Pose</strong>。</p>
 
-<p>即可以衔接idle，也可以衔接一轮新的攻击。</p>
+<p>即：可以衔接回复idle，也可以衔接一轮新的攻击。</p>
 
-<blockquote>
-  <p>比如转身打，转身回复idle；失衡前撞；扔屎等</p>
-</blockquote>
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion/6.jpg" alt="" /></p>
 
 <h3 id="优秀设计带位移的攻击">优秀设计：带位移的攻击</h3>
 
-<p>看了很多动作以后，假设把攻击分为九个区域，无外乎就是不同区域来回打。</p>
+<p>看了很多动作以后，很容易对攻击产生脱敏，比如狮子猿不就是拿手拍啊砸啊这种攻击形式。</p>
 
-<p>除了尝试添加个性化的成分外，尝试给攻击带上位移也能也是一个思考的方向。</p>
+<!-- 假设把攻击分为九个区域，无外乎就是不同区域规划出一个路线，正向或者反向的打。 -->
+
+<p>结合动画给出一些常见的让动作变得更好的思考方向：</p>
+
+<ul>
+  <li>让Pose和打击方式更加富有<strong>个性</strong></li>
+  <li><strong>组合</strong>的攻击：比如正向打，再逆向回打</li>
+  <li>给攻击<strong>添加位移</strong>：比如突进、后撤，体侧攻击等</li>
+</ul>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion/7.jpg" alt="" /></p>
 
 <h2 id="特色动作">特色动作</h2>
 
-<h3 id="主打一个物理或精神的杀伤力">主打一个物理或精神的杀伤力</h3>
+<p>本节我们讨论那些玩家很容易就能记下来的动作，一般来说这些动作突出且重要，在战斗中能轻易地被玩家记住，成为长久保留的记忆点和第一印象。</p>
 
-<p>不然就是动作本身过目难忘，不然就是性能夸张。</p>
+<h3 id="主打一个过目难忘">主打一个过目难忘</h3>
+
+<p>为什么会被记住呢？</p>
+
+<ul>
+  <li>要不就是动作本身动作奇特，过目难忘，比如扔屎，不愧是宫崎英高，总喜欢这些有的没的。</li>
+  <li>不然就是性能夸张，较难处理，比如“各种危”，中一次以后损血巨多，还可能直接被带走。</li>
+</ul>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion/9.jpg" alt="" /></p>
 
 <h3 id="如何控制结合比例">如何控制结合比例</h3>
 
-<p>一般挑战越大，收益越大，而且学会解法以后基本就是稳定白给期。</p>
+<p>一般挑战越大，收益越大。学会解法，能稳定处理这些挑战以后基本就是稳定白给期。</p>
+
+<p>那对萌新玩家：挑战给得多了会太难，劝退、少了会简单；对于熟练玩家：多了白给了太多、少了威胁又不够，该怎么控制呢？</p>
+
+<p>我们回到一开始的状态机，你会发现这些招式大多单独存在、或者处于一套连招的最末尾。</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion/10.jpg" alt="" /></p>
+
+<p>仔细想想也合理，以<strong>一个强力招式让连续攻击的回合迎来高潮和结束</strong>，你化解了，那给你应得的收益，给你喘口气，再来一回合；你没接下来？那前期逐步把你逼入的劣势，这里全兑现给你个大惩罚。</p>
 
 <h2 id="周边动作">周边动作</h2>
 
-<h3 id="僵直动作与僵直派生">僵直动作与僵直派生</h3>
+<p>战斗部分前面就结束了，本节我们讨论一些花里胡哨的周边资产，虽然是周边资产，但是起的作用，可不一定比战斗资产小。</p>
 
-<p>僵直动作一定程度上决定了玩法的丰富度。</p>
+<h3 id="僵直与僵直派生">僵直与僵直派生</h3>
 
-<h3 id="登场动作与处决动作">登场动作与处决动作</h3>
+<blockquote>
+  <p>这里的僵（硬）直指怪物的非自由态（不能自由行动的状态）。</p>
+</blockquote>
 
-<p>动作不重要，重要的是状态。</p>
+<p>越来越理解到：（BOSS和玩家的）<strong>僵直动作的丰富度一定程度上决定了玩法的丰富度</strong>。</p>
+
+<p>对于格斗游戏，互相在攻击范围内，对拼的话，比得就是谁出手快谁有优势帧；而对于PVE为主的ACT游戏，在保留有高时间精度的玩法后（广泛的例子：使用闪避无敌帧躲避攻击、目押、只狼的“打铁”等），也引入了一些相对“宽泛”的输出窗口期给玩家安心的“打桩输出”。这种“窗口期”除了以怪物各种招式的前摇、后摇存在外，还有就是可以被玩家主动控制的僵直了。</p>
+
+<p>举个例子可能会更好理解：</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion/11.jpg" alt="" /></p>
+
+<p>拆包动画里面有两个挣扎的动作，应该是对应鞭炮和燃烧的两种硬直动画，比较有意思的是，有一个<strong>硬直动画还会衔接一个拍地攻击</strong>，仿佛已经看到：本来趁机输出狮子猿，然后因为没有及时开溜被打：“让你小子贪刀，拍你！”。</p>
+
+<blockquote>
+  <p>著名PVE打怪游戏《怪物猎人》里的怪物，除死亡外仍有<strong>多达10种硬直</strong>，感兴趣的可以学习：<a href="https://bbs.nga.cn/read.php?tid=21732718">怪物猎人 怪物硬直/发怒机制与硬直优先级</a></p>
+</blockquote>
+
+<h3 id="登场与处决">登场与处决</h3>
+
+<p>登场的动作本身不重要，重要的是通过登场的动作<strong>叙述出登场前的状态</strong>，这是一个叙事概念，这里不展开讨论了。</p>
+
+<p>至于退场的处决动作，只狼里面每个BOSS最后都有一套漂亮的动作，给一场大战画上句号，<strong>堪称艺术</strong>。</p>
+
+<p>比较有意思的是进处决之前的细节，这里的动画也是三段式，idle切等待处决，等待处决循环，未处决则还能恢复。（是不是想起了好奇不按处决，惨遭翻车的惨剧。）</p>
 
 <h3 id="通用动作">通用动作</h3>
 
-<p>有一个下落动作，暂时不明白是干嘛的。</p>
+<p>有一个经典三段式的下落动作，暂时没明白是干嘛的。想了想是不是双猿的时候有一只是空中跳下来的，不确定。</p>
 
 <h2 id="总结">总结</h2>
 
-<p>有钱真好。</p>
+<p>有钱做这么多资产真好（不是）。</p>
 
-<p>一些设计思路。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。]]></summary></entry><entry><title type="html">《卧龙》气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="《卧龙》气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
+<p>咳咳，正经来说，我认为一开始没有敷衍的随便记录几个特色动作，而是选择拆包认真分析了全部的资产，还是一件非常有意义的事情：</p>
+
+<ul>
+  <li>一开始找不到idle和基础动作，是因为它们淹没在了茫茫多的个性动作的信息海里面。</li>
+  <li>一些动作设计的基础技法：
+    <ul>
+      <li>三段式【前摇，攻击，后摇】改五段式【起手，攻击前Pose，攻击，后摇Pose，后摇】</li>
+      <li>利用后摇Pose的连通性设计招式派生</li>
+      <li>【个性Pose、组合、位移】等多种思路提升动作品质</li>
+    </ul>
+  </li>
+  <li>设计僵直机制与玩法，然后试着让僵直更加丰富。</li>
+  <li>利用登场动作叙事、处决动作提升体验</li>
+  <li>……</li>
+</ul>
+
+<p>以上，希望以后也能做出优秀的Boss :)</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。]]></summary></entry><entry><title type="html">《卧龙》气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="《卧龙》气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
 
 <h1 id="卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</h1>
 
