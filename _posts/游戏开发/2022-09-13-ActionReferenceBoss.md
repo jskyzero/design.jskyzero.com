@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 参考：ACT BOSS
-categories: [游戏开发]
+categories: [游戏分析]
 long-term-maintenance: true
 ---
 
@@ -210,10 +210,13 @@ long-term-maintenance: true
 |梦魇之王格林 | |UNKOWN |
 
 参考：
+
 + [空洞骑士 WIKI BOSS](https://hkss.huijiwiki.com/wiki/Boss_(%E7%A9%BA%E6%B4%9E%E9%AA%91%E5%A3%AB))
 + [空洞骑士Boss合集](https://www.bilibili.com/video/BV15t411X7DP)
 + [空洞骑士 无护符 全辐辉（全boss无伤）合集](https://www.bilibili.com/video/BV1dt411B78e)
 + [空洞骑士 诸神堂boss超详细分层次攻略](https://www.bilibili.com/video/BV1A7411y7Cr)
+
+
 ## 总结
 
 
