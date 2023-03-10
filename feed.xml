@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-10T04:18:40+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-10T09:50:03+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
 
 <p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏怪物动作设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
@@ -835,91 +835,106 @@
   <tbody>
     <tr>
       <td>张梁</td>
-      <td> </td>
-      <td> </td>
+      <td>长柄锤 伸长手 土</td>
+      <td>抡锤、跳砸、前拖、土柱；后滚；暴气荆棘</td>
     </tr>
     <tr>
       <td>朱厌</td>
-      <td>猴子</td>
-      <td> </td>
+      <td>粗臂猿</td>
+      <td>抡拳、红冲脚、红下砸、拍地；前跑，后跳，侧跳；怒吼</td>
     </tr>
     <tr>
       <td>封豨</td>
       <td>野猪</td>
-      <td> </td>
+      <td>前拱、转身、红下砸；转身；顿脚，倒地</td>
     </tr>
     <tr>
       <td>张宝</td>
-      <td> </td>
-      <td> </td>
+      <td>佝偻 铃铛 火</td>
+      <td>三连火圈、火球、地火、螺旋火球、近身剑、召唤小怪；瞬移；</td>
     </tr>
     <tr>
       <td>张角</td>
-      <td> </td>
-      <td> </td>
+      <td>巨型 爬行 权杖 雷</td>
+      <td>雷圈落雷、散符咒落雷，磕头（烟圈），挥权杖，捞手，趴砸，红下砸，吐息，红吐弹；前跳</td>
     </tr>
     <tr>
       <td>獓因</td>
-      <td>触手牛</td>
-      <td> </td>
+      <td>触手牛 冰</td>
+      <td>前跳砸、触手扫地、砸地、前戳、红前撞、吐冰</td>
     </tr>
     <tr>
       <td>白蛇</td>
-      <td> </td>
-      <td> </td>
+      <td>蛇 舞女 毒</td>
+      <td>吐场地毒圈、扫尾、舞袖蛇头、红蛇头前咬、跳砸、前冲、红场地爬行撞；侧闪</td>
     </tr>
     <tr>
       <td>张让</td>
-      <td>影分身</td>
-      <td> </td>
+      <td>影分身 雷</td>
+      <td>红突刺、雷圈、范围落雷、直线落雷、漂浮螺旋斩、前挥剑；侧瞬闪；原地暴风</td>
     </tr>
     <tr>
       <td>华雄</td>
-      <td> </td>
-      <td> </td>
+      <td>长柄锤</td>
+      <td>红舞棍前冲、红转身砸、突刺前戳；前冲、后翻滚</td>
     </tr>
     <tr>
       <td>吕布</td>
-      <td> </td>
-      <td> </td>
+      <td>骑马下马 火</td>
+      <td>骑马：红下砸、红前冲、射箭；红下砸、红突进、后撤斩、前冲斩、前突刺、若干斩击、射箭；骑马冲刺</td>
     </tr>
     <tr>
       <td>饕餮</td>
-      <td> </td>
-      <td> </td>
+      <td>巨型 独臂 多足爬行</td>
+      <td>跳砸，红脚踩；掉头处决；跳跃处决</td>
     </tr>
     <tr>
       <td>孙坚</td>
-      <td> </td>
-      <td> </td>
+      <td>虎 尾巴</td>
+      <td>前扑，绕尾，尾勾后跳，尾勾侧跳，农夫二拳+勾，勾尾二连扫，勾尾旋风，下踩脚，红前扑，红勾尾扫；小后跳；下砸吼</td>
     </tr>
     <tr>
       <td>董卓</td>
       <td> </td>
-      <td> </td>
+      <td>飞刀、扇形飞刀、砍砍踩、砍砍突砍、红前抓、三连突、红下旋砍、跳投矛、五连镖、红剑气砍、前踢脚、红上旋砍、拖矛旋转；后翻滚</td>
     </tr>
     <tr>
       <td>夏侯惇</td>
-      <td> </td>
-      <td> </td>
+      <td>翼人 斧 火</td>
+      <td>红停顿飞、斜上砍、斜下砍、拖地砍、旋转前冲、红下砍、原地脚踩；旋转然后飞远</td>
     </tr>
     <tr>
       <td>张辽</td>
+      <td>雷</td>
+      <td>红空下旋砍、长旋砍前戳、二连转前戳侧砍、前突砍雷、红直戳、直跳砍落雷、前戳前戳横砍前戳；召雷；后跳、侧跳</td>
+    </tr>
+    <tr>
+      <td>魔吕布</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>孙策、孙坚</td>
+      <td>颜良&amp;文丑</td>
+      <td>双BOSS</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>袁绍</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>曹操</td>
+      <td>于吉</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>赵云</td>
+      <td>飞龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>蒙眼少年</td>
       <td> </td>
       <td> </td>
     </tr>
