@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-10T09:50:03+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-10T10:15:50+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
 
 <p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏怪物动作设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
@@ -904,7 +904,7 @@
       <td>红停顿飞、斜上砍、斜下砍、拖地砍、旋转前冲、红下砍、原地脚踩；旋转然后飞远</td>
     </tr>
     <tr>
-      <td>张辽</td>
+      <td>⭐️张辽</td>
       <td>雷</td>
       <td>红空下旋砍、长旋砍前戳、二连转前戳侧砍、前突砍雷、红直戳、直跳砍落雷、前戳前戳横砍前戳；召雷；后跳、侧跳</td>
     </tr>
@@ -959,7 +959,7 @@
   </thead>
   <tbody>
     <tr>
-      <td>假骑士</td>
+      <td>⭐️假骑士</td>
       <td>三阶段 虚弱</td>
       <td>跳跃、冲锋、蓄力锤、跳跃重锤、狂怒虚弱</td>
     </tr>
@@ -994,7 +994,7 @@
       <td>地突/跟踪地突/带扔球地突 扔球 变球</td>
     </tr>
     <tr>
-      <td>灵魂大师</td>
+      <td>⭐️灵魂大师</td>
       <td>变种招式 假动作</td>
       <td>冲刺/缓慢浮游炮冲刺 跟踪弹 下砸冲击波/假动作下砸</td>
     </tr>
