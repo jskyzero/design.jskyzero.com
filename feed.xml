@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-13T07:10:15+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-13T12:38:28+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
 
 <p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏怪物动作设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
@@ -583,7 +583,7 @@
 <blockquote>
   <p>残心；三种架势；忍术阴阳术；守护灵</p>
 
-  <p>最值得学习的地方：……</p>
+  <p>最值得学习的地方：意象（感觉动作种类已经跟不上时代了）</p>
 </blockquote>
 
 <table>
@@ -597,22 +597,22 @@
   <tbody>
     <tr>
       <td>P1:刽子手德瑞克</td>
-      <td> </td>
-      <td> </td>
+      <td>斧子</td>
+      <td>右斜下左斜下纵下、横扫、冲撞</td>
     </tr>
     <tr>
       <td>P2:怨灵鬼</td>
-      <td> </td>
+      <td>脚镣</td>
       <td> </td>
     </tr>
     <tr>
       <td>P3:飞缘魔</td>
-      <td> </td>
+      <td>蝙蝠 麻痹</td>
       <td> </td>
     </tr>
     <tr>
       <td>P4:鵺</td>
-      <td> </td>
+      <td>白虎</td>
       <td> </td>
     </tr>
     <tr>
@@ -627,17 +627,17 @@
     </tr>
     <tr>
       <td>P7:大百足</td>
-      <td> </td>
+      <td>蜈蚣</td>
       <td> </td>
     </tr>
     <tr>
       <td>P8:海坊主</td>
-      <td> </td>
+      <td>史莱姆</td>
       <td> </td>
     </tr>
     <tr>
       <td>P9:丸目长惠</td>
-      <td> </td>
+      <td>修炼场</td>
       <td> </td>
     </tr>
     <tr>
@@ -647,22 +647,22 @@
     </tr>
     <tr>
       <td>P11:女郎蜘蛛</td>
-      <td> </td>
+      <td>蜘蛛</td>
       <td> </td>
     </tr>
     <tr>
       <td>P12:雪女</td>
-      <td> </td>
+      <td>冰</td>
       <td> </td>
     </tr>
     <tr>
       <td>P13:井伊直政</td>
-      <td> </td>
+      <td>长枪</td>
       <td> </td>
     </tr>
     <tr>
       <td>P14:白虎</td>
-      <td> </td>
+      <td>翅膀猫</td>
       <td> </td>
     </tr>
     <tr>
@@ -672,7 +672,7 @@
     </tr>
     <tr>
       <td>P16:大蛤蟆</td>
-      <td> </td>
+      <td>蛤蟆</td>
       <td> </td>
     </tr>
     <tr>
@@ -687,7 +687,7 @@
     </tr>
     <tr>
       <td>P19:鬼女</td>
-      <td> </td>
+      <td>佝偻 长爪</td>
       <td> </td>
     </tr>
     <tr>
@@ -702,7 +702,7 @@
     </tr>
     <tr>
       <td>P22:杂贺孙一</td>
-      <td> </td>
+      <td>鸟 枪手</td>
       <td> </td>
     </tr>
     <tr>
@@ -732,22 +732,22 @@
     </tr>
     <tr>
       <td>P28:大谷吉继</td>
-      <td> </td>
+      <td>蝗虫 双刀</td>
       <td> </td>
     </tr>
     <tr>
       <td>P29:岛左近</td>
-      <td> </td>
+      <td>雷 长枪</td>
       <td> </td>
     </tr>
     <tr>
       <td>P30:荒骷髅</td>
-      <td> </td>
+      <td>场地BOSS</td>
       <td> </td>
     </tr>
     <tr>
       <td>P31:石田三成</td>
-      <td> </td>
+      <td>风</td>
       <td> </td>
     </tr>
     <tr>
@@ -757,92 +757,92 @@
     </tr>
     <tr>
       <td>P33:织田信长</td>
-      <td> </td>
+      <td>孔雀</td>
       <td> </td>
     </tr>
     <tr>
       <td>P34:凯瑞</td>
-      <td> </td>
+      <td>黑蛇</td>
       <td> </td>
     </tr>
     <tr>
       <td>P35:八岐大蛇</td>
-      <td> </td>
+      <td>地图Boss</td>
       <td> </td>
     </tr>
     <tr>
       <td>P36:东西无双</td>
-      <td> </td>
+      <td>双打</td>
       <td> </td>
     </tr>
     <tr>
       <td>P37:雪女信长</td>
-      <td> </td>
+      <td>双打</td>
       <td> </td>
     </tr>
     <tr>
       <td>P38:百目</td>
-      <td> </td>
+      <td>异性 触手 权杖</td>
       <td> </td>
     </tr>
     <tr>
       <td>P39:伊达成实</td>
-      <td> </td>
+      <td>蜈蚣</td>
       <td> </td>
     </tr>
     <tr>
       <td>P40:片仓重长</td>
-      <td> </td>
+      <td>发呆开场 大斧</td>
       <td> </td>
     </tr>
     <tr>
       <td>P41:伊达政宗</td>
-      <td> </td>
+      <td>风 水</td>
       <td> </td>
     </tr>
     <tr>
       <td>P42:玛丽亚</td>
-      <td> </td>
+      <td>西洋剑</td>
       <td> </td>
     </tr>
     <tr>
       <td>P43:龙之臂膀</td>
-      <td> </td>
+      <td>双打</td>
       <td> </td>
     </tr>
     <tr>
       <td>P44:猿飞佐助</td>
-      <td> </td>
+      <td>旋棍</td>
       <td> </td>
     </tr>
     <tr>
       <td>P45:真田幸村</td>
-      <td> </td>
+      <td>长枪 火 麒麟</td>
       <td> </td>
     </tr>
     <tr>
       <td>P46:佐佐木小次郎</td>
-      <td> </td>
+      <td>大太刀</td>
       <td> </td>
     </tr>
     <tr>
       <td>P47:真田幸村PLUS</td>
-      <td> </td>
+      <td>长枪 火 麒麟</td>
       <td> </td>
     </tr>
     <tr>
       <td>P48:阴摩罗鬼</td>
-      <td> </td>
+      <td>鸟</td>
       <td> </td>
     </tr>
     <tr>
       <td>P49:丰臣秀赖</td>
-      <td> </td>
+      <td>双刀</td>
       <td> </td>
     </tr>
     <tr>
       <td>P50:九尾妖狐</td>
-      <td> </td>
+      <td>九尾狐</td>
       <td> </td>
     </tr>
     <tr>
@@ -852,7 +852,7 @@
     </tr>
     <tr>
       <td>P52:隼仁</td>
-      <td> </td>
+      <td>忍术</td>
       <td> </td>
     </tr>
   </tbody>
@@ -861,10 +861,261 @@
 <p>参考：</p>
 
 <ul>
-  <li><a href="http://www.vgtime.com/topic/948933.jhtml">全Boss无伤攻略 序章 九州篇</a></li>
+  <li><a href="https://www.bilibili.com/video/BV1wx411275g">全BOSS无伤攻略</a>
+    <ul>
+      <li><a href="http://www.vgtime.com/topic/948933.jhtml">文字攻略 序章 九州篇</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="仁王2">仁王2</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P1:马头鬼⭐️</td>
+      <td>断头大刀</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P2:烟烟罗</td>
+      <td>拳头 瞬移</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P3:牛头鬼</td>
+      <td>大棒</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P4:夜刀神</td>
+      <td>蛇 毒</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P5:今川义元</td>
+      <td>双刀</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P6:镰鼬</td>
+      <td>老鼠 旋风斩</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P7:塚原卜传</td>
+      <td>剑</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P8:斋藤义龙</td>
+      <td>镜像主角</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P9:崇枭</td>
+      <td>猫头鹰</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P10:漆黑武士</td>
+      <td>大斧</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P11:真柄直隆</td>
+      <td>大太刀</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P12:本多忠胜</td>
+      <td>长矛</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P13:浅井长政</td>
+      <td>片翼鸟人</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P14:织田信长</td>
+      <td>单手剑</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P15:怨灵鬼</td>
+      <td>囚犯铁链</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P16:杂贺孙一</td>
+      <td>火枪</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P17:牛鬼</td>
+      <td>蜘蛛牛</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P18:火车</td>
+      <td>狐狸 车轮 鞭子</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P19:两面宿傩</td>
+      <td>四足两面 阴阳术</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P20:前田利家</td>
+      <td>长枪</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P21:柴田胜家</td>
+      <td>双斧 象牙</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P22:松永久秀</td>
+      <td>阴险 双刀</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P23:藤吉郎</td>
+      <td>双刀 猴子</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P24:蜂须贺小六</td>
+      <td>锁链 龟壳 水</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P25:大太法师</td>
+      <td>场地BOSS</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P26:酒吞童子</td>
+      <td>长柄锤 醉酒 火</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P27:长壁姬</td>
+      <td>场地BOSS</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P28:前田庆次</td>
+      <td>长矛</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P29:藤吉郎</td>
+      <td>双刀</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P30:果心居士</td>
+      <td>影分身</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P31:威廉</td>
+      <td>主角对决</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P32:大狱丸</td>
+      <td>大锤 多剑</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P33:神秘勇僧</td>
+      <td>多武器</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P34:海入道</td>
+      <td>史莱姆</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P35:夜枭</td>
+      <td>白虎</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P36:源义经</td>
+      <td>鸟人</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P37:源赖光⭐️</td>
+      <td>召唤 次元斩</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P38:土蜘蛛</td>
+      <td>人形蜘蛛</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P39:大蛤蟆</td>
+      <td>长矛 忍术</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P40:白虎</td>
+      <td>翅膀 猫</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P41:黄泉雷神</td>
+      <td>鸟居</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P42:隼涟</td>
+      <td>忍术</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P43:大岳丸</td>
+      <td>剑</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P44:立乌帽子</td>
+      <td>镰刀</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P45:祸梦鬼</td>
+      <td>妙蛙种子</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P46:女天狗</td>
+      <td>扇子</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P47:空海</td>
+      <td>权杖</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 <p>参考：</p>
 
