@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-13T00:24:49+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-13T07:10:15+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
 
 <p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏怪物动作设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
@@ -582,6 +582,8 @@
 
 <blockquote>
   <p>残心；三种架势；忍术阴阳术；守护灵</p>
+
+  <p>最值得学习的地方：……</p>
 </blockquote>
 
 <table>
@@ -594,234 +596,288 @@
   </thead>
   <tbody>
     <tr>
-      <td>怨灵鬼</td>
+      <td>P1:刽子手德瑞克</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>飞喙魔</td>
+      <td>P2:怨灵鬼</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>假立花宗茂</td>
+      <td>P3:飞缘魔</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>真立花宗茂</td>
+      <td>P4:鵺</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>大百足</td>
+      <td>P5:假立花宗茂</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>海坊主</td>
+      <td>P6:真立花宗茂</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>女郎蜘蛛</td>
+      <td>P7:大百足</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>雪女</td>
+      <td>P8:海坊主</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>井伊直政（无伤）</td>
+      <td>P9:丸目长惠</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>白虎</td>
+      <td>P10:服部半藏</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>大蛤蟆</td>
+      <td>P11:女郎蜘蛛</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>鬼女</td>
+      <td>P12:雪女</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>阿胜</td>
+      <td>P13:井伊直政</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>本多忠胜</td>
+      <td>P14:白虎</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>杂贺孙一</td>
+      <td>P15:大怨灵鬼</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>大谷吉继</td>
+      <td>P16:大蛤蟆</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>岛左近</td>
+      <td>P17:丸目长惠加强版</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>巨大骷髅</td>
+      <td>P18:服部半藏加强版</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>石田三成</td>
+      <td>P19:鬼女</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>漆黑武士</td>
+      <td>P20:本多忠胜</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>四连boss</td>
+      <td>P21:阿胜</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>织田信长</td>
+      <td>P22:杂贺孙一</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>凯瑞</td>
+      <td>P23:柳生石舟斋</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>八岐大蛇</td>
+      <td>P24:足利义辉</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>百目</td>
+      <td>P25:宝藏院胤荣</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>彼岸的相会</td>
+      <td>P26:坂田金时</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>转（弹反）</td>
+      <td>P27:司箭院兴仙</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>两道影子</td>
+      <td>P28:大谷吉继</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>仁王</td>
+      <td>P29:岛左近</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>败逃的流浪武士</td>
+      <td>P30:荒骷髅</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>木瓜雄师</td>
+      <td>P31:石田三成</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>伊达成实</td>
+      <td>P32:漆黑武士</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>片仓重长</td>
+      <td>P33:织田信长</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>伊达政宗</td>
+      <td>P34:凯瑞</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>玛利亚</td>
+      <td>P35:八岐大蛇</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>龙之臂膀</td>
+      <td>P36:东西无双</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>猿飞佐助</td>
+      <td>P37:雪女信长</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>真田幸村</td>
+      <td>P38:百目</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>神秘武士</td>
+      <td>P39:伊达成实</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>阴摩罗鬼</td>
+      <td>P40:片仓重长</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>丰臣秀赖</td>
+      <td>P41:伊达政宗</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>九尾妖狐</td>
+      <td>P42:玛丽亚</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>超忍</td>
+      <td>P43:龙之臂膀</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>业报的终结</td>
+      <td>P44:猿飞佐助</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P45:真田幸村</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P46:佐佐木小次郎</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P47:真田幸村PLUS</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P48:阴摩罗鬼</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P49:丰臣秀赖</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P50:九尾妖狐</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P51:岛左近PLUS</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P52:隼仁</td>
       <td> </td>
       <td> </td>
     </tr>
   </tbody>
 </table>
 
+<p>参考：</p>
+
+<ul>
+  <li><a href="http://www.vgtime.com/topic/948933.jhtml">全Boss无伤攻略 序章 九州篇</a></li>
+</ul>
+
 <h3 id="仁王2">仁王2</h3>
+
+<p>参考：</p>
+
+<ul>
+  <li><a href="https://www.bilibili.com/video/BV1f7411Z72H">全BOSS无伤攻略</a></li>
+</ul>
 
 <h3 id="卧龙">卧龙</h3>
 
 <blockquote>
   <p>卧龙沿袭了仁王的高自定义动作系统思路，使用化解替换了妖反，使用起来有一些只狼的神韵；使用“气势槽”统一了局内资源，引入了单局动态等级：士气，增加了相克五行属性。美中不足的是内容消耗过快，数值和难度曲线有些问题。</p>
+
+  <p>最值得学习的地方：使用物理的连续攻击</p>
 </blockquote>
 
 <table>
@@ -866,7 +922,7 @@
     <tr>
       <td>白蛇</td>
       <td>蛇 舞女 毒</td>
-      <td>吐场地毒圈、正逆扫尾、舞袖蛇头、<br />红蛇头前咬、跳砸、前冲、红场地爬行撞；侧闪</td>
+      <td>吐场地毒圈、正逆扫尾、舞袖蛇头、<br />红蛇头前咬、跳砸、前冲、<strong>红场地爬行撞</strong>；侧闪</td>
     </tr>
     <tr>
       <td>张让</td>
@@ -941,10 +997,16 @@
     <tr>
       <td>蒙眼少年</td>
       <td>剑仙</td>
-      <td>UNKOWN</td>
+      <td>红抓手、红升龙、红跳劈、红大剑突、<br />水墨大剑、跳御剑、御剑散射、……；漂浮；转阶段</td>
     </tr>
   </tbody>
 </table>
+
+<p>参考：</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=ep1cOh1wnts">Wo Long Fallen Dynasty - All Boss Fights</a></li>
+</ul>
 
 <h2 id="横板">横板</h2>
 
@@ -952,6 +1014,8 @@
 
 <blockquote>
   <p>空洞的BOSS很难，TTK又拉得很长。“题目”虽然不多但是有机复用。BOSS的“阻挡框”就是攻击框，即便是普通的跳跃下落、冲刺都是一种考核，战局紧张，需要关注BOSS行为做出反应，符合动作游戏的【观察，行动】的基础乐趣，多次挑战打过以后非常爽。</p>
+
+  <p>最值得学习的地方：设计的维度</p>
 </blockquote>
 
 <table>
@@ -1211,7 +1275,8 @@
       <li>防反：等玩家攻击</li>
       <li>场地攻击：</li>
       <li>召唤：</li>
-      <li>位移：跳跃，冲刺，后撤</li>
+      <li>纯位移：跳跃，冲刺，后撤，侧闪</li>
+      <li>招式位移：前冲，向前跳下，后撤斩</li>
     </ul>
   </li>
 </ul>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。]]></summary></entry><entry><title type="html">怪物猎人的AI设计</title><link href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" rel="alternate" type="text/html" title="怪物猎人的AI设计" /><published>2022-07-22T00:00:00+00:00</published><updated>2022-07-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/22/mhrsb_ai</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/22/mhrsb_ai/"><![CDATA[<p>本文通过爵银龙的的行为为例，讨论怪物猎人的经典AI设计。</p>
@@ -1690,58 +1755,48 @@ graph TD
 
 <h2 id="总结灵活使用解决问题">总结：灵活使用解决问题</h2>
 
-<p>AI有着多种技术架构与架构对应擅长的逻辑表达，有些时候面临的是工具的表达能力的问题。但是更多时候面对的是复杂情况的逻辑实现问题，灵活使用上述思维方式和技巧，能解决对应的复杂问题。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章]]></summary></entry><entry><title type="html">一些「生活」中的参考</title><link href="https://design.jskyzero.com/2022/04/15/life/" rel="alternate" type="text/html" title="一些「生活」中的参考" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/life</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/life/"><![CDATA[<!-- # 学会生活
+<p>AI有着多种技术架构与架构对应擅长的逻辑表达，有些时候面临的是工具的表达能力的问题。但是更多时候面对的是复杂情况的逻辑实现问题，灵活使用上述思维方式和技巧，能解决对应的复杂问题。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章]]></summary></entry><entry><title type="html">一些「生活」中的参考</title><link href="https://design.jskyzero.com/2022/04/15/reference_in_life/" rel="alternate" type="text/html" title="一些「生活」中的参考" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/reference_in_life</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/reference_in_life/"><![CDATA[<h1 id="一些生活中的参考">一些「生活」中的参考</h1>
 
-文明是一段时间内一个区域的人的生活状态，那么生活究竟是什么呢。
+<h2 id="武术相关">武术相关</h2>
 
-活着又是什么呢，当下在做的事情，感受与意义，很容易让人迷失，对初入社会切换成社畜的学生而言。
+<ul>
+  <li>剑道：将日本剑术加以竞技化形成的武术运动，按规则相互击打有效部位（头部、手腕及腰部），由裁判计点数判胜负。
+    <ul>
+      <li>构：剑道握刀法
+        <ul>
+          <li>上段构：高举竹刀，做劈砍之势（分左上段、正上段）。</li>
+          <li>中段构：剑尖对准对手面部或喉部，是攻守兼具的姿势。当对方打击时，刺到对方的喉部与胸部不予给分。</li>
+          <li>下段构：剑尖对准对手左膝盖处。</li>
+          <li>胁构（肋构）：剑斜放于腰部，正面看不见剑，是个佯降而欲突击的式子。</li>
+          <li>八相（八相之构）：扛剑于肩上嘴与剑柄平行。</li>
+          <li>平青眼（平睛眼）：指剑尖指向对手左眼的中段，通常是对付上段时使用。</li>
+          <li>霞构：以剑尖对住对方的右手，剑尖下沉而向后倾，和指向左眼的平青眼不同，通常是对付右上段或正二刀时使用。</li>
+          <li>二刀流（双刀）：逆二刀（左手长刀、右手短刀）；正二刀（右手长刀、左手短刀）</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>居合道：居合修練的是在平時的狀態，當遇到敵人的襲擊時，如何快速反應過來的技術。在1930年代「居合道」這個名詞開始出現取代原有的拔刀術。
+    <ul>
+      <li>袈裟斩
+        <ul>
+          <li><a href="https://sottakukai.monster/2021/06/12/kesagiri/">制定居合研究会～5本目～袈裟切り kesagiri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=GO8W6NAuu-Q">05 Kesagiri 袈裟切り</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>未考证的内容
+    <ul>
+      <li><a href="https://site.douban.com/115077/widget/notes/1963989/note/572534875/">想买这本书</a></li>
+      <li>唐竹（当头直劈）、袈裟斩（右斜切）、逆袈裟（左斜切）、左横切、右横切、左切上、右切上、逆风（从下而上）、还有突刺</li>
+      <li>橫一文字斬（橫一文字是日式的特有描述用語，指的是橫向的動向，而且跟漢字的筆勢一樣，是由左往右斬）</li>
+      <li>血振（日式特殊的用辭，意指灑除刀上的血，蘊含轉換成再次攻擊的預備姿態的用意）</li>
+    </ul>
+  </li>
+</ul>
 
-这里把生活分为几个方面
-
-## 衣
-
-能应对各种场景的着装储备。
-
-+ 不同场景
-  + 温度：夏季、冬季
-  + 场合：日常、居家睡衣、严肃场合、运动衣
-+ 使用&维护
-  + 合适的换衣、洗涤周期。
-  + 合适的购置新衣服周期。
-
-## 食
-
-+ 一周两次水果拼盘
-+ 多吃蔬菜
-
-
-## 住
-
-+ 空间
-  + 衣柜
-  + 床
-  + 空闲空间
-  + 置物桌
-+ 设施要求
-  + 窗
-  + 空调
-  + 洗衣机
-  + 卫生间、厨房
-  + 高质量网络
-
-
-## 行
-
-+ 熟悉公共交通网络
-
-
-## 一些提升生活质量的行为
-
-+ 放空早睡
-+ 热水泡脚
-+ 保持整理内务的频率 -->
-
-<h1 id="着装方法">着装方法</h1>
+<h2 id="服饰">服饰</h2>
 
 <ul>
   <li>和服打结
@@ -1752,9 +1807,16 @@ graph TD
   </li>
 </ul>
 
-<h2 id="着装搭配">着装搭配</h2>
+<!-- ## 着装搭配 -->
+<!-- ![](https://cdn.wimg.jp/coordinate/rke8s9/20181221101341434/20181221101341434_1000.jpg) -->
 
-<p><img src="https://cdn.wimg.jp/coordinate/rke8s9/20181221101341434/20181221101341434_1000.jpg" alt="" /></p>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[&lt;!– # 学会生活]]></summary></entry><entry><title type="html">学习的一些方法论</title><link href="https://design.jskyzero.com/2022/04/15/study/" rel="alternate" type="text/html" title="学习的一些方法论" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/study</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/study/"><![CDATA[<h1 id="学习一个新概念">学习一个新概念</h1>
+<h2 id="地理">地理</h2>
+
+<ul>
+  <li>顺德</li>
+  <li>海南</li>
+  <li>潮州</li>
+</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[一些「生活」中的参考]]></summary></entry><entry><title type="html">学习的一些方法论</title><link href="https://design.jskyzero.com/2022/04/15/study/" rel="alternate" type="text/html" title="学习的一些方法论" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/study</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/study/"><![CDATA[<h1 id="学习一个新概念">学习一个新概念</h1>
 
 <p>我们说过知识的重要性，而且学习作为获取知识的途径，自然也是相当重要的，本文试图将学习划分为阶段，解决一些学习上的常见问题：</p>
 
