@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-13T12:58:15+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-13T15:36:07+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
 
 <p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏怪物动作设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
@@ -1348,7 +1348,7 @@
     <tr>
       <td>飞龙</td>
       <td>场地Boss</td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
     <tr>
       <td>蒙眼少年</td>
@@ -1481,17 +1481,17 @@
     <tr>
       <td>空洞骑士</td>
       <td> </td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
     <tr>
       <td>辐光</td>
       <td> </td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
     <tr>
       <td>剧团团长格林</td>
       <td> </td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
     <tr>
       <td>蜂巢骑士</td>
@@ -1501,17 +1501,17 @@
     <tr>
       <td>骨钉兄弟奥罗与马托</td>
       <td> </td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
     <tr>
       <td>绘画大师席奥</td>
       <td> </td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
     <tr>
       <td>伟大骨钉贤者斯莱</td>
       <td> </td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
     <tr>
       <td>胡长老</td>
@@ -1561,22 +1561,22 @@
     <tr>
       <td>战斗姐妹</td>
       <td> </td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
     <tr>
       <td>有翼诺斯克</td>
       <td> </td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
     <tr>
       <td>纯粹容器</td>
       <td> </td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
     <tr>
       <td>无上辐光</td>
       <td> </td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
     <tr>
       <td>灰色王子左特</td>
@@ -1586,12 +1586,12 @@
     <tr>
       <td>白色防御者</td>
       <td> </td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
     <tr>
       <td>梦魇之王格林</td>
       <td> </td>
-      <td>UNKOWN</td>
+      <td>UNKNOWN</td>
     </tr>
   </tbody>
 </table>
