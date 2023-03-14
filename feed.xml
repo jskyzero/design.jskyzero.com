@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-13T15:36:07+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-14T04:12:37+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
 
 <p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏怪物动作设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
@@ -481,100 +481,464 @@
 
 <!-- ### 战神诸神黄昏 -->
 
-<!-- ## 怪猎Like -->
+<h2 id="capcom">Capcom</h2>
 
-<!-- ### 怪物猎人世界
+<h3 id="怪物猎人">怪物猎人</h3>
 
-+ 鸟龙种
-  + 搔鸟：会挖石头砸你，喜欢蛋。
-  + 炫鸟：可以制造强光让你（和怪物）眩晕。
-  + 毒妖鸟：尾巴会喷毒的鸡。
-+ 飞龙种
-  + 雌火龙：绿色的带毒喷火龙，擅长用爪抓人。
-  + 雄火龙：红色的也带毒喷火龙，擅长喷火。
-  + 樱火龙：发疯版本的飞龙，剧毒且喷火。
-  + 苍火龙：飞龙顶端。
-  + 角龙：退化飞龙，已经飞不高，但是用角和锤子样的尾巴攻击。
-  + 黑角龙：黑化（进入繁殖期）的角龙。
-  + 浮空龙：气球+猴子的组合体哈哈哈哈
-  + 风飃龙：这个帅，冰属性蓝白色的龙。
-  + 爆鳞龙：巨型轰炸机，后期乱入贼烦。
-+ 牙龙种
-  + 大贼龙：中分哥，菜的。
-  + 痹贼龙：麻痹中分哥，不那么菜的。
-  + 岩贼龙：会吐火的中分哥，不算菜的。
-  + 飞雷龙：有点像尾巴带点的松鼠。 （？
-  + 惨爪龙：浑身腐肉红色带利爪的发疯松鼠（？？？
-+ 鱼龙种
-  + 泥鱼龙：是泥鳅哒。
-  + 熔岩龙：是在岩浆的泥鳅哒。
-+ 兽龙种
-  + 土砂龙：头铁，横冲直撞会摔泥巴的龙。
-  + 骨槌龙：浑身是骨头会像西瓜虫一样变成圆撞的龙。
-  + 爆锤龙：类似鼓槌龙但是会甩出爆弹炸弹的龙。
-  + 蛮颚龙：带小翅膀的霸王龙。 （？
-  + 恐暴龙：长者两条小腿的绿色丝瓜，贼强。
-+ 古龙种
-  + 麒麟：雷属性的独角兽。
-  + 灭烬龙：咩咩子，身上覆盖有有可再生的刺。
-  + 钢龙（风翔龙）：如其名，皮肤如钢铁般坚硬。
-  + 炎王龙：长翅膀的红色火焰狮子哒。
-  + 炎妃龙：长翅膀的蓝色火焰狮子哒。
-  + 熔山龙：哥斯拉那种感觉的山一样大的龙。
-  + 冥灯龙：很强的初生古龙。
-  + 烂辉龙：分阶段要打的据说全貌有点像蜗牛软体的龙。 -->
+<ul>
+  <li><a href="https://bbs.nga.cn/read.php?tid=33542134&amp;rand=345">全系列大型怪物图鉴记录贴</a></li>
+  <li><a href="https://ngabbs.com/read.php?tid=26027022&amp;page=2">历代怪物登场统计</a></li>
+</ul>
 
-<!-- ### 怪物猎人世界冰原
+<p>https://img.nga.178.com/attachments/mon_202302/07/dlQ7i87-eg8nZ1eT3cS1ft-3qy.png</p>
 
-+ 冰原新手期
-  + 冰鱼龙，亚种，雪地类比泥潭，还可。
-  + 猛牛龙，有点点像泥沙龙，还可。
-+ 冰原平台期
-  + 痹毒龙，亚种，加了麻痹 + 毒属性。
-  + 眠浮龙，亚种，加了睡眠。
-  + 水妖鸟，亚洲，加了水。
-  + 冰牙龙，用飞翔爪会比较合适打。
-+ 冰原平台期-冰咒龙-起
-  + 迅龙，旧怪物，黑色快速。
-  + 斩龙，旧怪物，斩尾，火炎。
-  + 轰龙，旧怪物，龙车。
-  + 碎龙，旧怪物，头槌爆炸。
-+ 冰原平台期-冰咒龙-承
-  + 霜翼风飘龙，亚中，加冰。
-  + 雷颚龙，亚种，强化雷。
-  + 硫斩龙，亚种，感觉强度不如原版。
-  + 凶爪龙，亚种，加了龙属性？
-  + 冰咒龙，古龙，卡关，多人会好打很多。
-+ 冰原平台期-冰咒龙-转
-  + 红莲爆鳞龙，亚种，强化爆炸。
-  + 怒食恐暴龙，亚种，依旧的恶心丝瓜。
-  + 雾瘴尸套龙，古龙亚种，该锤一样的锤。
-  + 溟波龙，古龙，使用水+电，初见眼前一亮。
-+ 冰原平台期-冰咒龙-结
-  + 歼世灭烬龙，古龙亚种，该锤一样的锤。
-  + 天地煌啼龙，古龙，伟大存在，对标冥灯龙，还可。
-+ 聚魔之地
-  + 雷狼龙，帅就一个字。
-  + 黑狼鸟，该锤一样的锤。
-  + 金火龙，特化毒属性。
-  + 银火龙，特化火属性。
-  + 片耳黑狼鸟，特化喷射。
-  + 黑轰龙，特化吼叫。
-+ 后续更新
-  + 金狮子
-  + 狱狼龙
-  + 猛爆碎龙
-  + 激昂金狮子
-  + 绚辉龙
-  + 历战王 溟波龙
-  + 煌黑龙
-  + 霜刃冰牙龙
-  + 黑龙
-  + 历战王 冰咒龙 -->
+<h3 id="怪物猎人世界">怪物猎人世界</h3>
 
-<!-- ### 怪物猎人崛起 -->
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>搔鸟</td>
+      <td>会挖石头砸你，喜欢蛋</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>炫鸟</td>
+      <td>可以制造强光让你（和怪物）眩晕</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>毒妖鸟</td>
+      <td>尾巴会喷毒的鸡</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>雌火龙</td>
+      <td>绿色的带毒喷火龙，擅长用爪抓人</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>雄火龙</td>
+      <td>红色的也带毒喷火龙，擅长喷火</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>樱火龙</td>
+      <td>发疯版本的飞龙，剧毒且喷火</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>苍火龙</td>
+      <td>飞龙顶端</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>角龙</td>
+      <td>退化飞龙，已经飞不高，但是用角和锤子样的尾巴攻击</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>黑角龙</td>
+      <td>黑化（进入繁殖期）的角龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>浮空龙</td>
+      <td>气球+猴子的组合体哈哈哈哈</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>风飃龙</td>
+      <td>这个帅，冰属性蓝白色的龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>爆鳞龙</td>
+      <td>巨型轰炸机，后期乱入贼烦</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>大贼龙</td>
+      <td>中分哥，菜的</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>痹贼龙</td>
+      <td>麻痹中分哥，不那么菜的</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>岩贼龙</td>
+      <td>会吐火的中分哥，不算菜的</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>飞雷龙</td>
+      <td>有点像尾巴带点的松鼠</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>惨爪龙</td>
+      <td>浑身腐肉红色带利爪的发疯松鼠（？？？</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>泥鱼龙</td>
+      <td>是泥鳅哒</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>熔岩龙</td>
+      <td>是在岩浆的泥鳅哒</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>土砂龙</td>
+      <td>头铁，横冲直撞会摔泥巴的龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>骨槌龙</td>
+      <td>浑身是骨头会像西瓜虫一样变成圆撞的龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>爆锤龙</td>
+      <td>类似鼓槌龙但是会甩出爆弹炸弹的龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>蛮颚龙</td>
+      <td>带小翅膀的霸王龙。（？</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>恐暴龙</td>
+      <td>长者两条小腿的绿色丝瓜，贼强</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>麒麟</td>
+      <td>雷属性的独角兽</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>⭐️灭烬龙</td>
+      <td>咩咩子，身上覆盖有有可再生的刺</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>钢龙（风翔龙）</td>
+      <td>如其名，皮肤如钢铁般坚硬</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>炎王龙</td>
+      <td>长翅膀的红色火焰狮子哒</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>炎妃龙</td>
+      <td>长翅膀的蓝色火焰狮子哒</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>熔山龙</td>
+      <td>哥斯拉那种感觉的山一样大的龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>冥灯龙</td>
+      <td>很强的初生古龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>烂辉龙</td>
+      <td>分阶段要打的据说全貌有点像蜗牛软体的龙。</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-<!-- ### 怪物猎人崛起曙光 -->
+<h3 id="怪物猎人世界冰原">怪物猎人世界冰原</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>冰鱼龙</td>
+      <td>亚种，雪地类比泥潭，还可</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>猛牛龙</td>
+      <td>有点点像泥沙龙，还可</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>痹毒龙</td>
+      <td>亚种，加了麻痹 + 毒属性</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>眠浮龙</td>
+      <td>亚种，加了睡眠</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>水妖鸟</td>
+      <td>亚洲，加了水</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>⭐️冰牙龙</td>
+      <td>用飞翔爪会比较合适打</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>迅龙</td>
+      <td>旧怪物，黑色快速</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>⭐️斩龙</td>
+      <td>旧怪物，斩尾，火炎</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>轰龙</td>
+      <td>旧怪物，龙车</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>碎龙</td>
+      <td>旧怪物，头槌爆炸</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>霜翼风飘龙</td>
+      <td>亚种，加冰</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>雷颚龙</td>
+      <td>亚种，强化雷</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>硫斩龙</td>
+      <td>亚种，感觉强度不如原版</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>凶爪龙</td>
+      <td>亚种，加了龙属性？</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>⭐️冰咒龙</td>
+      <td>古龙，卡关，多人会好打很多</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>红莲爆鳞龙</td>
+      <td>亚种，强化爆炸</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>怒食恐暴龙</td>
+      <td>亚种，依旧的恶心丝瓜</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>雾瘴尸套龙</td>
+      <td>古龙亚种，该锤一样的锤</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>溟波龙</td>
+      <td>古龙，使用水+电，初见眼前一亮</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>歼世灭烬龙</td>
+      <td>古龙亚种，该锤一样的锤</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>天地煌啼龙</td>
+      <td>古龙，伟大存在，对标冥灯龙，还可</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>⭐️雷狼龙</td>
+      <td>帅就一个字</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>黑狼鸟</td>
+      <td>该锤一样的锤</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>金火龙</td>
+      <td>特化毒属性</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>银火龙</td>
+      <td>特化火属性</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>片耳黑狼鸟</td>
+      <td>特化喷射</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>黑轰龙</td>
+      <td>特化吼叫</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>金狮子</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>狱狼龙</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>⭐️猛爆碎龙</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>激昂金狮子</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>⭐️绚辉龙</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>历战王 溟波龙</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>⭐️煌黑龙</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>霜刃冰牙龙</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>⭐️黑龙</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>历战王 冰咒龙</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="怪物猎人崛起">怪物猎人崛起</h3>
+
+<h3 id="怪物猎人崛起曙光">怪物猎人崛起曙光</h3>
 
 <h2 id="teamninja">TeamNinja</h2>
 
@@ -841,7 +1205,7 @@
       <td> </td>
     </tr>
     <tr>
-      <td>P50:九尾妖狐</td>
+      <td>⭐️P50:九尾妖狐</td>
       <td>九尾狐</td>
       <td> </td>
     </tr>
@@ -880,7 +1244,7 @@
   </thead>
   <tbody>
     <tr>
-      <td>P1:马头鬼⭐️</td>
+      <td>⭐️P1:马头鬼</td>
       <td>断头大刀</td>
       <td> </td>
     </tr>
@@ -1055,12 +1419,12 @@
       <td> </td>
     </tr>
     <tr>
-      <td>P36:源义经⭐️</td>
+      <td>⭐️P36:源义经</td>
       <td>鸟人</td>
       <td> </td>
     </tr>
     <tr>
-      <td>P37:源赖光⭐️</td>
+      <td>⭐️P37:源赖光</td>
       <td>召唤 次元斩</td>
       <td> </td>
     </tr>
