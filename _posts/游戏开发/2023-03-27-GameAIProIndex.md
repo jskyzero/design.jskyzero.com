@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Game AI Pro 大全
+title: Game AI Pro 索引
 categories: [游戏开发]
 long-term-maintenance: true
 ---
