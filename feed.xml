@@ -1,5 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-23T13:29:53+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-27T10:57:58+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">Game AI Pro 大全</title><link href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" rel="alternate" type="text/html" title="Game AI Pro 大全" /><published>2023-03-27T00:00:00+00:00</published><updated>2023-03-27T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/03/27/GameAIProIndex</id><content type="html" xml:base="https://design.jskyzero.com/2023/03/27/GameAIProIndex/"><![CDATA[<p>本文希望充当一个索引，方便概览GameAIPro的系列文章。</p>
+
+<p><img src="/assets/img/skill/GameAIPro/1.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/2.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/3.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/4.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/5.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/6.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/7.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/8.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/9.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/10.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/11.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/12.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/13.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/14.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/15.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/16.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/17.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/18.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/19.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/20.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/21.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/22.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/23.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/24.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/25.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/26.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/27.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/28.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/29.JPG" alt="" />
+<img src="/assets/img/skill/GameAIPro/30.JPG" alt="" /></p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览GameAIPro的系列文章。]]></summary></entry><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
 
 <p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏怪物动作设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
 
@@ -2475,68 +2506,7 @@ graph TD
 
 <h2 id="总结灵活使用解决问题">总结：灵活使用解决问题</h2>
 
-<p>AI有着多种技术架构与架构对应擅长的逻辑表达，有些时候面临的是工具的表达能力的问题。但是更多时候面对的是复杂情况的逻辑实现问题，灵活使用上述思维方式和技巧，能解决对应的复杂问题。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章]]></summary></entry><entry><title type="html">一些「生活」中的参考</title><link href="https://design.jskyzero.com/2022/04/15/reference_in_life/" rel="alternate" type="text/html" title="一些「生活」中的参考" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/reference_in_life</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/reference_in_life/"><![CDATA[<h1 id="一些生活中的参考">一些「生活」中的参考</h1>
-
-<h2 id="武术相关">武术相关</h2>
-
-<ul>
-  <li>剑道：将日本剑术加以竞技化形成的武术运动，按规则相互击打有效部位（头部、手腕及腰部），由裁判计点数判胜负。
-    <ul>
-      <li>构：剑道握刀法
-        <ul>
-          <li>上段构：高举竹刀，做劈砍之势（分左上段、正上段）。</li>
-          <li>中段构：剑尖对准对手面部或喉部，是攻守兼具的姿势。当对方打击时，刺到对方的喉部与胸部不予给分。</li>
-          <li>下段构：剑尖对准对手左膝盖处。</li>
-          <li>胁构（肋构）：剑斜放于腰部，正面看不见剑，是个佯降而欲突击的式子。</li>
-          <li>八相（八相之构）：扛剑于肩上嘴与剑柄平行。</li>
-          <li>平青眼（平睛眼）：指剑尖指向对手左眼的中段，通常是对付上段时使用。</li>
-          <li>霞构：以剑尖对住对方的右手，剑尖下沉而向后倾，和指向左眼的平青眼不同，通常是对付右上段或正二刀时使用。</li>
-          <li>二刀流（双刀）：逆二刀（左手长刀、右手短刀）；正二刀（右手长刀、左手短刀）</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>居合道：居合修練的是在平時的狀態，當遇到敵人的襲擊時，如何快速反應過來的技術。在1930年代「居合道」這個名詞開始出現取代原有的拔刀術。
-    <ul>
-      <li>袈裟斩
-        <ul>
-          <li><a href="https://sottakukai.monster/2021/06/12/kesagiri/">制定居合研究会～5本目～袈裟切り kesagiri</a></li>
-          <li><a href="https://www.youtube.com/watch?v=GO8W6NAuu-Q">05 Kesagiri 袈裟切り</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>未考证的内容
-    <ul>
-      <li><a href="https://site.douban.com/115077/widget/notes/1963989/note/572534875/">想买这本书</a></li>
-      <li>唐竹（当头直劈）、袈裟斩（右斜切）、逆袈裟（左斜切）、左横切、右横切、左切上、右切上、逆风（从下而上）、还有突刺</li>
-      <li>橫一文字斬（橫一文字是日式的特有描述用語，指的是橫向的動向，而且跟漢字的筆勢一樣，是由左往右斬）</li>
-      <li>血振（日式特殊的用辭，意指灑除刀上的血，蘊含轉換成再次攻擊的預備姿態的用意）</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="服饰">服饰</h2>
-
-<ul>
-  <li>和服打结
-    <ul>
-      <li><a href="https://sgm.co.jp/useful/kitsuke_obi/otoko/">男結び（角帯結び）</a></li>
-      <li><a href="https://www.bilibili.com/video/BV1jx411S7i8">和服男士袴的穿着方法 ：浪人结、十文字纽结</a></li>
-    </ul>
-  </li>
-</ul>
-
-<!-- ## 着装搭配 -->
-<!-- ![](https://cdn.wimg.jp/coordinate/rke8s9/20181221101341434/20181221101341434_1000.jpg) -->
-
-<h2 id="地理">地理</h2>
-
-<ul>
-  <li>顺德</li>
-  <li>海南</li>
-  <li>潮州</li>
-</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[一些「生活」中的参考]]></summary></entry><entry><title type="html">学习的一些方法论</title><link href="https://design.jskyzero.com/2022/04/15/study/" rel="alternate" type="text/html" title="学习的一些方法论" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/study</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/study/"><![CDATA[<h1 id="学习一个新概念">学习一个新概念</h1>
+<p>AI有着多种技术架构与架构对应擅长的逻辑表达，有些时候面临的是工具的表达能力的问题。但是更多时候面对的是复杂情况的逻辑实现问题，灵活使用上述思维方式和技巧，能解决对应的复杂问题。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章]]></summary></entry><entry><title type="html">学习的一些方法论</title><link href="https://design.jskyzero.com/2022/04/15/study/" rel="alternate" type="text/html" title="学习的一些方法论" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/study</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/study/"><![CDATA[<h1 id="学习一个新概念">学习一个新概念</h1>
 
 <p>我们说过知识的重要性，而且学习作为获取知识的途径，自然也是相当重要的，本文试图将学习划分为阶段，解决一些学习上的常见问题：</p>
 
@@ -2643,56 +2613,65 @@ graph TD
 <ul>
   <li>选取合适的时间节点：当日，本周，本月。</li>
   <li>采取合适的检验手法：复述、练习等。</li>
-</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[学习一个新概念]]></summary></entry><entry><title type="html">简明虚幻引擎5教程</title><link href="https://design.jskyzero.com/2022/04/08/UE5Playground/" rel="alternate" type="text/html" title="简明虚幻引擎5教程" /><published>2022-04-08T00:00:00+00:00</published><updated>2022-04-08T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/08/UE5Playground</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/08/UE5Playground/"><![CDATA[<p>虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。</p>
+</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[学习一个新概念]]></summary></entry><entry><title type="html">一些「生活」中的参考</title><link href="https://design.jskyzero.com/2022/04/15/reference_in_life/" rel="alternate" type="text/html" title="一些「生活」中的参考" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/reference_in_life</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/reference_in_life/"><![CDATA[<h1 id="一些生活中的参考">一些「生活」中的参考</h1>
 
-<h1 id="简明虚幻5教程">简明虚幻5教程</h1>
+<h2 id="武术相关">武术相关</h2>
 
-<h2 id="专题">专题</h2>
+<ul>
+  <li>剑道：将日本剑术加以竞技化形成的武术运动，按规则相互击打有效部位（头部、手腕及腰部），由裁判计点数判胜负。
+    <ul>
+      <li>构：剑道握刀法
+        <ul>
+          <li>上段构：高举竹刀，做劈砍之势（分左上段、正上段）。</li>
+          <li>中段构：剑尖对准对手面部或喉部，是攻守兼具的姿势。当对方打击时，刺到对方的喉部与胸部不予给分。</li>
+          <li>下段构：剑尖对准对手左膝盖处。</li>
+          <li>胁构（肋构）：剑斜放于腰部，正面看不见剑，是个佯降而欲突击的式子。</li>
+          <li>八相（八相之构）：扛剑于肩上嘴与剑柄平行。</li>
+          <li>平青眼（平睛眼）：指剑尖指向对手左眼的中段，通常是对付上段时使用。</li>
+          <li>霞构：以剑尖对住对方的右手，剑尖下沉而向后倾，和指向左眼的平青眼不同，通常是对付右上段或正二刀时使用。</li>
+          <li>二刀流（双刀）：逆二刀（左手长刀、右手短刀）；正二刀（右手长刀、左手短刀）</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>居合道：居合修練的是在平時的狀態，當遇到敵人的襲擊時，如何快速反應過來的技術。在1930年代「居合道」這個名詞開始出現取代原有的拔刀術。
+    <ul>
+      <li>袈裟斩
+        <ul>
+          <li><a href="https://sottakukai.monster/2021/06/12/kesagiri/">制定居合研究会～5本目～袈裟切り kesagiri</a></li>
+          <li><a href="https://www.youtube.com/watch?v=GO8W6NAuu-Q">05 Kesagiri 袈裟切り</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>未考证的内容
+    <ul>
+      <li><a href="https://site.douban.com/115077/widget/notes/1963989/note/572534875/">想买这本书</a></li>
+      <li>唐竹（当头直劈）、袈裟斩（右斜切）、逆袈裟（左斜切）、左横切、右横切、左切上、右切上、逆风（从下而上）、还有突刺</li>
+      <li>橫一文字斬（橫一文字是日式的特有描述用語，指的是橫向的動向，而且跟漢字的筆勢一樣，是由左往右斬）</li>
+      <li>血振（日式特殊的用辭，意指灑除刀上的血，蘊含轉換成再次攻擊的預備姿態的用意）</li>
+    </ul>
+  </li>
+</ul>
 
-<h3 id="加入ai让你的游戏物体自己动起来">加入AI，让你的游戏物体自己动起来</h3>
+<h2 id="服饰">服饰</h2>
 
-<p>本节介绍：</p>
+<ul>
+  <li>和服打结
+    <ul>
+      <li><a href="https://sgm.co.jp/useful/kitsuke_obi/otoko/">男結び（角帯結び）</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1jx411S7i8">和服男士袴的穿着方法 ：浪人结、十文字纽结</a></li>
+    </ul>
+  </li>
+</ul>
 
-<ol>
-  <li>虚幻引擎中的AI架构概述</li>
-  <li>编写黑板与行为树AI</li>
-  <li>编写自定义节点</li>
-</ol>
+<!-- ## 着装搭配 -->
+<!-- ![](https://cdn.wimg.jp/coordinate/rke8s9/20181221101341434/20181221101341434_1000.jpg) -->
 
-<h4 id="概要">概要</h4>
+<h2 id="地理">地理</h2>
 
-<p>新建的特定类型的项目，默认场景中，一般都会有：供活动的场景、一些光照等美学表现、玩家和系统逻辑。简单来说，我们想给这些东西加个会动的玩意，就像我们的玩家，但是它是自己动（通过AI）。</p>
-
-<script src="/assets/js/mermaid.min.js"></script>
-<div class="mermaid">
-graph TD
-    A[场景]
-    A --&gt; B1[场景物体]
-    A --&gt; B2[光照]
-    A --&gt; B3[玩家]
-    A --&gt;|试图新增| B4[会动的角色]
-</div>
-
-<p>以动作类游戏举例，你在关卡中遇到的怪物、BOSS等，本质都是<code class="language-plaintext highlighter-rouge">会动的角色</code>。</p>
-
-<p>简单来说，我们需要先有个角色，然后把他和其他部分关联起来。</p>
-
-<script src="/assets/js/mermaid.min.js"></script>
-<div class="mermaid">
-graph LR
-    B4[NPC]
-
-    B4 --&gt;|关联| B5[蓝图]
-    B5 --&gt;|启动| C[AI]
-
-    C --&gt;|使用| C1[行为树]
-    C --&gt;|使用| C2[黑板变量]
-
-    C1 --&gt;|支持| D1[自定义节点]
-</div>
-
-<h3 id="ui制作">UI制作</h3>
-
-<h3 id="动作逻辑">动作逻辑</h3>
-
-<h3 id="关卡">关卡</h3>]]></content><author><name></name></author><summary type="html"><![CDATA[虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。]]></summary></entry></feed>
+<ul>
+  <li>顺德</li>
+  <li>海南</li>
+  <li>潮州</li>
+</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[一些「生活」中的参考]]></summary></entry></feed>
