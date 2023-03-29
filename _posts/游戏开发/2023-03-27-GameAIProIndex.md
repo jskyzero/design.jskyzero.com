@@ -36,4 +36,3 @@ long-term-maintenance: true
 ![](/assets/img/skill/GameAIPro/27.JPG)
 ![](/assets/img/skill/GameAIPro/28.JPG)
 ![](/assets/img/skill/GameAIPro/29.JPG)
-![](/assets/img/skill/GameAIPro/30.JPG)
