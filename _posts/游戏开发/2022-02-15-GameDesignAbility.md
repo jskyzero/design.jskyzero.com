@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 游戏设计所需要的能力
+title: 游戏设计：需要的能力
 categories: [游戏开发]
 ---
 

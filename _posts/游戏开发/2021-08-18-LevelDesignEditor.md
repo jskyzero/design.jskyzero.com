@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 好的编辑器的若干特性
+title: 编辑器：若干好的特性
 featured-img: besiege
 mathjax: true
 categories: [游戏开发]
