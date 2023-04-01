@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-03-31T06:32:32+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-04-01T03:29:20+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">Game AI Pro 索引</title><link href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" rel="alternate" type="text/html" title="Game AI Pro 索引" /><published>2023-03-27T00:00:00+00:00</published><updated>2023-03-27T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/03/27/GameAIProIndex</id><content type="html" xml:base="https://design.jskyzero.com/2023/03/27/GameAIProIndex/"><![CDATA[<p>本文希望充当一个索引，方便概览GameAIPro的系列文章。</p>
 
 <p><img src="/assets/img/skill/GameAIPro/1.JPG" alt="" />
@@ -48,7 +48,7 @@
 <img src="/assets/img/skill/GameAIPro/45.JPG" alt="" />
 <img src="/assets/img/skill/GameAIPro/46.JPG" alt="" />
 <img src="/assets/img/skill/GameAIPro/47.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/48.JPG" alt="" /></p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览GameAIPro的系列文章。]]></summary></entry><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
+<img src="/assets/img/skill/GameAIPro/48.JPG" alt="" /></p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览GameAIPro的系列文章。]]></summary></entry><entry><title type="html">动作分析：拆包看狮子猿</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="动作分析：拆包看狮子猿" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
 
 <p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏怪物动作设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
 
@@ -302,7 +302,7 @@
   <li>……</li>
 </ul>
 
-<p>以上，希望本文能对读者有启发，帮助做出好的Boss。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。]]></summary></entry><entry><title type="html">《卧龙》气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="《卧龙》气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
+<p>以上，希望本文能对读者有启发，帮助做出好的Boss。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。]]></summary></entry><entry><title type="html">战斗系统：卧龙气势槽</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="战斗系统：卧龙气势槽" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
 
 <h1 id="卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</h1>
 
@@ -496,7 +496,7 @@
 
 <p>资源槽可以通过规则层面的变化，改变玩家的决策、从而丰富玩家的体验。合理的机制能为战斗增彩。</p>
 
-<p>WOLONG中气势槽统一了各项系统的消耗，在战斗中反映着局面的瞬息万变，期待WOLONG的正式发售。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。]]></summary></entry><entry><title type="html">参考：ACT BOSS</title><link href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/" rel="alternate" type="text/html" title="参考：ACT BOSS" /><published>2022-09-13T00:00:00+00:00</published><updated>2022-09-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/13/ActionReferenceBoss</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。</p>
+<p>WOLONG中气势槽统一了各项系统的消耗，在战斗中反映着局面的瞬息万变，期待WOLONG的正式发售。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。]]></summary></entry><entry><title type="html">动作参考：PVE BOSS</title><link href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/" rel="alternate" type="text/html" title="动作参考：PVE BOSS" /><published>2022-09-13T00:00:00+00:00</published><updated>2022-09-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/13/ActionReferenceBoss</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。</p>
 
 <h1 id="动作设计参考boss篇">动作设计参考·BOSS篇</h1>
 
@@ -539,7 +539,7 @@
   <li><a href="https://ngabbs.com/read.php?tid=26027022&amp;page=2">历代怪物登场统计</a></li>
 </ul>
 
-<p>https://img.nga.178.com/attachments/mon_202302/07/dlQ7i87-eg8nZ1eT3cS1ft-3qy.png</p>
+<p><a href="https://img.nga.178.com/attachments/mon_202302/07/dlQ7i87-eg8nZ1eT3cS1ft-3qy.png">https://img.nga.178.com/attachments/mon_202302/07/dlQ7i87-eg8nZ1eT3cS1ft-3qy.png</a></p>
 
 <h3 id="怪物猎人世界">怪物猎人世界</h3>
 
@@ -2692,4 +2692,5 @@ graph TD
   <li>顺德</li>
   <li>海南</li>
   <li>潮州</li>
+  <li>香港</li>
 </ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[一些「生活」中的参考]]></summary></entry></feed>
