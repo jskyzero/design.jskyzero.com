@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《卧龙》气势槽设计杂谈
+title: 战斗系统：卧龙气势槽
 categories: [游戏分析]
 pro: true
 ---

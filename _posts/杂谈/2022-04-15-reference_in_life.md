@@ -45,3 +45,4 @@ long-term-maintenance: true
 + 顺德
 + 海南
 + 潮州
++ 香港

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 拆包看狮子猿动作设计
+title: 动作分析：拆包看狮子猿
 categories: [游戏分析]
 ---
 

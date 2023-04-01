@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 参考：ACT BOSS
+title: 动作参考：PVE BOSS
 categories: [游戏分析]
 long-term-maintenance: true
 ---
@@ -64,7 +64,7 @@ long-term-maintenance: true
 + [全系列大型怪物图鉴记录贴](https://bbs.nga.cn/read.php?tid=33542134&rand=345)
 + [历代怪物登场统计](https://ngabbs.com/read.php?tid=26027022&page=2)
 
-https://img.nga.178.com/attachments/mon_202302/07/dlQ7i87-eg8nZ1eT3cS1ft-3qy.png
+<https://img.nga.178.com/attachments/mon_202302/07/dlQ7i87-eg8nZ1eT3cS1ft-3qy.png>
 
 
 ### 怪物猎人世界
