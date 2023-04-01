@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-04-01T03:29:20+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">Game AI Pro 索引</title><link href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" rel="alternate" type="text/html" title="Game AI Pro 索引" /><published>2023-03-27T00:00:00+00:00</published><updated>2023-03-27T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/03/27/GameAIProIndex</id><content type="html" xml:base="https://design.jskyzero.com/2023/03/27/GameAIProIndex/"><![CDATA[<p>本文希望充当一个索引，方便概览GameAIPro的系列文章。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-04-01T08:28:35+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html"></title><link href="https://design.jskyzero.com/2023/04/01/GameMarket/" rel="alternate" type="text/html" title="" /><published>2023-04-01T00:00:00+00:00</published><updated>2023-04-01T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/04/01/GameMarket</id><content type="html" xml:base="https://design.jskyzero.com/2023/04/01/GameMarket/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Game AI Pro 索引</title><link href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" rel="alternate" type="text/html" title="Game AI Pro 索引" /><published>2023-03-27T00:00:00+00:00</published><updated>2023-03-27T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/03/27/GameAIProIndex</id><content type="html" xml:base="https://design.jskyzero.com/2023/03/27/GameAIProIndex/"><![CDATA[<p>本文希望充当一个索引，方便概览GameAIPro的系列文章。</p>
 
 <p><img src="/assets/img/skill/GameAIPro/1.JPG" alt="" />
 <img src="/assets/img/skill/GameAIPro/2.JPG" alt="" />
@@ -496,31 +496,11 @@
 
 <p>资源槽可以通过规则层面的变化，改变玩家的决策、从而丰富玩家的体验。合理的机制能为战斗增彩。</p>
 
-<p>WOLONG中气势槽统一了各项系统的消耗，在战斗中反映着局面的瞬息万变，期待WOLONG的正式发售。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。]]></summary></entry><entry><title type="html">动作参考：PVE BOSS</title><link href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/" rel="alternate" type="text/html" title="动作参考：PVE BOSS" /><published>2022-09-13T00:00:00+00:00</published><updated>2022-09-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/13/ActionReferenceBoss</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。</p>
+<p>WOLONG中气势槽统一了各项系统的消耗，在战斗中反映着局面的瞬息万变，期待WOLONG的正式发售。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。]]></summary></entry><entry><title type="html">动作参考：PVE BOSS 大全</title><link href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/" rel="alternate" type="text/html" title="动作参考：PVE BOSS 大全" /><published>2022-09-13T00:00:00+00:00</published><updated>2022-09-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/13/ActionReferenceBoss</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。</p>
 
 <h1 id="动作设计参考boss篇">动作设计参考·BOSS篇</h1>
 
-<!-- ## 魂Like -->
-
-<!-- ### 恶魔之魂 -->
-
-<!-- ### 黑暗灵魂1 -->
-
-<!-- ### 黑暗灵魂2 -->
-
-<!-- ### 黑暗灵魂3 -->
-
-<!-- ### 只狼 -->
-
-<!-- ### 艾尔登法环 -->
-
 <!-- ## 鬼泣Like -->
-
-<!-- ### 鬼泣4 -->
-
-<!-- ### 鬼泣DMC -->
-
-<!-- ### 鬼泣V -->
 
 <!-- ### 猎天使魔女 -->
 
@@ -529,6 +509,636 @@
 <!-- ## 战神 -->
 
 <!-- ### 战神诸神黄昏 -->
+
+<h2 id="from-software">From Software</h2>
+
+<h3 id="恶魔之魂">恶魔之魂</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P1. 扩散尖兵</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P2. 法拉克斯</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P3. 吸血虫集合体</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P4. 污秽巨像</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P5. 高脚铠甲蜘蛛</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P6. 火炎潜伏者</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P7. 龙神</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P8. 少女雅思兰莉亚</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P9. 高塔骑士</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P10. 贯穿骑士</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P11. 愚者偶像</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P12. 吃人鬼</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P13. 黄衣老翁</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P14. 审判者</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P15. 老勇士</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P16. 风暴王</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P17. 旧王欧兰特</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P18. Evil Ending</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P19. 最终BOSS &amp; Good Ending</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- 
+
+### 黑暗灵魂1
+
+|名字|学习|特色招式|
+|--|---|--|
+|黯影太阳葛温德林| | |
+|白龙希斯| | |
+|百足恶魔| | |
+|半龙普利希拉| | |
+|不死院恶魔| | |
+|持续溃烂的生物| | |
+|恶魔火焰司祭| | |
+|钢铁巨偶| | |
+|黑龙喀拉弥特| | |
+|灰色大狼希夫| | |
+|混沌的温床（火焰壶逃课）| | |
+|混沌魔女克拉格| | |
+|离群恶魔| | |
+|灵庙圣兽| | |
+|墓王尼特| | |
+|牛头恶魔| | |
+|骑士亚尔特留斯| | |
+|三人尸术师| | |
+|山羊头恶魔| | |
+|深渊之主马努斯| | |
+|守钟的石像鬼| | |
+|贪食魔龙| | |
+|翁斯坦／斯摩（先鲨斯摩）| | |
+|乌薪王葛温（纯翻滚）| | |
+|小隆德四王| | |
+|月光蝶| | |
+
+
+### 黑暗灵魂2
+
+|名字|学习|特色招式|
+|--|---|--|
+|01.最后的巨人| | |
+|02.咒缚者| | |
+|03.茫然卫兵| | |
+|04.守钟的石像鬼| | |
+|05.遗忘的罪人| | |
+|06.古龙猎人| | |
+|07.龙骑兵| | |
+|08.放逐罪执行者| | |
+|09.邢吏查略特| | |
+|10.骷髅王| | |
+|11.贪食恶魔| | |
+|12.毒妃米妲| | |
+|13.鎔铁恶魔| | |
+|14.铁之古王| | |
+|15.鼠王先锋| | |
+|16.蝎子钠吉卡| | |
+|17.徘徊的术士| | |
+|18.公爵的弗雷迪亚| | |
+|19.鼠王的试炼| | |
+|20.腐败物| | |
+|21.龙骑兵x2| | |
+|22.镜之战士| | |
+|23.歌唱恶魔| | |
+|24.【王盾】韦施塔德| | |
+|25.看守龙| | |
+|26.古龙| | |
+|27.巨人王| | |
+|28.汎克拉德| | |
+|29.【污秽】艾雷娜| | |
+|30.沉睡之龙 罪龙| | |
+|31.DLC三基佬| | |
+|32.蓝色鎔铁恶魔| | |
+|33.烟之骑士| | |
+|34.骑士亚伦| | |
+|35.王宠厄娃| | |
+|36.王宠札连&王宠拉铎| | |
+|37.焦灼的白王| | |
+|38.黑暗潜伏者| | |
+|39.最终BOSS三连战+结| | |
+ -->
+
+<h3 id="黑暗灵魂3">黑暗灵魂3</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P1. 灰烬审判者古达</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P2. 冷冽谷的玻尔多</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P3. 咒蚀大树</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P4. 结晶老者</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P5. 幽邃主教群</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P6. 深渊的监视者</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P7. 老恶魔王</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P8. 霸王沃尼尔</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P9. 教宗沙力万</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P10. 吞噬神明的艾尔德利奇</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P11. 巨人尤姆</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P12. 冷冽谷的舞娘</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P13. 妖王欧斯罗艾斯</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P14. 英雄古达</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P15. 古老飞龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P16. 无名王者</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P17. 猎龙铠甲</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P18. 孪生王子</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P19. 薪王们的化身</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P20. 王者的守墓人(DLC1)</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P21. 芙莉德修女（DLC1）</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P22. 恶魔王子（DLC2）</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P23. 吞噬黑暗的米狄尔（DLC2）</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P24. 「教堂之枪」贺弗莱特（DLC2）</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P25. 奴隶骑士盖尔（DLC2）</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="血源">血源</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>阿米戈达拉</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>埃波利耶塔，宇宙之女</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>代理人阿梅利亚</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>格曼，史上第一名猎人</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>海姆维克的女巫</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>黑暗怪兽帕阿尔</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>加斯科因神父</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>精神钟塔的玛利亚修女</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>科斯孤儿</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>劳伦斯，第一个代理人</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>罗姆，空虚的蜘蛛</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>米克拉什，噩梦之主</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>墨戈的乳母</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>缺血的怪兽</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>神职人员怪兽</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>失败者</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>受诅的路德维格，神圣之剑</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>天庭使者</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>殉道者洛加留斯</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>亚南之影</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>月之血姬</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>重生之神</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="只狼">只狼</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1幻影之蝶</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2鬼形部</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3苇名弦一郎</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6幻影破戒僧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5无首狮子猿</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4狮子猿</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7苇名一心</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8巨型忍者 枭</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9义父</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11樱龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10破戒僧</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>12怨恨之鬼</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>13剑圣 苇名一心</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="艾尔登法环">艾尔登法环</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P1恶兆马尔基特</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P2接肢葛瑞克</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P3满月女王蕾那菈</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P4碎星拉塔恩</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P5龙装大树守卫</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P6铁棘艾隆梅尔</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P7初始之王葛孚雷</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P8亵渎君王拉卡德</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P9恶兆王蒙葛特</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P10鲜血君王蒙格</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P11腐败女神玛莲妮亚</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P12火焰巨人</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P13黑剑玛利喀斯</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P14百智爵士基甸奥夫尼尔</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P15战士荷莱露</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P16艾尔登之兽</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><a href="https://www.bilibili.com/video/BV1cS4y167a1">【艾尔登法环】4K全BOSS合集 (166p 已完结)</a></li>
+</ul>
 
 <h2 id="capcom">Capcom</h2>
 
@@ -987,7 +1597,352 @@
 
 <h3 id="怪物猎人崛起">怪物猎人崛起</h3>
 
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>怨虎龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>镰鼬龙王</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>伞鸟</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>人鱼龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>泥翁龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>妃蜘蛛</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>天狗兽</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>雪鬼兽</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>河童蛙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>风神龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>雷神龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>百龙渊源雷神龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="怪物猎人崛起曙光">怪物猎人崛起曙光</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>棘龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>棘茶龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>嗟怨震天虎龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>冰狼龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>冰人鱼龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>熔翁龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>炽妃蜘蛛</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>绯天狗兽</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>刚缠兽</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>爵银龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>冥渊龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="鬼泣4">鬼泣4</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>火牛</td>
+      <td>火牛</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>冰蛙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>花蛇</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>大舅子</td>
+      <td>片翼天使</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>苍蝇</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>教皇</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>参考：</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=t8AVLcUr2GA">Devil May Cry 4 SE - All Bosses (With Cutscenes) HD 1080p60 PC</a></li>
+</ul>
+
+<h3 id="鬼泣dmc">鬼泣DMC</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>猎人</td>
+      <td>爬行 匕首</td>
+      <td>射出手掌 迷雾</td>
+    </tr>
+    <tr>
+      <td>毒昆虫</td>
+      <td> </td>
+      <td>固定场地</td>
+    </tr>
+    <tr>
+      <td>播音员</td>
+      <td>地图炮</td>
+      <td>固定场地</td>
+    </tr>
+    <tr>
+      <td>音波怪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>场地大Boss</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Vergil</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>参考：</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=HOTehgSywn4">https://www.youtube.com/watch?v=HOTehgSywn4</a></li>
+</ul>
+
+<h3 id="鬼泣v">鬼泣V</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>学习</th>
+      <th>特色招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>地狱之王</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>花怪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>口炮巨熊</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>六翅蛾子</td>
+      <td>浮游炮</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>触手怪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>骑马</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>巨型四足怪</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>骑士群</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>手怪群</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>片翼骑士</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>地狱之王.站起</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>三幻影</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>人骑龙</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>地狱三头犬</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>地狱之王.站起2</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3召唤</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>维吉尔</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>参考：</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=WrAbyNd5y6U">Devil May Cry 5 - All Bosses (With Cutscenes &amp; Ending) HD 1080p60 PC</a></li>
+  <li><a href="https://www.bilibili.com/video/BV114411s7Ty/">鬼泣5 全BOSS战演示合集 SOS难度</a></li>
+</ul>
 
 <h2 id="teamninja">TeamNinja</h2>
 
@@ -2631,66 +3586,4 @@ graph TD
 <ul>
   <li>选取合适的时间节点：当日，本周，本月。</li>
   <li>采取合适的检验手法：复述、练习等。</li>
-</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[学习一个新概念]]></summary></entry><entry><title type="html">一些「生活」中的参考</title><link href="https://design.jskyzero.com/2022/04/15/reference_in_life/" rel="alternate" type="text/html" title="一些「生活」中的参考" /><published>2022-04-15T00:00:00+00:00</published><updated>2022-04-15T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/04/15/reference_in_life</id><content type="html" xml:base="https://design.jskyzero.com/2022/04/15/reference_in_life/"><![CDATA[<h1 id="一些生活中的参考">一些「生活」中的参考</h1>
-
-<h2 id="武术相关">武术相关</h2>
-
-<ul>
-  <li>剑道：将日本剑术加以竞技化形成的武术运动，按规则相互击打有效部位（头部、手腕及腰部），由裁判计点数判胜负。
-    <ul>
-      <li>构：剑道握刀法
-        <ul>
-          <li>上段构：高举竹刀，做劈砍之势（分左上段、正上段）。</li>
-          <li>中段构：剑尖对准对手面部或喉部，是攻守兼具的姿势。当对方打击时，刺到对方的喉部与胸部不予给分。</li>
-          <li>下段构：剑尖对准对手左膝盖处。</li>
-          <li>胁构（肋构）：剑斜放于腰部，正面看不见剑，是个佯降而欲突击的式子。</li>
-          <li>八相（八相之构）：扛剑于肩上嘴与剑柄平行。</li>
-          <li>平青眼（平睛眼）：指剑尖指向对手左眼的中段，通常是对付上段时使用。</li>
-          <li>霞构：以剑尖对住对方的右手，剑尖下沉而向后倾，和指向左眼的平青眼不同，通常是对付右上段或正二刀时使用。</li>
-          <li>二刀流（双刀）：逆二刀（左手长刀、右手短刀）；正二刀（右手长刀、左手短刀）</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>居合道：居合修練的是在平時的狀態，當遇到敵人的襲擊時，如何快速反應過來的技術。在1930年代「居合道」這個名詞開始出現取代原有的拔刀術。
-    <ul>
-      <li>袈裟斩
-        <ul>
-          <li><a href="https://sottakukai.monster/2021/06/12/kesagiri/">制定居合研究会～5本目～袈裟切り kesagiri</a></li>
-          <li><a href="https://www.youtube.com/watch?v=GO8W6NAuu-Q">05 Kesagiri 袈裟切り</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>未考证的内容
-    <ul>
-      <li><a href="https://site.douban.com/115077/widget/notes/1963989/note/572534875/">想买这本书</a></li>
-      <li>唐竹（当头直劈）、袈裟斩（右斜切）、逆袈裟（左斜切）、左横切、右横切、左切上、右切上、逆风（从下而上）、还有突刺</li>
-      <li>橫一文字斬（橫一文字是日式的特有描述用語，指的是橫向的動向，而且跟漢字的筆勢一樣，是由左往右斬）</li>
-      <li>血振（日式特殊的用辭，意指灑除刀上的血，蘊含轉換成再次攻擊的預備姿態的用意）</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="服饰">服饰</h2>
-
-<ul>
-  <li>和服打结
-    <ul>
-      <li><a href="https://sgm.co.jp/useful/kitsuke_obi/otoko/">男結び（角帯結び）</a></li>
-      <li><a href="https://www.bilibili.com/video/BV1jx411S7i8">和服男士袴的穿着方法 ：浪人结、十文字纽结</a></li>
-    </ul>
-  </li>
-</ul>
-
-<!-- ## 着装搭配 -->
-<!-- ![](https://cdn.wimg.jp/coordinate/rke8s9/20181221101341434/20181221101341434_1000.jpg) -->
-
-<h2 id="地理">地理</h2>
-
-<ul>
-  <li>顺德</li>
-  <li>海南</li>
-  <li>潮州</li>
-  <li>香港</li>
-</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[一些「生活」中的参考]]></summary></entry></feed>
+</ul>]]></content><author><name></name></author><category term="杂谈" /><summary type="html"><![CDATA[学习一个新概念]]></summary></entry></feed>
