@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Game AI Pro 索引
+title: 游戏AI：GameAIPro汇总
 categories: [游戏开发]
 long-term-maintenance: true
 ---
 
-本文希望充当一个索引，方便概览GameAIPro的系列文章。
+本文将汇总记录GameAIPro的相关文章，更新较慢。
+
+此外，强烈推荐访问[GameAIPro.JSKY.WIKI](https://gameaipro.jsky.wiki/)，来快速找到GameAIPro中自己感兴趣的文章。
 
 ![](/assets/img/skill/GameAIPro/1.JPG)
 ![](/assets/img/skill/GameAIPro/2.JPG)
