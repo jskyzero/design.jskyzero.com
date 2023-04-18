@@ -11,12 +11,6 @@ long-term-maintenance: true
 # 动作设计参考·BOSS篇
 
 
-<!-- ### 猎天使魔女 -->
-<!-- ### 猎天使魔女2 -->
-
-<!-- ## 战神 -->
-<!-- ### 战神诸神黄昏 -->
-
 ## From Software
 
 
@@ -672,6 +666,16 @@ long-term-maintenance: true
 + [空洞骑士Boss合集](https://www.bilibili.com/video/BV15t411X7DP)
 + [空洞骑士 无护符 全辐辉（全boss无伤）合集](https://www.bilibili.com/video/BV1dt411B78e)
 + [空洞骑士 诸神堂boss超详细分层次攻略](https://www.bilibili.com/video/BV1A7411y7Cr)
+
+
+## 旧时代
+
+<!-- ### 猎天使魔女 -->
+<!-- ### 猎天使魔女2 -->
+
+### 战神诸神黄昏
+
++ [二周目战神难度无伤狂战士国王](https://www.bilibili.com/video/BV1QP411S7Dv)
 
 
 ## 总结
