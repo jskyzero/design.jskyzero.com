@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-04-04T08:33:12+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-04-18T10:43:21+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html"></title><link href="https://design.jskyzero.com/2023/04/01/GameMarket/" rel="alternate" type="text/html" title="" /><published>2023-04-01T00:00:00+00:00</published><updated>2023-04-01T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/04/01/GameMarket</id><content type="html" xml:base="https://design.jskyzero.com/2023/04/01/GameMarket/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">游戏AI：GameAIPro汇总</title><link href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" rel="alternate" type="text/html" title="游戏AI：GameAIPro汇总" /><published>2023-03-27T00:00:00+00:00</published><updated>2023-03-27T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/03/27/GameAIProIndex</id><content type="html" xml:base="https://design.jskyzero.com/2023/03/27/GameAIProIndex/"><![CDATA[<p>本文将汇总记录GameAIPro的相关文章，更新较慢。</p>
 
 <p>此外，强烈推荐访问<a href="https://gameaipro.jsky.wiki/">GameAIPro.JSKY.WIKI</a>，来快速找到GameAIPro中自己感兴趣的文章。</p>
@@ -501,12 +501,6 @@
 <p>WOLONG中气势槽统一了各项系统的消耗，在战斗中反映着局面的瞬息万变，期待WOLONG的正式发售。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。]]></summary></entry><entry><title type="html">动作参考：PVE BOSS 大全</title><link href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/" rel="alternate" type="text/html" title="动作参考：PVE BOSS 大全" /><published>2022-09-13T00:00:00+00:00</published><updated>2022-09-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/13/ActionReferenceBoss</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。</p>
 
 <h1 id="动作设计参考boss篇">动作设计参考·BOSS篇</h1>
-
-<!-- ### 猎天使魔女 -->
-<!-- ### 猎天使魔女2 -->
-
-<!-- ## 战神 -->
-<!-- ### 战神诸神黄昏 -->
 
 <h2 id="from-software">From Software</h2>
 
@@ -3251,6 +3245,17 @@
   <li><a href="https://www.bilibili.com/video/BV15t411X7DP">空洞骑士Boss合集</a></li>
   <li><a href="https://www.bilibili.com/video/BV1dt411B78e">空洞骑士 无护符 全辐辉（全boss无伤）合集</a></li>
   <li><a href="https://www.bilibili.com/video/BV1A7411y7Cr">空洞骑士 诸神堂boss超详细分层次攻略</a></li>
+</ul>
+
+<h2 id="旧时代">旧时代</h2>
+
+<!-- ### 猎天使魔女 -->
+<!-- ### 猎天使魔女2 -->
+
+<h3 id="战神诸神黄昏">战神诸神黄昏</h3>
+
+<ul>
+  <li><a href="https://www.bilibili.com/video/BV1QP411S7Dv">二周目战神难度无伤狂战士国王</a></li>
 </ul>
 
 <h2 id="总结">总结</h2>
