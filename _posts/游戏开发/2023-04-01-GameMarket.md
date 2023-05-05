@@ -45,7 +45,7 @@ categories: [游戏分析]
 
 ### 历史总榜（销量\收入）
 
-|||
+|概述|来源|
 |--|--|
 |[历史总计销量榜](https://en.wikipedia.org/wiki/List_of_best-selling_video_games)，<br>前50销量均在2千万份以上|![](/assets/img/others/game_market/game_sales_2.jpg)|
 |[历史总计收入榜（含通货膨胀）](https://vgsales.fandom.com/wiki/List_of_highest-grossing_video_games)|![](/assets/img/others/game_market/game_sales.jpg)|
@@ -77,12 +77,25 @@ categories: [游戏分析]
   </div>
 </div>
 
-
 + [2022收入前25的厂商（仅上市公司）](https://newzoo.com/resources/rankings/top-25-companies-game-revenues)
-
-![](/assets/img/others/game_market/company.jpg)
 
 
 ### 细分榜单（平台、品类）
 
++ 地区分布：亚洲、北美洲、欧洲、南美洲、中东&非洲
+
 ![](/assets/img/others/game_market/region.jpg)
+
++ 平台分布：手游半壁江山，主机游戏&端游再平分，页游1%
+
+![](/assets/img/others/game_market/game_kind.jpg)
+
+
+## 具体案例分析
+
+这里会补充一些具体游戏的数据案例。
+
+
+## 其他参考数据
+
+这里会补充一些看到有意义数据的文章的链接。
