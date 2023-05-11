@@ -1,0 +1,140 @@
+├─flow
+│      predator_relevant_action
+│      
+├─hub
+│  │  arrange
+│  │  arrange_hyakuryu
+│  │  arrange_normal
+│  │  attack_stance_flash
+│  │  attack_stance_flash_hyakuryu
+│  │  attack_stance_no_target_routine
+│  │  attack_stance_out_main_zone
+│  │  attack_stance_return_blockcenter_routine
+│  │  attack_stance_same_main
+│  │  attack_stance_same_main_down_floor
+│  │  attack_stance_same_main_down_wall
+│  │  attack_stance_same_main_high
+│  │  attack_stance_same_main_master
+│  │  attack_stance_same_main_up_floor
+│  │  attack_stance_same_main_up_wall
+│  │  bindwire_routine
+│  │  block_move_basic
+│  │  block_move_main
+│  │  block_move_viapoint
+│  │  cancel
+│  │  cancel_angerbegin_routine
+│  │  cancel_continuecombat_routine
+│  │  cancel_flashend_routine
+│  │  cancel_leadbegin_routine
+│  │  cancel_mysterymaximumactivityreleasefailed_routine
+│  │  cancel_tiredbegin_routine
+│  │  cancel_tiredend_routine
+│  │  caution
+│  │  combat_main
+│  │  demon_puppet
+│  │  demon_puppet_stand
+│  │  exit_normal_routine
+│  │  flash_routine
+│  │  grapple
+│  │  grapple_cancel
+│  │  hyakuryu_adaptertarget_stance_routine
+│  │  hyakuryu_exitdamage_stance_routine
+│  │  hyakuryu_exit_damage
+│  │  hyakuryu_exit_routine
+│  │  hyakuryu_floordownpl_stance_routine
+│  │  hyakuryu_forttarget_stance_routine
+│  │  hyakuryu_routine
+│  │  lead
+│  │  lead_block_move_stance
+│  │  lead_follow_player_main_zone
+│  │  lead_follow_player_out_main
+│  │  lead_lost_stance
+│  │  lead_main
+│  │  map_meat_eat
+│  │  marionetteOther_routine
+│  │  marionette_attack_routine
+│  │  marionette_routine
+│  │  mario_attack_stance_routine
+│  │  meat_eat_routine
+│  │  object_contact
+│  │  predator_relevant_main
+│  │  relation_in_main
+│  │  relation_out_main
+│  │  return_block_center
+│  │  same_main_quest_routine
+│  │  self_sleep
+│  │  set_meat_eat
+│  │  sp_combatmonster_routine
+│  │  target_em_combat
+│  │  target_em_escape
+│  │  target_em_grapplebegin
+│  │  target_em_routine
+│  │  think_loop_block
+│  │  think_loop_block_mode
+│  │  walk_around_in_block
+│  │  wire_stance_routine
+│  │  wire_stance_routine_hyakuryu
+│  │  
+│  ├─damage
+│  │  ├─fly
+│  │  │      fly_element_weak_damage
+│  │  │      fly_em2em_damage
+│  │  │      fly_flash_damage
+│  │  │      fly_gimmick_damage
+│  │  │      fly_high_parts_damage
+│  │  │      fly_marionette_damage
+│  │  │      fly_multi_parts_damage
+│  │  │      fly_mystery_maximum_activity_release_damage
+│  │  │      fly_paralyze_damage
+│  │  │      fly_parts_break_damage
+│  │  │      fly_parts_damage
+│  │  │      fly_parts_loss_damage
+│  │  │      fly_sleep_damage
+│  │  │      fly_stamina_damage
+│  │  │      fly_steel_fang_damage
+│  │  │      fly_stun_damage
+│  │  │      fly_trap_damage
+│  │  │      
+│  │  └─stand
+│  │          stand_element_weak_damage
+│  │          stand_em2em_damage
+│  │          stand_flash_damage
+│  │          stand_gimmick_damage
+│  │          stand_high_parts_damage
+│  │          stand_marionette_damage
+│  │          stand_multi_parts_damage
+│  │          stand_mystery_maximum_activity_release_damage
+│  │          stand_paralyze_damage
+│  │          stand_parts_break_damage
+│  │          stand_parts_damage
+│  │          stand_parts_loss_damage
+│  │          stand_sleep_damage
+│  │          stand_stamina_damage
+│  │          stand_steel_fang_damage
+│  │          stand_stun_damage
+│  │          stand_trap_damage
+│  │          
+│  └─die
+│      ├─fly
+│      │      fly_capture
+│      │      fly_normal_die
+│      │      
+│      └─stand
+│              stand_capture
+│              stand_normal_die
+│              
+└─think
+        damage
+        die
+        fly_damage
+        fly_die
+        hyakuryu_exit
+        hyakuryu_exit_damage
+        main
+        mario_direct
+        mode
+        nonCombat
+        normal_exit
+        stand_damage
+        stand_die
+        think_interrupt
