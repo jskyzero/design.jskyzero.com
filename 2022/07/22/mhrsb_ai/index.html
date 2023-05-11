@@ -7,21 +7,21 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>怪物猎人的AI设计 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+  <title>动作分析：怪猎AI设计 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="怪物猎人的AI设计" />
+<meta property="og:title" content="动作分析：怪猎AI设计" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="本文通过爵银龙的的行为为例，讨论怪物猎人的经典AI设计。" />
-<meta property="og:description" content="本文通过爵银龙的的行为为例，讨论怪物猎人的经典AI设计。" />
+<meta name="description" content="以拆包和体验来推导一下怪物猎人的AI逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗！" />
+<meta property="og:description" content="以拆包和体验来推导一下怪物猎人的AI逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗！" />
 <link rel="canonical" href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" />
 <meta property="og:url" content="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" />
 <meta property="og:site_name" content="设计者笔记" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-07-22T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="怪物猎人的AI设计" />
+<meta property="twitter:title" content="动作分析：怪猎AI设计" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-22T00:00:00+00:00","datePublished":"2022-07-22T00:00:00+00:00","description":"本文通过爵银龙的的行为为例，讨论怪物猎人的经典AI设计。","headline":"怪物猎人的AI设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/07/22/mhrsb_ai/"},"url":"https://design.jskyzero.com/2022/07/22/mhrsb_ai/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-22T00:00:00+00:00","datePublished":"2022-07-22T00:00:00+00:00","description":"以拆包和体验来推导一下怪物猎人的AI逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗！","headline":"动作分析：怪猎AI设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/07/22/mhrsb_ai/"},"url":"https://design.jskyzero.com/2022/07/22/mhrsb_ai/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
@@ -43,11 +43,18 @@
 </header>
 <main>
       <div id="index">
-  
+  <ul class="md-toc">
+  <li class="md-toc-h2"><a href="#前言">前言</a></li>
+  <li class="md-toc-h2"><a href="#拆包">拆包</a></li>
+  <li class="md-toc-h2"><a href="#体验反推">体验反推</a></li>
+</ul>
   <p id="pro">
   
   <!-- <div class="categories"> -->
     
+    
+    <img src="https://img.shields.io/badge/游戏分析-blue.svg?style=flat" alt="">
+    <!--  -->
     
   <!-- </div> -->
   
@@ -57,19 +64,22 @@
 
 </div>
 
-<p>本文通过爵银龙的的行为为例，讨论怪物猎人的经典AI设计。</p>
+<p>以拆包和体验来推导一下怪物猎人的AI逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗！</p>
 
 <!--more-->
 
+<h2 id="前言">前言</h2>
+
+<h2 id="拆包">拆包</h2>
+
+<h2 id="体验反推">体验反推</h2>
+
 <p>以下施工中……</p>
-
-<p>目前可以公开的情报：</p>
-
-<p>怪物会根据玩家位置或者武器释放不同的攻击。</p>
 
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+11 May 2023 - jskyzero - update index in 动作分析：怪猎AI设计
 18 Jan 2023 - jskyzero - 🐛 hide unfinished works
 05 Dec 2022 - jskyzero - 📝 add long-term-maintenance
 07 Oct 2022 - jskyzero - update pro tag
