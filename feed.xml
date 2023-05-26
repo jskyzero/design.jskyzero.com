@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-05-11T11:41:19+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-05-26T04:32:19+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">市场运营：游戏行业通识</title><link href="https://design.jskyzero.com/2023/04/01/GameMarket/" rel="alternate" type="text/html" title="市场运营：游戏行业通识" /><published>2023-04-01T00:00:00+00:00</published><updated>2023-04-01T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/04/01/GameMarket</id><content type="html" xml:base="https://design.jskyzero.com/2023/04/01/GameMarket/"><![CDATA[<p>本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。</p>
 
 <h1 id="游戏行业市场分析">游戏行业市场分析</h1>
@@ -3423,17 +3423,27 @@
       <li>招式位移：前冲，向前跳下，后撤斩</li>
     </ul>
   </li>
-</ul>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。]]></summary></entry><entry><title type="html">动作分析：怪猎AI设计</title><link href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" rel="alternate" type="text/html" title="动作分析：怪猎AI设计" /><published>2022-07-22T00:00:00+00:00</published><updated>2022-07-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/22/mhrsb_ai</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/22/mhrsb_ai/"><![CDATA[<p>以拆包和体验来推导一下怪物猎人的AI逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗！</p>
+</ul>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。]]></summary></entry><entry><title type="html">动作分析：怪猎AI设计</title><link href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" rel="alternate" type="text/html" title="动作分析：怪猎AI设计" /><published>2022-07-22T00:00:00+00:00</published><updated>2022-07-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/22/mhrsb_ai</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/22/mhrsb_ai/"><![CDATA[<p>以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！</p>
 
 <!--more-->
 
 <h2 id="前言">前言</h2>
 
+<p>如果要参考学习动作游戏PVE的BOSS设计的话，我想怪猎系列的怪物可能是绕不开的一个话题，它有着相对简单的关卡设计，衬托出纯度更高的战斗、丰富的机制与动作，带来反复游玩的乐趣。在MHW这一作经受住了大环境下ACT品类没落的考验，一跃成为了ACT游戏中最耀眼的明星之一。</p>
+
+<p>本文将从拆包、体验反推两个视角来窥视怪物猎人的AI，聚焦在一些AI出招的逻辑设计、和这些设计是如何影响玩家的体验的。文章末尾会对比这两种方式，聊聊它俩各自的特点，在游戏反拆时适用的场合。</p>
+
 <h2 id="拆包">拆包</h2>
+
+<p>基本上，只要有MOD的游戏，就代表玩家群体已经掌握了游戏文件组织的大体结构——毕竟MOD，就是把玩家的内容，替换、修改厂商的内容，得先弄明白文件放到哪里，才能放过去让文件生效。对于大多数对MOD没有积极持支持态度的游戏开发商，这往往意味着已经有一个工具可以针对玩家的二进制分发文件进行解密解压缩处理。</p>
+
+<p>感谢卡普空从MHW以来对PC的友好态度，MHW/MHWIB、MHR/MHRSB，都有着相当多的外观、易用性MOD，繁荣的MOD当然也就意味着，玩家对游戏文件有着相当的了解，从Github、NEXUSMODS上顺藤摸瓜成功找到了<a href="https://github.com/mhvuze/MonsterHunterRiseModding">MOD教程</a>，里面自然有<a href="https://github.com/mhvuze/MonsterHunterRiseModding/wiki/Extracting-Game-Files-(PC)">拆包过程的说明</a>，事不宜迟，拆了看看AI配置吧！</p>
+
+<h3 id="不可读的二进制文件">不可读的二进制文件</h3>
 
 <h2 id="体验反推">体验反推</h2>
 
-<p>以下施工中……</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗！]]></summary></entry><entry><title type="html">怪物猎人的战斗数值设计</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="怪物猎人的战斗数值设计" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<p>得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。</p>
+<p>以下施工中……</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry><entry><title type="html">怪物猎人的战斗数值设计</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="怪物猎人的战斗数值设计" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<p>得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。</p>
 
 <!-- 近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。 -->
 

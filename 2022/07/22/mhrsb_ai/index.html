@@ -11,8 +11,8 @@
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="动作分析：怪猎AI设计" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="以拆包和体验来推导一下怪物猎人的AI逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗！" />
-<meta property="og:description" content="以拆包和体验来推导一下怪物猎人的AI逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗！" />
+<meta name="description" content="以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！" />
+<meta property="og:description" content="以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！" />
 <link rel="canonical" href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" />
 <meta property="og:url" content="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" />
 <meta property="og:site_name" content="设计者笔记" />
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="动作分析：怪猎AI设计" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-22T00:00:00+00:00","datePublished":"2022-07-22T00:00:00+00:00","description":"以拆包和体验来推导一下怪物猎人的AI逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗！","headline":"动作分析：怪猎AI设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/07/22/mhrsb_ai/"},"url":"https://design.jskyzero.com/2022/07/22/mhrsb_ai/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-22T00:00:00+00:00","datePublished":"2022-07-22T00:00:00+00:00","description":"以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！","headline":"动作分析：怪猎AI设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/07/22/mhrsb_ai/"},"url":"https://design.jskyzero.com/2022/07/22/mhrsb_ai/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
@@ -45,7 +45,11 @@
       <div id="index">
   <ul class="md-toc">
   <li class="md-toc-h2"><a href="#前言">前言</a></li>
-  <li class="md-toc-h2"><a href="#拆包">拆包</a></li>
+  <li class="md-toc-h2"><a href="#拆包">拆包</a>
+    <ul>
+      <li class="md-toc-h3"><a href="#不可读的二进制文件">不可读的二进制文件</a></li>
+    </ul>
+  </li>
   <li class="md-toc-h2"><a href="#体验反推">体验反推</a></li>
 </ul>
   <p id="pro">
@@ -64,13 +68,23 @@
 
 </div>
 
-<p>以拆包和体验来推导一下怪物猎人的AI逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗！</p>
+<p>以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！</p>
 
 <!--more-->
 
 <h2 id="前言">前言</h2>
 
+<p>如果要参考学习动作游戏PVE的BOSS设计的话，我想怪猎系列的怪物可能是绕不开的一个话题，它有着相对简单的关卡设计，衬托出纯度更高的战斗、丰富的机制与动作，带来反复游玩的乐趣。在MHW这一作经受住了大环境下ACT品类没落的考验，一跃成为了ACT游戏中最耀眼的明星之一。</p>
+
+<p>本文将从拆包、体验反推两个视角来窥视怪物猎人的AI，聚焦在一些AI出招的逻辑设计、和这些设计是如何影响玩家的体验的。文章末尾会对比这两种方式，聊聊它俩各自的特点，在游戏反拆时适用的场合。</p>
+
 <h2 id="拆包">拆包</h2>
+
+<p>基本上，只要有MOD的游戏，就代表玩家群体已经掌握了游戏文件组织的大体结构——毕竟MOD，就是把玩家的内容，替换、修改厂商的内容，得先弄明白文件放到哪里，才能放过去让文件生效。对于大多数对MOD没有积极持支持态度的游戏开发商，这往往意味着已经有一个工具可以针对玩家的二进制分发文件进行解密解压缩处理。</p>
+
+<p>感谢卡普空从MHW以来对PC的友好态度，MHW/MHWIB、MHR/MHRSB，都有着相当多的外观、易用性MOD，繁荣的MOD当然也就意味着，玩家对游戏文件有着相当的了解，从Github、NEXUSMODS上顺藤摸瓜成功找到了<a href="https://github.com/mhvuze/MonsterHunterRiseModding">MOD教程</a>，里面自然有<a href="https://github.com/mhvuze/MonsterHunterRiseModding/wiki/Extracting-Game-Files-(PC)">拆包过程的说明</a>，事不宜迟，拆了看看AI配置吧！</p>
+
+<h3 id="不可读的二进制文件">不可读的二进制文件</h3>
 
 <h2 id="体验反推">体验反推</h2>
 
@@ -79,6 +93,8 @@
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+26 May 2023 - jskyzero - update 前言 & 拆包
+17 May 2023 - jskyzero - 📝 start 拆包 part
 11 May 2023 - jskyzero - update index in 动作分析：怪猎AI设计
 18 Jan 2023 - jskyzero - 🐛 hide unfinished works
 05 Dec 2022 - jskyzero - 📝 add long-term-maintenance
