@@ -2,7 +2,6 @@
 layout: post
 title: GameAIPro汇总
 categories: [游戏AI]
-long-term-maintenance: true
 ---
 
 本文将汇总记录GameAIPro的相关文章，更新较慢。

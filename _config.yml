@@ -12,12 +12,13 @@ footer: 'Enjoy :)'
 
 index_categories:
   - 游戏AI
+  - 动作游戏分析
   - 游戏开发
-  - 游戏分析
+  - 专题报告
   - 杂谈
-  - 读书报告
-  - 体验报告
   - 一期一会
+  - 游戏体验
+  - 阅读笔记
   - 游戏设计
 
 style: light # dark (default) or light

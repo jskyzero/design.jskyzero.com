@@ -40,24 +40,6 @@ graph LR;
 {% endmermaid %}
 
 
-## 增补：一些编辑器的脚本（最小）集
-
-
-+ 关卡
-
-![关卡](/assets/img/skill/editor/level.jpg)
-
-
-+ AI 行为树
-
-![行为树](/assets/img/skill/editor/behavior_tree.jpg)
-
-
-+ 动作时间轴
-
-![时间轴](/assets/img/skill/editor/timeline.jpg)
-
-
 ## 评价的维度
 
 如何评价一个编辑器是否好用？好或者坏，是一个主观的印象。类比其他软件产品，也许我们可以使用抽样调查、用户深度访谈、用户画像分析等手法。这里我们主要讨论两个思考角度：
