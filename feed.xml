@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-05-27T05:33:45+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-05-27T06:31:47+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">战斗系统：实现塞尔达的冒险感</title><link href="https://design.jskyzero.com/2023/05/26/zelda_totk/" rel="alternate" type="text/html" title="战斗系统：实现塞尔达的冒险感" /><published>2023-05-26T00:00:00+00:00</published><updated>2023-05-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/05/26/zelda_totk</id><content type="html" xml:base="https://design.jskyzero.com/2023/05/26/zelda_totk/"><![CDATA[<p>狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。</p>
 
 <h2 id="角色性能">角色性能</h2>
@@ -3386,7 +3386,7 @@
   <li><a href="https://www.bilibili.com/video/BV1A7411y7Cr">空洞骑士 诸神堂boss超详细分层次攻略</a></li>
 </ul>
 
-<h2 id="旧时代">旧时代</h2>
+<h2 id="其他">其他</h2>
 
 <!-- ### 猎天使魔女 -->
 <!-- ### 猎天使魔女2 -->
@@ -3395,6 +3395,17 @@
 
 <ul>
   <li><a href="https://www.bilibili.com/video/BV1QP411S7Dv">二周目战神难度无伤狂战士国王</a></li>
+</ul>
+
+<h3 id="塞尔达传说旷野之息">塞尔达传说旷野之息</h3>
+
+<h3 id="塞尔达传说王国之泪">塞尔达传说王国之泪</h3>
+
+<ul>
+  <li><a href="https://www.bilibili.com/video/BV1CM4y1v7Mm">所有新怪一览</a></li>
+  <li><a href="https://www.bilibili.com/video/BV1Cg4y1F7oa">最高伤害</a></li>
+  <li><a href="https://www.bilibili.com/video/BV1CM4y1v7Mm">全武器输出与伤害机制分析</a></li>
+  <li><a href="https://www.bilibili.com/video/BV16X4y1C7uw">人马AI</a></li>
 </ul>
 
 <h2 id="总结">总结</h2>
