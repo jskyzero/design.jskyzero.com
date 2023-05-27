@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 游戏AI：高级随机技术
+title: 高级随机技术
 featured-img: dmc5
 mathjax: true
-categories: [游戏开发]
+categories: [游戏AI]
 ---
 
 本文会深入讲解游戏AI的若干随机算法，并附带通俗易懂的例子，严谨的模拟试验，和技法实用运用指南。

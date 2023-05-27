@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 游戏AI：GameAIPro汇总
-categories: [游戏开发]
+title: GameAIPro汇总
+categories: [游戏AI]
 long-term-maintenance: true
 ---
 
