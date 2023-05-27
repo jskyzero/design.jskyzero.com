@@ -679,11 +679,15 @@ long-term-maintenance: true
 + [二周目战神难度无伤狂战士国王](https://www.bilibili.com/video/BV1QP411S7Dv)
 
 
+### 塞尔达传说旷野之息
+
+
 ### 塞尔达传说王国之泪
 
 + [所有新怪一览](https://www.bilibili.com/video/BV1CM4y1v7Mm)
 + [最高伤害](https://www.bilibili.com/video/BV1Cg4y1F7oa)
 + [全武器输出与伤害机制分析](https://www.bilibili.com/video/BV1CM4y1v7Mm)
++ [人马AI](https://www.bilibili.com/video/BV16X4y1C7uw)
 
 
 ## 总结
