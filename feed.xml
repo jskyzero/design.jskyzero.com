@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-05-27T06:31:47+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-05-27T08:30:35+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">战斗系统：实现塞尔达的冒险感</title><link href="https://design.jskyzero.com/2023/05/26/zelda_totk/" rel="alternate" type="text/html" title="战斗系统：实现塞尔达的冒险感" /><published>2023-05-26T00:00:00+00:00</published><updated>2023-05-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/05/26/zelda_totk</id><content type="html" xml:base="https://design.jskyzero.com/2023/05/26/zelda_totk/"><![CDATA[<p>狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。</p>
 
 <h2 id="角色性能">角色性能</h2>
 
-<h2 id="怪物ai">怪物&amp;AI</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。]]></summary></entry><entry><title type="html">市场运营：游戏行业通识</title><link href="https://design.jskyzero.com/2023/04/01/GameMarket/" rel="alternate" type="text/html" title="市场运营：游戏行业通识" /><published>2023-04-01T00:00:00+00:00</published><updated>2023-04-01T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/04/01/GameMarket</id><content type="html" xml:base="https://design.jskyzero.com/2023/04/01/GameMarket/"><![CDATA[<p>本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。</p>
+<h2 id="怪物ai">怪物&amp;AI</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。]]></summary></entry><entry><title type="html">游戏设计：游戏行业通识</title><link href="https://design.jskyzero.com/2023/04/01/GameMarket/" rel="alternate" type="text/html" title="游戏设计：游戏行业通识" /><published>2023-04-01T00:00:00+00:00</published><updated>2023-04-01T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/04/01/GameMarket</id><content type="html" xml:base="https://design.jskyzero.com/2023/04/01/GameMarket/"><![CDATA[<p>本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。</p>
 
 <h1 id="游戏行业市场分析">游戏行业市场分析</h1>
 
@@ -138,7 +138,7 @@
 
 <h2 id="其他参考数据">其他参考数据</h2>
 
-<p>这里会补充一些看到有意义数据的文章的链接。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。]]></summary></entry><entry><title type="html">游戏AI：GameAIPro汇总</title><link href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" rel="alternate" type="text/html" title="游戏AI：GameAIPro汇总" /><published>2023-03-27T00:00:00+00:00</published><updated>2023-03-27T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/03/27/GameAIProIndex</id><content type="html" xml:base="https://design.jskyzero.com/2023/03/27/GameAIProIndex/"><![CDATA[<p>本文将汇总记录GameAIPro的相关文章，更新较慢。</p>
+<p>这里会补充一些看到有意义数据的文章的链接。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。]]></summary></entry><entry><title type="html">GameAIPro汇总</title><link href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" rel="alternate" type="text/html" title="GameAIPro汇总" /><published>2023-03-27T00:00:00+00:00</published><updated>2023-03-27T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/03/27/GameAIProIndex</id><content type="html" xml:base="https://design.jskyzero.com/2023/03/27/GameAIProIndex/"><![CDATA[<p>本文将汇总记录GameAIPro的相关文章，更新较慢。</p>
 
 <p>此外，强烈推荐访问<a href="https://gameaipro.jsky.wiki/">GameAIPro.JSKY.WIKI</a>，来快速找到GameAIPro中自己感兴趣的文章。</p>
 
@@ -189,7 +189,7 @@
 <img src="/assets/img/skill/GameAIPro/45.JPG" alt="" />
 <img src="/assets/img/skill/GameAIPro/46.JPG" alt="" />
 <img src="/assets/img/skill/GameAIPro/47.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/48.JPG" alt="" /></p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文将汇总记录GameAIPro的相关文章，更新较慢。]]></summary></entry><entry><title type="html">动作分析：拆包看狮子猿</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="动作分析：拆包看狮子猿" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
+<img src="/assets/img/skill/GameAIPro/48.JPG" alt="" /></p>]]></content><author><name></name></author><category term="游戏AI" /><summary type="html"><![CDATA[本文将汇总记录GameAIPro的相关文章，更新较慢。]]></summary></entry><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
 
 <p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏怪物动作设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
 
@@ -443,7 +443,7 @@
   <li>……</li>
 </ul>
 
-<p>以上，希望本文能对读者有启发，帮助做出好的Boss。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。]]></summary></entry><entry><title type="html">战斗系统：卧龙气势槽</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="战斗系统：卧龙气势槽" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
+<p>以上，希望本文能对读者有启发，帮助做出好的Boss。</p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。]]></summary></entry><entry><title type="html">《卧龙》气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="《卧龙》气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
 
 <h1 id="卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</h1>
 
@@ -637,7 +637,7 @@
 
 <p>资源槽可以通过规则层面的变化，改变玩家的决策、从而丰富玩家的体验。合理的机制能为战斗增彩。</p>
 
-<p>WOLONG中气势槽统一了各项系统的消耗，在战斗中反映着局面的瞬息万变，期待WOLONG的正式发售。</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。]]></summary></entry><entry><title type="html">动作参考：PVE BOSS 大全</title><link href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/" rel="alternate" type="text/html" title="动作参考：PVE BOSS 大全" /><published>2022-09-13T00:00:00+00:00</published><updated>2022-09-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/13/ActionReferenceBoss</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。</p>
+<p>WOLONG中气势槽统一了各项系统的消耗，在战斗中反映着局面的瞬息万变，期待WOLONG的正式发售。</p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。]]></summary></entry><entry><title type="html">动作设计参考·BOSS篇</title><link href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/" rel="alternate" type="text/html" title="动作设计参考·BOSS篇" /><published>2022-09-13T00:00:00+00:00</published><updated>2022-09-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/13/ActionReferenceBoss</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。</p>
 
 <h1 id="动作设计参考boss篇">动作设计参考·BOSS篇</h1>
 
@@ -3438,11 +3438,11 @@
       <li>招式位移：前冲，向前跳下，后撤斩</li>
     </ul>
   </li>
-</ul>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。]]></summary></entry><entry><title type="html">动作分析：怪猎AI设计</title><link href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" rel="alternate" type="text/html" title="动作分析：怪猎AI设计" /><published>2022-07-22T00:00:00+00:00</published><updated>2022-07-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/22/mhrsb_ai</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/22/mhrsb_ai/"><![CDATA[<p>以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！</p>
+</ul>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。]]></summary></entry><entry><title type="html">怪物猎人中的AI出招设计</title><link href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" rel="alternate" type="text/html" title="怪物猎人中的AI出招设计" /><published>2022-07-22T00:00:00+00:00</published><updated>2022-07-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/22/mhrsb_ai</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/22/mhrsb_ai/"><![CDATA[<p>以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！</p>
 
 <!--more-->
 
-<h1 id="怪物猎人ai设计">怪物猎人AI设计</h1>
+<h1 id="怪物猎人中的ai出招设计">怪物猎人中的AI出招设计</h1>
 
 <h2 id="前言">前言</h2>
 
@@ -3515,6 +3515,10 @@
 9 directories, 125 files
 </code></pre></div></div>
 
+<blockquote>
+  <p>果然“软件开发没有银弹”，怪猎的怪物单句行为丰富，是因为有120+的AI规则文件……太强了。</p>
+</blockquote>
+
 <p>很可惜，目前的用于编辑拆包后的<code class="language-plaintext highlighter-rouge">.user.2</code>类型文件的<a href="https://github.com/Synthlight/MHR-Editor">MHR Editor</a>，尚且不支持这些AI文件，姑且用<code class="language-plaintext highlighter-rouge">HexEditor</code>试着看了下一些文件的内容，看到了一些类似USR开头、RSZ用作分割之类的信息，但是也没有啥有价值的内容。</p>
 
 <p><img src="/assets/img/gameplay/mhrsb.AI/HexEditor.jpg" alt="" /></p>
@@ -3525,7 +3529,7 @@
 
 <h2 id="体验反推">体验反推</h2>
 
-<p>以下施工中……</p>]]></content><author><name></name></author><category term="游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry><entry><title type="html">怪物猎人的战斗数值设计</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="怪物猎人的战斗数值设计" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<p>得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。</p>
+<p>以下施工中……</p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry><entry><title type="html">怪物猎人的战斗数值设计</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="怪物猎人的战斗数值设计" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<p>得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。</p>
 
 <!-- 近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。 -->
 
@@ -3798,7 +3802,7 @@ graph TD
   <li>攻击动作：开始、攻击、结束</li>
   <li>攻击特效：（略）</li>
   <li>受击动作：（略）</li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">游戏AI：架构的常用技巧</title><link href="https://design.jskyzero.com/2022/05/24/GameAISkill/" rel="alternate" type="text/html" title="游戏AI：架构的常用技巧" /><published>2022-05-24T00:00:00+00:00</published><updated>2022-05-24T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/05/24/GameAISkill</id><content type="html" xml:base="https://design.jskyzero.com/2022/05/24/GameAISkill/"><![CDATA[<p>一些游戏AI设计制作时候的思维方式和技巧，主要来自<strong>GameAIPro</strong>的<a href="http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter05_Structural_Architecture_Common_Tricks_of_the_Trade.pdf">这篇文章</a></p>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">游戏AI架构的常用技巧</title><link href="https://design.jskyzero.com/2022/05/24/GameAISkill/" rel="alternate" type="text/html" title="游戏AI架构的常用技巧" /><published>2022-05-24T00:00:00+00:00</published><updated>2022-05-24T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/05/24/GameAISkill</id><content type="html" xml:base="https://design.jskyzero.com/2022/05/24/GameAISkill/"><![CDATA[<p>一些游戏AI设计制作时候的思维方式和技巧，主要来自<strong>GameAIPro</strong>的<a href="http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter05_Structural_Architecture_Common_Tricks_of_the_Trade.pdf">这篇文章</a></p>
 
 <h1 id="游戏ai架构的常用技巧">游戏AI架构的常用技巧</h1>
 
@@ -3993,4 +3997,4 @@ graph TD
 
 <h2 id="总结灵活使用解决问题">总结：灵活使用解决问题</h2>
 
-<p>AI有着多种技术架构与架构对应擅长的逻辑表达，有些时候面临的是工具的表达能力的问题。但是更多时候面对的是复杂情况的逻辑实现问题，灵活使用上述思维方式和技巧，能解决对应的复杂问题。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章]]></summary></entry></feed>
+<p>AI有着多种技术架构与架构对应擅长的逻辑表达，有些时候面临的是工具的表达能力的问题。但是更多时候面对的是复杂情况的逻辑实现问题，灵活使用上述思维方式和技巧，能解决对应的复杂问题。</p>]]></content><author><name></name></author><category term="游戏AI" /><summary type="html"><![CDATA[一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章]]></summary></entry></feed>
