@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-05-27T08:30:35+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-05-29T12:32:43+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">战斗系统：实现塞尔达的冒险感</title><link href="https://design.jskyzero.com/2023/05/26/zelda_totk/" rel="alternate" type="text/html" title="战斗系统：实现塞尔达的冒险感" /><published>2023-05-26T00:00:00+00:00</published><updated>2023-05-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/05/26/zelda_totk</id><content type="html" xml:base="https://design.jskyzero.com/2023/05/26/zelda_totk/"><![CDATA[<p>狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。</p>
 
 <h2 id="角色性能">角色性能</h2>
@@ -3448,7 +3448,7 @@
 
 <p>如果要参考学习动作游戏PVE的BOSS设计的话，我想怪猎系列的怪物可能是绕不开的一个课题，它有着相对简单的关卡设计，衬托出纯度更高的战斗、丰富的机制与动作，带来反复游玩的乐趣。在MHW这一作，它经受住了大环境下ACT品类没落的考验，一跃成为了ACT游戏中最耀眼的明星之一。</p>
 
-<p>本文将<strong>从拆包、体验反推两个视角</strong>来窥视怪物猎人的AI，聚焦在一些AI出招的逻辑设计、和这些设计是如何影响玩家的体验的。文章末尾会对比这两种方式，聊聊它俩各自的特点，在游戏反拆时适用的场合。</p>
+<p>本文将<strong>从拆包、体验反推两个视角</strong>来窥视怪物猎人的AI，聚焦在一些AI出招的逻辑设计、和这些设计是如何影响玩家的体验的。文章末尾会对比这两种方式，聊聊它俩各自的特点，以及在游戏反拆时适用的场合。</p>
 
 <h2 id="拆包">拆包</h2>
 
@@ -3482,7 +3482,7 @@
     └── user_data
 </code></pre></div></div>
 
-<p><code class="language-plaintext highlighter-rouge">ai_fsm_user_data</code>下的文件就多起来了，以<code class="language-plaintext highlighter-rouge">em001\00\ai_fsm_user_data</code>的为例，有多达125个文件：</p>
+<p><code class="language-plaintext highlighter-rouge">ai_fsm_user_data</code>下的文件就多起来了，以雌火龙00的<code class="language-plaintext highlighter-rouge">em001\00\ai_fsm_user_data</code>的为例，有多达125个文件：</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span>
 ├── flow
@@ -3516,10 +3516,10 @@
 </code></pre></div></div>
 
 <blockquote>
-  <p>果然“软件开发没有银弹”，怪猎的怪物单句行为丰富，是因为有120+的AI规则文件……太强了。</p>
+  <p>果然“软件开发没有银弹”，怪猎的怪物单局行为丰富，连AI配置文件都有120多个……太强了。</p>
 </blockquote>
 
-<p>很可惜，目前的用于编辑拆包后的<code class="language-plaintext highlighter-rouge">.user.2</code>类型文件的<a href="https://github.com/Synthlight/MHR-Editor">MHR Editor</a>，尚且不支持这些AI文件，姑且用<code class="language-plaintext highlighter-rouge">HexEditor</code>试着看了下一些文件的内容，看到了一些类似USR开头、RSZ用作分割之类的信息，但是也没有啥有价值的内容。</p>
+<p>很可惜，目前用于拆包后的<code class="language-plaintext highlighter-rouge">.user.2</code>类型文件的<a href="https://github.com/Synthlight/MHR-Editor">MHR Editor</a>，尚且不支持打开编辑这些AI文件，姑且用<code class="language-plaintext highlighter-rouge">HexEditor</code>试着看了下一些文件的内容，看到了一些类似USR开头、RSZ用作分割之类的信息，但是也没有啥有价值的内容。</p>
 
 <p><img src="/assets/img/gameplay/mhrsb.AI/HexEditor.jpg" alt="" /></p>
 
@@ -3527,9 +3527,22 @@
 
 <h3 id="盲人摸象">盲人摸象</h3>
 
+<p>试着对文件名进行了一些标注（拿不准胡猜的东西标了黄色）：</p>
+
+<p><img src="/assets/img/gameplay/mhrsb.AI/em001-00.svg" alt="" /></p>
+
+<p>在标注的过程中我们会发现，与其说是AI，倒不如说这些FSM中也包含了一些动作跳转的逻辑，</p>
+
 <h2 id="体验反推">体验反推</h2>
 
-<p>以下施工中……</p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry><entry><title type="html">怪物猎人的战斗数值设计</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="怪物猎人的战斗数值设计" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<p>得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。</p>
+<p>以下施工中……</p>
+
+<h2 id="其他参考">其他参考</h2>
+
+<ul>
+  <li><a href="https://mhrise.kiranico.com/data/monsters/366824395">MHRISE.KIRANICO Rathian</a></li>
+  <li><a href="https://mhrise.mhrice.info/version/10.0.2/monster/001_00.html">mhrice.info Rathian</a></li>
+</ul>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry><entry><title type="html">怪物猎人的战斗数值设计</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="怪物猎人的战斗数值设计" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<p>得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。</p>
 
 <!-- 近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。 -->
 
