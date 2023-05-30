@@ -84,11 +84,11 @@
 
 <p>如果要参考学习动作游戏PVE的BOSS设计的话，我想怪猎系列的怪物可能是绕不开的一个课题，它有着相对简单的关卡设计，衬托出纯度更高的战斗、丰富的机制与动作，带来反复游玩的乐趣。在MHW这一作，它经受住了大环境下ACT品类没落的考验，一跃成为了ACT游戏中最耀眼的明星之一。</p>
 
-<p>本文将<strong>从拆包、体验反推两个视角</strong>来窥视怪物猎人的AI，聚焦在一些AI出招的逻辑设计、和这些设计是如何影响玩家的体验的。文章末尾会对比这两种方式，聊聊它俩各自的特点，以及在游戏反拆时适用的场合。</p>
+<p>本文将<strong>从拆包、体验反推两个视角</strong>来窥视怪物猎人的AI，聚焦在怪物AI出招的设计、和这些设计是如何影响玩家的体验的。文章末尾会对比这两种方式，聊聊它俩各自的特点，以及在游戏反拆时适用的场合。</p>
 
 <h2 id="拆包">拆包</h2>
 
-<p>基本上，只要<strong>有MOD的游戏，就代表玩家群体已经掌握了游戏文件组织的大体结构</strong>——毕竟MOD，就是把玩家的内容，替换、修改厂商的内容，得先弄明白文件放到哪里，才能放过去让文件生效。对于大多数对MOD没有积极持支持态度的游戏开发商，这往往意味着已经有一个工具可以针对玩家的二进制分发文件进行解密解压缩处理。</p>
+<p>基本上，只要<strong>有MOD的游戏，就代表玩家群体已经掌握了游戏文件组织的大体结构</strong>——毕竟MOD，就是把玩家的内容，替换、修改厂商的内容。得先弄明白文件放到哪里，才能放过去让文件生效。对于大多数对MOD没有积极持支持态度的游戏开发商，这往往意味着已经有一个工具可以针对玩家的二进制分发文件进行解密解压缩处理。</p>
 
 <p>感谢卡普空从MHW以来对PC的友好态度，MHW/MHWIB、MHR/MHRSB，都有着相当多的外观、易用性MOD，繁荣的MOD当然也就意味着，玩家对游戏文件有着相当的了解，从Github、NEXUSMODS上顺藤摸瓜成功找到了MHRSB的<a href="https://github.com/mhvuze/MonsterHunterRiseModding">MOD教程</a>，里面自然有<a href="https://github.com/mhvuze/MonsterHunterRiseModding/wiki/Extracting-Game-Files-(PC)">拆包过程的说明</a>，事不宜迟，拆了看看AI配置吧！</p>
 
@@ -167,7 +167,62 @@
 
 <p><img src="/assets/img/gameplay/mhrsb.AI/em001-00.svg" alt="" /></p>
 
-<p>在标注的过程中我们会发现，与其说是AI，倒不如说这些FSM中也包含了一些动作跳转的逻辑，</p>
+<ul>
+  <li>硬直</li>
+</ul>
+
+<p>在标注的过程中发现了一些<a href="https://bbs.nga.cn/read.php?tid=21732718&amp;rand=636">硬直机制</a>相关的文件，这些文件相较于AI，更像是动作跳转的逻辑。</p>
+
+<p>比如死亡、捕获，又比如经典麻痹、眩晕、睡眠。</p>
+
+<p>合理推测，可能有一部分硬直的动作逻辑是靠这些AI来控制的？</p>
+
+<p><img src="/assets/img/gameplay/mhrsb.AI/1.jpg" alt="" /></p>
+
+<ul>
+  <li>避障/场地移动</li>
+</ul>
+
+<p>可以把动作游戏的AI划分为攻击/移动，而移动中免不了的一部分就是类似避障、返回场地中央之类的逻辑，这么一看大家还是都会面临这些问题的。</p>
+
+<p><img src="/assets/img/gameplay/mhrsb.AI/2.jpg" alt="" /></p>
+
+<ul>
+  <li>横向比较</li>
+</ul>
+
+<p>除了001我们也看一下093爵银龙，对比一下各自的<code class="language-plaintext highlighter-rouge">ai_fsm_user_data</code>的文件列表</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>比较对象</th>
+      <th>比较结论</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>em001-00/em001-02/em001-07</td>
+      <td>02和07都是00的子集，02和07略有不同</td>
+    </tr>
+    <tr>
+      <td>em093-00/em093-01</td>
+      <td>01是00的子集</td>
+    </tr>
+    <tr>
+      <td>em001-00/em093-00</td>
+      <td>略有不同</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>简要总结</li>
+</ul>
+
+<p>MHRSB的AI通过划分不同场景，将复杂的逻辑成功细分到多种场合的单个逻辑，这种做法可以<strong>降低单个文件的复杂度</strong>，同时，单个逻辑文件<strong>可以作为特性组件</strong>动态的给某只怪物添加或者删除（比如觅食逻辑）。</p>
+
+<p>我们最关心的出招逻辑AI，目测是在某个单个细分逻辑中。尝试继续寻找出招逻辑AI，从文件大小里面筛了一下，还是没有结论。</p>
 
 <h2 id="体验反推">体验反推</h2>
 
@@ -183,6 +238,7 @@
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+30 May 2023 - jskyzero - 📝 finish 盲人摸象
 29 May 2023 - jskyzero - update 盲人摸象
 27 May 2023 - jskyzero - 🚚 re:re:change file folder
 27 May 2023 - jskyzero - 🚚 re:change file folder
