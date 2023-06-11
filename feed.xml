@@ -1,5 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-05-30T11:58:03+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">战斗系统：实现塞尔达的冒险感</title><link href="https://design.jskyzero.com/2023/05/26/zelda_totk/" rel="alternate" type="text/html" title="战斗系统：实现塞尔达的冒险感" /><published>2023-05-26T00:00:00+00:00</published><updated>2023-05-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/05/26/zelda_totk</id><content type="html" xml:base="https://design.jskyzero.com/2023/05/26/zelda_totk/"><![CDATA[<p>狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-06-11T14:33:33+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">游戏设计：常见设计方法论</title><link href="https://design.jskyzero.com/2023/06/11/GameDesignTheory/" rel="alternate" type="text/html" title="游戏设计：常见设计方法论" /><published>2023-06-11T00:00:00+00:00</published><updated>2023-06-11T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/11/GameDesignTheory</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/11/GameDesignTheory/"><![CDATA[<h1 id="常见设计方法论">常见设计方法论</h1>
+
+<h2 id="理解游戏">理解游戏</h2>
+
+<h3 id="分层的m-d-a">“分层”的M-D-A</h3>
+
+<ul>
+  <li>实质规则</li>
+  <li>动态切片</li>
+  <li>外层美学</li>
+</ul>
+
+<h3 id="建模的游戏感">“建模”的游戏感</h3>
+
+<ul>
+  <li>IO模型：人类和游戏进行交互</li>
+  <li>人类处理器模型：接收、思考、行动</li>
+  <li>游戏感及其衍生体验
+    <ul>
+      <li>实时操控</li>
+      <li>模拟空间</li>
+      <li>润色</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="mmo的设计论">MMO的设计论</h3>
+
+<ul>
+  <li>可以宏观针对整个游戏，
+也可以微观针对单局</li>
+  <li>时期划分
+    <ul>
+      <li>新手期</li>
+      <li>成长期</li>
+      <li>平台期</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="行为-体验论">行为-体验论</h3>
+
+<ul>
+  <li>合适地编排玩法
+（e.g. 体验蓝图、关卡节奏论、心流）</li>
+  <li>核心
+    <ul>
+      <li>设计师设计玩法</li>
+      <li>玩家整对玩法做出行为</li>
+      <li>微观行为构成宏观体验</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="零散方法论">零散方法论</h2>
+
+<h3 id="任天堂">任天堂</h3>
+
+<ul>
+  <li>递进思路：A，A+，AB</li>
+</ul>
+
+<h3 id="开放世界">开放世界</h3>
+
+<ul>
+  <li>分层设计</li>
+</ul>
+
+<h3 id="开发模型">开发模型</h3>
+
+<ul>
+  <li>游戏制作历程：概念、原型、预生产、生产</li>
+  <li>软件开发模型</li>
+</ul>
+
+<h3 id="关卡设计好准则">关卡设计好准则</h3>
+
+<ul>
+  <li>有趣引导、非文字叙事、做什么而非怎么做</li>
+  <li>不断新知识、有惊喜的体验曲线、赋予更多权力</li>
+  <li>难度选择、高效设计、触动情感、机制推动</li>
+</ul>
+
+<h3 id="叙事ip构建">叙事/IP构建</h3>
+
+<ul>
+  <li>待补充</li>
+</ul>
+
+<h3 id="系统商业化">系统/商业化</h3>
+
+<ul>
+  <li>待补充</li>
+</ul>
+
+<h3 id="运营活动玩法">运营活动/玩法</h3>
+
+<ul>
+  <li>待补充</li>
+</ul>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[常见设计方法论]]></summary></entry><entry><title type="html">战斗系统：实现塞尔达的冒险感</title><link href="https://design.jskyzero.com/2023/05/26/zelda_totk/" rel="alternate" type="text/html" title="战斗系统：实现塞尔达的冒险感" /><published>2023-05-26T00:00:00+00:00</published><updated>2023-05-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/05/26/zelda_totk</id><content type="html" xml:base="https://design.jskyzero.com/2023/05/26/zelda_totk/"><![CDATA[<p>狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。</p>
 
 <h2 id="角色性能">角色性能</h2>
 
@@ -3870,199 +3969,4 @@ graph TD
   <li>攻击动作：开始、攻击、结束</li>
   <li>攻击特效：（略）</li>
   <li>受击动作：（略）</li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">游戏AI架构的常用技巧</title><link href="https://design.jskyzero.com/2022/05/24/GameAISkill/" rel="alternate" type="text/html" title="游戏AI架构的常用技巧" /><published>2022-05-24T00:00:00+00:00</published><updated>2022-05-24T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/05/24/GameAISkill</id><content type="html" xml:base="https://design.jskyzero.com/2022/05/24/GameAISkill/"><![CDATA[<p>一些游戏AI设计制作时候的思维方式和技巧，主要来自<strong>GameAIPro</strong>的<a href="http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter05_Structural_Architecture_Common_Tricks_of_the_Trade.pdf">这篇文章</a></p>
-
-<h1 id="游戏ai架构的常用技巧">游戏AI架构的常用技巧</h1>
-
-<h2 id="mn复杂度的解法分治">M*N复杂度的解法：分治</h2>
-
-<p>游戏AI开发的一个核心难点就是应对逐渐上升的复杂度。</p>
-
-<p>当新的环境，或者新的行为添加到现有体系，其复杂度多为M*N乘法系数上升。</p>
-
-<p><img src="/assets/img/skill/GameAISkill/1-1.svg" alt="" /></p>
-
-<blockquote>
-  <p>举例：
-当现有移动，防御，技能A，技能B，4种行为后增加一种技能C
-由于技能B可以衔接在任意一种行为后（，当然也可能是前），将会增加4种需要思考的情况</p>
-</blockquote>
-
-<p>而使用分治法，则可以有效降低这种情况下扩张的新组合选项个数，使其变为N的常数级。</p>
-
-<p><img src="/assets/img/skill/GameAISkill/1-2.svg" alt="" /></p>
-
-<blockquote>
-  <p>举例：
-将移动，防御，划分为休闲动作
-将技能A，技能B划分为攻击行为，2种行为大类后增加一种技能C
-则只需要增加2种需要思考的情况</p>
-</blockquote>
-
-<p>同样的思路也出现在<strong>状态机</strong>与<strong>分层状态机</strong>上：状态机互相的连线在状态过多时无法维护，也不能很好的支持复用，于是有了分层状态机。</p>
-
-<h2 id="捡完芝麻不丢西瓜行为栈">捡完芝麻不丢西瓜：行为栈</h2>
-
-<p>栈是一种常见的数据结构，其核心特征是先进后出（，类似的数据结构队列是先进先出）。</p>
-
-<p><img src="/assets/img/skill/GameAISkill/2-1.svg" alt="" /></p>
-
-<p>利用先进后出的特性，我们可以为AI引入<strong>上下文</strong>的时间维度概念。</p>
-
-<blockquote>
-  <p>举例：
-怪物在执行【靠近】-&gt;【攻击】的逻辑
-【靠近】过程中发现一个攻击利器：棒球棒，可以触发【捡武器】行为</p>
-</blockquote>
-
-<p><img src="/assets/img/skill/GameAISkill/2-2.svg" alt="" /></p>
-
-<p>如果没有历史信息：可能会重新进行决策来判断当前行为，这可能会带来行为的更改！之前要攻击，现在可能就是移动发呆了。</p>
-
-<p><img src="/assets/img/skill/GameAISkill/2-3.svg" alt="" /></p>
-
-<p>如果有历史信息（以栈结构为例）：则可以继续上一次没有执行完的动作（其中捡完武器，是否重新决策是可选环节）</p>
-
-<p><img src="/assets/img/skill/GameAISkill/2-4.svg" alt="" /></p>
-
-<p>本质上是上下文知识的记忆，只是运用栈的结构，可以自然的实现行为与历史相关这一目的。</p>
-
-<h2 id="多维度复杂条件的决策评估函数">多维度复杂条件的决策：评估函数</h2>
-
-<p>我们迟早会遇到多种条件复合的决策情形，这会相当复杂而且容易出错。</p>
-
-<blockquote>
-  <p>举例：
-条件：自身血量，目标血量，自身与目标距离
-行为：攻击，逃跑，……</p>
-</blockquote>
-
-<p>方便理解，我们列出一张枚举表格：</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>自身血量</th>
-      <th>目标血量</th>
-      <th>距离</th>
-      <th>行为</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>血量健康</td>
-      <td>血量健康</td>
-      <td>近</td>
-      <td>攻击</td>
-    </tr>
-    <tr>
-      <td>血量健康</td>
-      <td>血量健康</td>
-      <td>远</td>
-      <td>攻击</td>
-    </tr>
-    <tr>
-      <td>血量健康</td>
-      <td>血量不健康</td>
-      <td>近</td>
-      <td>攻击</td>
-    </tr>
-    <tr>
-      <td>血量健康</td>
-      <td>血量不健康</td>
-      <td>远</td>
-      <td>攻击</td>
-    </tr>
-    <tr>
-      <td>血量不健康</td>
-      <td>血量健康</td>
-      <td>近</td>
-      <td>逃跑</td>
-    </tr>
-    <tr>
-      <td>血量不健康</td>
-      <td>血量健康</td>
-      <td>远</td>
-      <td>逃跑</td>
-    </tr>
-    <tr>
-      <td>血量不健康</td>
-      <td>血量不健康</td>
-      <td>近</td>
-      <td>攻击</td>
-    </tr>
-    <tr>
-      <td>血量不健康</td>
-      <td>血量不健康</td>
-      <td>远</td>
-      <td>逃跑</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>根据怪物血量的性格（胆小怕死或者无畏自杀），擅长发起攻击的距离，等等要素，我们可以一一决策各种情形下的行为。多样化的行为！这正是游戏AI的魅力。</p>
-
-<p>但是多数情况下，我们是没能力使用枚举维护复杂复合情况下的决策的（参考第一部分使用分治降低复杂度），也或者说：这是性价比比较低的方式。</p>
-
-<p>本质上，我们是建立复合参数到固定行为的一种映射，所以我们可以使用<strong>函数</strong>的思想。</p>
-
-<p><img src="/assets/img/skill/GameAISkill/3-1.svg" alt="" /></p>
-
-<p>将每一个条件（离散值或者连续值）进行值的映射，并为其赋予一个乘法缩放系数，再通过值的求和来考虑所有条件的影响。</p>
-
-<p><img src="/assets/img/skill/GameAISkill/3-2.svg" alt="" /></p>
-
-<p>这样，我们就可以通过最终值来决策。避免决策调试与配置的复杂度。</p>
-
-<h2 id="通过知识引入智能黑板变量">通过知识引入智能：黑板变量</h2>
-
-<p>什么是智能？一个简单的解释是能够运用历史经验。也即储存知识。</p>
-
-<p>我们可以使用变量来记录象征着知识的值，这不仅可以方便我们在运行时记录知识。</p>
-
-<blockquote>
-  <p>举例：</p>
-
-  <ol>
-    <li>记录本次释放指定行为的次数，控制释放总数</li>
-    <li>记录环境信息或者对方行为信息，采取对应的行为</li>
-  </ol>
-</blockquote>
-
-<p>也可以方便灵活使用变量来提高计算与配置的效率</p>
-
-<blockquote>
-  <p>举例：</p>
-
-  <ol>
-    <li>缓存复合结果到变量，而不在每个使用到的地方复合求值</li>
-    <li>传递变量让同一个节点产生差异性的行为，以此做到更好的抽象与复用</li>
-  </ol>
-
-</blockquote>
-
-<h2 id="适合的人干适合的事模块化">适合的人干适合的事：模块化</h2>
-
-<p>好的关卡是模块化的，好的AI也是，这不仅是第一部分说到的分治的思想。也包括：</p>
-
-<p>将复杂度下放到其他逻辑模块。</p>
-
-<blockquote>
-  <p>举例：</p>
-
-  <ol>
-    <li>复杂的转向、动作组合跳转，直接使用定制动作配置</li>
-    <li>寻路放到单独的寻路模块、镜头放入镜头模块，AI只作为内容的使用方</li>
-  </ol>
-</blockquote>
-
-<p>将知识储存到场景中。</p>
-
-<blockquote>
-  <p>举例：
-场景中包含可交互物与交互方法，这样就把交互逻辑与逻辑主题分开，方便组合、更新。</p>
-</blockquote>
-
-<h2 id="总结灵活使用解决问题">总结：灵活使用解决问题</h2>
-
-<p>AI有着多种技术架构与架构对应擅长的逻辑表达，有些时候面临的是工具的表达能力的问题。但是更多时候面对的是复杂情况的逻辑实现问题，灵活使用上述思维方式和技巧，能解决对应的复杂问题。</p>]]></content><author><name></name></author><category term="游戏AI" /><summary type="html"><![CDATA[一些游戏AI设计制作时候的思维方式和技巧，主要来自GameAIPro的这篇文章]]></summary></entry></feed>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry></feed>
