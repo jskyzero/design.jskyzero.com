@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-06-11T14:33:33+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-06-12T16:14:50+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：常见设计方法论</title><link href="https://design.jskyzero.com/2023/06/11/GameDesignTheory/" rel="alternate" type="text/html" title="游戏设计：常见设计方法论" /><published>2023-06-11T00:00:00+00:00</published><updated>2023-06-11T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/11/GameDesignTheory</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/11/GameDesignTheory/"><![CDATA[<h1 id="常见设计方法论">常见设计方法论</h1>
 
 <h2 id="理解游戏">理解游戏</h2>
@@ -28,8 +28,7 @@
 <h3 id="mmo的设计论">MMO的设计论</h3>
 
 <ul>
-  <li>可以宏观针对整个游戏，
-也可以微观针对单局</li>
+  <li>可以宏观针对整个游戏，也可以微观针对单局</li>
   <li>时期划分
     <ul>
       <li>新手期</li>
@@ -74,7 +73,7 @@
   <li>软件开发模型</li>
 </ul>
 
-<h3 id="关卡设计好准则">关卡设计好准则</h3>
+<h3 id="好关卡设计的10个准则">好关卡设计的10个准则</h3>
 
 <ul>
   <li>有趣引导、非文字叙事、做什么而非怎么做</li>
@@ -98,7 +97,9 @@
 
 <ul>
   <li>待补充</li>
-</ul>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[常见设计方法论]]></summary></entry><entry><title type="html">战斗系统：实现塞尔达的冒险感</title><link href="https://design.jskyzero.com/2023/05/26/zelda_totk/" rel="alternate" type="text/html" title="战斗系统：实现塞尔达的冒险感" /><published>2023-05-26T00:00:00+00:00</published><updated>2023-05-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/05/26/zelda_totk</id><content type="html" xml:base="https://design.jskyzero.com/2023/05/26/zelda_totk/"><![CDATA[<p>狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。</p>
+</ul>
+
+<h2 id="动作游戏专题">动作游戏专题</h2>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[常见设计方法论]]></summary></entry><entry><title type="html">战斗系统：实现塞尔达的冒险感</title><link href="https://design.jskyzero.com/2023/05/26/zelda_totk/" rel="alternate" type="text/html" title="战斗系统：实现塞尔达的冒险感" /><published>2023-05-26T00:00:00+00:00</published><updated>2023-05-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/05/26/zelda_totk</id><content type="html" xml:base="https://design.jskyzero.com/2023/05/26/zelda_totk/"><![CDATA[<p>狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。</p>
 
 <h2 id="角色性能">角色性能</h2>
 
