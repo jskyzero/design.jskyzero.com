@@ -22,11 +22,11 @@ permalink: /project/
 
 |时间|标签|课题|
 |--|--|--|
-|持续进行|游戏设计|[动作速查](https://design.jskyzero.com/2021/11/18/action_reference/)|
+|持续进行|游戏设计|[动作速查](https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/)|
 |待排期|游戏设计|地图设计：白模与UE4|
-|待排期|游戏设计|动作设计：BOX与节奏|
+|持续进行|游戏设计|动作设计：BOX与节奏|
 |待排期|游戏设计|AI深度学习|
-|放弃|游戏设计|市场洞察|
+|已完成|游戏设计|[市场洞察](https://design.jskyzero.com/2023/04/01/GameMarket/)|
 
 
 ## 计划表-其四
