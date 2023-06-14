@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-06-14T12:48:47+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-06-14T13:03:04+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：常见设计方法论</title><link href="https://design.jskyzero.com/2023/06/11/GameDesignTheory/" rel="alternate" type="text/html" title="游戏设计：常见设计方法论" /><published>2023-06-11T00:00:00+00:00</published><updated>2023-06-11T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/11/GameDesignTheory</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/11/GameDesignTheory/"><![CDATA[<h1 id="常见设计方法论">常见设计方法论</h1>
 
 <h2 id="理解游戏">理解游戏</h2>
@@ -41,13 +41,32 @@
 <h3 id="行为-体验论">行为-体验论</h3>
 
 <ul>
-  <li>合适地编排玩法
-（e.g. 体验蓝图、关卡节奏论、心流）</li>
-  <li>核心
+  <li>行为构成体验
     <ul>
       <li>设计师设计玩法</li>
       <li>玩家整对玩法做出行为</li>
       <li>微观行为构成宏观体验</li>
+    </ul>
+  </li>
+  <li>合适地编排玩法，以控制行为，带来体验
+（e.g. 体验蓝图、关卡节奏论、心流）</li>
+</ul>
+
+<h3 id="理性关卡设计">理性关卡设计</h3>
+
+<ul>
+  <li>表现服从功能：玩法、玩点、输入&amp;技巧、参数控制</li>
+  <li>步骤：
+    <ul>
+      <li>出发点：社交、自主、高手、内心诉求</li>
+      <li>技巧：物理 &amp; 脑力
+        <ul>
+          <li>时间点、反应力、操作熟练度、准确性</li>
+          <li>资源管理、分析策略、长期战略、短期战术</li>
+        </ul>
+      </li>
+      <li>定义参数，落地到模块</li>
+      <li>确定表现</li>
     </ul>
   </li>
 </ul>
