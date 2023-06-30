@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-06-17T03:49:08+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-06-30T12:50:47+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
 
 <h2 id="开发阶段及其概览">开发阶段及其概览</h2>
@@ -3742,101 +3742,8 @@
 <ul>
   <li><a href="https://mhrise.kiranico.com/data/monsters/366824395">MHRISE.KIRANICO Rathian</a></li>
   <li><a href="https://mhrise.mhrice.info/version/10.0.2/monster/001_00.html">mhrice.info Rathian</a></li>
-</ul>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry><entry><title type="html">怪物猎人的战斗数值设计</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="怪物猎人的战斗数值设计" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<p>得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。</p>
+</ul>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry><entry><title type="html">有趣但不为人知的游戏机制</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="有趣但不为人知的游戏机制" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<h1 id="有趣但不为人知的游戏机制">有趣但不为人知的游戏机制</h1>
 
-<!-- 近期怪物猎人崛起曙光DLC发售，截止本文编写时发售已超过300万销量，怪物猎人系列累计总销量也逼近7000万。 -->
+<h2 id="怪物猎人-肉质斩味机制">怪物猎人 肉质、斩味机制</h2>
 
-<!--more-->
-
-<!-- ，力求展现出设计的精妙之处与独特魅力；本文不希望用大量数据与公式劝退读者，会尽量结合图示，用口语化的逻辑表达。 -->
-
-<!-- 开始之前：
-1. 本文主要基于：体验反拆、拆包数据。这些规则可能会随着版本更迭而产生变动，本文希望聚焦于做法的逻辑哲学，而非数据本身的严格正确性。
-2. 本文很可能存在纰漏和个人主观意见，欢迎指正和讨论。 -->
-
-<h1 id="怪物猎人的战斗数值设计">怪物猎人的战斗数值设计</h1>
-
-<h2 id="伤害公式改变玩家行为">伤害公式改变玩家行为</h2>
-
-<p>“要帅，还是要强”似乎是ARPG中一个永恒争论的话题，反应了玩家对于帅气动作和数值的追求与选择，但是事实上，任何能改变伤害数字的规则都会对玩家的决策和行为带来影响，本节我们会层层深入介绍怪物猎人伤害的产生过程，以及说明这些数值是如何影响玩家决策的。</p>
-
-<h3 id="用强大的招式击中弱点受击部位">用强大的招式击中弱点受击部位</h3>
-
-<p>基础公式：攻击力 <em>动作值</em> 肉质</p>
-
-<ul>
-  <li>攻击力</li>
-</ul>
-
-<p>基础数值的攻击力，打开个人属性面板上面现实的东西。</p>
-
-<p>这个最终数值由很多部分构成，其中最重要的是武器面板上显示的攻击力。</p>
-
-<ul>
-  <li>动作值</li>
-</ul>
-
-<p>强大的招式，比如大剑的真蓄力斩，可能是全游戏动作值最高的攻击动作。相对应的，有着较难使出的规则（两次蓄力斩后）和较难击中的攻击轨迹（先砍中一刀再砍中一刀，同时有着向前的位移）。</p>
-
-<ul>
-  <li>肉质</li>
-</ul>
-
-<p>怪物的弱点。由于猎物体型过大，所以引入了打中不同部位，有着不同的打击效果和伤害。</p>
-
-<p>大多数怪物的弱点都是头部，相对应的，怪物头部面前也是最危险的区域。</p>
-
-<h3 id="追求伤害更高的武器与各项养成">追求伤害更高的武器与各项养成</h3>
-
-<ul>
-  <li>数值分布</li>
-</ul>
-
-<p>简单划分一下分为战前和战中。</p>
-
-<p>战前：武器，技能（来自防具、护士、珠子、等等），猫饭，背包
-战中：触发型技能，消耗品（鬼人三件套等），增益BUFF（笛子的旋律等）</p>
-
-<ul>
-  <li>打击系统</li>
-</ul>
-
-<p>怪物猎人分为三种打击系统，斩击系、打击系、弹系列。</p>
-
-<p>斩击系的特点是有着切断属性，消耗斩味。</p>
-
-<ul>
-  <li>元素攻击</li>
-</ul>
-
-<p>武器上可能有着元素补正。会根据怪物部位的属性吸收计算伤害。</p>
-
-<h2 id="生存能力与难度调节">生存能力与难度调节</h2>
-
-<p>本节我们对玩家生存进行一些说明，不同ARPG在玩家生存能力和体验这方面有较大分歧，这里也会进行一些讨论。</p>
-
-<h3 id="防御力">防御力</h3>
-
-<p>类似MOBA的公式思路。</p>
-
-<h3 id="恢复能力">恢复能力</h3>
-
-<p>模型允许战斗中允许大量恢复。</p>
-
-<h2 id="更多关于怪物">更多关于怪物</h2>
-
-<p>本节我们讨论前面遗漏的一些怪物属性，主要说明如何管理不同关卡数值的差异性。</p>
-
-<p>血量，数值补正。</p>
-
-<h2 id="其它遗漏与参考">其它遗漏与参考</h2>
-
-<h3 id="动作向左rpg向右">动作向左、RPG向右</h3>
-
-<p>动作游戏专注于动作性的呈现：流畅的控制感，强力的打击效果——有着独特的魅力；而RPG游戏则有着引人入胜的剧情、数值的成长感。</p>
-
-<p><img src="/assets/img/gameplay/mhrsb/1.svg" alt="" /></p>
-
-<p>以<a href="https://m.douban.com/book/subject/35006358/">游戏感</a>的框架来说：动作游戏会更加专注于<strong>实时操控带来的反馈</strong>，而RPG则能在模拟空间带来更多诸如<strong>故事体验</strong>、<strong>人物成长的体验</strong>，于是当玩家对游戏能带来的体验有着更高期待时，ARPG诞生了，它保留了ACT的核心战斗带来的操控感，又引入RPG带来更好的叙事与更长的数值成长周期。再结合不同的体验侧重与机制设计，成功产生了各式各样的名家名作。</p>
-
-<p>上面我们要聊的是怪物猎人，这就是一款核心玩法基于猎人狩猎大型怪物、很好的平衡了动作性与数值成长的ARPG。“数值成长”体验的引入不仅带来了成长的体验延长了整个游戏的生命周期，也为ACT的单局带来了更多策略和战斗行为的改变。</p>]]></content><author><name></name></author><summary type="html"><![CDATA[得益于越来越多的游戏登录PC，自定义的MOD和数据拆包变得更为简单，本文将借助拆包数据，对怪物猎人的经典数值规则进行一个简要介绍，用于以后设计参考。]]></summary></entry></feed>
+<h2 id="黑魂3-冲击力-韧性机制">黑魂3 冲击力-韧性机制</h2>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[有趣但不为人知的游戏机制]]></summary></entry></feed>
