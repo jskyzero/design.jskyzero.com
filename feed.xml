@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-02T11:33:13+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-03T04:12:36+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
 
 <h2 id="开发阶段及其概览">开发阶段及其概览</h2>
 
 <h2 id="topdown设计">TopDown设计</h2>
 
-<h2 id="九宫格设计">九宫格设计</h2>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[游戏设计：开放世界设计]]></summary></entry><entry><title type="html">游戏设计：常见设计方法论</title><link href="https://design.jskyzero.com/2023/06/11/GameDesignTheory/" rel="alternate" type="text/html" title="游戏设计：常见设计方法论" /><published>2023-06-11T00:00:00+00:00</published><updated>2023-06-11T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/11/GameDesignTheory</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/11/GameDesignTheory/"><![CDATA[<h1 id="常见设计方法论">常见设计方法论</h1>
+<h2 id="九宫格设计">九宫格设计</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[游戏设计：开放世界设计]]></summary></entry><entry><title type="html">游戏设计：常见设计方法论</title><link href="https://design.jskyzero.com/2023/06/11/GameDesignTheory/" rel="alternate" type="text/html" title="游戏设计：常见设计方法论" /><published>2023-06-11T00:00:00+00:00</published><updated>2023-06-11T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/11/GameDesignTheory</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/11/GameDesignTheory/"><![CDATA[<h1 id="常见设计方法论">常见设计方法论</h1>
 
 <h2 id="理解游戏">理解游戏</h2>
 
@@ -3746,4 +3746,4 @@
 
 <h2 id="怪物猎人-肉质斩味机制">怪物猎人 肉质、斩味机制</h2>
 
-<h2 id="黑魂3-冲击力-韧性机制">黑魂3 冲击力-韧性机制</h2>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[有趣但不为人知的游戏机制]]></summary></entry></feed>
+<h2 id="黑魂3-冲击力-韧性机制">黑魂3 冲击力-韧性机制</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[有趣但不为人知的游戏机制]]></summary></entry></feed>
