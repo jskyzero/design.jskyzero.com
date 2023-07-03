@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 游戏设计：文章访谈摘录
+title: 游戏访谈&文章摘录
 featured-img: bg3
 mathjax: true
-categories: [游戏开发]
+categories: [杂谈]
 long-term-maintenance: true
 ---
 

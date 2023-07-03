@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "有意思的10个游戏机制"
-categories: [游戏体验]
+# categories: [游戏体验]
 ---
 
 # 有趣但不为人知的游戏机制
