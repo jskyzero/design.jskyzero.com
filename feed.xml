@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-03T04:12:36+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-04T17:41:45+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
 
 <h2 id="开发阶段及其概览">开发阶段及其概览</h2>
@@ -3735,12 +3735,144 @@
 
 <h2 id="体验反推">体验反推</h2>
 
+<p>这部分开始就比较虚了，我们会先根据经验值设定一个“起点”，再选取几只经典的怪物的逐只看看，逐步去修正我们的“起点”。</p>
+
+<p><img src="/assets/img/gameplay/mhrsb.AI/3.jpg" alt="" /></p>
+
+<p>参考上图，考虑到怪物猎人是一个规则设计非常繁多的游戏，以下内容我们还是希望聚焦到<strong>战斗中的“出招设计”</strong>上。</p>
+
+<p>我们先把怪物的AI行为分为战斗和其他两部分。（参考下图上半部分）</p>
+
+<p>根据体验，怪物一般会有正常状态、愤怒状态（、疲劳状态）三种，同时怪物可能还有自身的强化状态的逻辑（参考下图下半部分）：</p>
+
+<p><img src="/assets/img/gameplay/mhrsb.AI/4.jpg" alt="" /></p>
+
+<p>进一步的分析，我们以一些UP主的视频为参考展开：</p>
+
+<h3 id="爵银龙">爵银龙</h3>
+
+<p><a href="https://www.bilibili.com/video/BV1JF411c7f7">【曙光怪物底裤系列#1爵银龙】爵银龙的常见招式派生解析</a></p>
+
+<ul>
+  <li>特殊状态：劫血状态</li>
+  <li>连招中猎人位置变化：
+    <ul>
+      <li>判断猎人位置不合适：小后跳or短车，再继续</li>
+      <li>判断猎人位置不合适且无法修正：强制结束</li>
+      <li>多数连招判断猎人在背后：尾刺连招</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>状态</th>
+      <th>连招</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>非怒</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>伯爵三血球»站立尾刺(尾刺)»翼爪穿刺(下砸)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>侧飞»鲜血吐息</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>螺旋冲锋(螺旋冲)»翻沙舞石(空气炮)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>捞手»翼爪穿刺(下砸)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>前咬»翼爪穿刺(下砸)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>空翻»站立尾刺(尾刺)»翼爪穿刺(下砸)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>普通怒</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>螺旋冲锋(螺旋冲)»中远距离»三血球»站立尾刺(尾刺)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>螺旋冲锋(螺旋冲)»头前距离»溅石飞扑(前扑)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>侧飞»翼爪穿刺(下砸)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>普通状态选择性连招</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>侧咬»前砸/捕食/翼爪挥击(扫地)/(背后)尾刺</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>翼爪挥击(扫地)»大部分体术/(背后)尾刺</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>蛇形车»大部分体术/(背后)尾刺</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>原地狠砸(大下砸)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>鲜血之球(吐痰挥球)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>迅捷扇风(风压)</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
 <p>以下施工中……</p>
 
 <h2 id="其他参考">其他参考</h2>
 
 <ul>
   <li><a href="https://mhrise.kiranico.com/data/monsters/366824395">MHRISE.KIRANICO Rathian</a></li>
+  <li><a href="https://mhworld.kiranico.com/zh">MHWORLD.KIRANIC</a></li>
   <li><a href="https://mhrise.mhrice.info/version/10.0.2/monster/001_00.html">mhrice.info Rathian</a></li>
 </ul>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry><entry><title type="html">有意思的10个游戏机制</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="有意思的10个游戏机制" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<h1 id="有趣但不为人知的游戏机制">有趣但不为人知的游戏机制</h1>
 
