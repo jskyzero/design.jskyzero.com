@@ -8,5 +8,5 @@ Gemfile.lock
 node_modules
 .DS_Store
 _site
-.drawio.bkp
-.drawio.dtmp
+*.drawio.bkp
+*.drawio.dtmp
