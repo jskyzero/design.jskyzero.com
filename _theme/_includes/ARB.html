@@ -1,0 +1,27 @@
+<table style="display: table;">
+  <thead>
+    <tr>
+      <th>BOSS</th>
+      <th>特色</th>
+      <th>招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- game,boss,feature,skills -->
+    {%- for line in site.data.ARB  -%}
+    {% if line.game == include.filter %}
+    <tr>
+      <td>{{ line.boss }}</td>
+      <td>
+          {%- for tag in [line.tag1, line.tag2, line.tag3, line.tag4] -%}
+          {% if tag != nil and tag != "" and tag != " " %}
+            <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat">
+          {% endif %}
+          {%- endfor -%}
+      </td>
+      <td>{{ line.skills }}</td>
+    </tr>
+    {% endif %}
+    {%- endfor -%}
+  </tbody>
+</table>

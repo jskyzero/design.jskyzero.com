@@ -10,6 +10,16 @@ categories: [动作游戏分析]
 # 动作设计参考·BOSS篇
 
 
+## 新增
+
+
+### Final Fantasy XVI
+
+![](/assets/draw.io/output/ff16.jpg)
+
+{% include ARB.html filter = "ff16"%}
+
+
 ## From Software
 
 

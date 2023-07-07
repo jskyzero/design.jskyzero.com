@@ -1,3 +1,4 @@
 {
   "workbench.colorTheme": "Solarized Light",
+  "explorer.excludeGitIgnore": true,
 }
