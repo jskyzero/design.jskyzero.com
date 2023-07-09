@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-07T17:26:18+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-09T17:23:02+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
 
 <h2 id="开发阶段及其概览">开发阶段及其概览</h2>
@@ -795,419 +795,421 @@
 <table style="display: table;">
   <thead>
     <tr>
+      <!-- <th>FF16</th> -->
+      <th></th>
       <th>BOSS</th>
       <th>特色</th>
       <th>招式</th>
     </tr>
   </thead>
   <tbody>
-    <!-- game,boss,feature,skills -->
-    <tr>
-      <td>1.魔界花</td>
+    <!-- game,boss,feature,skills --><tr>
+      <td>1</td>
+      <td>魔界花</td>
       <td>
             <img src="https://img.shields.io/badge/ 体型-2倍-green.svg?style=flat" />
           </td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>2.辉耀龙骑士</td>
+      <td>2</td>
+      <td>辉耀龙骑士</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>3.召唤兽大战 不死鸟</td>
+      <td>3</td>
+      <td>召唤兽不死鸟</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>4.提亚马特</td>
+      <td>4</td>
+      <td>提亚马特</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>5.法夫纳</td>
+      <td>5</td>
+      <td>法夫纳</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>6.暗夜渡鸦</td>
+      <td>6</td>
+      <td>暗夜渡鸦</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>7.妙翅</td>
+      <td>7</td>
+      <td>妙翅</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>8.贝妮迪塔</td>
+      <td>8</td>
+      <td>贝妮迪塔</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>9.迦楼罗</td>
+      <td>9</td>
+      <td>迦楼罗</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>10.召唤兽大战 迦楼罗</td>
+      <td>10</td>
+      <td>召唤兽迦楼罗</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>11.余晖龙骑士</td>
+      <td>11</td>
+      <td>余晖龙骑士</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>12.铁巨人</td>
+      <td>12</td>
+      <td>铁巨人</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>13.炎影伊芙利特&amp;克莱夫</td>
+      <td>13</td>
+      <td>炎影伊芙利特&amp;克莱夫</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>14.阿卡夏巨龙</td>
+      <td>14</td>
+      <td>阿卡夏巨龙</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>15.召唤兽大战 提丰</td>
+      <td>15</td>
+      <td>召唤兽提丰</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>16.达尔梅奇亚军用豹</td>
+      <td>16</td>
+      <td>达尔梅奇亚军用豹</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>17.黝暗龙骑士</td>
+      <td>17</td>
+      <td>黝暗龙骑士</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>18.阿卡夏魔界花</td>
+      <td>18</td>
+      <td>阿卡夏魔界花</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>19.火蜥蜴</td>
+      <td>19</td>
+      <td>火蜥蜴</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>20.液态火焰（没录全）</td>
+      <td>20</td>
+      <td>液态火焰</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>21.长须豹</td>
+      <td>21</td>
+      <td>长须豹</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>22.胡戈</td>
+      <td>22</td>
+      <td>胡戈</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>23.半兽人督军</td>
+      <td>23</td>
+      <td>半兽人督军</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>24.送葬者</td>
+      <td>24</td>
+      <td>送葬者</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>25.召唤兽大战 泰坦</td>
+      <td>25</td>
+      <td>召唤兽泰坦</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>26.白龙</td>
+      <td>26</td>
+      <td>白龙</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>27.惧死者</td>
+      <td>27</td>
+      <td>惧死者</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>28.召唤兽大战 巴哈姆特（一阶段）</td>
+      <td>28</td>
+      <td>召唤兽巴哈姆特（一阶段）</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>29.召唤兽大战 巴哈姆特（二阶段）</td>
+      <td>29</td>
+      <td>召唤兽巴哈姆特（二阶段）</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>30.斯莱普尼尔</td>
+      <td>30</td>
+      <td>斯莱普尼尔</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>31.巴拿巴斯·初</td>
+      <td>31</td>
+      <td>巴拿巴斯·初</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>32.夺魂者</td>
+      <td>32</td>
+      <td>夺魂者</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>33.控制系统&amp;金巨人</td>
+      <td>33</td>
+      <td>控制系统&amp;金巨人</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>34.巴拿巴斯·终</td>
+      <td>34</td>
+      <td>巴拿巴斯·终</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>35.贝希摩斯</td>
+      <td>35</td>
+      <td>贝希摩斯</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>36.阿尔蒂玛</td>
+      <td>36</td>
+      <td>阿尔蒂玛</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>37.最终之战 阿尔提玛</td>
+      <td>37</td>
+      <td>最终之战阿尔提玛</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>38.恶名精英——C冥鬼之眼</td>
+      <td>38</td>
+      <td>悬赏：C冥鬼之眼</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>39.恶名精英——C阿留那</td>
+      <td>39</td>
+      <td>悬赏：C阿留那</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>40.恶名精英——C格瑞玛钦</td>
+      <td>40</td>
+      <td>悬赏：C格瑞玛钦</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>41.恶名精英——C灵魂刺针</td>
+      <td>41</td>
+      <td>悬赏：C灵魂刺针</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>42.恶名精英——C狼群</td>
+      <td>42</td>
+      <td>悬赏：C狼群</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>43.恶名精英——B贝尔芬格</td>
+      <td>43</td>
+      <td>悬赏：B贝尔芬格</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>44.恶名精英——B爆弹怪之王</td>
+      <td>44</td>
+      <td>悬赏：B爆弹怪之王</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>45.恶名精英——B卡萝特</td>
+      <td>45</td>
+      <td>悬赏：B卡萝特</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>46.恶名精英——B赛克雷特</td>
+      <td>46</td>
+      <td>悬赏：B赛克雷特</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>47.恶名精英——B赛文利特</td>
+      <td>47</td>
+      <td>悬赏：B赛文利特</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>48.恶名精英——B法斯提托卡伦</td>
+      <td>48</td>
+      <td>悬赏：B法斯提托卡伦</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>49.恶名精英——B花棍10</td>
+      <td>49</td>
+      <td>悬赏：B花棍</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>50.恶名精英——B神圣号兵</td>
+      <td>50</td>
+      <td>悬赏：B神圣号兵</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>51.恶名精英——A黑剑9</td>
+      <td>51</td>
+      <td>悬赏：A黑剑</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>52.恶名精英——A软糊怪王子</td>
+      <td>52</td>
+      <td>悬赏：A软糊怪王子</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>53.恶名精英——A惊骇彗星</td>
+      <td>53</td>
+      <td>悬赏：A惊骇彗星</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>54.恶名精英——A马格斯兄弟</td>
+      <td>54</td>
+      <td>悬赏：A马格斯兄弟</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>55.恶名精英——A塔纳托斯</td>
+      <td>55</td>
+      <td>悬赏：A塔纳托斯</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>56.恶名精英——A终端系统</td>
+      <td>56</td>
+      <td>悬赏：A终端系统</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>57.恶名精英——A死亡王子</td>
+      <td>57</td>
+      <td>悬赏：A死亡王子</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>58.恶名精英——A执意龙骑士</td>
+      <td>58</td>
+      <td>悬赏：A执意龙骑士</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>59.恶名精英——A阿嗜尼</td>
+      <td>59</td>
+      <td>悬赏：A阿嗜尼</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>60.恶名精英——A拜库扎</td>
+      <td>60</td>
+      <td>悬赏：A拜库扎</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>61.恶名精英——A拜格尔</td>
+      <td>61</td>
+      <td>悬赏：A拜格尔</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>62.恶名精英——A基札玛路克</td>
+      <td>62</td>
+      <td>悬赏：A基札玛路克</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>63.恶名精英——A葛柏穆克</td>
+      <td>63</td>
+      <td>悬赏：A葛柏穆克</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>64.恶名精英——S阿特拉斯</td>
+      <td>64</td>
+      <td>悬赏：S阿特拉斯</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>65.恶名精英——S强化奇美拉</td>
+      <td>65</td>
+      <td>悬赏：S强化奇美拉</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>66.恶名精英——S斯瓦洛格</td>
+      <td>66</td>
+      <td>悬赏：S斯瓦洛格</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>67.恶名精英——S万魔殿</td>
+      <td>67</td>
+      <td>悬赏：S万魔殿</td>
       <td></td>
       <td> </td>
     </tr>
-    
     <tr>
-      <td>68.恶名精英——S帝王贝希摩斯</td>
+      <td>68</td>
+      <td>悬赏：S帝王贝希摩斯</td>
       <td></td>
       <td></td>
     </tr>
@@ -1218,607 +1220,724 @@
 
 <h3 id="恶魔之魂">恶魔之魂</h3>
 
-<table>
+<table style="display: table;">
   <thead>
     <tr>
-      <th>名字</th>
-      <th>学习</th>
-      <th>特色招式</th>
+      <!-- <th>DS</th> -->
+      <th></th>
+      <th>BOSS</th>
+      <th>特色</th>
+      <th>招式</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>P1. 扩散尖兵</td>
-      <td> </td>
-      <td> </td>
+    <!-- game,boss,feature,skills --><tr>
+      <td>1</td>
+      <td>扩散尖兵</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P2. 法拉克斯</td>
-      <td> </td>
-      <td> </td>
+      <td>2</td>
+      <td>法拉克斯</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P3. 吸血虫集合体</td>
-      <td> </td>
-      <td> </td>
+      <td>3</td>
+      <td>吸血虫集合体</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P4. 污秽巨像</td>
-      <td> </td>
-      <td> </td>
+      <td>4</td>
+      <td>污秽巨像</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P5. 高脚铠甲蜘蛛</td>
-      <td> </td>
-      <td> </td>
+      <td>5</td>
+      <td>高脚铠甲蜘蛛</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P6. 火炎潜伏者</td>
-      <td> </td>
-      <td> </td>
+      <td>6</td>
+      <td>火炎潜伏者</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P7. 龙神</td>
-      <td> </td>
-      <td> </td>
+      <td>7</td>
+      <td>龙神</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P8. 少女雅思兰莉亚</td>
-      <td> </td>
-      <td> </td>
+      <td>8</td>
+      <td>少女雅思兰莉亚</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P9. 高塔骑士</td>
-      <td> </td>
-      <td> </td>
+      <td>9</td>
+      <td>高塔骑士</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P10. 贯穿骑士</td>
-      <td> </td>
-      <td> </td>
+      <td>10</td>
+      <td>贯穿骑士</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P11. 愚者偶像</td>
-      <td> </td>
-      <td> </td>
+      <td>11</td>
+      <td>愚者偶像</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P12. 吃人鬼</td>
-      <td>石像鬼</td>
-      <td> </td>
+      <td>12</td>
+      <td>吃人鬼</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P13. 黄衣老翁</td>
-      <td> </td>
-      <td> </td>
+      <td>13</td>
+      <td>黄衣老翁</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P14. 审判者</td>
-      <td>鸟与屠夫</td>
-      <td> </td>
+      <td>14</td>
+      <td>审判者</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P15. 老勇士</td>
-      <td> </td>
-      <td> </td>
+      <td>15</td>
+      <td>老勇士</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P16. 风暴王</td>
-      <td> </td>
-      <td> </td>
+      <td>16</td>
+      <td>风暴王</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P17. 旧王欧兰特</td>
-      <td> </td>
-      <td> </td>
+      <td>17</td>
+      <td>旧王欧兰特</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P18. Evil Ending</td>
-      <td> </td>
-      <td> </td>
+      <td>18</td>
+      <td>EvilEnding</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P19. 最终BOSS &amp; Good Ending</td>
-      <td> </td>
-      <td> </td>
+      <td>19</td>
+      <td>最终BOSS&amp;GoodEnding</td>
+      <td></td>
+      <td></td>
     </tr>
-  </tbody>
+    </tbody>
 </table>
 
 <h3 id="黑暗灵魂1">黑暗灵魂1</h3>
 
 <p>其实，我还没玩过，姑且列在这里……</p>
 
-<table>
+<table style="display: table;">
   <thead>
     <tr>
-      <th>名字</th>
-      <th>学习</th>
-      <th>特色招式</th>
+      <!-- <th>DS1</th> -->
+      <th></th>
+      <th>BOSS</th>
+      <th>特色</th>
+      <th>招式</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <!-- game,boss,feature,skills --><tr>
+      <td>1</td>
       <td>黯影太阳葛温德林</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>2</td>
       <td>白龙希斯</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>3</td>
       <td>百足恶魔</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>4</td>
       <td>半龙普利希拉</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>5</td>
       <td>不死院恶魔</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>6</td>
       <td>持续溃烂的生物</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>7</td>
       <td>恶魔火焰司祭</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>8</td>
       <td>钢铁巨偶</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>9</td>
       <td>黑龙喀拉弥特</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>10</td>
       <td>灰色大狼希夫</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>11</td>
       <td>混沌的温床（火焰壶逃课）</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>12</td>
       <td>混沌魔女克拉格</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>13</td>
       <td>离群恶魔</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>14</td>
       <td>灵庙圣兽</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>15</td>
       <td>墓王尼特</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>16</td>
       <td>牛头恶魔</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>17</td>
       <td>骑士亚尔特留斯</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>18</td>
       <td>三人尸术师</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>19</td>
       <td>山羊头恶魔</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>20</td>
       <td>深渊之主马努斯</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>21</td>
       <td>守钟的石像鬼</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>22</td>
       <td>贪食魔龙</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>23</td>
       <td>翁斯坦／斯摩（先鲨斯摩）</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>24</td>
       <td>乌薪王葛温（纯翻滚）</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>25</td>
       <td>小隆德四王</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>26</td>
       <td>月光蝶</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
-  </tbody>
+    </tbody>
 </table>
 
 <h3 id="黑暗灵魂2">黑暗灵魂2</h3>
 
 <p>其实，我也还没玩过，姑且列在这里……</p>
 
-<table>
+<table style="display: table;">
   <thead>
     <tr>
-      <th>名字</th>
-      <th>学习</th>
-      <th>特色招式</th>
+      <!-- <th>DS2</th> -->
+      <th></th>
+      <th>BOSS</th>
+      <th>特色</th>
+      <th>招式</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>01.最后的巨人</td>
-      <td> </td>
-      <td> </td>
+    <!-- game,boss,feature,skills --><tr>
+      <td>1</td>
+      <td>最后的巨人</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>02.咒缚者</td>
-      <td> </td>
-      <td> </td>
+      <td>2</td>
+      <td>咒缚者</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>03.茫然卫兵</td>
-      <td> </td>
-      <td> </td>
+      <td>3</td>
+      <td>茫然卫兵</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>04.守钟的石像鬼</td>
-      <td> </td>
-      <td> </td>
+      <td>4</td>
+      <td>守钟的石像鬼</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>05.遗忘的罪人</td>
-      <td> </td>
-      <td> </td>
+      <td>5</td>
+      <td>遗忘的罪人</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>06.古龙猎人</td>
-      <td> </td>
-      <td> </td>
+      <td>6</td>
+      <td>古龙猎人</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>07.龙骑兵</td>
-      <td> </td>
-      <td> </td>
+      <td>7</td>
+      <td>龙骑兵</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>08.放逐罪执行者</td>
-      <td> </td>
-      <td> </td>
+      <td>8</td>
+      <td>放逐罪执行者</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>09.邢吏查略特</td>
-      <td> </td>
-      <td> </td>
+      <td>9</td>
+      <td>邢吏查略特</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>10.骷髅王</td>
-      <td> </td>
-      <td> </td>
+      <td>10</td>
+      <td>骷髅王</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>11.贪食恶魔</td>
-      <td> </td>
-      <td> </td>
+      <td>11</td>
+      <td>贪食恶魔</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>12.毒妃米妲</td>
-      <td> </td>
-      <td> </td>
+      <td>12</td>
+      <td>毒妃米妲</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>13.鎔铁恶魔</td>
-      <td> </td>
-      <td> </td>
+      <td>13</td>
+      <td>鎔铁恶魔</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>14.铁之古王</td>
-      <td> </td>
-      <td> </td>
+      <td>14</td>
+      <td>铁之古王</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>15.鼠王先锋</td>
-      <td> </td>
-      <td> </td>
+      <td>15</td>
+      <td>鼠王先锋</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>16.蝎子钠吉卡</td>
-      <td> </td>
-      <td> </td>
+      <td>16</td>
+      <td>蝎子钠吉卡</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>17.徘徊的术士</td>
-      <td> </td>
-      <td> </td>
+      <td>17</td>
+      <td>徘徊的术士</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>18.公爵的弗雷迪亚</td>
-      <td> </td>
-      <td> </td>
+      <td>18</td>
+      <td>公爵的弗雷迪亚</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>19.鼠王的试炼</td>
-      <td> </td>
-      <td> </td>
+      <td>19</td>
+      <td>鼠王的试炼</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>20.腐败物</td>
-      <td> </td>
-      <td> </td>
+      <td>20</td>
+      <td>腐败物</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>21.龙骑兵x2</td>
-      <td> </td>
-      <td> </td>
+      <td>21</td>
+      <td>龙骑兵x</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>22.镜之战士</td>
-      <td> </td>
-      <td> </td>
+      <td>22</td>
+      <td>镜之战士</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>23.歌唱恶魔</td>
-      <td> </td>
-      <td> </td>
+      <td>23</td>
+      <td>歌唱恶魔</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>24.【王盾】韦施塔德</td>
-      <td> </td>
-      <td> </td>
+      <td>24</td>
+      <td>【王盾】韦施塔德</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>25.看守龙</td>
-      <td> </td>
-      <td> </td>
+      <td>25</td>
+      <td>看守龙</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>26.古龙</td>
-      <td> </td>
-      <td> </td>
+      <td>26</td>
+      <td>古龙</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>27.巨人王</td>
-      <td> </td>
-      <td> </td>
+      <td>27</td>
+      <td>巨人王</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>28.汎克拉德</td>
-      <td> </td>
-      <td> </td>
+      <td>28</td>
+      <td>汎克拉德</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>29.【污秽】艾雷娜</td>
-      <td> </td>
-      <td> </td>
+      <td>29</td>
+      <td>【污秽】艾雷娜</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>30.沉睡之龙 罪龙</td>
-      <td> </td>
-      <td> </td>
+      <td>30</td>
+      <td>沉睡之龙罪龙</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>31.DLC三基佬</td>
-      <td> </td>
-      <td> </td>
+      <td>31</td>
+      <td>DLC三基佬</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>32.蓝色鎔铁恶魔</td>
-      <td> </td>
-      <td> </td>
+      <td>32</td>
+      <td>蓝色鎔铁恶魔</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>33.烟之骑士</td>
-      <td> </td>
-      <td> </td>
+      <td>33</td>
+      <td>烟之骑士</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>34.骑士亚伦</td>
-      <td> </td>
-      <td> </td>
+      <td>34</td>
+      <td>骑士亚伦</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>35.王宠厄娃</td>
-      <td> </td>
-      <td> </td>
+      <td>35</td>
+      <td>王宠厄娃</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>36.王宠札连&amp;王宠拉铎</td>
-      <td> </td>
-      <td> </td>
+      <td>36</td>
+      <td>王宠札连&amp;王宠拉铎</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>37.焦灼的白王</td>
-      <td> </td>
-      <td> </td>
+      <td>37</td>
+      <td>焦灼的白王</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>38.黑暗潜伏者</td>
-      <td> </td>
-      <td> </td>
+      <td>38</td>
+      <td>黑暗潜伏者</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>39.最终BOSS三连战+结</td>
-      <td> </td>
-      <td> </td>
+      <td>39</td>
+      <td>最终BOSS三连战+结</td>
+      <td></td>
+      <td></td>
     </tr>
-  </tbody>
+    </tbody>
 </table>
 
 <h3 id="黑暗灵魂3">黑暗灵魂3</h3>
 
-<table>
+<table style="display: table;">
   <thead>
     <tr>
-      <th>名字</th>
-      <th>学习</th>
-      <th>特色招式</th>
+      <!-- <th>DS3</th> -->
+      <th></th>
+      <th>BOSS</th>
+      <th>特色</th>
+      <th>招式</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>P1. 灰烬审判者古达</td>
-      <td> </td>
-      <td> </td>
+    <!-- game,boss,feature,skills --><tr>
+      <td>1</td>
+      <td>灰烬审判者古达</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P2. 冷冽谷的玻尔多</td>
-      <td> </td>
-      <td> </td>
+      <td>2</td>
+      <td>冷冽谷的玻尔多</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P3. 咒蚀大树</td>
-      <td> </td>
-      <td> </td>
+      <td>3</td>
+      <td>咒蚀大树</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P4. 结晶老者</td>
-      <td> </td>
-      <td> </td>
+      <td>4</td>
+      <td>结晶老者</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P5. 幽邃主教群</td>
-      <td> </td>
-      <td> </td>
+      <td>5</td>
+      <td>幽邃主教群</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P6. 深渊的监视者</td>
-      <td> </td>
-      <td> </td>
+      <td>6</td>
+      <td>深渊的监视者</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P7. 老恶魔王</td>
-      <td> </td>
-      <td> </td>
+      <td>7</td>
+      <td>老恶魔王</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P8. 霸王沃尼尔</td>
-      <td> </td>
-      <td> </td>
+      <td>8</td>
+      <td>霸王沃尼尔</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P9. 教宗沙力万</td>
-      <td> </td>
-      <td> </td>
+      <td>9</td>
+      <td>教宗沙力万</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P10. 吞噬神明的艾尔德利奇</td>
-      <td>蜈蚣尾</td>
-      <td> </td>
+      <td>10</td>
+      <td>吞噬神明的艾尔德利奇</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P11. 巨人尤姆</td>
-      <td> </td>
-      <td> </td>
+      <td>11</td>
+      <td>巨人尤姆</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P12. 冷冽谷的舞娘</td>
-      <td> </td>
-      <td> </td>
+      <td>12</td>
+      <td>冷冽谷的舞娘</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P13. 妖王欧斯罗艾斯</td>
-      <td>小龙人</td>
-      <td> </td>
+      <td>13</td>
+      <td>妖王欧斯罗艾斯</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P14. 英雄古达</td>
-      <td> </td>
-      <td> </td>
+      <td>14</td>
+      <td>英雄古达</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P15. 古老飞龙</td>
-      <td> </td>
-      <td> </td>
+      <td>15</td>
+      <td>古老飞龙</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P16. 无名王者</td>
-      <td> </td>
-      <td> </td>
+      <td>16</td>
+      <td>无名王者</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P17. 猎龙铠甲</td>
-      <td> </td>
-      <td> </td>
+      <td>17</td>
+      <td>猎龙铠甲</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P18. 孪生王子</td>
-      <td> </td>
-      <td> </td>
+      <td>18</td>
+      <td>孪生王子</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P19. 薪王们的化身</td>
-      <td> </td>
-      <td> </td>
+      <td>19</td>
+      <td>薪王们的化身</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P20. 王者的守墓人(DLC1)</td>
-      <td>大狗+人</td>
-      <td> </td>
+      <td>20</td>
+      <td>王者的守墓人(DLC)</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>⭐️P21. 芙莉德修女（DLC1）</td>
-      <td> </td>
-      <td> </td>
+      <td>21</td>
+      <td>⭐️芙莉德修女（DLC）</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P22. 恶魔王子（DLC2）</td>
-      <td> </td>
-      <td> </td>
+      <td>22</td>
+      <td>恶魔王子（DLC）</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>⭐️P23. 吞噬黑暗的米狄尔（DLC2）</td>
-      <td>黑龙</td>
-      <td> </td>
+      <td>23</td>
+      <td>⭐️吞噬黑暗的米狄尔（DLC）</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P24. 「教堂之枪」贺弗莱特（DLC2）</td>
-      <td> </td>
-      <td> </td>
+      <td>24</td>
+      <td>「教堂之枪」贺弗莱特（DLC）</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>P25. 奴隶骑士盖尔（DLC2）</td>
-      <td> </td>
-      <td> </td>
+      <td>25</td>
+      <td>奴隶骑士盖尔（DLC）</td>
+      <td></td>
+      <td></td>
     </tr>
-  </tbody>
+    </tbody>
 </table>
 
 <ul>
@@ -1827,205 +1946,244 @@
 
 <h3 id="血源">血源</h3>
 
-<table>
+<table style="display: table;">
   <thead>
     <tr>
-      <th>名字</th>
-      <th>学习</th>
-      <th>特色招式</th>
+      <!-- <th>Bloodborne</th> -->
+      <th></th>
+      <th>BOSS</th>
+      <th>特色</th>
+      <th>招式</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <!-- game,boss,feature,skills --><tr>
+      <td>1</td>
       <td>阿米戈达拉</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>2</td>
       <td>埃波利耶塔，宇宙之女</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>3</td>
       <td>代理人阿梅利亚</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>4</td>
       <td>格曼，史上第一名猎人</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>5</td>
       <td>海姆维克的女巫</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>6</td>
       <td>黑暗怪兽帕阿尔</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>7</td>
       <td>加斯科因神父</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>8</td>
       <td>⭐️精神钟塔的玛利亚修女</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>9</td>
       <td>科斯孤儿</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>10</td>
       <td>劳伦斯，第一个代理人</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>11</td>
       <td>罗姆，空虚的蜘蛛</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>12</td>
       <td>米克拉什，噩梦之主</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>13</td>
       <td>墨戈的乳母</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>14</td>
       <td>缺血的怪兽</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>15</td>
       <td>神职人员怪兽</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>16</td>
       <td>失败者</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>17</td>
       <td>受诅的路德维格，神圣之剑</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>18</td>
       <td>天庭使者</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>19</td>
       <td>殉道者洛加留斯</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>20</td>
       <td>亚南之影</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>21</td>
       <td>月之血姬</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
+      <td>22</td>
       <td>重生之神</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
-  </tbody>
+    </tbody>
 </table>
 
 <h3 id="只狼">只狼</h3>
 
-<table>
+<table style="display: table;">
   <thead>
     <tr>
-      <th>名字</th>
-      <th>学习</th>
-      <th>特色招式</th>
+      <!-- <th>Sekiro</th> -->
+      <th></th>
+      <th>BOSS</th>
+      <th>特色</th>
+      <th>招式</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1幻影之蝶</td>
-      <td> </td>
-      <td> </td>
+    <!-- game,boss,feature,skills --><tr>
+      <td>1</td>
+      <td>幻影之蝶</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>2鬼形部</td>
-      <td> </td>
-      <td> </td>
+      <td>2</td>
+      <td>鬼形部</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>⭐️3苇名弦一郎</td>
-      <td> </td>
-      <td> </td>
+      <td>3</td>
+      <td>⭐️苇名弦一郎</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>6幻影破戒僧</td>
-      <td> </td>
-      <td> </td>
+      <td>4</td>
+      <td>幻影破戒僧</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>5无首狮子猿</td>
-      <td> </td>
-      <td> </td>
+      <td>5</td>
+      <td>无首狮子猿</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>⭐️4狮子猿</td>
-      <td> </td>
-      <td> </td>
+      <td>6</td>
+      <td>⭐️狮子猿</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>7苇名一心</td>
-      <td> </td>
-      <td> </td>
+      <td>7</td>
+      <td>苇名一心</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>8巨型忍者 枭</td>
-      <td> </td>
-      <td> </td>
+      <td>8</td>
+      <td>巨型忍者枭</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>9义父</td>
-      <td> </td>
-      <td> </td>
+      <td>9</td>
+      <td>义父</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>11樱龙</td>
-      <td> </td>
-      <td> </td>
+      <td>10</td>
+      <td>樱龙</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>10破戒僧</td>
-      <td> </td>
-      <td> </td>
+      <td>11</td>
+      <td>破戒僧</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>12怨恨之鬼</td>
-      <td> </td>
-      <td> </td>
+      <td>12</td>
+      <td>怨恨之鬼</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>13剑圣 苇名一心</td>
-      <td> </td>
-      <td> </td>
+      <td>13</td>
+      <td>剑圣苇名一心</td>
+      <td></td>
+      <td></td>
     </tr>
-  </tbody>
+    </tbody>
 </table>
 
 <h3 id="艾尔登法环">艾尔登法环</h3>
