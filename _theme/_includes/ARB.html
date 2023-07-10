@@ -18,11 +18,26 @@
       <td>{{ index }}</td>
       <td>{{ line.boss }}</td>
       <td>
-          {%- for tag in [line.image_tag1, line.attack_tag2, line.tag3, line.tag4] -%}
+          {%- assign tag = line.image_tag1-%}
           {% if tag != nil and tag != "" and tag != " " %}
             <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat">
           {% endif %}
-          {%- endfor -%}
+
+          {%- assign tag = line.attack_tag2 -%}
+          {% if tag != nil and tag != "" and tag != " " %}
+            <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat">
+          {% endif %}
+
+          {%- assign tag =line.tag3 -%}
+          {% if tag != nil and tag != "" and tag != " " %}
+            <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat">
+          {% endif %}
+
+          {%- assign tag = line.tag4 -%}
+          {% if tag != nil and tag != "" and tag != " " %}
+            <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat">
+          {% endif %}
+          
       </td>
       <td>{{ line.skills }}</td>
     </tr>
