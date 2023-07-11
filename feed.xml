@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-10T13:20:56+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-11T10:26:08+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
 
 <h2 id="开发阶段及其概览">开发阶段及其概览</h2>
@@ -813,7 +813,7 @@
           
           
       </td>
-      <td> </td>
+      <td> 触手伸地戳出、触手下拍地、吐毒、原地下压、触手左右拍地、转身</td>
     </tr>
     <tr>
       <td>2</td>
@@ -825,12 +825,18 @@
           
           
       </td>
-      <td> </td>
+      <td> 突刺、跳起下劈+旋风上挑、
+二连横扫、跳跃下戳、大后跳
+残血后：二连跳跃下戳、挥矛尾戳跳投雷枪、暴气击退</td>
     </tr>
     <tr>
       <td>3</td>
       <td>召唤兽不死鸟</td>
       <td>
+            <img src="https://img.shields.io/badge/形象-凤凰-red.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-火-red.svg?style=flat" />
+          
           
       </td>
       <td> </td>
@@ -839,6 +845,10 @@
       <td>4</td>
       <td>提亚马特</td>
       <td>
+            <img src="https://img.shields.io/badge/形象-剑士-gray.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/武器-剑-gray.svg?style=flat" />
+          
           
       </td>
       <td> </td>
@@ -847,6 +857,10 @@
       <td>5</td>
       <td>法夫纳</td>
       <td>
+            <img src="https://img.shields.io/badge/形象-蜥蜴-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-地-yellow.svg?style=flat" />
+          
           
       </td>
       <td> </td>
@@ -855,6 +869,10 @@
       <td>6</td>
       <td>暗夜渡鸦</td>
       <td>
+            <img src="https://img.shields.io/badge/形象-佣兵-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/武器-双匕首-yellow.svg?style=flat" />
+          
           
       </td>
       <td> </td>
@@ -863,6 +881,10 @@
       <td>7</td>
       <td>妙翅</td>
       <td>
+            <img src="https://img.shields.io/badge/形象-翼人-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-风-green.svg?style=flat" />
+          
           
       </td>
       <td> </td>
@@ -871,6 +893,10 @@
       <td>8</td>
       <td>贝妮迪塔</td>
       <td>
+            <img src="https://img.shields.io/badge/形象-翼人-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-风-green.svg?style=flat" />
+          
           
       </td>
       <td> </td>
@@ -879,6 +905,10 @@
       <td>9</td>
       <td>迦楼罗</td>
       <td>
+            <img src="https://img.shields.io/badge/体型-5倍-red.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-风-green.svg?style=flat" />
+          
           
       </td>
       <td> </td>
@@ -887,6 +917,10 @@
       <td>10</td>
       <td>召唤兽迦楼罗</td>
       <td>
+            <img src="https://img.shields.io/badge/形象-翼人-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-风-green.svg?style=flat" />
+          
           
       </td>
       <td> </td>
@@ -895,6 +929,10 @@
       <td>11</td>
       <td>余晖龙骑士</td>
       <td>
+            <img src="https://img.shields.io/badge/形象-凤凰-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/武器-长枪-yellow.svg?style=flat" />
+          
           
       </td>
       <td> </td>
@@ -903,6 +941,10 @@
       <td>12</td>
       <td>铁巨人</td>
       <td>
+            <img src="https://img.shields.io/badge/体型-2倍-green.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/武器-大刀-green.svg?style=flat" />
+          
           
       </td>
       <td> </td>
@@ -911,6 +953,10 @@
       <td>13</td>
       <td>炎影伊芙利特&amp;克莱夫</td>
       <td>
+            <img src="https://img.shields.io/badge/形象-黑化-gray.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-火-red.svg?style=flat" />
+          
           
       </td>
       <td> </td>
