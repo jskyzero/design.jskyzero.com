@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-11T10:26:08+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-12T03:22:58+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
 
 <h2 id="开发阶段及其概览">开发阶段及其概览</h2>
@@ -807,25 +807,27 @@
       <td>1</td>
       <td>魔界花</td>
       <td>
+          
             <img src="https://img.shields.io/badge/体型-2倍-green.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/元素-毒-purple.svg?style=flat" />
           
           
       </td>
-      <td> 触手伸地戳出、触手下拍地、吐毒、原地下压、触手左右拍地、转身</td>
+      <td>触手伸地戳出、触手下拍地、吐毒、原地下压、触手左右拍地、转身</td>
     </tr>
     <tr>
       <td>2</td>
       <td>辉耀龙骑士</td>
       <td>
+          
             <img src="https://img.shields.io/badge/形象-骑士-yellow.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/武器-长枪-yellow.svg?style=flat" />
           
           
       </td>
-      <td> 突刺、跳起下劈+旋风上挑、
+      <td>突刺、跳起下劈+旋风上挑、
 二连横扫、跳跃下戳、大后跳
 残血后：二连跳跃下戳、挥矛尾戳跳投雷枪、暴气击退</td>
     </tr>
@@ -833,570 +835,793 @@
       <td>3</td>
       <td>召唤兽不死鸟</td>
       <td>
+          
+          <p>瞄准射击 </p>
+          
             <img src="https://img.shields.io/badge/形象-凤凰-red.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/元素-火-red.svg?style=flat" />
           
           
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>4</td>
       <td>提亚马特</td>
       <td>
+          
             <img src="https://img.shields.io/badge/形象-剑士-gray.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/武器-剑-gray.svg?style=flat" />
           
           
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>5</td>
       <td>法夫纳</td>
       <td>
+          
             <img src="https://img.shields.io/badge/形象-蜥蜴-yellow.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/元素-地-yellow.svg?style=flat" />
           
           
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>6</td>
       <td>暗夜渡鸦</td>
       <td>
+          
             <img src="https://img.shields.io/badge/形象-佣兵-yellow.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/武器-双匕首-yellow.svg?style=flat" />
           
           
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>7</td>
       <td>妙翅</td>
       <td>
+          
             <img src="https://img.shields.io/badge/形象-翼人-yellow.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/元素-风-green.svg?style=flat" />
           
           
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>8</td>
       <td>贝妮迪塔</td>
       <td>
+          
             <img src="https://img.shields.io/badge/形象-翼人-yellow.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/元素-风-green.svg?style=flat" />
           
           
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>9</td>
       <td>迦楼罗</td>
       <td>
+          
             <img src="https://img.shields.io/badge/体型-5倍-red.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/元素-风-green.svg?style=flat" />
           
           
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>10</td>
       <td>召唤兽迦楼罗</td>
       <td>
+          
             <img src="https://img.shields.io/badge/形象-翼人-yellow.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/元素-风-green.svg?style=flat" />
           
           
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>11</td>
       <td>余晖龙骑士</td>
       <td>
+          
             <img src="https://img.shields.io/badge/形象-凤凰-yellow.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/武器-长枪-yellow.svg?style=flat" />
           
           
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>12</td>
       <td>铁巨人</td>
       <td>
+          
             <img src="https://img.shields.io/badge/体型-2倍-green.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/武器-大刀-green.svg?style=flat" />
           
           
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>13</td>
       <td>炎影伊芙利特&amp;克莱夫</td>
       <td>
+          
             <img src="https://img.shields.io/badge/形象-黑化-gray.svg?style=flat" />
           
             <img src="https://img.shields.io/badge/元素-火-red.svg?style=flat" />
           
           
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>14</td>
       <td>阿卡夏巨龙</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-结晶飞龙-red.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-火-red.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>15</td>
       <td>召唤兽提丰</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-长臂幽魂-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/武器-拳与元素炮-gray.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>16</td>
       <td>达尔梅奇亚军用豹</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-豹子-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-体术-gray.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>17</td>
       <td>黝暗龙骑士</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-骑士-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/武器-长枪-yellow.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>18</td>
       <td>阿卡夏魔界花</td>
       <td>
           
+            <img src="https://img.shields.io/badge/体型-2倍-green.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-毒-purple.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>19</td>
       <td>火蜥蜴</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-蜥蜴-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-火-red.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>20</td>
       <td>液态火焰</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-液态火人-red.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-火-red.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>21</td>
       <td>长须豹</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-豹子-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-体术-gray.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>22</td>
       <td>胡戈</td>
       <td>
           
+            <img src="https://img.shields.io/badge/体型-1.5倍-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-岩拳-yellow.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>23</td>
       <td>半兽人督军</td>
       <td>
           
+            <img src="https://img.shields.io/badge/体型-5倍-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/武器-骨制权杖-yellow.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>24</td>
       <td>送葬者</td>
       <td>
           
+            <img src="https://img.shields.io/badge/体型-4倍-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/武器-胸部巨口-yellow.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>25</td>
       <td>召唤兽泰坦</td>
       <td>
           
+          <p>打拳、跑酷+场景BOSS、下落打拳 </p>
+          
+            <img src="https://img.shields.io/badge/形象-岩巨人-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-岩-yellow.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>26</td>
       <td>白龙</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-冰晶飞龙-blue.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-冰-blue.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>27</td>
       <td>惧死者</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-奇异人形生物-gray.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-雷-gray.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>28</td>
-      <td>召唤兽巴哈姆特（一阶段）</td>
+      <td>召唤兽巴哈姆特</td>
       <td>
           
+          <p>打拳、射击、混合打拳、宇宙打拳 </p>
+          
+            <img src="https://img.shields.io/badge/形象-蝙蝠-red.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-光or雷-gray.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>29</td>
-      <td>召唤兽巴哈姆特（二阶段）</td>
-      <td>
-          
-      </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>30</td>
       <td>斯莱普尼尔</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-骑士-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-暗-purple.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>31</td>
+      <td>30</td>
       <td>巴拿巴斯·初</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-骑士-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/武器-剑-yellow.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>32</td>
+      <td>31</td>
       <td>夺魂者</td>
       <td>
           
+          <p>类似：送葬者 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>33</td>
+      <td>32</td>
       <td>控制系统&amp;金巨人</td>
       <td>
           
+          <p>金巨人类似：铁巨人 </p>
+          
+            <img src="https://img.shields.io/badge/形象-圆球-gray.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-雷-gray.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>34</td>
+      <td>33</td>
       <td>巴拿巴斯·终</td>
       <td>
           
+          <p>砍、砍、砍 </p>
+          
+            <img src="https://img.shields.io/badge/形象-骑士-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/武器-剑-yellow.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>35</td>
+      <td>34</td>
       <td>贝希摩斯</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-肌肉牛-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/武器-体术&amp;元素-yellow.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>36</td>
+      <td>35</td>
       <td>阿尔蒂玛</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-长翅长角人-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-光or雷-gray.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>37</td>
+      <td>36</td>
       <td>最终之战阿尔提玛</td>
       <td>
           
+          <p>砍、空间砍、砍 </p>
+          
+            <img src="https://img.shields.io/badge/形象-挂饰人-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/元素-光or雷-gray.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>38</td>
+      <td>37</td>
       <td>悬赏：C冥鬼之眼</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-独眼怪-yellow.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>39</td>
+      <td>38</td>
       <td>悬赏：C阿留那</td>
       <td>
           
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>40</td>
+      <td>39</td>
       <td>悬赏：C格瑞玛钦</td>
       <td>
           
+          <p>重复，狼 </p>
+          
+            <img src="https://img.shields.io/badge/形象-豹子狼-yellow.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>41</td>
+      <td>40</td>
       <td>悬赏：C灵魂刺针</td>
       <td>
           
+            <img src="https://img.shields.io/badge/形象-大蚊子-yellow.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>42</td>
+      <td>41</td>
       <td>悬赏：C狼群</td>
       <td>
           
+          <p>重复，狼群 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>43</td>
+      <td>42</td>
       <td>悬赏：B贝尔芬格</td>
       <td>
           
+          <p>重复，爬行翼龙 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>44</td>
+      <td>43</td>
       <td>悬赏：B爆弹怪之王</td>
       <td>
           
+          <p>重复，爆弹怪 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>45</td>
+      <td>44</td>
       <td>悬赏：B卡萝特</td>
       <td>
           
+          <p>重复，爆弹怪 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>46</td>
+      <td>45</td>
       <td>悬赏：B赛克雷特</td>
       <td>
           
+          <p>重复，大锤牛头人 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>47</td>
+      <td>46</td>
       <td>悬赏：B赛文利特</td>
       <td>
           
+          <p>重复，遗迹短腿生命体 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>48</td>
+      <td>47</td>
       <td>悬赏：B法斯提托卡伦</td>
       <td>
           
+          <p>重复，乌龟 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>49</td>
+      <td>48</td>
       <td>悬赏：B花棍</td>
       <td>
           
+          <p>重复，巨斧人 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>50</td>
+      <td>49</td>
       <td>悬赏：B神圣号兵</td>
       <td>
           
+          <p>重复，巨炮人 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>51</td>
+      <td>50</td>
       <td>悬赏：A黑剑</td>
       <td>
           
+          <p>重复，双刀人 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>52</td>
+      <td>51</td>
       <td>悬赏：A软糊怪王子</td>
       <td>
           
+          <p>重复，软泥怪 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>53</td>
+      <td>52</td>
       <td>悬赏：A惊骇彗星</td>
       <td>
           
+          <p>重复，红陆行鸟 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>54</td>
+      <td>53</td>
       <td>悬赏：A马格斯兄弟</td>
       <td>
           
+          <p>重复，三个巨斧人 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>55</td>
+      <td>54</td>
       <td>悬赏：A塔纳托斯</td>
       <td>
           
+          <p>重复，送葬者 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>56</td>
+      <td>55</td>
       <td>悬赏：A终端系统</td>
       <td>
           
+          <p>重复，终端系统 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>57</td>
+      <td>56</td>
       <td>悬赏：A死亡王子</td>
       <td>
           
+            <img src="https://img.shields.io/badge/体型-1.5-yellow.svg?style=flat" />
+          
+            <img src="https://img.shields.io/badge/武器-镰刀-yellow.svg?style=flat" />
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>58</td>
+      <td>57</td>
       <td>悬赏：A执意龙骑士</td>
       <td>
           
+          <p>重复，龙骑士 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>59</td>
+      <td>58</td>
       <td>悬赏：A阿嗜尼</td>
       <td>
           
+          <p>重复，结晶蜥蜴 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>60</td>
+      <td>59</td>
       <td>悬赏：A拜库扎</td>
       <td>
           
+          <p>重复，蓝贝西摩斯 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>61</td>
+      <td>60</td>
       <td>悬赏：A拜格尔</td>
       <td>
           
+          <p>重复，长须豹 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>62</td>
+      <td>61</td>
       <td>悬赏：A基札玛路克</td>
       <td>
           
+          <p>重复，翼人 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>63</td>
+      <td>62</td>
       <td>悬赏：A葛柏穆克</td>
       <td>
           
+          <p>重复，哥布林 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>64</td>
+      <td>63</td>
       <td>悬赏：S阿特拉斯</td>
       <td>
           
+          <p>重复，铁巨人 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>65</td>
+      <td>64</td>
       <td>悬赏：S强化奇美拉</td>
       <td>
           
+          <p>重复，奇美拉 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>66</td>
+      <td>65</td>
       <td>悬赏：S斯瓦洛格</td>
       <td>
           
+          <p>重复，红龙 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>67</td>
+      <td>66</td>
       <td>悬赏：S万魔殿</td>
       <td>
           
+          <p>重复，半兽人督军 </p>
+          
+          
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
-      <td>68</td>
+      <td>67</td>
       <td>悬赏：S帝王贝希摩斯</td>
       <td>
+          
+          <p>重复，贝西摩斯 </p>
+          
           
       </td>
       <td></td>
@@ -1424,6 +1649,7 @@
       <td>扩散尖兵</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1431,6 +1657,7 @@
       <td>2</td>
       <td>法拉克斯</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1440,6 +1667,7 @@
       <td>吸血虫集合体</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1447,6 +1675,7 @@
       <td>4</td>
       <td>污秽巨像</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1456,6 +1685,7 @@
       <td>高脚铠甲蜘蛛</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1463,6 +1693,7 @@
       <td>6</td>
       <td>火炎潜伏者</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1472,6 +1703,7 @@
       <td>龙神</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1479,6 +1711,7 @@
       <td>8</td>
       <td>少女雅思兰莉亚</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1488,6 +1721,7 @@
       <td>高塔骑士</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1495,6 +1729,7 @@
       <td>10</td>
       <td>贯穿骑士</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1504,6 +1739,7 @@
       <td>愚者偶像</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1511,6 +1747,9 @@
       <td>12</td>
       <td>吃人鬼</td>
       <td>
+          
+          <p>石像鬼 </p>
+          
           
       </td>
       <td></td>
@@ -1520,6 +1759,7 @@
       <td>黄衣老翁</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1527,6 +1767,9 @@
       <td>14</td>
       <td>审判者</td>
       <td>
+          
+          <p>鸟与屠夫 </p>
+          
           
       </td>
       <td></td>
@@ -1536,6 +1779,7 @@
       <td>老勇士</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1543,6 +1787,7 @@
       <td>16</td>
       <td>风暴王</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1552,6 +1797,7 @@
       <td>旧王欧兰特</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1560,6 +1806,7 @@
       <td>EvilEnding</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1567,6 +1814,7 @@
       <td>19</td>
       <td>最终BOSS&amp;GoodEnding</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1594,6 +1842,7 @@
       <td>黯影太阳葛温德林</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1601,6 +1850,7 @@
       <td>2</td>
       <td>白龙希斯</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1610,6 +1860,7 @@
       <td>百足恶魔</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1617,6 +1868,7 @@
       <td>4</td>
       <td>半龙普利希拉</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1626,6 +1878,7 @@
       <td>不死院恶魔</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1633,6 +1886,7 @@
       <td>6</td>
       <td>持续溃烂的生物</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1642,6 +1896,7 @@
       <td>恶魔火焰司祭</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1649,6 +1904,7 @@
       <td>8</td>
       <td>钢铁巨偶</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1658,6 +1914,7 @@
       <td>黑龙喀拉弥特</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1665,6 +1922,7 @@
       <td>10</td>
       <td>灰色大狼希夫</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1674,6 +1932,7 @@
       <td>混沌的温床（火焰壶逃课）</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1681,6 +1940,7 @@
       <td>12</td>
       <td>混沌魔女克拉格</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1690,6 +1950,7 @@
       <td>离群恶魔</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1697,6 +1958,7 @@
       <td>14</td>
       <td>灵庙圣兽</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1706,6 +1968,7 @@
       <td>墓王尼特</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1713,6 +1976,7 @@
       <td>16</td>
       <td>牛头恶魔</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1722,6 +1986,7 @@
       <td>骑士亚尔特留斯</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1729,6 +1994,7 @@
       <td>18</td>
       <td>三人尸术师</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1738,6 +2004,7 @@
       <td>山羊头恶魔</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1745,6 +2012,7 @@
       <td>20</td>
       <td>深渊之主马努斯</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1754,6 +2022,7 @@
       <td>守钟的石像鬼</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1761,6 +2030,7 @@
       <td>22</td>
       <td>贪食魔龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1770,6 +2040,7 @@
       <td>翁斯坦／斯摩（先鲨斯摩）</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1777,6 +2048,7 @@
       <td>24</td>
       <td>乌薪王葛温（纯翻滚）</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1786,6 +2058,7 @@
       <td>小隆德四王</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1793,6 +2066,7 @@
       <td>26</td>
       <td>月光蝶</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1820,6 +2094,7 @@
       <td>最后的巨人</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1827,6 +2102,7 @@
       <td>2</td>
       <td>咒缚者</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1836,6 +2112,7 @@
       <td>茫然卫兵</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1843,6 +2120,7 @@
       <td>4</td>
       <td>守钟的石像鬼</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1852,6 +2130,7 @@
       <td>遗忘的罪人</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1859,6 +2138,7 @@
       <td>6</td>
       <td>古龙猎人</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1868,6 +2148,7 @@
       <td>龙骑兵</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1875,6 +2156,7 @@
       <td>8</td>
       <td>放逐罪执行者</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1884,6 +2166,7 @@
       <td>邢吏查略特</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1891,6 +2174,7 @@
       <td>10</td>
       <td>骷髅王</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1900,6 +2184,7 @@
       <td>贪食恶魔</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1907,6 +2192,7 @@
       <td>12</td>
       <td>毒妃米妲</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1916,6 +2202,7 @@
       <td>鎔铁恶魔</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1923,6 +2210,7 @@
       <td>14</td>
       <td>铁之古王</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1932,6 +2220,7 @@
       <td>鼠王先锋</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1939,6 +2228,7 @@
       <td>16</td>
       <td>蝎子钠吉卡</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1948,6 +2238,7 @@
       <td>徘徊的术士</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1955,6 +2246,7 @@
       <td>18</td>
       <td>公爵的弗雷迪亚</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1964,6 +2256,7 @@
       <td>鼠王的试炼</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1971,6 +2264,7 @@
       <td>20</td>
       <td>腐败物</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1980,6 +2274,7 @@
       <td>龙骑兵x</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -1987,6 +2282,7 @@
       <td>22</td>
       <td>镜之战士</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -1996,6 +2292,7 @@
       <td>歌唱恶魔</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2003,6 +2300,7 @@
       <td>24</td>
       <td>【王盾】韦施塔德</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2012,6 +2310,7 @@
       <td>看守龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2019,6 +2318,7 @@
       <td>26</td>
       <td>古龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2028,6 +2328,7 @@
       <td>巨人王</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2035,6 +2336,7 @@
       <td>28</td>
       <td>汎克拉德</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2044,6 +2346,7 @@
       <td>【污秽】艾雷娜</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2051,6 +2354,7 @@
       <td>30</td>
       <td>沉睡之龙罪龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2060,6 +2364,7 @@
       <td>DLC三基佬</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2067,6 +2372,7 @@
       <td>32</td>
       <td>蓝色鎔铁恶魔</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2076,6 +2382,7 @@
       <td>烟之骑士</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2083,6 +2390,7 @@
       <td>34</td>
       <td>骑士亚伦</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2092,6 +2400,7 @@
       <td>王宠厄娃</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2099,6 +2408,7 @@
       <td>36</td>
       <td>王宠札连&amp;王宠拉铎</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2108,6 +2418,7 @@
       <td>焦灼的白王</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2116,6 +2427,7 @@
       <td>黑暗潜伏者</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2123,6 +2435,7 @@
       <td>39</td>
       <td>最终BOSS三连战+结</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2148,6 +2461,7 @@
       <td>灰烬审判者古达</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2155,6 +2469,7 @@
       <td>2</td>
       <td>冷冽谷的玻尔多</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2164,6 +2479,7 @@
       <td>咒蚀大树</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2171,6 +2487,7 @@
       <td>4</td>
       <td>结晶老者</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2180,6 +2497,7 @@
       <td>幽邃主教群</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2187,6 +2505,7 @@
       <td>6</td>
       <td>深渊的监视者</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2196,6 +2515,7 @@
       <td>老恶魔王</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2203,6 +2523,7 @@
       <td>8</td>
       <td>霸王沃尼尔</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2212,6 +2533,7 @@
       <td>教宗沙力万</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2219,6 +2541,9 @@
       <td>10</td>
       <td>吞噬神明的艾尔德利奇</td>
       <td>
+          
+          <p>蜈蚣尾 </p>
+          
           
       </td>
       <td></td>
@@ -2228,6 +2553,7 @@
       <td>巨人尤姆</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2235,6 +2561,7 @@
       <td>12</td>
       <td>冷冽谷的舞娘</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2244,6 +2571,9 @@
       <td>妖王欧斯罗艾斯</td>
       <td>
           
+          <p>小龙人 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -2251,6 +2581,7 @@
       <td>14</td>
       <td>英雄古达</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2260,6 +2591,7 @@
       <td>古老飞龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2267,6 +2599,7 @@
       <td>16</td>
       <td>无名王者</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2276,6 +2609,7 @@
       <td>猎龙铠甲</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2283,6 +2617,7 @@
       <td>18</td>
       <td>孪生王子</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2292,6 +2627,7 @@
       <td>薪王们的化身</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2299,6 +2635,9 @@
       <td>20</td>
       <td>王者的守墓人(DLC)</td>
       <td>
+          
+          <p>大狗+人 </p>
+          
           
       </td>
       <td></td>
@@ -2308,6 +2647,7 @@
       <td>⭐️芙莉德修女（DLC）</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2315,6 +2655,7 @@
       <td>22</td>
       <td>恶魔王子（DLC）</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2324,6 +2665,9 @@
       <td>⭐️吞噬黑暗的米狄尔（DLC）</td>
       <td>
           
+          <p>黑龙 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -2332,6 +2676,7 @@
       <td>「教堂之枪」贺弗莱特（DLC）</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2339,6 +2684,7 @@
       <td>25</td>
       <td>奴隶骑士盖尔（DLC）</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2368,6 +2714,7 @@
       <td>阿米戈达拉</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2375,6 +2722,7 @@
       <td>2</td>
       <td>埃波利耶塔，宇宙之女</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2384,6 +2732,7 @@
       <td>代理人阿梅利亚</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2391,6 +2740,7 @@
       <td>4</td>
       <td>格曼，史上第一名猎人</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2400,6 +2750,7 @@
       <td>海姆维克的女巫</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2407,6 +2758,7 @@
       <td>6</td>
       <td>黑暗怪兽帕阿尔</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2416,6 +2768,7 @@
       <td>加斯科因神父</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2423,6 +2776,7 @@
       <td>8</td>
       <td>⭐️精神钟塔的玛利亚修女</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2432,6 +2786,7 @@
       <td>科斯孤儿</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2439,6 +2794,7 @@
       <td>10</td>
       <td>劳伦斯，第一个代理人</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2448,6 +2804,7 @@
       <td>罗姆，空虚的蜘蛛</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2455,6 +2812,7 @@
       <td>12</td>
       <td>米克拉什，噩梦之主</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2464,6 +2822,7 @@
       <td>墨戈的乳母</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2471,6 +2830,7 @@
       <td>14</td>
       <td>缺血的怪兽</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2480,6 +2840,7 @@
       <td>神职人员怪兽</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2487,6 +2848,7 @@
       <td>16</td>
       <td>失败者</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2496,6 +2858,7 @@
       <td>受诅的路德维格，神圣之剑</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2503,6 +2866,7 @@
       <td>18</td>
       <td>天庭使者</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2512,6 +2876,7 @@
       <td>殉道者洛加留斯</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2519,6 +2884,7 @@
       <td>20</td>
       <td>亚南之影</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2528,6 +2894,7 @@
       <td>月之血姬</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2535,6 +2902,7 @@
       <td>22</td>
       <td>重生之神</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2560,6 +2928,7 @@
       <td>幻影之蝶</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2567,6 +2936,7 @@
       <td>2</td>
       <td>鬼形部</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2576,6 +2946,7 @@
       <td>⭐️苇名弦一郎</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2583,6 +2954,7 @@
       <td>4</td>
       <td>幻影破戒僧</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2592,6 +2964,7 @@
       <td>无首狮子猿</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2599,6 +2972,7 @@
       <td>6</td>
       <td>⭐️狮子猿</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2608,6 +2982,7 @@
       <td>苇名一心</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2615,6 +2990,7 @@
       <td>8</td>
       <td>巨型忍者枭</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2624,6 +3000,7 @@
       <td>义父</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2631,6 +3008,7 @@
       <td>10</td>
       <td>樱龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2640,6 +3018,7 @@
       <td>破戒僧</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2648,6 +3027,7 @@
       <td>怨恨之鬼</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2655,6 +3035,7 @@
       <td>13</td>
       <td>剑圣苇名一心</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2680,6 +3061,7 @@
       <td>恶兆马尔基特</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2687,6 +3069,7 @@
       <td>2</td>
       <td>接肢葛瑞克</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2696,6 +3079,7 @@
       <td>满月女王蕾那菈</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2703,6 +3087,7 @@
       <td>4</td>
       <td>⭐️碎星拉塔恩</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2712,6 +3097,7 @@
       <td>龙装大树守卫</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2719,6 +3105,7 @@
       <td>6</td>
       <td>铁棘艾隆梅尔</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2728,6 +3115,7 @@
       <td>初始之王葛孚雷</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2735,6 +3123,7 @@
       <td>8</td>
       <td>亵渎君王拉卡德</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2744,6 +3133,7 @@
       <td>恶兆王蒙葛特</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2751,6 +3141,7 @@
       <td>10</td>
       <td>鲜血君王蒙格</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2760,6 +3151,7 @@
       <td>⭐️腐败女神玛莲妮亚</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2767,6 +3159,7 @@
       <td>12</td>
       <td>火焰巨人</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2776,6 +3169,7 @@
       <td>黑剑玛利喀斯</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2783,6 +3177,7 @@
       <td>14</td>
       <td>百智爵士基甸奥夫尼尔</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2792,6 +3187,7 @@
       <td>战士荷莱露</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -2799,6 +3195,7 @@
       <td>16</td>
       <td>艾尔登之兽</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -2839,6 +3236,9 @@
       <td>搔鸟</td>
       <td>
           
+          <p>会挖石头砸你，喜欢蛋 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -2846,6 +3246,9 @@
       <td>2</td>
       <td>炫鸟</td>
       <td>
+          
+          <p>可以制造强光让你（和怪物）眩晕 </p>
+          
           
       </td>
       <td></td>
@@ -2855,6 +3258,9 @@
       <td>毒妖鸟</td>
       <td>
           
+          <p>尾巴会喷毒的鸡 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -2862,6 +3268,9 @@
       <td>4</td>
       <td>雌火龙</td>
       <td>
+          
+          <p>绿色的带毒喷火龙，擅长用爪抓人 </p>
+          
           
       </td>
       <td></td>
@@ -2871,6 +3280,9 @@
       <td>雄火龙</td>
       <td>
           
+          <p>红色的也带毒喷火龙，擅长喷火 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -2878,6 +3290,9 @@
       <td>6</td>
       <td>樱火龙</td>
       <td>
+          
+          <p>发疯版本的飞龙，剧毒且喷火 </p>
+          
           
       </td>
       <td></td>
@@ -2887,6 +3302,9 @@
       <td>苍火龙</td>
       <td>
           
+          <p>飞龙顶端 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -2894,6 +3312,9 @@
       <td>8</td>
       <td>角龙</td>
       <td>
+          
+          <p>退化飞龙，已经飞不高，但是用角和锤子样的尾巴攻击 </p>
+          
           
       </td>
       <td></td>
@@ -2903,6 +3324,9 @@
       <td>黑角龙</td>
       <td>
           
+          <p>黑化（进入繁殖期）的角龙 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -2910,6 +3334,9 @@
       <td>10</td>
       <td>浮空龙</td>
       <td>
+          
+          <p>气球+猴子的组合体哈哈哈哈 </p>
+          
           
       </td>
       <td></td>
@@ -2919,6 +3346,9 @@
       <td>风飃龙</td>
       <td>
           
+          <p>这个帅，冰属性蓝白色的龙 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -2926,6 +3356,9 @@
       <td>12</td>
       <td>爆鳞龙</td>
       <td>
+          
+          <p>巨型轰炸机，后期乱入贼烦 </p>
+          
           
       </td>
       <td></td>
@@ -2935,6 +3368,9 @@
       <td>大贼龙</td>
       <td>
           
+          <p>中分哥，菜的 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -2942,6 +3378,9 @@
       <td>14</td>
       <td>痹贼龙</td>
       <td>
+          
+          <p>麻痹中分哥，不那么菜的 </p>
+          
           
       </td>
       <td></td>
@@ -2951,6 +3390,9 @@
       <td>岩贼龙</td>
       <td>
           
+          <p>会吐火的中分哥，不算菜的 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -2958,6 +3400,9 @@
       <td>16</td>
       <td>飞雷龙</td>
       <td>
+          
+          <p>有点像尾巴带点的松鼠 </p>
+          
           
       </td>
       <td></td>
@@ -2967,6 +3412,9 @@
       <td>惨爪龙</td>
       <td>
           
+          <p>浑身腐肉红色带利爪的发疯松鼠（？？？ </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -2974,6 +3422,9 @@
       <td>18</td>
       <td>泥鱼龙</td>
       <td>
+          
+          <p>是泥鳅哒 </p>
+          
           
       </td>
       <td></td>
@@ -2983,6 +3434,9 @@
       <td>熔岩龙</td>
       <td>
           
+          <p>是在岩浆的泥鳅哒 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -2990,6 +3444,9 @@
       <td>20</td>
       <td>土砂龙</td>
       <td>
+          
+          <p>头铁，横冲直撞会摔泥巴的龙 </p>
+          
           
       </td>
       <td></td>
@@ -2999,6 +3456,9 @@
       <td>骨槌龙</td>
       <td>
           
+          <p>浑身是骨头会像西瓜虫一样变成圆撞的龙 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3006,6 +3466,9 @@
       <td>22</td>
       <td>爆锤龙</td>
       <td>
+          
+          <p>类似鼓槌龙但是会甩出爆弹炸弹的龙 </p>
+          
           
       </td>
       <td></td>
@@ -3015,6 +3478,9 @@
       <td>蛮颚龙</td>
       <td>
           
+          <p>带小翅膀的霸王龙。（？ </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3022,6 +3488,9 @@
       <td>24</td>
       <td>恐暴龙</td>
       <td>
+          
+          <p>长者两条小腿的绿色丝瓜，贼强 </p>
+          
           
       </td>
       <td></td>
@@ -3031,6 +3500,9 @@
       <td>麒麟</td>
       <td>
           
+          <p>雷属性的独角兽 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3038,6 +3510,9 @@
       <td>26</td>
       <td>⭐️灭烬龙</td>
       <td>
+          
+          <p>咩咩子，身上覆盖有有可再生的刺 </p>
+          
           
       </td>
       <td></td>
@@ -3047,6 +3522,9 @@
       <td>钢龙（风翔龙）</td>
       <td>
           
+          <p>如其名，皮肤如钢铁般坚硬 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3054,6 +3532,9 @@
       <td>28</td>
       <td>炎王龙</td>
       <td>
+          
+          <p>长翅膀的红色火焰狮子哒 </p>
+          
           
       </td>
       <td></td>
@@ -3063,6 +3544,9 @@
       <td>炎妃龙</td>
       <td>
           
+          <p>长翅膀的蓝色火焰狮子哒 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3070,6 +3554,9 @@
       <td>30</td>
       <td>熔山龙</td>
       <td>
+          
+          <p>哥斯拉那种感觉的山一样大的龙 </p>
+          
           
       </td>
       <td></td>
@@ -3079,6 +3566,9 @@
       <td>冥灯龙</td>
       <td>
           
+          <p>很强的初生古龙 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3086,6 +3576,9 @@
       <td>32</td>
       <td>烂辉龙</td>
       <td>
+          
+          <p>分阶段要打的据说全貌有点像蜗牛软体的龙。 </p>
+          
           
       </td>
       <td></td>
@@ -3111,6 +3604,9 @@
       <td>冰鱼龙</td>
       <td>
           
+          <p>亚种，雪地类比泥潭，还可 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3118,6 +3614,9 @@
       <td>2</td>
       <td>猛牛龙</td>
       <td>
+          
+          <p>有点点像泥沙龙，还可 </p>
+          
           
       </td>
       <td></td>
@@ -3127,6 +3626,9 @@
       <td>痹毒龙</td>
       <td>
           
+          <p>亚种，加了麻痹 + 毒属性 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3134,6 +3636,9 @@
       <td>4</td>
       <td>眠浮龙</td>
       <td>
+          
+          <p>亚种，加了睡眠 </p>
+          
           
       </td>
       <td></td>
@@ -3143,6 +3648,9 @@
       <td>水妖鸟</td>
       <td>
           
+          <p>亚洲，加了水 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3150,6 +3658,9 @@
       <td>6</td>
       <td>⭐️冰牙龙</td>
       <td>
+          
+          <p>用飞翔爪会比较合适打 </p>
+          
           
       </td>
       <td></td>
@@ -3159,6 +3670,9 @@
       <td>迅龙</td>
       <td>
           
+          <p>旧怪物，黑色快速 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3166,6 +3680,9 @@
       <td>8</td>
       <td>⭐️斩龙</td>
       <td>
+          
+          <p>旧怪物，斩尾，火炎 </p>
+          
           
       </td>
       <td></td>
@@ -3175,6 +3692,9 @@
       <td>轰龙</td>
       <td>
           
+          <p>旧怪物，龙车 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3182,6 +3702,9 @@
       <td>10</td>
       <td>碎龙</td>
       <td>
+          
+          <p>旧怪物，头槌爆炸 </p>
+          
           
       </td>
       <td></td>
@@ -3191,6 +3714,9 @@
       <td>霜翼风飘龙</td>
       <td>
           
+          <p>亚种，加冰 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3198,6 +3724,9 @@
       <td>12</td>
       <td>雷颚龙</td>
       <td>
+          
+          <p>亚种，强化雷 </p>
+          
           
       </td>
       <td></td>
@@ -3207,6 +3736,9 @@
       <td>硫斩龙</td>
       <td>
           
+          <p>亚种，感觉强度不如原版 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3214,6 +3746,9 @@
       <td>14</td>
       <td>凶爪龙</td>
       <td>
+          
+          <p>亚种，加了龙属性？ </p>
+          
           
       </td>
       <td></td>
@@ -3223,6 +3758,9 @@
       <td>⭐️冰咒龙</td>
       <td>
           
+          <p>古龙，卡关，多人会好打很多 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3230,6 +3768,9 @@
       <td>16</td>
       <td>红莲爆鳞龙</td>
       <td>
+          
+          <p>亚种，强化爆炸 </p>
+          
           
       </td>
       <td></td>
@@ -3239,6 +3780,9 @@
       <td>怒食恐暴龙</td>
       <td>
           
+          <p>亚种，依旧的恶心丝瓜 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3246,6 +3790,9 @@
       <td>18</td>
       <td>雾瘴尸套龙</td>
       <td>
+          
+          <p>古龙亚种，该锤一样的锤 </p>
+          
           
       </td>
       <td></td>
@@ -3255,6 +3802,9 @@
       <td>溟波龙</td>
       <td>
           
+          <p>古龙，使用水+电，初见眼前一亮 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3262,6 +3812,9 @@
       <td>20</td>
       <td>歼世灭烬龙</td>
       <td>
+          
+          <p>古龙亚种，该锤一样的锤 </p>
+          
           
       </td>
       <td></td>
@@ -3271,6 +3824,9 @@
       <td>天地煌啼龙</td>
       <td>
           
+          <p>古龙，伟大存在，对标冥灯龙，还可 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3278,6 +3834,9 @@
       <td>22</td>
       <td>⭐️雷狼龙</td>
       <td>
+          
+          <p>帅就一个字 </p>
+          
           
       </td>
       <td></td>
@@ -3287,6 +3846,9 @@
       <td>黑狼鸟</td>
       <td>
           
+          <p>该锤一样的锤 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3294,6 +3856,9 @@
       <td>24</td>
       <td>金火龙</td>
       <td>
+          
+          <p>特化毒属性 </p>
+          
           
       </td>
       <td></td>
@@ -3303,6 +3868,9 @@
       <td>银火龙</td>
       <td>
           
+          <p>特化火属性 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3310,6 +3878,9 @@
       <td>26</td>
       <td>片耳黑狼鸟</td>
       <td>
+          
+          <p>特化喷射 </p>
+          
           
       </td>
       <td></td>
@@ -3319,6 +3890,9 @@
       <td>黑轰龙</td>
       <td>
           
+          <p>特化吼叫 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3326,6 +3900,7 @@
       <td>28</td>
       <td>金狮子</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3335,6 +3910,7 @@
       <td>狱狼龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3342,6 +3918,7 @@
       <td>30</td>
       <td>⭐️猛爆碎龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3351,6 +3928,7 @@
       <td>激昂金狮子</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3358,6 +3936,7 @@
       <td>32</td>
       <td>⭐️绚辉龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3367,6 +3946,7 @@
       <td>历战王 溟波龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3374,6 +3954,7 @@
       <td>34</td>
       <td>⭐️煌黑龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3383,6 +3964,7 @@
       <td>霜刃冰牙龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3391,6 +3973,7 @@
       <td>⭐️黑龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3398,6 +3981,7 @@
       <td>37</td>
       <td>历战王 冰咒龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3423,6 +4007,7 @@
       <td>怨虎龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3430,6 +4015,7 @@
       <td>2</td>
       <td>镰鼬龙王</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3439,6 +4025,7 @@
       <td>伞鸟</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3446,6 +4033,7 @@
       <td>4</td>
       <td>人鱼龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3455,6 +4043,7 @@
       <td>泥翁龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3462,6 +4051,7 @@
       <td>6</td>
       <td>妃蜘蛛</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3471,6 +4061,7 @@
       <td>天狗兽</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3478,6 +4069,7 @@
       <td>8</td>
       <td>雪鬼兽</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3487,6 +4079,7 @@
       <td>河童蛙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3494,6 +4087,7 @@
       <td>10</td>
       <td>风神龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3503,6 +4097,7 @@
       <td>雷神龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3510,6 +4105,7 @@
       <td>12</td>
       <td>百龙渊源雷神龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3535,6 +4131,7 @@
       <td>棘龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3542,6 +4139,7 @@
       <td>2</td>
       <td>棘茶龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3551,6 +4149,7 @@
       <td>嗟怨震天虎龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3558,6 +4157,7 @@
       <td>4</td>
       <td>冰狼龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3567,6 +4167,7 @@
       <td>冰人鱼龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3574,6 +4175,7 @@
       <td>6</td>
       <td>熔翁龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3583,6 +4185,7 @@
       <td>炽妃蜘蛛</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3590,6 +4193,7 @@
       <td>8</td>
       <td>绯天狗兽</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3599,6 +4203,7 @@
       <td>刚缠兽</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3607,6 +4212,7 @@
       <td>爵银龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3614,6 +4220,7 @@
       <td>11</td>
       <td>冥渊龙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3639,6 +4246,9 @@
       <td>火牛</td>
       <td>
           
+          <p>火牛 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3646,6 +4256,7 @@
       <td>2</td>
       <td>冰蛙</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3655,6 +4266,7 @@
       <td>花蛇</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3662,6 +4274,9 @@
       <td>4</td>
       <td>大舅子</td>
       <td>
+          
+          <p>片翼天使 </p>
+          
           
       </td>
       <td></td>
@@ -3671,6 +4286,7 @@
       <td>苍蝇</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3678,6 +4294,7 @@
       <td>6</td>
       <td>教皇</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3709,6 +4326,9 @@
       <td>猎人</td>
       <td>
           
+          <p>爬行 匕首 </p>
+          
+          
       </td>
       <td>射出手掌 迷雾</td>
     </tr>
@@ -3716,6 +4336,7 @@
       <td>2</td>
       <td>毒昆虫</td>
       <td>
+          
           
       </td>
       <td>固定场地</td>
@@ -3725,6 +4346,9 @@
       <td>播音员</td>
       <td>
           
+          <p>地图炮 </p>
+          
+          
       </td>
       <td>固定场地</td>
     </tr>
@@ -3732,6 +4356,7 @@
       <td>4</td>
       <td>音波怪</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3741,6 +4366,7 @@
       <td>场地大Boss</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3748,6 +4374,7 @@
       <td>6</td>
       <td>Vergil</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3779,6 +4406,7 @@
       <td>地狱之王</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3786,6 +4414,7 @@
       <td>2</td>
       <td>花怪</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3795,6 +4424,7 @@
       <td>口炮巨熊</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3802,6 +4432,9 @@
       <td>4</td>
       <td>六翅蛾子</td>
       <td>
+          
+          <p>浮游炮 </p>
+          
           
       </td>
       <td></td>
@@ -3811,6 +4444,7 @@
       <td>触手怪</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3818,6 +4452,7 @@
       <td>6</td>
       <td>骑马</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3827,6 +4462,7 @@
       <td>巨型四足怪</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3834,6 +4470,7 @@
       <td>8</td>
       <td>骑士群</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3843,6 +4480,7 @@
       <td>手怪群</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3850,6 +4488,7 @@
       <td>10</td>
       <td>⭐️片翼骑士</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3859,6 +4498,7 @@
       <td>地狱之王.站起</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3866,6 +4506,7 @@
       <td>12</td>
       <td>三幻影</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3875,6 +4516,7 @@
       <td>人骑龙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3882,6 +4524,7 @@
       <td>14</td>
       <td>地狱三头犬</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3891,6 +4534,7 @@
       <td>地狱之王.站起2</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3899,6 +4543,7 @@
       <td>3召唤</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3906,6 +4551,7 @@
       <td>17</td>
       <td>维吉尔</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3946,6 +4592,9 @@
       <td>刽子手德瑞克</td>
       <td>
           
+          <p>斧子 </p>
+          
+          
       </td>
       <td>右斜下左斜下纵下、横扫、冲撞</td>
     </tr>
@@ -3953,6 +4602,9 @@
       <td>2</td>
       <td>怨灵鬼</td>
       <td>
+          
+          <p>脚镣 </p>
+          
           
       </td>
       <td></td>
@@ -3962,6 +4614,9 @@
       <td>飞缘魔</td>
       <td>
           
+          <p>蝙蝠 麻痹 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -3969,6 +4624,9 @@
       <td>4</td>
       <td>鵺</td>
       <td>
+          
+          <p>白虎 </p>
+          
           
       </td>
       <td></td>
@@ -3978,6 +4636,7 @@
       <td>假立花宗茂</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -3985,6 +4644,7 @@
       <td>6</td>
       <td>真立花宗茂</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -3994,6 +4654,9 @@
       <td>大百足</td>
       <td>
           
+          <p>蜈蚣 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4001,6 +4664,9 @@
       <td>8</td>
       <td>海坊主</td>
       <td>
+          
+          <p>史莱姆 </p>
+          
           
       </td>
       <td></td>
@@ -4010,6 +4676,9 @@
       <td>丸目长惠</td>
       <td>
           
+          <p>修炼场 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4017,6 +4686,7 @@
       <td>10</td>
       <td>服部半藏</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -4026,6 +4696,9 @@
       <td>女郎蜘蛛</td>
       <td>
           
+          <p>蜘蛛 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4033,6 +4706,9 @@
       <td>12</td>
       <td>雪女</td>
       <td>
+          
+          <p>冰 </p>
+          
           
       </td>
       <td></td>
@@ -4042,6 +4718,9 @@
       <td>井伊直政</td>
       <td>
           
+          <p>长枪 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4049,6 +4728,9 @@
       <td>14</td>
       <td>白虎</td>
       <td>
+          
+          <p>翅膀猫 </p>
+          
           
       </td>
       <td></td>
@@ -4058,6 +4740,7 @@
       <td>大怨灵鬼</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -4065,6 +4748,9 @@
       <td>16</td>
       <td>大蛤蟆</td>
       <td>
+          
+          <p>蛤蟆 </p>
+          
           
       </td>
       <td></td>
@@ -4074,6 +4760,7 @@
       <td>丸目长惠加强版</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -4081,6 +4768,7 @@
       <td>18</td>
       <td>服部半藏加强版</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -4090,6 +4778,9 @@
       <td>鬼女</td>
       <td>
           
+          <p>佝偻 长爪 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4097,6 +4788,7 @@
       <td>20</td>
       <td>本多忠胜</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -4106,6 +4798,7 @@
       <td>阿胜</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -4113,6 +4806,9 @@
       <td>22</td>
       <td>杂贺孙一</td>
       <td>
+          
+          <p>鸟 枪手 </p>
+          
           
       </td>
       <td></td>
@@ -4122,6 +4818,7 @@
       <td>柳生石舟斋</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -4129,6 +4826,7 @@
       <td>24</td>
       <td>足利义辉</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -4138,6 +4836,7 @@
       <td>宝藏院胤荣</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -4145,6 +4844,7 @@
       <td>26</td>
       <td>坂田金时</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -4154,6 +4854,7 @@
       <td>司箭院兴仙</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -4161,6 +4862,9 @@
       <td>28</td>
       <td>大谷吉继</td>
       <td>
+          
+          <p>蝗虫 双刀 </p>
+          
           
       </td>
       <td></td>
@@ -4170,6 +4874,9 @@
       <td>岛左近</td>
       <td>
           
+          <p>雷 长枪 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4177,6 +4884,9 @@
       <td>30</td>
       <td>荒骷髅</td>
       <td>
+          
+          <p>场地BOSS </p>
+          
           
       </td>
       <td></td>
@@ -4186,6 +4896,9 @@
       <td>石田三成</td>
       <td>
           
+          <p>风 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4193,6 +4906,7 @@
       <td>32</td>
       <td>漆黑武士</td>
       <td>
+          
           
       </td>
       <td></td>
@@ -4202,6 +4916,9 @@
       <td>织田信长</td>
       <td>
           
+          <p>孔雀 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4209,6 +4926,9 @@
       <td>34</td>
       <td>凯瑞</td>
       <td>
+          
+          <p>黑蛇 </p>
+          
           
       </td>
       <td></td>
@@ -4218,6 +4938,9 @@
       <td>八岐大蛇</td>
       <td>
           
+          <p>地图Boss </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4225,6 +4948,9 @@
       <td>36</td>
       <td>东西无双</td>
       <td>
+          
+          <p>双打 </p>
+          
           
       </td>
       <td></td>
@@ -4234,6 +4960,9 @@
       <td>雪女信长</td>
       <td>
           
+          <p>双打 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4241,6 +4970,9 @@
       <td>38</td>
       <td>百目</td>
       <td>
+          
+          <p>异性 触手 权杖 </p>
+          
           
       </td>
       <td></td>
@@ -4250,6 +4982,9 @@
       <td>伊达成实</td>
       <td>
           
+          <p>蜈蚣 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4257,6 +4992,9 @@
       <td>40</td>
       <td>片仓重长</td>
       <td>
+          
+          <p>发呆开场 大斧 </p>
+          
           
       </td>
       <td></td>
@@ -4266,6 +5004,9 @@
       <td>伊达政宗</td>
       <td>
           
+          <p>风 水 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4273,6 +5014,9 @@
       <td>42</td>
       <td>玛丽亚</td>
       <td>
+          
+          <p>西洋剑 </p>
+          
           
       </td>
       <td></td>
@@ -4282,6 +5026,9 @@
       <td>龙之臂膀</td>
       <td>
           
+          <p>双打 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4289,6 +5036,9 @@
       <td>44</td>
       <td>猿飞佐助</td>
       <td>
+          
+          <p>旋棍 </p>
+          
           
       </td>
       <td></td>
@@ -4298,6 +5048,9 @@
       <td>真田幸村</td>
       <td>
           
+          <p>长枪 火 麒麟 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4305,6 +5058,9 @@
       <td>46</td>
       <td>佐佐木小次郎</td>
       <td>
+          
+          <p>大太刀 </p>
+          
           
       </td>
       <td></td>
@@ -4314,6 +5070,9 @@
       <td>真田幸村PLUS</td>
       <td>
           
+          <p>长枪 火 麒麟 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4321,6 +5080,9 @@
       <td>48</td>
       <td>阴摩罗鬼</td>
       <td>
+          
+          <p>鸟 </p>
+          
           
       </td>
       <td></td>
@@ -4330,6 +5092,9 @@
       <td>丰臣秀赖</td>
       <td>
           
+          <p>双刀 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4337,6 +5102,9 @@
       <td>50</td>
       <td>⭐️九尾妖狐</td>
       <td>
+          
+          <p>九尾狐 </p>
+          
           
       </td>
       <td></td>
@@ -4346,6 +5114,7 @@
       <td>岛左近PLUS</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -4353,6 +5122,9 @@
       <td>52</td>
       <td>隼仁</td>
       <td>
+          
+          <p>忍术 </p>
+          
           
       </td>
       <td></td>
@@ -4388,6 +5160,9 @@
       <td>⭐️马头鬼</td>
       <td>
           
+          <p>断头大刀 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4395,6 +5170,9 @@
       <td>2</td>
       <td>烟烟罗</td>
       <td>
+          
+          <p>拳头 瞬移 </p>
+          
           
       </td>
       <td></td>
@@ -4404,6 +5182,9 @@
       <td>牛头鬼</td>
       <td>
           
+          <p>大棒 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4411,6 +5192,9 @@
       <td>4</td>
       <td>夜刀神</td>
       <td>
+          
+          <p>蛇 毒 </p>
+          
           
       </td>
       <td></td>
@@ -4420,6 +5204,9 @@
       <td>今川义元</td>
       <td>
           
+          <p>双刀 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4427,6 +5214,9 @@
       <td>6</td>
       <td>镰鼬</td>
       <td>
+          
+          <p>老鼠 旋风斩 </p>
+          
           
       </td>
       <td></td>
@@ -4436,6 +5226,9 @@
       <td>塚原卜传</td>
       <td>
           
+          <p>剑 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4443,6 +5236,9 @@
       <td>8</td>
       <td>斋藤义龙</td>
       <td>
+          
+          <p>镜像主角 </p>
+          
           
       </td>
       <td></td>
@@ -4452,6 +5248,9 @@
       <td>崇枭</td>
       <td>
           
+          <p>猫头鹰 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4459,6 +5258,9 @@
       <td>10</td>
       <td>漆黑武士</td>
       <td>
+          
+          <p>大斧 </p>
+          
           
       </td>
       <td></td>
@@ -4468,6 +5270,9 @@
       <td>真柄直隆</td>
       <td>
           
+          <p>大太刀 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4475,6 +5280,9 @@
       <td>12</td>
       <td>本多忠胜</td>
       <td>
+          
+          <p>长矛 </p>
+          
           
       </td>
       <td></td>
@@ -4484,6 +5292,9 @@
       <td>浅井长政</td>
       <td>
           
+          <p>片翼鸟人 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4491,6 +5302,9 @@
       <td>14</td>
       <td>织田信长</td>
       <td>
+          
+          <p>单手剑 </p>
+          
           
       </td>
       <td></td>
@@ -4500,6 +5314,9 @@
       <td>怨灵鬼</td>
       <td>
           
+          <p>囚犯铁链 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4507,6 +5324,9 @@
       <td>16</td>
       <td>杂贺孙一</td>
       <td>
+          
+          <p>火枪 </p>
+          
           
       </td>
       <td></td>
@@ -4516,6 +5336,9 @@
       <td>牛鬼</td>
       <td>
           
+          <p>蜘蛛牛 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4523,6 +5346,9 @@
       <td>18</td>
       <td>火车</td>
       <td>
+          
+          <p>狐狸 车轮 鞭子 </p>
+          
           
       </td>
       <td></td>
@@ -4532,6 +5358,9 @@
       <td>两面宿傩</td>
       <td>
           
+          <p>四足两面 阴阳术 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4539,6 +5368,9 @@
       <td>20</td>
       <td>前田利家</td>
       <td>
+          
+          <p>长枪 </p>
+          
           
       </td>
       <td></td>
@@ -4548,6 +5380,9 @@
       <td>柴田胜家</td>
       <td>
           
+          <p>双斧 象牙 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4555,6 +5390,9 @@
       <td>22</td>
       <td>松永久秀</td>
       <td>
+          
+          <p>阴险 双刀 </p>
+          
           
       </td>
       <td></td>
@@ -4564,6 +5402,9 @@
       <td>藤吉郎</td>
       <td>
           
+          <p>双刀 猴子 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4571,6 +5412,9 @@
       <td>24</td>
       <td>蜂须贺小六</td>
       <td>
+          
+          <p>锁链 龟壳 水 </p>
+          
           
       </td>
       <td></td>
@@ -4580,6 +5424,9 @@
       <td>大太法师</td>
       <td>
           
+          <p>场地BOSS </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4587,6 +5434,9 @@
       <td>26</td>
       <td>酒吞童子</td>
       <td>
+          
+          <p>长柄锤 醉酒 火 </p>
+          
           
       </td>
       <td></td>
@@ -4596,6 +5446,9 @@
       <td>长壁姬</td>
       <td>
           
+          <p>场地BOSS </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4603,6 +5456,9 @@
       <td>28</td>
       <td>前田庆次</td>
       <td>
+          
+          <p>长矛 </p>
+          
           
       </td>
       <td></td>
@@ -4612,6 +5468,9 @@
       <td>藤吉郎</td>
       <td>
           
+          <p>双刀 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4619,6 +5478,9 @@
       <td>30</td>
       <td>果心居士</td>
       <td>
+          
+          <p>影分身 </p>
+          
           
       </td>
       <td></td>
@@ -4628,6 +5490,9 @@
       <td>威廉</td>
       <td>
           
+          <p>主角对决 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4635,6 +5500,9 @@
       <td>32</td>
       <td>大狱丸</td>
       <td>
+          
+          <p>大锤 多剑 </p>
+          
           
       </td>
       <td></td>
@@ -4644,6 +5512,9 @@
       <td>神秘勇僧</td>
       <td>
           
+          <p>多武器 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4651,6 +5522,9 @@
       <td>34</td>
       <td>海入道</td>
       <td>
+          
+          <p>史莱姆 </p>
+          
           
       </td>
       <td></td>
@@ -4660,6 +5534,9 @@
       <td>夜枭</td>
       <td>
           
+          <p>白虎 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4667,6 +5544,9 @@
       <td>36</td>
       <td>⭐️源义经</td>
       <td>
+          
+          <p>鸟人 </p>
+          
           
       </td>
       <td></td>
@@ -4676,6 +5556,9 @@
       <td>⭐️源赖光</td>
       <td>
           
+          <p>召唤 次元斩 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4683,6 +5566,9 @@
       <td>38</td>
       <td>土蜘蛛</td>
       <td>
+          
+          <p>人形蜘蛛 </p>
+          
           
       </td>
       <td></td>
@@ -4692,6 +5578,9 @@
       <td>大蛤蟆</td>
       <td>
           
+          <p>长矛 忍术 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4699,6 +5588,9 @@
       <td>40</td>
       <td>白虎</td>
       <td>
+          
+          <p>翅膀 猫 </p>
+          
           
       </td>
       <td></td>
@@ -4708,6 +5600,9 @@
       <td>黄泉雷神</td>
       <td>
           
+          <p>鸟居 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4715,6 +5610,9 @@
       <td>42</td>
       <td>隼涟</td>
       <td>
+          
+          <p>忍术 </p>
+          
           
       </td>
       <td></td>
@@ -4724,6 +5622,9 @@
       <td>大岳丸</td>
       <td>
           
+          <p>剑 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4731,6 +5632,9 @@
       <td>44</td>
       <td>立乌帽子</td>
       <td>
+          
+          <p>镰刀 </p>
+          
           
       </td>
       <td></td>
@@ -4740,6 +5644,9 @@
       <td>祸梦鬼</td>
       <td>
           
+          <p>妙蛙种子 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4748,6 +5655,9 @@
       <td>女天狗</td>
       <td>
           
+          <p>扇子 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4755,6 +5665,9 @@
       <td>47</td>
       <td>空海</td>
       <td>
+          
+          <p>权杖 </p>
+          
           
       </td>
       <td></td>
@@ -4786,6 +5699,9 @@
       <td>混沌成员</td>
       <td>
           
+          <p>单手剑 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4793,6 +5709,9 @@
       <td>2</td>
       <td>海盗比凯</td>
       <td>
+          
+          <p>长柄斧 </p>
+          
           
       </td>
       <td></td>
@@ -4802,6 +5721,9 @@
       <td>黑骑士</td>
       <td>
           
+          <p>骑马 双头矛 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4809,6 +5731,9 @@
       <td>4</td>
       <td>核心元素（水火双子）</td>
       <td>
+          
+          <p>金属球 双属性 </p>
+          
           
       </td>
       <td></td>
@@ -4818,6 +5743,9 @@
       <td>奇美拉</td>
       <td>
           
+          <p>翅膀狮子 尾巴蛇 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4825,6 +5753,9 @@
       <td>6</td>
       <td>风之混沌—提亚马特</td>
       <td>
+          
+          <p>六头龙人 </p>
+          
           
       </td>
       <td></td>
@@ -4834,6 +5765,9 @@
       <td>大毛尔波尔</td>
       <td>
           
+          <p>史莱姆 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4841,6 +5775,9 @@
       <td>8</td>
       <td>火之混沌—马莉莉丝</td>
       <td>
+          
+          <p>六臂蛇 </p>
+          
           
       </td>
       <td></td>
@@ -4850,6 +5787,9 @@
       <td>僵尸龙</td>
       <td>
           
+          <p>僵尸龙 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4857,6 +5797,9 @@
       <td>10</td>
       <td>土之混沌—巫妖</td>
       <td>
+          
+          <p>骨制翅膀 </p>
+          
           
       </td>
       <td></td>
@@ -4866,6 +5809,9 @@
       <td>巨钳虾</td>
       <td>
           
+          <p>机械蜈蚣 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4873,6 +5819,9 @@
       <td>12</td>
       <td>水之混沌—克拉肯</td>
       <td>
+          
+          <p>触手头 </p>
+          
           
       </td>
       <td></td>
@@ -4882,6 +5831,7 @@
       <td>海盗比凯（混沌化）</td>
       <td>
           
+          
       </td>
       <td></td>
     </tr>
@@ -4889,6 +5839,9 @@
       <td>14</td>
       <td>铁巨人</td>
       <td>
+          
+          <p>机械巨人 </p>
+          
           
       </td>
       <td></td>
@@ -4898,6 +5851,9 @@
       <td>凶恶巨兽</td>
       <td>
           
+          <p>贝希摩斯 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4906,6 +5862,9 @@
       <td>阿斯托斯</td>
       <td>
           
+          <p>挚友 机械妙蛙种子 </p>
+          
+          
       </td>
       <td></td>
     </tr>
@@ -4913,6 +5872,9 @@
       <td>17</td>
       <td>最终混沌—混沌之暗</td>
       <td>
+          
+          <p>四臂怪 </p>
+          
           
       </td>
       <td></td>
@@ -4950,6 +5912,9 @@
       <td>张梁</td>
       <td>
           
+          <p>长柄锤 伸长手 土 </p>
+          
+          
       </td>
       <td>抡锤、跳砸、前拖、土柱；后滚；暴气荆棘</td>
     </tr>
@@ -4957,6 +5922,9 @@
       <td>2</td>
       <td>朱厌</td>
       <td>
+          
+          <p>粗臂猿 </p>
+          
           
       </td>
       <td>抡拳、红冲脚、红下砸、拍地；前跑，后跳，侧跳；怒吼</td>
@@ -4966,6 +5934,9 @@
       <td>封豨</td>
       <td>
           
+          <p>野猪 </p>
+          
+          
       </td>
       <td>前拱、转身、红下砸；转身；顿脚、倒地</td>
     </tr>
@@ -4974,6 +5945,9 @@
       <td>张宝</td>
       <td>
           
+          <p>佝偻 铃铛 火 </p>
+          
+          
       </td>
       <td>三连火圈、火球、地火、螺旋火球、近身剑、召唤小怪；瞬移；</td>
     </tr>
@@ -4981,6 +5955,9 @@
       <td>5</td>
       <td>张角</td>
       <td>
+          
+          <p>巨型 爬行 权杖 雷 </p>
+          
           
       </td>
       <td>雷圈落雷、散符咒落雷、磕头（烟圈）、吐息、红吐弹、
@@ -4991,6 +5968,9 @@
       <td>獓因</td>
       <td>
           
+          <p>触手牛 冰 </p>
+          
+          
       </td>
       <td>前跳砸、触手扫地、砸地、前戳、红前撞、吐冰</td>
     </tr>
@@ -4998,6 +5978,9 @@
       <td>7</td>
       <td>白蛇</td>
       <td>
+          
+          <p>蛇 舞女 毒 </p>
+          
           
       </td>
       <td>吐场地毒圈、正逆扫尾、舞袖蛇头、
@@ -5008,6 +5991,9 @@
       <td>张让</td>
       <td>
           
+          <p>影分身 雷 </p>
+          
+          
       </td>
       <td>红突刺、雷圈、范围落雷、直线落雷、
 漂浮螺旋斩、前挥剑；侧瞬闪；原地暴风</td>
@@ -5017,6 +6003,9 @@
       <td>华雄</td>
       <td>
           
+          <p>长柄锤 </p>
+          
+          
       </td>
       <td>红舞棍前冲、红转身砸、突刺前戳；前冲、后翻滚</td>
     </tr>
@@ -5024,6 +6013,9 @@
       <td>10</td>
       <td>吕布</td>
       <td>
+          
+          <p>骑马下马 火 </p>
+          
           
       </td>
       <td>骑马：红下砸、红前冲、射箭；
@@ -5034,6 +6026,9 @@
       <td>饕餮</td>
       <td>
           
+          <p>巨型 独臂 多足爬行 </p>
+          
+          
       </td>
       <td>跳砸、红脚踩；掉头处决；跳跃处决</td>
     </tr>
@@ -5041,6 +6036,9 @@
       <td>12</td>
       <td>孙坚</td>
       <td>
+          
+          <p>虎 尾巴 </p>
+          
           
       </td>
       <td>前扑、绕尾、尾勾后跳、尾勾侧跳、
@@ -5052,6 +6050,9 @@
       <td>董卓</td>
       <td>
           
+          <p>飞刀 矛 </p>
+          
+          
       </td>
       <td>飞刀、扇形飞刀、砍砍踩、砍砍突砍、
 红前抓、三连突、红下旋砍、跳投矛、五连镖、红剑气砍、
@@ -5062,6 +6063,9 @@
       <td>夏侯惇</td>
       <td>
           
+          <p>翼人 斧 火 </p>
+          
+          
       </td>
       <td>红停顿飞、斜上砍、斜下砍、拖地砍、
 旋转前冲、红下砍、原地脚踩；旋转然后飞远</td>
@@ -5070,6 +6074,9 @@
       <td>15</td>
       <td>⭐️张辽</td>
       <td>
+          
+          <p>雷 </p>
+          
           
       </td>
       <td>红空下旋砍、长旋砍前戳、二连转前戳侧砍、
@@ -5081,6 +6088,9 @@
       <td>魔吕布</td>
       <td>
           
+          <p>乒乓球 </p>
+          
+          
       </td>
       <td>顿前侧砍、绕场火球、跳前戳、二连脚踩、绕矛下戳、
 双脚踩、红跳空踩、红拖地矛、四连脚踩火、二连剑气矛、红火球；后跳</td>
@@ -5089,6 +6099,9 @@
       <td>17</td>
       <td>颜良&amp;文丑</td>
       <td>
+          
+          <p>双BOSS 大锤 </p>
+          
           
       </td>
       <td>跳砸、砸、抡、拖地地刺、红拳
@@ -5099,6 +6112,9 @@
       <td>刘备</td>
       <td>
           
+          <p>飞龙 </p>
+          
+          
       </td>
       <td>爆气3雷球（圈）、飞弧斩、三连转砍戳、4连螺旋、
 跳前斩、红尾冲、旋转升天、红刀波；旋转前冲、飞后跳</td>
@@ -5107,6 +6123,9 @@
       <td>19</td>
       <td>袁绍</td>
       <td>
+          
+          <p>炮 盾 冰 </p>
+          
           
       </td>
       <td>后跳炮、侧跳炮、前抽鞭、持盾、红前盾击
@@ -5117,6 +6136,9 @@
       <td>于吉</td>
       <td>
           
+          <p>法师 </p>
+          
+          
       </td>
       <td>四连冰锥、撒粉爆炸、旋转大剑、空中红球、红下冲、红抓手；瞬移</td>
     </tr>
@@ -5125,6 +6147,9 @@
       <td>飞龙</td>
       <td>
           
+          <p>场地Boss </p>
+          
+          
       </td>
       <td>UNKNOWN</td>
     </tr>
@@ -5132,6 +6157,9 @@
       <td>22</td>
       <td>蒙眼少年</td>
       <td>
+          
+          <p>剑仙 </p>
+          
           
       </td>
       <td>红抓手、红升龙、红跳劈、红大剑突、
@@ -5172,6 +6200,9 @@
       <td>⭐️假骑士</td>
       <td>
           
+          <p>三阶段 虚弱 </p>
+          
+          
       </td>
       <td>跳跃、冲锋、蓄力锤、跳跃重锤、狂怒虚弱</td>
     </tr>
@@ -5179,6 +6210,7 @@
       <td>2</td>
       <td>格鲁兹之母</td>
       <td>
+          
           
       </td>
       <td>冲撞、连环猛撞</td>
@@ -5188,6 +6220,9 @@
       <td>躁郁的毛里克</td>
       <td>
           
+          <p>扭曲怪物 元件弹幕 </p>
+          
+          
       </td>
       <td>喷射、跳砸、挥爪</td>
     </tr>
@@ -5195,6 +6230,9 @@
       <td>4</td>
       <td>大型苔藓冲锋者</td>
       <td>
+          
+          <p>小怪加强 </p>
+          
           
       </td>
       <td>来回冲刺</td>
@@ -5204,6 +6242,9 @@
       <td>水晶守卫</td>
       <td>
           
+          <p>场地攻击 </p>
+          
+          
       </td>
       <td>直射激光</td>
     </tr>
@@ -5211,6 +6252,9 @@
       <td>6</td>
       <td>吸虫之母</td>
       <td>
+          
+          <p>本体固定 </p>
+          
           
       </td>
       <td>召唤浮游生物</td>
@@ -5220,6 +6264,9 @@
       <td>粪虫防御者</td>
       <td>
           
+          <p>变种招式 </p>
+          
+          
       </td>
       <td>地突/跟踪地突/带扔球地突 扔球 变球</td>
     </tr>
@@ -5227,6 +6274,9 @@
       <td>8</td>
       <td>⭐️灵魂大师</td>
       <td>
+          
+          <p>变种招式 假动作 </p>
+          
           
       </td>
       <td>冲刺/缓慢浮游炮冲刺 跟踪弹 下砸冲击波/假动作下砸</td>
@@ -5236,6 +6286,9 @@
       <td>灵魂战士</td>
       <td>
           
+          <p>场地召唤 </p>
+          
+          
       </td>
       <td>下批 突刺 跟踪弹 瞬移</td>
     </tr>
@@ -5243,6 +6296,9 @@
       <td>10</td>
       <td>收藏家</td>
       <td>
+          
+          <p>拘禁/场地召唤/持续加码 </p>
+          
           
       </td>
       <td>跳挠 上跳</td>
@@ -5252,6 +6308,9 @@
       <td>诺斯克</td>
       <td>
           
+          <p>扭曲怪物 </p>
+          
+          
       </td>
       <td>跳砸 冲刺 喷射/飞天持续喷射</td>
     </tr>
@@ -5259,6 +6318,9 @@
       <td>12</td>
       <td>螳螂领主</td>
       <td>
+          
+          <p>车轮战/组合技 读招 </p>
+          
           
       </td>
       <td>下戳 突刺 持续圆盘</td>
@@ -5268,6 +6330,9 @@
       <td>叛徒领主</td>
       <td>
           
+          <p>刀波 </p>
+          
+          
       </td>
       <td>突刺 斜下戳 刀波</td>
     </tr>
@@ -5275,6 +6340,9 @@
       <td>14</td>
       <td>奥波路波</td>
       <td>
+          
+          <p>持续弹幕 组合 </p>
+          
           
       </td>
       <td>八方向弹幕</td>
@@ -5284,6 +6352,9 @@
       <td>神之驯服者</td>
       <td>
           
+          <p>人+宠物 组合 </p>
+          
+          
       </td>
       <td>跳劈 滚动/喷射</td>
     </tr>
@@ -5291,6 +6362,9 @@
       <td>16</td>
       <td>乌姆</td>
       <td>
+          
+          <p>场地攻击 破防 </p>
+          
           
       </td>
       <td>跟踪电/地图炮电</td>
@@ -5300,6 +6374,9 @@
       <td>守望者骑士</td>
       <td>
           
+          <p>团体战斗 </p>
+          
+          
       </td>
       <td>二连斩断 滚动 冲刺/后撤</td>
     </tr>
@@ -5307,6 +6384,9 @@
       <td>18</td>
       <td>守护者大黄蜂</td>
       <td>
+          
+          <p>镜像角色 </p>
+          
           
       </td>
       <td>突刺/下突刺 扔出收回 丝线攻击 后撤/跳跃</td>
@@ -5316,6 +6396,9 @@
       <td>残破容器</td>
       <td>
           
+          <p>镜像角色 地图攻击 </p>
+          
+          
       </td>
       <td>冲刺斩/空中版 下刺 4连抡 地图炮 后撤/跳跃</td>
     </tr>
@@ -5323,6 +6406,7 @@
       <td>20</td>
       <td>空洞骑士</td>
       <td>
+          
           
       </td>
       <td>UNKNOWN</td>
@@ -5332,6 +6416,7 @@
       <td>辐光</td>
       <td>
           
+          
       </td>
       <td>UNKNOWN</td>
     </tr>
@@ -5339,6 +6424,7 @@
       <td>22</td>
       <td>剧团团长格林</td>
       <td>
+          
           
       </td>
       <td>UNKNOWN</td>
@@ -5348,6 +6434,9 @@
       <td>蜂巢骑士</td>
       <td>
           
+          <p>地图炮 特色召唤 </p>
+          
+          
       </td>
       <td>地图炮尖刺3连 呕吐蜂群 突刺 瞬移</td>
     </tr>
@@ -5355,6 +6444,7 @@
       <td>24</td>
       <td>骨钉兄弟奥罗与马托</td>
       <td>
+          
           
       </td>
       <td>UNKNOWN</td>
@@ -5364,6 +6454,7 @@
       <td>绘画大师席奥</td>
       <td>
           
+          
       </td>
       <td>UNKNOWN</td>
     </tr>
@@ -5371,6 +6462,7 @@
       <td>26</td>
       <td>伟大骨钉贤者斯莱</td>
       <td>
+          
           
       </td>
       <td>UNKNOWN</td>
@@ -5380,6 +6472,7 @@
       <td>胡长老</td>
       <td>
           
+          
       </td>
       <td>大锤齐砸/依次砸下 传送</td>
     </tr>
@@ -5387,6 +6480,7 @@
       <td>28</td>
       <td>加利安</td>
       <td>
+          
           
       </td>
       <td>旋转镰刀/弹球 传送</td>
@@ -5396,6 +6490,7 @@
       <td>戈布</td>
       <td>
           
+          
       </td>
       <td>八方向刺/二连/三连 瞬移</td>
     </tr>
@@ -5403,6 +6498,7 @@
       <td>30</td>
       <td>马科斯</td>
       <td>
+          
           
       </td>
       <td>跟踪刺 旋转盾</td>
@@ -5412,6 +6508,7 @@
       <td>马尔穆</td>
       <td>
           
+          
       </td>
       <td>跟踪弹球 瞬移</td>
     </tr>
@@ -5419,6 +6516,7 @@
       <td>32</td>
       <td>无眼</td>
       <td>
+          
           
       </td>
       <td>横向幽魂 瞬移</td>
@@ -5428,6 +6526,7 @@
       <td>泽若</td>
       <td>
           
+          
       </td>
       <td>双跟踪刺/收回</td>
     </tr>
@@ -5435,6 +6534,9 @@
       <td>34</td>
       <td>岗哨大黄蜂</td>
       <td>
+          
+          <p>场地陷阱 防反 </p>
+          
           
       </td>
       <td>突刺 扔出收回 丝线攻击 格挡防反</td>
@@ -5444,6 +6546,9 @@
       <td>暴怒守卫</td>
       <td>
           
+          <p>增强普通版 </p>
+          
+          
       </td>
       <td>颜色发生变化</td>
     </tr>
@@ -5451,6 +6556,7 @@
       <td>36</td>
       <td>战斗姐妹</td>
       <td>
+          
           
       </td>
       <td>UNKNOWN</td>
@@ -5460,6 +6566,7 @@
       <td>有翼诺斯克</td>
       <td>
           
+          
       </td>
       <td>UNKNOWN</td>
     </tr>
@@ -5467,6 +6574,7 @@
       <td>38</td>
       <td>纯粹容器</td>
       <td>
+          
           
       </td>
       <td>UNKNOWN</td>
@@ -5476,6 +6584,7 @@
       <td>无上辐光</td>
       <td>
           
+          
       </td>
       <td>UNKNOWN</td>
     </tr>
@@ -5483,6 +6592,7 @@
       <td>40</td>
       <td>灰色王子左特</td>
       <td>
+          
           
       </td>
       <td>乱冲倒地/直接倒地 跳砸/跳位移砸 下冲 吐召唤物/吐自爆 跑动</td>
@@ -5492,6 +6602,7 @@
       <td>白色防御者</td>
       <td>
           
+          
       </td>
       <td>UNKNOWN</td>
     </tr>
@@ -5499,6 +6610,7 @@
       <td>42</td>
       <td>梦魇之王格林</td>
       <td>
+          
           
       </td>
       <td>UNKNOWN</td>
