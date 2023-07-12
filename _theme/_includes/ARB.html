@@ -11,7 +11,7 @@
   <tbody>
     <!-- game,boss,feature,skills -->
     {%- assign index = 0  -%}
-    {%- for line in site.data.ARB  -%}
+    {%- for line in site.data.ARB -%}
     {% if line.game == include.filter %}
     {%- assign index = index | plus: 1  -%}
     <tr>
@@ -19,7 +19,7 @@
       <td>{{ line.boss }}</td>
       <td>
           {% if line.feature != nil and line.feature != "" and line.feature != " " %}
-          <p>{{ line.feature }} </p>
+          {{ line.feature | newline_to_br }}
           {% endif %}
 
           {%- assign tag = line.image_tag1-%}
@@ -43,7 +43,9 @@
           {% endif %}
           
       </td>
-      <td>{{ line.skills }}</td>
+      <td>
+        {{ line.skills | newline_to_br }}
+      </td>
     </tr>
     {% endif %}
     {%- endfor -%}
