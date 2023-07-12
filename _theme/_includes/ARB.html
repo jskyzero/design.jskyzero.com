@@ -18,6 +18,10 @@
       <td>{{ index }}</td>
       <td>{{ line.boss }}</td>
       <td>
+          {% if line.feature != nil and line.feature != "" and line.feature != " " %}
+          <p>{{ line.feature }} </p>
+          {% endif %}
+
           {%- assign tag = line.image_tag1-%}
           {% if tag != nil and tag != "" and tag != " " %}
             <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat">
