@@ -17,7 +17,25 @@ categories: [动作游戏分析]
 
 ![](/assets/draw.io/output/ff16.jpg)
 
++ [【最终幻想16】各BOSS战（无剧情）](https://www.bilibili.com/video/BV18z4y1i7PS/)
+
+
 {% include ARB.html filter = "FF16"%}
+
+
+### 战神诸神黄昏
+
++ [二周目战神难度无伤狂战士国王](https://www.bilibili.com/video/BV1QP411S7Dv)
+
+
+<!-- ### 塞尔达传说旷野之息 -->
+
+### 塞尔达传说王国之泪
+
++ [所有新怪一览](https://www.bilibili.com/video/BV1CM4y1v7Mm)
++ [最高伤害](https://www.bilibili.com/video/BV1Cg4y1F7oa)
++ [全武器输出与伤害机制分析](https://www.bilibili.com/video/BV1CM4y1v7Mm)
++ [人马AI](https://www.bilibili.com/video/BV16X4y1C7uw)
 
 
 ## From Software
@@ -28,18 +46,18 @@ categories: [动作游戏分析]
 {% include ARB.html filter = "DS"%}
 
 
-### 黑暗灵魂1
+<!-- ### 黑暗灵魂1
 
 其实，我还没玩过，姑且列在这里……
 
-{% include ARB.html filter = "DS1"%}
+{% include ARB.html filter = "DS1"%} -->
 
 
-### 黑暗灵魂2
+<!-- ### 黑暗灵魂2
 
 其实，我也还没玩过，姑且列在这里……
 
-{% include ARB.html filter = "DS2"%}
+{% include ARB.html filter = "DS2"%} -->
 
 
 ### 黑暗灵魂3
@@ -190,45 +208,6 @@ categories: [动作游戏分析]
 >
 > 最值得学习的地方：设计的维度
 
-
-{% include ARB.html filter = "HollowKnight"%}
-
-
-参考：
-
-+ [空洞骑士 WIKI BOSS](https://hkss.huijiwiki.com/wiki/Boss_(%E7%A9%BA%E6%B4%9E%E9%AA%91%E5%A3%AB))
-+ [空洞骑士Boss合集](https://www.bilibili.com/video/BV15t411X7DP)
-+ [空洞骑士 无护符 全辐辉（全boss无伤）合集](https://www.bilibili.com/video/BV1dt411B78e)
-+ [空洞骑士 诸神堂boss超详细分层次攻略](https://www.bilibili.com/video/BV1A7411y7Cr)
-
-
-## 其他
-
-<!-- ### 猎天使魔女 -->
-<!-- ### 猎天使魔女2 -->
-
-
-### 战神诸神黄昏
-
-+ [二周目战神难度无伤狂战士国王](https://www.bilibili.com/video/BV1QP411S7Dv)
-
-
-### 塞尔达传说旷野之息
-
-
-### 塞尔达传说王国之泪
-
-+ [所有新怪一览](https://www.bilibili.com/video/BV1CM4y1v7Mm)
-+ [最高伤害](https://www.bilibili.com/video/BV1Cg4y1F7oa)
-+ [全武器输出与伤害机制分析](https://www.bilibili.com/video/BV1CM4y1v7Mm)
-+ [人马AI](https://www.bilibili.com/video/BV16X4y1C7uw)
-
-
-## 总结
-
-
-### 设计维度
-
 + 战斗阶段
   + 开场：特色演出（睡觉、象征意义的动作、开场CG）
   + 战中：分阶段
@@ -245,3 +224,24 @@ categories: [动作游戏分析]
   + 召唤：
   + 纯位移：跳跃，冲刺，后撤，侧闪
   + 招式位移：前冲，向前跳下，后撤斩
+
+
+{% include ARB.html filter = "HollowKnight"%}
+
+
+参考：
+
++ [空洞骑士 WIKI BOSS](https://hkss.huijiwiki.com/wiki/Boss_(%E7%A9%BA%E6%B4%9E%E9%AA%91%E5%A3%AB))
++ [空洞骑士Boss合集](https://www.bilibili.com/video/BV15t411X7DP)
++ [空洞骑士 无护符 全辐辉（全boss无伤）合集](https://www.bilibili.com/video/BV1dt411B78e)
++ [空洞骑士 诸神堂boss超详细分层次攻略](https://www.bilibili.com/video/BV1A7411y7Cr)
+
+
+<!-- ## 其他 -->
+
+<!-- ### 猎天使魔女 -->
+<!-- ### 猎天使魔女2 -->
+
+
+## 总结
+
