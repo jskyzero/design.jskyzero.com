@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "游戏设计：常见设计方法论"
-categories: [游戏开发]
+# categories: [游戏开发]
 ---
 
 # 常见设计方法论
