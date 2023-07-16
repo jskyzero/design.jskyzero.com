@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-12T04:43:36+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-16T16:36:26+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
 
 <h2 id="开发阶段及其概览">开发阶段及其概览</h2>
@@ -144,7 +144,7 @@
   <li>待补充</li>
 </ul>
 
-<h2 id="动作游戏专题">动作游戏专题</h2>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[常见设计方法论]]></summary></entry><entry><title type="html">战斗系统：实现塞尔达的冒险感</title><link href="https://design.jskyzero.com/2023/05/26/zelda_totk/" rel="alternate" type="text/html" title="战斗系统：实现塞尔达的冒险感" /><published>2023-05-26T00:00:00+00:00</published><updated>2023-05-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/05/26/zelda_totk</id><content type="html" xml:base="https://design.jskyzero.com/2023/05/26/zelda_totk/"><![CDATA[<p>狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。</p>
+<h2 id="动作游戏专题">动作游戏专题</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[常见设计方法论]]></summary></entry><entry><title type="html">战斗系统：实现塞尔达的冒险感</title><link href="https://design.jskyzero.com/2023/05/26/zelda_totk/" rel="alternate" type="text/html" title="战斗系统：实现塞尔达的冒险感" /><published>2023-05-26T00:00:00+00:00</published><updated>2023-05-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/05/26/zelda_totk</id><content type="html" xml:base="https://design.jskyzero.com/2023/05/26/zelda_totk/"><![CDATA[<p>狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。</p>
 
 <h2 id="角色性能">角色性能</h2>
 
