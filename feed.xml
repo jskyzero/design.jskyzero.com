@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-17T11:48:49+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-17T17:42:34+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">聊聊最近的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="聊聊最近的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年上半年的动作游戏们">聊聊2023年上半年的动作游戏们</h1>
 
 <h2 id="前言">前言</h2>
@@ -7810,27 +7810,19 @@
 
 <p>这部分开始就进入相对比较“虚”的部分了，没有那么多确定的知识，只能通过游戏的体验去反向思考。</p>
 
-<p>这一部分我们会先根据“经验”设定一个推理的“起点”，再选取几只经典的怪物的逐只看看，逐步去修正我们的“起点”，试图得到最终的结论。</p>
-
-<ul>
-  <li>起点：怪物在不同状态下的出招是不同的</li>
-</ul>
+<!-- 这一部分我们会先根据“经验”设定一个推理的“起点”，再选取几只经典的怪物的逐只看看，逐步去修正我们的“起点”，试图得到最终的结论。 -->
 
 <p><img src="/assets/img/gameplay/mhrsb.AI/3.jpg" alt="" /></p>
 
-<p>参考上图，考虑到怪物猎人是一个规则设计非常繁多的游戏，以下内容我们还是希望聚焦到<strong>战斗中的“出招设计”</strong>上。</p>
-
-<p>我们先把怪物的AI行为分为战斗和其他两部分。（参考下图上半部分）</p>
-
-<p>根据体验，怪物一般会有正常状态、愤怒状态（、疲劳状态）三种，同时怪物可能还有自身的强化状态的逻辑（参考下图下半部分）：</p>
+<p>参考上图，考虑到怪物猎人是一个规则设计非常繁多的游戏，我们先把怪物的AI行为分为战斗和其他两部分，本文主要讨论战斗相关的AI逻辑。</p>
 
 <p><img src="/assets/img/gameplay/mhrsb.AI/4.jpg" alt="" /></p>
 
 <p>进一步的分析，我们以一些UP主的视频为参考展开：</p>
 
-<h3 id="爵银龙">爵银龙</h3>
-
 <p><a href="https://www.bilibili.com/video/BV1JF411c7f7">【曙光怪物底裤系列#1爵银龙】爵银龙的常见招式派生解析</a></p>
+
+<p>整理如下：</p>
 
 <ul>
   <li>特殊状态：劫血状态</li>
@@ -7942,6 +7934,11 @@
       <td>迅捷扇风(风压)</td>
       <td> </td>
     </tr>
+    <tr>
+      <td>……</td>
+      <td>……</td>
+      <td>……</td>
+    </tr>
   </tbody>
 </table>
 
@@ -7949,11 +7946,43 @@
   <p>后续有机会会在这里继续补充其他怪物的连招派生</p>
 </blockquote>
 
-<h3 id="总结">总结</h3>
+<h3 id="结论1出招跟状态相关">结论1：出招跟状态相关</h3>
 
-<p>小小总结一下，大概可以参考下图所示的行为树（虽然就效果而言，感觉多数情况下处于某种情形都会释放某种攻击像是状态机的优势……）：</p>
+<p>根据体验，怪物一般会有正常状态、愤怒状态（、疲劳状态）三种，同时怪物可能还有自身的强化状态的逻辑：</p>
 
 <p><img src="/assets/img/gameplay/mhrsb.AI/5.jpg" alt="" /></p>
+
+<p>怪物处于不同状态时，其出招派生是不一样的，用行为树来描述的话大概如下图：</p>
+
+<p><img src="/assets/img/gameplay/mhrsb.AI/6.jpg" alt="" /></p>
+
+<h3 id="结论2出招满足反应性与随机性">结论2：出招满足反应性与随机性</h3>
+
+<p>用人话来说就是，，怪物会对不同条件做出反应，出招不同；相同条件时，怪物有若干技能可以选择。</p>
+
+<p>条件除了上面提到的怪物自身处于不同的状态，大概率还和玩家位置相关。一个很典型的例子是红莲爆鳞龙头大尾大肉质好，本来应该是弹属性远程武器的活靶子，但是因为对远程武器AI导致远程武器狩猎难度也不简单。</p>
+
+<p>总结起来大致可参考下图：</p>
+
+<p><img src="/assets/img/gameplay/mhrsb.AI/7.jpg" alt="" /></p>
+
+<h3 id="结论3出招存在固定派生">结论3：出招存在固定派生</h3>
+
+<p>固定派生让玩家可以背板，提前预判怪物的行动，为持续游玩的玩家带来经验积累的优势。</p>
+
+<p>做一个反例思考，如果怪物的出招是纯随机的，一些没有特别好处理方式的招式将使得玩家的狩猎难度大增，甚至只要招式后摇大于任何一个怪物的出招前摇都可能被揍。另一个例子是早期雌火龙无前兆身前龙车，导致玩家甚至都会避免站在身前。</p>
+
+<p>另一方面，固定派生的中途也会根据玩家位置释放不同的招式；甚至当玩家位置偏移怪物下一招式的打击范围，怪物会调整自己的位置来减少空挥；当进行调整也无法命中的时候，甚至会取消攻击，可以参考下图：</p>
+
+<p><img src="/assets/img/gameplay/mhrsb.AI/8.jpg" alt="" /></p>
+
+<h2 id="总结">总结</h2>
+
+<p>就结论上而言，怪物猎人中的AI出招是十分“规矩”且“丰富”的，就特征层面上讲，符合广泛动作游戏的AI框架，但是牛就牛在量大且细节好。</p>
+
+<p>量大不仅体现在不同AI的状态多，也体现在一个状态下的派生多，还体现在一个派生下的规则多。三多，直接提供了长TTK下的丰富度。</p>
+
+<p>遗憾的是本文受限于时间，没有结合招式和AI去分析不同怪物的战斗体验，这部分如果细说对设计应该也是颇有益处的，后续有时间再补足吧。</p>
 
 <h2 id="其他参考">其他参考</h2>
 
