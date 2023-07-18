@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-17T17:42:34+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-18T08:04:56+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">聊聊最近的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="聊聊最近的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年上半年的动作游戏们">聊聊2023年上半年的动作游戏们</h1>
 
 <h2 id="前言">前言</h2>
@@ -7666,7 +7666,7 @@
 
 <p>如果要参考学习动作游戏PVE的BOSS设计的话，我想怪猎系列的怪物可能是绕不开的一个课题，它有着相对简单的关卡设计，衬托出纯度更高的战斗、丰富的机制与动作，带来反复游玩的乐趣。在MHW这一作，它经受住了大环境下ACT品类没落的考验，一跃成为了ACT游戏中最耀眼的明星之一。</p>
 
-<p>本文将<strong>从拆包、体验反推两个视角</strong>来窥视怪物猎人的AI，聚焦在怪物AI出招的设计、和这些设计是如何影响玩家的体验的。文章末尾会对比这两种方式，聊聊它俩各自的特点，以及在游戏反拆时适用的场合。</p>
+<p>本文将<strong>从拆包、体验反推两个视角</strong>来窥视怪物猎人的AI，聚焦在怪物AI出招的设计、和这些设计是如何影响玩家的体验的。也可以通过本文对比这两种方式，了解它俩各自的特点，以及在游戏反拆时适用的场合。</p>
 
 <h2 id="拆包">拆包</h2>
 
@@ -7948,7 +7948,7 @@
 
 <h3 id="结论1出招跟状态相关">结论1：出招跟状态相关</h3>
 
-<p>根据体验，怪物一般会有正常状态、愤怒状态（、疲劳状态）三种，同时怪物可能还有自身的强化状态的逻辑：</p>
+<p>根据体验，怪物一般会有正常状态、愤怒状态（、疲劳状态）几种，同时怪物可能还有自身的强化状态的逻辑：</p>
 
 <p><img src="/assets/img/gameplay/mhrsb.AI/5.jpg" alt="" /></p>
 
@@ -7968,7 +7968,7 @@
 
 <h3 id="结论3出招存在固定派生">结论3：出招存在固定派生</h3>
 
-<p>固定派生让玩家可以背板，提前预判怪物的行动，为持续游玩的玩家带来经验积累的优势。</p>
+<p>固定派生让玩家可以背版，提前预判怪物的行动，为持续游玩的玩家带来经验积累的优势。</p>
 
 <p>做一个反例思考，如果怪物的出招是纯随机的，一些没有特别好处理方式的招式将使得玩家的狩猎难度大增，甚至只要招式后摇大于任何一个怪物的出招前摇都可能被揍。另一个例子是早期雌火龙无前兆身前龙车，导致玩家甚至都会避免站在身前。</p>
 
