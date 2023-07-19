@@ -1,32 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-19T02:38:37+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">聊聊最近的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="聊聊最近的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年上半年的动作游戏们">聊聊2023年上半年的动作游戏们</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-19T06:57:21+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">聊聊最近玩过的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="聊聊最近玩过的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年上半年的动作游戏们">聊聊2023年上半年的动作游戏们</h1>
 
 <h2 id="前言">前言</h2>
+
+<p>先贴一个热度图，图上甚至还可以看出来纯血ACT与ARPG现在时长份额的区别。</p>
 
 <p><img src="/assets/img/act/2023/1.jpg" alt="" /></p>
 
 <h2 id="mhrsb-140">MHRSB 14.0</h2>
 
+<blockquote>
+  <p>MHRSB 更新路线 <a href="https://www.monsterhunter.com/rise-sunbreak/update/zh-hk/">https://www.monsterhunter.com/rise-sunbreak/update/zh-hk/</a>
+2022/08/26 11.0 月迅龙，红莲爆鳞龙，金火龙，银火龙
+2022/09/29 12.0 茶棘龙，焰狐龙，霞龙（怪异克服），怪异调查等级120
+2022/11/24 13.0 混沌黑蚀龙，炎王龙（怪异克服），钢龙（怪异克服），怪异调查等级200
+2023/02/07 14.0 冰咒龙，天慧龙（怪异克服），怪异等级220
+2023/04/02 15.0 岚龙，天廻龙（怪异克服），怪异等级300，特别探究任务
+2023/06/08 16.0 原初爵银龙</p>
+</blockquote>
+
 <ul>
   <li>冰咒龙</li>
-  <li>怪异克服天慧龙</li>
+</ul>
+
+<p>冰咒龙是一个非常好的对比<a href="https://youtu.be/QExRmPLdqNg">MHW</a>与<a href="https://www.youtube.com/watch?v=Pzz0cn74C7c">MHR</a>“感受”的例子，为什么MHW高清感受更好，而MHR感受欠缺。</p>
+
+<p>顺带还刷到了这个TDS的这个对比<a href="https://www.youtube.com/watch?v=N-Q302xdBBE">Monster Hunter: Iceborne Details vs Sunbreak</a></p>
+
+<ul>
+  <li>天慧龙（怪异克服）</li>
+</ul>
+
+<p>天慧龙的怪异克服阶段的二连击着实有些帅！可以对比原版看看</p>
+
+<ul>
+  <li><a href="https://www.bilibili.com/video/BV1m24y1W7eQ">怪异克服天彗龙全招式展示</a></li>
+  <li>
+    <p><a href="https://www.bilibili.com/video/BV1ZU4y1r7tY">天彗龙全招式展示</a></p>
+  </li>
   <li>怪异等级220</li>
 </ul>
 
+<p>刷子游戏的末路！</p>
+
 <h2 id="wild-hearts">WILD HEARTS</h2>
 
+<p>新意和缺点都十分明显的游戏。</p>
+
+<ul>
+  <li>大地图</li>
+  <li>机巧立回</li>
+  <li>
+    <p>形象新颖的怪物<a href="https://www.youtube.com/playlist?list=PL7bwjwx5WwdcT4u6W_hR8UsrEbgpljzxP">Wild Hearts Boss Fights</a></p>
+  </li>
+  <li>糟糕的3C &amp; 卡顿 &amp; 立回感受</li>
+</ul>
+
 <h2 id="wolong">WOLONG</h2>
+
+<p>未能达到玩家期待的游戏。</p>
+
+<p>大部分该说的之前demo就说过。</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/playlist?list=PL7bwjwx5Wwdd8sWb3u8jNaMbLINIzK4_4">全BOSS</a></li>
+</ul>
 
 <h2 id="mhrsb-150">MHRSB 15.0</h2>
 
 <ul>
   <li>岚龙</li>
-  <li>怪异克服天廻龙</li>
+</ul>
+
+<p><a href="https://www.bilibili.com/video/BV1Ac411n7ze">岚龙全招式展示</a></p>
+
+<ul>
+  <li>天廻龙（怪异克服）</li>
+</ul>
+
+<p><a href="https://www.bilibili.com/video/BV1jg4y177oZ">怪异克服天廻龙全招式展示</a></p>
+
+<ul>
   <li>怪异等级300</li>
+</ul>
+
+<p>和怪异克服天慧龙死磕，怪异克服天廻龙是真的不好打。</p>
+
+<ul>
   <li>特别探究任务</li>
 </ul>
 
+<p>超特回归！</p>
+
 <h2 id="zeldatotk">Zelda:TotK</h2>
+
+<p>并未以战斗见长的游戏，但是战斗却非常复合主旨。</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=Ke5RlOetZgI">Zelda: Tears of the Kingdom - All Bosses (No Damage)</a></li>
+</ul>
 
 <h2 id="mhrsb-160">MHRSB 16.0</h2>
 
@@ -34,14 +106,29 @@
   <li>原初爵银龙</li>
 </ul>
 
+<p><a href="https://www.bilibili.com/video/BV1js4y1y7Qv">原初爵银龙全招式展示</a></p>
+
 <h2 id="ff16">FF16</h2>
+
+<p>除了个别boss战的场面突破预期，其他全面未达预期。</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/playlist?list=PL7bwjwx5WwdfGEiYWu7y4erXyi9L-9213">全boss</a></li>
+</ul>
 
 <h2 id="wolong-dlc1">WOLONG DLC1</h2>
 
 <ul>
   <li>三周目</li>
-  <li>DLC1 典韦</li>
-</ul>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[聊聊2023年上半年的动作游戏们]]></summary></entry><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
+</ul>
+
+<p>被迫重学化解，太狗屎了。点名饕餮、蒙眼少年</p>
+
+<ul>
+  <li>DLC1</li>
+</ul>
+
+<p>体量2个新关卡，魔化典韦也有点压迫力</p>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[聊聊2023年上半年的动作游戏们]]></summary></entry><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
 
 <h2 id="开发阶段及其概览">开发阶段及其概览</h2>
 
