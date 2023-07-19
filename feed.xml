@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-18T08:04:56+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-19T02:38:37+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">聊聊最近的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="聊聊最近的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年上半年的动作游戏们">聊聊2023年上半年的动作游戏们</h1>
 
 <h2 id="前言">前言</h2>
@@ -7,19 +7,41 @@
 
 <h2 id="mhrsb-140">MHRSB 14.0</h2>
 
+<ul>
+  <li>冰咒龙</li>
+  <li>怪异克服天慧龙</li>
+  <li>怪异等级220</li>
+</ul>
+
 <h2 id="wild-hearts">WILD HEARTS</h2>
 
 <h2 id="wolong">WOLONG</h2>
 
 <h2 id="mhrsb-150">MHRSB 15.0</h2>
 
+<ul>
+  <li>岚龙</li>
+  <li>怪异克服天廻龙</li>
+  <li>怪异等级300</li>
+  <li>特别探究任务</li>
+</ul>
+
 <h2 id="zeldatotk">Zelda:TotK</h2>
 
 <h2 id="mhrsb-160">MHRSB 16.0</h2>
 
+<ul>
+  <li>原初爵银龙</li>
+</ul>
+
 <h2 id="ff16">FF16</h2>
 
-<h2 id="wolong-dlc1">WOLONG DLC1</h2>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[聊聊2023年上半年的动作游戏们]]></summary></entry><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
+<h2 id="wolong-dlc1">WOLONG DLC1</h2>
+
+<ul>
+  <li>三周目</li>
+  <li>DLC1 典韦</li>
+</ul>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[聊聊2023年上半年的动作游戏们]]></summary></entry><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
 
 <h2 id="开发阶段及其概览">开发阶段及其概览</h2>
 
