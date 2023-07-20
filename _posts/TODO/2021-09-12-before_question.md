@@ -4,7 +4,7 @@ title: 游戏策划的改错本
 featured-img: bg2
 # featured-img: fe
 mathjax: true
-categories: [杂谈]
+# categories: [杂谈]
 long-term-maintenance: true
 ---
 
@@ -16,12 +16,12 @@ long-term-maintenance: true
 
 # 游戏策划的改错本
 
+
 ## 一些数值题目
 
 + 假设一个英雄基础暴击率25%，且3次攻击一定会暴击一次（2次不暴击第3次一定暴击），求暴击率期望
 
 [参考这个](https://www.zhihu.com/question/320855507)，求期望次数，对期望次数取反即可得到暴击期望。
-
 
 
 ## 某次设计犯过的错误
@@ -90,7 +90,6 @@ long-term-maintenance: true
 4. 反馈
     + 拿到的评价
     + 其他人的答案中不同的思路
-
 
 
 <!-- # 一些不成熟的回应
