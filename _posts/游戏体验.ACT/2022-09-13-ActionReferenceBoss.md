@@ -46,18 +46,18 @@ categories: [动作游戏分析]
 {% include ARB.html filter = "DS"%}
 
 
-<!-- ### 黑暗灵魂1
+### 黑暗灵魂1
 
 其实，我还没玩过，姑且列在这里……
 
-{% include ARB.html filter = "DS1"%} -->
+{% include ARB.html filter = "DS1"%}
 
 
-<!-- ### 黑暗灵魂2
+### 黑暗灵魂2
 
 其实，我也还没玩过，姑且列在这里……
 
-{% include ARB.html filter = "DS2"%} -->
+{% include ARB.html filter = "DS2"%}
 
 
 ### 黑暗灵魂3
