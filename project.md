@@ -22,11 +22,11 @@ permalink: /project/
 
 |时间|标签|课题|
 |--|--|--|
-|持续进行|游戏设计|[动作速查](https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/)|
-|待排期|游戏设计|地图设计：白模与UE4|
-|持续进行|游戏设计|动作设计：BOX与节奏|
-|待排期|游戏设计|AI深度学习|
-|已完成|游戏设计|[市场洞察](https://design.jskyzero.com/2023/04/01/GameMarket/)|
+|🚧持续进行|游戏设计|[动作速查](https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/)|
+|🏴‍☠️待排期|游戏设计|地图设计：白模与UE4|
+|🚩持续进行|游戏设计|动作设计：BOX与节奏|
+|🏴‍☠️待排期|游戏设计|AI深度学习|
+|🚩已完成|游戏设计|[市场洞察](https://design.jskyzero.com/2023/04/01/GameMarket/)|
 
 
 ## 计划表-其四
@@ -34,12 +34,12 @@ permalink: /project/
 
 |时间|标签|课题|
 |--|--|--|
-|已完成|游戏设计|[AI体系架构](https://design.jskyzero.com/2022/05/24/GameAISkill/)|
-|待排期|游戏设计|AI深度学习|
-|放弃了|游戏设计|MARKOV CHAIN|
-|半完成|游戏设计|[PPT文章迁移](https://design.jskyzero.com/2021/11/20/mhwi/)|
-|半完成|游戏设计|[补完《游戏感》](https://design.jskyzero.com/2020/08/31/gamefeeling/)|
-|已完成|游戏设计|[游戏策划能力](https://design.jskyzero.com/2022/02/15/game_design_ability/)|
+|🚩已完成|游戏设计|[AI体系架构](https://design.jskyzero.com/2022/05/24/GameAISkill/)|
+|🏴‍☠️待排期|游戏设计|AI深度学习|
+|🏴‍☠️放弃了|游戏设计|MARKOV CHAIN|
+|🚩半完成|游戏设计|[PPT文章迁移](https://design.jskyzero.com/2021/11/20/mhwi/)|
+|🚩半完成|游戏设计|[补完《游戏感》](https://design.jskyzero.com/2020/08/31/gamefeeling/)|
+|🚩已完成|游戏设计|[游戏策划能力](https://design.jskyzero.com/2022/02/15/game_design_ability/)|
 
 
 ## 計劃表-其三.后续
@@ -52,14 +52,14 @@ permalink: /project/
 
 |时间|标签|课题|
 |--|--|--|
-|已经完成|不务正业|[阅读《自制力》](https://design.jskyzero.com/2021/11/14/possessiveness/)|
-|已经完成|游戏设计|[设计分析工具梳理：系统流转图](https://https://design.jskyzero.com/recently/#%E6%A0%BC%E5%BC%8F)|
-|已经完成|不务正业|[混吃等死之目标设定](https://design.jskyzero.com/2021/08/26/self/#%E5%AD%A4%E8%BA%AB%E4%B8%80%E4%BA%BA%E2%80%94%E2%80%94%E5%85%B6%E5%8D%81%E5%85%AD)|
-|已经完成|不务正业|[阅读《非暴力沟通》](https://design.jskyzero.com/2021/09/14/reading/#%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A)|
-|已经完成|不务正业|[阅读《高中历史-必修一》，制作历史年表](https://design.jskyzero.com/2021/09/09/history-1/)|
-|已经完成|游戏设计|[游戏体验、设计分析《风来之国》](https://design.jskyzero.com/2021/09/21/eastward/)|
-|已经完成|游戏设计|[游戏体验、设计分析《SEKIRO》](https://design.jskyzero.com/2021/10/28/sekiro/)|
-|已经完成|不务正业|MoePicture.Electron 10%|
+|🚩已经完成|不务正业|[阅读《自制力》](https://design.jskyzero.com/2021/11/14/possessiveness/)|
+|🚩已经完成|游戏设计|[设计分析工具梳理：系统流转图](https://https://design.jskyzero.com/recently/#%E6%A0%BC%E5%BC%8F)|
+|🚩已经完成|不务正业|[混吃等死之目标设定](https://design.jskyzero.com/2021/08/26/self/#%E5%AD%A4%E8%BA%AB%E4%B8%80%E4%BA%BA%E2%80%94%E2%80%94%E5%85%B6%E5%8D%81%E5%85%AD)|
+|🚩已经完成|不务正业|[阅读《非暴力沟通》](https://design.jskyzero.com/2021/09/14/reading/#%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A)|
+|🚩已经完成|不务正业|[阅读《高中历史-必修一》，制作历史年表](https://design.jskyzero.com/2021/09/09/history-1/)|
+|🚩已经完成|游戏设计|[游戏体验、设计分析《风来之国》](https://design.jskyzero.com/2021/09/21/eastward/)|
+|🚩已经完成|游戏设计|[游戏体验、设计分析《SEKIRO》](https://design.jskyzero.com/2021/10/28/sekiro/)|
+|🚩已经完成|不务正业|MoePicture.Electron 10%|
 
 
 <!-- ## [計劃表-其三](https://docs.qq.com/sheet/DQUZHbE9TYVd3SFlI?tab=026ui2)
@@ -103,10 +103,10 @@ permalink: /project/
 
 |时间|标签|课题|
 |--|--|--|
-|2018/11/15 进行中|游戏设计|[Markov Chain](https://github.com/Moons-Project/MarkovChain)|
-|2019/03/21 待定|引擎使用|[Unity Shader](https://github.com/Moons-Project/Unity.Graphics)|
-|2019/10/25 待定|引擎使用|[Lua相关](https://github.com/oYOvOYo/Lua.Playground)|
-|2019/10/25 2019/11/25|不务正业|[Font Animation](https://github.com/oYOvOYo/SpecialFont)|
+|🚧2018/11/15 进行中|游戏设计|[Markov Chain](https://github.com/Moons-Project/MarkovChain)|
+|🏴‍☠️2019/03/21 待定|引擎使用|[Unity Shader](https://github.com/Moons-Project/Unity.Graphics)|
+|🏴‍☠️2019/10/25 待定|引擎使用|[Lua相关](https://github.com/oYOvOYo/Lua.Playground)|
+|🚩2019/10/25 2019/11/25|不务正业|[Font Animation](https://github.com/oYOvOYo/SpecialFont)|
 
 
 <!-- |待定 待定|引擎使用|Graphics 2D & AI|
@@ -141,14 +141,14 @@ permalink: /project/
 
 |时间|标签|课题|
 |--|--|--|
-|2019/05/15 进行中|引擎使用|[CLR Via C#](https://github.com/oYOvOYo/CLR.Via.CSharp)|
-|2018/11/15 进行中|游戏设计|[Project.DL](https://github.com/Moons-Project/Project.DL)|
-|2019/05/25 2019/06/05|引擎使用|[Google Protobuf^](https://github.com/oYOvOYo/Protobuf.CSharp.Example)|
-|2018/11/15 2019/03/05|引擎使用|[Unity編輯器擴展^](https://github.com/Moons-Project/Unity.ExtendEditor/tree/extend-editor.basic)|
-|2019/02/05 2019/02/20|游戏设计|[Excel與表格字段設計^](https://design.jskyzero.com/2019/02/18/Excel/)|
-|2018/12/15 2019/02/25|不务正业|[Electron & React](https://github.com/oYOvOYo/MoePicture.Electron)|
-|2019/01/15 2019/02/05|不务正业|[模板元編程](https://github.com/oYOvOYo/Cplusplus.TemplateMetaProgramming)|
-|2019/04/01 2019/07/31|游戏设计|[日常遊戲體驗](https://www.google.com/search?q=體驗報告+site%3Adesign.jskyzero.com)|
+|🏴‍☠️2019/05/15 进行中|引擎使用|[CLR Via C#](https://github.com/oYOvOYo/CLR.Via.CSharp)|
+|🏴‍☠️2018/11/15 进行中|游戏设计|[Project.DL](https://github.com/Moons-Project/Project.DL)|
+|🚩2019/05/25 2019/06/05|引擎使用|[Google Protobuf^](https://github.com/oYOvOYo/Protobuf.CSharp.Example)|
+|🚩2018/11/15 2019/03/05|引擎使用|[Unity編輯器擴展^](https://github.com/Moons-Project/Unity.ExtendEditor/tree/extend-editor.basic)|
+|🚩2019/02/05 2019/02/20|游戏设计|[Excel與表格字段設計^](https://design.jskyzero.com/2019/02/18/Excel/)|
+|🚩2018/12/15 2019/02/25|不务正业|[Electron & React](https://github.com/oYOvOYo/MoePicture.Electron)|
+|🚩2019/01/15 2019/02/05|不务正业|[模板元編程](https://github.com/oYOvOYo/Cplusplus.TemplateMetaProgramming)|
+|🚩2019/04/01 2019/07/31|游戏设计|[日常遊戲體驗](https://www.google.com/search?q=體驗報告+site%3Adesign.jskyzero.com)|
 
 <!-- 以下説明
 
