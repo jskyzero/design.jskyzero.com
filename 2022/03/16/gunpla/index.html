@@ -763,6 +763,19 @@ div.color {
   </tbody>
 </table>
 
+<p>合计共：<span id="result">计算中……</span>台。</p>
+
+<script>
+var result = document.getElementById("result");
+var table = result.parentElement.previousElementSibling;
+var sumVal = 0;
+
+for(var i = 1; i < table.rows.length; i++) {
+    sumVal = sumVal + parseInt(table.rows[i].cells[1].innerHTML);
+}
+result.innerHTML = sumVal;
+</script>
+
 <h2 id="附录时间线">附录：时间线</h2>
 
 <p>TV 动画时间线</p>
@@ -890,6 +903,7 @@ div.color {
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+31 Jul 2023 - jskyzero - ✨ add sum 计算中
 30 Jul 2023 - jskyzero - 📝 update gunpla
 27 May 2023 - jskyzero - 添加最新购买的高达
 03 May 2023 - jskyzero - 📝 add 附录：玩具厂商份额 & IP价值
@@ -909,7 +923,6 @@ div.color {
 12 Oct 2022 - jskyzero - 📝 改了一下内容格式
 16 Sep 2022 - jskyzero - fix error
 16 Sep 2022 - jskyzero - update 附录
-20 Apr 2022 - jskyzero - 📝 update 高达机型设计赏析
 
 <img alt="Creative Commons License" src="/assets/img/CC.png" />
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-31T15:08:17+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-07-31T15:25:31+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">聊聊最近玩过的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="聊聊最近玩过的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年上半年的动作游戏们">聊聊2023年上半年的动作游戏们</h1>
 
 <h2 id="前言">前言</h2>
@@ -273,11 +273,7 @@
   <li>待补充</li>
 </ul>
 
-<h2 id="动作游戏专题">动作游戏专题</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[常见设计方法论]]></summary></entry><entry><title type="html">战斗系统：实现塞尔达的冒险感</title><link href="https://design.jskyzero.com/2023/05/26/zelda_totk/" rel="alternate" type="text/html" title="战斗系统：实现塞尔达的冒险感" /><published>2023-05-26T00:00:00+00:00</published><updated>2023-05-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/05/26/zelda_totk</id><content type="html" xml:base="https://design.jskyzero.com/2023/05/26/zelda_totk/"><![CDATA[<p>狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。</p>
-
-<h2 id="角色性能">角色性能</h2>
-
-<h2 id="怪物ai">怪物&amp;AI</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。]]></summary></entry><entry><title type="html">游戏设计：游戏行业通识</title><link href="https://design.jskyzero.com/2023/04/01/GameMarket/" rel="alternate" type="text/html" title="游戏设计：游戏行业通识" /><published>2023-04-01T00:00:00+00:00</published><updated>2023-04-01T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/04/01/GameMarket</id><content type="html" xml:base="https://design.jskyzero.com/2023/04/01/GameMarket/"><![CDATA[<p>本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。</p>
+<h2 id="动作游戏专题">动作游戏专题</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[常见设计方法论]]></summary></entry><entry><title type="html">游戏设计：游戏行业通识</title><link href="https://design.jskyzero.com/2023/04/01/GameMarket/" rel="alternate" type="text/html" title="游戏设计：游戏行业通识" /><published>2023-04-01T00:00:00+00:00</published><updated>2023-04-01T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/04/01/GameMarket</id><content type="html" xml:base="https://design.jskyzero.com/2023/04/01/GameMarket/"><![CDATA[<p>本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。</p>
 
 <h1 id="游戏行业市场分析">游戏行业市场分析</h1>
 
@@ -8097,4 +8093,8 @@
   <li><a href="https://mhrise.kiranico.com/data/monsters/366824395">MHRISE.KIRANICO Rathian</a></li>
   <li><a href="https://mhworld.kiranico.com/zh">MHWORLD.KIRANIC</a></li>
   <li><a href="https://mhrise.mhrice.info/version/10.0.2/monster/001_00.html">mhrice.info Rathian</a></li>
-</ul>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry></feed>
+</ul>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry><entry><title type="html">有意思的10个游戏机制</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="有意思的10个游戏机制" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<h1 id="有趣但不为人知的游戏机制">有趣但不为人知的游戏机制</h1>
+
+<h2 id="怪物猎人-肉质斩味机制">怪物猎人 肉质、斩味机制</h2>
+
+<h2 id="黑魂3-冲击力-韧性机制">黑魂3 冲击力-韧性机制</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[有趣但不为人知的游戏机制]]></summary></entry></feed>
