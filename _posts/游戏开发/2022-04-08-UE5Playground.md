@@ -1,14 +1,20 @@
 ---
 layout: post
-title: 简明虚幻引擎5教程
-# categories: [游戏开发]
-long-term-maintenance: true
+title: 技术讨论：UE5相关
+categories: [游戏开发]
 ---
 
-虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本教程的重点是简单明晰。
+虚幻5已于近日正式发布，与强大能力、海量内容的引擎本体相对，本文字希望简单明晰地记录一些知识点。
 
 
-# 简明虚幻5教程
+# 简明虚幻5知识册
+
+
+## 用户文档概要
+
+![](/assets/img/skill/ue5/0.png)
+![](/assets/img/skill/ue5/1.png)
+![](/assets/img/skill/ue5/2.png)
 
 
 ## 专题
@@ -55,10 +61,10 @@ graph LR
 {% endmermaid %}
 
 
-### UI制作
+<!-- ### UI制作
 
 
 ### 动作逻辑
 
 
-### 关卡
+### 关卡 -->
