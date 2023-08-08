@@ -12,11 +12,17 @@ layout: default
 {%- if posts.size > 0 -%}
   <ul>
     <p>{{ category }}</p>
+
+    {% if category == "游戏开发" %}
+    {% assign posts = posts | sort: "title" | reverse %}
+    {% endif %}
+
     {%- for post in posts -%}
     <li>
       {%- if post.long-term-maintenance -%}
       {%- assign date_format = " LONG-TERM" -%}
       {%- else -%}
+
       {%- assign date_format = post.date | date:"%Y-%m-%d" -%}
       {%- endif -%}
 
