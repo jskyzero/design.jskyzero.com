@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-08-11T08:12:07+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">聊聊最近玩过的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="聊聊最近玩过的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年上半年的动作游戏们">聊聊2023年上半年的动作游戏们</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-09-02T08:49:11+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">2023年的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="2023年的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年的arpg们">聊聊2023年的ARPG们</h1>
 
 <h2 id="前言">前言</h2>
 
-<p>先贴一个热度图，图上甚至还可以看出来纯血ACT与ARPG现在时长份额的区别。</p>
+<p>眨眼已经9月了，试着回忆了一下过去一年玩的动作游戏，记录下一些相关的思考。</p>
+
+<p>先贴一个热度图，图上甚至还可以看出来纯血ACT与ARPG现在“市场份额”的区别。</p>
 
 <p><img src="/assets/img/act/2023/1.jpg" alt="" /></p>
 
@@ -31,7 +33,7 @@
   <li>天慧龙（怪异克服）</li>
 </ul>
 
-<p>天慧龙的怪异克服阶段的二连击着实有些帅！可以对比原版看看</p>
+<p>天慧龙的怪异克服阶段的二连击着实有些帅！对比原版让人耳目一新。</p>
 
 <ul>
   <li><a href="https://www.bilibili.com/video/BV1m24y1W7eQ">怪异克服天彗龙全招式展示</a></li>
@@ -108,6 +110,8 @@
 
 <p><a href="https://www.bilibili.com/video/BV1js4y1y7Qv">原初爵银龙全招式展示</a></p>
 
+<p>夺命13连！非常帅</p>
+
 <h2 id="ff16">FF16</h2>
 
 <p>除了个别boss战的场面突破预期，其他全面未达预期。</p>
@@ -128,7 +132,13 @@
   <li>DLC1</li>
 </ul>
 
-<p>体量2个新关卡，魔化典韦也有点压迫力</p>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[聊聊2023年上半年的动作游戏们]]></summary></entry><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
+<p>体量2个新关卡，魔化典韦也有点压迫力</p>
+
+<h2 id="ac6">AC6</h2>
+
+<p>一开始是没有想到装甲核心能有这么ACT的。</p>
+
+<p>BOSS的设计也非常魂Like。</p>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[聊聊2023年的ARPG们]]></summary></entry><entry><title type="html">游戏设计：开放世界设计</title><link href="https://design.jskyzero.com/2023/06/17/OpenWorld/" rel="alternate" type="text/html" title="游戏设计：开放世界设计" /><published>2023-06-17T00:00:00+00:00</published><updated>2023-06-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/17/OpenWorld</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/17/OpenWorld/"><![CDATA[<h1 id="游戏设计开放世界设计">游戏设计：开放世界设计</h1>
 
 <h2 id="开发阶段及其概览">开发阶段及其概览</h2>
 
