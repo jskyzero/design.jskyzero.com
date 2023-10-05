@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-10-04T15:14:57+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-10-05T15:23:22+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">2023年的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="2023年的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年的arpg们">聊聊2023年的ARPG们</h1>
 
 <h2 id="前言">前言</h2>
@@ -938,6 +938,231 @@
 <h1 id="动作设计参考boss篇">动作设计参考·BOSS篇</h1>
 
 <h2 id="新增">新增</h2>
+
+<h3 id="狂野之心">狂野之心</h3>
+
+<table style="display: table;">
+  <thead>
+    <tr>
+      <!-- <th>WildHearts</th> -->
+      <th></th>
+      <th>BOSS</th>
+      <th>特色</th>
+      <th>招式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- game,boss,feature,skills --><tr>
+      <td>1</td>
+      <td>花宿</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>琥珀主</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>山穿槌</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>角飞</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>姬冠禽</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>砂鼓</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>炼狱猿</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>岩鸣熊</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>笠宿</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>金针背</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>黑缠鸦</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>净土猿</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>罗刹</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>彼岸飞</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>天照守</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>不知火</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>岚金虎</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>天碟龙</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>天碟人</td>
+      <td>
+          
+          
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    </tbody>
+</table>
 
 <h3 id="final-fantasy-xvi">Final Fantasy XVI</h3>
 
