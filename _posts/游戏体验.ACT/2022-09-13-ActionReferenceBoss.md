@@ -13,6 +13,11 @@ categories: [动作游戏分析]
 ## 新增
 
 
+### 狂野之心
+
+{% include ARB.html filter = "WildHearts"%}
+
+
 ### Final Fantasy XVI
 
 ![](/assets/draw.io/output/ff16.jpg)
