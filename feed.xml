@@ -1,5 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-10-05T15:23:22+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">2023年的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="2023年的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年的arpg们">聊聊2023年的ARPG们</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-10-10T10:10:14+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">拆包看狮子猿AI设计</title><link href="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/" rel="alternate" type="text/html" title="拆包看狮子猿AI设计" /><published>2023-10-10T00:00:00+00:00</published><updated>2023-10-10T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/"><![CDATA[<p>之前拆包看了<a href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/">只狼的狮子猿的一阶段动画</a>，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。</p>
+
+<p>本文会分为三个部分：体验反推、架构设计、感受设计，本文的目标是让读者能对动作游戏中AI的设计有一个初步的理解，能学会设计、实现战斗的感受。</p>
+
+<h1 id="拆包看狮子猿ai设计">拆包看狮子猿AI设计</h1>
+
+<h2 id="体验反推">体验反推</h2>
+
+<h2 id="架构设计">架构设计</h2>
+
+<h2 id="感受设计">感受设计</h2>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[之前拆包看了只狼的狮子猿的一阶段动画，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。]]></summary></entry><entry><title type="html">2023年的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="2023年的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年的arpg们">聊聊2023年的ARPG们</h1>
 
 <h2 id="前言">前言</h2>
 
@@ -434,9 +444,9 @@
 
 <h2 id="其他参考数据">其他参考数据</h2>
 
-<p>这里会补充一些看到有意义数据的文章的链接。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。]]></summary></entry><entry><title type="html">GameAIPro汇总</title><link href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" rel="alternate" type="text/html" title="GameAIPro汇总" /><published>2023-03-27T00:00:00+00:00</published><updated>2023-03-27T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/03/27/GameAIProIndex</id><content type="html" xml:base="https://design.jskyzero.com/2023/03/27/GameAIProIndex/"><![CDATA[<p>本文将汇总记录GameAIPro的相关文章，更新较慢。</p>
+<p>这里会补充一些看到有意义数据的文章的链接。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。]]></summary></entry><entry><title type="html">GameAIPro相关笔记</title><link href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" rel="alternate" type="text/html" title="GameAIPro相关笔记" /><published>2023-03-27T00:00:00+00:00</published><updated>2023-03-27T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/03/27/GameAIProIndex</id><content type="html" xml:base="https://design.jskyzero.com/2023/03/27/GameAIProIndex/"><![CDATA[<p>本文将汇总记录GameAIPro的相关文章的记录，更新较慢。</p>
 
-<p>此外，强烈推荐访问<a href="https://gameaipro.jsky.wiki/">GameAIPro.JSKY.WIKI</a>，来快速找到GameAIPro中自己感兴趣的文章。</p>
+<p>此外，强烈推荐访问<a href="https://gameaipro.jsky.wiki/">GameAIPro中文索引</a>，来快速找到GameAIPro中自己感兴趣的文章。</p>
 
 <p><img src="/assets/img/skill/GameAIPro/1.JPG" alt="" />
 <img src="/assets/img/skill/GameAIPro/2.JPG" alt="" />
@@ -485,7 +495,7 @@
 <img src="/assets/img/skill/GameAIPro/45.JPG" alt="" />
 <img src="/assets/img/skill/GameAIPro/46.JPG" alt="" />
 <img src="/assets/img/skill/GameAIPro/47.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/48.JPG" alt="" /></p>]]></content><author><name></name></author><category term="游戏AI" /><summary type="html"><![CDATA[本文将汇总记录GameAIPro的相关文章，更新较慢。]]></summary></entry><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
+<img src="/assets/img/skill/GameAIPro/48.JPG" alt="" /></p>]]></content><author><name></name></author><category term="游戏AI" /><summary type="html"><![CDATA[本文将汇总记录GameAIPro的相关文章的记录，更新较慢。]]></summary></entry><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
 
 <p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏怪物动作设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
 
@@ -8344,8 +8354,4 @@
   <li><a href="https://mhrise.kiranico.com/data/monsters/366824395">MHRISE.KIRANICO Rathian</a></li>
   <li><a href="https://mhworld.kiranico.com/zh">MHWORLD.KIRANIC</a></li>
   <li><a href="https://mhrise.mhrice.info/version/10.0.2/monster/001_00.html">mhrice.info Rathian</a></li>
-</ul>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry><entry><title type="html">有意思的10个游戏机制</title><link href="https://design.jskyzero.com/2022/07/14/mhrsb_math/" rel="alternate" type="text/html" title="有意思的10个游戏机制" /><published>2022-07-14T00:00:00+00:00</published><updated>2022-07-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/14/mhrsb_math</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/14/mhrsb_math/"><![CDATA[<h1 id="有趣但不为人知的游戏机制">有趣但不为人知的游戏机制</h1>
-
-<h2 id="怪物猎人-肉质斩味机制">怪物猎人 肉质、斩味机制</h2>
-
-<h2 id="黑魂3-冲击力-韧性机制">黑魂3 冲击力-韧性机制</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[有趣但不为人知的游戏机制]]></summary></entry></feed>
+</ul>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry></feed>

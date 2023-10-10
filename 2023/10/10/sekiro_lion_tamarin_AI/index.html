@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>拆包看狮子猿AI设计 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="拆包看狮子猿AI设计" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="之前拆包看了只狼的狮子猿的一阶段动画，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。" />
+<meta property="og:description" content="之前拆包看了只狼的狮子猿的一阶段动画，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。" />
+<link rel="canonical" href="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/" />
+<meta property="og:url" content="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/" />
+<meta property="og:site_name" content="设计者笔记" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-10-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="拆包看狮子猿AI设计" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-10-10T00:00:00+00:00","datePublished":"2023-10-10T00:00:00+00:00","description":"之前拆包看了只狼的狮子猿的一阶段动画，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。","headline":"拆包看狮子猿AI设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/"},"url":"https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main-light.css"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V2SSPG3YGX');
+</script><!-- high light -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+</head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul><li><a href="/">/Home</a></li><li><a href="/program/">/Program</a></li><li><a href="/github/">/Github</a></li><li><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main>
+      <div id="index">
+  <ul class="md-toc">
+  <li class="md-toc-h1"><a href="#拆包看狮子猿ai设计">拆包看狮子猿AI设计</a>
+    <ul>
+      <li class="md-toc-h2"><a href="#体验反推">体验反推</a></li>
+      <li class="md-toc-h2"><a href="#架构设计">架构设计</a></li>
+      <li class="md-toc-h2"><a href="#感受设计">感受设计</a></li>
+    </ul>
+  </li>
+</ul>
+  <p id="pro">
+  
+  <!-- <div class="categories"> -->
+    
+    
+    <img src="https://img.shields.io/badge/动作游戏分析-blue.svg?style=flat" alt="">
+    <!--  -->
+    
+  <!-- </div> -->
+  
+  <img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="">
+  <img src="https://img.shields.io/badge/日期-2023/10/10-brightgreen.svg?style=flat" alt="">
+</p>
+
+</div>
+
+<p>之前拆包看了<a href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/">只狼的狮子猿的一阶段动画</a>，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。</p>
+
+<p>本文会分为三个部分：体验反推、架构设计、感受设计，本文的目标是让读者能对动作游戏中AI的设计有一个初步的理解，能学会设计、实现战斗的感受。</p>
+
+<h1 id="拆包看狮子猿ai设计">拆包看狮子猿AI设计</h1>
+
+<h2 id="体验反推">体验反推</h2>
+
+<h2 id="架构设计">架构设计</h2>
+
+<h2 id="感受设计">感受设计</h2>
+
+
+
+<pre class="post-content controls__inner git-log"><output>~: git log
+10 Oct 2023 - jskyzero - add 拆包看狮子猿AI设计
+
+<img alt="Creative Commons License" src="/assets/img/CC.png" />
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre>
+
+
+<script src="/assets/js/main.js"></script>
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/';
+this.page.identifier = 'https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/';
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+    </main><footer>
+  <p>Enjoy :)</p>
+  <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com">
+  <img style="border-radius: 4px;"
+  src="https://hits.dwyl.com/jskyzero/designjskyzerocom.svg?style=flat-square">
+  <br>
+  <p>&copy; 2017-2023 设计者笔记. All rights reserved.</p>
+  
+</footer>
+</div>
+  </body>
+</html>
