@@ -1,12 +1,12 @@
 ---
 layout: post
-title: GameAIPro汇总
+title: GameAIPro相关笔记
 categories: [游戏AI]
 ---
 
-本文将汇总记录GameAIPro的相关文章，更新较慢。
+本文将汇总记录GameAIPro的相关文章的记录，更新较慢。
 
-此外，强烈推荐访问[GameAIPro.JSKY.WIKI](https://gameaipro.jsky.wiki/)，来快速找到GameAIPro中自己感兴趣的文章。
+此外，强烈推荐访问[GameAIPro中文索引](https://gameaipro.jsky.wiki/)，来快速找到GameAIPro中自己感兴趣的文章。
 
 ![](/assets/img/skill/GameAIPro/1.JPG)
 ![](/assets/img/skill/GameAIPro/2.JPG)
