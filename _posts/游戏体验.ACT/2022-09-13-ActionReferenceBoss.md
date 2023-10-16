@@ -13,6 +13,11 @@ categories: [动作游戏分析]
 ## 新增
 
 
+### 装甲核心6
+
+{% include ARB.html filter = "AC6"%}
+
+
 ### 狂野之心
 
 {% include ARB.html filter = "WildHearts"%}
