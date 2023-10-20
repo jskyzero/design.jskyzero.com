@@ -11,8 +11,8 @@ header_pages:
 footer: 'Enjoy :)'
 
 index_categories:
-  - 游戏AI
   - 动作游戏分析
+  - 游戏AI
   - 游戏开发
   - 专题报告
   - 杂谈
