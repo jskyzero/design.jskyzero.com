@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-10-16T11:56:42+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-10-20T14:12:39+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">拆包看狮子猿AI设计</title><link href="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/" rel="alternate" type="text/html" title="拆包看狮子猿AI设计" /><published>2023-10-10T00:00:00+00:00</published><updated>2023-10-10T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/"><![CDATA[<p>之前拆包看了<a href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/">只狼的狮子猿的一阶段动画</a>，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。</p>
 
 <p>本文会分为三个部分：体验反推、架构设计、感受设计，本文的目标是让读者能对动作游戏中AI的设计有一个初步的理解，能学会设计、实现战斗的感受。</p>
@@ -749,9 +749,9 @@
   <li>……</li>
 </ul>
 
-<p>以上，希望本文能对读者有启发，帮助做出好的Boss。</p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。]]></summary></entry><entry><title type="html">《卧龙》气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="《卧龙》气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
+<p>以上，希望本文能对读者有启发，帮助做出好的Boss。</p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。]]></summary></entry><entry><title type="html">卧龙气势槽设计杂谈</title><link href="https://design.jskyzero.com/2022/09/22/wolong_action_system/" rel="alternate" type="text/html" title="卧龙气势槽设计杂谈" /><published>2022-09-22T00:00:00+00:00</published><updated>2022-09-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/22/wolong_action_system</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/22/wolong_action_system/"><![CDATA[<p>近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。</p>
 
-<h1 id="卧龙气势槽设计杂谈">《卧龙》气势槽设计杂谈</h1>
+<h1 id="卧龙气势槽设计杂谈">卧龙气势槽设计杂谈</h1>
 
 <h2 id="体验概览看个例子">体验概览：看个例子</h2>
 
