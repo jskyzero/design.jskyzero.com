@@ -1,5 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-10-20T14:12:39+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">拆包看狮子猿AI设计</title><link href="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/" rel="alternate" type="text/html" title="拆包看狮子猿AI设计" /><published>2023-10-10T00:00:00+00:00</published><updated>2023-10-10T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/"><![CDATA[<p>之前拆包看了<a href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/">只狼的狮子猿的一阶段动画</a>，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-10-23T12:45:27+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">游戏设计：战斗策划能力要求</title><link href="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/" rel="alternate" type="text/html" title="游戏设计：战斗策划能力要求" /><published>2023-10-23T00:00:00+00:00</published><updated>2023-10-23T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/23/BattleDesignAbility</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/"><![CDATA[<p>最近汇总了米哈游和腾讯一些社会招聘岗位关于<strong>战斗策划怪物方向</strong>的岗位描述和能力要求，做了一些资料汇总和总结的工作。用于后续能力补足的参考。</p>
+
+<h1 id="战斗策划怪物方向能力要求2023">战斗策划(怪物方向)能力要求.2023</h1>
+
+<h2 id="社招信息汇总">社招信息汇总</h2>
+
+<p>不废话，直接上图：</p>
+
+<p><img src="/assets/img/others/BattleDesignAbility/1.png" alt="" /></p>
+
+<blockquote>
+  <p>相关信息皆来自网络，时效性截止于本文编写日期。</p>
+</blockquote>
+
+<h2 id="要求能力细分">要求能力细分</h2>
+
+<p>能力要求的信息太多了，这里进行5个维度的划分：</p>
+
+<p><img src="/assets/img/others/BattleDesignAbility/2.png" alt="" /></p>
+
+<h3 id="既往背景">既往背景</h3>
+
+<p>这部分要求相对较低，如果一开始就是PVE战斗“赛道”的，相对要求并不算苛刻。</p>
+
+<p>但是如果是应届生或者换方向的，可能会被这些“硬性要求”所卡住，建议是快进到别的要求，用实力弥补不足。</p>
+
+<ul>
+  <li>工作年限要求：2-3年，大概的意思是要求熟练工</li>
+  <li>学历要求：本科以上，计算机方向优先</li>
+  <li>工作经历要求：多为岗位相关要求，比如熟悉工作流程、有上线过的产品等</li>
+</ul>
+
+<p><img src="/assets/img/others/BattleDesignAbility/2-1.png" alt="" /></p>
+
+<h3 id="游戏积累">游戏积累</h3>
+
+<p>这部分属于日积月累的“软知识”，一般是用于了解对行业相关产品的积累和认知。</p>
+
+<p>基本都提到了修饰量级的词语，比如<code class="language-plaintext highlighter-rouge">丰富</code>、<code class="language-plaintext highlighter-rouge">有积累</code>、<code class="language-plaintext highlighter-rouge">长期</code>，还提到了要对体验有自己的深入了解和思考。</p>
+
+<p>简单来说：</p>
+
+<ul>
+  <li>多玩：丰富动作游戏体验</li>
+  <li>多想：深入思考、研究、和积累</li>
+</ul>
+
+<p><img src="/assets/img/others/BattleDesignAbility/2-2.png" alt="" /></p>
+
+<h3 id="专业技能">专业技能</h3>
+
+<p>这部分简单来说就是硬实力，具体<strong>生产内容</strong>的能力，这里化为为以下几个维度</p>
+
+<ul>
+  <li>技术工具：熟悉引擎和一些技术手段</li>
+  <li>制作流程：使用专业的编辑器实现设计</li>
+  <li>设计能力：设计出好的内容</li>
+</ul>
+
+<p><img src="/assets/img/others/BattleDesignAbility/2-3.png" alt="" /></p>
+
+<h3 id="综合能力">综合能力</h3>
+
+<p>对应于硬实力的软实力，这里我们分为：</p>
+
+<ul>
+  <li>追求卓越：高标准严要求！</li>
+  <li>通用能力：沟通、团队合作、逻辑、用户分析……</li>
+</ul>
+
+<p><img src="/assets/img/others/BattleDesignAbility/2-4.png" alt="" /></p>
+
+<h3 id="熟悉ip">熟悉IP</h3>
+
+<p>相对而言，我认为熟悉IP（或者主题，下面都以IP代替）是最次要的一点，因为这是可以快速补足的。</p>
+
+<p>虽然熟悉的这个过程本身可以补，但是重要的是，你是否喜欢这个IP——毕竟接下来所有的工作都会围绕它展开。</p>
+
+<p>扪心自问，是否可以围绕这个IP做出一些令人眼前一亮的设计？或者对这个IP的未来是否充满憧憬和想象力？</p>
+
+<p><img src="/assets/img/others/BattleDesignAbility/2-5.png" alt="" /></p>
+
+<h2 id="总结">总结</h2>
+
+<p>虽然找工作的难度是一个<strong>取决于市场供需环境</strong>的事情，但是时不时看一下当前行业对从业人员的要求，对于学习方向的指导和自我提升方向，也是相当有启发的。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[最近汇总了米哈游和腾讯一些社会招聘岗位关于战斗策划怪物方向的岗位描述和能力要求，做了一些资料汇总和总结的工作。用于后续能力补足的参考。]]></summary></entry><entry><title type="html">拆包看狮子猿AI设计</title><link href="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/" rel="alternate" type="text/html" title="拆包看狮子猿AI设计" /><published>2023-10-10T00:00:00+00:00</published><updated>2023-10-10T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/"><![CDATA[<p>之前拆包看了<a href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/">只狼的狮子猿的一阶段动画</a>，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。</p>
 
 <p>本文会分为三个部分：体验反推、架构设计、感受设计，本文的目标是让读者能对动作游戏中AI的设计有一个初步的理解，能学会设计、实现战斗的感受。</p>
 
@@ -943,7 +1027,7 @@
 
 <p>资源槽可以通过规则层面的变化，改变玩家的决策、从而丰富玩家的体验。合理的机制能为战斗增彩。</p>
 
-<p>WOLONG中气势槽统一了各项系统的消耗，在战斗中反映着局面的瞬息万变，期待WOLONG的正式发售。</p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。]]></summary></entry><entry><title type="html">动作设计参考·BOSS篇</title><link href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/" rel="alternate" type="text/html" title="动作设计参考·BOSS篇" /><published>2022-09-13T00:00:00+00:00</published><updated>2022-09-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/13/ActionReferenceBoss</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。</p>
+<p>WOLONG中气势槽统一了各项系统的消耗，在战斗中反映着局面的瞬息万变，期待WOLONG的正式发售。</p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[近期WOLONG上线测试版，本文会介绍“基于气势槽”的战斗机制，并粗略概览其他ARPG中的资源槽，用于相关设计参考。作者水平有限，抛砖引玉。]]></summary></entry><entry><title type="html">动作设计参考·PVE总集篇</title><link href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/" rel="alternate" type="text/html" title="动作设计参考·PVE总集篇" /><published>2022-09-13T00:00:00+00:00</published><updated>2022-09-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/09/13/ActionReferenceBoss</id><content type="html" xml:base="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/"><![CDATA[<p>本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。</p>
 
 <h1 id="动作设计参考boss篇">动作设计参考·BOSS篇</h1>
 
@@ -8146,338 +8230,4 @@
 <!-- ### 猎天使魔女 -->
 <!-- ### 猎天使魔女2 -->
 
-<h2 id="总结">总结</h2>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。]]></summary></entry><entry><title type="html">怪物猎人中的AI出招设计</title><link href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/" rel="alternate" type="text/html" title="怪物猎人中的AI出招设计" /><published>2022-07-22T00:00:00+00:00</published><updated>2022-07-22T00:00:00+00:00</updated><id>https://design.jskyzero.com/2022/07/22/mhrsb_ai</id><content type="html" xml:base="https://design.jskyzero.com/2022/07/22/mhrsb_ai/"><![CDATA[<p>以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！</p>
-
-<!--more-->
-
-<h1 id="怪物猎人中的ai出招设计">怪物猎人中的AI出招设计</h1>
-
-<h2 id="前言">前言</h2>
-
-<p>如果要参考学习动作游戏PVE的BOSS设计的话，我想怪猎系列的怪物可能是绕不开的一个课题，它有着相对简单的关卡设计，衬托出纯度更高的战斗、丰富的机制与动作，带来反复游玩的乐趣。在MHW这一作，它经受住了大环境下ACT品类没落的考验，一跃成为了ACT游戏中最耀眼的明星之一。</p>
-
-<p>本文将<strong>从拆包、体验反推两个视角</strong>来窥视怪物猎人的AI，聚焦在怪物AI出招的设计、和这些设计是如何影响玩家的体验的。也可以通过本文对比这两种方式，了解它俩各自的特点，以及在游戏反拆时适用的场合。</p>
-
-<h2 id="拆包">拆包</h2>
-
-<p>基本上，只要<strong>有MOD的游戏，就代表玩家群体已经掌握了游戏文件组织的大体结构</strong>——毕竟MOD，就是把玩家的内容，替换、修改厂商的内容。得先弄明白文件放到哪里，才能放过去让文件生效。对于大多数对MOD没有积极持支持态度的游戏开发商，这往往意味着已经有一个工具可以针对玩家的二进制分发文件进行解密解压缩处理。</p>
-
-<p>感谢卡普空从MHW以来对PC的友好态度，MHW/MHWIB、MHR/MHRSB，都有着相当多的外观、易用性MOD，繁荣的MOD当然也就意味着，玩家对游戏文件有着相当的了解，从Github、NEXUSMODS上顺藤摸瓜成功找到了MHRSB的<a href="https://github.com/mhvuze/MonsterHunterRiseModding">MOD教程</a>，里面自然有<a href="https://github.com/mhvuze/MonsterHunterRiseModding/wiki/Extracting-Game-Files-(PC)">拆包过程的说明</a>，事不宜迟，拆了看看AI配置吧！</p>
-
-<h3 id="繁多的状态机">繁多的状态机</h3>
-
-<p>从<code class="language-plaintext highlighter-rouge">re_chunk_000\natives\STM\enemy\em001\</code>就可以定位到具体怪物，查一下<a href="https://github.com/mhvuze/MonsterHunterRiseModding/wiki/Monster-IDs">怪物ID表</a>，001是Rathian，也就是我们的老朋友——雌火龙。</p>
-
-<p>对于一只具体的怪物，解包后的文件目录如下，我们关注的也就是<code class="language-plaintext highlighter-rouge">ai_fsm_user_data</code>下的文件，fsm，看起来底层驱动的技术是有限状态机。</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span>
-├── 00
-│   ├── ai_fsm_user_data
-│   ├── collision
-│   ├── mod
-│   ├── mot
-│   ├── prefab
-│   ├── shell
-│   ├── user_data
-│   └── user_variables
-├── 02
-├── 07
-└── common
-    ├── act_tbl_user_data
-    ├── mod
-    ├── mot
-    ├── motion_fsm
-    └── user_data
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">ai_fsm_user_data</code>下的文件就多起来了，以雌火龙00的<code class="language-plaintext highlighter-rouge">em001\00\ai_fsm_user_data</code>的为例，有多达125个文件：</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span>
-├── flow
-│   └── em001_00_predator_relevant_action.user.2
-├── hub
-│   ├── damage
-│   │   ├── fly
-│   │   │   ├── em001_00_fly_element_weak_damage.user.2
-│   │   │   ├── em001_00_fly_em2em_damage.user.2
-│   │   │   └── ...
-│   │   └── stand
-│   │       ├── em001_00_stand_element_weak_damage.user.2
-│   │       ├── em001_00_stand_em2em_damage.user.2
-│   │       └── ...
-│   ├── die
-│   │   ├── fly
-│   │   │   ├── em001_00_fly_capture.user.2
-│   │   │   └── em001_00_fly_normal_die.user.2
-│   │   └── stand
-│   │       ├── em001_00_stand_capture.user.2
-│   │       └── em001_00_stand_normal_die.user.2
-│   ├── em001_00_arrange.user.2
-│   ├── em001_00_arrange_hyakuryu.user.2
-│   └── ...
-└── think
-    ├── em001_00_damage.user.2
-    ├── em001_00_die.user.2
-    └── ...
-
-9 directories, 125 files
-</code></pre></div></div>
-
-<blockquote>
-  <p>果然“软件开发没有银弹”，怪猎的怪物单局行为丰富，连AI配置文件都有120多个……太强了。</p>
-</blockquote>
-
-<p>很可惜，目前用于拆包后的<code class="language-plaintext highlighter-rouge">.user.2</code>类型文件的<a href="https://github.com/Synthlight/MHR-Editor">MHR Editor</a>，尚且不支持打开编辑这些AI文件，姑且用<code class="language-plaintext highlighter-rouge">HexEditor</code>试着看了下一些文件的内容，看到了一些类似USR开头、RSZ用作分割之类的信息，但是也没有啥有价值的内容。</p>
-
-<p><img src="/assets/img/gameplay/mhrsb.AI/HexEditor.jpg" alt="" /></p>
-
-<p>看不到具体的文件，就只能看看能不能从文件名中间得到些信息了。</p>
-
-<h3 id="盲人摸象">盲人摸象</h3>
-
-<p>试着对文件名进行了一些标注（拿不准胡猜的东西标了黄色）：</p>
-
-<p><img src="/assets/img/gameplay/mhrsb.AI/em001-00.svg" alt="" /></p>
-
-<ul>
-  <li>硬直</li>
-</ul>
-
-<p>在标注的过程中发现了一些<a href="https://bbs.nga.cn/read.php?tid=21732718&amp;rand=636">硬直机制</a>相关的文件，这些文件相较于AI，更像是动作跳转的逻辑。</p>
-
-<p>比如死亡、捕获，又比如经典麻痹、眩晕、睡眠。</p>
-
-<p>合理推测，可能有一部分硬直的动作逻辑是靠这些AI来控制的？</p>
-
-<p><img src="/assets/img/gameplay/mhrsb.AI/1.jpg" alt="" /></p>
-
-<ul>
-  <li>避障/场地移动</li>
-</ul>
-
-<p>可以把动作游戏的AI划分为攻击/移动，而移动中免不了的一部分就是类似避障、返回场地中央之类的逻辑，这么一看大家还是都会面临这些问题的。</p>
-
-<p><img src="/assets/img/gameplay/mhrsb.AI/2.jpg" alt="" /></p>
-
-<ul>
-  <li>横向比较</li>
-</ul>
-
-<p>除了001我们也看一下093爵银龙，对比一下各自的<code class="language-plaintext highlighter-rouge">ai_fsm_user_data</code>的文件列表</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>比较对象</th>
-      <th>比较结论</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>em001-00/em001-02/em001-07</td>
-      <td>02和07都是00的子集，02和07略有不同</td>
-    </tr>
-    <tr>
-      <td>em093-00/em093-01</td>
-      <td>01是00的子集</td>
-    </tr>
-    <tr>
-      <td>em001-00/em093-00</td>
-      <td>略有不同</td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>简要总结</li>
-</ul>
-
-<p>MHRSB的AI通过划分不同场景，将复杂的逻辑成功细分到多种场合的单个逻辑，这种做法可以<strong>降低单个文件的复杂度</strong>，同时，单个逻辑文件<strong>可以作为特性组件</strong>动态的给某只怪物添加或者删除（比如觅食逻辑）。</p>
-
-<p>我们最关心的出招逻辑AI，目测是在某个单个细分逻辑中。尝试继续寻找出招逻辑AI，从文件大小里面筛了一下，还是没有结论。</p>
-
-<h2 id="体验反推">体验反推</h2>
-
-<p>这部分开始就进入相对比较“虚”的部分了，没有那么多确定的知识，只能通过游戏的体验去反向思考。</p>
-
-<!-- 这一部分我们会先根据“经验”设定一个推理的“起点”，再选取几只经典的怪物的逐只看看，逐步去修正我们的“起点”，试图得到最终的结论。 -->
-
-<p><img src="/assets/img/gameplay/mhrsb.AI/3.jpg" alt="" /></p>
-
-<p>参考上图，考虑到怪物猎人是一个规则设计非常繁多的游戏，我们先把怪物的AI行为分为战斗和其他两部分，本文主要讨论战斗相关的AI逻辑。</p>
-
-<p><img src="/assets/img/gameplay/mhrsb.AI/4.jpg" alt="" /></p>
-
-<p>进一步的分析，我们以一些UP主的视频为参考展开：</p>
-
-<p><a href="https://www.bilibili.com/video/BV1JF411c7f7">【曙光怪物底裤系列#1爵银龙】爵银龙的常见招式派生解析</a></p>
-
-<p>整理如下：</p>
-
-<ul>
-  <li>特殊状态：劫血状态</li>
-  <li>连招中猎人位置变化：
-    <ul>
-      <li>判断猎人位置不合适：小后跳or短车，再继续</li>
-      <li>判断猎人位置不合适且无法修正：强制结束</li>
-      <li>多数连招判断猎人在背后：尾刺连招</li>
-    </ul>
-  </li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>状态</th>
-      <th>连招</th>
-      <th>备注</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>非怒</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>伯爵三血球»站立尾刺(尾刺)»翼爪穿刺(下砸)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>侧飞»鲜血吐息</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>螺旋冲锋(螺旋冲)»翻沙舞石(空气炮)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>捞手»翼爪穿刺(下砸)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>前咬»翼爪穿刺(下砸)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>空翻»站立尾刺(尾刺)»翼爪穿刺(下砸)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>普通怒</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>螺旋冲锋(螺旋冲)»中远距离»三血球»站立尾刺(尾刺)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>螺旋冲锋(螺旋冲)»头前距离»溅石飞扑(前扑)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>侧飞»翼爪穿刺(下砸)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>普通状态选择性连招</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>侧咬»前砸/捕食/翼爪挥击(扫地)/(背后)尾刺</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>翼爪挥击(扫地)»大部分体术/(背后)尾刺</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>蛇形车»大部分体术/(背后)尾刺</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>原地狠砸(大下砸)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>鲜血之球(吐痰挥球)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>迅捷扇风(风压)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>……</td>
-      <td>……</td>
-      <td>……</td>
-    </tr>
-  </tbody>
-</table>
-
-<blockquote>
-  <p>后续有机会会在这里继续补充其他怪物的连招派生</p>
-</blockquote>
-
-<h3 id="结论1出招跟状态相关">结论1：出招跟状态相关</h3>
-
-<p>根据体验，怪物一般会有正常状态、愤怒状态（、疲劳状态）几种，同时怪物可能还有自身的强化状态的逻辑：</p>
-
-<p><img src="/assets/img/gameplay/mhrsb.AI/5.jpg" alt="" /></p>
-
-<p>怪物处于不同状态时，其出招派生是不一样的，用行为树来描述的话大概如下图：</p>
-
-<p><img src="/assets/img/gameplay/mhrsb.AI/6.jpg" alt="" /></p>
-
-<h3 id="结论2出招满足反应性与随机性">结论2：出招满足反应性与随机性</h3>
-
-<p>用人话来说就是，，怪物会对不同条件做出反应，出招不同；相同条件时，怪物有若干技能可以选择。</p>
-
-<p>条件除了上面提到的怪物自身处于不同的状态，大概率还和玩家位置相关。一个很典型的例子是红莲爆鳞龙头大尾大肉质好，本来应该是弹属性远程武器的活靶子，但是因为对远程武器AI导致远程武器狩猎难度也不简单。</p>
-
-<p>总结起来大致可参考下图：</p>
-
-<p><img src="/assets/img/gameplay/mhrsb.AI/7.jpg" alt="" /></p>
-
-<h3 id="结论3出招存在固定派生">结论3：出招存在固定派生</h3>
-
-<p>固定派生让玩家可以背版，提前预判怪物的行动，为持续游玩的玩家带来经验积累的优势。</p>
-
-<p>做一个反例思考，如果怪物的出招是纯随机的，一些没有特别好处理方式的招式将使得玩家的狩猎难度大增，甚至只要招式后摇大于任何一个怪物的出招前摇都可能被揍。另一个例子是早期雌火龙无前兆身前龙车，导致玩家甚至都会避免站在身前。</p>
-
-<p>另一方面，固定派生的中途也会根据玩家位置释放不同的招式；甚至当玩家位置偏移怪物下一招式的打击范围，怪物会调整自己的位置来减少空挥；当进行调整也无法命中的时候，甚至会取消攻击，可以参考下图：</p>
-
-<p><img src="/assets/img/gameplay/mhrsb.AI/8.jpg" alt="" /></p>
-
-<h2 id="总结">总结</h2>
-
-<p>就结论上而言，怪物猎人中的AI出招是十分“规矩”且“丰富”的，就特征层面上讲，符合广泛动作游戏的AI框架，但是牛就牛在量大且细节好。</p>
-
-<p>量大不仅体现在不同AI的状态多，也体现在一个状态下的派生多，还体现在一个派生下的规则多。三多，直接提供了长TTK下的丰富度。</p>
-
-<p>遗憾的是本文受限于时间，没有结合招式和AI去分析不同怪物的战斗体验，这部分如果细说对设计应该也是颇有益处的，后续有时间再补足吧。</p>
-
-<h2 id="其他参考">其他参考</h2>
-
-<ul>
-  <li><a href="https://mhrise.kiranico.com/data/monsters/366824395">MHRISE.KIRANICO Rathian</a></li>
-  <li><a href="https://mhworld.kiranico.com/zh">MHWORLD.KIRANIC</a></li>
-  <li><a href="https://mhrise.mhrice.info/version/10.0.2/monster/001_00.html">mhrice.info Rathian</a></li>
-</ul>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！]]></summary></entry></feed>
+<h2 id="总结">总结</h2>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。]]></summary></entry></feed>
