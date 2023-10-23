@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 动作设计参考·BOSS篇
+title: 动作设计参考·PVE总集篇
 categories: [动作游戏分析]
 ---
 
