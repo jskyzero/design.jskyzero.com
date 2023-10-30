@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-10-29T16:02:07+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-10-30T13:04:58+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：战斗策划能力要求</title><link href="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/" rel="alternate" type="text/html" title="游戏设计：战斗策划能力要求" /><published>2023-10-23T00:00:00+00:00</published><updated>2023-10-23T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/23/BattleDesignAbility</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/"><![CDATA[<p>最近汇总了米哈游和腾讯一些社会招聘岗位关于<strong>战斗策划怪物方向</strong>的岗位描述和能力要求，做了一些资料汇总和总结的工作。用于后续能力补足的参考。</p>
 
 <h1 id="战斗策划怪物方向能力要求">战斗策划(怪物方向)能力要求</h1>
@@ -191,7 +191,7 @@
   <tbody>
     <tr>
       <td>连段1</td>
-      <td>∞</td>
+      <td> </td>
       <td>3019;3020</td>
     </tr>
     <tr>
@@ -201,7 +201,7 @@
     </tr>
     <tr>
       <td>连段3</td>
-      <td>∞</td>
+      <td> </td>
       <td>3003;3004</td>
     </tr>
     <tr>
@@ -221,7 +221,7 @@
     </tr>
     <tr>
       <td>空窗期</td>
-      <td>5秒</td>
+      <td>5</td>
       <td>四方向闪避位移</td>
     </tr>
   </tbody>
@@ -266,7 +266,7 @@
   <li>小结</li>
 </ul>
 
-<p>以传统而经典的行为树配置方法的话，对狮子猿AI的分析大致如上所述。当然，文章的长度已经出卖了作者，下文才是本次分析的重点，但是上文所叙述一些分析方法乃至思路也是相当经典且重要的。</p>
+<p>以传统而经典的行为树配置方法的话，对狮子猿AI的分析大致如上所述。当然，文章的长度已经出卖了作者，下文才是本次分析的重点，但是上文所叙述一些经典分析方法乃至思路也是相当重要的。</p>
 
 <p>那么话不多说，我们来看看拆包/反编译后的狮子猿AI的LUA脚本。</p>
 
@@ -282,13 +282,97 @@
 
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/6.png" alt="" /></p>
 
-<p>和传统的行为树比，有一个非常具体的区别，只狼（或者说FS系列的游戏）的AI是将主决策逻辑和行为逻辑分开的。比如上图所示的<code class="language-plaintext highlighter-rouge">Activate</code>函数里面是主决策逻辑，里面会在一定条件下调用不同的<code class="language-plaintext highlighter-rouge">ActXX</code>系列函数。</p>
+<p>和传统的行为树比，有一个非常具体的区别，只狼（或者说FromSoftware的游戏）的AI是将主决策逻辑和行为逻辑分开的。比如上图所示的<code class="language-plaintext highlighter-rouge">Activate</code>函数里面是主决策逻辑，里面会在一定条件下调用不同的<code class="language-plaintext highlighter-rouge">ActXX</code>系列函数。</p>
 
-<p>这样做有什么好处呢？我认为是<strong>高效复用</strong>和<strong>分离逻辑</strong>，先从高效复用说起，在行为树的语境里，如果在两个地方都需要同一段逻辑，最简单的方法是直接拷贝一串逻辑过去，这样的问题就是下次修改时容易遗漏或者出其他差错；相对完善的方法是编写一个AI子树，去定义一些传递的黑板变量，但是这个操作的成本就会变高，普遍需要管理独立的新文件，增加心智上的负担。而使用脚本语言则可以利用编程语言自带的函数的语法来实现这一过程。（这里并不是说使用LUA脚本就比行为树要好，只是各自有不同的特点。）</p>
+<p>这样做有什么好处呢？我认为是<strong>高效复用</strong>和<strong>分离逻辑</strong>。</p>
 
-<p>另一个话题则是分离逻辑，如果你配置过复杂AI的话，应该能理解AI设计的核心矛盾之一，就是解决复杂度的问题，这需要工程学的方法、可扩展且表达力强的通用架构、编写时符合直觉的逻辑思路等……<strong>将问题分散、以大化小的分治法</strong>也是核心思路之一</p>
+<h4 id="高效复用">高效复用</h4>
 
-<h3 id="带条件检测的行为栈">带条件检测的行为栈</h3>
+<p>先从高效复用说起，在行为树的语境里，如果<strong>在两个地方都需要同一段逻辑</strong>，最简单的方法是直接拷贝一串逻辑过去，这样会很简单，但是问题就是下次修改时容易遗漏或者出其他差错。</p>
+
+<p>相对完善的方法是<strong>编写一个AI子树</strong>，去定义一些传递的黑板变量，但是这个操作的成本就会变高，普遍需要管理独立的新文件，增加心智上的负担。</p>
+
+<p>而使用脚本语言则可以利用编程语言自带的函数的语法来高效实现这一过程。（这里并不是说使用LUA脚本就比行为树要好，只是各自有不同的特点。）</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/7.png" alt="" /></p>
+
+<h4 id="分离逻辑">分离逻辑</h4>
+
+<p>另一个话题则是分离逻辑，如果你配置过复杂AI的话，应该能理解<strong>AI设计的核心问题之一，就是解决复杂度的问题</strong>，这需要工程学的方法、可扩展且表达力强的通用架构、编写时符合直觉的逻辑思路等……</p>
+
+<p><strong>将问题划分、以大化小的分治法</strong>也是核心思路之一，将行为逻辑和决策逻辑分开，能让双方聚焦各自的问题：决策逻辑负责复杂的条件检测，调用行为；而行为逻辑则只解决一个具体行为的实现，这里也可能会有一定的条件检测。但是是服务于这个行为的。这样，在面对复杂逻辑时，就可以将复杂逻辑化为若干部分，分别实现，避免干扰。</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/8.png" alt="" /></p>
+
+<blockquote>
+  <p>一个类似思路的、在软件工程的语境的例子是<a href="https://developer.mozilla.org/en-US/docs/Glossary/MVC">MVC架构（Model-View-Controller，模型-视图-控制器）</a>。将软件分为：数据描述相关、处理交互视图相关、处理如何控制数据相关，三个部分各司其职，避免互相干涉带来的心智负担。</p>
+</blockquote>
+
+<h3 id="带条件检测的行为队列">带条件检测的行为队列</h3>
+
+<p>本小节我们聚焦到一个具体的行为的架构设计。比如【靠近，A招式，B招式】的一个行动序列。</p>
+
+<p>在行为树的语境中，会使用运行节点来描述一个耗时的行为，大概会如下图所示去实现：</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/9.png" alt="" /></p>
+
+<p>想象一下这样的命令在Lua的一个函数中应该怎样描述实现？对于单个命令，其实使用单个的命令指令就行，但是当涉及到一连串的命令，就会麻烦一些。</p>
+
+<h4 id="行为队列">行为队列</h4>
+
+<p>答案是维护一个行为的“队列”，对于【靠近，A招式，B招式】这个序列，就添加靠近，A招式，B招式三个命令，等到执行的时候按照队列的先进先出的顺序挨个执行。</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ApproachTarget</span><span class="p">,</span> <span class="n">f3_local4</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">f3_local1</span><span class="p">,</span> <span class="n">TARGET_SELF</span><span class="p">,</span> <span class="n">f3_local3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboTunable_SuccessAngle180</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f3_local5</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">999</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboRepeat_SuccessAngle180</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f3_local6</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">999</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>类似下图，这是Act01行为的<strong>两个攻击的添加命令的代码</strong>和<strong>开发者工具观察实际执行的Goal队列</strong></p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/10.png" alt="" /></p>
+
+<p>可以观察到，添加命令（或者，行动目标，这里维持统一还是使用命令这个词）时候，有非常多的参数，除了常规描述行为是啥的自身关键参数，还有一个时间参数。主要是用于避免操控的对象一致处于某个行为中，给个超时。</p>
+
+<blockquote>
+  <p>在只狼的架构中，这个时间在自己执行的时候才会开始倒数，还有一种做法是，在添加入执行队列就开始倒数，应该也是一种规则。</p>
+</blockquote>
+
+<h4 id="条件检测">条件检测</h4>
+
+<p>找了一个移动和释放攻击的命令的指令，大概对应的一下参数的含义，如下图所示。</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/11.png" alt="" /></p>
+
+<ul>
+  <li>对于移动来说，当达到距离时则视为成功，这里是用作判断持续行为的成功结束条件。</li>
+  <li>而对于释放攻击老说，如果不满足释放距离则会释放失败，这里是用作开始执行的前置条件。</li>
+</ul>
+
+<p>留意<strong>开始执行的前置条件</strong>，为什么不在添加命令的时候就进行检测呢？对比下面这两个例子：</p>
+
+<ul>
+  <li>添加指令时检测距离</li>
+</ul>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 添加指令时检测距离</span>
+<span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9999</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作1、时间10秒、释放前检测9999米</span>
+<span class="k">if</span> <span class="n">L</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="k">then</span> <span class="c1">-- 判断距离小于5米</span>
+    <span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9999</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作1、时间10秒、释放前检测9999米</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<ul>
+  <li>指令执行时检测距离</li>
+</ul>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 指令执行时检测距离</span>
+<span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9999</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作1、时间10秒、释放前检测9999米</span>
+<span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作1、时间10秒、释放前检测5米内</span>
+</code></pre></div></div>
+
+<p>其实标注已经暴露了核心问题，添加指令时和指令执行时可能不是同一时刻，而这个单独的选项就是解决这个问题，确保能在指令执行时候进行检测。</p>
+
+<p>听起来有点像打补丁的做法，解决的问题是先进行的决策，这一次性可能添加了很多动作序列；后执行的动作，轮到这个动作的时候前置tiao’jian</p>
 
 <h3 id="其他架构逻辑">其他架构逻辑</h3>
 
