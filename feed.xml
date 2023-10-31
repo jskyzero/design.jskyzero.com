@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-10-30T13:04:58+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-10-31T09:23:02+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：战斗策划能力要求</title><link href="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/" rel="alternate" type="text/html" title="游戏设计：战斗策划能力要求" /><published>2023-10-23T00:00:00+00:00</published><updated>2023-10-23T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/23/BattleDesignAbility</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/"><![CDATA[<p>最近汇总了米哈游和腾讯一些社会招聘岗位关于<strong>战斗策划怪物方向</strong>的岗位描述和能力要求，做了一些资料汇总和总结的工作。用于后续能力补足的参考。</p>
 
 <h1 id="战斗策划怪物方向能力要求">战斗策划(怪物方向)能力要求</h1>
@@ -272,11 +272,17 @@
 
 <h2 id="基于lua的架构设计">基于LUA的架构设计</h2>
 
+<p>接下来我们讨论一些架构相关的话题，有时会使用行为树来对比。</p>
+
 <h3 id="决策与逻辑分离">决策与逻辑分离</h3>
 
 <p>拆包后的lua文件大致如下所示：</p>
 
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/5.png" alt="" /></p>
+
+<blockquote>
+  <p>原始内容可以参考：<a href="/assets/img/gameplay/sekiro_lion_tamarion_ai/510000_battle.dec.lua">狮子猿 510000_battle.dec.lua</a>，后文部分内容涉及到<a href="/assets/img/gameplay/sekiro_lion_tamarion_ai/509000_battle.dec.lua">蝴蝶夫人 509000_battle.dec.lua</a></p>
+</blockquote>
 
 <p>最外层是若干函数，如下图所示这里将其分了四类，具体的逻辑我们将在第三部分展开叙述。</p>
 
@@ -288,17 +294,17 @@
 
 <h4 id="高效复用">高效复用</h4>
 
-<p>先从高效复用说起，在行为树的语境里，如果<strong>在两个地方都需要同一段逻辑</strong>，最简单的方法是直接拷贝一串逻辑过去，这样会很简单，但是问题就是下次修改时容易遗漏或者出其他差错。</p>
+<p>先从高效复用说起，在行为树的语境里，如果<strong>在两个地方都需要同一段逻辑</strong>，最简单的方法是直接拷贝一串逻辑过去，这样会很简单，但是问题就是，下次修改时，容易遗漏，或者出其他差错。</p>
 
-<p>相对完善的方法是<strong>编写一个AI子树</strong>，去定义一些传递的黑板变量，但是这个操作的成本就会变高，普遍需要管理独立的新文件，增加心智上的负担。</p>
+<p>相对完善的方法是，<strong>编写一个AI子树</strong>，去定义一些传递的黑板变量，但是这个操作的成本就会变高，普遍需要管理独立的新文件，增加心智上的负担。</p>
 
-<p>而使用脚本语言则可以利用编程语言自带的函数的语法来高效实现这一过程。（这里并不是说使用LUA脚本就比行为树要好，只是各自有不同的特点。）</p>
+<p>而使用脚本语言，则可以利用编程语言自带的函数的语法，来高效实现这一过程。（这里并不是说使用LUA脚本，就比行为树要好，只是各自有不同的特点。）</p>
 
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/7.png" alt="" /></p>
 
 <h4 id="分离逻辑">分离逻辑</h4>
 
-<p>另一个话题则是分离逻辑，如果你配置过复杂AI的话，应该能理解<strong>AI设计的核心问题之一，就是解决复杂度的问题</strong>，这需要工程学的方法、可扩展且表达力强的通用架构、编写时符合直觉的逻辑思路等……</p>
+<p>另一个话题则是分离逻辑，如果你配置过复杂AI的话，应该能理解<strong>AI设计的核心问题之一，就是解决复杂度的问题</strong>，这需要工程学的方法、可扩展且表达力强的通用架构、编写时符合直觉的逻辑思路等等……</p>
 
 <p><strong>将问题划分、以大化小的分治法</strong>也是核心思路之一，将行为逻辑和决策逻辑分开，能让双方聚焦各自的问题：决策逻辑负责复杂的条件检测，调用行为；而行为逻辑则只解决一个具体行为的实现，这里也可能会有一定的条件检测。但是是服务于这个行为的。这样，在面对复杂逻辑时，就可以将复杂逻辑化为若干部分，分别实现，避免干扰。</p>
 
@@ -316,7 +322,7 @@
 
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/9.png" alt="" /></p>
 
-<p>想象一下这样的命令在Lua的一个函数中应该怎样描述实现？对于单个命令，其实使用单个的命令指令就行，但是当涉及到一连串的命令，就会麻烦一些。</p>
+<p>想象一下这样的命令在Lua的一个函数中应该怎样描述实现？对于单个命令，下达单个的命令指令就行，但是当涉及到一连串连续执行的命令，就会麻烦一些。</p>
 
 <h4 id="行为队列">行为队列</h4>
 
@@ -337,7 +343,7 @@
   <p>在只狼的架构中，这个时间在自己执行的时候才会开始倒数，还有一种做法是，在添加入执行队列就开始倒数，应该也是一种规则。</p>
 </blockquote>
 
-<h4 id="条件检测">条件检测</h4>
+<h4 id="条件检测的时效性">条件检测的时效性</h4>
 
 <p>找了一个移动和释放攻击的命令的指令，大概对应的一下参数的含义，如下图所示。</p>
 
@@ -348,7 +354,7 @@
   <li>而对于释放攻击老说，如果不满足释放距离则会释放失败，这里是用作开始执行的前置条件。</li>
 </ul>
 
-<p>留意<strong>开始执行的前置条件</strong>，为什么不在添加命令的时候就进行检测呢？对比下面这两个例子：</p>
+<p>留意<strong>开始执行的前置条件</strong>，在添加命令的时候就可以进行一次检测，那为什么不在添加命令的时候就进行检测呢？对比下面这两个例子：</p>
 
 <ul>
   <li>添加指令时检测距离</li>
@@ -357,7 +363,7 @@
 <div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 添加指令时检测距离</span>
 <span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9999</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作1、时间10秒、释放前检测9999米</span>
 <span class="k">if</span> <span class="n">L</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="k">then</span> <span class="c1">-- 判断距离小于5米</span>
-    <span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9999</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作1、时间10秒、释放前检测9999米</span>
+    <span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9999</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作2、时间10秒、释放前检测9999米</span>
 <span class="k">end</span>
 </code></pre></div></div>
 
@@ -367,22 +373,240 @@
 
 <div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 指令执行时检测距离</span>
 <span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9999</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作1、时间10秒、释放前检测9999米</span>
-<span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作1、时间10秒、释放前检测5米内</span>
+<span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作2、时间10秒、释放前检测5米内</span>
 </code></pre></div></div>
 
-<p>其实标注已经暴露了核心问题，添加指令时和指令执行时可能不是同一时刻，而这个单独的选项就是解决这个问题，确保能在指令执行时候进行检测。</p>
+<p>其实标注已经暴露了核心问题，添加指令时和指令执行时，可能不是同一时刻，而这个单独的检测选项就是解决这个问题，<strong>确保能在指令执行时，进行检测。</strong></p>
 
-<p>听起来有点像打补丁的做法，解决的问题是先进行的决策，这一次性可能添加了很多动作序列；后执行的动作，轮到这个动作的时候前置tiao’jian</p>
+<p>听起来有点像打补丁的做法，解决的核心问题是：决策进行的瞬间，一次性可能添加了很多动作序列；序列靠后被执行的单个动作，轮到这个它的时候，前置条件已经失去了意义。</p>
+
+<p>在行为树的语境中其实不存在这个问题，运行节点会完美过渡时间，轮到这个节点执行前才会真的进行这个节点的检测，但也可能，就是因为这种模糊性，会带来类似“空挥”的体验，这里不再展开讨论了。</p>
 
 <h3 id="其他架构逻辑">其他架构逻辑</h3>
 
-<h4 id="标记buff">标记BUFF</h4>
+<p>这里讨论一些其他的、用于逻辑表达的小设计。</p>
 
-<h4 id="计时器">计时器</h4>
+<h4 id="行为概率与行为cd">行为概率与行为CD</h4>
 
-<h4 id="通用事件">通用事件</h4>
+<p>前面我们提到过，由决策逻辑调用行动逻辑的函数：</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/13.png" alt="" /></p>
+
+<p>但是这个过程还是挺有意思的，并没有直接去调用函数，而是使用概率做中转，再去调用对应的函数。</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 首先整了几个“表格”做中转</span>
+<span class="kd">local</span> <span class="n">f2_local0</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="kd">local</span> <span class="n">f2_local1</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="kd">local</span> <span class="n">f2_local2</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1">-- 当决策的时候，</span>
+<span class="c1">-- 将X号行为的发生概率储存到，0号表格，Key为X的值里</span>
+<span class="k">if</span> <span class="n">f2_local5</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="k">then</span>
+    <span class="n">f2_local0</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">f2_local0</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="o">=</span> <span class="mi">800</span>
+    <span class="n">f2_local0</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">f2_local0</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">f2_local0</span><span class="p">[</span><span class="mi">43</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">elseif</span> <span class="n">f2_local5</span> <span class="o">&gt;=</span> <span class="mi">12</span> <span class="k">then</span>
+<span class="c1">-- ...</span>
+<span class="k">elseif</span> <span class="n">f2_local5</span> <span class="o">&gt;=</span> <span class="mi">5</span> <span class="k">then</span>
+<span class="c1">-- ...</span>
+<span class="k">end</span>
+
+<span class="c1">-- 检查冷却，如果不满足，概率直接打到1</span>
+<span class="n">f2_local0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">SetCoolTime</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">f2_local0</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">f2_local0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">SetCoolTime</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="mi">3003</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">f2_local0</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1">-- ...</span>
+<span class="n">f2_local0</span><span class="p">[</span><span class="mi">46</span><span class="p">]</span> <span class="o">=</span> <span class="n">SetCoolTime</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="mi">3005</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f2_local0</span><span class="p">[</span><span class="mi">46</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">-- 将X号行为的函数储存到，1号表格，Key为X的值里</span>
+<span class="n">f2_local1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">REGIST_FUNC</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg0</span><span class="p">.</span><span class="n">Act01</span><span class="p">)</span>
+<span class="n">f2_local1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">REGIST_FUNC</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg0</span><span class="p">.</span><span class="n">Act02</span><span class="p">)</span>
+<span class="c1">-- ...</span>
+<span class="n">f2_local1</span><span class="p">[</span><span class="mi">48</span><span class="p">]</span> <span class="o">=</span> <span class="n">REGIST_FUNC</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg0</span><span class="p">.</span><span class="n">Act48</span><span class="p">)</span>
+
+<span class="c1">-- 最后调用，根据0号表格的概率调用 1号表格储存的函数行为</span>
+<span class="c1">-- 此处函数完整内容可参考</span>
+<span class="c1">-- aicommon-luabnd-dcx\script\ai\out\bin\common_battle_func.dec.lua</span>
+<span class="n">Common_Battle_Activate</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">f2_local0</span><span class="p">,</span> <span class="n">f2_local1</span><span class="p">,</span> <span class="n">f2_local13</span><span class="p">,</span> <span class="n">f2_local2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>如果上面的内容稍微有点复杂，没关系，举个具体的例子：</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/14.png" alt="" /></p>
+
+<p>在某个情形下，如果我们决定使用Act01和Act02行为，且概率为100:50，那么我们<strong>并不会直接进行随机数的比较后调用函数</strong>，而是会将概率储存下来，同时将行为也储存下来，两者维持下标相同。这样脱钩后，甚至还可以进行一次CD的检测，如果不满足CD，则可以直接将概率打到最小，（为1不为0也处理了所有行为都CD时，至少可以随机出结果。）最后，再根据概率去调用对应的行为。</p>
+
+<p>这样做的好处是显而易见的，它允许我们<strong>将可用性检测——比如CD或者其他规则，放在决策之后</strong>，一方面保证了可用性的筛选，另一方面也避免了先进行可用性检测的麻烦，甚至概率为1而不为0的小细节，也覆盖了全部行为都在CD的边界情况。</p>
+
+<blockquote>
+  <p>在行为树的语境中，先进行可用性检测可以使用封装了自规划的算法的节点，选取可用性最高的行为。</p>
+
+  <p>在实际的工作中，有时没有规划算法的节点，最常见的情形和解决是，检测到攻击仍然处于CD，干脆失败向后决策，用发呆来作为保底。</p>
+</blockquote>
+
+<h4 id="信息感知与标记buff">信息感知与标记BUFF</h4>
+
+<p>对于一个动作游戏的AI，除了常规的HP、MP、位置等信息，对于敌我<strong>动作状态</strong>的检测逻辑应该会很多，动作游戏嘛，玩的就是动作之间的规则。</p>
+
+<p>只狼也不例外，一些信息的获取、判断如下所示：</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Goal.Activate 局部变量</span>
+<span class="kd">local</span> <span class="n">f2_local3</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetHpRate</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local4</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetSpRate</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local5</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetDist</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local6</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetRandam_Int</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local7</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetExcelParam</span><span class="p">(</span><span class="n">AI_EXCEL_THINK_PARAM_TYPE__thinkAttr_doAdmirer</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local8</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetEventRequest</span><span class="p">()</span>
+<span class="kd">local</span> <span class="n">f2_local9</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetEventRequest</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local10</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetDistY</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local11</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetDistY</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local12</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">HasSpecialEffectId</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">,</span> <span class="mi">200050</span><span class="p">)</span>
+<span class="c1">-- Goal.Activate 变量检测</span>
+<span class="k">elseif</span> <span class="ow">not</span> <span class="ow">not</span> <span class="n">arg1</span><span class="p">:</span><span class="n">HasSpecialEffectId</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">110060</span><span class="p">)</span> <span class="ow">or</span> <span class="n">arg1</span><span class="p">:</span><span class="n">HasSpecialEffectId</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">110010</span><span class="p">)</span> <span class="k">then</span>
+        <span class="n">f2_local0</span><span class="p">[</span><span class="mi">39</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">elseif</span> <span class="n">Common_ActivateAct</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span> <span class="k">then</span>
+</code></pre></div></div>
+
+<p>总结归纳一下，常规的信息大致包括这些：</p>
+
+<ul>
+  <li>属性类
+    <ul>
+      <li>HP</li>
+      <li>SP</li>
+      <li>固有Excel变量</li>
+    </ul>
+  </li>
+  <li>空间类
+    <ul>
+      <li>敌我距离</li>
+      <li>距地面高度</li>
+      <li>敌我角度</li>
+      <li>障碍物检测</li>
+    </ul>
+  </li>
+  <li>随机类
+    <ul>
+      <li>随机整数</li>
+      <li>随机小数</li>
+    </ul>
+  </li>
+</ul>
+
+<p>而关于动作的检测，除了一些经过封装的函数或者事件，大部分都是用标记BUFF实现的。</p>
+
+<p>一个很典型的例子是蝴蝶夫人的弹反动作，左方向8400，右方向8401，分别添加了200211和200210，两个不同的标记异常状态，这样AI就可以通过检测对于的标记buff，来知道是蝴蝶夫人是在左弹还是右弹。</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/12.png" alt="" /></p>
+
+<p>再进一步，可以根据左右弹设计不同的出招逻辑：</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 509000 蝴蝶夫人</span>
+<span class="c1">-- Goal.Kengeki_Activate 逻辑判断</span>
+    <span class="k">elseif</span> <span class="n">f48_local0</span> <span class="o">==</span> <span class="mi">200210</span> <span class="k">then</span>
+        <span class="k">if</span> <span class="n">f48_local4</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="k">then</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="k">elseif</span> <span class="n">SpaceCheck</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">false</span> <span class="k">then</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">80</span>
+        <span class="k">else</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="k">end</span>
+    <span class="k">elseif</span> <span class="n">f48_local0</span> <span class="o">==</span> <span class="mi">200211</span> <span class="k">then</span>
+        <span class="k">if</span> <span class="n">f48_local4</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="k">then</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="k">elseif</span> <span class="n">SpaceCheck</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">false</span> <span class="k">then</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span>
+        <span class="k">else</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span>
+        <span class="k">end</span>
+</code></pre></div></div>
+
+<p>猜测接口上，除了自己给自己加标记buff，应该也是可以定向给敌人加的。</p>
+
+<p>小结一下：以标记buff作为检测动作的中间层，可以一定程度上让逻辑与具体的Action检测脱钩，避免AI与动作的强耦合，带来修改时的麻烦。但是也会需要buff自身是一个简单易用、高效的功能。</p>
+
+<h4 id="计时器角色变量事件与打断">计时器/角色变量/事件与打断</h4>
+
+<p>这里是发现到的一些适用于逻辑编写的功能。</p>
+
+<ul>
+  <li>计时器</li>
+</ul>
+
+<p>上文提到CD其实也是一种计时器，有些时候如果要控制指定逻辑出现的间隔，就可以使用计时器，大概有以下功能：</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 开始计时，参数1是记时器的编号，参数2是计时器的倒计时时间</span>
+<span class="n">arg0</span><span class="p">:</span><span class="n">SetTimer</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="c1">-- 比较指定计时器的现在的记时</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">GetTimer</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="c1">-- 检测指定计时器的记时是否结束</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">IsFinishTimer</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">true</span>
+</code></pre></div></div>
+
+<p>只狼的计时器大概是只有16个，事实上也足够了。</p>
+
+<ul>
+  <li>角色变量</li>
+</ul>
+
+<p>使用角色变量可以方便的在不同逻辑之前储存信息、检查信息：</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 设置指定变量到指定值</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">SetNumber</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="c1">-- 设置指定变量自增</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">SetNumber</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetNumber</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1">-- 检测指定变量的值</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">GetNumber</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<p>之前在哪里看到过好像4号变量和弹刀有关，记不清了，可见有些变量应该是全角色通用、有统一含义的。</p>
+
+<p>变量的槽位好像也是16个，和计时器一样，固定数目一方面一般不会达到上限，另一方面也可以保证实现起来较为简单、性能开销较为可控。16这个数值感觉是个可参考值。</p>
+
+<ul>
+  <li>事件与打断</li>
+</ul>
+
+<p>严格意义上感觉不能叫事件，或者叫监听？当发生一些事件时，就会打断原有决策，重新进行打断决策。</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 添加区域监听</span>
+<span class="n">arg0</span><span class="p">:</span><span class="n">AddObserveArea</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">TARGET_SELF</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">AI_DIR_TYPE_F</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="c1">-- 删除区域监听</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">DeleteObserve</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1">-- 判断打断类型：在区域外打断</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">IsInterupt</span><span class="p">(</span><span class="n">INTERUPT_Outside_ObserveArea</span><span class="p">)</span>
+
+<span class="c1">-- 添加Buff监听</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">AddObserveSpecialEffectAttribute</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">,</span> <span class="mi">5025</span><span class="p">)</span>
+<span class="c1">-- 判断打断Buff类型</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">GetSpecialEffectActivateInterruptType</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5039</span>
+
+<span class="c1">-- 处理打断</span>
+<span class="n">Goal</span><span class="p">.</span><span class="n">Interrupt</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+    <span class="c1">-- ...</span>
+    <span class="c1">-- 打断后检测使用道具！药检.jpeg</span>
+    <span class="k">if</span> <span class="n">Interupt_Use_Item</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">Replanning</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="k">end</span>
+    <span class="c1">-- ...</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>在打断的逻辑里面看到了使用道具，难道药检的逻辑也在这里？</p>
+
+<p>事件与打断为AI提供了一种针对环境的变化快速反应的能力——反应性，合理使用这部分机制，可以让AI更加生动。但这部分逻辑如果过于“单薄”，也会很容易被玩家利用。</p>
 
 <h4 id="封装">封装</h4>
+
+<p>封装也是</p>
 
 <h2 id="感受与细节设计">感受与细节设计</h2>
 
