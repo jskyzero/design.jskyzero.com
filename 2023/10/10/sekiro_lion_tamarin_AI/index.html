@@ -61,8 +61,8 @@
       </li>
       <li class="md-toc-h2"><a href="#感受与细节设计">感受与细节设计</a>
         <ul>
-          <li class="md-toc-h3"><a href="#主决策逻辑">主决策逻辑</a></li>
           <li class="md-toc-h3"><a href="#行为逻辑">行为逻辑</a></li>
+          <li class="md-toc-h3"><a href="#主决策逻辑">主决策逻辑</a></li>
           <li class="md-toc-h3"><a href="#剑戟弹刀逻辑">剑戟（弹刀）逻辑</a></li>
         </ul>
       </li>
@@ -609,15 +609,68 @@
 
 <h4 id="封装">封装</h4>
 
-<p>封装也是</p>
+<p>前面提到过解决复杂度的问题，是游戏AI的核心问题之一，封装也是一种有效的方法，它可以有效提供逻辑的复用。</p>
+
+<p>只狼中大部分封装的逻辑都在<code class="language-plaintext highlighter-rouge">aicommon-luabnd-dcx\script\ai\out\bin\</code>目录，大概分为以下几类：</p>
+
+<ul>
+  <li>常量类：比如<code class="language-plaintext highlighter-rouge">ai_define.dec.lua</code>、<code class="language-plaintext highlighter-rouge">logic_list.dec.lua</code>，
+    <ul>
+      <li>构成：里面定义了一堆常量变量</li>
+      <li>功能：当枚举值用，增加可读性</li>
+    </ul>
+  </li>
+  <li>具体行为类：比如<code class="language-plaintext highlighter-rouge">approach_on_failed_path.dec.lua</code>
+    <ul>
+      <li>构成：描述一个行为的过程，里面分为<code class="language-plaintext highlighter-rouge">Activate</code>、<code class="language-plaintext highlighter-rouge">Update</code>、<code class="language-plaintext highlighter-rouge">Terminate</code>、<code class="language-plaintext highlighter-rouge">Interupt</code>几个部分</li>
+      <li>功能：大概可以分为移动、攻击、功能三大类</li>
+    </ul>
+  </li>
+  <li>辅助函数类：比如<code class="language-plaintext highlighter-rouge">common_battle_func.dec.lua</code>
+    <ul>
+      <li>构成：直接以函数的语法编写一些函数</li>
+      <li>功能：提供编写逻辑的一些便利性</li>
+    </ul>
+  </li>
+</ul>
+
+<p>理论上来说，好的封装是成功的一半，能极大降低新AI编写的工作量。</p>
 
 <h2 id="感受与细节设计">感受与细节设计</h2>
 
-<h3 id="主决策逻辑">主决策逻辑</h3>
+<p>本部分我们讨论具体的狮子猿AI逻辑，着重分析逻辑和对应的感受。</p>
 
 <h3 id="行为逻辑">行为逻辑</h3>
 
+<p>先从行为开始看起，以防直接看决策不知道行为是啥一头雾水。</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/20.png" alt="" /></p>
+
+<h3 id="主决策逻辑">主决策逻辑</h3>
+
+<ul>
+  <li>前置行为</li>
+</ul>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/15.png" alt="" /></p>
+
+<ul>
+  <li>决策</li>
+</ul>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/17.png" alt="" />
+<img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/18.png" alt="" />
+<img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/19.png" alt="" /></p>
+
+<ul>
+  <li>后置行为</li>
+</ul>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/16.png" alt="" /></p>
+
 <h3 id="剑戟弹刀逻辑">剑戟（弹刀）逻辑</h3>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/21.png" alt="" /></p>
 
 <h2 id="总结">总结</h2>
 
@@ -625,6 +678,7 @@
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+01 Nov 2023 - jskyzero - 📝 add 感受与细节设计
 31 Oct 2023 - jskyzero - 📝 almost finish 其他架构逻辑
 30 Oct 2023 - jskyzero - 📝 add 行为队列 & 条件检测
 29 Oct 2023 - jskyzero - 📝 update main structure
