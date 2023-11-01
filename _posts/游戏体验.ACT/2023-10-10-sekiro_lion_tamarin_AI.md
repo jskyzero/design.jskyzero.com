@@ -435,19 +435,56 @@ end
 
 #### 封装
 
-封装也是
+前面提到过解决复杂度的问题，是游戏AI的核心问题之一，封装也是一种有效的方法，它可以有效提供逻辑的复用。
+
+只狼中大部分封装的逻辑都在`aicommon-luabnd-dcx\script\ai\out\bin\`目录，大概分为以下几类：
+
++ 常量类：比如`ai_define.dec.lua`、`logic_list.dec.lua`，
+  + 构成：里面定义了一堆常量变量
+  + 功能：当枚举值用，增加可读性
++ 具体行为类：比如`approach_on_failed_path.dec.lua`
+  + 构成：描述一个行为的过程，里面分为`Activate`、`Update`、`Terminate`、`Interupt`几个部分
+  + 功能：大概可以分为移动、攻击、功能三大类
++ 辅助函数类：比如`common_battle_func.dec.lua`
+  + 构成：直接以函数的语法编写一些函数
+  + 功能：提供编写逻辑的一些便利性
+
+理论上来说，好的封装是成功的一半，能极大降低新AI编写的工作量。
 
 
 ## 感受与细节设计
 
-
-### 主决策逻辑
+本部分我们讨论具体的狮子猿AI逻辑，着重分析逻辑和对应的感受。
 
 
 ### 行为逻辑
 
+先从行为开始看起，以防直接看决策不知道行为是啥一头雾水。
+
+![](/assets/img/gameplay/sekiro_lion_tamarion_ai/20.png)
+
+
+### 主决策逻辑
+
++ 前置行为
+
+![](/assets/img/gameplay/sekiro_lion_tamarion_ai/15.png)
+
++ 决策
+
+![](/assets/img/gameplay/sekiro_lion_tamarion_ai/17.png)
+![](/assets/img/gameplay/sekiro_lion_tamarion_ai/18.png)
+![](/assets/img/gameplay/sekiro_lion_tamarion_ai/19.png)
+
++ 后置行为
+
+![](/assets/img/gameplay/sekiro_lion_tamarion_ai/16.png)
+
 
 ### 剑戟（弹刀）逻辑
+
+
+![](/assets/img/gameplay/sekiro_lion_tamarion_ai/21.png)
 
 
 ## 总结
