@@ -433,7 +433,7 @@ Goal.Interrupt = function (arg0, arg1, arg2)
 end
 ```
 
-在打断的逻辑里面看到了使用道具，难道药检的逻辑也在这里？
+在打断的逻辑里面看到了使用道具，合理推测这就是传说中的药检的逻辑。
 
 事件与打断为AI提供了一种针对环境的变化快速反应的能力——反应性，合理使用这部分机制，可以让AI更加生动。但这部分逻辑如果过于“单薄”，也会很容易被玩家利用。
 
@@ -466,37 +466,195 @@ end
 
 ## 感受与细节设计
 
-本部分我们讨论具体的狮子猿AI逻辑，着重分析逻辑和对应的感受。
+讨论了很多“虚”的东西以后，本部分我们讨论具体的狮子猿AI逻辑，着重分析行为逻辑和对应的感受。
+
+思考了很久这部分应该如何去呈现，最后的结论是还是**一条一条过一遍**。也方便读者感受一个真实的AI是什么样子的。
 
 
 ### 行为逻辑
 
-本来是打算先看决策逻辑的，后来发现如果不看行为看决策会一头雾水，所以这里先从行为开始看起。
+本来是打算先说决策逻辑的，后来发现如果**不看行为看决策会一头雾水**，所以这里先从行为开始看起。
+
+一共40个具体行为，有一部分后续的决策中没有使用。这里按照动画之前行为的感受初步划分：黄色为花里胡哨、红色为高危记忆点、绿色演出性质，总览整理如下：
 
 ![](/assets/img/gameplay/sekiro_lion_tamarion_ai/20.png)
+
+> 这里也录制了1-20号行为的演示视频，末尾还有一段战斗过程的切片，可以参考[Bilibili 狮子猿 AI行为演示](TODO)
+
+接下来我们挑一些行为具体看看：
+
+
+#### Act01 9.6-R(2.2);3000;3001
+
+一些没用到的变量这里就直接删掉了，精简后如下：
+
+```lua
+Goal.Act01 = function (arg0, arg1, arg2)
+    local f3_local0 = arg0:GetDist(TARGET_ENE_0)
+    local f3_local1 = 9.6 - arg0:GetMapHitRadius(TARGET_SELF)
+    local f3_local4 = 5
+    if f3_local1 < f3_local0 then
+        arg1:AddSubGoal(GOAL_COMMON_ApproachTarget, f3_local4, TARGET_ENE_0, f3_local1, TARGET_SELF, f3_local3, -1)
+    end
+    local f3_local5 = 3000
+    local f3_local6 = 3001
+    arg1:AddSubGoal(GOAL_COMMON_ComboTunable_SuccessAngle180, 10, f3_local5, TARGET_ENE_0, 999, 0, 0, 0, 0)
+    arg1:AddSubGoal(GOAL_COMMON_ComboRepeat_SuccessAngle180, 10, f3_local6, TARGET_ENE_0, 999, 0, 0, 0, 0)
+    arg0:SetNumber(5, 1)
+    GetWellSpace_Odds = 0
+    return GetWellSpace_Odds
+end
+```
+
+这部分逻辑还是挺简单的，大概的意思是调整位置，放俩攻击。
+
+![](/assets/img/gameplay/sekiro_lion_tamarion_ai/3-1.png)
+
+虽然简单，但是基本上所有的行为**都是这个的简化或者复杂化**，后面的行为也会以这个为模板展开说明。
+
+说一些中间有意思的点：
+
++ 距离比较与狮子猿半径
+
+之前简要标注的时候写的是`9.6-R(2.2);3000;3001`，后面俩是招式名字，为啥前面写的是9.6-R呢？
+
+![](/assets/img/gameplay/sekiro_lion_tamarion_ai/3-2.png)
+
+画了一个图方便理解，用于与敌我距离进行比较的值，是固定值减去了自身半径的值，也就是说只狼中敌我距离的计算是计算到阻挡外边缘的，由于这个值同时用到了后面的靠近逻辑中的目标值，我们可以反向算出狮子猿猴的半径是2.2米，于是有了上面这个标注。
+
+
++ 运行时检测之距离不敏感
+
+后面两个攻击的检测距离都是999，前面架构方面有提到相关的东西，这里就是一个会空挥的距离不敏感的例子。
+
+
+#### Act02 9.2-R(2.2);3003;3.4->3004
+
+Act02和Act01的区别除了换了招式和距离，另外就是释放时是**距离敏感**的，太远就不会放了。
+
+这里的3003的这个前置距离检测，其实可以不用检测，因为上面刚刚执行了靠近，两个距离其实是一样的。
+
+```lua
+Goal.Act02 = function (arg0, arg1, arg2)
+    local f4_local0 = arg0:GetDist(TARGET_ENE_0)
+    local f4_local1 = 9.2 - arg0:GetMapHitRadius(TARGET_SELF)
+    local f4_local2 = false
+    local f4_local3 = 10
+    if f4_local1 < f4_local0 then
+        arg1:AddSubGoal(GOAL_COMMON_ApproachTarget, f4_local3, TARGET_ENE_0, f4_local1, TARGET_SELF, f4_local2, -1)
+    else
+
+    end
+    local f4_local4 = 3003
+    local f4_local5 = 3004
+    local f4_local7 = 9.2 - arg0:GetMapHitRadius(TARGET_SELF)
+    local f4_local8 = 5.6 - arg0:GetMapHitRadius(TARGET_SELF)
+    local f4_local9 = 0
+    local f4_local10 = 0
+    arg1:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, f4_local4, TARGET_ENE_0, f4_local7, f4_local9, f4_local10, 0, 0)
+    arg1:AddSubGoal(GOAL_COMMON_ComboFinal, 10, f4_local5, TARGET_ENE_0, f4_local8, f4_local9, f4_local10, 0, 0)
+    arg0:SetNumber(5, 1)
+    GetWellSpace_Odds = 0
+    return GetWellSpace_Odds
+end
+```
+
+
+#### Act03 26.8-R(2.2);...;3008
+
+这应该是第一个稍微复杂的逻辑，虽然其实和之前思路是类似的。
+
+```lua
+Goal.Act03 = function (arg0, arg1, arg2)
+    local f5_local0 = arg0:GetDist(TARGET_ENE_0)
+    local f5_local1 = 26.8 - arg0:GetMapHitRadius(TARGET_SELF)
+    local f5_local2 = false
+    local f5_local3 = 10
+    -- 太远靠近
+    if f5_local1 < f5_local0 then
+        arg1:AddSubGoal(GOAL_COMMON_ApproachTarget, f5_local3, TARGET_ENE_0, f5_local1, TARGET_SELF, f5_local2, -1)
+    -- 太近远离1
+    elseif f5_local1 - 8 < f5_local0 then
+        arg1:AddSubGoal(GOAL_COMMON_AttackTunableSpin, 4, 3023, TARGET_ENE_0, SuccessDist1, TurnTime, FrontAngle, 0, 0)
+    -- 太太近远离2
+    elseif f5_local1 - 24 < f5_local0 then
+        arg1:AddSubGoal(GOAL_COMMON_SpinStep, StepLife, 5211, TARGET_ENE_0, TurnTime, AI_DIR_TYPE_F, CourseLong)
+    else
+    -- 太太太近远离并直接中断
+        arg1:AddSubGoal(GOAL_COMMON_AttackTunableSpin, 4, 3023, TARGET_ENE_0, SuccessDist1, TurnTime, FrontAngle, 0, 0)
+        return false
+    end
+    local f5_local4 = 3008
+    local f5_local5 = 26.8 - arg0:GetMapHitRadius(TARGET_SELF)
+    local f5_local6 = 0
+    local f5_local7 = 120
+    -- 检测阻挡相关
+    if arg0:IsExistMeshOnLine(TARGET_SELF, AI_DIR_TYPE_F, 15) then
+        arg1:AddSubGoal(GOAL_COMMON_ComboTunable_SuccessAngle180, 15, f5_local4, TARGET_ENE_0, 9999, f5_local6, f5_local7, 0, 0)
+    else
+        return false
+    end
+    GetWellSpace_Odds = 0
+    return GetWellSpace_Odds
+end
+```
+
+简单来说，在执行一个有很长一段靠近前摇的抓取攻击前，有一些**差异化的自定义远离**逻辑。（也侧面说明了前面的俩行为是只管玩家和怪物过远不管近的，默认近是可以兼容的）
+
+![](/assets/img/gameplay/sekiro_lion_tamarion_ai/3-3.png)
+
+此外，这里还第一次出现了空间障碍相关检测，后面也可以看到，只狼里面**有相当多的、细致的空间检测**，以避免怼墙行为。
+
+
+#### 小结
 
 
 ### 主决策逻辑
 
-+ 前置行为
+
+#### 前置行为
+
+正如架构篇所讨论的，在主决策逻辑的一开始是获取一些信息储存到变量、添加一些Buff的监听。
+
+大致如下图所示：
 
 ![](/assets/img/gameplay/sekiro_lion_tamarion_ai/15.png)
 
-+ 决策
+
+#### 决策部分-外围
+
+然后就开始了具体的决策部分，
 
 ![](/assets/img/gameplay/sekiro_lion_tamarion_ai/17.png)
+
+
+#### 决策部分-Event(1) 10 or 1 == 1
+
 ![](/assets/img/gameplay/sekiro_lion_tamarion_ai/18.png)
+
+
+#### 决策部分-默认
+
 ![](/assets/img/gameplay/sekiro_lion_tamarion_ai/19.png)
 
-+ 后置行为
+
+#### 后置行为
+
+这部分也和架构篇所讨论的没啥区别，给对应的行为检测CD，如果在CD中就把概率改到最小。
 
 ![](/assets/img/gameplay/sekiro_lion_tamarion_ai/16.png)
 
 
+#### 小结
+
+
 ### 剑戟（弹刀）逻辑
 
+狮子猿是似乎没弹刀逻辑的，所以这部分参考蝴蝶夫人会比较好。
 
 ![](/assets/img/gameplay/sekiro_lion_tamarion_ai/21.png)
+
+简单来说，似乎是`Goal.Parry`负责格挡，然后`Kengeki_Activate`在负责根据敌我关系——主要是格挡的动作，来进行格挡派生的选择，有兴趣的同学可以自行研究。
 
 
 ## 总结
