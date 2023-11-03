@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-11-01T09:17:59+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-11-03T11:46:12+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：战斗策划能力要求</title><link href="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/" rel="alternate" type="text/html" title="游戏设计：战斗策划能力要求" /><published>2023-10-23T00:00:00+00:00</published><updated>2023-10-23T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/23/BattleDesignAbility</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/"><![CDATA[<p>最近汇总了米哈游和腾讯一些社会招聘岗位关于<strong>战斗策划怪物方向</strong>的岗位描述和能力要求，做了一些资料汇总和总结的工作。用于后续能力补足的参考。</p>
 
 <h1 id="战斗策划怪物方向能力要求">战斗策划(怪物方向)能力要求</h1>
@@ -602,7 +602,7 @@
 <span class="k">end</span>
 </code></pre></div></div>
 
-<p>在打断的逻辑里面看到了使用道具，难道药检的逻辑也在这里？</p>
+<p>在打断的逻辑里面看到了使用道具，合理推测这就是传说中的药检的逻辑。</p>
 
 <p>事件与打断为AI提供了一种针对环境的变化快速反应的能力——反应性，合理使用这部分机制，可以让AI更加生动。但这部分逻辑如果过于“单薄”，也会很容易被玩家利用。</p>
 
@@ -643,39 +643,184 @@
 
 <h2 id="感受与细节设计">感受与细节设计</h2>
 
-<p>本部分我们讨论具体的狮子猿AI逻辑，着重分析逻辑和对应的感受。</p>
+<p>讨论了很多“虚”的东西以后，本部分我们讨论具体的狮子猿AI逻辑，着重分析行为逻辑和对应的感受。</p>
+
+<p>思考了很久这部分应该如何去呈现，最后的结论是还是<strong>一条一条过一遍</strong>。也方便读者感受一个真实的AI是什么样子的。</p>
 
 <h3 id="行为逻辑">行为逻辑</h3>
 
-<p>本来是打算先看决策逻辑的，后来发现如果不看行为看决策会一头雾水，所以这里先从行为开始看起。</p>
+<p>本来是打算先说决策逻辑的，后来发现如果<strong>不看行为看决策会一头雾水</strong>，所以这里先从行为开始看起。</p>
+
+<p>一共40个具体行为，有一部分后续的决策中没有使用。这里按照动画之前行为的感受初步划分：黄色为花里胡哨、红色为高危记忆点、绿色演出性质，总览整理如下：</p>
 
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/20.png" alt="" /></p>
 
-<h3 id="主决策逻辑">主决策逻辑</h3>
+<blockquote>
+  <p>这里也录制了1-20号行为的演示视频，末尾还有一段战斗过程的切片，可以参考<a href="TODO">Bilibili 狮子猿 AI行为演示</a></p>
+</blockquote>
+
+<p>接下来我们挑一些行为具体看看：</p>
+
+<h4 id="act01-96-r2230003001">Act01 9.6-R(2.2);3000;3001</h4>
+
+<p>一些没用到的变量这里就直接删掉了，精简后如下：</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Goal</span><span class="p">.</span><span class="n">Act01</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f3_local0</span> <span class="o">=</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetDist</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f3_local1</span> <span class="o">=</span> <span class="mi">9</span><span class="p">.</span><span class="mi">6</span> <span class="o">-</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetMapHitRadius</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f3_local4</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="k">if</span> <span class="n">f3_local1</span> <span class="o">&lt;</span> <span class="n">f3_local0</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ApproachTarget</span><span class="p">,</span> <span class="n">f3_local4</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">f3_local1</span><span class="p">,</span> <span class="n">TARGET_SELF</span><span class="p">,</span> <span class="n">f3_local3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="kd">local</span> <span class="n">f3_local5</span> <span class="o">=</span> <span class="mi">3000</span>
+    <span class="kd">local</span> <span class="n">f3_local6</span> <span class="o">=</span> <span class="mi">3001</span>
+    <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboTunable_SuccessAngle180</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f3_local5</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">999</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboRepeat_SuccessAngle180</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f3_local6</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">999</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">arg0</span><span class="p">:</span><span class="n">SetNumber</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">GetWellSpace_Odds</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">GetWellSpace_Odds</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>这部分逻辑还是挺简单的，大概的意思是调整位置，放俩攻击。</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/3-1.png" alt="" /></p>
+
+<p>虽然简单，但是基本上所有的行为<strong>都是这个的简化或者复杂化</strong>，后面的行为也会以这个为模板展开说明。</p>
+
+<p>说一些中间有意思的点：</p>
 
 <ul>
-  <li>前置行为</li>
+  <li>距离比较与狮子猿半径</li>
 </ul>
+
+<p>之前简要标注的时候写的是<code class="language-plaintext highlighter-rouge">9.6-R(2.2);3000;3001</code>，后面俩是招式名字，为啥前面写的是9.6-R呢？</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/3-2.png" alt="" /></p>
+
+<p>画了一个图方便理解，用于与敌我距离进行比较的值，是固定值减去了自身半径的值，也就是说只狼中敌我距离的计算是计算到阻挡外边缘的，由于这个值同时用到了后面的靠近逻辑中的目标值，我们可以反向算出狮子猿猴的半径是2.2米，于是有了上面这个标注。</p>
+
+<ul>
+  <li>运行时检测之距离不敏感</li>
+</ul>
+
+<p>后面两个攻击的检测距离都是999，前面架构方面有提到相关的东西，这里就是一个会空挥的距离不敏感的例子。</p>
+
+<h4 id="act02-92-r22300334-3004">Act02 9.2-R(2.2);3003;3.4-&gt;3004</h4>
+
+<p>Act02和Act01的区别除了换了招式和距离，另外就是释放时是<strong>距离敏感</strong>的，太远就不会放了。</p>
+
+<p>这里的3003的这个前置距离检测，其实可以不用检测，因为上面刚刚执行了靠近，两个距离其实是一样的。</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Goal</span><span class="p">.</span><span class="n">Act02</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f4_local0</span> <span class="o">=</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetDist</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f4_local1</span> <span class="o">=</span> <span class="mi">9</span><span class="p">.</span><span class="mi">2</span> <span class="o">-</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetMapHitRadius</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f4_local2</span> <span class="o">=</span> <span class="kc">false</span>
+    <span class="kd">local</span> <span class="n">f4_local3</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">if</span> <span class="n">f4_local1</span> <span class="o">&lt;</span> <span class="n">f4_local0</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ApproachTarget</span><span class="p">,</span> <span class="n">f4_local3</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">f4_local1</span><span class="p">,</span> <span class="n">TARGET_SELF</span><span class="p">,</span> <span class="n">f4_local2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span>
+
+    <span class="k">end</span>
+    <span class="kd">local</span> <span class="n">f4_local4</span> <span class="o">=</span> <span class="mi">3003</span>
+    <span class="kd">local</span> <span class="n">f4_local5</span> <span class="o">=</span> <span class="mi">3004</span>
+    <span class="kd">local</span> <span class="n">f4_local7</span> <span class="o">=</span> <span class="mi">9</span><span class="p">.</span><span class="mi">2</span> <span class="o">-</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetMapHitRadius</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f4_local8</span> <span class="o">=</span> <span class="mi">5</span><span class="p">.</span><span class="mi">6</span> <span class="o">-</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetMapHitRadius</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f4_local9</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kd">local</span> <span class="n">f4_local10</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboAttackTunableSpin</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f4_local4</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">f4_local7</span><span class="p">,</span> <span class="n">f4_local9</span><span class="p">,</span> <span class="n">f4_local10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboFinal</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f4_local5</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">f4_local8</span><span class="p">,</span> <span class="n">f4_local9</span><span class="p">,</span> <span class="n">f4_local10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">arg0</span><span class="p">:</span><span class="n">SetNumber</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">GetWellSpace_Odds</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">GetWellSpace_Odds</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h4 id="act03-268-r223008">Act03 26.8-R(2.2);…;3008</h4>
+
+<p>这应该是第一个稍微复杂的逻辑，虽然其实和之前思路是类似的。</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Goal</span><span class="p">.</span><span class="n">Act03</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f5_local0</span> <span class="o">=</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetDist</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f5_local1</span> <span class="o">=</span> <span class="mi">26</span><span class="p">.</span><span class="mi">8</span> <span class="o">-</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetMapHitRadius</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f5_local2</span> <span class="o">=</span> <span class="kc">false</span>
+    <span class="kd">local</span> <span class="n">f5_local3</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="c1">-- 太远靠近</span>
+    <span class="k">if</span> <span class="n">f5_local1</span> <span class="o">&lt;</span> <span class="n">f5_local0</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ApproachTarget</span><span class="p">,</span> <span class="n">f5_local3</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">f5_local1</span><span class="p">,</span> <span class="n">TARGET_SELF</span><span class="p">,</span> <span class="n">f5_local2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1">-- 太近远离1</span>
+    <span class="k">elseif</span> <span class="n">f5_local1</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">&lt;</span> <span class="n">f5_local0</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_AttackTunableSpin</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3023</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">SuccessDist1</span><span class="p">,</span> <span class="n">TurnTime</span><span class="p">,</span> <span class="n">FrontAngle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="c1">-- 太太近远离2</span>
+    <span class="k">elseif</span> <span class="n">f5_local1</span> <span class="o">-</span> <span class="mi">24</span> <span class="o">&lt;</span> <span class="n">f5_local0</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_SpinStep</span><span class="p">,</span> <span class="n">StepLife</span><span class="p">,</span> <span class="mi">5211</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">TurnTime</span><span class="p">,</span> <span class="n">AI_DIR_TYPE_F</span><span class="p">,</span> <span class="n">CourseLong</span><span class="p">)</span>
+    <span class="k">else</span>
+    <span class="c1">-- 太太太近远离并直接中断</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_AttackTunableSpin</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3023</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">SuccessDist1</span><span class="p">,</span> <span class="n">TurnTime</span><span class="p">,</span> <span class="n">FrontAngle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">false</span>
+    <span class="k">end</span>
+    <span class="kd">local</span> <span class="n">f5_local4</span> <span class="o">=</span> <span class="mi">3008</span>
+    <span class="kd">local</span> <span class="n">f5_local5</span> <span class="o">=</span> <span class="mi">26</span><span class="p">.</span><span class="mi">8</span> <span class="o">-</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetMapHitRadius</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f5_local6</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kd">local</span> <span class="n">f5_local7</span> <span class="o">=</span> <span class="mi">120</span>
+    <span class="c1">-- 检测阻挡相关</span>
+    <span class="k">if</span> <span class="n">arg0</span><span class="p">:</span><span class="n">IsExistMeshOnLine</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">,</span> <span class="n">AI_DIR_TYPE_F</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboTunable_SuccessAngle180</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">f5_local4</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">9999</span><span class="p">,</span> <span class="n">f5_local6</span><span class="p">,</span> <span class="n">f5_local7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="kc">false</span>
+    <span class="k">end</span>
+    <span class="n">GetWellSpace_Odds</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">GetWellSpace_Odds</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>简单来说，在执行一个有很长一段靠近前摇的抓取攻击前，有一些<strong>差异化的自定义远离</strong>逻辑。（也侧面说明了前面的俩行为是只管玩家和怪物过远不管近的，默认近是可以兼容的）</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/3-3.png" alt="" /></p>
+
+<p>此外，这里还第一次出现了空间障碍相关检测，后面也可以看到，只狼里面<strong>有相当多的、细致的空间检测</strong>，以避免怼墙行为。</p>
+
+<h4 id="小结">小结</h4>
+
+<h3 id="主决策逻辑">主决策逻辑</h3>
+
+<h4 id="前置行为">前置行为</h4>
+
+<p>正如架构篇所讨论的，在主决策逻辑的一开始是获取一些信息储存到变量、添加一些Buff的监听。</p>
+
+<p>大致如下图所示：</p>
 
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/15.png" alt="" /></p>
 
-<ul>
-  <li>决策</li>
-</ul>
+<h4 id="决策部分-外围">决策部分-外围</h4>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/17.png" alt="" />
-<img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/18.png" alt="" />
-<img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/19.png" alt="" /></p>
+<p>然后就开始了具体的决策部分，</p>
 
-<ul>
-  <li>后置行为</li>
-</ul>
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/17.png" alt="" /></p>
+
+<h4 id="决策部分-event1-10-or-1--1">决策部分-Event(1) 10 or 1 == 1</h4>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/18.png" alt="" /></p>
+
+<h4 id="决策部分-默认">决策部分-默认</h4>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/19.png" alt="" /></p>
+
+<h4 id="后置行为">后置行为</h4>
+
+<p>这部分也和架构篇所讨论的没啥区别，给对应的行为检测CD，如果在CD中就把概率改到最小。</p>
 
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/16.png" alt="" /></p>
 
+<h4 id="小结-1">小结</h4>
+
 <h3 id="剑戟弹刀逻辑">剑戟（弹刀）逻辑</h3>
 
+<p>狮子猿是似乎没弹刀逻辑的，所以这部分参考蝴蝶夫人会比较好。</p>
+
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/21.png" alt="" /></p>
+
+<p>简单来说，似乎是<code class="language-plaintext highlighter-rouge">Goal.Parry</code>负责格挡，然后<code class="language-plaintext highlighter-rouge">Kengeki_Activate</code>在负责根据敌我关系——主要是格挡的动作，来进行格挡派生的选择，有兴趣的同学可以自行研究。</p>
 
 <h2 id="总结">总结</h2>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[之前拆包看了只狼的狮子猿的一阶段动画，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。]]></summary></entry><entry><title type="html">2023年的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="2023年的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年的arpg们">聊聊2023年的ARPG们</h1>
 
