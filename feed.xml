@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-11-03T11:46:12+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-11-06T06:03:49+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">游戏设计：战斗策划能力要求</title><link href="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/" rel="alternate" type="text/html" title="游戏设计：战斗策划能力要求" /><published>2023-10-23T00:00:00+00:00</published><updated>2023-10-23T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/23/BattleDesignAbility</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/"><![CDATA[<p>最近汇总了米哈游和腾讯一些社会招聘岗位关于<strong>战斗策划怪物方向</strong>的岗位描述和能力要求，做了一些资料汇总和总结的工作。用于后续能力补足的参考。</p>
 
 <h1 id="战斗策划怪物方向能力要求">战斗策划(怪物方向)能力要求</h1>
@@ -380,7 +380,7 @@
 
 <p>其实标注已经暴露了核心问题，添加指令时和指令执行时，可能不是同一时刻，而这个单独的检测选项就是解决这个问题，<strong>确保能在指令执行时，进行检测。</strong></p>
 
-<p>听起来有点像打补丁的做法，解决的核心问题是：决策进行的瞬间，一次性可能添加了很多动作序列；序列靠后被执行的单个动作，轮到它的时候，前置条件已经失去了意义。</p>
+<p>听起来有点像打补丁的做法，解决的核心问题是：决策进行的瞬间，一次性可能添加了很多动作序列；序列靠后被执行的单个动作，<strong>轮到它的时候，前置条件已经失去了意义</strong>。</p>
 
 <p>在行为树的语境中其实不存在这个问题，运行节点会完美过渡时间，轮到这个节点执行前才会真的进行这个节点的检测，但也可能，就是因为这种模糊性，会带来类似“空挥”的体验，这里不再展开讨论了。</p>
 
@@ -532,7 +532,7 @@
 
 <p>猜测接口上，除了自己给自己加标记buff，应该也是可以定向给敌人加的。</p>
 
-<p>小结一下：以标记buff作为检测动作的中间层，可以一定程度上让逻辑与具体的Action检测脱钩，避免AI与动作的强耦合，带来修改时的麻烦。但是也会需要buff自身是一个简单易用、高效的功能。</p>
+<p>小结一下：以标记buff作为检测动作的中间层，可以<strong>一定程度上让逻辑与具体的Action检测脱钩</strong>，避免AI与动作的强耦合，带来修改时的麻烦。但是也会需要buff自身是一个简单易用、高效的功能。</p>
 
 <h4 id="计时器角色变量事件与打断">计时器/角色变量/事件与打断</h4>
 
@@ -570,7 +570,7 @@
 
 <p>之前在哪里看到过好像4号变量和弹刀有关，记不清了，可见有些变量应该是全角色通用、有统一含义的。</p>
 
-<p>变量的槽位好像也是16个，和计时器一样，固定数目一方面一般不会达到上限，另一方面也可以保证实现起来较为简单、性能开销较为可控。16这个数值感觉是个可参考值。</p>
+<p>变量的槽位好像也是16个，和计时器一样，固定数目一方面一般不会达到上限，另一方面也可以保证实现起来较为简单、性能开销较为可控。<strong>16这个数值感觉是个可参考值</strong>。</p>
 
 <ul>
   <li>事件与打断</li>
@@ -604,7 +604,7 @@
 
 <p>在打断的逻辑里面看到了使用道具，合理推测这就是传说中的药检的逻辑。</p>
 
-<p>事件与打断为AI提供了一种针对环境的变化快速反应的能力——反应性，合理使用这部分机制，可以让AI更加生动。但这部分逻辑如果过于“单薄”，也会很容易被玩家利用。</p>
+<p>事件与打断为AI提供了<strong>一种针对环境的变化快速反应的能力——反应性</strong>，合理使用这部分机制，可以让AI更加生动。但这部分逻辑如果过于“单薄”，也会很容易被玩家利用。</p>
 
 <h4 id="封装">封装</h4>
 
@@ -613,25 +613,28 @@
 <p>只狼中大部分封装的逻辑都在<code class="language-plaintext highlighter-rouge">aicommon-luabnd-dcx\script\ai\out\bin\</code>目录，大概分为以下几类：</p>
 
 <ul>
-  <li>常量类：比如<code class="language-plaintext highlighter-rouge">ai_define.dec.lua</code>、<code class="language-plaintext highlighter-rouge">logic_list.dec.lua</code>，
-    <ul>
-      <li>构成：里面定义了一堆常量变量</li>
-      <li>功能：当枚举值用，增加可读性</li>
-    </ul>
-  </li>
-  <li>具体行为类：比如<code class="language-plaintext highlighter-rouge">approach_on_failed_path.dec.lua</code>
-    <ul>
-      <li>构成：描述一个行为的过程，里面分为<code class="language-plaintext highlighter-rouge">Activate</code>、<code class="language-plaintext highlighter-rouge">Update</code>、<code class="language-plaintext highlighter-rouge">Terminate</code>、<code class="language-plaintext highlighter-rouge">Interupt</code>几个部分</li>
-      <li>功能：大概可以分为移动、攻击、功能三大类</li>
-    </ul>
-  </li>
-  <li>辅助函数类：比如<code class="language-plaintext highlighter-rouge">common_battle_func.dec.lua</code>
-    <ul>
-      <li>构成：直接以函数的语法编写一些函数</li>
-      <li>功能：提供编写逻辑的一些便利性</li>
-    </ul>
-  </li>
+  <li><strong>常量类</strong>：比如<code class="language-plaintext highlighter-rouge">ai_define.dec.lua</code>、<code class="language-plaintext highlighter-rouge">logic_list.dec.lua</code>，</li>
 </ul>
+
+<p>构成：里面定义了一堆常量变量</p>
+
+<p>功能：当枚举值用，增加可读性</p>
+
+<ul>
+  <li><strong>具体行为类</strong>：比如<code class="language-plaintext highlighter-rouge">approach_on_failed_path.dec.lua</code></li>
+</ul>
+
+<p>构成：描述一个行为的过程，里面分为<code class="language-plaintext highlighter-rouge">Activate</code>、<code class="language-plaintext highlighter-rouge">Update</code>、<code class="language-plaintext highlighter-rouge">Terminate</code>、<code class="language-plaintext highlighter-rouge">Interupt</code>几个部分</p>
+
+<p>功能：大概可以分为移动、攻击、功能三大类</p>
+
+<ul>
+  <li><strong>辅助函数类</strong>：比如<code class="language-plaintext highlighter-rouge">common_battle_func.dec.lua</code></li>
+</ul>
+
+<p>构成：直接以函数的语法编写一些函数</p>
+
+<p>功能：提供编写逻辑的一些便利性</p>
 
 <p>理论上来说，好的封装是成功的一半，能极大降低新AI编写的工作量。</p>
 
@@ -698,19 +701,17 @@
 
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/3-2.png" alt="" /></p>
 
-<p>画了一个图方便理解，用于与敌我距离进行比较的值，是固定值减去了自身半径的值，也就是说只狼中敌我距离的计算是计算到阻挡外边缘的，由于这个值同时用到了后面的靠近逻辑中的目标值，我们可以反向算出狮子猿猴的半径是2.2米，于是有了上面这个标注。</p>
+<p>画了一个图方便理解，用于与敌我距离进行比较的值，是<strong>固定值减去了自身半径的值</strong>，也就是说只狼中敌我距离的计算是<strong>计算到阻挡外边缘</strong>的，由于这个值同时用到了后面的靠近逻辑中的目标值，我们可以反向算出狮子猿猴的半径是2.2米，于是有了上面这个标注。</p>
 
 <ul>
   <li>运行时检测之距离不敏感</li>
 </ul>
 
-<p>后面两个攻击的检测距离都是999，前面架构方面有提到相关的东西，这里就是一个会空挥的距离不敏感的例子。</p>
+<p>后面两个攻击的检测距离都是999，前面架构方面有提到相关的东西，这里就是一个<strong>会空挥的、距离不敏感</strong>的例子。</p>
 
 <h4 id="act02-92-r22300334-3004">Act02 9.2-R(2.2);3003;3.4-&gt;3004</h4>
 
 <p>Act02和Act01的区别除了换了招式和距离，另外就是释放时是<strong>距离敏感</strong>的，太远就不会放了。</p>
-
-<p>这里的3003的这个前置距离检测，其实可以不用检测，因为上面刚刚执行了靠近，两个距离其实是一样的。</p>
 
 <div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Goal</span><span class="p">.</span><span class="n">Act02</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
     <span class="kd">local</span> <span class="n">f4_local0</span> <span class="o">=</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetDist</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">)</span>
@@ -736,9 +737,11 @@
 <span class="k">end</span>
 </code></pre></div></div>
 
+<p>这里的3003的这个前置距离检测，其实可以不用检测，因为上面刚刚执行了靠近，两个距离数值一样，且中中间没有时间差。</p>
+
 <h4 id="act03-268-r223008">Act03 26.8-R(2.2);…;3008</h4>
 
-<p>这应该是第一个稍微复杂的逻辑，虽然其实和之前思路是类似的。</p>
+<p>这应该是第一个稍微复杂的逻辑，和之前思路是类似的。</p>
 
 <div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Goal</span><span class="p">.</span><span class="n">Act03</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
     <span class="kd">local</span> <span class="n">f5_local0</span> <span class="o">=</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetDist</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">)</span>
@@ -774,55 +777,173 @@
 <span class="k">end</span>
 </code></pre></div></div>
 
-<p>简单来说，在执行一个有很长一段靠近前摇的抓取攻击前，有一些<strong>差异化的自定义远离</strong>逻辑。（也侧面说明了前面的俩行为是只管玩家和怪物过远不管近的，默认近是可以兼容的）</p>
+<p>简单来说，在执行一个有很长一段靠近前摇的抓取攻击前，有一些<strong>差异化的自定义远离</strong>逻辑。（也侧面说明了前面的俩行为是<strong>只管玩家和怪物过远</strong>、不管过近的，默认近是可以兼容的）</p>
 
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/3-3.png" alt="" /></p>
 
-<p>此外，这里还第一次出现了空间障碍相关检测，后面也可以看到，只狼里面<strong>有相当多的、细致的空间检测</strong>，以避免怼墙行为。</p>
+<p>此外，这里还第一次出现了空间障碍相关检测，后面也可以看到，只狼里面<strong>有相当多的、细致的空间检测</strong>，以避免不合适的行为——比如怼墙走等行为。</p>
 
-<h4 id="小结">小结</h4>
+<h4 id="act04-以后">Act04 以后</h4>
+
+<p>后面我们就不逐一展开说了，有兴趣的同学可以去看<a href="/assets/img/gameplay/sekiro_lion_tamarion_ai/510000_battle.dec.lua">原始文件</a>。</p>
+
+<p>这里我们给出一个将行为放到状态机上的联动图，可以点开查看大图：</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/3-0.png" alt="" /></p>
+
+<h4 id="简要小结">简要小结</h4>
+
+<p>简单总结下：</p>
+
+<ul>
+  <li>微观的基本范式：靠近+攻击</li>
+</ul>
+
+<p>除了原地直接放的招式，大部分都是靠近后攻击，再在此基础上进行<strong>距离敏感、调整位置、随机变招、距离决策</strong>等行为的丰富逻辑。</p>
+
+<ul>
+  <li>宏观攻击感受的营造：短而密</li>
+</ul>
+
+<p>大部分的连招都是2个攻击动作——当然具体的攻击Hit数可能不止，最多也就是3个，并没有之前分析中的超超超长连招。</p>
+
+<p>但是，攻击的构成是非常密的，应该只有两处刻意发呆对峙，以此来营造<strong>战斗的持续压迫感</strong>。</p>
+
+<ul>
+  <li>唯一指定未使用动作：3007</li>
+</ul>
+
+<p>整个AI里面未发现使用3007的行为，但是实际体验中记得还是会出现。可见在目前AI的范围之外，应该还是有一些动作自动跳转之类的逻辑的。</p>
 
 <h3 id="主决策逻辑">主决策逻辑</h3>
 
+<p>决策部分，分成三个部分方便理解：</p>
+
 <h4 id="前置行为">前置行为</h4>
 
-<p>正如架构篇所讨论的，在主决策逻辑的一开始是获取一些信息储存到变量、添加一些Buff的监听。</p>
+<p>正如架构篇所讨论的，在主决策逻辑的一开始是一些初始化工作，大致如下图所示：</p>
 
-<p>大致如下图所示：</p>
+<ul>
+  <li>获取一些信息储存到变量</li>
+</ul>
 
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/15.png" alt="" /></p>
 
+<ul>
+  <li>添加一些Buff的监听。</li>
+</ul>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/15-1.png" alt="" /></p>
+
 <h4 id="决策部分-外围">决策部分-外围</h4>
 
-<p>然后就开始了具体的决策部分，</p>
+<p>然后就开始了具体的决策部分：</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/17.png" alt="" /></p>
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/17-1.png" alt="" /></p>
+
+<p>最外围，这里认为是一些针对特定情况立刻做出反应的逻辑，一共10个。</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/17-2.png" alt="" /></p>
+
+<ul>
+  <li>立刻反应：死亡</li>
+</ul>
+
+<p>比如动作20其实是死亡结算动作，可见这个事件应该就是检测死亡（或者检测转阶段）。大部分逻辑都可以通过行为去揣测检测条件的含义，部分不知道是啥的也不乱猜了。</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/17-3.png" alt="" /></p>
+
+<ul>
+  <li>特殊情况：距离太远</li>
+</ul>
+
+<p>稍微有点意思的是处理距离过远时候，用的数值是10米，10米并不不算远，所以还配合了一个标记Buff 5030。执行的行为也很有意思，是原地拍地吼，之前拆动画的时候还没有意思到，后面才想起来这个动作是可以用义手勾过去快速拉近距离的。感觉意思是：<strong>距离太远，直接勾引你过来</strong>。你不来，我再主动靠近。</p>
+
+<ul>
+  <li>特殊情况：处于背后</li>
+</ul>
+
+<p>另外一个类似的特殊检测是在玩家背后，其实这里感觉是玩家在狮子猿背后？</p>
+
+<p>这里有两个需要注意的，其一是这些行为都是挑选出来的可以有转向过程能自然转向覆盖打到玩家的。</p>
+
+<p>其二是这里先进行了一个距离划分，10、11、42比较普通，重点是7米内时还会有一个专门打身后的4号行为，而且比重很大。可以认为大多情况都是4。下面我们也会看到很多<strong>以较大比重来突出主要行为的技巧</strong>。</p>
 
 <h4 id="决策部分-event1-10-or-1--1">决策部分-Event(1) 10 or 1 == 1</h4>
 
+<p>这里是上文第三个决策的展开，因为选项太多了所以单独陈述。</p>
+
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/18.png" alt="" /></p>
+
+<p>首先我们可以看到因为处于比较靠前的位置，这里仍然处理了3.1背后、3.2 &amp; 3.3等特殊标记等情况下的行为。</p>
+
+<p>并且这里还有一个<strong>检测敌人崩架势</strong>后的逻辑，远就扔屎、近就敏捷一打。</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/18-1.png" alt="" /></p>
+
+<p>最后是一切默认情况下的攻击，也是目前看到决策最复杂的一个。粗看了一下行为，概率最高的行为分别是扔屎和下端危，似乎压力还蛮大的。</p>
+
+<p>在默认情况以后，还会做一些后置检测有一个计时器和空间位置的检测。</p>
 
 <h4 id="决策部分-默认">决策部分-默认</h4>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/19.png" alt="" /></p>
+<p>这里就是最最最默认情况下狮子猿的出招逻辑。</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/19-1.png" alt="" /></p>
+
+<p>首先10.1也还是进行了一些特殊情况的检测，不过由于外层就已是是最后一个检测的了，所以重复检测也没意义。</p>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/19-2.png" alt="" /></p>
+
+<p>然后是默认情况的攻击行为。分得非常细，行为也很多，没有明显的特征，可以结合前面的行为含义表具体分析下。并且还有检测3号计时器完成，增加33 &amp; 34侧跳的逻辑。</p>
+
+<blockquote>
+  <p>发现上面截图的时候真不能用行为:行为 = 概率:概率，很容易看错位。</p>
+</blockquote>
+
+<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/19-3.png" alt="" /></p>
+
+<p>最后是一堆后置检测，比如</p>
+
+<ul>
+  <li>计时器4未完成 &amp; 血量太低，关掉原地吼的概率。</li>
+  <li>计时器1未完成，关掉36 &amp; 42的侧跳位移概率。</li>
+  <li>空间比较少，42左右小跳步</li>
+  <li>一些特殊标记Buff……</li>
+</ul>
 
 <h4 id="后置行为">后置行为</h4>
 
 <p>这部分也和架构篇所讨论的没啥区别，给对应的行为检测CD，如果在CD中就把概率改到最小。</p>
 
+<p>应该基本都是攻击行为，似乎位移发呆之类的用单独的计时器去统计了。</p>
+
 <p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/16.png" alt="" /></p>
 
-<h4 id="小结-1">小结</h4>
+<h3 id="剑戟弹刀逻辑等">剑戟（弹刀）逻辑等</h3>
 
-<h3 id="剑戟弹刀逻辑">剑戟（弹刀）逻辑</h3>
+<p>狮子猿是似乎没弹刀逻辑的，狮子猿的部分逻辑如下所示
+<img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/21.png" alt="" /></p>
 
-<p>狮子猿是似乎没弹刀逻辑的，所以这部分参考蝴蝶夫人会比较好。</p>
+<p>这部分参考蝴蝶夫人会比较好，就目前的了解来说，似乎是<code class="language-plaintext highlighter-rouge">Goal.Parry</code>负责格挡，然后<code class="language-plaintext highlighter-rouge">Kengeki_Activate</code>在负责根据敌我关系——主要是格挡的动作，来进行格挡派生的选择，类似上文有举到的案例，有兴趣的同学可以自行研究。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/21.png" alt="" /></p>
+<h3 id="总结">总结</h3>
 
-<p>简单来说，似乎是<code class="language-plaintext highlighter-rouge">Goal.Parry</code>负责格挡，然后<code class="language-plaintext highlighter-rouge">Kengeki_Activate</code>在负责根据敌我关系——主要是格挡的动作，来进行格挡派生的选择，有兴趣的同学可以自行研究。</p>
+<p>对于具体行为的分析的工作量比预想中要大很多，甚至没能做到在脑海中模拟这些行为跑起来的样子。</p>
 
-<h2 id="总结">总结</h2>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[之前拆包看了只狼的狮子猿的一阶段动画，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。]]></summary></entry><entry><title type="html">2023年的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="2023年的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年的arpg们">聊聊2023年的ARPG们</h1>
+<p>虽然细节上做的不够，但是框架上还是盘得很明白的：</p>
+
+<ul>
+  <li>行为上是以【靠近、攻击】为基本模板。</li>
+  <li>决策上优先处理必须相应和特殊状态的行为，最后再默认行为。</li>
+  <li>以CD、计时器等工具再次调控行为。</li>
+</ul>
+
+<h2 id="全文总结">全文总结</h2>
+
+<p>本文断断续续写了有一个月左右，文字内容很长，需要一边思考一边阅读。本文是以逆向工程的角度出发，难免有所纰漏，欢迎指正讨论。</p>
+
+<p>本文三个部分概述了体验层次的反推、架构设计的一些讨论、复杂的动作游戏AI的全貌，希望能对读者有所启发。</p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[之前拆包看了只狼的狮子猿的一阶段动画，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。]]></summary></entry><entry><title type="html">2023年的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="2023年的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年的arpg们">聊聊2023年的ARPG们</h1>
 
 <h2 id="前言">前言</h2>
 
