@@ -20,7 +20,7 @@ categories: [动作游戏分析]
 
 ![](/assets/img/gameplay/sekiro_lion_tamarion_ai/1.png)
 
-> 全程视频可参考：[Bilibili 笨办法](TODO)
+> 全程视频可参考：[Bilibili 笨办法](https://www.bilibili.com/video/BV1kj411Y7bC)
 
 其中的标注和动画状态机对应如下表所示：
 
@@ -487,7 +487,7 @@ end
 
 ![](/assets/img/gameplay/sekiro_lion_tamarion_ai/20.png)
 
-> 这里也录制了1-20号行为的演示视频，末尾还有一段战斗过程的切片，可以参考[Bilibili 狮子猿 AI行为演示](TODO)
+> 这里也录制了1-20号行为的演示视频，末尾还有一段战斗过程的切片，可以参考[Bilibili 狮子猿 AI行为演示](https://www.bilibili.com/video/BV1iw411M74j)
 
 接下来我们挑一些行为具体看看：
 
@@ -767,6 +767,6 @@ end
 
 ## 全文总结
 
-本文断断续续写了有一个月左右，文字内容很长，需要一边思考一边阅读。本文是以逆向工程的角度出发，难免有所纰漏，欢迎指正讨论。
-
 本文三个部分概述了体验层次的反推、架构设计的一些讨论、复杂的动作游戏AI的全貌，希望能对读者有所启发。
+
+本文断断续续写了有一个月左右，文字内容很长，需要一边思考一边阅读。本文是从逆向工程出发，难免有所纰漏，欢迎指正讨论。
