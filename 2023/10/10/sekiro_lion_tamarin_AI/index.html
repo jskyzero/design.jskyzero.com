@@ -101,7 +101,7 @@
 
 <p>和狮子猿录了一段素材，用肉眼将动作与之前的状态机进行匹配，得到了如下的结果：</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/1.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/1.png" alt="" /></p>
 
 <blockquote>
   <p>全程视频可参考：<a href="https://www.bilibili.com/video/BV1kj411Y7bC">Bilibili 笨办法</a></p>
@@ -174,7 +174,7 @@
   <li>攻击与空隙交错，比例是？</li>
 </ul>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/2.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/2.png" alt="" /></p>
 
 <p>大体上，狮子猿会维持如上图所示【攻击，空窗期】这样的单元重复，以此营造出凶猛进攻和灵动移动结合的交手体验。</p>
 
@@ -184,7 +184,7 @@
   <li>招式没有复读，CD是？</li>
 </ul>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/3.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/3.png" alt="" /></p>
 
 <p>将招式分别拆开，我们会发现同个招式没有连续两次出现的情况。观察两个招式之间的最短间隔时长（从上一个末尾到下一个的开始）：</p>
 
@@ -246,7 +246,7 @@
 
 <p>我们可以使用行为树对这个<code class="language-plaintext highlighter-rouge">出招序列</code>进行一个简单的拟合：</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/4.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/4.png" alt="" /></p>
 
 <p>这个决策逻辑逻辑看起来很简单，因为这段战斗也只是一个局部序列，有着一定的局限性，不过还是做一个思考练习，如何让这个逻辑变得更好？</p>
 
@@ -286,7 +286,7 @@
 
 <p>拆包后的lua文件大致如下所示：</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/5.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/5.png" alt="" /></p>
 
 <blockquote>
   <p>原始内容可以参考：<a href="/assets/img/gameplay/sekiro_lion_tamarion_ai/510000_battle.dec.lua">狮子猿 510000_battle.dec.lua</a>，后文部分内容涉及到<a href="/assets/img/gameplay/sekiro_lion_tamarion_ai/509000_battle.dec.lua">蝴蝶夫人 509000_battle.dec.lua</a></p>
@@ -294,7 +294,7 @@
 
 <p>最外层是若干函数，如下图所示这里将其分了四类，具体的逻辑我们将在第三部分展开叙述。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/6.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/6.png" alt="" /></p>
 
 <p>和传统的行为树比，有一个非常具体的区别，只狼（或者说FromSoftware的游戏）的AI是将主决策逻辑和行为逻辑分开的。比如上图所示的<code class="language-plaintext highlighter-rouge">Activate</code>函数里面是主决策逻辑，里面会在一定条件下调用不同的<code class="language-plaintext highlighter-rouge">ActXX</code>系列函数。</p>
 
@@ -308,7 +308,7 @@
 
 <p>而使用脚本语言，则可以利用编程语言自带的函数的语法，来高效实现这一过程。（这里并不是说使用LUA脚本，就比行为树要好，只是各自有不同的特点。）</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/7.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/7.png" alt="" /></p>
 
 <h4 id="分离逻辑">分离逻辑</h4>
 
@@ -316,7 +316,7 @@
 
 <p><strong>将问题划分、以大化小的分治法</strong>也是核心思路之一，将行为逻辑和决策逻辑分开，能让双方聚焦各自的问题：决策逻辑负责复杂的条件检测，调用行为；而行为逻辑则只解决一个具体行为的实现，这里也可能会有一定的条件检测。但是是服务于这个行为的。这样，在面对复杂逻辑时，就可以将复杂逻辑化为若干部分，分别实现，避免干扰。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/8.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/8.png" alt="" /></p>
 
 <blockquote>
   <p>一个类似思路的、在软件工程的语境的例子是<a href="https://developer.mozilla.org/en-US/docs/Glossary/MVC">MVC架构（Model-View-Controller，模型-视图-控制器）</a>。将软件分为：数据描述相关、处理交互视图相关、处理如何控制数据相关，三个部分各司其职，避免互相干涉带来的心智负担。</p>
@@ -328,7 +328,7 @@
 
 <p>在行为树的语境中，会使用运行节点来描述一个耗时的行为，大概会如下图所示去实现：</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/9.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/9.png" alt="" /></p>
 
 <p>想象一下这样的命令在Lua的一个函数中应该怎样描述实现？对于单个命令，下达单个的命令指令就行，但是当涉及到一连串连续执行的命令，就会麻烦一些。</p>
 
@@ -343,7 +343,7 @@
 
 <p>类似下图，这是Act01行为的<strong>两个攻击的添加命令的代码</strong>和<strong>开发者工具观察实际执行的Goal队列</strong></p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/10.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/10.png" alt="" /></p>
 
 <p>可以观察到，添加命令（或者，行动目标，这里维持统一还是使用命令这个词）时候，有非常多的参数，除了常规描述行为是啥的自身关键参数，还有一个时间参数。主要是用于避免操控的对象一致处于某个行为中，给个超时。</p>
 
@@ -355,11 +355,11 @@
 
 <p>找了一个移动和释放攻击的命令的指令，大概对应的一下参数的含义，如下图所示。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/11.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/11.png" alt="" /></p>
 
 <ul>
   <li>对于移动来说，当达到距离时则视为成功，这里是用作判断持续行为的成功结束条件。</li>
-  <li>而对于释放攻击老说，如果不满足释放距离则会释放失败，这里是用作开始执行的前置条件。</li>
+  <li>而对于释放攻击来说，如果不满足释放距离则会释放失败，这里是用作开始执行的前置条件。</li>
 </ul>
 
 <p>留意<strong>开始执行的前置条件</strong>，在添加命令的时候就可以进行一次检测，那为什么不在添加命令的时候就进行检测呢？对比下面这两个例子：</p>
@@ -398,7 +398,7 @@
 
 <p>前面我们提到过，由决策逻辑调用行动逻辑的函数：</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/13.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/13.png" alt="" /></p>
 
 <p>但是这个过程还是挺有意思的，并没有直接去调用函数，而是使用概率做中转，再去调用对应的函数。</p>
 
@@ -441,7 +441,7 @@
 
 <p>如果上面的内容稍微有点复杂，没关系，举个具体的例子：</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/14.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/14.png" alt="" /></p>
 
 <p>在某个情形下，如果我们决定使用Act01和Act02行为，且概率为100:50，那么我们<strong>并不会直接进行随机数的比较后调用函数</strong>，而是会将概率储存下来，同时将行为也储存下来，两者维持下标相同。这样脱钩后，甚至还可以进行一次CD的检测，如果不满足CD，则可以直接将概率打到最小，（为1不为0也处理了所有行为都CD时，至少可以随机出结果。）最后，再根据概率去调用对应的行为。</p>
 
@@ -506,7 +506,7 @@
 
 <p>一个很典型的例子是蝴蝶夫人的弹反动作，左方向8400，右方向8401，分别添加了200211和200210，两个不同的标记异常状态，这样AI就可以通过检测对于的标记buff，来知道是蝴蝶夫人是在左弹还是右弹。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/12.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/12.png" alt="" /></p>
 
 <p>再进一步，可以根据左右弹设计不同的出招逻辑：</p>
 
@@ -662,7 +662,7 @@
 
 <p>一共40个具体行为，有一部分后续的决策中没有使用。这里按照动画之前行为的感受初步划分：黄色为花里胡哨、红色为高危记忆点、绿色演出性质，总览整理如下：</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/20.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/20.png" alt="" /></p>
 
 <blockquote>
   <p>这里也录制了1-20号行为的演示视频，末尾还有一段战斗过程的切片，可以参考<a href="https://www.bilibili.com/video/BV1iw411M74j">Bilibili 狮子猿 AI行为演示</a></p>
@@ -693,7 +693,7 @@
 
 <p>这部分逻辑还是挺简单的，大概的意思是调整位置，放俩攻击。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/3-1.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/3-1.png" alt="" /></p>
 
 <p>虽然简单，但是基本上所有的行为<strong>都是这个的简化或者复杂化</strong>，后面的行为也会以这个为模板展开说明。</p>
 
@@ -705,7 +705,7 @@
 
 <p>之前简要标注的时候写的是<code class="language-plaintext highlighter-rouge">9.6-R(2.2);3000;3001</code>，后面俩是招式名字，为啥前面写的是9.6-R呢？</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/3-2.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/3-2.png" alt="" /></p>
 
 <p>画了一个图方便理解，用于与敌我距离进行比较的值，是<strong>固定值减去了自身半径的值</strong>，也就是说只狼中敌我距离的计算是<strong>计算到阻挡外边缘</strong>的，由于这个值同时用到了后面的靠近逻辑中的目标值，我们可以反向算出狮子猿猴的半径是2.2米，于是有了上面这个标注。</p>
 
@@ -785,7 +785,7 @@
 
 <p>简单来说，在执行一个有很长一段靠近前摇的抓取攻击前，有一些<strong>差异化的自定义远离</strong>逻辑。（也侧面说明了前面的俩行为是<strong>只管玩家和怪物过远</strong>、不管过近的，默认近是可以兼容的）</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/3-3.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/3-3.png" alt="" /></p>
 
 <p>此外，这里还第一次出现了空间障碍相关检测，后面也可以看到，只狼里面<strong>有相当多的、细致的空间检测</strong>，以避免不合适的行为——比如怼墙走等行为。</p>
 
@@ -795,7 +795,7 @@
 
 <p>这里我们给出一个将行为放到状态机上的联动图，可以点开查看大图：</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/3-0.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/3-0.png" alt="" /></p>
 
 <h4 id="简要小结">简要小结</h4>
 
@@ -833,23 +833,23 @@
   <li>获取一些信息储存到变量</li>
 </ul>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/15.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/15.png" alt="" /></p>
 
 <ul>
   <li>添加一些Buff的监听。</li>
 </ul>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/15-1.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/15-1.png" alt="" /></p>
 
 <h4 id="决策部分-外围">决策部分-外围</h4>
 
 <p>然后就开始了具体的决策部分：</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/17-1.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/17-1.png" alt="" /></p>
 
 <p>最外围，这里认为是一些针对特定情况立刻做出反应的逻辑，一共10个。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/17-2.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/17-2.png" alt="" /></p>
 
 <ul>
   <li>立刻反应：死亡</li>
@@ -857,7 +857,7 @@
 
 <p>比如动作20其实是死亡结算动作，可见这个事件应该就是检测死亡（或者检测转阶段）。大部分逻辑都可以通过行为去揣测检测条件的含义，部分不知道是啥的也不乱猜了。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/17-3.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/17-3.png" alt="" /></p>
 
 <ul>
   <li>特殊情况：距离太远</li>
@@ -879,13 +879,13 @@
 
 <p>这里是上文第三个决策的展开，因为选项太多了所以单独陈述。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/18.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/18.png" alt="" /></p>
 
 <p>首先我们可以看到因为处于比较靠前的位置，这里仍然处理了3.1背后、3.2 &amp; 3.3等特殊标记等情况下的行为。</p>
 
 <p>并且这里还有一个<strong>检测敌人崩架势</strong>后的逻辑，远就扔屎、近就敏捷一打。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/18-1.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/18-1.png" alt="" /></p>
 
 <p>最后是一切默认情况下的攻击，也是目前看到决策最复杂的一个。粗看了一下行为，概率最高的行为分别是扔屎和下端危，似乎压力还蛮大的。</p>
 
@@ -895,11 +895,11 @@
 
 <p>这里就是最最最默认情况下狮子猿的出招逻辑。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/19-1.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/19-1.png" alt="" /></p>
 
 <p>首先10.1也还是进行了一些特殊情况的检测，不过由于外层就已是是最后一个检测的了，所以重复检测也没意义。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/19-2.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/19-2.png" alt="" /></p>
 
 <p>然后是默认情况的攻击行为。分得非常细，行为也很多，没有明显的特征，可以结合前面的行为含义表具体分析下。并且还有检测3号计时器完成，增加33 &amp; 34侧跳的逻辑。</p>
 
@@ -907,7 +907,7 @@
   <p>发现上面截图的时候真不能用行为:行为 = 概率:概率，很容易看错位。</p>
 </blockquote>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/19-3.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/19-3.png" alt="" /></p>
 
 <p>最后是一堆后置检测，比如</p>
 
@@ -924,12 +924,12 @@
 
 <p>应该基本都是攻击行为，似乎位移发呆之类的用单独的计时器去统计了。</p>
 
-<p><img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/16.png" alt="" /></p>
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/16.png" alt="" /></p>
 
 <h3 id="剑戟弹刀逻辑等">剑戟（弹刀）逻辑等</h3>
 
 <p>狮子猿是似乎没弹刀逻辑的，狮子猿的部分逻辑如下所示
-<img src="/assets/img/gameplay/sekiro_lion_tamarion_ai/21.png" alt="" /></p>
+<img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/21.png" alt="" /></p>
 
 <p>这部分参考蝴蝶夫人会比较好，就目前的了解来说，似乎是<code class="language-plaintext highlighter-rouge">Goal.Parry</code>负责格挡，然后<code class="language-plaintext highlighter-rouge">Kengeki_Activate</code>在负责根据敌我关系——主要是格挡的动作，来进行格挡派生的选择，类似上文有举到的案例，有兴趣的同学可以自行研究。</p>
 
@@ -954,6 +954,7 @@
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+06 Nov 2023 - jskyzero - 🐛 fix error
 06 Nov 2023 - jskyzero - 🐛 fix error
 06 Nov 2023 - jskyzero - 📝 finish 拆包看狮子猿AI设计
 03 Nov 2023 - jskyzero - 📝 almost finish
