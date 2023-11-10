@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 一些「生活」中的参考
-categories: [杂谈]
+# categories: [杂谈]
 long-term-maintenance: true
 ---
 
