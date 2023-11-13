@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 拆包看狮子猿AI设计
-categories: [动作游戏分析]
+categories: [游戏AI]
 ---
 
 之前拆包看了[只狼的狮子猿的一阶段动画](https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/)，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。
