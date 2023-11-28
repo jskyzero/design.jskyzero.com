@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>绝区零战斗系统拆解 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="绝区零战斗系统拆解" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="绝区零战斗系统拆解" />
+<meta property="og:description" content="绝区零战斗系统拆解" />
+<link rel="canonical" href="https://design.jskyzero.com/2023/11/28/zzz/" />
+<meta property="og:url" content="https://design.jskyzero.com/2023/11/28/zzz/" />
+<meta property="og:site_name" content="设计者笔记" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-11-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="绝区零战斗系统拆解" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-28T00:00:00+00:00","datePublished":"2023-11-28T00:00:00+00:00","description":"绝区零战斗系统拆解","headline":"绝区零战斗系统拆解","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2023/11/28/zzz/"},"url":"https://design.jskyzero.com/2023/11/28/zzz/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main-light.css"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V2SSPG3YGX');
+</script><script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "jt8gmzbake");
+</script><!-- high light -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+</head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul><li><a href="/">/Home</a></li><li><a href="/program/">/Program</a></li><li><a href="/github/">/Github</a></li><li><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main>
+      <div id="index">
+  <ul class="md-toc">
+  <li class="md-toc-h1"><a href="#绝区零战斗系统拆解">绝区零战斗系统拆解</a>
+    <ul>
+      <li class="md-toc-h2"><a href="#关键结论">关键结论</a></li>
+      <li class="md-toc-h2"><a href="#战斗玩法">战斗玩法</a></li>
+      <li class="md-toc-h2"><a href="#角色能力">角色能力</a></li>
+      <li class="md-toc-h2"><a href="#角色数值">角色数值</a></li>
+    </ul>
+  </li>
+</ul>
+  <p id="pro">
+  
+  <!-- <div class="categories"> -->
+    
+    
+    <img src="https://img.shields.io/badge/游戏体验-blue.svg?style=flat" alt="">
+    <!--  -->
+    
+  <!-- </div> -->
+  
+  <img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="">
+  <img src="https://img.shields.io/badge/日期-2023/11/28-brightgreen.svg?style=flat" alt="">
+</p>
+
+</div>
+
+<h1 id="绝区零战斗系统拆解">绝区零战斗系统拆解</h1>
+
+<h2 id="关键结论">关键结论</h2>
+
+<ul>
+  <li>战斗体验偏爽（数字、角色动作速度、特写）</li>
+  <li>基础战斗品质很高</li>
+  <li>剧情演出有分级+节约成本（播片、角色大头对话、动态漫画、场景模型镜头对话、短信）</li>
+  <li>场景和怪物，资产&amp;体验，有重复度</li>
+  <li>养成、玩法系统基本手游&amp;米家老套路</li>
+</ul>
+
+<h2 id="战斗玩法">战斗玩法</h2>
+
+<p><img src="/assets/img/gameplay/zzz/1.png" alt="" /></p>
+
+<h2 id="角色能力">角色能力</h2>
+
+<p><img src="/assets/img/gameplay/zzz/2.png" alt="" /></p>
+
+<h2 id="角色数值">角色数值</h2>
+
+<p><img src="/assets/img/gameplay/zzz/3.png" alt="" /></p>
+
+
+
+<pre class="post-content controls__inner git-log"><output>~: git log
+28 Nov 2023 - jskyzero - add 绝区零战斗系统拆解
+
+<img alt="Creative Commons License" src="/assets/img/CC.png" />
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre>
+
+
+<script src="/assets/js/main.js"></script>
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2023/11/28/zzz/';
+this.page.identifier = 'https://design.jskyzero.com/2023/11/28/zzz/';
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+    </main><footer>
+  <p>Enjoy :)</p>
+  <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com">
+  <img style="border-radius: 4px;"
+  src="https://hits.dwyl.com/jskyzero/designjskyzerocom.svg?style=flat-square">
+  <br>
+  <p>&copy; 2017-2023 设计者笔记. All rights reserved.</p>
+  
+</footer>
+</div>
+  </body>
+</html>
