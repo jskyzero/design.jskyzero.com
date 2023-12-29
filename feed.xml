@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-12-28T14:08:59+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2023-12-29T04:36:20+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">绝区零战斗系统拆解</title><link href="https://design.jskyzero.com/2023/11/28/zzz/" rel="alternate" type="text/html" title="绝区零战斗系统拆解" /><published>2023-11-28T00:00:00+00:00</published><updated>2023-11-28T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/28/zzz</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/28/zzz/"><![CDATA[<h1 id="绝区零战斗系统拆解">绝区零战斗系统拆解</h1>
 
 <h2 id="关键结论">关键结论</h2>
@@ -26,7 +26,7 @@
 
 <h2 id="角色数值">角色数值</h2>
 
-<p><img src="/assets/img/gameplay/zzz/3.png" alt="" /></p>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[绝区零战斗系统拆解]]></summary></entry><entry><title type="html">ACT相关的GDC记录</title><link href="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/" rel="alternate" type="text/html" title="ACT相关的GDC记录" /><published>2023-11-13T00:00:00+00:00</published><updated>2023-11-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/13/ACT_with_GDC</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/"><![CDATA[<h1 id="act相关的gdc记录">ACT相关的GDC记录</h1>
+<p><img src="/assets/img/gameplay/zzz/3.png" alt="" /></p>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[绝区零战斗系统拆解]]></summary></entry><entry><title type="html">GDC：ACT相关分享汇总</title><link href="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/" rel="alternate" type="text/html" title="GDC：ACT相关分享汇总" /><published>2023-11-13T00:00:00+00:00</published><updated>2023-11-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/13/ACT_with_GDC</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/"><![CDATA[<h1 id="act相关的gdc记录">ACT相关的GDC记录</h1>
 
 <h2 id="街霸5-2017">街霸5-2017</h2>
 <p><img src="/assets/img/skill/GDC/1.png" alt="" /></p>
@@ -121,7 +121,7 @@
 
 <h2 id="总结">总结</h2>
 
-<p>虽然找工作的难度是一个<strong>取决于市场供需环境</strong>的事情，但是时不时看一下当前行业对从业人员的要求，对于学习方向的指导和自我提升方向，也是相当有启发的。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[最近汇总了米哈游和腾讯一些社会招聘岗位关于战斗策划怪物方向的岗位描述和能力要求，做了一些资料汇总和总结的工作。用于后续能力补足的参考。]]></summary></entry><entry><title type="html">拆包看狮子猿AI设计</title><link href="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/" rel="alternate" type="text/html" title="拆包看狮子猿AI设计" /><published>2023-10-10T00:00:00+00:00</published><updated>2023-10-10T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/"><![CDATA[<p>之前拆包看了<a href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/">只狼的狮子猿的一阶段动画</a>，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。</p>
+<p>虽然找工作的难度是一个<strong>取决于市场供需环境</strong>的事情，但是时不时看一下当前行业对从业人员的要求，对于学习方向的指导和自我提升方向，也是相当有启发的。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[最近汇总了米哈游和腾讯一些社会招聘岗位关于战斗策划怪物方向的岗位描述和能力要求，做了一些资料汇总和总结的工作。用于后续能力补足的参考。]]></summary></entry><entry><title type="html">AI反拆：只狼狮子猿</title><link href="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/" rel="alternate" type="text/html" title="AI反拆：只狼狮子猿" /><published>2023-10-10T00:00:00+00:00</published><updated>2023-10-10T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/"><![CDATA[<p>之前拆包看了<a href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/">只狼的狮子猿的一阶段动画</a>，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。</p>
 
 <p>本文的目标是以狮子猿一阶段<strong>成熟完备的AI</strong>为例子，让读者能对动作游戏中AI的设计有一个初步的理解，并分析一些对实际工作中设计有启发的逻辑细节。本文会分为三个部分：初步的体验反推、拆包后对主AI分析的架构设计、以及细节和感受分析和讨论。</p>
 
@@ -1424,7 +1424,7 @@
 
 <h2 id="其他参考数据">其他参考数据</h2>
 
-<p>这里会补充一些看到有意义数据的文章的链接。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。]]></summary></entry><entry><title type="html">GameAIPro相关笔记</title><link href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" rel="alternate" type="text/html" title="GameAIPro相关笔记" /><published>2023-03-27T00:00:00+00:00</published><updated>2023-03-27T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/03/27/GameAIProIndex</id><content type="html" xml:base="https://design.jskyzero.com/2023/03/27/GameAIProIndex/"><![CDATA[<p>本文将汇总记录GameAIPro的相关文章的记录，更新较慢。</p>
+<p>这里会补充一些看到有意义数据的文章的链接。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。]]></summary></entry><entry><title type="html">GameAIPro：总览</title><link href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" rel="alternate" type="text/html" title="GameAIPro：总览" /><published>2023-03-27T00:00:00+00:00</published><updated>2023-03-27T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/03/27/GameAIProIndex</id><content type="html" xml:base="https://design.jskyzero.com/2023/03/27/GameAIProIndex/"><![CDATA[<p>本文将汇总记录GameAIPro的相关文章的记录，更新较慢。</p>
 
 <p>此外，强烈推荐访问<a href="https://gameaipro.jsky.wiki/">GameAIPro中文索引</a>，来快速找到GameAIPro中自己感兴趣的文章。</p>
 
@@ -1475,7 +1475,7 @@
 <img src="/assets/img/skill/GameAIPro/45.JPG" alt="" />
 <img src="/assets/img/skill/GameAIPro/46.JPG" alt="" />
 <img src="/assets/img/skill/GameAIPro/47.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/48.JPG" alt="" /></p>]]></content><author><name></name></author><category term="游戏AI" /><summary type="html"><![CDATA[本文将汇总记录GameAIPro的相关文章的记录，更新较慢。]]></summary></entry><entry><title type="html">拆包看狮子猿动作设计</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="拆包看狮子猿动作设计" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
+<img src="/assets/img/skill/GameAIPro/48.JPG" alt="" /></p>]]></content><author><name></name></author><category term="游戏AI" /><summary type="html"><![CDATA[本文将汇总记录GameAIPro的相关文章的记录，更新较慢。]]></summary></entry><entry><title type="html">怪物设计：只狼狮子猿</title><link href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/" rel="alternate" type="text/html" title="怪物设计：只狼狮子猿" /><published>2023-02-17T00:00:00+00:00</published><updated>2023-02-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin</id><content type="html" xml:base="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/"><![CDATA[<p>近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。</p>
 
 <p>本文会将全部动画资产按照功能分类一一进行内容叙述、感受分析，力求读完本文对动作游戏怪物动作设计有一个全面且成体系的认识，日后能设计出只狼级别、甚至超越只狼级别的Boss。</p>
 
