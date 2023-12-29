@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 动作设计参考·PVE总集篇
+title: 怪物设计：BOSS索引大全
 categories: [动作游戏分析]
 ---
 

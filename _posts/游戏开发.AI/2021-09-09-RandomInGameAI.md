@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 用于AI的高级随机技术
+title: GameAIPro：高级随机算法
 featured-img: dmc5
 mathjax: true
 categories: [游戏AI]

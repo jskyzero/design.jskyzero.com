@@ -21,6 +21,11 @@ index_categories:
   - 阅读笔记
   - 游戏设计
 
+index_categories_sort_by_title:
+  - 动作游戏分析
+  - 游戏AI
+  - 游戏开发
+
 style: light # dark (default) or light
 listen_for_clients_preferred_style: false # true or false (default)
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 拆包看狮子猿AI设计
+title: AI反拆：只狼狮子猿
 categories: [游戏AI]
 ---
 

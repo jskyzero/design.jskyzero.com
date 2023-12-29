@@ -13,7 +13,7 @@ layout: default
   <ul>
     <p>{{ category }}</p>
 
-    {% if category == "游戏开发" %}
+    {% if site.index_categories_sort_by_title contains category %}
     {% assign posts = posts | sort: "title" | reverse %}
     {% endif %}
 

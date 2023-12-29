@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ACT相关的GDC记录
+title: GDC：ACT相关分享汇总
 categories: [动作游戏分析]
 ---
 
