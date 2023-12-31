@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 动作游戏设计基础
+title: ACT基础：什么是动作游戏
 # categories: [游戏开发]
 long-term-maintenance: true
 ---
