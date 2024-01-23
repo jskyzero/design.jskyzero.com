@@ -118,8 +118,8 @@ disqus:
 # service_worker: true
 
 # # BUILD SETTINGS
-# markdown: kramdown
-# highlighter: rouge # or pygments or null
+markdown: kramdown
+highlighter: rouge # or pygments or null
 # # theme: jekyll-sleek # Uncomment if you're using the theme as a ruby gem
 exclude:
   - _posts/日常
