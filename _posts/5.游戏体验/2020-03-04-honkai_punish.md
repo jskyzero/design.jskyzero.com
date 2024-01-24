@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "设计漫谈：崩三&战双"
+title: ACT-手游-崩三&战双
 featured-img: honkai_punishi
 mathjax: true
 categories:  [游戏体验]

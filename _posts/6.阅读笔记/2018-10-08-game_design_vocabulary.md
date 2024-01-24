@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 设计工具书：《游戏设计词汇表》
+title: 游戏设计：《游戏设计词汇表》
 featured-img: vocabulary
 mathjax: true
 categories: [阅读笔记]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 学术视角：《游戏专业概论》
+title: 游戏设计：《游戏专业概论》
 featured-img: introduction_to_game
 mathjax: true
 categories: [阅读笔记]
@@ -20,7 +20,7 @@ categories: [阅读笔记]
 
 接下来本文将按照《游戏专业概论》的框架，试着去梳理一些较为基础同时较为重要的部分。 -->
 
-## 增补：
+## 增补
 
 + [电子游戏历史时间轴](https://docs.google.com/spreadsheets/d/1Qn2FbIvwM0Zo8SEOjTSupAfoRp8XLzDtNAyhMo7EnPY/edit?usp=sharing)
 

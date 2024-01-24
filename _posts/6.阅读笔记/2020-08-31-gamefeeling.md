@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 拆解游戏：《游戏感》
+title: 游戏设计：《游戏感》
 featured-img: gamefeeling
 mathjax: true
 categories: [阅读笔记]

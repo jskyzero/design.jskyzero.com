@@ -25,6 +25,10 @@ index_categories_sort_by_title:
   - 动作游戏分析
   - 游戏AI
   - 游戏开发
+  - 游戏体验
+  - 阅读笔记
+
+
 
 style: light # dark (default) or light
 listen_for_clients_preferred_style: false # true or false (default)

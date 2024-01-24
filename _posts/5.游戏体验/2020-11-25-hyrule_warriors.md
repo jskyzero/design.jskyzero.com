@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "设计漫谈：塞尔达无双"
+title: ACT-无双-塞尔达无双
 featured-img: hyrule_warriors
 mathjax: true
 categories:  [游戏体验]
