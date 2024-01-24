@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-01-23T05:56:07+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-01-24T05:34:41+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
 
 <h1 id="游戏策划的excel手册">游戏策划的Excel手册</h1>
@@ -9,7 +9,7 @@
 
 <h3 id="下拉框">下拉框</h3>
 
-<h2 id="总结">总结</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。]]></summary></entry><entry><title type="html">绝区零战斗系统拆解</title><link href="https://design.jskyzero.com/2023/11/28/zzz/" rel="alternate" type="text/html" title="绝区零战斗系统拆解" /><published>2023-11-28T00:00:00+00:00</published><updated>2023-11-28T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/28/zzz</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/28/zzz/"><![CDATA[<h1 id="绝区零战斗系统拆解">绝区零战斗系统拆解</h1>
+<h2 id="总结">总结</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。]]></summary></entry><entry><title type="html">ACT-手游-绝区零</title><link href="https://design.jskyzero.com/2023/11/28/zzz/" rel="alternate" type="text/html" title="ACT-手游-绝区零" /><published>2023-11-28T00:00:00+00:00</published><updated>2023-11-28T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/28/zzz</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/28/zzz/"><![CDATA[<h1 id="绝区零战斗系统拆解">绝区零战斗系统拆解</h1>
 
 <h2 id="关键结论">关键结论</h2>
 
@@ -1016,7 +1016,7 @@
 
 <p>本文三个部分概述了体验层次的反推、架构设计的一些讨论、复杂的动作游戏AI的全貌，希望能对读者有所启发。</p>
 
-<p>本文断断续续写了有一个月左右，文字内容很长，需要一边思考一边阅读。本文是从逆向工程出发，难免有所纰漏，欢迎指正讨论。</p>]]></content><author><name></name></author><category term="游戏AI" /><summary type="html"><![CDATA[之前拆包看了只狼的狮子猿的一阶段动画，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。]]></summary></entry><entry><title type="html">2023年的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="2023年的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年的arpg们">聊聊2023年的ARPG们</h1>
+<p>本文断断续续写了有一个月左右，文字内容很长，需要一边思考一边阅读。本文是从逆向工程出发，难免有所纰漏，欢迎指正讨论。</p>]]></content><author><name></name></author><category term="游戏AI" /><summary type="html"><![CDATA[之前拆包看了只狼的狮子猿的一阶段动画，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。]]></summary></entry><entry><title type="html">0-汇总-23年的ARPG们</title><link href="https://design.jskyzero.com/2023/07/17/2023_half_arpg/" rel="alternate" type="text/html" title="0-汇总-23年的ARPG们" /><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/07/17/2023_half_arpg</id><content type="html" xml:base="https://design.jskyzero.com/2023/07/17/2023_half_arpg/"><![CDATA[<h1 id="聊聊2023年的arpg们">聊聊2023年的ARPG们</h1>
 
 <h2 id="前言">前言</h2>
 
