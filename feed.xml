@@ -1,5 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-01-24T05:34:41+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-01-26T07:04:47+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">机制出发-DOTA2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="机制出发-DOTA2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>聊一下从「机制」开始的游戏设计，并对DOTA2的机制进行一些介绍。</p>
+
+<h1 id="规则出发dota2中的25种状态机制">规则出发——DOTA2中的25种状态机制</h1>
+
+<h2 id="机制--mechanics">机制 / Mechanics</h2>
+
+<h3 id="状态限制类">状态限制类</h3>
+
+<h3 id="眩晕枷锁">眩晕（枷锁）</h3>
+
+<h3 id="缠绕">缠绕</h3>
+
+<h3 id="束缚">束缚</h3>
+
+<h3 id="变羊">变羊</h3>
+
+<h3 id="吹风">吹风</h3>
+
+<h3 id="隐藏驱逐">隐藏/驱逐</h3>
+
+<h2 id="行为限制类">行为限制类</h2>
+
+<h3 id="失明">失明</h3>
+
+<h3 id="沉默">沉默</h3>
+
+<h3 id="锁闭">锁闭</h3>
+
+<h3 id="破坏">破坏</h3>
+
+<h3 id="缴械">缴械</h3>
+
+<h2 id="移动类">移动类</h2>
+
+<h3 id="减速">减速</h3>
+
+<h3 id="陷阱">陷阱</h3>
+
+<h3 id="屏障">屏障</h3>
+
+<h3 id="嘲讽">嘲讽</h3>
+
+<h3 id="恐惧">恐惧</h3>
+
+<h3 id="催眠">催眠</h3>
+
+<h3 id="强制移动">强制移动</h3>
+
+<h3 id="传送闪烁">传送/闪烁</h3>
+
+<h2 id="自身增强类">自身增强类</h2>
+
+<h3 id="隐形">隐形</h3>
+
+<h3 id="相位">相位</h3>
+
+<h3 id="无敌">无敌</h3>
+
+<h3 id="技能免疫">技能免疫</h3>
+
+<h3 id="攻击免疫">攻击免疫</h3>
+
+<h3 id="虚灵">虚灵</h3>
+
+<h2 id="总结">总结</h2>]]></content><author><name></name></author><category term="专题报告" /><summary type="html"><![CDATA[聊一下从「机制」开始的游戏设计，并对DOTA2的机制进行一些介绍。]]></summary></entry><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
 
 <h1 id="游戏策划的excel手册">游戏策划的Excel手册</h1>
 
@@ -38,33 +102,91 @@
 
 <p><img src="/assets/img/gameplay/zzz/3.png" alt="" /></p>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[绝区零战斗系统拆解]]></summary></entry><entry><title type="html">GDC：ACT相关分享汇总</title><link href="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/" rel="alternate" type="text/html" title="GDC：ACT相关分享汇总" /><published>2023-11-13T00:00:00+00:00</published><updated>2023-11-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/13/ACT_with_GDC</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/"><![CDATA[<h1 id="act相关的gdc记录">ACT相关的GDC记录</h1>
 
+<!--s-->
+
 <h2 id="日厂">日厂</h2>
 
+<!--v-->
 <h3 id="街霸5-2017">街霸5-2017</h3>
 
 <p>在满足能够瞬间传达信息的前提下，再考虑游戏画面的独特美术表现，这就是格斗游戏的艺术。</p>
 
 <p><img src="/assets/img/skill/GDC/1.png" alt="" /></p>
 
+<!--v-->
 <h3 id="鬼泣5-2019">鬼泣5-2019</h3>
 
 <p>动作游戏的核心乐趣：克服困难调整的成就感，这是30多年未改变的真理。</p>
 
 <p><img src="/assets/img/skill/GDC/2.png" alt="" /></p>
 
+<!--v-->
 <h3 id="白金-2016">白金-2016</h3>
 
 <p>动作游戏的本质是“被动游戏”：要求玩家根据不同的“状况”做出对应的响应。</p>
 
 <p><img src="/assets/img/skill/GDC/3.png" alt="" /></p>
 
+<!--v-->
+<h3 id="白金尼尔-2018">白金&amp;尼尔-2018</h3>
+
+<p>3D ACT常识 &amp; 虚假的自由</p>
+
+<blockquote>
+  <p>TODO</p>
+</blockquote>
+
+<!--v-->
+<h3 id="怪物猎人-原型制作分享">怪物猎人-原型制作分享</h3>
+
+<blockquote>
+  <p>TODO</p>
+</blockquote>
+
+<!--v-->
+<h3 id="塞尔达相关">塞尔达相关</h3>
+
+<blockquote>
+  <p>TODO</p>
+</blockquote>
+
+<!--s-->
+<h2 id="非日厂">非日厂</h2>
+
+<!--v-->
+<h3 id="新战神相关">新战神相关</h3>
+
+<blockquote>
+  <p>TODO</p>
+</blockquote>
+
+<!--s-->
 <h2 id="非gdc">非GDC</h2>
 
+<!--v-->
+<h3 id="动画的12个原则">动画的12个原则</h3>
+
+<p>一些帮助鉴赏&amp;改进动画的方法论</p>
+
+<blockquote>
+  <p>TODO</p>
+</blockquote>
+
+<!--v-->
 <h3 id="河森正治-原创性">河森正治-原创性</h3>
 
 <p>跟不同次元的事物融合！</p>
 
-<p><img src="/assets/img/skill/GDC/4.png" alt="" /></p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[ACT相关的GDC记录]]></summary></entry><entry><title type="html">游戏设计：战斗策划能力要求</title><link href="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/" rel="alternate" type="text/html" title="游戏设计：战斗策划能力要求" /><published>2023-10-23T00:00:00+00:00</published><updated>2023-10-23T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/23/BattleDesignAbility</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/"><![CDATA[<p>最近汇总了米哈游和腾讯一些社会招聘岗位关于<strong>战斗策划怪物方向</strong>的岗位描述和能力要求，做了一些资料汇总和总结的工作。用于后续能力补足的参考。</p>
+<p><img src="/assets/img/skill/GDC/4.png" alt="" /></p>
+
+<!--v-->
+<h3 id="怪猎世界-日本工业分享">怪猎世界-日本工业分享</h3>
+
+<p>立项开发历程</p>
+
+<blockquote>
+  <p>TODO</p>
+</blockquote>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[ACT相关的GDC记录]]></summary></entry><entry><title type="html">游戏设计：战斗策划能力要求</title><link href="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/" rel="alternate" type="text/html" title="游戏设计：战斗策划能力要求" /><published>2023-10-23T00:00:00+00:00</published><updated>2023-10-23T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/10/23/BattleDesignAbility</id><content type="html" xml:base="https://design.jskyzero.com/2023/10/23/BattleDesignAbility/"><![CDATA[<p>最近汇总了米哈游和腾讯一些社会招聘岗位关于<strong>战斗策划怪物方向</strong>的岗位描述和能力要求，做了一些资料汇总和总结的工作。用于后续能力补足的参考。</p>
 
 <h1 id="战斗策划怪物方向能力要求">战斗策划(怪物方向)能力要求</h1>
 
@@ -1455,55 +1577,4 @@
 
 <h2 id="其他参考数据">其他参考数据</h2>
 
-<p>这里会补充一些看到有意义数据的文章的链接。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。]]></summary></entry><entry><title type="html">GameAIPro：0.总览</title><link href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" rel="alternate" type="text/html" title="GameAIPro：0.总览" /><published>2023-03-27T00:00:00+00:00</published><updated>2023-03-27T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/03/27/GameAIProIndex</id><content type="html" xml:base="https://design.jskyzero.com/2023/03/27/GameAIProIndex/"><![CDATA[<p>本文将汇总记录GameAIPro的相关文章的记录，更新较慢。</p>
-
-<p>此外，强烈推荐访问<a href="https://gameaipro.jsky.wiki/">GameAIPro中文索引</a>，来快速找到GameAIPro中自己感兴趣的文章。</p>
-
-<p><img src="/assets/img/skill/GameAIPro/1.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/2.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/3.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/4.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/5.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/6.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/7.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/8.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/9.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/10.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/11.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/12.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/13.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/14.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/15.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/16.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/17.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/18.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/19.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/20.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/21.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/22.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/23.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/24.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/25.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/26.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/27.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/28.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/29.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/30.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/31.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/32.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/33.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/34.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/35.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/36.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/37.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/38.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/39.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/40.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/41.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/42.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/43.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/44.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/45.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/46.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/47.JPG" alt="" />
-<img src="/assets/img/skill/GameAIPro/48.JPG" alt="" /></p>]]></content><author><name></name></author><category term="游戏AI" /><summary type="html"><![CDATA[本文将汇总记录GameAIPro的相关文章的记录，更新较慢。]]></summary></entry></feed>
+<p>这里会补充一些看到有意义数据的文章的链接。</p>]]></content><author><name></name></author><category term="游戏开发" /><summary type="html"><![CDATA[本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。]]></summary></entry></feed>

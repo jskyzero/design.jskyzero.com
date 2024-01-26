@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>机制出发-DOTA2 | 设计者笔记</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="机制出发-DOTA2" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="聊一下从「机制」开始的游戏设计，并对DOTA2的机制进行一些介绍。" />
+<meta property="og:description" content="聊一下从「机制」开始的游戏设计，并对DOTA2的机制进行一些介绍。" />
+<link rel="canonical" href="https://design.jskyzero.com/2024/01/26/dota2/" />
+<meta property="og:url" content="https://design.jskyzero.com/2024/01/26/dota2/" />
+<meta property="og:site_name" content="设计者笔记" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-01-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="机制出发-DOTA2" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-26T00:00:00+00:00","datePublished":"2024-01-26T00:00:00+00:00","description":"聊一下从「机制」开始的游戏设计，并对DOTA2的机制进行一些介绍。","headline":"机制出发-DOTA2","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2024/01/26/dota2/"},"url":"https://design.jskyzero.com/2024/01/26/dota2/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main-light.css"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V2SSPG3YGX');
+</script><script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "jt8gmzbake");
+</script><!-- high light -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+</head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul><li><a href="/">/Home</a></li><li><a href="/program/">/Program</a></li><li><a href="/github/">/Github</a></li><li><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main>
+      <div id="index">
+  <ul class="md-toc">
+  <li class="md-toc-h1"><a href="#规则出发dota2中的25种状态机制">规则出发——DOTA2中的25种状态机制</a>
+    <ul>
+      <li class="md-toc-h2"><a href="#机制--mechanics">机制 / Mechanics</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#状态限制类">状态限制类</a></li>
+          <li class="md-toc-h3"><a href="#眩晕枷锁">眩晕（枷锁）</a></li>
+          <li class="md-toc-h3"><a href="#缠绕">缠绕</a></li>
+          <li class="md-toc-h3"><a href="#束缚">束缚</a></li>
+          <li class="md-toc-h3"><a href="#变羊">变羊</a></li>
+          <li class="md-toc-h3"><a href="#吹风">吹风</a></li>
+          <li class="md-toc-h3"><a href="#隐藏驱逐">隐藏/驱逐</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#行为限制类">行为限制类</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#失明">失明</a></li>
+          <li class="md-toc-h3"><a href="#沉默">沉默</a></li>
+          <li class="md-toc-h3"><a href="#锁闭">锁闭</a></li>
+          <li class="md-toc-h3"><a href="#破坏">破坏</a></li>
+          <li class="md-toc-h3"><a href="#缴械">缴械</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#移动类">移动类</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#减速">减速</a></li>
+          <li class="md-toc-h3"><a href="#陷阱">陷阱</a></li>
+          <li class="md-toc-h3"><a href="#屏障">屏障</a></li>
+          <li class="md-toc-h3"><a href="#嘲讽">嘲讽</a></li>
+          <li class="md-toc-h3"><a href="#恐惧">恐惧</a></li>
+          <li class="md-toc-h3"><a href="#催眠">催眠</a></li>
+          <li class="md-toc-h3"><a href="#强制移动">强制移动</a></li>
+          <li class="md-toc-h3"><a href="#传送闪烁">传送/闪烁</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#自身增强类">自身增强类</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#隐形">隐形</a></li>
+          <li class="md-toc-h3"><a href="#相位">相位</a></li>
+          <li class="md-toc-h3"><a href="#无敌">无敌</a></li>
+          <li class="md-toc-h3"><a href="#技能免疫">技能免疫</a></li>
+          <li class="md-toc-h3"><a href="#攻击免疫">攻击免疫</a></li>
+          <li class="md-toc-h3"><a href="#虚灵">虚灵</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#总结">总结</a></li>
+    </ul>
+  </li>
+</ul>
+  <p id="pro">
+  
+  <!-- <div class="categories"> -->
+    
+    
+    <img src="https://img.shields.io/badge/专题报告-blue.svg?style=flat" alt="">
+    <!--  -->
+    
+  <!-- </div> -->
+  
+  <img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="">
+  <img src="https://img.shields.io/badge/日期-2024/01/26-brightgreen.svg?style=flat" alt="">
+</p>
+
+</div>
+
+<p>聊一下从「机制」开始的游戏设计，并对DOTA2的机制进行一些介绍。</p>
+
+<h1 id="规则出发dota2中的25种状态机制">规则出发——DOTA2中的25种状态机制</h1>
+
+<h2 id="机制--mechanics">机制 / Mechanics</h2>
+
+<h3 id="状态限制类">状态限制类</h3>
+
+<h3 id="眩晕枷锁">眩晕（枷锁）</h3>
+
+<h3 id="缠绕">缠绕</h3>
+
+<h3 id="束缚">束缚</h3>
+
+<h3 id="变羊">变羊</h3>
+
+<h3 id="吹风">吹风</h3>
+
+<h3 id="隐藏驱逐">隐藏/驱逐</h3>
+
+<h2 id="行为限制类">行为限制类</h2>
+
+<h3 id="失明">失明</h3>
+
+<h3 id="沉默">沉默</h3>
+
+<h3 id="锁闭">锁闭</h3>
+
+<h3 id="破坏">破坏</h3>
+
+<h3 id="缴械">缴械</h3>
+
+<h2 id="移动类">移动类</h2>
+
+<h3 id="减速">减速</h3>
+
+<h3 id="陷阱">陷阱</h3>
+
+<h3 id="屏障">屏障</h3>
+
+<h3 id="嘲讽">嘲讽</h3>
+
+<h3 id="恐惧">恐惧</h3>
+
+<h3 id="催眠">催眠</h3>
+
+<h3 id="强制移动">强制移动</h3>
+
+<h3 id="传送闪烁">传送/闪烁</h3>
+
+<h2 id="自身增强类">自身增强类</h2>
+
+<h3 id="隐形">隐形</h3>
+
+<h3 id="相位">相位</h3>
+
+<h3 id="无敌">无敌</h3>
+
+<h3 id="技能免疫">技能免疫</h3>
+
+<h3 id="攻击免疫">攻击免疫</h3>
+
+<h3 id="虚灵">虚灵</h3>
+
+<h2 id="总结">总结</h2>
+
+
+
+<pre class="post-content controls__inner git-log"><output>~: git log
+26 Jan 2024 - jskyzero - 📝 add 机制出发-DOTA2
+
+<img alt="Creative Commons License" src="/assets/img/CC.png" />
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre>
+
+
+<script src="/assets/js/main.js"></script>
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2024/01/26/dota2/';
+this.page.identifier = 'https://design.jskyzero.com/2024/01/26/dota2/';
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+    </main><footer>
+  <p>Enjoy :)</p>
+  <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com">
+  <img style="border-radius: 4px;"
+  src="https://hits.dwyl.com/jskyzero/designjskyzerocom.svg?style=flat-square">
+  <br>
+  <p>&copy; 2017-2024 设计者笔记. All rights reserved.</p>
+  
+</footer>
+</div>
+  </body>
+</html>
