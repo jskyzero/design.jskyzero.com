@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-02-01T18:46:49+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-02-02T06:53:22+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">机制出发-DOTA2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="机制出发-DOTA2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>聊一下从「机制」开始的游戏设计，并对DOTA2的机制进行一些介绍。</p>
 
 <h1 id="规则出发dota2中的25种状态机制">规则出发——DOTA2中的25种状态机制</h1>
@@ -168,71 +168,51 @@
 
 <!--s-->
 
-<h2 id="koei-tecmo">KOEI TECMO</h2>
+<!-- ## KOEI TECMO -->
 
 <!--v-->
 
-<h3 id="2017-仁王">2017-仁王</h3>
+<!-- ### 2017-仁王
 
-<p>从测试中调整游戏。</p>
+从测试中调整游戏。
 
-<ul>
-  <li>
-    <p>🚧待施工</p>
-  </li>
-  <li>
-    <p>相关参考：<a href="https://www.youtube.com/watch?v=bqCSzO15VME">Youtube</a></p>
-  </li>
-</ul>
++ 🚧待施工
+
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME) -->
 
 <!--s-->
 
-<h2 id="nintendo">Nintendo</h2>
+<!-- ## Nintendo -->
 
 <!--v-->
 
-<h3 id="1999-宫本茂">1999-宫本茂</h3>
+<!-- ### 1999-宫本茂
 
-<p>游戏是一个更大、更广阔的世界的一部分。</p>
+游戏是一个更大、更广阔的世界的一部分。
 
-<ul>
-  <li>
-    <p>🚧待施工</p>
-  </li>
-  <li>
-    <p>相关参考：<a href="https://www.youtube.com/watch?v=a9DlhDRZ0yA">Youtube</a></p>
-  </li>
-</ul>
++ 🚧待施工
+
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=a9DlhDRZ0yA) -->
 
 <!--v-->
 
-<h3 id="2005-岩田聪">2005-岩田聪</h3>
+<!-- ### 2005-岩田聪
 
-<p>玩家之心</p>
+玩家之心
 
-<ul>
-  <li>
-    <p>🚧待施工</p>
-  </li>
-  <li>
-    <p>相关参考：<a href="https://www.youtube.com/watch?v=RMrj8gdUfCU">Youtube</a>，<a href="https://www.bilibili.com/video/BV1FA41147j7">中译</a></p>
-  </li>
-</ul>
++ 🚧待施工
+
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=RMrj8gdUfCU)，[中译](https://www.bilibili.com/video/BV1FA41147j7) -->
 
 <!--v-->
 
-<h3 id="2017-zeldabotw">2017-Zelda:BotW</h3>
+<!-- ### 2017-Zelda:BotW
 
-<p>勇气三角，革新玩法；智慧三角，想法落地；力量三角，美学统一。</p>
+勇气三角，革新玩法；智慧三角，想法落地；力量三角，美学统一。
 
-<ul>
-  <li>
-    <p>🚧待施工</p>
-  </li>
-  <li>
-    <p>相关参考：<a href="https://www.youtube.com/watch?v=QyMsF31NdNc">Youtube</a>，<a href="https://cowlevel.net/article/2091350">中译</a>，<a href="http://www.gamelook.com.cn/2022/12/504104">中译2</a></p>
-  </li>
-</ul>
++ 🚧待施工
+
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=QyMsF31NdNc)，[中译](https://cowlevel.net/article/2091350)，[中译2](http://www.gamelook.com.cn/2022/12/504104) -->
 
 <!--s-->
 <h2 id="santa-monica-studio">Santa Monica Studio</h2>
@@ -269,7 +249,7 @@
 
 <!--v-->
 
-<h3 id="2019-战神-重新定义">2019-战神-重新定义</h3>
+<h3 id="2019-战神-重启">2019-战神-重启</h3>
 
 <p>创造新战神之路似乎是无休止地攀登一座大山，在无数失败后迎来成功。</p>
 
@@ -303,33 +283,23 @@
 
 <!--v-->
 
-<h3 id="2014-骷髅女孩">2014-骷髅女孩</h3>
+<!-- ### 2014-骷髅女孩
 
-<p>如何在2D游戏中获得最清晰、最流畅的动画并使其与游戏玩法配合。</p>
+如何在2D游戏中获得最清晰、最流畅的动画并使其与游戏玩法配合。
 
-<ul>
-  <li>
-    <p>🚧待施工</p>
-  </li>
-  <li>
-    <p>相关参考：<a href="https://www.youtube.com/watch?v=bqCSzO15VME">Youtube</a></p>
-  </li>
-</ul>
++ 🚧待施工
+
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME) -->
 
 <!--v-->
 
-<h3 id="2015-骷髅女孩">2015-骷髅女孩</h3>
+<!-- ### 2015-骷髅女孩
 
-<p>2D传统动画演示，Skullgirls的动画制作方式。</p>
+2D传统动画演示，Skullgirls的动画制作方式。
 
-<ul>
-  <li>
-    <p>🚧待施工</p>
-  </li>
-  <li>
-    <p>相关参考：<a href="https://www.youtube.com/watch?v=z-5djm1pRpU">Youtube</a></p>
-  </li>
-</ul>
++ 🚧待施工
+
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=z-5djm1pRpU) -->
 
 <!--v-->
 
