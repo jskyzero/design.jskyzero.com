@@ -73,55 +73,55 @@ theme: black
 
 <!--s-->
 
-## KOEI TECMO
+<!-- ## KOEI TECMO -->
 
 
 <!--v-->
 
-### 2017-仁王
+<!-- ### 2017-仁王
 
 从测试中调整游戏。
 
 + 🚧待施工
 
-+ 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME)
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME) -->
 
 
 <!--s-->
 
-## Nintendo
+<!-- ## Nintendo -->
 
 
 <!--v-->
 
-### 1999-宫本茂
+<!-- ### 1999-宫本茂
 
 游戏是一个更大、更广阔的世界的一部分。
 
 + 🚧待施工
 
-+ 相关参考：[Youtube](https://www.youtube.com/watch?v=a9DlhDRZ0yA)
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=a9DlhDRZ0yA) -->
 
 <!--v-->
 
-### 2005-岩田聪
+<!-- ### 2005-岩田聪
 
 玩家之心
 
 + 🚧待施工
 
-+ 相关参考：[Youtube](https://www.youtube.com/watch?v=RMrj8gdUfCU)，[中译](https://www.bilibili.com/video/BV1FA41147j7)
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=RMrj8gdUfCU)，[中译](https://www.bilibili.com/video/BV1FA41147j7) -->
 
 
 <!--v-->
 
-### 2017-Zelda:BotW
+<!-- ### 2017-Zelda:BotW
 
 勇气三角，革新玩法；智慧三角，想法落地；力量三角，美学统一。
 
 + 🚧待施工
 
-+ 相关参考：[Youtube](https://www.youtube.com/watch?v=QyMsF31NdNc)，[中译](https://cowlevel.net/article/2091350)，[中译2](http://www.gamelook.com.cn/2022/12/504104)
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=QyMsF31NdNc)，[中译](https://cowlevel.net/article/2091350)，[中译2](http://www.gamelook.com.cn/2022/12/504104) -->
 
 
 <!--s-->
@@ -151,7 +151,7 @@ theme: black
 
 <!--v-->
 
-### 2019-战神-重新定义
+### 2019-战神-重启
 
 创造新战神之路似乎是无休止地攀登一座大山，在无数失败后迎来成功。
 
@@ -178,23 +178,23 @@ theme: black
 
 <!--v-->
 
-### 2014-骷髅女孩
+<!-- ### 2014-骷髅女孩
 
 如何在2D游戏中获得最清晰、最流畅的动画并使其与游戏玩法配合。
 
 + 🚧待施工
 
-+ 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME)
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME) -->
 
 <!--v-->
 
-### 2015-骷髅女孩
+<!-- ### 2015-骷髅女孩
 
 2D传统动画演示，Skullgirls的动画制作方式。
 
 + 🚧待施工
 
-+ 相关参考：[Youtube](https://www.youtube.com/watch?v=z-5djm1pRpU)
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=z-5djm1pRpU) -->
 
 
 <!--v-->
