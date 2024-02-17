@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-02-02T06:53:22+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">机制出发-DOTA2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="机制出发-DOTA2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>聊一下从「机制」开始的游戏设计，并对DOTA2的机制进行一些介绍。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-02-17T05:17:49+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">机制出发-DOTA2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="机制出发-DOTA2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>对DOTA2的机制进行一些介绍，并聊一下从「机制」开始的游戏设计。</p>
 
 <h1 id="规则出发dota2中的25种状态机制">规则出发——DOTA2中的25种状态机制</h1>
 
 <h2 id="机制--mechanics">机制 / Mechanics</h2>
+
+<p>熟悉<a href="https://zh.wikipedia.org/wiki/MDA%E6%A1%86%E6%9E%B6">MDA框架</a>的</p>
+
+<p><img src="/assets/img/gameplay/dota2/MDA.png" alt="" /></p>
 
 <h2 id="状态限制类">状态限制类</h2>
 
@@ -65,7 +69,7 @@
 
 <h3 id="虚灵">虚灵</h3>
 
-<h2 id="总结">总结</h2>]]></content><author><name></name></author><category term="专题报告" /><summary type="html"><![CDATA[聊一下从「机制」开始的游戏设计，并对DOTA2的机制进行一些介绍。]]></summary></entry><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
+<h2 id="总结">总结</h2>]]></content><author><name></name></author><category term="专题报告" /><summary type="html"><![CDATA[对DOTA2的机制进行一些介绍，并聊一下从「机制」开始的游戏设计。]]></summary></entry><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
 
 <h1 id="游戏策划的excel手册">游戏策划的Excel手册</h1>
 
