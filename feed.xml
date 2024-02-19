@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-02-18T15:53:15+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-02-19T12:47:01+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">机制出发-Dota2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="机制出发-Dota2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。</p>
 
 <h1 id="机制出发dota2中的25种状态机制">机制出发——Dota2中的25种状态机制</h1>
@@ -43,7 +43,7 @@
 
 <blockquote>
   <p>⚠️⚠️⚠️注意⚠️⚠️⚠️
-Dota2是一款尚在运营，且持续更新（，且时不时重大更新）的游戏，这意味着本文所记载的内容可能随着时间的经过而过时。虽然本文的带来启发的核心目标并不依赖于最新版本，但是本文末尾也会附上一些持续更新的说明链接，给有需要的同学。同时，人非圣贤，笔者的叙述也可能存在纰漏或者错误，虽然笔者会尽量进行测试，但仍然重申，以实际游戏测试为准。</p>
+Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游戏，这意味着本文所记载的内容可能随着时间的经过而过时。虽然本文的带来启发的核心目标并不依赖于最新版本，但是本文末尾也会附上一些持续更新的说明链接，给有需要的同学。同时，人非圣贤，笔者的叙述也可能存在纰漏或者错误，虽然笔者会尽量进行测试，但仍然重申，以实际游戏测试为准。</p>
 </blockquote>
 
 <p>Dota2游戏内嵌的教学中对状态机制的一些描述：</p>
