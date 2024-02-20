@@ -1,2 +1,7 @@
+# https://github.com/github-linguist/linguist
+# docs:
+#   https://github.com/github-linguist/linguist/blob/master/lib/linguist/languages.yml
+
+
+# * linguist-vendored
 *.md linguist-detectable
-* linguist-vendored
