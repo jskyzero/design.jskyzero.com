@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-02-20T10:28:54+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-02-20T16:13:06+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">机制出发-Dota2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="机制出发-Dota2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。</p>
 
 <h1 id="机制出发dota2中的25种状态机制">机制出发——Dota2中的25种状态机制</h1>
@@ -21,7 +21,7 @@
   <li>成本可控：从开发侧角度，能实现、可测试、可维护</li>
 </ul>
 
-<p>本文试图从Dota2的25种状态机制为切入，以一个体验丰富且成熟的MOBA游戏中丰富的机制与其带来的体验为例，希望能为读者带来一些启发，设计出更好的机制。</p>
+<p>本文试图从Dota2的25种状态机制为切入，以一个体验丰富且成熟的MOBA游戏中，丰富的机制与其带来的体验为例，希望能为读者带来一些启发，帮助读者设计出更好的机制。</p>
 
 <h2 id="dota2的状态机制">Dota2的状态机制</h2>
 
@@ -31,7 +31,7 @@
   <li>为什么是Dota2</li>
 </ul>
 
-<p>因为Dota2很好的满足了上面提到的好的机制的特征。在笔者所体验过的游戏中，如果要挑选一个<strong>机制最为天马行空、最为复杂丰富</strong>的游戏的话，可能那就是Dota2了，甚至，这款游戏还是一款<strong>经历过长久运营，和PVP平衡性考验</strong>的游戏。</p>
+<p>因为Dota2很好的满足了上面提到的，好的机制的特征。在笔者所体验过的游戏中，如果要挑选一个<strong>机制最为天马行空、最为复杂丰富</strong>的游戏，那可能就是Dota2了，甚至，这款游戏还是一款<strong>经历过长久运营，和PVP平衡性考验</strong>的游戏。</p>
 
 <ul>
   <li>为什么讨论状态机制</li>
@@ -39,11 +39,11 @@
 
 <p>笔者曾经思考过对于Dota2，最为出彩的地方是什么，思考下来有两点，一点是MOBA的底层机制；另一点是有趣的英雄玩法。</p>
 
-<p>第一点已经有太多文章并且有品类的局限性和些许失去时效性，而第二点，笔者粗略思考下来是英雄丰富的体验，与自身、敌我带来的组合变化，而<strong>状态机制，则为这些丰富的体验和变化，提供了根基和发挥空间</strong>。如果有可能的话，下文也会结合一些英雄设计的例子。</p>
+<p>MOBA的底层机制已经有太多文章，并且有一些品类的局限性，和些许失去时效性，而有趣的英雄玩法，笔者粗略思考下来，核心是英雄丰富的体验，与自身、敌我带来的组合变化，而<strong>状态机制，则为这些丰富的体验和变化，提供了根基和发挥空间</strong>。如果有可能的话，下文也会结合一些英雄设计的例子，来进一步说明这种关系。</p>
 
 <blockquote>
   <p>⚠️⚠️⚠️注意⚠️⚠️⚠️
-Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游戏，这意味着本文所记载的内容可能随着时间的经过而过时。虽然本文的带来启发的核心目标并不依赖于最新版本，但是本文末尾也会附上一些持续更新的说明链接，给有需要的同学。同时，人非圣贤，笔者的叙述也可能存在纰漏或者错误，虽然笔者会尽量进行测试，但仍然重申，以实际游戏测试为准。</p>
+Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游戏，这意味着本文所记载的内容可能随着时间的经过而过时。虽然本文的的核心目标是给读者带来启发——这并不依赖于最新版本的规则，但是为了有需要的同学，本文末尾也会附上一些持续更新的说明链接。同时，人非圣贤，笔者的叙述也可能存在纰漏或者错误，笔者会尽量进行测试，但仍然重申，以实际游戏的运行规则为准。</p>
 </blockquote>
 
 <p>Dota2游戏内嵌的教学中对状态机制的一些描述：</p>
@@ -62,7 +62,7 @@ Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游
 
 <p>前面说过，眩晕期间无法移动和执行任何操作，这里的任何操作具体来说，有：普通攻击、使用技能、使用道具。</p>
 
-<p>从设计目的上来说，眩晕是一种极其强力的控制手段，剥夺了个人的操作空间，即便是高手也只能眼睁睁地看着别人演出，过程中任人宰割——当然，团队是可以救你的，怎么救可见下文。</p>
+<p>从设计目的上来说，眩晕是一种极其强力的控制手段，它剥夺了个人的操作空间，即便是高手也只能眼睁睁地看着别人“演出”，过程中任人宰割——当然，团队是可以救你的，怎么救可见下文。</p>
 
 <p>一个有意思的点是，<strong>被动仍然是生效</strong>的——留意斧王自动释放的被动反击螺旋。</p>
 
