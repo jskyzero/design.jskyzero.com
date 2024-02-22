@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "游戏设计：游戏行业通识"
+title: "游戏设计：游戏市场通识"
 categories: [游戏开发]
 ---
 
