@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-02-21T13:28:58+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-02-22T10:46:42+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">机制出发-Dota2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="机制出发-Dota2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。</p>
 
 <h1 id="机制出发dota2中的25种状态机制">机制出发——Dota2中的25种状态机制</h1>
@@ -1726,7 +1726,7 @@ Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游
   <li>待补充</li>
 </ul>
 
-<h2 id="动作游戏专题">动作游戏专题</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[常见设计方法论]]></summary></entry><entry><title type="html">游戏设计：游戏行业通识</title><link href="https://design.jskyzero.com/2023/04/01/GameMarket/" rel="alternate" type="text/html" title="游戏设计：游戏行业通识" /><published>2023-04-01T00:00:00+00:00</published><updated>2023-04-01T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/04/01/GameMarket</id><content type="html" xml:base="https://design.jskyzero.com/2023/04/01/GameMarket/"><![CDATA[<p>本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。</p>
+<h2 id="动作游戏专题">动作游戏专题</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[常见设计方法论]]></summary></entry><entry><title type="html">游戏设计：游戏市场通识</title><link href="https://design.jskyzero.com/2023/04/01/GameMarket/" rel="alternate" type="text/html" title="游戏设计：游戏市场通识" /><published>2023-04-01T00:00:00+00:00</published><updated>2023-04-01T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/04/01/GameMarket</id><content type="html" xml:base="https://design.jskyzero.com/2023/04/01/GameMarket/"><![CDATA[<p>本文试图从游戏作为商品的角度，汇总其市场规模，地区分布，厂商销量等常识信息。</p>
 
 <h1 id="游戏行业市场分析">游戏行业市场分析</h1>
 
