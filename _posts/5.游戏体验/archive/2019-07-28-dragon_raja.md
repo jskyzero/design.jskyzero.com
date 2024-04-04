@@ -3,7 +3,7 @@ layout: post
 title: "设计漫谈：龙族幻想"
 featured-img: dragon_raja
 mathjax: true
-# categories:  [游戏体验]
+categories:  [游戏体验]
 ---
 
 從《代號：夏娃》的技術展示那個時候開始關注的游戲，總體評價應該是，唔，一款很優秀的商業化游戲。

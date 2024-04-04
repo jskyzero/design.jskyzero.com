@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 获得《自制力》
+title: 摘录：《自制力》
 featured-img: possessiveness
 mathjax: true
-categories: [阅读笔记]
+categories: [摘录与杂谈]
 pro: true
 ---
 

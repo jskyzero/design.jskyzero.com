@@ -15,19 +15,16 @@ index_categories:
   - 游戏AI
   - 游戏开发
   - 专题报告
-  - 杂谈
   - 一期一会
+  - 摘录与杂谈
   - 游戏体验
-  - 阅读笔记
-  - 游戏设计
 
 index_categories_sort_by_title:
   - 动作游戏分析
   - 游戏AI
   - 游戏开发
   - 游戏体验
-  - 阅读笔记
-
+  - 摘录与杂谈
 
 
 style: light # dark (default) or light

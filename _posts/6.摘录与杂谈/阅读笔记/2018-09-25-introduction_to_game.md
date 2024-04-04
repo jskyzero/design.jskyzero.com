@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 游戏设计：《游戏专业概论》
+title: 摘录：《游戏专业概论》
 featured-img: introduction_to_game
 mathjax: true
-categories: [阅读笔记]
+categories: [摘录与杂谈]
 ---
 
 本书从一门专业学科的角度讲述了游戏的起源、游戏的发展史、分类和研发流程。适合想从学术角度了解游戏的读者。

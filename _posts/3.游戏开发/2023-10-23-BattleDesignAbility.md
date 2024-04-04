@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 游戏设计：战斗策划能力要求
+title: 游戏设计：战斗策划要求
 categories: [游戏开发]
 ---
 

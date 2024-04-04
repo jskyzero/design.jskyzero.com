@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 游戏设计：《游戏设计词汇表》
+title: 摘录：《游戏设计词汇表》
 featured-img: vocabulary
 mathjax: true
-categories: [阅读笔记]
+categories: [摘录与杂谈]
 ---
 
 本书提出了游戏的谓词、宾语、语境等颇有意思的概念。虽然和我一向喜欢把问题简单化的思路不同，不过也可以了解看看。

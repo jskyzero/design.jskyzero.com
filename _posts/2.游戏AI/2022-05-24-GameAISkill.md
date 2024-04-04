@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GameAIPro：1.常用架构技巧
+title: 游戏AI常用架构技巧
 categories: [游戏AI]
 pro: true
 ---

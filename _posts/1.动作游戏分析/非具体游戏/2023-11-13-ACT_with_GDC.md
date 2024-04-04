@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GDC：ACT相关分享汇总
+title: GDC相关分享
 categories: [动作游戏分析]
 # for reveal-md
 separator: <!--s-->

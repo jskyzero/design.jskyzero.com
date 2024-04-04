@@ -3,7 +3,7 @@ layout: post
 title: 战斗 X 冒险：JohnDoeWorld
 featured-img: JohnDoeWorld
 mathjax: true
-categories: [游戏设计]
+# categories: [游戏设计]
 ---
 
 [JohnDoeWorld](https://github.com/jskyzero/JohnDoeWorld)基本上是我和+C老哥两个人做的游戏，是ID@ X box梦想校园行比赛的参赛作品，仅通过初赛。

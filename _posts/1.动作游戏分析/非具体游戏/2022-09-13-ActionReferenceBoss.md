@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 怪物设计：BOSS索引大全
+title: 怪物设计：BOSS大全
 categories: [动作游戏分析]
 ---
 

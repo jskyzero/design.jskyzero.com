@@ -3,7 +3,7 @@ layout: post
 title: 叙事：《如何写游戏剧本》
 featured-img: how_to_write_game_plot
 mathjax: true
-categories: [阅读笔记]
+# categories: [阅读笔记]
 ---
 
 剧本掌握的是感动、喜悦、愤怒、哀伤这类不可思议、魔法般的的东西，希望你寻找到属于你的“魔法”。

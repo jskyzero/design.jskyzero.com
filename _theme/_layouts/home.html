@@ -11,13 +11,23 @@ layout: default
 {% assign posts = site.categories[category] %}
 {%- if posts.size > 0 -%}
   <ul>
-    <p>{{ category }}</p>
 
+    {% case category %}
+    {% when "游戏体验" %}
+    <p>古早游戏体验</p>
+    {% else %}
+    <p>{{ category }}</p>
+    {% endcase %}
+
+
+    <!-- index_categories_sort_by_title -->
     {% if site.index_categories_sort_by_title contains category %}
     {% assign posts = posts | sort: "title" %}
     {% endif %}
 
+    <!-- posts -->
     {%- for post in posts -%}
+    {% unless post.path contains "archive"  %}
     <li>
       {%- if post.long-term-maintenance -%}
       {%- assign date_format = " LONG-TERM" -%}
@@ -30,6 +40,7 @@ layout: default
       <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
       {%- if post.pro -%}⭐️{%- endif -%}
     </li>
+    {% endunless %}
     {%- endfor -%}
   </ul>
 {%- endif -%}

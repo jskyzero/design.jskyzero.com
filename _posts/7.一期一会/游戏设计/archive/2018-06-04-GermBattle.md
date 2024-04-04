@@ -3,7 +3,7 @@ layout: post
 title: 宝可梦 X AR：GermBattle
 featured-img: germbattle
 mathjax: true
-categories: [游戏设计]
+# categories: [游戏设计]
 ---
 
 细菌大作战是一个增强现实（AR）的射击游戏，游戏中将会遇到各种的（可爱的）细菌。

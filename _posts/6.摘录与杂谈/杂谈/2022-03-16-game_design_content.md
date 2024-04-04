@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 游戏访谈 & 摘录
+title: 摘录：游戏的碎片
 featured-img: bg3
 mathjax: true
-categories: [杂谈]
-long-term-maintenance: true
+categories: [摘录与杂谈]
+# long-term-maintenance: true
 ---
 
 
