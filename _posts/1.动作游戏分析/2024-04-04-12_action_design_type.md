@@ -1,7 +1,8 @@
 ---
 layout: post
-title: 战斗玩法：十二种动作机制
+title: 玩法：12种动作机制与120+案例
 categories: [动作游戏分析]
+pro: true
 ---
 
 重定向中……
