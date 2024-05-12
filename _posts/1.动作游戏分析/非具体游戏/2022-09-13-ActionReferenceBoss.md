@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 怪物设计：BOSS索引
-categories: [动作游戏分析]
+# categories: [动作游戏分析]
 ---
 
 本文希望充当一个索引，方便概览大量动作游戏中的BOSS设计。
