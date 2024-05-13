@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 玩法：卧龙气势槽
+title: 卧龙气势槽设计杂谈
 categories: [动作游戏分析]
 ---
 

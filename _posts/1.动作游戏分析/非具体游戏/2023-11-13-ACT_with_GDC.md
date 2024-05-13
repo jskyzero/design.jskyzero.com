@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GDC相关分享
+title: 15篇GDC动作游戏分享
 categories: [动作游戏分析]
 # for reveal-md
 separator: <!--s-->
