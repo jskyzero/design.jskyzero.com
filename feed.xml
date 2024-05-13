@@ -1,5 +1,255 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-05-12T17:10:24+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
-</subtitle><entry><title type="html">玩法：12种动作机制与120+案例</title><link href="https://design.jskyzero.com/2024/04/04/12_action_design_type/" rel="alternate" type="text/html" title="玩法：12种动作机制与120+案例" /><published>2024-04-04T00:00:00+00:00</published><updated>2024-04-04T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/04/04/12_action_design_type</id><content type="html" xml:base="https://design.jskyzero.com/2024/04/04/12_action_design_type/"><![CDATA[<p>重定向中……</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-05-13T18:55:21+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+</subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
+
+<h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
+
+<p>🚧🚧🚧注意：本文有部分章节未补充详细案例，有待施工，但是本文结构是完整的。</p>
+
+<h2 id="广义和狭义的动作游戏">广义和狭义的动作游戏</h2>
+
+<p>本节想先讨论一些远离具体的设计的、有关动作游戏的宏观理解，这些作为一些基础铺垫，帮助我们深入理解动作游戏的核心特征与乐趣，逐步导出下文的一些理解、设计方法论。</p>
+
+<p><img src="/assets/img/act/2022/03.jpg" alt="动作游戏核心体验" /></p>
+
+<ul>
+  <li>广义动作游戏</li>
+</ul>
+
+<p>本文无意对动作游戏的今生往世做细致详细的介绍，但是动作游戏是一个不同人理解起来相当容易产生歧义的游戏类型。归根结底，动作游戏的历史和内涵过于丰富，广泛存在于不同类型游戏的体验与机制上。</p>
+
+<p>从这个角度，我们可以得到维基百科对动作游戏的广义定义：<strong>任何以动作为主要表现内容的游戏，都可以算作动作游戏。</strong>比如一些跨类别的动作游戏“影子”的例子：MOBA游戏中英雄的技能、射击游戏中近战动作……</p>
+
+<!-- + 动作游戏与射击游戏的比较
+
+从感受上来说，都是对于显示的模拟，一种是古朴一种是现代。
+从制作上来说，射击易于制作
+从玩家角度，射击易于掌握，同样都作为广泛基础类型 -->
+
+<ul>
+  <li>狭义（日式）动作游戏</li>
+</ul>
+
+<p>以广义去探讨，可能会像面对一整片森林去观察某种特定植物，未必能得到想要的答案。</p>
+
+<p>如果你看了本博客的其他游戏分析，你会发现其中大多为日系动作游戏，维基百科中存在于另一个关于<strong><a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B2%E3%83%BC%E3%83%A0">日式狭义动作的定义：分为2D和3D，2D分为横版卷轴、纵向卷轴、俯视角、固定画面；3D分为无双类、硬核动作、怪猎、魂like，格斗类则作为掌上明珠单独枚举</a></strong>。</p>
+
+<ul>
+  <li>我们所讨论的是</li>
+</ul>
+
+<p>更接近上面狭义（日式）动作游戏的定义，正如<a href="https://zhuanlan.zhihu.com/p/25481394">旗舰评论所言</a>：</p>
+
+<blockquote>
+  <p>日本定义下的狭义动作游戏，是若干个特别强调“反应与操作”的细分类型游戏的松散集合……把这些游戏类型从老到新列成一张表，它本身就是动作游戏设计的发展史：我们几乎找不出由欧美游戏设计师做出的设计创举。从最早的碰撞块和帧数判定理论开始，攻击-防御-投掷的基本三角克制关系是日本动作游戏设计出来的；跳跃和空中战是日本动作游戏设计出来的；群体战斗AI、主动性、QTE、一闪……这些设计也都是日本动作游戏先设计出来的……</p>
+</blockquote>
+
+<h2 id="动作游戏的哲学与本质">动作游戏的哲学与本质</h2>
+
+<p>“动作”伴随着人类从动物形成社会的全过程，早已写入了人类的基因。当动作这个概念进行抽象并用于游戏娱乐，动作游戏诞生了。</p>
+
+<p>动作游戏本质，抽象起来非常简单：<strong>玩家 控制 游戏角色 播放 动作。</strong></p>
+
+<p><img src="/assets/img/act/2022/03-1.jpg" alt="动作游戏核心体验" /></p>
+
+<h3 id="设计方法论奖惩导向">!!设计方法论：奖惩导向</h3>
+
+<ul>
+  <li>控制的乐趣</li>
+</ul>
+
+<p>岔一下话题，按照上文的抽象，如何让“控制”变得有趣？（这是一个很大的话题，也不局限于动作游戏。）</p>
+
+<p>事实上，纯粹的控制的乐趣是很有限的，以游戏感理论框架来解释的话，单纯的控制主要的感受是：即时控制 &amp; 润色（特殊物理感受）。</p>
+
+<p><img src="/assets/img/books/game_feeling/2.png" alt="" /></p>
+
+<p>一种常见的，使得控制变得有趣的方式是，在设计上<strong>赋予控制这件事更多意义</strong>，也即，游戏感中理论的模拟空间的相关感受。</p>
+
+<p>赋予更多意义这个思路下，一个非常有效的做法是<strong>奖惩导向</strong>，听起来很单纯：在玩家做出正确的控制时奖励，做出错误控制时惩罚。奖惩导向最基本也最广泛的例子是血量。</p>
+
+<blockquote>
+  <p>沿着奖惩这个思路，我们还可以理解，白金工作室GDC2016分享《无国界的动作游戏》中提到的，动作游戏是一种根据情形选择行为的被动游戏，“动作游戏就是设计场合与突破场合的方法”，这个设计思路。</p>
+
+  <p>旗舰评论中也有段文字，表达相同的概念：“狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。”</p>
+</blockquote>
+
+<ul>
+  <li>奖惩设计方向的取舍</li>
+</ul>
+
+<p>在基本的奖惩导向方针以后，可能还会面临一个分配问题，是设计更多的考核场景？还是给玩家设计更多的选项？这里其实有一些选择的方式，比如：场合少选项多、场合多选项少（当然也可以俩都多），不同的倾向也可以为不同的游戏带来不同的乐趣。</p>
+
+<ul>
+  <li>此设计思路下的动作游戏特征</li>
+</ul>
+
+<p>按这个角度，动作游戏会需要：（可以带入一些没那么好的游戏作为反向例子理解）</p>
+
+<ol>
+  <li>能有奖惩的基础要求：
+    <ol>
+      <li>动画清晰明确</li>
+      <li>判定精准可读（比如空间上遵循严格框体检测、时间上处于动画的合适位置）</li>
+    </ol>
+  </li>
+  <li>玩家追求奖励收益最大化：
+    <ol>
+      <li>设计受击动画僵直时长，以设计不同的combo</li>
+      <li>设计不同的控制方式：浮空、投技、眩晕等</li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="基于m-d-a理论的理解">基于M-D-A理论的理解</h2>
+
+<p>收一收，我们继续把“玩家 控制 游戏角色 播放 动作。”这个底层逻辑，放入<strong>M机制-D动态-A美学</strong>理论框架中：</p>
+
+<p><img src="/assets/img/act/2022/03-2.jpg" alt="动作游戏核心体验" /></p>
+
+<p>这里给动作游戏的归纳了两个核心乐趣（虽然不具备啥泛用性）</p>
+
+<ul>
+  <li>控制感：内涵较为丰富，1.符合直觉的控制 2.丰富的控制选项 3.丰富的考核选项带来正反馈</li>
+  <li>打击感：聚焦于动作本身的美学呈现。</li>
+</ul>
+
+<p>我们可以尝试继续挖掘M-D-A三层：</p>
+
+<p><img src="/assets/img/act/2022/04.jpg" alt="MDA框架" /></p>
+
+<h3 id="设计方法论底层机制">!!设计方法论：底层机制</h3>
+
+<ul>
+  <li>状态机 逻辑轴 系统逻辑</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>项目</th>
+      <th>说明</th>
+      <th>举例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>状态机</td>
+      <td>决定有多少个动画状态：长度、表现、跳转等</td>
+      <td>一个Actor有idle walk show三个状态</td>
+    </tr>
+    <tr>
+      <td>逻辑轴</td>
+      <td>决定单个动画的框体变化、逻辑脚本执行、表现创建等</td>
+      <td>walk状态有受击框</td>
+    </tr>
+    <tr>
+      <td>系统规则</td>
+      <td>其余更上层的规则，比如数值积蓄</td>
+      <td>比如必须有3格能量才能释放（从idle跳转）show技能</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <p>一些比较典型的逻辑过程：</p>
+
+    <ol>
+      <li>攻击命中进入受击动画：攻击框与受击框有交集……（后略）</li>
+      <li>投技的实现：投技框与受击框有交集……（后略）</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="设计方法论微观循环">!!设计方法论：微观循环</h3>
+
+<p>玩家不断在重复着：感知、认知、行动的过程。</p>
+
+<ul>
+  <li>针对感知的设计</li>
+</ul>
+
+<p><img src="/assets/img/act/2022/05.jpg" alt="" /></p>
+
+<ul>
+  <li>针对认知的设计</li>
+</ul>
+
+<p>这部分，理论上，玩家的认知方式，应该与设计师设计的规则维持一致，不再单独赘述。</p>
+
+<p>这里补充一些典型的体验和分类，如下：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>主要层次</th>
+      <th>体验类别</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>行动</td>
+      <td>远离攻击</td>
+      <td>使用某些手段远离某个区域——多为攻击区域</td>
+    </tr>
+    <tr>
+      <td>行动</td>
+      <td>打点控制</td>
+      <td>精确地调整人物位置、攻击朝向等，使得下次行为刚好命中目标部位</td>
+    </tr>
+    <tr>
+      <td>行动</td>
+      <td>搓招/Combo类</td>
+      <td>连续完成一系列指令输入，通常控制在僵直时窗口内，输入方式可能会需要摇杆组合按键</td>
+    </tr>
+    <tr>
+      <td>感知</td>
+      <td>当身/返技类</td>
+      <td>配合敌方动作判定，释放动作，一般可以产生额外效果</td>
+    </tr>
+    <tr>
+      <td>认知</td>
+      <td>抉</td>
+      <td>结合当前情景（多为敌我位置、状态），从可选行为中选择最优行为</td>
+    </tr>
+    <tr>
+      <td>认知</td>
+      <td>量表计算类</td>
+      <td>（显性或者隐性地）统计攻击造成的计数量表增加，并合理利用计数满额后的硬直等</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>针对行动的设计</li>
+</ul>
+
+<p><img src="/assets/img/act/2022/05-1.jpg" alt="" /></p>
+
+<h3 id="设计方法论打击感">!!设计方法论：打击感</h3>
+
+<p>这个话题太大了，这里不额外展开，典型打击感有：</p>
+
+<ul>
+  <li>攻击动作：开始、攻击、结束</li>
+  <li>攻击特效：（略）</li>
+  <li>受击动作：（略）</li>
+</ul>
+
+<h2 id="从微观到宏观蓝图">从微观到宏观蓝图</h2>
+
+<p>前面讨论的更多是微观体验的切片，玩家玩到的游戏是一个具体的内容序列。就像离散的动作组成了角色，离散的角色（作为敌人而言）组成了关卡，进而构成了游戏。</p>
+
+<p>在具体的组成方式上，也是相当具有技巧的，一种常见的用于指导构建复杂体验的方式是体验蓝图，如下图：</p>
+
+<p><img src="/assets/img/act/2022/06.jpg" alt="宏观设计" /></p>
+
+<h2 id="简要总结">简要总结</h2>
+
+<p>如图：</p>
+
+<p><img src="/assets/img/act/2022/07.jpg" alt="简要总结" /></p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。]]></summary></entry><entry><title type="html">12种动作机制与120+案例</title><link href="https://design.jskyzero.com/2024/04/04/12_action_design_type/" rel="alternate" type="text/html" title="12种动作机制与120+案例" /><published>2024-04-04T00:00:00+00:00</published><updated>2024-04-04T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/04/04/12_action_design_type</id><content type="html" xml:base="https://design.jskyzero.com/2024/04/04/12_action_design_type/"><![CDATA[<p>重定向中……</p>
 
 <script>window.location.replace("https://docs.qq.com/slide/DUmNkc2dhcVRXdWZa");</script>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[重定向中……]]></summary></entry><entry><title type="html">机制出发-Dota2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="机制出发-Dota2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。</p>
 
@@ -185,7 +435,7 @@ Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游
 
 <h2 id="角色数值">角色数值</h2>
 
-<p><img src="/assets/img/gameplay/zzz/3.png" alt="" /></p>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[绝区零战斗系统拆解]]></summary></entry><entry><title type="html">GDC相关分享</title><link href="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/" rel="alternate" type="text/html" title="GDC相关分享" /><published>2023-11-13T00:00:00+00:00</published><updated>2023-11-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/13/ACT_with_GDC</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/"><![CDATA[<h1 id="act相关的gdc记录">ACT相关的GDC记录</h1>
+<p><img src="/assets/img/gameplay/zzz/3.png" alt="" /></p>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[绝区零战斗系统拆解]]></summary></entry><entry><title type="html">15篇GDC动作游戏分享</title><link href="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/" rel="alternate" type="text/html" title="15篇GDC动作游戏分享" /><published>2023-11-13T00:00:00+00:00</published><updated>2023-11-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/13/ACT_with_GDC</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/"><![CDATA[<h1 id="act相关的gdc记录">ACT相关的GDC记录</h1>
 
 <!--s-->
 
@@ -1585,147 +1835,4 @@ Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游
 
 <h2 id="topdown设计">TopDown设计</h2>
 
-<h2 id="九宫格设计">九宫格设计</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[游戏设计：开放世界设计]]></summary></entry><entry><title type="html">游戏设计：常见设计方法论</title><link href="https://design.jskyzero.com/2023/06/11/GameDesignTheory/" rel="alternate" type="text/html" title="游戏设计：常见设计方法论" /><published>2023-06-11T00:00:00+00:00</published><updated>2023-06-11T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/06/11/GameDesignTheory</id><content type="html" xml:base="https://design.jskyzero.com/2023/06/11/GameDesignTheory/"><![CDATA[<h1 id="常见设计方法论">常见设计方法论</h1>
-
-<blockquote>
-  <p>TODO</p>
-</blockquote>
-
-<h2 id="理解游戏">理解游戏</h2>
-
-<h3 id="分层的m-d-a">“分层”的M-D-A</h3>
-
-<ul>
-  <li>实质规则</li>
-  <li>动态切片</li>
-  <li>外层美学</li>
-</ul>
-
-<h3 id="建模的游戏感">“建模”的游戏感</h3>
-
-<ul>
-  <li>IO模型：人类和游戏进行交互</li>
-  <li>人类处理器模型：接收、思考、行动</li>
-  <li>游戏感及其衍生体验
-    <ul>
-      <li>实时操控</li>
-      <li>模拟空间</li>
-      <li>润色</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="mmo的设计论">MMO的设计论</h3>
-
-<ul>
-  <li>可以宏观针对整个游戏，也可以微观针对单局</li>
-  <li>时期划分
-    <ul>
-      <li>新手期</li>
-      <li>成长期</li>
-      <li>平台期</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="行为-体验论">行为-体验论</h3>
-
-<ul>
-  <li>行为构成体验
-    <ul>
-      <li>设计师设计玩法</li>
-      <li>玩家整对玩法做出行为</li>
-      <li>微观行为构成宏观体验</li>
-    </ul>
-  </li>
-  <li>合适地编排玩法，以控制行为，带来体验
-（e.g. 体验蓝图、关卡节奏论、心流）</li>
-</ul>
-
-<h3 id="理性关卡设计">理性关卡设计</h3>
-
-<ul>
-  <li>表现服从功能：玩法、玩点、输入&amp;技巧、参数控制</li>
-  <li>步骤：
-    <ul>
-      <li>出发点：社交、自主、高手、内心诉求</li>
-      <li>技巧：物理 &amp; 脑力
-        <ul>
-          <li>时间点、反应力、操作熟练度、准确性</li>
-          <li>资源管理、分析策略、长期战略、短期战术</li>
-        </ul>
-      </li>
-      <li>定义参数，落地到模块</li>
-      <li>确定表现</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="心理学社会学理论">心理学/社会学理论</h2>
-
-<h3 id="罗斯凯洛斯的游戏四乐趣">罗斯·凯洛斯的游戏四乐趣</h3>
-
-<ul>
-  <li>竞争</li>
-  <li>机会</li>
-  <li>模仿</li>
-  <li>眩晕</li>
-</ul>
-
-<h3 id="四种思维能力">四种思维能力</h3>
-
-<ul>
-  <li>建模</li>
-  <li>专注</li>
-  <li>共情</li>
-  <li>想象</li>
-</ul>
-
-<h2 id="零散方法论">零散方法论</h2>
-
-<h3 id="任天堂">任天堂</h3>
-
-<ul>
-  <li>递进思路：A，A+，AB</li>
-</ul>
-
-<h3 id="开放世界">开放世界</h3>
-
-<ul>
-  <li>分层设计</li>
-</ul>
-
-<h3 id="开发模型">开发模型</h3>
-
-<ul>
-  <li>游戏制作历程：概念、原型、预生产、生产</li>
-  <li>软件开发模型</li>
-</ul>
-
-<h3 id="好关卡设计的10个准则">好关卡设计的10个准则</h3>
-
-<ul>
-  <li>有趣引导、非文字叙事、做什么而非怎么做</li>
-  <li>不断新知识、有惊喜的体验曲线、赋予更多权力</li>
-  <li>难度选择、高效设计、触动情感、机制推动</li>
-</ul>
-
-<h3 id="叙事ip构建">叙事/IP构建</h3>
-
-<ul>
-  <li>待补充</li>
-</ul>
-
-<h3 id="系统商业化">系统/商业化</h3>
-
-<ul>
-  <li>待补充</li>
-</ul>
-
-<h3 id="运营活动玩法">运营活动/玩法</h3>
-
-<ul>
-  <li>待补充</li>
-</ul>
-
-<h2 id="动作游戏专题">动作游戏专题</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[常见设计方法论]]></summary></entry></feed>
+<h2 id="九宫格设计">九宫格设计</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[游戏设计：开放世界设计]]></summary></entry></feed>

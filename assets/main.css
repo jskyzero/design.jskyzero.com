@@ -46,7 +46,9 @@ table { margin-bottom: 15px; width: 100%; }
 
 th { border-bottom: var(--border); }
 
-ul { padding-inline-start: 8px !important; }
+ul { padding-inline-start: 8px !important; margin: 8px 0px; }
+
+#index ul { margin: 0px 0px; }
 
 #pro { display: flex; margin-top: 15px; }
 
