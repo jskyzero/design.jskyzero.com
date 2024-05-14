@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-05-13T18:55:21+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-05-14T04:30:36+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero's notes about game designer.
 </subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
 
 <h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
@@ -435,7 +435,7 @@ Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游
 
 <h2 id="角色数值">角色数值</h2>
 
-<p><img src="/assets/img/gameplay/zzz/3.png" alt="" /></p>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[绝区零战斗系统拆解]]></summary></entry><entry><title type="html">15篇GDC动作游戏分享</title><link href="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/" rel="alternate" type="text/html" title="15篇GDC动作游戏分享" /><published>2023-11-13T00:00:00+00:00</published><updated>2023-11-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/13/ACT_with_GDC</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/"><![CDATA[<h1 id="act相关的gdc记录">ACT相关的GDC记录</h1>
+<p><img src="/assets/img/gameplay/zzz/3.png" alt="" /></p>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[绝区零战斗系统拆解]]></summary></entry><entry><title type="html">15篇GDC上的动作游戏分享精选</title><link href="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/" rel="alternate" type="text/html" title="15篇GDC上的动作游戏分享精选" /><published>2023-11-13T00:00:00+00:00</published><updated>2023-11-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/13/ACT_with_GDC</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/"><![CDATA[<h1 id="act相关的gdc记录">ACT相关的GDC记录</h1>
 
 <!--s-->
 
