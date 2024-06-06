@@ -2,7 +2,7 @@
 .bundle
 vendor
 .sass-cache
-Gemfile.lock
+# Gemfile.lock
 .jekyll-cache
 .jekyll-metadata
 node_modules
