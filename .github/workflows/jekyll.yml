@@ -11,36 +11,35 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     # strategy:
     #   matrix:
     #     # node-version: [10.x, 12.x, 14.x]
     #     node-version: [10.21.0]
-
 
     steps:
     - uses: actions/checkout@v3
       with:
         ref: jekyll
         fetch-depth: 0
-
+    - uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
+      with:
+        ruby-version: '3.3.1' # Not needed with a .ruby-version file
+        bundler-cache: true
     # fix git error: 
     #   fatal: unsafe repository ('/github/workspace' is owned by someone else)
-    - name: git config
-      run: |
-        git config --global --add safe.directory "$GITHUB_WORKSPACE"
-        git config --global --list
-
+    # - name: git config
+    #   run: |
+    #     git config --global --add safe.directory "$GITHUB_WORKSPACE"
+    #     git config --global --list
 
     # Use GitHub Actions' cache to shorten build times and decrease load on servers
-    - uses: actions/cache@v3
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
+    # - uses: actions/cache@v3
+    #   with:
+    #     path: vendor/bundle
+    #     key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+    #     restore-keys: |
+    #       ${{ runner.os }}-gems-
 
     # - name: jekyll build
     #   uses: helaili/jekyll-action@v2
@@ -70,7 +69,6 @@ jobs:
         verbose: # optional, default is true
         # Token to access Pages builds (personal access token or GITHUB_TOKEN)
         token: # optional, default is ${{ github.token }}
-              
 
     - name: Executing remote command
       uses: appleboy/ssh-action@master
