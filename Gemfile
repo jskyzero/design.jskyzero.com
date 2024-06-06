@@ -8,7 +8,6 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-gem "ffi", "~>1.16.3"
 # 如果是macOS，使用jekyll 4.3.3，否则使用jekyll 4.2.1
 if RUBY_PLATFORM =~ /darwin/
   gem "jekyll", "~> 4.3.3"
