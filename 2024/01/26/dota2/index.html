@@ -53,7 +53,7 @@
   <ul class="md-toc">
   <li class="md-toc-h1"><a href="#机制出发dota2中的25种状态机制">机制出发——Dota2中的25种状态机制</a>
     <ul>
-      <li class="md-toc-h2"><a href="#机制--mechanics">机制 / Mechanics</a></li>
+      <li class="md-toc-h2"><a href="#机制与困难的机制设计">机制，与困难的机制设计</a></li>
       <li class="md-toc-h2"><a href="#dota2的状态机制">Dota2的状态机制</a>
         <ul>
           <li class="md-toc-h3"><a href="#眩晕">眩晕</a></li>
@@ -106,9 +106,11 @@
 
 <p>对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。</p>
 
+<!-- TODO：现有机制，英雄状态矩阵图，机制视频，NGA DOTA2 WIKI-->
+
 <h1 id="机制出发dota2中的25种状态机制">机制出发——Dota2中的25种状态机制</h1>
 
-<h2 id="机制--mechanics">机制 / Mechanics</h2>
+<h2 id="机制与困难的机制设计">机制，与困难的机制设计</h2>
 
 <p>熟悉<a href="https://zh.wikipedia.org/wiki/MDA%E6%A1%86%E6%9E%B6">MDA框架</a>的同学可能会知道，如果用这个框架来指导设计，从任意层次开始都是可以的——当然从机制层面出发也是可以的。</p>
 
@@ -203,51 +205,76 @@ Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游
 
 <h3 id="缠绕">缠绕</h3>
 
+<p>缠绕状态会使英雄无法移动，但可以攻击和使用技能。例如，Treant Protector的技能”Overgrowth”可以缠绕敌方英雄。</p>
+
 <h3 id="束缚">束缚</h3>
+<p>束缚状态会使英雄无法移动和攻击，但可以使用技能。例如，Bane的技能”Fiend’s Grip”可以束缚敌方英雄。</p>
 
 <h3 id="变羊">变羊</h3>
+<p>变羊状态会使英雄无法移动、攻击或使用技能，并且外观会变成羊。例如，Shadow Shaman的技能”Hex”可以将敌方英雄变成羊。</p>
 
 <h3 id="吹风">吹风</h3>
+<p>吹风状态会使英雄被吹起，无法移动、攻击或使用技能。例如，Invoker的技能”Tornado”可以将敌方英雄吹起。</p>
 
 <h3 id="隐藏驱逐">隐藏/驱逐</h3>
+<p>隐藏/驱逐状态会使英雄消失，无法被攻击或使用技能。例如，Outworld Devourer的技能”Astral Imprisonment”可以将敌方英雄驱逐。</p>
 
 <h3 id="失明">失明</h3>
+<p>失明状态会使英雄的物理攻击有一定几率失效。例如，Tinker的技能”Laser”可以使敌方英雄失明。</p>
 
 <h3 id="沉默">沉默</h3>
+<p>沉默状态会使英雄无法使用技能。例如，Silencer的技能”Global Silence”可以使所有敌方英雄沉默。</p>
 
 <h3 id="锁闭">锁闭</h3>
+<p>锁闭状态会使英雄无法使用物品。例如，Doom的技能”Doom”可以锁闭敌方英雄。</p>
 
 <h3 id="破坏">破坏</h3>
+<p>破坏状态会使英雄的某些技能或物品失效。例如，Axe的技能”Culling Blade”可以破坏敌方英雄的生命恢复效果。</p>
 
 <h3 id="缴械">缴械</h3>
+<p>缴械状态会使英雄无法进行物理攻击。例如，Legion Commander的技能”Duel”可以缴械敌方英雄。</p>
 
 <h3 id="减速">减速</h3>
+<p>减速状态会降低英雄的移动速度。例如，Venomancer的技能”Venomous Gale”可以减速敌方英雄。</p>
 
 <h3 id="陷阱">陷阱</h3>
+<p>陷阱状态会使英雄无法移动。例如，Clockwerk的技能”Cogs”可以将敌方英雄困在陷阱中。</p>
 
 <h3 id="屏障">屏障</h3>
+<p>屏障状态会为英雄提供一定的伤害吸收。例如，Abaddon的技能”Aphotic Shield”可以为友方英雄提供屏障。</p>
 
 <h3 id="嘲讽">嘲讽</h3>
+<p>嘲讽状态会使英雄被迫攻击某个目标。例如，Axe的技能”Berserker’s Call”可以嘲讽周围的敌方英雄。</p>
 
 <h3 id="恐惧">恐惧</h3>
+<p>恐惧状态会使英雄被迫向基地方向移动，无法进行其他操作。例如，Queen of Pain的技能”Scream of Pain”有一定几率使敌方英雄恐惧。</p>
 
 <h3 id="催眠">催眠</h3>
+<p>催眠状态会使英雄无法进行任何操作，但受到伤害会醒来。例如，Bane的技能”Nightmare”可以使敌方英雄催眠。</p>
 
 <h3 id="强制移动">强制移动</h3>
+<p>强制移动状态会使英雄被迫移动到某个位置。例如，Batrider的技能”Flaming Lasso”可以强制移动敌方英雄。</p>
 
 <h3 id="传送闪烁">传送/闪烁</h3>
+<p>传送/闪烁状态会使英雄瞬间移动到某个位置。例如，Anti-Mage的技能”Blink”可以使他瞬间移动。</p>
 
 <h3 id="隐形">隐形</h3>
+<p>隐形状态会使英雄无法被敌方视野内的单位和建筑看到。例如，Riki的技能”Permanent Invisibility”可以使他持续隐形。</p>
 
 <h3 id="相位">相位</h3>
+<p>相位状态会使英雄无法被攻击和碰撞，但可以移动和使用技能。例如，Puck的技能”Phase Shift”可以使他进入相位状态。</p>
 
 <h3 id="无敌">无敌</h3>
+<p>无敌状态会使英雄无法被攻击和使用技能，但可以移动。例如，Juggernaut的技能”Blade Fury”可以使他进入无敌状态。</p>
 
 <h3 id="技能免疫">技能免疫</h3>
+<p>技能免疫状态会使英雄免疫所有技能效果。例如，Lifestealer的技能”Rage”可以使他进入技能免疫状态。</p>
 
 <h3 id="攻击免疫">攻击免疫</h3>
+<p>攻击免疫状态会使英雄免疫所有物理攻击。例如，Omniknight的技能”Guardian Angel”可以使友方英雄进入攻击免疫状态。</p>
 
 <h3 id="虚灵">虚灵</h3>
+<p>虚灵状态会使英雄免疫所有物理攻击，但会受到额外的魔法伤害。例如，Pugna的技能”Decrepify”可以使目标进入虚灵状态。</p>
 
 <h3 id="总结">总结</h3>
 
@@ -256,6 +283,7 @@ Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+18 Jun 2024 - jskyzero - 📝 update 状态机制
 04 Apr 2024 - jskyzero - 🚚 update structure
 20 Feb 2024 - jskyzero - 📝 修正一些措辞
 19 Feb 2024 - jskyzero - 📝 修复错别字
