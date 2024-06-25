@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-06-23T17:54:00.673Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.5.3 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="GlQIi-nZV-dUh4cg2hYR" version="24.5.3" type="device">
+<mxfile host="Electron" modified="2024-06-25T04:39:48.827Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.4.0 Chrome/112.0.5615.204 Electron/24.5.1 Safari/537.36" etag="gBVnHQb44-d10NvaVO30" version="21.4.0" type="device">
   <diagram name="第 1 页" id="ZKHY2Hoe6qPk4be1GVFT">
     <mxGraphModel dx="2109" dy="1009" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -37,10 +37,10 @@
         <mxCell id="0QdmUXXhmk32wQD1u3EL-20" value="给玩家带来乐趣" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="272.66999999999996" y="653" width="88.66" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1" source="0QdmUXXhmk32wQD1u3EL-21" target="_Q9UKvR4LleQOUQYwFhl-1">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;curved=1;" parent="1" source="0QdmUXXhmk32wQD1u3EL-21" target="_Q9UKvR4LleQOUQYwFhl-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1" source="0QdmUXXhmk32wQD1u3EL-21" target="_Q9UKvR4LleQOUQYwFhl-2">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;curved=1;" parent="1" source="0QdmUXXhmk32wQD1u3EL-21" target="_Q9UKvR4LleQOUQYwFhl-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="0QdmUXXhmk32wQD1u3EL-21" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;设计机制&lt;/span&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;远没有说起来那么简单！！&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#fc9e31;strokeColor=#b85450;" parent="1" vertex="1">
@@ -73,57 +73,103 @@
         <mxCell id="0QdmUXXhmk32wQD1u3EL-35" value="超出预期！" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="87" y="1045" width="96.41" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-1" value="短期上，需要教会玩家" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-1" value="短期上，需要教会玩家" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="218.32999999999998" y="817" width="160.93" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-2" value="长期上，需要持续提供乐趣" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-2" value="长期上，需要持续提供乐趣" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="218.32999999999998" y="884" width="161.93" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-9" value="为什么是Dota2" style="swimlane;startSize=20;horizontal=1;containerType=tree;" vertex="1" parent="1">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-9" value="为什么是Dota2" style="swimlane;startSize=20;horizontal=1;containerType=tree;" parent="1" vertex="1">
           <mxGeometry x="-235" y="1439" width="446" height="284" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-10" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="_Q9UKvR4LleQOUQYwFhl-9" source="_Q9UKvR4LleQOUQYwFhl-14" target="_Q9UKvR4LleQOUQYwFhl-15">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-10" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;fontSize=12;startSize=8;endSize=8;" parent="_Q9UKvR4LleQOUQYwFhl-9" source="_Q9UKvR4LleQOUQYwFhl-14" target="_Q9UKvR4LleQOUQYwFhl-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-14" value="Dota2的优点" style="ellipse;whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="_Q9UKvR4LleQOUQYwFhl-9">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-14" value="Dota2的优点" style="ellipse;whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" parent="_Q9UKvR4LleQOUQYwFhl-9" vertex="1">
           <mxGeometry x="20" y="132" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-26" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="_Q9UKvR4LleQOUQYwFhl-9" source="_Q9UKvR4LleQOUQYwFhl-15" target="_Q9UKvR4LleQOUQYwFhl-25">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-26" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="_Q9UKvR4LleQOUQYwFhl-9" source="_Q9UKvR4LleQOUQYwFhl-15" target="_Q9UKvR4LleQOUQYwFhl-25" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-15" value="设计得好" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="_Q9UKvR4LleQOUQYwFhl-9">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-15" value="设计得好" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" parent="_Q9UKvR4LleQOUQYwFhl-9" vertex="1">
           <mxGeometry x="170" y="71" width="87" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-28" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="_Q9UKvR4LleQOUQYwFhl-9" source="_Q9UKvR4LleQOUQYwFhl-19" target="_Q9UKvR4LleQOUQYwFhl-27">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-28" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="_Q9UKvR4LleQOUQYwFhl-9" source="_Q9UKvR4LleQOUQYwFhl-19" target="_Q9UKvR4LleQOUQYwFhl-27" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-31" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="_Q9UKvR4LleQOUQYwFhl-9" source="_Q9UKvR4LleQOUQYwFhl-19" target="_Q9UKvR4LleQOUQYwFhl-29">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-31" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="_Q9UKvR4LleQOUQYwFhl-9" source="_Q9UKvR4LleQOUQYwFhl-19" target="_Q9UKvR4LleQOUQYwFhl-29" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-19" value="能落地" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="_Q9UKvR4LleQOUQYwFhl-9">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-19" value="能落地" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" parent="_Q9UKvR4LleQOUQYwFhl-9" vertex="1">
           <mxGeometry x="170" y="203" width="75" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-20" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;" edge="1" target="_Q9UKvR4LleQOUQYwFhl-19" parent="_Q9UKvR4LleQOUQYwFhl-9" source="_Q9UKvR4LleQOUQYwFhl-14">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-20" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;" parent="_Q9UKvR4LleQOUQYwFhl-9" source="_Q9UKvR4LleQOUQYwFhl-14" target="_Q9UKvR4LleQOUQYwFhl-19" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="142" y="212" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-23" value="机制丰富" style="whiteSpace=wrap;html=1;shape=partialRectangle;top=0;left=0;bottom=1;right=0;points=[[0,1],[1,1]];fillColor=none;align=center;verticalAlign=bottom;routingCenterY=0.5;snapToPoint=1;recursiveResize=0;autosize=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="_Q9UKvR4LleQOUQYwFhl-9">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-23" value="机制丰富" style="whiteSpace=wrap;html=1;shape=partialRectangle;top=0;left=0;bottom=1;right=0;points=[[0,1],[1,1]];fillColor=none;align=center;verticalAlign=bottom;routingCenterY=0.5;snapToPoint=1;recursiveResize=0;autosize=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" parent="_Q9UKvR4LleQOUQYwFhl-9" vertex="1">
           <mxGeometry x="307" y="40" width="83" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-24" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;" edge="1" target="_Q9UKvR4LleQOUQYwFhl-23" parent="_Q9UKvR4LleQOUQYwFhl-9" source="_Q9UKvR4LleQOUQYwFhl-15">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-24" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;" parent="_Q9UKvR4LleQOUQYwFhl-9" source="_Q9UKvR4LleQOUQYwFhl-15" target="_Q9UKvR4LleQOUQYwFhl-23" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="363" y="161" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-25" value="富有想象力" style="whiteSpace=wrap;html=1;shape=partialRectangle;top=0;left=0;bottom=1;right=0;points=[[0,1],[1,1]];fillColor=none;align=center;verticalAlign=bottom;routingCenterY=0.5;snapToPoint=1;recursiveResize=0;autosize=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="_Q9UKvR4LleQOUQYwFhl-9">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-25" value="富有想象力" style="whiteSpace=wrap;html=1;shape=partialRectangle;top=0;left=0;bottom=1;right=0;points=[[0,1],[1,1]];fillColor=none;align=center;verticalAlign=bottom;routingCenterY=0.5;snapToPoint=1;recursiveResize=0;autosize=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" parent="_Q9UKvR4LleQOUQYwFhl-9" vertex="1">
           <mxGeometry x="307" y="106" width="95" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-27" value="经历过长久运营" style="whiteSpace=wrap;html=1;shape=partialRectangle;top=0;left=0;bottom=1;right=0;points=[[0,1],[1,1]];fillColor=none;align=center;verticalAlign=bottom;routingCenterY=0.5;snapToPoint=1;recursiveResize=0;autosize=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="_Q9UKvR4LleQOUQYwFhl-9">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-27" value="经历过长久运营" style="whiteSpace=wrap;html=1;shape=partialRectangle;top=0;left=0;bottom=1;right=0;points=[[0,1],[1,1]];fillColor=none;align=center;verticalAlign=bottom;routingCenterY=0.5;snapToPoint=1;recursiveResize=0;autosize=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" parent="_Q9UKvR4LleQOUQYwFhl-9" vertex="1">
           <mxGeometry x="295" y="172" width="119" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="_Q9UKvR4LleQOUQYwFhl-29" value="和PVP平衡性考验" style="whiteSpace=wrap;html=1;shape=partialRectangle;top=0;left=0;bottom=1;right=0;points=[[0,1],[1,1]];fillColor=none;align=center;verticalAlign=bottom;routingCenterY=0.5;snapToPoint=1;recursiveResize=0;autosize=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" collapsed="1" parent="_Q9UKvR4LleQOUQYwFhl-9">
+        <mxCell id="_Q9UKvR4LleQOUQYwFhl-29" value="和PVP平衡性考验" style="whiteSpace=wrap;html=1;shape=partialRectangle;top=0;left=0;bottom=1;right=0;points=[[0,1],[1,1]];fillColor=none;align=center;verticalAlign=bottom;routingCenterY=0.5;snapToPoint=1;recursiveResize=0;autosize=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" parent="_Q9UKvR4LleQOUQYwFhl-9" vertex="1" collapsed="1">
           <mxGeometry x="295" y="238" width="131" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-1" value="为什么讨论状态机制" style="swimlane;startSize=20;horizontal=1;containerType=tree;" vertex="1" parent="1">
+          <mxGeometry x="-235" y="1799" width="647" height="328" as="geometry" />
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-2" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="9i2Ycd65nC-77QvcfIn8-1" source="9i2Ycd65nC-77QvcfIn8-3" target="9i2Ycd65nC-77QvcfIn8-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-3" value="是什么让Dota2&lt;br&gt;变得不同" style="ellipse;whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="9i2Ycd65nC-77QvcfIn8-1">
+          <mxGeometry x="20" y="143" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-4" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="9i2Ycd65nC-77QvcfIn8-1" source="9i2Ycd65nC-77QvcfIn8-5" target="9i2Ycd65nC-77QvcfIn8-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-5" value="因为DOTA2 是 MOBA游戏" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="9i2Ycd65nC-77QvcfIn8-1">
+          <mxGeometry x="170" y="71" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-6" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="9i2Ycd65nC-77QvcfIn8-1" source="9i2Ycd65nC-77QvcfIn8-8" target="9i2Ycd65nC-77QvcfIn8-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-7" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="9i2Ycd65nC-77QvcfIn8-1" source="9i2Ycd65nC-77QvcfIn8-8" target="9i2Ycd65nC-77QvcfIn8-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-8" value="因为DOTA2 英雄机制做得好" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="9i2Ycd65nC-77QvcfIn8-1">
+          <mxGeometry x="170" y="225" width="189" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-9" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;" edge="1" parent="9i2Ycd65nC-77QvcfIn8-1" source="9i2Ycd65nC-77QvcfIn8-3" target="9i2Ycd65nC-77QvcfIn8-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="142" y="223" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-10" value="有一定的品类局限性，和失去时效性" style="whiteSpace=wrap;html=1;shape=partialRectangle;top=0;left=0;bottom=1;right=0;points=[[0,1],[1,1]];fillColor=none;align=center;verticalAlign=bottom;routingCenterY=0.5;snapToPoint=1;recursiveResize=0;autosize=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="9i2Ycd65nC-77QvcfIn8-1">
+          <mxGeometry x="400" y="106" width="227" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-11" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;" edge="1" parent="9i2Ycd65nC-77QvcfIn8-1" source="9i2Ycd65nC-77QvcfIn8-5" target="9i2Ycd65nC-77QvcfIn8-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="363" y="172" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-12" value="剖析很多" style="whiteSpace=wrap;html=1;shape=partialRectangle;top=0;left=0;bottom=1;right=0;points=[[0,1],[1,1]];fillColor=none;align=center;verticalAlign=bottom;routingCenterY=0.5;snapToPoint=1;recursiveResize=0;autosize=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="9i2Ycd65nC-77QvcfIn8-1">
+          <mxGeometry x="400" y="40" width="83" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-13" value="英雄丰富的体验，&lt;br&gt;与自身、敌我带来的组合变化" style="whiteSpace=wrap;html=1;shape=partialRectangle;top=0;left=0;bottom=1;right=0;points=[[0,1],[1,1]];fillColor=none;align=center;verticalAlign=bottom;routingCenterY=0.5;snapToPoint=1;recursiveResize=0;autosize=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="9i2Ycd65nC-77QvcfIn8-1">
+          <mxGeometry x="409" y="172" width="191" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="9i2Ycd65nC-77QvcfIn8-14" value="状态机制，&lt;br&gt;则为这些丰富的体验和变化，&lt;br&gt;提供了根基和发挥空间" style="whiteSpace=wrap;html=1;shape=partialRectangle;top=0;left=0;bottom=1;right=0;points=[[0,1],[1,1]];fillColor=none;align=center;verticalAlign=bottom;routingCenterY=0.5;snapToPoint=1;recursiveResize=0;autosize=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" collapsed="1" parent="9i2Ycd65nC-77QvcfIn8-1">
+          <mxGeometry x="409" y="253" width="191" height="55" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
