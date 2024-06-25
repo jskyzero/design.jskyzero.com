@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-06-25T14:17:11+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-06-25T14:45:50+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
 
 <h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
@@ -355,15 +355,25 @@
   <li>眩晕-打断当前动作</li>
 </ul>
 
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.2.gif" alt="" /></p>
+
 <p>眩晕期间是没操作空间了，那么之前<strong>进行到一半的操作呢？答案是直接被打断！</strong></p>
 
 <p>留意齐天大圣试图释放猴子猴孙时，被发条技师的弹幕冲击一直打断。</p>
 
 <p>这里有个有意思的地方是，被打断的行为如果要再次使用，是<strong>重新开始计算前摇</strong>的，也就是视频上，怎么放都放不出来的效果。</p>
 
+<blockquote>
+  <p>是否有感受到Dota2中的“下克上”。</p>
+</blockquote>
+
+<h3 id="当状态叠加时">当状态叠加时</h3>
+
 <ul>
   <li>眩晕-重复叠加时（取效果最强）</li>
 </ul>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.3.gif" alt="" /></p>
 
 <p>前面提到过状态之间的相互作用，作为我们认识的第一个状态，先看看这类状态<strong>同类和同类会发生什么反应</strong>。</p>
 
@@ -372,6 +382,8 @@
 <p>从结果来看貌似很合理？细致分析一下，首先眩晕的<strong>负面效果是无法升级叠加的</strong>——无法执行动作就无法执行动作了，还能咋办。需要考虑的是持续的时长，那么，对于时长有三种处理方式：1、叠加，取两者之和，2、后覆盖前，取最后添加的，3、并存，独立计时。</p>
 
 <p>考虑到<strong>Dota2是一个团队游戏</strong>，对于叠加的逻辑，粗看是符合多人合作的，众人拾柴火焰高嘛，大家一起控就完事了；对于后覆盖前，考虑到有时候会将技能用来打伤害，万一这个技能带有小眩晕效果，可能会提前结束之前较长的眩晕时长的控制，反而坏了事，这个场合是有很多弊端、会带来不可控的体验的；对于并存独立计时，这会导致一定程度上时长的浪费，但是却把浪费多少的选择给到了操作者，将<strong>收益直接绑定到了玩家的操作</strong>，让玩家卷无止境，比简单的叠加更具有操作导向。</p>
+
+<h3 id="不可不提的驱散">不可不提的驱散</h3>
 
 <ul>
   <li>眩晕-提前结束时（驱散）</li>

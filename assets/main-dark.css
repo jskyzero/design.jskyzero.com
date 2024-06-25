@@ -34,6 +34,8 @@ footer { margin-bottom: 20px; }
 /** jskyzero */
 p { margin: 8px 0px; }
 
+p > img { display: block; margin: 0 auto; width: 100%; }
+
 li > p { display: inline; }
 
 strong { text-decoration: underline; }
