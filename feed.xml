@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-06-25T14:45:50+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-06-26T09:08:40+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
 
 <h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
@@ -339,7 +339,7 @@
 
 <p>前面说过，眩晕期间无法移动和执行任何操作，这里的任何操作具体来说，有：普通攻击、使用技能、使用道具。</p>
 
-<p>从设计目的上来说，眩晕是一种极其强力的控制手段，它剥夺了个人的操作空间，即便是高手也只能眼睁睁地看着别人“演出”，过程中任人宰割——当然，团队是可以救你的，怎么救可见下文。</p>
+<p>从设计目的上来说，眩晕是一种极其强力的控制手段，它剥夺了个人的操作空间，即便是高手也只能眼睁睁地看着别人“演出”，过程中任人宰割——当然，这也是有对策的，具体可见下文。</p>
 
 <p>一个有意思的点是，<strong>被动仍然是生效</strong>的——留意斧王自动释放的被动反击螺旋。</p>
 
@@ -388,6 +388,60 @@
 <ul>
   <li>眩晕-提前结束时（驱散）</li>
 </ul>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.4.gif" alt="" /></p>
+
+<p>作为一个讲究对抗的竞技游戏，Dota2遵循着互相克制的设计思路，对于眩晕而言，被眩晕的玩家虽然无法行动，但是队友可以使用带有驱散效果的技能或物品（，当然有些英雄也有着被动会触发驱散），对眩晕效果进行驱散，如上图所示，亚巴顿的无光之盾技能驱散了兽王的吼的眩晕。</p>
+
+<p>Dota2的驱散分为两种，强驱散和弱驱散（，或者无法驱散），一般都在技能中有相关描述，</p>
+
+<p><img src="/assets/img/gameplay/dota2/5.png" alt="" /></p>
+
+<blockquote>
+  <p>引申话题：</p>
+
+  <p>驱散大体上有这么几种设计思路，一种带有回复性质，另一种则是带有增强性质，最后一种是刷新当前状态，一些典型的例子如下</p>
+
+  <ul>
+    <li>回复类
+      <ul>
+        <li>技能</li>
+        <li>道具
+          <ul>
+            <li>大鞋群体恢复弱驱。莲花反弹技能弱驱。</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>增强类
+      <ul>
+        <li>技能
+          <ul>
+            <li>小狗狂暴弱驱，熊战士激怒强驱</li>
+          </ul>
+        </li>
+        <li>道具</li>
+      </ul>
+    </li>
+    <li>刷新当前状态（如幻像类）
+      <ul>
+        <li>技能
+          <ul>
+            <li>幻像类，如猴子神行百变弱驱，娜迦镜像弱驱，混沌骑士混沌之军弱驱</li>
+            <li>清除类，主宰无敌斩弱驱，如蚂蚁回到过去强驱，小鱼黑暗契约强驱，亚巴顿回光返照强驱，潮汐猎人被动强驱，凤凰变蛋强驱</li>
+          </ul>
+        </li>
+        <li>道具
+          <ul>
+            <li>幻影斧生成幻象弱驱，吹风吹起弱驱，盘子防秒杀强驱</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="不可不提的状态抗性">不可不提的状态抗性</h3>
 
 <h2 id="状态机制的设计思路">状态机制的设计思路</h2>
 
