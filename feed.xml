@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-06-26T09:08:40+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-06-28T02:36:53+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
 
 <h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
@@ -320,16 +320,18 @@
 <blockquote>
   <p>⚠️⚠️⚠️注意⚠️⚠️⚠️</p>
 
-  <p>Dota2是一款尚在运营，且持续更新（，且时不时重大更新）的游戏，这意味着本文所记载的内容可能随着时间的经过而过时。虽然本文的核心目标是给读者带来启发——这并不依赖于最新版本的规则，但是为了严谨性，本文末尾也会附上一些持续更新的说明链接，也希望读者以实际版本为准。</p>
+  <p>Dota2是一款尚在运营，且持续更新（，且时不时重大更新）的游戏，这意味着本文所记载的内容可能随着时间的经过而过时。虽然本文的核心目标是给读者带来启发——这并不依赖于最新版本的规则，但是为了严谨性，也希望读者以实际版本为准。</p>
 
-  <p>同时，人非圣贤，笔者的叙述也可能存在纰漏或者错误，笔者会尽量进行测试，但仍然重申，以实际游戏的运行规则为准。</p>
+  <p>同时，人非圣贤，笔者的叙述也可能存在纰漏或者错误，Dota2是一款细节和定制逻辑相当多的游戏，笔者会尽量进行测试，但仍然重申，以实际游戏的运行规则为准。</p>
 </blockquote>
 
-<h2 id="从眩晕开始">从眩晕开始</h2>
+<h2 id="从眩晕状态开始">从“眩晕”状态开始</h2>
 
 <p>眩晕是最为基础（和常见）的状态机制，在眩晕期间，<strong>无法移动和执行任何动作</strong>。一个特殊的情况是，眩晕时<strong>当前动作将会被打断</strong>。</p>
 
 <p>空说定义是一件很无趣的事情，举一些例子看看：</p>
+
+<h3 id="状态的基础效果">状态的基础效果</h3>
 
 <ul>
   <li>眩晕-无法移动和执行任何动作</li>
@@ -367,7 +369,7 @@
   <p>是否有感受到Dota2中的“下克上”。</p>
 </blockquote>
 
-<h3 id="当状态叠加时">当状态叠加时</h3>
+<h3 id="状态之间叠加">状态之间叠加</h3>
 
 <ul>
   <li>眩晕-重复叠加时（取效果最强）</li>
@@ -383,7 +385,7 @@
 
 <p>考虑到<strong>Dota2是一个团队游戏</strong>，对于叠加的逻辑，粗看是符合多人合作的，众人拾柴火焰高嘛，大家一起控就完事了；对于后覆盖前，考虑到有时候会将技能用来打伤害，万一这个技能带有小眩晕效果，可能会提前结束之前较长的眩晕时长的控制，反而坏了事，这个场合是有很多弊端、会带来不可控的体验的；对于并存独立计时，这会导致一定程度上时长的浪费，但是却把浪费多少的选择给到了操作者，将<strong>收益直接绑定到了玩家的操作</strong>，让玩家卷无止境，比简单的叠加更具有操作导向。</p>
 
-<h3 id="不可不提的驱散">不可不提的驱散</h3>
+<h3 id="提前结束状态驱散">提前结束状态：驱散</h3>
 
 <ul>
   <li>眩晕-提前结束时（驱散）</li>
@@ -393,162 +395,332 @@
 
 <p>作为一个讲究对抗的竞技游戏，Dota2遵循着互相克制的设计思路，对于眩晕而言，被眩晕的玩家虽然无法行动，但是队友可以使用带有驱散效果的技能或物品（，当然有些英雄也有着被动会触发驱散），对眩晕效果进行驱散，如上图所示，亚巴顿的无光之盾技能驱散了兽王的吼的眩晕。</p>
 
-<p>Dota2的驱散分为两种，强驱散和弱驱散（，或者无法驱散），一般都在技能中有相关描述，</p>
+<p>Dota2的驱散分为两种，强驱散和弱驱散（当然有些效果比如光环类是无法驱散的），一般都在技能中有相关描述。</p>
 
 <p><img src="/assets/img/gameplay/dota2/5.png" alt="" /></p>
 
 <blockquote>
   <p>引申话题：</p>
 
-  <p>驱散大体上有这么几种设计思路，一种带有回复性质，另一种则是带有增强性质，最后一种是刷新当前状态，一些典型的例子如下</p>
+  <p>驱散作为结束手动结束状态机制的方法，有着相当多的细节（，比如有些带驱散的效果的机制是否可以再被驱散？），可以<a href="https://www.google.com.hk/search?q=dota2%E9%A9%B1%E6%95%A3">阅读参考</a>。</p>
 
-  <ul>
-    <li>回复类
-      <ul>
-        <li>技能</li>
-        <li>道具
-          <ul>
-            <li>大鞋群体恢复弱驱。莲花反弹技能弱驱。</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>增强类
-      <ul>
-        <li>技能
-          <ul>
-            <li>小狗狂暴弱驱，熊战士激怒强驱</li>
-          </ul>
-        </li>
-        <li>道具</li>
-      </ul>
-    </li>
-    <li>刷新当前状态（如幻像类）
-      <ul>
-        <li>技能
-          <ul>
-            <li>幻像类，如猴子神行百变弱驱，娜迦镜像弱驱，混沌骑士混沌之军弱驱</li>
-            <li>清除类，主宰无敌斩弱驱，如蚂蚁回到过去强驱，小鱼黑暗契约强驱，亚巴顿回光返照强驱，潮汐猎人被动强驱，凤凰变蛋强驱</li>
-          </ul>
-        </li>
-        <li>道具
-          <ul>
-            <li>幻影斧生成幻象弱驱，吹风吹起弱驱，盘子防秒杀强驱</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <p>可以简单列个典型效果的小表格：</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>名称</th>
+        <th>类别</th>
+        <th>效果</th>
+        <th>作用范围</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>否决</td>
+        <td>道具</td>
+        <td>强驱散</td>
+        <td>对敌</td>
+      </tr>
+      <tr>
+        <td>吹风</td>
+        <td>道具</td>
+        <td>弱驱散</td>
+        <td>对敌，对己</td>
+      </tr>
+      <tr>
+        <td>大鞋</td>
+        <td>道具</td>
+        <td>弱驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>莲花</td>
+        <td>道具</td>
+        <td>弱驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>BKB</td>
+        <td>道具</td>
+        <td>弱驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>幻影斧</td>
+        <td>道具</td>
+        <td>弱驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>盘子</td>
+        <td>道具</td>
+        <td>强驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>毒狗邪恶净化</td>
+        <td>技能</td>
+        <td>持续弱驱散</td>
+        <td>对敌</td>
+      </tr>
+      <tr>
+        <td>毒狗邪恶净愈</td>
+        <td>技能</td>
+        <td>持续弱驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>神谕者气运之末</td>
+        <td>技能</td>
+        <td>弱驱散</td>
+        <td>对敌，对己</td>
+      </tr>
+      <tr>
+        <td>全能骑士驱逐</td>
+        <td>技能</td>
+        <td>弱驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>熊战士激怒强驱</td>
+        <td>技能</td>
+        <td>强驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>小狗狂暴</td>
+        <td>技能</td>
+        <td>弱驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>猴子神行百变</td>
+        <td>技能</td>
+        <td>弱驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>娜迦镜像</td>
+        <td>技能</td>
+        <td>弱驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>混沌骑士混沌之军</td>
+        <td>技能</td>
+        <td>弱驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>主宰无敌斩</td>
+        <td>技能</td>
+        <td>弱驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>蚂蚁回到过去</td>
+        <td>技能</td>
+        <td>强驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>小鱼黑暗契约</td>
+        <td>技能</td>
+        <td>强驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>潮汐猎人被动</td>
+        <td>技能</td>
+        <td>强驱散</td>
+        <td>对己</td>
+      </tr>
+      <tr>
+        <td>潮汐猎人被动</td>
+        <td>技能</td>
+        <td>强驱散</td>
+        <td>对己</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>总结起来大体上有这么几种附着思路，1、增强性质：如回复、护盾、变身，2、刷新当前状态，如幻像，3、特殊攻击附带特效。</p>
 </blockquote>
 
-<h3 id="不可不提的状态抗性">不可不提的状态抗性</h3>
+<h3 id="加速状态的流逝状态抗性">加速状态的流逝：状态抗性</h3>
 
-<h2 id="状态机制的设计思路">状态机制的设计思路</h2>
+<p>除了提前结束，玩家也可以通过状态抗性来减少大部分负面效果的持续时间。</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.5.gif" alt="" /></p>
+
+<p>留意上图熊战士使用激怒获得状态抗性后，被眩晕的时间大幅减少了。</p>
+
+<p>面对敌方控制不足的阵容，状态抗性可以降低对方的控制时间，进一步降低时间内打出的伤害总值，变相增加了生存能力，起到奇效。</p>
+
+<blockquote>
+  <p>引申话题：</p>
+
+  <p>最近的7.36版本更新中，状态抗性被从散华等物品中移除，转而替代为只针对减速的减速抗性。这可能是因为上个版本肉核太过吃香，状态抗性一定程度上为肉核的生存提供了便利。削弱状态抗性也能一定程度上削弱肉核。</p>
+</blockquote>
+
+<p><img src="/assets/img/gameplay/dota2/6.png" alt="" /></p>
+
+<h2 id="更多的状态机制">更多的状态机制</h2>
+
+<ul>
+  <li>眩晕</li>
+</ul>
+
+<p>眩晕状态会打断所有动作，效果期间无法移动或者执行任何动作。例如，人马的踩，龙骑的duang，骷髅王的锤子……</p>
 
 <ul>
   <li>缠绕</li>
 </ul>
 
-<p>缠绕状态会使英雄无法移动，但可以攻击和使用技能。例如，Treant Protector的技能”Overgrowth”可以缠绕敌方英雄。</p>
+<p>缠绕状态会使英雄无法移动，但可以攻击和使用技能。例如，孽主的圈，大树的捆，小仙女的花……</p>
 
 <ul>
-  <li>
-    <p>束缚
-束缚状态会使英雄无法移动和攻击，但可以使用技能。例如，Bane的技能”Fiend’s Grip”可以束缚敌方英雄。</p>
-  </li>
-  <li>
-    <p>变羊
-变羊状态会使英雄无法移动、攻击或使用技能，并且外观会变成羊。例如，Shadow Shaman的技能”Hex”可以将敌方英雄变成羊。</p>
-  </li>
-  <li>
-    <p>吹风
-吹风状态会使英雄被吹起，无法移动、攻击或使用技能。例如，Invoker的技能”Tornado”可以将敌方英雄吹起。</p>
-  </li>
-  <li>
-    <p>隐藏/驱逐
-隐藏/驱逐状态会使英雄消失，无法被攻击或使用技能。例如，Outworld Devourer的技能”Astral Imprisonment”可以将敌方英雄驱逐。</p>
-  </li>
-  <li>
-    <p>失明
-失明状态会使英雄的物理攻击有一定几率失效。例如，Tinker的技能”Laser”可以使敌方英雄失明。</p>
-  </li>
-  <li>
-    <p>沉默
-沉默状态会使英雄无法使用技能。例如，Silencer的技能”Global Silence”可以使所有敌方英雄沉默。</p>
-  </li>
-  <li>
-    <p>锁闭
-锁闭状态会使英雄无法使用物品。例如，Doom的技能”Doom”可以锁闭敌方英雄。</p>
-  </li>
-  <li>
-    <p>破坏
-破坏状态会使英雄的某些技能或物品失效。例如，Axe的技能”Culling Blade”可以破坏敌方英雄的生命恢复效果。</p>
-  </li>
-  <li>
-    <p>缴械
-缴械状态会使英雄无法进行物理攻击。例如，Legion Commander的技能”Duel”可以缴械敌方英雄。</p>
-  </li>
-  <li>
-    <p>减速
-减速状态会降低英雄的移动速度。例如，Venomancer的技能”Venomous Gale”可以减速敌方英雄。</p>
-  </li>
-  <li>
-    <p>陷阱
-陷阱状态会使英雄无法移动。例如，Clockwerk的技能”Cogs”可以将敌方英雄困在陷阱中。</p>
-  </li>
-  <li>
-    <p>屏障
-屏障状态会为英雄提供一定的伤害吸收。例如，Abaddon的技能”Aphotic Shield”可以为友方英雄提供屏障。</p>
-  </li>
-  <li>
-    <p>嘲讽
-嘲讽状态会使英雄被迫攻击某个目标。例如，Axe的技能”Berserker’s Call”可以嘲讽周围的敌方英雄。</p>
-  </li>
-  <li>
-    <p>恐惧
-恐惧状态会使英雄被迫向基地方向移动，无法进行其他操作。例如，Queen of Pain的技能”Scream of Pain”有一定几率使敌方英雄恐惧。</p>
-  </li>
-  <li>
-    <p>催眠
-催眠状态会使英雄无法进行任何操作，但受到伤害会醒来。例如，Bane的技能”Nightmare”可以使敌方英雄催眠。</p>
-  </li>
-  <li>
-    <p>强制移动
-强制移动状态会使英雄被迫移动到某个位置。例如，Batrider的技能”Flaming Lasso”可以强制移动敌方英雄。</p>
-  </li>
-  <li>
-    <p>传送/闪烁
-传送/闪烁状态会使英雄瞬间移动到某个位置。例如，Anti-Mage的技能”Blink”可以使他瞬间移动。</p>
-  </li>
-  <li>
-    <p>隐形
-隐形状态会使英雄无法被敌方视野内的单位和建筑看到。例如，Riki的技能”Permanent Invisibility”可以使他持续隐形。</p>
-  </li>
-  <li>
-    <p>相位
-相位状态会使英雄无法被攻击和碰撞，但可以移动和使用技能。例如，Puck的技能”Phase Shift”可以使他进入相位状态。</p>
-  </li>
-  <li>
-    <p>无敌
-无敌状态会使英雄无法被攻击和使用技能，但可以移动。例如，Juggernaut的技能”Blade Fury”可以使他进入无敌状态。</p>
-  </li>
-  <li>
-    <p>技能免疫
-技能免疫状态会使英雄免疫所有技能效果。例如，Lifestealer的技能”Rage”可以使他进入技能免疫状态。</p>
-  </li>
-  <li>
-    <p>攻击免疫
-攻击免疫状态会使英雄免疫所有物理攻击。例如，Omniknight的技能”Guardian Angel”可以使友方英雄进入攻击免疫状态。</p>
-  </li>
-  <li>
-    <p>虚灵
-虚灵状态会使英雄免疫所有物理攻击，但会受到额外的魔法伤害。例如，Pugna的技能”Decrepify”可以使目标进入虚灵状态。</p>
-  </li>
+  <li>束缚：</li>
 </ul>
 
-<h2 id="总结">总结</h2>
+<p>束缚状态会使英雄无法移动（部分是软性的或者逐渐生效的），但可以和攻击和技能。例如，小鱼人的跳，发条的圈，帕克的缠绕，墨客的连……</p>
 
-<h2 id="其他参考">其他参考</h2>]]></content><author><name></name></author><category term="专题报告" /><summary type="html"><![CDATA[对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。]]></summary></entry><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
+<ul>
+  <li>变羊</li>
+</ul>
+
+<p>变羊状态会使英雄无法移动、攻击或使用技能，并且外观会变成羊。例如，小Y的变羊，莱恩的变羊，还有最著名的羊刀。</p>
+
+<ul>
+  <li>吹风</li>
+</ul>
+
+<p>吹风状态会使英雄被吹起，无法移动、攻击或使用技能。例如，Invoker的技能”Tornado”可以将敌方英雄吹起。</p>
+
+<ul>
+  <li>隐藏/驱逐</li>
+</ul>
+
+<p>隐藏/驱逐状态会使英雄消失，无法被攻击或使用技能。例如，Outworld Devourer的技能”Astral Imprisonment”可以将敌方英雄驱逐。</p>
+
+<ul>
+  <li>失明</li>
+</ul>
+
+<p>失明状态会使英雄的物理攻击有一定几率失效。例如，Tinker的技能”Laser”可以使敌方英雄失明。</p>
+
+<ul>
+  <li>沉默</li>
+</ul>
+
+<p>沉默状态会使英雄无法使用技能。例如，Silencer的技能”Global Silence”可以使所有敌方英雄沉默。</p>
+
+<ul>
+  <li>锁闭</li>
+</ul>
+
+<p>锁闭状态会使英雄无法使用物品。例如，Doom的技能”Doom”可以锁闭敌方英雄。</p>
+
+<ul>
+  <li>破坏</li>
+</ul>
+
+<p>破坏状态会使英雄的某些技能或物品失效。例如，Axe的技能”Culling Blade”可以破坏敌方英雄的生命恢复效果。</p>
+
+<ul>
+  <li>缴械</li>
+</ul>
+
+<p>缴械状态会使英雄无法进行物理攻击。例如，Legion Commander的技能”Duel”可以缴械敌方英雄。</p>
+
+<ul>
+  <li>减速</li>
+</ul>
+
+<p>减速状态会降低英雄的移动速度。例如，Venomancer的技能”Venomous Gale”可以减速敌方英雄。</p>
+
+<ul>
+  <li>陷阱</li>
+</ul>
+
+<p>陷阱状态会使英雄无法移动。例如，Clockwerk的技能”Cogs”可以将敌方英雄困在陷阱中。</p>
+
+<ul>
+  <li>屏障</li>
+</ul>
+
+<p>屏障状态会为英雄提供一定的伤害吸收。例如，Abaddon的技能”Aphotic Shield”可以为友方英雄提供屏障。</p>
+
+<ul>
+  <li>嘲讽</li>
+</ul>
+
+<p>嘲讽状态会使英雄被迫攻击某个目标。例如，Axe的技能”Berserker’s Call”可以嘲讽周围的敌方英雄。</p>
+
+<ul>
+  <li>恐惧</li>
+</ul>
+
+<p>恐惧状态会使英雄被迫向基地方向移动，无法进行其他操作。例如，Queen of Pain的技能”Scream of Pain”有一定几率使敌方英雄恐惧。</p>
+
+<ul>
+  <li>催眠</li>
+</ul>
+
+<p>催眠状态会使英雄无法进行任何操作，但受到伤害会醒来。例如，Bane的技能”Nightmare”可以使敌方英雄催眠。</p>
+
+<ul>
+  <li>强制移动</li>
+</ul>
+
+<p>强制移动状态会使英雄被迫移动到某个位置。例如，Batrider的技能”Flaming Lasso”可以强制移动敌方英雄。</p>
+
+<ul>
+  <li>传送/闪烁</li>
+</ul>
+
+<p>传送/闪烁状态会使英雄瞬间移动到某个位置。例如，Anti-Mage的技能”Blink”可以使他瞬间移动。</p>
+
+<ul>
+  <li>隐形</li>
+</ul>
+
+<p>隐形状态会使英雄无法被敌方视野内的单位和建筑看到。例如，Riki的技能”Permanent Invisibility”可以使他持续隐形。</p>
+
+<ul>
+  <li>相位</li>
+</ul>
+
+<p>相位状态会使英雄无法被攻击和碰撞，但可以移动和使用技能。例如，Puck的技能”Phase Shift”可以使他进入相位状态。</p>
+
+<ul>
+  <li>无敌</li>
+</ul>
+
+<p>无敌状态会使英雄无法被攻击和使用技能，但可以移动。例如，Juggernaut的技能”Blade Fury”可以使他进入无敌状态。</p>
+
+<ul>
+  <li>技能免疫</li>
+</ul>
+
+<p>技能免疫状态会使英雄免疫所有技能效果。例如，Lifestealer的技能”Rage”可以使他进入技能免疫状态。</p>
+
+<ul>
+  <li>攻击免疫</li>
+</ul>
+
+<p>攻击免疫状态会使英雄免疫所有物理攻击。例如，Omniknight的技能”Guardian Angel”可以使友方英雄进入攻击免疫状态。</p>
+
+<ul>
+  <li>虚灵</li>
+</ul>
+
+<p>虚灵状态会使英雄免疫所有物理攻击，但会受到额外的魔法伤害。例如，Pugna的技能”Decrepify”可以使目标进入虚灵状态。</p>
+
+<h2 id="设计思路">设计思路</h2>
+
+<h2 id="总结">总结</h2>]]></content><author><name></name></author><category term="专题报告" /><summary type="html"><![CDATA[对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。]]></summary></entry><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
 
 <h1 id="游戏策划的excel手册">游戏策划的Excel手册</h1>
 
