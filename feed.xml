@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-01T13:41:37+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-02T13:27:36+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
 
 <h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
@@ -251,17 +251,19 @@
 
 <p><img src="/assets/img/act/2022/07.jpg" alt="简要总结" /></p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。]]></summary></entry><entry><title type="html">12种动作机制与120+案例</title><link href="https://design.jskyzero.com/2024/04/04/12_action_design_type/" rel="alternate" type="text/html" title="12种动作机制与120+案例" /><published>2024-04-04T00:00:00+00:00</published><updated>2024-04-04T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/04/04/12_action_design_type</id><content type="html" xml:base="https://design.jskyzero.com/2024/04/04/12_action_design_type/"><![CDATA[<p>重定向中……</p>
 
-<script>window.location.replace("https://docs.qq.com/slide/DUmNkc2dhcVRXdWZa");</script>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[重定向中……]]></summary></entry><entry><title type="html">机制出发-Dota2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="机制出发-Dota2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。</p>
+<script>window.location.replace("https://docs.qq.com/slide/DUmNkc2dhcVRXdWZa");</script>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[重定向中……]]></summary></entry><entry><title type="html">机制设计-Dota2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="机制设计-Dota2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。</p>
 
 <!-- TODO：现有机制，英雄状态矩阵图，机制视频，NGA DOTA2 WIKI-->
 
-<h1 id="机制出发dota2中的25种状态机制">机制出发——Dota2中的25种状态机制</h1>
+<h1 id="机制设计以dota2中的25种状态效果为例">机制设计——以Dota2中的25种状态效果为例</h1>
 
 <p><img src="/assets/img/gameplay/dota2/1.png" alt="" /></p>
 
 <h2 id="前言机制设计与dota2">前言：机制设计与DOTA2</h2>
 
 <h3 id="机制与困难的机制设计">机制与困难的机制设计</h3>
+
+<p><img src="/assets/img/gameplay/dota2/X-1.png" alt="" /></p>
 
 <p>先从MDA开始聊起吧，也方便统一文章的描述语境。</p>
 
@@ -271,7 +273,7 @@
 
 <p>熟悉MDA框架的同学可能会知道，实际使用这个框架来指导设计时，从任意层次开始，都是可以的——当然从机制层面出发也是可以的。</p>
 
-<p>这听起来非常合理：<strong>设计底层机制，然后影响玩家的动态行为，最后影响玩家的感受</strong>。</p>
+<p>这听起来非常合理：<strong>设计底层机制，改变玩家的动态行为，带来不同感受</strong>。</p>
 
 <p>但是事实上，设计机制远没有说起来那么简单，甚至是一件<strong>非常困难的事情</strong>。</p>
 
@@ -295,7 +297,9 @@
 
 <p>本文，试图从Dota2的25种状态机制为切入，以“一个体验丰富且成熟的MOBA游戏中，丰富的机制与其带来的体验”为例，希望能为读者带来一些启发，帮助读者设计出更好的机制。</p>
 
-<h3 id="dota2与状态机制的关系">Dota2与状态机制的关系</h3>
+<h3 id="dota2与机制的关系">Dota2与机制的关系</h3>
+
+<p><img src="/assets/img/gameplay/dota2/X-2.png" alt="" /></p>
 
 <p>读者可能会好奇：</p>
 
@@ -305,8 +309,6 @@
 
 <p>因为Dota2很好的满足了上面提到的，好的机制的特征。在笔者所体验过的游戏中，如果要挑选一个机制最为天马行空、最为复杂丰富的游戏，那可能就是Dota2了，甚至，这款游戏还是一款经历过长久运营，和PVP平衡性考验的游戏。</p>
 
-<p><img src="/assets/img/gameplay/dota2/2.png" alt="" /></p>
-
 <ul>
   <li>为什么讨论状态机制</li>
 </ul>
@@ -314,8 +316,6 @@
 <p>笔者曾经思考过对于Dota2，最为出彩的地方是什么，思考下来有两点，一点是MOBA的底层机制；另一点是有趣的英雄玩法。</p>
 
 <p>MOBA的底层机制已经有太多文章，并且有一些品类的局限性，和些许失去时效性。而有趣的英雄玩法，笔者粗略思考下来，核心是英雄丰富的体验，与自身、敌我带来的组合变化，而<strong>状态机制，则为这些丰富的体验和变化，提供了根基和发挥空间</strong>。如果有可能的话，下文也会结合一些英雄设计的例子，来进一步说明这种关系。</p>
-
-<p><img src="/assets/img/gameplay/dota2/3.png" alt="" /></p>
 
 <blockquote>
   <p>⚠️⚠️⚠️注意⚠️⚠️⚠️</p>
@@ -326,6 +326,8 @@
 </blockquote>
 
 <h2 id="从眩晕状态开始">从“眩晕”状态开始</h2>
+
+<p><img src="/assets/img/gameplay/dota2/X-3.png" alt="" /></p>
 
 <p>眩晕是最为基础（和常见）的状态机制，在眩晕期间，<strong>无法移动和执行任何动作</strong>。一个特殊的情况是，眩晕时<strong>当前动作将会被打断</strong>。</p>
 
@@ -562,6 +564,8 @@
 
 <h2 id="更多的状态机制">更多的状态机制</h2>
 
+<p><img src="/assets/img/gameplay/dota2/X-4.png" alt="" /></p>
+
 <p>依照某个WIKI列举的25种进行一个枚举：</p>
 
 <ul>
@@ -689,9 +693,9 @@
   </li>
 </ul>
 
-<h2 id="设计思路">设计思路</h2>
+<h2 id="总结">总结</h2>
 
-<h2 id="总结">总结</h2>]]></content><author><name></name></author><category term="专题报告" /><summary type="html"><![CDATA[对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。]]></summary></entry><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
+<p><img src="/assets/img/gameplay/dota2/X-5.png" alt="" /></p>]]></content><author><name></name></author><category term="专题报告" /><summary type="html"><![CDATA[对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。]]></summary></entry><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
 
 <h1 id="游戏策划的excel手册">游戏策划的Excel手册</h1>
 

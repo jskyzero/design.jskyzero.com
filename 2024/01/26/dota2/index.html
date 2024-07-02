@@ -7,10 +7,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>机制出发-Dota2 | 设计者笔记</title>
+  <title>机制设计-Dota2 | 设计者笔记</title>
   <link rel="icon" type="image/png" href="/assets/img/logo.2.png"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="机制出发-Dota2" />
+<meta property="og:title" content="机制设计-Dota2" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。" />
 <meta property="og:description" content="对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。" />
@@ -20,9 +20,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-01-26T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="机制出发-Dota2" />
+<meta property="twitter:title" content="机制设计-Dota2" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-26T00:00:00+00:00","datePublished":"2024-01-26T00:00:00+00:00","description":"对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。","headline":"机制出发-Dota2","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2024/01/26/dota2/"},"url":"https://design.jskyzero.com/2024/01/26/dota2/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-26T00:00:00+00:00","datePublished":"2024-01-26T00:00:00+00:00","description":"对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。","headline":"机制设计-Dota2","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2024/01/26/dota2/"},"url":"https://design.jskyzero.com/2024/01/26/dota2/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
@@ -51,12 +51,12 @@
 <main>
       <div id="index">
   <ul class="md-toc">
-  <li class="md-toc-h1"><a href="#机制出发dota2中的25种状态机制">机制出发——Dota2中的25种状态机制</a>
+  <li class="md-toc-h1"><a href="#机制设计以dota2中的25种状态效果为例">机制设计——以Dota2中的25种状态效果为例</a>
     <ul>
       <li class="md-toc-h2"><a href="#前言机制设计与dota2">前言：机制设计与DOTA2</a>
         <ul>
           <li class="md-toc-h3"><a href="#机制与困难的机制设计">机制与困难的机制设计</a></li>
-          <li class="md-toc-h3"><a href="#dota2与状态机制的关系">Dota2与状态机制的关系</a></li>
+          <li class="md-toc-h3"><a href="#dota2与机制的关系">Dota2与机制的关系</a></li>
         </ul>
       </li>
       <li class="md-toc-h2"><a href="#从眩晕状态开始">从“眩晕”状态开始</a>
@@ -68,7 +68,6 @@
         </ul>
       </li>
       <li class="md-toc-h2"><a href="#更多的状态机制">更多的状态机制</a></li>
-      <li class="md-toc-h2"><a href="#设计思路">设计思路</a></li>
       <li class="md-toc-h2"><a href="#总结">总结</a></li>
     </ul>
   </li>
@@ -93,13 +92,15 @@
 
 <!-- TODO：现有机制，英雄状态矩阵图，机制视频，NGA DOTA2 WIKI-->
 
-<h1 id="机制出发dota2中的25种状态机制">机制出发——Dota2中的25种状态机制</h1>
+<h1 id="机制设计以dota2中的25种状态效果为例">机制设计——以Dota2中的25种状态效果为例</h1>
 
 <p><img src="/assets/img/gameplay/dota2/1.png" alt="" /></p>
 
 <h2 id="前言机制设计与dota2">前言：机制设计与DOTA2</h2>
 
 <h3 id="机制与困难的机制设计">机制与困难的机制设计</h3>
+
+<p><img src="/assets/img/gameplay/dota2/X-1.png" alt="" /></p>
 
 <p>先从MDA开始聊起吧，也方便统一文章的描述语境。</p>
 
@@ -109,7 +110,7 @@
 
 <p>熟悉MDA框架的同学可能会知道，实际使用这个框架来指导设计时，从任意层次开始，都是可以的——当然从机制层面出发也是可以的。</p>
 
-<p>这听起来非常合理：<strong>设计底层机制，然后影响玩家的动态行为，最后影响玩家的感受</strong>。</p>
+<p>这听起来非常合理：<strong>设计底层机制，改变玩家的动态行为，带来不同感受</strong>。</p>
 
 <p>但是事实上，设计机制远没有说起来那么简单，甚至是一件<strong>非常困难的事情</strong>。</p>
 
@@ -133,7 +134,9 @@
 
 <p>本文，试图从Dota2的25种状态机制为切入，以“一个体验丰富且成熟的MOBA游戏中，丰富的机制与其带来的体验”为例，希望能为读者带来一些启发，帮助读者设计出更好的机制。</p>
 
-<h3 id="dota2与状态机制的关系">Dota2与状态机制的关系</h3>
+<h3 id="dota2与机制的关系">Dota2与机制的关系</h3>
+
+<p><img src="/assets/img/gameplay/dota2/X-2.png" alt="" /></p>
 
 <p>读者可能会好奇：</p>
 
@@ -143,8 +146,6 @@
 
 <p>因为Dota2很好的满足了上面提到的，好的机制的特征。在笔者所体验过的游戏中，如果要挑选一个机制最为天马行空、最为复杂丰富的游戏，那可能就是Dota2了，甚至，这款游戏还是一款经历过长久运营，和PVP平衡性考验的游戏。</p>
 
-<p><img src="/assets/img/gameplay/dota2/2.png" alt="" /></p>
-
 <ul>
   <li>为什么讨论状态机制</li>
 </ul>
@@ -152,8 +153,6 @@
 <p>笔者曾经思考过对于Dota2，最为出彩的地方是什么，思考下来有两点，一点是MOBA的底层机制；另一点是有趣的英雄玩法。</p>
 
 <p>MOBA的底层机制已经有太多文章，并且有一些品类的局限性，和些许失去时效性。而有趣的英雄玩法，笔者粗略思考下来，核心是英雄丰富的体验，与自身、敌我带来的组合变化，而<strong>状态机制，则为这些丰富的体验和变化，提供了根基和发挥空间</strong>。如果有可能的话，下文也会结合一些英雄设计的例子，来进一步说明这种关系。</p>
-
-<p><img src="/assets/img/gameplay/dota2/3.png" alt="" /></p>
 
 <blockquote>
   <p>⚠️⚠️⚠️注意⚠️⚠️⚠️</p>
@@ -164,6 +163,8 @@
 </blockquote>
 
 <h2 id="从眩晕状态开始">从“眩晕”状态开始</h2>
+
+<p><img src="/assets/img/gameplay/dota2/X-3.png" alt="" /></p>
 
 <p>眩晕是最为基础（和常见）的状态机制，在眩晕期间，<strong>无法移动和执行任何动作</strong>。一个特殊的情况是，眩晕时<strong>当前动作将会被打断</strong>。</p>
 
@@ -400,6 +401,8 @@
 
 <h2 id="更多的状态机制">更多的状态机制</h2>
 
+<p><img src="/assets/img/gameplay/dota2/X-4.png" alt="" /></p>
+
 <p>依照某个WIKI列举的25种进行一个枚举：</p>
 
 <ul>
@@ -527,14 +530,15 @@
   </li>
 </ul>
 
-<h2 id="设计思路">设计思路</h2>
-
 <h2 id="总结">总结</h2>
+
+<p><img src="/assets/img/gameplay/dota2/X-5.png" alt="" /></p>
 
 
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+02 Jul 2024 - jskyzero - 📝 almost finish dota2
 01 Jul 2024 - jskyzero - 📝 add xmind
 28 Jun 2024 - jskyzero - 📝 update 机制出发-Dota2
 27 Jun 2024 - jskyzero - 📝 中途版本提交
