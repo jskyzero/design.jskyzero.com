@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-02T13:27:36+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-05T04:57:44+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
 
 <h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
@@ -251,7 +251,7 @@
 
 <p><img src="/assets/img/act/2022/07.jpg" alt="简要总结" /></p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。]]></summary></entry><entry><title type="html">12种动作机制与120+案例</title><link href="https://design.jskyzero.com/2024/04/04/12_action_design_type/" rel="alternate" type="text/html" title="12种动作机制与120+案例" /><published>2024-04-04T00:00:00+00:00</published><updated>2024-04-04T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/04/04/12_action_design_type</id><content type="html" xml:base="https://design.jskyzero.com/2024/04/04/12_action_design_type/"><![CDATA[<p>重定向中……</p>
 
-<script>window.location.replace("https://docs.qq.com/slide/DUmNkc2dhcVRXdWZa");</script>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[重定向中……]]></summary></entry><entry><title type="html">机制设计-Dota2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="机制设计-Dota2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。</p>
+<script>window.location.replace("https://docs.qq.com/slide/DUmNkc2dhcVRXdWZa");</script>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[重定向中……]]></summary></entry><entry><title type="html">状态效果-Dota2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="状态效果-Dota2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>对Dota2的状态效果进行一些介绍，并浅聊一下从「机制」开始的游戏设计。</p>
 
 <!-- TODO：现有机制，英雄状态矩阵图，机制视频，NGA DOTA2 WIKI-->
 
@@ -260,6 +260,10 @@
 <p><img src="/assets/img/gameplay/dota2/1.png" alt="" /></p>
 
 <h2 id="前言机制设计与dota2">前言：机制设计与DOTA2</h2>
+
+<blockquote>
+  <p>机制设计可以使游戏开发更简单，也可以使游戏开发更难。</p>
+</blockquote>
 
 <h3 id="机制与困难的机制设计">机制与困难的机制设计</h3>
 
@@ -320,7 +324,7 @@
 <blockquote>
   <p>⚠️⚠️⚠️注意⚠️⚠️⚠️</p>
 
-  <p>Dota2是一款尚在运营，且持续更新（，且时不时重大更新）的游戏，这意味着本文所记载的内容可能随着时间的经过而过时。虽然本文的核心目标是给读者带来启发——这并不依赖于最新版本的规则，但是为了严谨性，也希望读者以实际版本为准。</p>
+  <p>Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游戏，这意味着本文所记载的内容可能随着时间的经过而过时。虽然本文的核心目标是给读者带来启发——这并不依赖于最新版本的规则，但是为了严谨性，也希望读者以实际版本为准。</p>
 
   <p>同时，人非圣贤，笔者的叙述也可能存在纰漏或者错误，Dota2是一款细节和定制逻辑相当多的游戏，笔者会尽量进行测试，但仍然重申，以实际游戏的运行规则为准。</p>
 </blockquote>
@@ -329,7 +333,7 @@
 
 <p><img src="/assets/img/gameplay/dota2/X-3.png" alt="" /></p>
 
-<p>眩晕是最为基础（和常见）的状态机制，在眩晕期间，<strong>无法移动和执行任何动作</strong>。一个特殊的情况是，眩晕时<strong>当前动作将会被打断</strong>。</p>
+<p>眩晕是最为基础（和常见）的状态机制，在眩晕期间，<strong>无法移动和执行任何动作</strong>。一个特殊的情况是，眩晕时<strong>当前当前正在进行的动作将会被打断</strong>。</p>
 
 <p>空说定义是一件很无趣的事情，举一些例子看看：</p>
 
@@ -352,7 +356,7 @@
 
   <p>其一：虽然在状态持续过程中，无法执行任何操作，但是过程中下达的指令，在眩晕状态结束、能执行操作的时候，是会立刻去执行的。比如开BKB（黑黄杖）或者使用闪烁类技能逃走。一定程度上，这是给被控者处于被动方的优待，不至于要不停的狂按才能在第一时间行动。</p>
 
-  <p>其二：留意斧王的行动过程，结束移动收到R指令时候，同时在进行技能前摇和转向过程，这里技能前摇大于转向过程，似乎对于技能前摇小于转向过程的技能，仍需要等待转向过程结束才能发起行为。</p>
+  <p>其二：留意斧王的行动过程，结束移动收到R指令时候，同时在进行技能前摇和转向过程，这里技能前摇大于转向过程，所以转向时间的感受不明显——有时这个转向过程还是相当致命且明显的。</p>
 </blockquote>
 
 <ul>
@@ -368,7 +372,7 @@
 <p>这里有个有意思的地方是，被打断的行为如果要再次使用，是<strong>重新开始计算前摇</strong>的，也就是视频上，怎么放都放不出来的效果。</p>
 
 <blockquote>
-  <p>是否有感受到Dota2中的“下克上”。</p>
+  <p>是否有感受到Dota2中的“以下克上”。</p>
 </blockquote>
 
 <h3 id="状态之间叠加">状态之间叠加</h3>
@@ -383,7 +387,13 @@
 
 <p>可以看到，即便是同时叠加了两个眩晕状态，受害者的头上显示的计时条也是时长较长的那一个。也就是<strong>会取时长最长（效果最强）的那一个</strong>进行显示。</p>
 
-<p>从结果来看貌似很合理？细致分析一下，首先眩晕的<strong>负面效果是无法升级叠加的</strong>——无法执行动作就无法执行动作了，还能咋办。需要考虑的是持续的时长，那么，对于时长有三种处理方式：1、叠加，取两者之和，2、后覆盖前，取最后添加的，3、并存，独立计时。</p>
+<p>从结果来看貌似很合理？细致分析一下：</p>
+
+<p>首先眩晕的<strong>负面效果是无法升级叠加的</strong>——无法执行动作就无法执行动作了，还能咋办。需要考虑的是持续的时长，那么，对于时长有三种处理方式：</p>
+
+<p>1、叠加，取两者之和，
+2、后覆盖前，取最后添加的，
+3、并存，独立计时。</p>
 
 <p>考虑到<strong>Dota2是一个团队游戏</strong>，对于叠加的逻辑，粗看是符合多人合作的，众人拾柴火焰高嘛，大家一起控就完事了；对于后覆盖前，考虑到有时候会将技能用来打伤害，万一这个技能带有小眩晕效果，可能会提前结束之前较长的眩晕时长的控制，反而坏了事，这个场合是有很多弊端、会带来不可控的体验的；对于并存独立计时，这会导致一定程度上时长的浪费，但是却把浪费多少的选择给到了操作者，将<strong>收益直接绑定到了玩家的操作</strong>，让玩家卷无止境，比简单的叠加更具有操作导向。</p>
 
@@ -395,7 +405,7 @@
 
 <p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.4.gif" alt="" /></p>
 
-<p>作为一个讲究对抗的竞技游戏，Dota2遵循着互相克制的设计思路，对于眩晕而言，被眩晕的玩家虽然无法行动，但是队友可以使用带有驱散效果的技能或物品（，当然有些英雄也有着被动会触发驱散），对眩晕效果进行驱散，如上图所示，亚巴顿的无光之盾技能驱散了兽王的吼的眩晕。</p>
+<p>作为一个讲究对抗的竞技游戏，Dota2遵循着互相克制的设计思路，对于眩晕而言，被眩晕的玩家虽然无法行动，但是队友可以使用带有驱散效果的技能或物品（当然有些英雄也有着被动会触发驱散），对眩晕效果进行驱散，如上图所示，亚巴顿的无光之盾技能驱散了兽王的吼的眩晕。</p>
 
 <p>Dota2的驱散分为两种，强驱散和弱驱散（当然有些效果比如光环类是无法驱散的），一般都在技能中有相关描述。</p>
 
@@ -404,9 +414,9 @@
 <blockquote>
   <p>引申话题：</p>
 
-  <p>驱散作为结束手动结束状态机制的方法，有着相当多的细节（，比如有些带驱散的效果的机制是否可以再被驱散？），可以<a href="https://www.google.com.hk/search?q=dota2%E9%A9%B1%E6%95%A3">阅读参考</a>。</p>
+  <p>驱散作为结束手动结束状态机制的方法，有着相当多的细节，从作用上，可以分强弱驱散，从来源上，可以分为技能或者道具；从作用目标上，可以分为自身，敌人，队友。可以<a href="https://www.google.com.hk/search?q=dota2%E9%A9%B1%E6%95%A3">阅读参考</a>。</p>
 
-  <p>可以简单列个典型效果的小表格：</p>
+  <p>这里简单列个典型效果的小表格：</p>
 
   <table>
     <thead>
@@ -695,7 +705,7 @@
 
 <h2 id="总结">总结</h2>
 
-<p><img src="/assets/img/gameplay/dota2/X-5.png" alt="" /></p>]]></content><author><name></name></author><category term="专题报告" /><summary type="html"><![CDATA[对Dota2的状态机制进行一些介绍，并浅聊一下从「机制」开始的游戏设计。]]></summary></entry><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
+<p><img src="/assets/img/gameplay/dota2/X-5.png" alt="" /></p>]]></content><author><name></name></author><category term="专题报告" /><summary type="html"><![CDATA[对Dota2的状态效果进行一些介绍，并浅聊一下从「机制」开始的游戏设计。]]></summary></entry><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
 
 <h1 id="游戏策划的excel手册">游戏策划的Excel手册</h1>
 
