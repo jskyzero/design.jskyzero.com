@@ -67,7 +67,12 @@
           <li class="md-toc-h3"><a href="#加速状态的流逝状态抗性">加速状态的流逝：状态抗性</a></li>
         </ul>
       </li>
-      <li class="md-toc-h2"><a href="#更多的状态机制">更多的状态机制</a></li>
+      <li class="md-toc-h2"><a href="#更多的状态效果">更多的状态效果</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#从归类开始">从归类开始</a></li>
+          <li class="md-toc-h3"><a href="#根基操作or属性">根基：操作or属性</a></li>
+        </ul>
+      </li>
       <li class="md-toc-h2"><a href="#总结">总结</a></li>
     </ul>
   </li>
@@ -182,11 +187,11 @@
 
 <p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.1.gif" alt="" /></p>
 
-<p>可以看到，眩晕时，人物会进入特殊的演出动画，同时人物头顶会有一个旋转的效果，在血条上方还可以看到眩晕的计时槽的流逝，在人物下方UI的状态区域，也可以看到对应的状态图标。</p>
+<p>可以看到，1、眩晕时，人物会进入特殊的演出动画，2、同时人物头顶会有一个旋转的效果，3、在血条上方还可以看到眩晕的计时槽的流逝，4、在人物下方UI的状态区域，也可以看到对应的状态图标，状态图标外层也可以看出倒计时。</p>
 
 <p>前面说过，眩晕期间无法移动和执行任何操作，这里的任何操作具体来说，有：普通攻击、使用技能、使用道具。</p>
 
-<p>从设计目的上来说，眩晕是一种极其强力的控制手段，它剥夺了个人的操作空间，即便是高手也只能眼睁睁地看着别人“演出”，过程中任人宰割——当然，这也是有对策的，具体可见下文。</p>
+<p>从设计目的上来说，眩晕是一种极其强力的控制手段，它剥夺了个人的操作空间，让对抗变得更为策略向与数值向——即便是操作高手也只能眼睁睁地看着别人“演出”，过程中任人宰割——当然，这也是有对策的，具体可见下文。</p>
 
 <p>一个有意思的点是，<strong>被动仍然是生效</strong>的——留意斧王自动释放的被动反击螺旋。</p>
 
@@ -239,7 +244,7 @@
 <p>考虑到<strong>Dota2是一个团队游戏</strong>，对于叠加的逻辑，粗看是符合多人合作的，众人拾柴火焰高嘛，大家一起控就完事了；对于后覆盖前，考虑到有时候会将技能用来打伤害，万一这个技能带有小眩晕效果，可能会提前结束之前较长的眩晕时长的控制，反而坏了事，这个场合是有很多弊端、会带来不可控的体验的；对于并存独立计时，这会导致一定程度上时长的浪费，但是却把浪费多少的选择给到了操作者，将<strong>收益直接绑定到了玩家的操作</strong>，让玩家卷无止境，比简单的叠加更具有操作导向。</p>
 
 <blockquote>
-  <p>阅读了Dota2 WIKI中<a href="https://liquipedia.net/dota2game/Stun">眩晕的相关文章</a>，事实上，游戏中的眩晕有三类，1和3的区别是，1类添加的通用的眩晕标示，而3类一般是自定义的名字，但是带有眩晕的效果，这点可以打开战斗日志，留意对应的描述。而2类则是<a href="https://liquipedia.net/dota2game/Bash">重击类</a>，简单理解而言，重击类是普通攻击可能附带眩晕，由于普通攻击的高频性（甚至有一件道具可以赋予概率眩晕），又有着相当多的细节，这里不再展开。</p>
+  <p>阅读了Dota2 WIKI中<a href="https://liquipedia.net/dota2game/Stun">眩晕的相关文章</a>，事实上，游戏中的眩晕有三类，1类和3类符合传统眩晕的概念，两者区别是，1类添加的通用的眩晕标示，而3类一般是自定义的名字，但是带有眩晕的效果，这点可以打开战斗日志，留意对应的描述。而2类则是<a href="https://liquipedia.net/dota2game/Bash">重击类</a>，简单理解而言，重击类是普通攻击可能附带眩晕，由于普通攻击的高频性（甚至有一件道具可以赋予概率眩晕），又有着相当多的细节，这里不再展开。</p>
 
   <p>如图，大鱼人被动晕属于重击，可以与大晕锤的主动重击眩晕叠加。
 <img src="/assets/img/gameplay/dota2/7.png" alt="" /></p>
@@ -286,11 +291,29 @@
   <p><img src="/assets/img/gameplay/dota2/6.png" alt="" /></p>
 </blockquote>
 
-<h2 id="更多的状态机制">更多的状态机制</h2>
+<h2 id="更多的状态效果">更多的状态效果</h2>
 
 <p><img src="/assets/img/gameplay/dota2/X-4.png" alt="" /></p>
 
-<p>依照某个WIKI列举的25种进行一个枚举：</p>
+<h3 id="从归类开始">从归类开始</h3>
+
+<p>本文一开始试图整理的<a href="https://liquipedia.net/dota2game/Mechanics#Status_effects">25种状态效果</a>出自Dota2 Wiki的机制页面，事实上本文的编写在这里卡了很久，因为缺乏一个指导性的思路。</p>
+
+<p>这个困境直到有一天，在对这些状态效果进行反复的划分和归类时，得到了解决，最终得到了右边所示的一个优雅的划分和思路（后文会逐渐展开）。</p>
+
+<p><img src="/assets/img/gameplay/dota2/11.png" alt="" /></p>
+
+<p>有意思的是，事后才发现，Wiki中也有个类似的划分，早点发现也许就不用思考这么久了。</p>
+
+<p><img src="/assets/img/gameplay/dota2/12.png" alt="" /></p>
+
+<h3 id="根基操作or属性">根基：操作or属性</h3>
+
+<p>一切的起点是这个游戏给了玩家什么，这里以玩家动态操作，与角色静态属性，两个维度进行一个划分：</p>
+
+<p><img src="/assets/img/gameplay/dota2/13.png" alt="" /></p>
+
+<p>以前面我们知道的强力控制眩晕为例：眩晕限制了所有的玩家操作输入（无法下达移动、技能、攻击、使用物品的指令），但是并未对角色基础属性造成影响。</p>
 
 <ul>
   <li>眩晕
@@ -425,6 +448,7 @@
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+08 Jul 2024 - jskyzero - 📝 update dota2
 08 Jul 2024 - jskyzero - 📝 fix 错别字 & add dota2 美学
 08 Jul 2024 - jskyzero - 📝 update 眩晕 agagin
 05 Jul 2024 - jskyzero - 📝 update dota2
@@ -444,7 +468,6 @@
 19 Feb 2024 - jskyzero - 📝 修复错别字
 18 Feb 2024 - jskyzero - 📝 almost finish 眩晕
 17 Feb 2024 - jskyzero - 📝 update intro
-26 Jan 2024 - jskyzero - 📝 fix error
 
 <img alt="Creative Commons License" src="/assets/img/CC.png" />
 
