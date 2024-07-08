@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-08T12:46:20+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-08T13:37:29+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
 
 <h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
@@ -356,9 +356,9 @@
 <blockquote>
   <p>引申话题：</p>
 
-  <p>其一，指令缓存：虽然在状态持续过程中，无法执行任何操作，但是过程中下达的指令，在眩晕状态结束、能执行操作的时候，是会立刻去执行的。比如开BKB（黑黄杖）或者使用闪烁类技能逃走。一定程度上，这是给被控者处于被动方的优待，不至于要不停的狂按才能在第一时间行动。（dota2重还有个shift指令队列，不是本文重点，略过）</p>
+  <p>其一，指令缓存：虽然在状态持续过程中，无法执行任何操作，但是过程中下达的指令，在眩晕状态结束、能执行操作的时候，是会立刻去执行的。比如开BKB（黑黄杖）或者使用闪烁类技能逃走。一定程度上，这是给被控者处于被动方的优待，不至于要不停的狂按才能在第一时间行动。（dota2还有个shift指令队列，不是本文重点，略过）</p>
 
-  <p>其二，转向机制：留意斧王的行动过程，结束移动收到R指令时候，同时在进行技能前摇和转向过程，这里技能前摇大于转向过程，对于技能前摇小于转向过程的技能，仍需要等待转向过程结束才能发起行为，这个等待过程有时相当致命。</p>
+  <p>其二，转向机制：留意斧王的行动过程，结束移动收到R指令时候，同时在进行技能前摇和转向过程，这里技能前摇大于转向过程，对于技能前摇小于转向过程的技能，仍需要等待转向过程结束才能发起行为（最为经典的案例是向身后使用0前摇的道具跳刀），这个等待过程有时相当致命。</p>
 
   <p>其三：突破限制的机制：拍拍熊的A杖可以使大招在被控制时使用！没错，竟然可以在眩晕时使用！（测试了下，大部分控制都行，但是沉默变羊恐惧之类禁用技能的状态是用不出来的，类似嘲讽的虽然用出来，但是无法驱散的话还是会继续被嘲讽）</p>
 </blockquote>
@@ -439,7 +439,7 @@
 
 <p>留意上图熊战士使用激怒获得状态抗性后，被眩晕的时间大幅减少了。</p>
 
-<p>面对敌方控制不足的阵容，状态抗性可以降低对方的控制时间，进一步降低时间内打出的伤害总值，变相增加了生存能力，起到奇效。</p>
+<p>面对敌方控制不足的阵容，状态抗性可以降低对方的控制时间，进一步降低对方控制链打出的伤害总值，变相增加了生存能力，起到奇效。</p>
 
 <blockquote>
   <p>引申话题：</p>
