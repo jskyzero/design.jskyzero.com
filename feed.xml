@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-05T04:57:44+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-08T12:46:20+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
 
 <h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
@@ -319,7 +319,7 @@
 
 <p>笔者曾经思考过对于Dota2，最为出彩的地方是什么，思考下来有两点，一点是MOBA的底层机制；另一点是有趣的英雄玩法。</p>
 
-<p>MOBA的底层机制已经有太多文章，并且有一些品类的局限性，和些许失去时效性。而有趣的英雄玩法，笔者粗略思考下来，核心是英雄丰富的体验，与自身、敌我带来的组合变化，而<strong>状态机制，则为这些丰富的体验和变化，提供了根基和发挥空间</strong>。如果有可能的话，下文也会结合一些英雄设计的例子，来进一步说明这种关系。</p>
+<p>MOBA的底层机制已经有太多文章，并且有一些品类的局限性，和些许失去时效性。而有趣的英雄玩法，笔者粗略思考下来，核心是英雄丰富的体验，与自身、敌我带来的组合变化，而<strong>状态效果和底层机制，则为这些丰富的体验和变化，提供了根基和发挥空间</strong>。如果有可能的话，下文也会结合一些英雄设计的例子，来进一步说明这种关系。</p>
 
 <blockquote>
   <p>⚠️⚠️⚠️注意⚠️⚠️⚠️</p>
@@ -345,6 +345,8 @@
 
 <p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.1.gif" alt="" /></p>
 
+<p>可以看到，眩晕时，人物会进入特殊的演出动画，同时人物头顶会有一个旋转的效果，在血条上方还可以看到眩晕的计时槽的流逝，在人物下方UI的状态区域，也可以看到对应的状态图标。</p>
+
 <p>前面说过，眩晕期间无法移动和执行任何操作，这里的任何操作具体来说，有：普通攻击、使用技能、使用道具。</p>
 
 <p>从设计目的上来说，眩晕是一种极其强力的控制手段，它剥夺了个人的操作空间，即便是高手也只能眼睁睁地看着别人“演出”，过程中任人宰割——当然，这也是有对策的，具体可见下文。</p>
@@ -354,9 +356,11 @@
 <blockquote>
   <p>引申话题：</p>
 
-  <p>其一：虽然在状态持续过程中，无法执行任何操作，但是过程中下达的指令，在眩晕状态结束、能执行操作的时候，是会立刻去执行的。比如开BKB（黑黄杖）或者使用闪烁类技能逃走。一定程度上，这是给被控者处于被动方的优待，不至于要不停的狂按才能在第一时间行动。</p>
+  <p>其一，指令缓存：虽然在状态持续过程中，无法执行任何操作，但是过程中下达的指令，在眩晕状态结束、能执行操作的时候，是会立刻去执行的。比如开BKB（黑黄杖）或者使用闪烁类技能逃走。一定程度上，这是给被控者处于被动方的优待，不至于要不停的狂按才能在第一时间行动。（dota2重还有个shift指令队列，不是本文重点，略过）</p>
 
-  <p>其二：留意斧王的行动过程，结束移动收到R指令时候，同时在进行技能前摇和转向过程，这里技能前摇大于转向过程，所以转向时间的感受不明显——有时这个转向过程还是相当致命且明显的。</p>
+  <p>其二，转向机制：留意斧王的行动过程，结束移动收到R指令时候，同时在进行技能前摇和转向过程，这里技能前摇大于转向过程，对于技能前摇小于转向过程的技能，仍需要等待转向过程结束才能发起行为，这个等待过程有时相当致命。</p>
+
+  <p>其三：突破限制的机制：拍拍熊的A杖可以使大招在被控制时使用！没错，竟然可以在眩晕时使用！（测试了下，大部分控制都行，但是沉默变羊恐惧之类禁用技能的状态是用不出来的，类似嘲讽的虽然用出来，但是无法驱散的话还是会继续被嘲讽）</p>
 </blockquote>
 
 <ul>
@@ -397,6 +401,13 @@
 
 <p>考虑到<strong>Dota2是一个团队游戏</strong>，对于叠加的逻辑，粗看是符合多人合作的，众人拾柴火焰高嘛，大家一起控就完事了；对于后覆盖前，考虑到有时候会将技能用来打伤害，万一这个技能带有小眩晕效果，可能会提前结束之前较长的眩晕时长的控制，反而坏了事，这个场合是有很多弊端、会带来不可控的体验的；对于并存独立计时，这会导致一定程度上时长的浪费，但是却把浪费多少的选择给到了操作者，将<strong>收益直接绑定到了玩家的操作</strong>，让玩家卷无止境，比简单的叠加更具有操作导向。</p>
 
+<blockquote>
+  <p>阅读了Dota2 WIKI中<a href="https://liquipedia.net/dota2game/Stun">眩晕的相关文章</a>，事实上，游戏中的眩晕有三类，1和3的区别是，1类添加的通用的眩晕标示，而3类一般是自定义的名字，但是带有眩晕的效果，这点可以打开战斗日志，留意对应的描述。而2类则是<a href="https://liquipedia.net/dota2game/Bash">重击类</a>，简单理解而言，重击类是普通攻击可能附带眩晕，由于普通攻击的高频性（甚至有一件道具可以赋予概率眩晕），又有着相当多的细节，这里不再展开。</p>
+
+  <p>如图，大鱼人被动晕属于重击，可以与大晕锤的主动重击眩晕叠加。
+<img src="/assets/img/gameplay/dota2/7.png" alt="" /></p>
+</blockquote>
+
 <h3 id="提前结束状态驱散">提前结束状态：驱散</h3>
 
 <ul>
@@ -412,146 +423,12 @@
 <p><img src="/assets/img/gameplay/dota2/5.png" alt="" /></p>
 
 <blockquote>
-  <p>引申话题：</p>
+  <p>引申话题</p>
 
-  <p>驱散作为结束手动结束状态机制的方法，有着相当多的细节，从作用上，可以分强弱驱散，从来源上，可以分为技能或者道具；从作用目标上，可以分为自身，敌人，队友。可以<a href="https://www.google.com.hk/search?q=dota2%E9%A9%B1%E6%95%A3">阅读参考</a>。</p>
+  <p>其一，驱散：作为结束手动结束状态机制的方法，有着相当多的细节，从作用上，可以分强弱驱散，从来源上，可以分为技能或者道具；从作用目标上，可以分为自身，敌人，队友。具体可以<a href="https://liquipedia.net/dota2game/Dispel">阅读参考</a>。</p>
 
-  <p>这里简单列个典型效果的小表格：</p>
-
-  <table>
-    <thead>
-      <tr>
-        <th>名称</th>
-        <th>类别</th>
-        <th>效果</th>
-        <th>作用范围</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>否决</td>
-        <td>道具</td>
-        <td>强驱散</td>
-        <td>对敌</td>
-      </tr>
-      <tr>
-        <td>吹风</td>
-        <td>道具</td>
-        <td>弱驱散</td>
-        <td>对敌，对己</td>
-      </tr>
-      <tr>
-        <td>大鞋</td>
-        <td>道具</td>
-        <td>弱驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>莲花</td>
-        <td>道具</td>
-        <td>弱驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>BKB</td>
-        <td>道具</td>
-        <td>弱驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>幻影斧</td>
-        <td>道具</td>
-        <td>弱驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>盘子</td>
-        <td>道具</td>
-        <td>强驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>毒狗邪恶净化</td>
-        <td>技能</td>
-        <td>持续弱驱散</td>
-        <td>对敌</td>
-      </tr>
-      <tr>
-        <td>毒狗邪恶净愈</td>
-        <td>技能</td>
-        <td>持续弱驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>神谕者气运之末</td>
-        <td>技能</td>
-        <td>弱驱散</td>
-        <td>对敌，对己</td>
-      </tr>
-      <tr>
-        <td>全能骑士驱逐</td>
-        <td>技能</td>
-        <td>弱驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>熊战士激怒强驱</td>
-        <td>技能</td>
-        <td>强驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>小狗狂暴</td>
-        <td>技能</td>
-        <td>弱驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>猴子神行百变</td>
-        <td>技能</td>
-        <td>弱驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>娜迦镜像</td>
-        <td>技能</td>
-        <td>弱驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>混沌骑士混沌之军</td>
-        <td>技能</td>
-        <td>弱驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>主宰无敌斩</td>
-        <td>技能</td>
-        <td>弱驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>蚂蚁回到过去</td>
-        <td>技能</td>
-        <td>强驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>小鱼黑暗契约</td>
-        <td>技能</td>
-        <td>强驱散</td>
-        <td>对己</td>
-      </tr>
-      <tr>
-        <td>潮汐猎人被动</td>
-        <td>技能</td>
-        <td>强驱散</td>
-        <td>对己</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p>总结起来大体上有这么几种附着思路，1、增强性质：如回复、护盾、变身，2、刷新当前状态，如幻像，3、攻击附带特效。</p>
+  <p>其二，光环的生效与消失：测试是生效延迟一帧(0.033秒)，而消失是延迟0.5秒。
+<img src="/assets/img/gameplay/dota2/8.png" alt="" /></p>
 </blockquote>
 
 <h3 id="加速状态的流逝状态抗性">加速状态的流逝：状态抗性</h3>
@@ -568,9 +445,9 @@
   <p>引申话题：</p>
 
   <p>最近的7.36版本更新中，状态抗性被从散华等物品中移除，转而替代为只针对减速的减速抗性。这可能是因为上个版本肉核太过吃香，状态抗性一定程度上为肉核的生存提供了便利。削弱状态抗性也能一定程度上削弱肉核。</p>
-</blockquote>
 
-<p><img src="/assets/img/gameplay/dota2/6.png" alt="" /></p>
+  <p><img src="/assets/img/gameplay/dota2/6.png" alt="" /></p>
+</blockquote>
 
 <h2 id="更多的状态机制">更多的状态机制</h2>
 
@@ -663,7 +540,7 @@
   </li>
   <li>强制移动
     <ul>
-      <li>强制移动状态会使英雄被迫移动到某个位置。例如，Batrider的技能”Flaming Lasso”可以强制移动敌方英雄。</li>
+      <li>强制移动状态会使英雄被迫移动到某个位置。例如，Batrider的技能”Flaming Lasso”可以强制移动敌方英雄「方案选单」。</li>
     </ul>
   </li>
   <li>传送/闪烁
