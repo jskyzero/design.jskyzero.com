@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-11T13:04:31+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-15T05:03:30+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
 
 <h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
@@ -262,9 +262,7 @@
 <h2 id="前言机制设计与dota2">前言：机制设计与DOTA2</h2>
 
 <blockquote>
-  <p>机制设计可以使游戏开发更简单，也可以使游戏开发更难。</p>
-
-  <p>——导语。</p>
+  <p>导语：机制设计可以使游戏开发更简单，也可以使游戏开发更难。</p>
 </blockquote>
 
 <h3 id="mda理论与机制设计">MDA理论与机制设计</h3>
@@ -478,7 +476,7 @@
   <p><img src="/assets/img/gameplay/dota2/12.png" alt="" /></p>
 </blockquote>
 
-<h3 id="根基操作or属性">根基：操作or属性</h3>
+<h3 id="状态效果的根基">状态效果的根基</h3>
 
 <p>一切的起点是，这个游戏给了玩家的是什么？这里以“玩家动态操作，与角色静态属性”，两个维度进行一个划分：</p>
 
@@ -491,12 +489,12 @@
 <p>以前面我们知道的强力控制——眩晕为例：眩晕限制了所有的玩家操作输入（无法下达移动、技能、攻击、使用物品的指令），但是并未对角色基础属性造成影响。</p>
 
 <blockquote>
-  <p>虽然本质和思路非常简单，但是这个“效果”也会面临前面提到的机制的若干问题，这也就是设计师想象力与设计能力的差别。</p>
+  <p>虽然本质和思路非常简单，但是实际执行也会面对，前面提到的机制的若干困难和问题，也将反应出设计师想象力与设计能力的差别。</p>
 </blockquote>
 
-<h3 id="单维度效果">单维度效果</h3>
+<h3 id="单维度效果类">单维度效果类</h3>
 
-<p>先看一些简单的，单维度改变（静止）的效果：</p>
+<p>先看一些简单的，单维度改变的效果：</p>
 
 <p><img src="/assets/img/gameplay/dota2/14.png" alt="" /></p>
 
@@ -519,7 +517,7 @@
 
   <p>其二，真实视野：部分技能在缠绕中会附带对方的真实视野（过程中隐身也是被看到的），有意思的是如果本来就在隐身，虽然会被缠绕，但是是看不到的。</p>
 
-  <p>其三，缴械，部分技能在缠绕中是附带缴械效果的（很快就会介绍缴械）</p>
+  <p>其三，缴械，部分技能在缠绕中是附带缴械效果的（很快就会介绍缴械），其实也属于后文的复合效果。</p>
 </blockquote>
 
 <ul>
@@ -532,7 +530,7 @@
 
 <p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.2.1.gif" alt="" /></p>
 
-<p>沉默相当克制一些法师技能哥，直接让其退化成平A哥。（如果你想问法师哥被沉默了怎么办？请参考前文的驱散或者打开你的脑洞）</p>
+<p>沉默相当克制一些法师技能哥，直接让其退化成超级兵。（如果你想问法师哥被沉默了怎么办？可参考前文的驱散）</p>
 
 <ul>
   <li>普通攻击</li>
@@ -542,9 +540,9 @@
   <p>✨缴械：缴械状态下无法进行普通攻击，比如道具天堂，卡尔推波，哈斯卡心炎……</p>
 </blockquote>
 
-<p>缴械相当克制一些平A哥，直接让其呆住。（如果你想问被缴械了怎么办？缴械一般还不能驱散，建议是活到缴械结束）</p>
-
 <p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.3.1.gif" alt="" /></p>
+
+<p>缴械相当克制一些平A哥，直接让其呆住。（如果你想问被缴械了怎么办？缴械一般还不能驱散，建议是活到缴械结束）</p>
 
 <ul>
   <li>物品</li>
@@ -556,7 +554,7 @@
 
 <p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.4.1.gif" alt="" /></p>
 
-<p>锁闭事实上是个相当稀缺的高贵属性（从上图锁闭是25级质变级天赋就可以看出来），在后期大家道具起来以后被锁闭相当致命。</p>
+<p>锁闭事实上是个相当稀缺的高贵属性（从上图锁闭是25级质变级天赋就可以看出来），在后期大家道具起来以后，被锁闭相当致命。</p>
 
 <ul>
   <li>被动技能</li>
@@ -580,7 +578,9 @@
 <img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.5.2.gif" alt="1" /></p>
 </blockquote>
 
-<h3 id="复合效果">复合效果</h3>
+<h3 id="复合效果类">复合效果类</h3>
+
+<p>接下来我们看一些影响多维度的叠加状态。</p>
 
 <p><img src="/assets/img/gameplay/dota2/15.png" alt="" /></p>
 
@@ -589,12 +589,36 @@
 </ul>
 
 <blockquote>
-  <p>✨眩晕： 眩晕状态会打断所有动作，效果期间无法移动或者执行任何动作。例如，人马的踩，龙骑的duang，骷髅王的锤子……
-✨吹风：吹风状态会使英雄被吹起，无法移动、攻击或使用技能。例如，卡尔的吹风，酒仙风熊猫的吹风，风杖的吹风
-✨催眠：催眠状态会使英雄无法进行任何操作，但受到伤害会醒来。例如，Bane的技能”Nightmare”可以使敌方英雄催眠。
-✨隐藏/驱逐：隐藏/驱逐状态会使英雄消失，无法被攻击或使用技能。例如，黑鸟和毒狗的关。
-✨妖术：状态会使英雄变成移动速度较低的“羊”、无法攻击或使用技能和道具，并且。例如，小Y的变羊，莱恩的变羊，还有最著名的羊刀。</p>
+  <p>✨眩晕： 眩晕状态会打断所有动作，效果期间无法移动或者执行任何动作。例如，人马的踩，龙骑的duang，骷髅王的锤子……</p>
 </blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.1.gif" alt="" /></p>
+
+<p>再次看到眩晕，我们会发现，眩晕实际上就是同时禁止了所有玩家主动操作类的的行为。</p>
+
+<blockquote>
+  <p>✨吹风：吹风状态会使英雄被吹起，无法移动、攻击或使用技能。例如，卡尔的吹风，酒仙风熊猫的吹风，风杖的吹风</p>
+</blockquote>
+
+<p><img src="https://jskyzero.github.io/Assets.Image/assets/img/dota2-25/2.2.1.gif" alt="2" /></p>
+
+<blockquote>
+  <p>✨催眠：催眠状态会使英雄无法进行任何操作，但受到伤害会醒来。例如，Bane的技能”Nightmare”可以使敌方英雄催眠。</p>
+</blockquote>
+
+<p><img src="https://jskyzero.github.io/Assets.Image/assets/img/dota2-25/2.3.1.gif" alt="2" /></p>
+
+<blockquote>
+  <p>✨隐藏/驱逐：隐藏/驱逐状态会使英雄消失，无法被攻击或使用技能。例如，黑鸟和毒狗的关。</p>
+</blockquote>
+
+<p><img src="https://jskyzero.github.io/Assets.Image/assets/img/dota2-25/2.4.1.gif" alt="2" /></p>
+
+<blockquote>
+  <p>✨妖术：状态会使英雄变成移动速度较低的“羊”、无法攻击或使用技能和道具，并且。例如，小Y的变羊，莱恩的变羊，还有最著名的羊刀。</p>
+</blockquote>
+
+<p><img src="https://jskyzero.github.io/Assets.Image/assets/img/dota2-25/2.5.1.gif" alt="2" /></p>
 
 <ul>
   <li>强制行为</li>
@@ -612,7 +636,7 @@
 
 <p><img src="/assets/img/gameplay/dota2/16.png" alt="" /></p>
 
-<h3 id="基础属性攻防血魔移速等">基础属性（攻防血魔移速等）</h3>
+<h3 id="基础属性类">基础属性类</h3>
 
 <ul>
   <li>移动速度</li>
