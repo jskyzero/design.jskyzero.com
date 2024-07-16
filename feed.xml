@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-16T12:13:47+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-16T14:17:47+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
 
 <h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
@@ -309,15 +309,11 @@
 
 <p>读者可能会好奇：</p>
 
-<ul>
-  <li>为什么是Dota2</li>
-</ul>
+<h4 id="为什么是dota2">为什么是Dota2</h4>
 
 <p>因为Dota2很好的满足了上面提到的，好的机制的特征。在笔者所体验过的游戏中，如果要挑选一个机制最为天马行空、最为复杂丰富的游戏，那可能就是Dota2了，甚至，这款游戏还是一款经历过长久运营，和PVP平衡性考验的游戏。</p>
 
-<ul>
-  <li>为什么讨论状态机制</li>
-</ul>
+<h4 id="为什么讨论状态机制">为什么讨论状态机制</h4>
 
 <p>笔者曾经思考过对于Dota2，最为出彩的地方是什么，思考下来有两点，一点是MOBA的底层机制；另一点是有趣的英雄玩法。</p>
 
@@ -341,9 +337,7 @@
 
 <h3 id="状态的基础效果">状态的基础效果</h3>
 
-<ul>
-  <li>眩晕-无法移动和执行任何动作</li>
-</ul>
+<h4 id="眩晕-无法移动和执行任何动作">眩晕-无法移动和执行任何动作</h4>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.1.gif" alt="" /></p>
 
@@ -365,9 +359,7 @@
   <p>其三：突破限制的机制：拍拍熊的A杖可以使大招在被控制时使用！没错，竟然可以在眩晕时使用！（测试了下，大部分控制都行，但是沉默变羊恐惧之类禁用技能的状态是用不出来的，类似嘲讽的虽然用出来，但是无法驱散的话还是会继续被嘲讽）</p>
 </blockquote>
 
-<ul>
-  <li>眩晕-打断当前动作</li>
-</ul>
+<h4 id="眩晕-打断当前动作">眩晕-打断当前动作</h4>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.2.gif" alt="" /></p>
 
@@ -383,9 +375,7 @@
 
 <h3 id="状态之间叠加">状态之间叠加</h3>
 
-<ul>
-  <li>眩晕-重复叠加时（取效果最强）</li>
-</ul>
+<h4 id="眩晕-重复叠加时取效果最强">眩晕-重复叠加时（取效果最强）</h4>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.3.gif" alt="" /></p>
 
@@ -415,10 +405,6 @@
 </blockquote>
 
 <h3 id="提前结束状态驱散">提前结束状态：驱散</h3>
-
-<ul>
-  <li>眩晕-提前结束时（驱散）</li>
-</ul>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.4.gif" alt="" /></p>
 
@@ -498,12 +484,12 @@
 
 <p><img src="/assets/img/gameplay/dota2/14.png" alt="" /></p>
 
-<ul>
-  <li>移动指令</li>
-</ul>
+<h4 id="移动指令">移动指令</h4>
 
 <blockquote>
-  <p>✨缠绕：缠绕状态会使英雄无法移动，但可以攻击和使用技能。例如，孽主的圈，大树的捆，小仙女的花，道具缚灵锁的捆……</p>
+  <ul>
+    <li>✨缠绕：缠绕状态会使英雄无法移动，但可以攻击和使用技能。例如，孽主的圈，大树的捆，小仙女的花，道具缚灵锁的捆……</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.1.1.gif" alt="" /></p>
@@ -520,48 +506,48 @@
   <p>其三，缴械，部分技能在缠绕中是附带缴械效果的（很快就会介绍缴械），其实也属于后文的复合效果。</p>
 </blockquote>
 
-<ul>
-  <li>技能</li>
-</ul>
+<h4 id="技能">技能</h4>
 
 <blockquote>
-  <p>✨沉默：沉默状态下禁止使用技能（也会打断持续施法的技能），例如沉默大招，帕克的粉，紫苑……</p>
+  <ul>
+    <li>✨沉默：沉默状态下禁止使用技能（也会打断持续施法的技能），例如沉默大招，帕克的粉，紫苑……</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.2.1.gif" alt="" /></p>
 
 <p>沉默相当克制一些法师技能哥，直接让其退化成超级兵。（如果你想问法师哥被沉默了怎么办？可参考前文的驱散）</p>
 
-<ul>
-  <li>普通攻击</li>
-</ul>
+<h4 id="普通攻击">普通攻击</h4>
 
 <blockquote>
-  <p>✨缴械：缴械状态下无法进行普通攻击，比如道具天堂，卡尔推波，哈斯卡心炎……</p>
+  <ul>
+    <li>✨缴械：缴械状态下无法进行普通攻击，比如道具天堂，卡尔推波，哈斯卡心炎……</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.3.1.gif" alt="" /></p>
 
 <p>缴械相当克制一些平A哥，直接让其呆住。（如果你想问被缴械了怎么办？缴械一般还不能驱散，建议是活到缴械结束）</p>
 
-<ul>
-  <li>物品</li>
-</ul>
+<h4 id="物品">物品</h4>
 
 <blockquote>
-  <p>✨锁闭：锁闭状态会使英雄无法使用物品。例如，Doom的末日，萨尔的大招……</p>
+  <ul>
+    <li>✨锁闭：锁闭状态会使英雄无法使用物品。例如，Doom的末日，萨尔的大招……</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.4.1.gif" alt="" /></p>
 
 <p>锁闭事实上是个相当稀缺的高贵属性（从上图锁闭是25级质变级天赋就可以看出来），在后期大家道具起来以后，被锁闭相当致命。</p>
 
-<ul>
-  <li>被动技能</li>
-</ul>
+<h4 id="被动技能">被动技能</h4>
 
 <blockquote>
-  <p>✨破坏：破坏会使被动技能无效，例如大影刀，毒龙大，PA魔晶……</p>
+  <ul>
+    <li>✨破坏：破坏会使被动技能无效，例如大影刀，毒龙大，PA魔晶……</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.5.1.gif" alt="" /></p>
@@ -584,12 +570,12 @@
 
 <p><img src="/assets/img/gameplay/dota2/15.png" alt="" /></p>
 
-<ul>
-  <li>常规复合</li>
-</ul>
+<h4 id="常规复合">常规复合</h4>
 
 <blockquote>
-  <p>✨眩晕： 眩晕状态会打断所有动作，效果期间无法移动或者执行任何动作。例如，人马的踩，龙骑的duang，骷髅王的锤子……</p>
+  <ul>
+    <li>✨眩晕： 眩晕状态会打断所有动作，效果期间无法移动或者执行任何动作。例如，人马的踩，龙骑的duang，骷髅王的锤子……</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.1.gif" alt="" /></p>
@@ -597,7 +583,9 @@
 <p>再次看到眩晕，我们会发现，眩晕实际上就是同时禁止了所有玩家主动操作类的的行为。</p>
 
 <blockquote>
-  <p>✨吹风：吹风状态会使英雄被吹起，无法移动、攻击或使用技能。例如，卡尔的吹风，酒仙风熊猫的吹风，风杖的吹风</p>
+  <ul>
+    <li>✨吹风：吹风状态会使英雄被吹起，无法移动、攻击或使用技能。例如，卡尔的吹风，酒仙风熊猫的吹风，风杖的吹风</li>
+  </ul>
 </blockquote>
 
 <p>吹风和下面的妖术应该是DOTA2最具想象力的两个状态属性了，吹风和眩晕最大区别是，吹风由于在空中，很多攻击无法造成伤害。同时吹风一般会附带弱驱散。</p>
@@ -607,7 +595,9 @@
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/2.2.1.gif" alt="2" /></p>
 
 <blockquote>
-  <p>✨睡眠：睡眠状态会使英雄无法进行任何操作，但受到伤害会将睡眠状态转移。例如祸乱之源的噩梦。</p>
+  <ul>
+    <li>✨睡眠：睡眠状态会使英雄无法进行任何操作，但受到伤害会将睡眠状态转移。例如祸乱之源的噩梦。</li>
+  </ul>
 </blockquote>
 
 <p>事实上，睡眠是个相当罕见的状态，目前游戏里面应该只有祸乱之源和大牛有，大牛的睡眠还不会被转移（更像眩晕了）。</p>
@@ -617,7 +607,9 @@
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/2.3.1.gif" alt="2" /></p>
 
 <blockquote>
-  <p>✨隐藏/驱逐：隐藏/驱逐状态会使英雄消失，无法被攻击或使用技能。例如，黑鸟和毒狗的关。</p>
+  <ul>
+    <li>✨隐藏/驱逐：隐藏/驱逐状态会使英雄消失，无法被攻击或使用技能。例如，黑鸟和毒狗的关。</li>
+  </ul>
 </blockquote>
 
 <p>简单理解而言，就是个带无敌的眩晕。只有极少数技能能影响到隐藏的目标，比如毒狗的飘毒。</p>
@@ -627,7 +619,9 @@
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/2.4.1.gif" alt="2" /></p>
 
 <blockquote>
-  <p>✨妖术：状态会使英雄变成无害的小动物、无法攻击或使用技能和道具，并且。例如，小Y的变羊，莱恩的变羊，还有最著名的羊刀。</p>
+  <ul>
+    <li>✨妖术：状态会使英雄变成无害的小动物、无法攻击或使用技能和道具，并且。例如，小Y的变羊，莱恩的变羊，还有最著名的羊刀。</li>
+  </ul>
 </blockquote>
 
 <p>DOTA2最具想象力的状态效果其二，妖术，“功夫再高，也怕羊刀”中的羊刀，施加的效果就是妖术（羊刀的强力，主要是作为道具释放，0抬手，释放范围也不错，后期强先手秒人）。</p>
@@ -636,14 +630,14 @@
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/2.5.1.gif" alt="2" /></p>
 
-<ul>
-  <li>强制行为</li>
-</ul>
+<h4 id="强制行为">强制行为</h4>
 
 <p>除了上述控制，接下来的这几个除了传统的禁止，还会强制玩家执行行为（比如执行移动和执行攻击）</p>
 
 <blockquote>
-  <p>✨嘲讽：嘲讽状态会使英雄被迫攻击某个目标。例如，斧王的吼可以嘲讽周围的敌方英雄，哈斯卡的A杖心炎。</p>
+  <ul>
+    <li>✨嘲讽：嘲讽状态会使英雄被迫攻击某个目标。例如，斧王的吼可以嘲讽周围的敌方英雄，哈斯卡的A杖心炎。</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/3.1.1.gif" alt="2" /></p>
@@ -651,7 +645,9 @@
 <p>嘲讽也是非常经典的设计了，以斧王为例，使用道具跳刀切入吼嘲讽敌人，使用刃甲来使敌人攻击自己时受到反伤，再配合被动被攻击时自动反击，和大招低血量斩杀，非常自成体系的设计。</p>
 
 <blockquote>
-  <p>✨恐惧：恐惧状态会使英雄被迫向某个方向移动（通常是基地），无法进行其他操作。例如，小仙女的大招的恐惧，影魔的大招，奶绿的子弹。</p>
+  <ul>
+    <li>✨恐惧：恐惧状态会使英雄被迫向某个方向移动（通常是基地），无法进行其他操作。例如，小仙女的大招的恐惧，影魔的大招，奶绿的子弹。</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/3.2.1.gif" alt="2" /></p>
@@ -659,33 +655,33 @@
 <p>恐惧利用的就是常规移动了，以小仙女为例，恐惧时候敌人更易踩到花中缠绕、奶绿更容易被中魂魄沉默、影魔大除了伤害，还为为压炮提供了宝贵的控制。</p>
 
 <blockquote>
-  <p>✨强制移动：比如蝙蝠的拉、屠夫的勾。</p>
+  <ul>
+    <li>✨强制移动：比如蝙蝠的拉、屠夫的勾。</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/3.3.1.gif" alt="2" /></p>
 
 <p>强制移动则是更为广泛的强制对方进行移动，通常会搭配其他状态属性使用，比如屠夫的钩，一度被称为Dota2中正反馈最强的技能（细节上，勾命中会有短暂眩晕），如图所示是巫妖的吸（吸的移动甚至还可以无视地形，又是定制逻辑）。</p>
 
-<ul>
-  <li>总结——禁止类控制技能</li>
-</ul>
+<h4 id="总结禁止类控制技能">总结——禁止类控制技能</h4>
 
 <p>Dota2 Wiki中有个单独的页面介绍了不同控制状态的区别，这里简单翻译整理如下。</p>
 
 <p><img src="/assets/img/gameplay/dota2/16.png" alt="" /></p>
 
-<p>单维度里面的就是前面提到的简单状态属性，而数值类下文会进行介绍，复合类就是刚刚介绍的一些多重控制叠加的状态属性。</p>
+<p>单维度里面的就是前面提到的简单状态属性，数值类下文会进行介绍，复合类就是刚刚介绍的一些多重控制叠加的状态属性。</p>
 
 <p>这个表事实上更多偏向于规则层面，就实际设计而言，这些规则能否有一个好的抽象，配合技能的样式，达到既独特又有趣，就是设计的要点。</p>
 
 <h3 id="基础属性类">基础属性类</h3>
 
-<ul>
-  <li>移动速度</li>
-</ul>
+<h4 id="移动速度">移动速度</h4>
 
 <blockquote>
-  <p>✨减速：减速状态会降低英雄的移动速度。例如，冰女的nova可以降低50%的移速。</p>
+  <ul>
+    <li>✨减速：减速状态会降低英雄的移动速度。例如，冰女的nova可以降低50%的移速。</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/4.1.1.gif" alt="2" /></p>
@@ -693,7 +689,9 @@
 <p>降移速就是典型软控，在追击和阻止对方进攻时候都可以派上用场，事实上游戏中还有转身速度等更细致的减速。</p>
 
 <blockquote>
-  <p>✨陷阱：陷阱状态会使英雄的移动受到路径阻挡者的限制，但仍可执行操作。英雄移动时会尽可能尝试绕过它们。例如，发条的框，先知的框，牛头的板（没有封死），海明的冰片等……</p>
+  <ul>
+    <li>✨陷阱：陷阱状态会使英雄的移动受到路径阻挡者的限制，但仍可执行操作。英雄移动时会尽可能尝试绕过它们。例如，发条的框，先知的框，牛头的板（没有封死），海民的冰片等……</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/4.3.1.gif" alt="2" /></p>
@@ -701,7 +699,9 @@
 <p>陷阱听起来更像是造出了一些带阻挡的物体，挡住了玩家移动，不同的是有时阻挡是完全把玩家封死的，甚至有时候玩家靠近阻挡还可能触发被推开或眩晕等效果。</p>
 
 <blockquote>
-  <p>✨束缚：束缚状态会使英雄无法在有限范围外移动（部分是软性的或者逐渐生效的），但仍可执行操作（除了位移性质的道具）。例如，小鱼人的跳，帕克的缠绕，墨客的连……</p>
+  <ul>
+    <li>✨束缚：束缚状态会使英雄无法在有限范围外移动（部分是软性的或者逐渐生效的），但仍可执行操作（除了位移性质的道具）。例如，小鱼人的跳，帕克的缠绕，墨客的连……</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/4.2.1.gif" alt="2" /></p>
@@ -709,7 +709,9 @@
 <p>束缚是一种更弱的的移动限制，一般是玩家移动到边界时候速度会被降为0（小鱼人的跳使得目标虽然可以移动，但是空间不大、墨客的连使得两个人无法分开太远），或者触发眩晕等其他效果（上图帕克的大）。</p>
 
 <blockquote>
-  <p>✨屏障：靠近区域边缘就会将速度降低为0，例如干扰者的圈，马尔斯的大等……</p>
+  <ul>
+    <li>✨屏障：靠近区域边缘就会将速度降低为0，例如干扰者的圈，马尔斯的大等……</li>
+  </ul>
 </blockquote>
 
 <p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/4.4.1.gif" alt="2" /></p>
@@ -718,49 +720,157 @@
 
 <p>感觉上，陷阱（阻挡）、束缚（一定范围内可移动）、屏障（被墙挡住）目的上是比较类似的，有些效果可能同时符合多个特征，本质上是对移动限制的不同方式。</p>
 
-<ul>
-  <li>移动速度（极端化）</li>
-</ul>
+<h4 id="移动速度极端化">移动速度（极端化）</h4>
 
 <p>对于数值向属性，还有一个思路是极端化，比如如果我们将移动极端化，就可以得到闪现。</p>
 
 <blockquote>
-  <p>✨传送/闪烁：立刻移动到目标位置，例如跳刀，女王、敌法、PA的跳……</p>
+  <ul>
+    <li>✨传送/闪烁：立刻移动到目标位置，例如跳刀，女王、敌法、PA的跳……</li>
+  </ul>
 </blockquote>
 
-<ul>
-  <li>攻击</li>
-</ul>
+<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.1.1.gif" alt="5" /></p>
 
-<p>攻击属性也相当复杂（比如攻击速度、弹道、格挡等等），这里介绍攻击直接落空的Miss，失明。</p>
+<p>留意闪烁的抬手，和前文提到的先转向再抬手，这个时间就可以被对方使用技能控住。</p>
+
+<h4 id="攻击">攻击</h4>
+
+<p>攻击属性也相当复杂（比如攻击速度、弹道、格挡等等），这里介绍攻击直接落空的Miss，致盲。</p>
 
 <blockquote>
-  <p>✨致盲：使攻击概率落空，例如光法的弹、TK的激光，力丸的雾</p>
+  <ul>
+    <li>✨致盲：使攻击概率落空，例如光法的弹、TK的激光，力丸的雾</li>
+  </ul>
 </blockquote>
 
-<ul>
-  <li>基础属性</li>
-</ul>
+<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.2.1.gif" alt="5" /></p>
+
+<p>Miss事实上是一个相当数值向的属性，主要就靠抽象来给玩家提供代入感了，比如例子中的被激光刺瞎了眼（</p>
+
+<h4 id="基础属性">基础属性</h4>
 
 <blockquote>
-  <p>✨隐形：使英雄无法通过正常视野看到，必须通过真实视野看到。
-✨相位：使英雄可以穿过其他单位，忽略碰撞体。</p>
+  <ul>
+    <li>✨隐形：使英雄无法通过正常视野看到，必须通过真实视野看到。</li>
+  </ul>
 </blockquote>
 
-<ul>
-  <li>无敌</li>
-</ul>
+<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.3.1.gif" alt="5" /></p>
+
+<p>隐身和真实视野是Dota2的相当底层的机制，上图演示了使用真眼来看到隐身的地方的效果。</p>
 
 <blockquote>
-  <p>✨无敌：无敌状态会使英雄无法被攻击和使用技能，但可以移动。例如，主宰的无敌斩过程中就是无敌状态。
-✨技能免疫：技能免疫状态会使英雄免疫所有技能效果。例如，BKB和小狗的魔免。
-✨攻击免疫：攻击免疫状态会使英雄免疫所有物理攻击。例如，全能骑士的守护天使可以免疫物理伤害。
-✨虚灵：虚灵状态会使英雄免疫所有物理攻击，但会受到额外的魔法伤害。例如，帕格纳的衰老可以使目标进入虚灵状态。</p>
+  <p>引申话题</p>
+
+  <p>无法被真眼看到隐身，诡计之雾：也是Dota2中相当基础的设计，可以拉进控制敌我双方的交战范围，也为劣势方反击抓人和Dota2的团战的观赏性提供了增益。</p>
 </blockquote>
+
+<blockquote>
+  <ul>
+    <li>✨相位：使英雄可以穿过其他单位，忽略碰撞体。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.4.1.gif" alt="5" /></p>
+
+<p>上图演示了使用相位穿过了小Y的大招。（小Y：凭什么我的大招一件1500的装备就给破解了）</p>
+
+<p>现在幽鬼的天生技能就自带相位，鬼没有阻挡也很合理吧！然后幽鬼就没法卡兵了（</p>
+
+<h4 id="无敌">无敌</h4>
+
+<blockquote>
+  <ul>
+    <li>✨无敌：无敌状态会使英雄无法被攻击和使用技能，但可以移动。例如，主宰的无敌斩过程中就是无敌状态。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.5.1.gif" alt="5" /></p>
+
+<p>留意剑圣落地后，可以开出跳刀。一个有趣的现象是，NEC的光环和辉耀都是每秒伤害，GIF中是刚好15帧，严丝合缝。（一个玩家侧的案例是，职业选手可以通过切臂章规避整秒的tick伤害。）</p>
+
+<blockquote>
+  <ul>
+    <li>✨技能免疫：技能免疫状态会使英雄免疫所有技能效果。例如，BKB和小狗的魔免。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.7.1.gif" alt="5" /></p>
+
+<p>其实现在叫做减益免疫了，好像具体的调整有：1、状态持续时长如果大于减益免疫，还是会生效的，典型案例比如船长的X。2、不再是100%免疫魔法伤害了，好像是50%还是40%，也就是说伤害够高还是可以顶着你大的。</p>
+
+<p>魔免也是DOTA2相当底层的设计，简单来说，BKB提供了物理平A哥宝贵的输出环境（免大部分控），开启后会让平A哥和甩技能哥的克制关系直接两级反转，同时BKB持续时间有限，而且有长CD，而且每次开启时间会变短！简直是潘多拉的魔盒但是又得用。</p>
+
+<p>BKB这种通过免疫状态直接对整个游戏玩法产生影响，相当有想象力。</p>
+
+<blockquote>
+  <ul>
+    <li>✨攻击免疫：攻击免疫状态会使英雄免疫所有物理攻击。例如，全能骑士的守护天使可以免疫物理伤害。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.6.1.gif" alt="5" /></p>
+
+<p>物理免疫游戏里面投放的就克制得多了，全能大算一个，更多是通过护甲、伤害格挡、护盾，来造成物理减伤。</p>
+
+<blockquote>
+  <ul>
+    <li>✨虚灵：虚灵状态会使英雄免疫所有物理攻击（但是自己也不能攻击），但会受到额外的魔法伤害。例如，帕格纳的衰老可以使目标进入虚灵状态。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.8.1.gif" alt="5" /></p>
+
+<p>虚灵又是一个堪称传奇的设计，物理免疫，但是自身也无法进行物理攻击，同时增加受到的魔法伤害，一方面是自己的代价，一方面还可以转为主动进攻的道具，让敌人受到伤害更多。</p>
+
+<p>同时虚灵的抽象也很合理，只能说是仅次于BKB的数值类机制设计。</p>
 
 <h2 id="总结">总结</h2>
 
-<p><img src="/assets/img/gameplay/dota2/X-5.png" alt="" /></p>]]></content><author><name></name></author><category term="专题报告" /><summary type="html"><![CDATA[浅聊一下从「机制」开始的游戏设计，然后对Dota2的状态效果进行一些介绍。]]></summary></entry><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
+<p><img src="/assets/img/gameplay/dota2/X-5.png" alt="" /></p>
+
+<p>简要总结一下：</p>
+
+<h3 id="设计方法论要素-x-方式">设计方法论：要素 X 方式</h3>
+
+<p>简单来说就是明确游戏提供给玩家的要素，不仅仅有静态属性，还有动态输入也能作为要素！</p>
+
+<p>再就是设计这些要素的变化方式，过程中注意整体的抽象方式，最好能有一个好的意向，能利于玩家的理解和增加代入感。</p>
+
+<h3 id="对抗与涌现的乐趣">对抗与涌现的乐趣</h3>
+
+<p>现在很多设计都强调涌现，因为单纯的设计机制很快就被玩家消耗，会希望机制之间能互相作用，既能给玩家带来海量可能性，还能给玩家带来意外之喜。</p>
+
+<p>就状态机制而言，需要设计通用的状态规则（比如叠加、驱散等），再设计彼此的优先级（比如后覆盖前，或者依照强者），作为一个PVP游戏，注意给对抗留有余地（可以通过操作、数值等多重方式进行反制。）</p>
+
+<h3 id="附录dota2的美学实现速览">附录：DOTA2的美学实现速览</h3>
+
+<p>一方面DOTA2得益于引擎对粒子系统的高效实现，有着相当精美的画面表现；另一方面，游戏中丰富的内容设计，也给玩家提供了海量审美体验；最后，游戏基于时间的规则设计，也为提供了良好的对抗性。</p>
+
+<p>夸夸环节结束，这里也简单聊一下游戏美学设计与实现的一些倾向性：</p>
+
+<h4 id="少就是多的动画">少就是多的动画</h4>
+
+<p><img src="/assets/img/gameplay/dota2/10.png" alt="" /></p>
+
+<p>游戏中英雄的基础动画数并不多，以至宝冰女的动画为例，仅有5个定制动作与6个基础动作合计11个动画。（注意，上文可是提到了25种以上的状态机制，尤其是控制机制是会需要动画表现的！这个问题如何解决？）</p>
+
+<p>大体的倾向是这样的，提供通用的攻击和施法动作，同时可能不止一个，尤其是攻击，近战角色普遍是3种以上的攻击以特定随机模型进行随机，满足定制&amp;重复的需求。</p>
+
+<p>对于基础动作，一般有两套idle和两套奔跑，idle应该是有个个性演出的idle2，提供差异性，奔跑则是有个残血版本（多少人第一次观察到残血时角色会佝偻对细节发出了惊叹），同时有一个通用的眩晕和摇晃动作，特殊的机制需求就从这俩动作和前面的基础动作中实现。（比如吹风、睡眠都是用的摇晃动作）</p>
+
+<p>低体量，机制化的实现方式也为至宝能替换角色动画提供了可能，想想女王至宝把角色从远程角色的投掷飞镖动作替换为了近战使用鞭子！（这种替换角色动画甚至，还，影响到了逻辑，比如著名的龙骑士喷火的位点发生了改变于是变相削弱了角色，付费削弱.jpeg）</p>
+
+<h4 id="出现即巅峰的特效">出现即巅峰的特效</h4>
+
+<p><img src="/assets/img/gameplay/dota2/9.png" alt="" /></p>
+
+<p>Dota2是一个强竞技性游戏，留意道具的使用是没有抬手的，那么请问附加的特效表现是如何实现的？</p>
+
+<p>答案是出现即巅峰！只能看到巅峰和衰减的过程，出现？依靠人类的大脑进行脑补吧。</p>
+
+<p>特效还有一个特点是海量定制，很多相同状态效果的技能都有不同且细致的效果表现，只能说，羡慕羡慕。</p>]]></content><author><name></name></author><category term="专题报告" /><summary type="html"><![CDATA[浅聊一下从「机制」开始的游戏设计，然后对Dota2的状态效果进行一些介绍。]]></summary></entry><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
 
 <h1 id="游戏策划的excel手册">游戏策划的Excel手册</h1>
 
