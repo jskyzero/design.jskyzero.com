@@ -77,11 +77,16 @@
           <li class="md-toc-h3"><a href="#基础属性类">基础属性类</a></li>
         </ul>
       </li>
-      <li class="md-toc-h2"><a href="#总结">总结</a>
+      <li class="md-toc-h2"><a href="#简要总结">简要总结</a>
         <ul>
           <li class="md-toc-h3"><a href="#设计方法论要素-x-方式">设计方法论：要素 X 方式</a></li>
           <li class="md-toc-h3"><a href="#对抗与涌现的乐趣">对抗与涌现的乐趣</a></li>
-          <li class="md-toc-h3"><a href="#附录dota2的美学实现速览">附录：DOTA2的美学实现速览</a></li>
+        </ul>
+      </li>
+      <li class="md-toc-h2"><a href="#附录dota2的美学实现速览">附录：DOTA2的美学实现速览</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#少就是多的动画">少就是多的动画</a></li>
+          <li class="md-toc-h3"><a href="#出现即巅峰的特效">出现即巅峰的特效</a></li>
         </ul>
       </li>
     </ul>
@@ -678,7 +683,7 @@
 
 <p>同时虚灵的抽象也很合理，只能说是仅次于BKB的数值类机制设计。</p>
 
-<h2 id="总结">总结</h2>
+<h2 id="简要总结">简要总结</h2>
 
 <p><img src="/assets/img/gameplay/dota2/X-5.png" alt="" /></p>
 
@@ -696,13 +701,13 @@
 
 <p>就状态机制而言，需要设计通用的状态规则（比如叠加、驱散等），再设计彼此的优先级（比如后覆盖前，或者依照强者），作为一个PVP游戏，注意给对抗留有余地（可以通过操作、数值等多重方式进行反制。）</p>
 
-<h3 id="附录dota2的美学实现速览">附录：DOTA2的美学实现速览</h3>
+<h2 id="附录dota2的美学实现速览">附录：DOTA2的美学实现速览</h2>
 
 <p>一方面DOTA2得益于引擎对粒子系统的高效实现，有着相当精美的画面表现；另一方面，游戏中丰富的内容设计，也给玩家提供了海量审美体验；最后，游戏基于时间的规则设计，也为提供了良好的对抗性。</p>
 
 <p>夸夸环节结束，这里也简单聊一下游戏美学设计与实现的一些倾向性：</p>
 
-<h4 id="少就是多的动画">少就是多的动画</h4>
+<h3 id="少就是多的动画">少就是多的动画</h3>
 
 <p><img src="/assets/img/gameplay/dota2/10.png" alt="" /></p>
 
@@ -714,7 +719,7 @@
 
 <p>低体量，机制化的实现方式也为至宝能替换角色动画提供了可能，想想女王至宝把角色从远程角色的投掷飞镖动作替换为了近战使用鞭子！（这种替换角色动画甚至，还，影响到了逻辑，比如著名的龙骑士喷火的位点发生了改变于是变相削弱了角色，付费削弱.jpeg）</p>
 
-<h4 id="出现即巅峰的特效">出现即巅峰的特效</h4>
+<h3 id="出现即巅峰的特效">出现即巅峰的特效</h3>
 
 <p><img src="/assets/img/gameplay/dota2/9.png" alt="" /></p>
 
@@ -724,9 +729,12 @@
 
 <p>特效还有一个特点是海量定制，很多相同状态效果的技能都有不同且细致的效果表现，只能说，羡慕羡慕。</p>
 
+<p>（全文完）</p>
+
 
 
 <pre class="post-content controls__inner git-log"><output>~: git log
+16 Jul 2024 - jskyzero - 📝 update toc
 16 Jul 2024 - jskyzero - 📝 finish dota2
 16 Jul 2024 - jskyzero - 📝 update 复合状态
 15 Jul 2024 - jskyzero - 📝 update dota2
@@ -746,7 +754,6 @@
 25 Jun 2024 - jskyzero - update 不可不提的驱散
 25 Jun 2024 - jskyzero - 📝 update 从眩晕开始
 25 Jun 2024 - jskyzero - 📝 finish 前言
-23 Jun 2024 - jskyzero - 📝 update dota2
 
 <img alt="Creative Commons License" src="/assets/img/CC.png" />
 
