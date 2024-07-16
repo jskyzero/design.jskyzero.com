@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-16T14:19:27+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-16T16:37:43+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
 
 <h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
@@ -339,7 +339,7 @@
 
 <h4 id="眩晕-无法移动和执行任何动作">眩晕-无法移动和执行任何动作</h4>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.1.gif" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.1.gif" alt="" /></p>
 
 <p>可以看到，1、眩晕时，人物会进入特殊的演出动画，2、同时人物头顶会有一个旋转的效果，3、在血条上方还可以看到眩晕的计时槽的流逝，4、在人物下方UI的状态区域，也可以看到对应的状态图标，状态图标外层也可以看出倒计时。</p>
 
@@ -361,7 +361,7 @@
 
 <h4 id="眩晕-打断当前动作">眩晕-打断当前动作</h4>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.2.gif" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.2.gif" alt="" /></p>
 
 <p>眩晕期间是没操作空间了，那么之前<strong>进行到一半的操作呢？答案是直接被打断！</strong></p>
 
@@ -377,7 +377,7 @@
 
 <h4 id="眩晕-重复叠加时取效果最强">眩晕-重复叠加时（取效果最强）</h4>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.3.gif" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.3.gif" alt="" /></p>
 
 <p>前面提到过状态之间的相互作用，作为我们认识的第一个状态，先看看这类状态<strong>同类和同类会发生什么反应</strong>。</p>
 
@@ -406,7 +406,7 @@
 
 <h3 id="提前结束状态驱散">提前结束状态：驱散</h3>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.4.gif" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.4.gif" alt="" /></p>
 
 <p>如上图所示，亚巴顿的无光之盾技能驱散了兽王的吼的眩晕。</p>
 
@@ -429,7 +429,7 @@
 
 <p>除了提前结束，玩家也可以通过状态抗性来减少大部分负面效果的持续时间。</p>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.5.gif" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.5.gif" alt="" /></p>
 
 <p>留意上图熊战士使用激怒获得状态抗性后，被眩晕的时间大幅减少了。</p>
 
@@ -492,7 +492,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.1.1.gif" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.1.1.gif" alt="" /></p>
 
 <p>如图，大树的大招，捆住敌人。意象上，大叔让植物高速生长，一定范围内的敌人都被树丛藤蔓所捆绑，还是很形象的。</p>
 
@@ -514,7 +514,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.2.1.gif" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.2.1.gif" alt="" /></p>
 
 <p>沉默相当克制一些法师技能哥，直接让其退化成超级兵。（如果你想问法师哥被沉默了怎么办？可参考前文的驱散）</p>
 
@@ -526,7 +526,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.3.1.gif" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.3.1.gif" alt="" /></p>
 
 <p>缴械相当克制一些平A哥，直接让其呆住。（如果你想问被缴械了怎么办？缴械一般还不能驱散，建议是活到缴械结束）</p>
 
@@ -538,7 +538,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.4.1.gif" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.4.1.gif" alt="" /></p>
 
 <p>锁闭事实上是个相当稀缺的高贵属性（从上图锁闭是25级质变级天赋就可以看出来），在后期大家道具起来以后，被锁闭相当致命。</p>
 
@@ -550,7 +550,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.5.1.gif" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.5.1.gif" alt="" /></p>
 
 <p>破坏相当克制一些被动哥，很多被动能使得角色承伤能力增加，直接一个效果破坏，让肉盾变成正常人。</p>
 
@@ -561,7 +561,7 @@
 <img src="/assets/img/gameplay/dota2/17.png" alt="" /></p>
 
   <p>其二，状态叠加时：时长大概是显示最久的？一些效果表现是叠加显示的。
-<img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.5.2.gif" alt="1" /></p>
+<img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.5.2.gif" alt="1" /></p>
 </blockquote>
 
 <h3 id="复合效果类">复合效果类</h3>
@@ -578,7 +578,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/1.1.gif" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.1.gif" alt="" /></p>
 
 <p>再次看到眩晕，我们会发现，眩晕实际上就是同时禁止了所有玩家主动操作类的的行为。</p>
 
@@ -592,7 +592,7 @@
 
 <p>由于这两点特性，风杖也可以作为保命的拉扯装备。（后续V社还设计了大风帐吹起时可以移动，甚至可以对队友使用，吹风的吹起无敌能覆盖之前的控制状态的危险期，成为究极保命装。）</p>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/2.2.1.gif" alt="2" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.2.1.gif" alt="2" /></p>
 
 <blockquote>
   <ul>
@@ -604,7 +604,7 @@
 
 <p>总感觉之前某个版本娜迦的大招也是睡眠，同时附加无敌，但是刚测了下也改成眩晕了。</p>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/2.3.1.gif" alt="2" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.3.1.gif" alt="2" /></p>
 
 <blockquote>
   <ul>
@@ -616,7 +616,7 @@
 
 <p>有意思的，很多技能、效果的无敌阶段都可以理解为隐藏，比如海民的雪球，产生幻像前的短暂消失等。</p>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/2.4.1.gif" alt="2" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.4.1.gif" alt="2" /></p>
 
 <blockquote>
   <ul>
@@ -628,7 +628,7 @@
 
 <p>简单理解而言，妖术给“眩晕”怜悯地增加了可以缓慢移动，虽然是可以动，但是移动速度很低，看着自己的小动物跑，但有时也跑不了，这就是妖术带来的独特体验。</p>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/2.5.1.gif" alt="2" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.5.1.gif" alt="2" /></p>
 
 <h4 id="强制行为">强制行为</h4>
 
@@ -640,7 +640,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/3.1.1.gif" alt="2" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/3.1.1.gif" alt="2" /></p>
 
 <p>嘲讽也是非常经典的设计了，以斧王为例，使用道具跳刀切入吼嘲讽敌人，使用刃甲来使敌人攻击自己时受到反伤，再配合被动被攻击时自动反击，和大招低血量斩杀，非常自成体系的设计。</p>
 
@@ -650,7 +650,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/3.2.1.gif" alt="2" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/3.2.1.gif" alt="2" /></p>
 
 <p>恐惧利用的就是常规移动了，以小仙女为例，恐惧时候敌人更易踩到花中缠绕、奶绿更容易被中魂魄沉默、影魔大除了伤害，还为为压炮提供了宝贵的控制。</p>
 
@@ -660,7 +660,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/3.3.1.gif" alt="2" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/3.3.1.gif" alt="2" /></p>
 
 <p>强制移动则是更为广泛的强制对方进行移动，通常会搭配其他状态属性使用，比如屠夫的钩，一度被称为Dota2中正反馈最强的技能（细节上，勾命中会有短暂眩晕），如图所示是巫妖的吸（吸的移动甚至还可以无视地形，又是定制逻辑）。</p>
 
@@ -684,7 +684,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/4.1.1.gif" alt="2" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/4.1.1.gif" alt="2" /></p>
 
 <p>降移速就是典型软控，在追击和阻止对方进攻时候都可以派上用场，事实上游戏中还有转身速度等更细致的减速。</p>
 
@@ -694,7 +694,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/4.3.1.gif" alt="2" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/4.3.1.gif" alt="2" /></p>
 
 <p>陷阱听起来更像是造出了一些带阻挡的物体，挡住了玩家移动，不同的是有时阻挡是完全把玩家封死的，甚至有时候玩家靠近阻挡还可能触发被推开或眩晕等效果。</p>
 
@@ -704,7 +704,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/4.2.1.gif" alt="2" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/4.2.1.gif" alt="2" /></p>
 
 <p>束缚是一种更弱的的移动限制，一般是玩家移动到边界时候速度会被降为0（小鱼人的跳使得目标虽然可以移动，但是空间不大、墨客的连使得两个人无法分开太远），或者触发眩晕等其他效果（上图帕克的大）。</p>
 
@@ -714,7 +714,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/4.4.1.gif" alt="2" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/4.4.1.gif" alt="2" /></p>
 
 <p>屏障和束缚类似，一般会有一个具象化的范围（比如墙），同样也是承担卡住玩家的责任。</p>
 
@@ -730,7 +730,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.1.1.gif" alt="5" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.1.1.gif" alt="5" /></p>
 
 <p>留意闪烁的抬手，和前文提到的先转向再抬手，这个时间就可以被对方使用技能控住。</p>
 
@@ -744,7 +744,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.2.1.gif" alt="5" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.2.1.gif" alt="5" /></p>
 
 <p>Miss事实上是一个相当数值向的属性，主要就靠抽象来给玩家提供代入感了，比如例子中的被激光刺瞎了眼（</p>
 
@@ -756,7 +756,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.3.1.gif" alt="5" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.3.1.gif" alt="5" /></p>
 
 <p>隐身和真实视野是Dota2的相当底层的机制，上图演示了使用真眼来看到隐身的地方的效果。</p>
 
@@ -772,7 +772,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.4.1.gif" alt="5" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.4.1.gif" alt="5" /></p>
 
 <p>上图演示了使用相位穿过了小Y的大招。（小Y：凭什么我的大招一件1500的装备就给破解了）</p>
 
@@ -786,7 +786,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.5.1.gif" alt="5" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.5.1.gif" alt="5" /></p>
 
 <p>留意剑圣落地后，可以开出跳刀。一个有趣的现象是，NEC的光环和辉耀都是每秒伤害，GIF中是刚好15帧，严丝合缝。（一个玩家侧的案例是，职业选手可以通过切臂章规避整秒的tick伤害。）</p>
 
@@ -796,7 +796,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.7.1.gif" alt="5" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.7.1.gif" alt="5" /></p>
 
 <p>其实现在叫做减益免疫了，好像具体的调整有：1、状态持续时长如果大于减益免疫，还是会生效的，典型案例比如船长的X。2、不再是100%免疫魔法伤害了，好像是50%还是40%，也就是说伤害够高还是可以顶着你大的。</p>
 
@@ -810,7 +810,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.6.1.gif" alt="5" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.6.1.gif" alt="5" /></p>
 
 <p>物理免疫游戏里面投放的就克制得多了，全能大算一个，更多是通过护甲、伤害格挡、护盾，来造成物理减伤。</p>
 
@@ -820,7 +820,7 @@
   </ul>
 </blockquote>
 
-<p><img src="https://github.com/jskyzero/Assets.Image/raw/main/assets/img/dota2-25/5.8.1.gif" alt="5" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.8.1.gif" alt="5" /></p>
 
 <p>虚灵又是一个堪称传奇的设计，物理免疫，但是自身也无法进行物理攻击，同时增加受到的魔法伤害，一方面是自己的代价，一方面还可以转为主动进攻的道具，让敌人受到伤害更多。</p>
 
