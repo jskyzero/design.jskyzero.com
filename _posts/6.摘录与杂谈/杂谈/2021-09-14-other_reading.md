@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 摘录：互联网的碎片
+title: 摘录：互联网拾遗
 featured-img: bg1
 mathjax: true
 categories: [摘录与杂谈]

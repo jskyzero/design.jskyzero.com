@@ -2,7 +2,7 @@
 layout: post
 title: 游戏AI常用架构技巧
 categories: [游戏AI]
-pro: true
+# pro: true
 ---
 
 
