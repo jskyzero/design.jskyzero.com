@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-26T05:30:19+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-07-26T19:28:44+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
 
 <h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
@@ -369,7 +369,7 @@
 
 <p>留意齐天大圣试图释放猴子猴孙时，被发条技师的弹幕冲击一直打断。</p>
 
-<p>这里有个有意思的地方是，被打断的行为如果要再次使用，是<strong>重新开始计算前摇</strong>的，也就是视频上，怎么放都放不出来的效果。</p>
+<p>这里有个有意思的地方是，被打断的行为如果要再次使用，是<strong>重新开始计算前摇</strong>的，也就是例子上，怎么放都放不出来的效果。</p>
 
 <blockquote>
   <p>是否有感受到Dota2中的“以下克上”。</p>
@@ -451,9 +451,9 @@
 
 <h3 id="从归类开始">从归类开始</h3>
 
-<p>本文一开始试图整理的<a href="https://liquipedia.net/dota2game/Mechanics#Status_effects">25种状态效果</a>出自Dota2 Wiki的机制页面，一开始准备逐条进行介绍，但是有感觉很枯燥，缺乏一个指导性的思路（事实上本文的编写在本节卡了很久）。</p>
+<p>本文一开始试图整理的<a href="https://liquipedia.net/dota2game/Mechanics#Status_effects">25种状态效果</a>出自Dota2 Wiki的机制页面，一开始准备逐条进行介绍，但是又感觉很枯燥，缺乏一个指导性的思路（事实上本文的编写在本节卡了很久）。</p>
 
-<p>这个困境直到有一天，在对这些状态效果进行反复划分和归类时，得到了解决，最终得到了右边所示的、一个相对优雅的划分和思路，后文沿着这个思路逐渐展开。</p>
+<p>这个困境直到有一天，在对这些状态效果进行反复划分和归类时，得到了解决，最终得到了右边所示的、一个相对优雅的划分和思路，后文将沿着这个思路逐渐展开。</p>
 
 <p><img src="/assets/img/gameplay/dota2/11.png" alt="" /></p>
 
@@ -477,7 +477,7 @@
 <p>以前面我们知道的强力控制——眩晕为例：眩晕限制了所有的玩家操作输入（无法下达移动、技能、攻击、使用物品的指令），但是并未对角色基础属性造成影响。</p>
 
 <blockquote>
-  <p>虽然本质和思路非常简单，但是实际执行也会面对，前面提到的机制的若干困难和问题，也将反应出设计师想象力与设计能力的差别。</p>
+  <p>虽然本质和思路非常简单，但是实际执行时，也会面对前面提到的“机制的若干困难和问题”，也将反应出设计师想象力与设计能力的差别。</p>
 </blockquote>
 
 <h3 id="单维度效果类">单维度效果类</h3>
@@ -622,19 +622,19 @@
 
 <blockquote>
   <ul>
-    <li>✨妖术：状态会使英雄变成无害的小动物、无法攻击或使用技能和道具，并且。例如，小Y的变羊，莱恩的变羊，还有最著名的羊刀。</li>
+    <li>✨妖术：状态会使英雄变成无害的小动物、无法攻击或使用技能和道具。例如，小Y的变羊，莱恩的变羊，还有最著名的羊刀。</li>
   </ul>
 </blockquote>
 
 <p>DOTA2最具想象力的状态效果其二，妖术，“功夫再高，也怕羊刀”中的羊刀，施加的效果就是妖术（羊刀的强力，主要是作为道具释放，0抬手，释放范围也不错，后期强先手秒人）。</p>
 
-<p>简单理解而言，妖术给“眩晕”怜悯地增加了可以缓慢移动，虽然是可以动，但是移动速度很低，看着自己的小动物跑，但有时也跑不了，这就是妖术带来的独特体验。</p>
+<p>简单理解而言，妖术给“眩晕”怜悯地增加了“可以缓慢移动”，虽然是可以动，但是移动速度很低，看着自己的小动物努力在跑，但有时也跑不了，这就是妖术带来的独特体验。</p>
 
 <p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.5.1.gif" alt="2" /></p>
 
 <h4 id="强制行为">强制行为</h4>
 
-<p>除了上述控制，接下来的这几个除了传统的禁止，还会强制玩家执行行为（比如执行移动和执行攻击）</p>
+<p>除了上述控制，接下来的这几个状态属性除了传统的禁止，还会强制玩家执行行为（比如执行移动和执行攻击）</p>
 
 <blockquote>
   <ul>
@@ -765,7 +765,7 @@
 <blockquote>
   <p>引申话题</p>
 
-  <p>无法被真眼看到隐身，诡计之雾：也是Dota2中相当基础的设计，可以拉进控制敌我双方的交战范围，也为劣势方反击抓人和Dota2的团战的观赏性提供了增益。</p>
+  <p>无法被真眼看到的隐身！诡计之雾：正常来说真实视野就可以看到隐身状态了，但是却有这样一个消耗道具，即便暴露在真实事业下也不会显形，那就是诡计之雾——这也是Dota2中相当基础的设计，通过诡计之雾的显形距离，可以控制敌我双方的交战距离，此外，开雾也为劣势方反击抓人提供了可能，提高了Dota2的团战的观赏性。</p>
 </blockquote>
 
 <blockquote>
@@ -790,7 +790,9 @@
 
 <p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.5.1.gif" alt="5" /></p>
 
-<p>留意剑圣落地后，可以开出跳刀。一个有趣的现象是，NEC的光环和辉耀都是每秒伤害，GIF中是刚好15帧，严丝合缝。（一个玩家侧的案例是，职业选手可以通过切臂章规避整秒的tick伤害。）</p>
+<p>留意剑圣结束无敌状态落地后，可以开出跳刀。(正常由于NEC的光环和辉耀造成的伤害，跳刀会进入CD)</p>
+
+<p>一个有趣的现象是，NEC的光环和辉耀都是每秒伤害，GIF中是刚好15帧，严丝合缝。（一个玩家侧的案例是，职业选手可以通过切臂章规避整秒的tick伤害。）</p>
 
 <blockquote>
   <ul>
@@ -824,9 +826,9 @@
 
 <p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.8.1.gif" alt="5" /></p>
 
-<p>虚灵又是一个堪称传奇的设计，物理免疫，但是自身也无法进行物理攻击，同时增加受到的魔法伤害，一方面是自己的代价，一方面还可以转为主动进攻的道具，让敌人受到伤害更多。</p>
+<p>虚灵又是一个堪称传奇的设计，物理免疫，但是自身也无法进行物理攻击，同时增加受到的魔法伤害，一方面是自己的代价，一方面还可以转为主动进攻的道具，让敌人受到魔法攻击伤害更多。</p>
 
-<p>同时虚灵的抽象也很合理，只能说是仅次于BKB的数值类机制设计。</p>
+<p>同时虚灵的抽象也很合理，虚化的魂灵，只能说是仅次于BKB的天才数值类机制设计。</p>
 
 <h2 id="简要总结">简要总结</h2>
 
@@ -838,7 +840,7 @@
 
 <p>简单来说就是明确游戏提供给玩家的要素，不仅仅有静态属性，还有动态输入也能作为要素！</p>
 
-<p>再就是设计这些要素的变化方式，过程中注意整体的抽象方式，最好能有一个好的意向，能利于玩家的理解和增加代入感。</p>
+<p>再就是设计这些要素的变化方式，过程中注意整体的抽象方式，最好能有一个好的意象，能利于玩家的理解和增加代入感。</p>
 
 <h3 id="对抗与涌现的乐趣">对抗与涌现的乐趣</h3>
 
