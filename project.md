@@ -16,6 +16,16 @@ permalink: /project/
 
 <!-- <iframe src="//player.bilibili.com/player.html?aid=843822693&bvid=BV1A54y1x7Dj&cid=294940961&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 500px; max-width: 100%；align:center; padding:20px 0;"> </iframe> -->
 
+## 计划表-其六
+`jskyzero` `2024/07/31`
+
+|时间|标签|课题|
+|--|--|--|
+|进行中|游戏设计|[动作游戏设计参考索引](https://design.jskyzero.com/2024/07/31/action_design_pve/)|
+|🚩已完成|游戏设计|[动作游戏的本质](https://design.jskyzero.com/2024/05/14/ActionGameDesign/)|
+|🚩已完成|游戏设计|[12种动作机制与120+案例⭐️](https://design.jskyzero.com/2024/04/04/12_action_design_type/)|
+|🚩已完成|游戏设计|[状态效果-Dota2⭐️](https://design.jskyzero.com/2024/01/26/dota2/)|
+
 
 ## 计划表-其五
 `jskyzero` `2023/03/09`
