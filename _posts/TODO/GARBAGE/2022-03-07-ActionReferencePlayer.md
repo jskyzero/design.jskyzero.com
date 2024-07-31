@@ -7,6 +7,8 @@ long-term-maintenance: true
 
 本文希望充当一个索引，方便概览大量动作游戏中的动作设计。
 
+> 本文现在已废弃，可以参考[迭代后的动作游戏设计参考索引](https://docs.qq.com/slide/DUmFsa1VlY3JOUlNR)
+
 
 # 动作设计参考
 
