@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 动作游戏设计参考索引
-categories: [动作游戏分析]
+# categories: [动作游戏分析]
 ---
 
 重定向中……
