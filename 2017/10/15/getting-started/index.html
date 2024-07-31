@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Getting Started with Sleek | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Getting Started with Sleek" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Getting started" />
+<meta property="og:description" content="Getting started" />
+<link rel="canonical" href="https://design.jskyzero.com/2017/10/15/getting-started/" />
+<meta property="og:url" content="https://design.jskyzero.com/2017/10/15/getting-started/" />
+<meta property="og:site_name" content="设计者笔记" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Getting Started with Sleek" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2017-10-15T00:00:00+00:00","datePublished":"2017-10-15T00:00:00+00:00","description":"Getting started","headline":"Getting Started with Sleek","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2017/10/15/getting-started/"},"url":"https://design.jskyzero.com/2017/10/15/getting-started/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main-light.css"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V2SSPG3YGX');
+</script><script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "jt8gmzbake");
+</script><!-- high light -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+</head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul><li><a href="/">/Home</a></li><li><a href="/program/">/Program</a></li><li><a href="/github/">/Github</a></li><li><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main>
+      <div id="index">
+  <ul class="md-toc">
+  <li class="md-toc-h1"><a href="#getting-started">Getting started</a>
+    <ul>
+      <li class="md-toc-h2"><a href="#writing-content">Writing content</a>
+        <ul>
+          <li class="md-toc-h3"><a href="#posts">Posts</a></li>
+          <li class="md-toc-h3"><a href="#pages">Pages</a></li>
+          <li class="md-toc-h3"><a href="#images-todo">Images TODO</a></li>
+          <li class="md-toc-h3"><a href="#mathjax">MathJax</a></li>
+          <li class="md-toc-h3"><a href="#insert-image">Insert Image</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  <div id="pro">
+  
+  <!-- <div class="categories"> -->
+    
+    
+  <!-- </div> -->
+  
+  <img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="">
+  <img src="https://img.shields.io/badge/日期-2017/10/15-brightgreen.svg?style=flat" alt="">
+</div>
+
+</div>
+
+<h1 id="getting-started">Getting started</h1>
+
+<p><a href="https://pages.github.com">GitHub Pages</a> can automatically generate and serve the website for you.
+Let’s say you have a username/organisation <code class="language-plaintext highlighter-rouge">my-org</code> and project <code class="language-plaintext highlighter-rouge">my-proj</code>; if you locate Jekyll source under <code class="language-plaintext highlighter-rouge">blog</code> folder of master branch in your repo <code class="language-plaintext highlighter-rouge">github.com/my-org/my-proj</code>, the website will be served on <code class="language-plaintext highlighter-rouge">my-org.github.io/my-proj</code>.</p>
+
+<ol>
+  <li>Just download or fork and clone the source from <a href="https://github.com/janczizikow/sleek/">github.com/janczizikow/sleek</a>.</li>
+  <li>Make sure your local machine has ruby and node</li>
+  <li>Edit site settings in  <code class="language-plaintext highlighter-rouge">_config.yml</code> file according to your project.</li>
+  <li>Replace <code class="language-plaintext highlighter-rouge">favicons</code> and <code class="language-plaintext highlighter-rouge">_includes/logo.svg</code> with your own logo.</li>
+</ol>
+
+<p><strong>Note</strong> that you might have to adjust some CSS depending on the width and height of your logo. You can find Header / Navigation related SCSS in <code class="language-plaintext highlighter-rouge">_sass/layout/nav.scss</code>.</p>
+
+<h2 id="writing-content">Writing content</h2>
+
+<h3 id="posts">Posts</h3>
+
+<p>Create a new Markdown file such as <code class="language-plaintext highlighter-rouge">2017-01-13-my-post.md</code> in <code class="language-plaintext highlighter-rouge">_post</code> folder. Configure YAML Front Matter (stuff between <code class="language-plaintext highlighter-rouge">---</code>):</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span> <span class="c1"># needs to be post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Getting Started with Sleek</span> <span class="c1"># title of your post</span>
+<span class="na">featured-img</span><span class="pi">:</span> <span class="s">sleek</span> <span class="c1">#optional - if you want you can include hero image</span>
+<span class="nn">---</span>
+
+</code></pre></div></div>
+
+<h4 id="images">Images</h4>
+
+<p>In case you want to add a hero image to the post, apart from changing <code class="language-plaintext highlighter-rouge">featured-img</code> in YAML, you also need to add the image file to the project. To do so, just upload an image in <code class="language-plaintext highlighter-rouge">.jpg</code> format to <code class="language-plaintext highlighter-rouge">_img</code> folder. The name must before the <code class="language-plaintext highlighter-rouge">.jpg</code> file extension has to match with <code class="language-plaintext highlighter-rouge">featured-img</code> in YAML. Next, run <code class="language-plaintext highlighter-rouge">gulp img</code> from command line to generate optimized version of the image and all the thumbnails. You have to restart  the jekyll server to see the changes. Sleek uses <a href="https://github.com/aFarkas/lazysizes">Lazy Sizes</a> Lazy Loader for loading images. Check the link for more info. Lazy Sizes doesnt’t require any configuration and it’s going to be included in your bundled js file.</p>
+
+<h3 id="pages">Pages</h3>
+
+<p>The home page is located under <code class="language-plaintext highlighter-rouge">index.md</code> file. To change the content or design you have to edit the <code class="language-plaintext highlighter-rouge">default.html</code> file in <code class="language-plaintext highlighter-rouge">_layouts</code> folder.</p>
+
+<p>In order to add a new page, create a new html or markdown file under root directory or inside <code class="language-plaintext highlighter-rouge">_pages</code> folder. To add a link to the page, edit <code class="language-plaintext highlighter-rouge">navigation</code> setting in <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+
+<h3 id="images-todo">Images TODO</h3>
+
+<p>Introduce gulp optimization</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Image Type</th>
+      <th>Width</th>
+      <th>Retina</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>xs</td>
+      <td>Post Thumb</td>
+      <td>535px</td>
+      <td>1070px</td>
+    </tr>
+    <tr>
+      <td>sm</td>
+      <td>Post Thumb</td>
+      <td>500px</td>
+      <td>1000px</td>
+    </tr>
+    <tr>
+      <td>md</td>
+      <td>Post Thumb</td>
+      <td>329.375px</td>
+      <td>658.75px</td>
+    </tr>
+    <tr>
+      <td>lg</td>
+      <td>Post Thumb</td>
+      <td>445.625px</td>
+      <td>891.25px</td>
+    </tr>
+    <tr>
+      <td>xl</td>
+      <td>Post Thumb</td>
+      <td>353.125px</td>
+      <td>706.25px</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Image Type</th>
+      <th>Width</th>
+      <th>Retina</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>xs</td>
+      <td>Post Hero</td>
+      <td>535px</td>
+      <td>1070px</td>
+    </tr>
+    <tr>
+      <td>sm</td>
+      <td>Post Hero</td>
+      <td>500px</td>
+      <td>1000px</td>
+    </tr>
+    <tr>
+      <td>md</td>
+      <td>Post Hero</td>
+      <td>329.375px</td>
+      <td>658.75px</td>
+    </tr>
+    <tr>
+      <td>lg</td>
+      <td>Post Hero</td>
+      <td>445.625px</td>
+      <td>891.25px</td>
+    </tr>
+    <tr>
+      <td>xl</td>
+      <td>Post Hero</td>
+      <td>353.125px</td>
+      <td>706.25px</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mathjax">MathJax</h3>
+
+<p>If you want to use <a href="https://www.mathjax.org/">MathJax</a> in your posts, add <code class="language-plaintext highlighter-rouge">mathjax: true</code> in <a href="https://jekyllrb.com/docs/frontmatter/">YAML front matter</a> of your post:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Blog Post with MathJax</span>
+<span class="na">featured-img</span><span class="pi">:</span> <span class="s">sleek</span> <span class="c1"># optional - if you want you can include name of hero image</span>
+<span class="na">mathjax</span><span class="pi">:</span> <span class="no">true</span> <span class="c1"># add this line in order to enable MathJax in the post</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h4 id="example">Example</h4>
+
+<p>In N-dimensional simplex noise, the squared kernel summation radius $r^2$ is $\frac 1 2$
+for all values of N. This is because the edge length of the N-simplex $s = \sqrt {\frac {N} {N + 1}}$
+divides out of the N-simplex height $h = s \sqrt {\frac {N + 1} {2N}}$.
+The kerel summation radius $r$ is equal to the N-simplex height $h$.</p>
+
+<p>\(r = h = \sqrt{\frac {1} {2}} = \sqrt{\frac {N} {N+1}} \sqrt{\frac {N+1} {2N}}\)
+Happy hacking!</p>
+
+<h3 id="insert-image">Insert Image</h3>
+
+<p>insert like</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">bg</span><span class="p">](</span><span class="sx">/assets/img/HeavenFeel.jpg</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/assets/img/HeavenFeel.jpg" alt="bg" /></p>
+
+
+
+<pre class="post-content controls__inner git-log"><output>~: git log
+31 Jul 2024 - jskyzero - 📝 change structure
+21 Sep 2021 - jskyzero - 🔥 remove {{site.img_url}}
+27 Nov 2018 - jskzyero - re:initial & delete histories
+
+<img alt="Creative Commons License" src="/assets/img/CC.png" />
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre>
+
+
+<script src="/assets/js/main.js"></script>
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2017/10/15/getting-started/';
+this.page.identifier = 'https://design.jskyzero.com/2017/10/15/getting-started/';
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+    </main><footer>
+  <p>Enjoy :)</p>
+  <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com">
+  <img style="border-radius: 4px;"
+  src="https://hits.dwyl.com/jskyzero/designjskyzerocom.svg?style=flat-square">
+  <br>
+  <p>&copy; 2017-2024 设计者笔记. All rights reserved.</p>
+  
+</footer>
+</div>
+  </body>
+</html>
