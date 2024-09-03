@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-09-01T18:33:39+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-09-03T04:34:47+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏设计参考索引</title><link href="https://design.jskyzero.com/2024/07/31/action_design_pve/" rel="alternate" type="text/html" title="动作游戏设计参考索引" /><published>2024-07-31T00:00:00+00:00</published><updated>2024-07-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/07/31/action_design_pve</id><content type="html" xml:base="https://design.jskyzero.com/2024/07/31/action_design_pve/"><![CDATA[<p>重定向中……</p>
 
 <script>window.location.replace("https://docs.qq.com/slide/DUmFsa1VlY3JOUlNR");</script>]]></content><author><name></name></author><summary type="html"><![CDATA[重定向中……]]></summary></entry><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
@@ -53,7 +53,7 @@
 
 <p><img src="/assets/img/act/2022/03-1.jpg" alt="动作游戏核心体验" /></p>
 
-<h3 id="设计方法论奖惩导向">!!设计方法论：奖惩导向</h3>
+<h3 id="设计方法论奖惩导向-上">!!设计方法论：奖惩导向 上</h3>
 
 <ul>
   <li>控制的乐趣</li>
@@ -73,6 +73,10 @@
   <p>当然这对于动作游戏的大部分玩家都是不太成立的，大众玩家不一定知道决策的方式，也不一定能掌握好画面信息的阅读。</p>
 </blockquote>
 
+<ul>
+  <li>奖惩导向</li>
+</ul>
+
 <p>赋予更多意义这个思路下，一个非常有效的做法是<strong>奖惩导向</strong>，听起来很单纯：在玩家做出正确的控制时奖励，做出错误控制时惩罚。奖惩导向最基本也最广泛的例子是血量。</p>
 
 <blockquote>
@@ -80,6 +84,8 @@
 
   <p>旗舰评论中也有段文字，表达相同的概念：“狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。”</p>
 </blockquote>
+
+<h3 id="设计方法论奖惩导向-下">!!设计方法论：奖惩导向 下</h3>
 
 <ul>
   <li>奖惩设计方向的取舍</li>
