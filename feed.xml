@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-09-19T18:28:42+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" /><updated>2024-09-20T13:40:09+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.
 </subtitle><entry><title type="html">动作游戏设计参考索引</title><link href="https://design.jskyzero.com/2024/07/31/action_design_pve/" rel="alternate" type="text/html" title="动作游戏设计参考索引" /><published>2024-07-31T00:00:00+00:00</published><updated>2024-07-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/07/31/action_design_pve</id><content type="html" xml:base="https://design.jskyzero.com/2024/07/31/action_design_pve/"><![CDATA[<p>重定向中……</p>
 
 <script>window.location.replace("https://docs.qq.com/slide/DUmFsa1VlY3JOUlNR");</script>]]></content><author><name></name></author><summary type="html"><![CDATA[重定向中……]]></summary></entry><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
@@ -986,11 +986,11 @@
 
 <p><img src="/assets/img/gameplay/zzz/3.png" alt="" /></p>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[绝区零战斗系统拆解]]></summary></entry><entry><title type="html">GDC动作游戏分享精选</title><link href="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/" rel="alternate" type="text/html" title="GDC动作游戏分享精选" /><published>2023-11-13T00:00:00+00:00</published><updated>2023-11-13T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/13/ACT_with_GDC</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/"><![CDATA[<h1 id="gdc动作游戏分享精选">GDC动作游戏分享精选</h1>
 
-<!--s-->
+<!--newChapter-->
 
 <h2 id="capcom">Capcom</h2>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="2017-街霸5">2017-街霸5</h3>
 
@@ -998,7 +998,7 @@
 
 <p><img src="/assets/img/skill/GDC/1.png" alt="" /></p>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="2018-怪物猎人世界">2018-怪物猎人世界</h3>
 
@@ -1013,7 +1013,7 @@
   </li>
 </ul>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="2019-鬼泣5">2019-鬼泣5</h3>
 
@@ -1021,11 +1021,11 @@
 
 <p><img src="/assets/img/skill/GDC/2.png" alt="" /></p>
 
-<!--s-->
+<!--newChapter-->
 
 <h2 id="platinumgames">PlatinumGames</h2>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="2016-无国界act">2016-无国界ACT</h3>
 
@@ -1033,7 +1033,7 @@
 
 <p><img src="/assets/img/skill/GDC/3.png" alt="" /></p>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="2018-尼尔">2018-尼尔</h3>
 
@@ -1048,11 +1048,11 @@
   </li>
 </ul>
 
-<!--s-->
+<!--newChapter-->
 
 <!-- ## KOEI TECMO -->
 
-<!--v-->
+<!--newVertical-->
 
 <!-- ### 2017-仁王
 
@@ -1062,11 +1062,11 @@
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME) -->
 
-<!--s-->
+<!--newChapter-->
 
 <!-- ## Nintendo -->
 
-<!--v-->
+<!--newVertical-->
 
 <!-- ### 1999-宫本茂
 
@@ -1076,7 +1076,7 @@
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=a9DlhDRZ0yA) -->
 
-<!--v-->
+<!--newVertical-->
 
 <!-- ### 2005-岩田聪
 
@@ -1086,7 +1086,7 @@
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=RMrj8gdUfCU)，[中译](https://www.bilibili.com/video/BV1FA41147j7) -->
 
-<!--v-->
+<!--newVertical-->
 
 <!-- ### 2017-Zelda:BotW
 
@@ -1096,10 +1096,10 @@
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=QyMsF31NdNc)，[中译](https://cowlevel.net/article/2091350)，[中译2](http://www.gamelook.com.cn/2022/12/504104) -->
 
-<!--s-->
+<!--newChapter-->
 <h2 id="santa-monica-studio">Santa Monica Studio</h2>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="2019-战神-战斗系统">2019-战神-战斗系统</h3>
 
@@ -1114,7 +1114,7 @@
   </li>
 </ul>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="2019-战神-关卡">2019-战神-关卡</h3>
 
@@ -1129,7 +1129,7 @@
   </li>
 </ul>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="2019-战神-重启">2019-战神-重启</h3>
 
@@ -1144,7 +1144,7 @@
   </li>
 </ul>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="2023-战神-ai">2023-战神-AI</h3>
 
@@ -1159,11 +1159,11 @@
   </li>
 </ul>
 
-<!--s-->
+<!--newChapter-->
 
 <h2 id="ftg相关">FTG相关</h2>
 
-<!--v-->
+<!--newVertical-->
 
 <!-- ### 2014-骷髅女孩
 
@@ -1173,7 +1173,7 @@
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME) -->
 
-<!--v-->
+<!--newVertical-->
 
 <!-- ### 2015-骷髅女孩
 
@@ -1183,7 +1183,7 @@
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=z-5djm1pRpU) -->
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="2015-罪恶装备xrd">2015-罪恶装备Xrd</h3>
 
@@ -1198,7 +1198,7 @@
   </li>
 </ul>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="2019-ftg-10年来的易玩性">2019-FTG 10年来的易玩性</h3>
 
@@ -1213,7 +1213,7 @@
   </li>
 </ul>
 
-<!--s-->
+<!--newChapter-->
 
 <!-- ## 其他工作室
 
@@ -1221,7 +1221,7 @@
 
 <h2 id="音乐音效相关">音乐/音效相关</h2>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="2015-血源">2015-血源</h3>
 
@@ -1236,10 +1236,10 @@
   </li>
 </ul>
 
-<!--s-->
+<!--newChapter-->
 <h2 id="非gdc">非GDC</h2>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="迪士尼-动画的12个原则">迪士尼-动画的12个原则</h3>
 
@@ -1254,7 +1254,7 @@
   </li>
 </ul>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="河森正治-原创性">河森正治-原创性</h3>
 
@@ -1262,7 +1262,11 @@
 
 <p><img src="/assets/img/skill/GDC/4.png" alt="" /></p>
 
-<!--v-->
+<ul>
+  <li>相关参考：<a href="https://www.youtube.com/watch?v=QhzUC7yTcoc">TEDx Talks</a>, <a href="https://www.bilibili.com/video/BV1eQ4y1E7L4">翻译</a></li>
+</ul>
+
+<!--newVertical-->
 
 <h3 id="徳田优也-mhw设计">徳田优也-MHW设计</h3>
 
@@ -1277,7 +1281,7 @@
   </li>
 </ul>
 
-<!--v-->
+<!--newVertical-->
 
 <h3 id="jskyzero-dota2的机制设计">jskyzero-DOTA2的机制设计</h3>
 
@@ -1285,11 +1289,21 @@
 
 <p><img src="/assets/img/gameplay/dota2/1.png" alt="" /></p>
 
+<ul>
+  <li>相关参考：<a href="https://design.jskyzero.com/2024/01/26/dota2/">设计者笔记</a></li>
+</ul>
+
+<!--newVertical-->
+
 <h3 id="jskyzero-动作游戏的本质">jskyzero-动作游戏的本质</h3>
 
 <p>通过奖惩设计，让玩家控制角色行动这件事，更有乐趣。</p>
 
-<p><img src="/assets/img/act/2022/xmind-0.png" alt="" /></p>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[GDC动作游戏分享精选]]></summary></entry><entry><title type="html">Game_story</title><link href="https://design.jskyzero.com/2023/11/02/game_story/" rel="alternate" type="text/html" title="Game_story" /><published>2023-11-02T00:00:00+00:00</published><updated>2023-11-02T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/02/game_story</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/02/game_story/"><![CDATA[<h1 id="游戏剧本汇总">游戏剧本汇总</h1>
+<p><img src="/assets/img/act/2022/xmind-0.png" alt="" /></p>
+
+<ul>
+  <li>相关参考：<a href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/">设计者笔记</a></li>
+</ul>]]></content><author><name></name></author><category term="动作游戏分析" /><summary type="html"><![CDATA[GDC动作游戏分享精选]]></summary></entry><entry><title type="html">Game_story</title><link href="https://design.jskyzero.com/2023/11/02/game_story/" rel="alternate" type="text/html" title="Game_story" /><published>2023-11-02T00:00:00+00:00</published><updated>2023-11-02T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/02/game_story</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/02/game_story/"><![CDATA[<h1 id="游戏剧本汇总">游戏剧本汇总</h1>
 
 <ul>
   <li>寂静岭2</li>
