@@ -2,7 +2,7 @@
 layout: post
 title: 只狼狮子猿动作设计
 categories: [动作游戏分析]
-pro: true
+# pro: true
 ---
 
 近期通过拆包工具浏览了只狼的狮子猿的一阶段动画，这里进行一个记录和总结，用于后续设计参考。

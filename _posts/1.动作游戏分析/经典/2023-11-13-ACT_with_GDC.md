@@ -3,8 +3,8 @@ layout: post
 title: GDC动作游戏分享精选
 categories: [动作游戏分析]
 # for reveal-md
-separator: <!--s-->
-verticalSeparator: <!--v-->
+separator: <!--newChapter-->
+verticalSeparator: <!--newVertical-->
 theme: black
 # revealOptions:
 #     transition: 'fade'
@@ -12,12 +12,11 @@ theme: black
 
 # GDC动作游戏分享精选
 
-<!--s-->
+<!--newChapter-->
 
 ## Capcom
 
-
-<!--v-->
+<!--newVertical-->
 
 ### 2017-街霸5
 
@@ -26,7 +25,7 @@ theme: black
 ![](/assets/img/skill/GDC/1.png)
 
 
-<!--v-->
+<!--newVertical-->
 
 
 ### 2018-怪物猎人世界
@@ -38,7 +37,7 @@ theme: black
 + 相关参考：[Bilibili](https://www.bilibili.com/video/BV1vW411u7NN)，[中译](https://www.gcores.com/videos/174499)
 
 
-<!--v-->
+<!--newVertical-->
 
 ### 2019-鬼泣5
 
@@ -47,11 +46,11 @@ theme: black
 ![](/assets/img/skill/GDC/2.png)
 
 
-<!--s-->
+<!--newChapter-->
 
 ## PlatinumGames
 
-<!--v-->
+<!--newVertical-->
 
 ### 2016-无国界ACT
 
@@ -60,7 +59,7 @@ theme: black
 ![](/assets/img/skill/GDC/3.png)
 
 
-<!--v-->
+<!--newVertical-->
 
 ### 2018-尼尔
 
@@ -71,12 +70,12 @@ theme: black
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=jKbH9i5axxU)，[中译](https://www.bilibili.com/read/cv3530623/)
 
 
-<!--s-->
+<!--newChapter-->
 
 <!-- ## KOEI TECMO -->
 
 
-<!--v-->
+<!--newVertical-->
 
 <!-- ### 2017-仁王
 
@@ -87,12 +86,12 @@ theme: black
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME) -->
 
 
-<!--s-->
+<!--newChapter-->
 
 <!-- ## Nintendo -->
 
 
-<!--v-->
+<!--newVertical-->
 
 <!-- ### 1999-宫本茂
 
@@ -102,7 +101,7 @@ theme: black
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=a9DlhDRZ0yA) -->
 
-<!--v-->
+<!--newVertical-->
 
 <!-- ### 2005-岩田聪
 
@@ -113,7 +112,7 @@ theme: black
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=RMrj8gdUfCU)，[中译](https://www.bilibili.com/video/BV1FA41147j7) -->
 
 
-<!--v-->
+<!--newVertical-->
 
 <!-- ### 2017-Zelda:BotW
 
@@ -124,11 +123,11 @@ theme: black
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=QyMsF31NdNc)，[中译](https://cowlevel.net/article/2091350)，[中译2](http://www.gamelook.com.cn/2022/12/504104) -->
 
 
-<!--s-->
+<!--newChapter-->
 ## Santa Monica Studio
 
 
-<!--v-->
+<!--newVertical-->
 
 ### 2019-战神-战斗系统
 
@@ -139,7 +138,7 @@ theme: black
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=hE5tWF-Ou2k)，[中译](https://indienova.com/indie-game-development/evolving-combat-in-god-of-war-for-a-new-perspective/)
 
 
-<!--v-->
+<!--newVertical-->
 
 ### 2019-战神-关卡
 
@@ -149,7 +148,7 @@ theme: black
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=eSB29qx6sWw)，[中译](http://www.gamelook.com.cn/2021/06/445171)
 
-<!--v-->
+<!--newVertical-->
 
 ### 2019-战神-重启
 
@@ -160,7 +159,7 @@ theme: black
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=aIb-Lt7WX_s)，[中译](https://www.bilibili.com/video/av50616216)
 
 
-<!--v-->
+<!--newVertical-->
 
 ### 2023-战神-AI
 
@@ -170,13 +169,13 @@ theme: black
 
 + 相关参考：[GDC Vault](https://www.gdcvault.com/play/1029286/Preparing-AI-Systems-for-God)，[中译](https://zhuanlan.zhihu.com/p/627081489)
 
-<!--s-->
+<!--newChapter-->
 
 
 ## FTG相关
 
 
-<!--v-->
+<!--newVertical-->
 
 <!-- ### 2014-骷髅女孩
 
@@ -186,7 +185,7 @@ theme: black
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME) -->
 
-<!--v-->
+<!--newVertical-->
 
 <!-- ### 2015-骷髅女孩
 
@@ -197,7 +196,7 @@ theme: black
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=z-5djm1pRpU) -->
 
 
-<!--v-->
+<!--newVertical-->
 
 ### 2015-罪恶装备Xrd
 
@@ -208,7 +207,7 @@ theme: black
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=yhGjCzxJV3E)
 
 
-<!--v-->
+<!--newVertical-->
 
 ### 2019-FTG 10年来的易玩性
 
@@ -219,7 +218,7 @@ theme: black
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=yhGjCzxJV3E)
 
 
-<!--s-->
+<!--newChapter-->
 
 <!-- ## 其他工作室
 
@@ -229,7 +228,7 @@ theme: black
 ## 音乐/音效相关
 
 
-<!--v-->
+<!--newVertical-->
 
 ### 2015-血源
 
@@ -240,11 +239,11 @@ theme: black
 + 相关参考：[GDC Vault](https://gdcvault.com/play/1023339/The-Gothic-Horror-Music-of)
 
 
-<!--s-->
+<!--newChapter-->
 ## 非GDC
 
 
-<!--v-->
+<!--newVertical-->
 
 ### 迪士尼-动画的12个原则
 
@@ -255,7 +254,7 @@ theme: black
 + 相关参考：[Wikipedia](https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation), [翻译](https://www.bloopanimation.com/zh/the-12-principles-of-animation/)
 
 
-<!--v-->
+<!--newVertical-->
 
 ### 河森正治-原创性
 
@@ -264,7 +263,9 @@ theme: black
 ![](/assets/img/skill/GDC/4.png)
 
 
-<!--v-->
++ 相关参考：[TEDx Talks](https://www.youtube.com/watch?v=QhzUC7yTcoc), [翻译](https://www.bilibili.com/video/BV1eQ4y1E7L4)
+
+<!--newVertical-->
 
 ### 徳田优也-MHW设计
 
@@ -274,7 +275,7 @@ theme: black
 
 + 相关参考：[CEDEC 2018](https://cedil.cesa.or.jp/cedil_sessions/view/1942), [翻译](https://www.bilibili.com/video/BV1LM4y1n7Pd)
 
-<!--v-->
+<!--newVertical-->
 
 ### jskyzero-DOTA2的机制设计
 
@@ -282,9 +283,16 @@ theme: black
 
 ![](/assets/img/gameplay/dota2/1.png)
 
++ 相关参考：[设计者笔记](https://design.jskyzero.com/2024/01/26/dota2/)
+
+
+<!--newVertical-->
+
 
 ### jskyzero-动作游戏的本质
 
 通过奖惩设计，让玩家控制角色行动这件事，更有乐趣。
 
 ![](/assets/img/act/2022/xmind-0.png)
+
++ 相关参考：[设计者笔记](https://design.jskyzero.com/2024/05/14/ActionGameDesign/)
