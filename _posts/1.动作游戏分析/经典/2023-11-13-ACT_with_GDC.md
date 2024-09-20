@@ -240,6 +240,7 @@ theme: black
 
 
 <!--newChapter-->
+
 ## 非GDC
 
 
@@ -275,9 +276,14 @@ theme: black
 
 + 相关参考：[CEDEC 2018](https://cedil.cesa.or.jp/cedil_sessions/view/1942), [翻译](https://www.bilibili.com/video/BV1LM4y1n7Pd)
 
+
+<!--newChapter-->
+
+## 设计者笔记
+
 <!--newVertical-->
 
-### jskyzero-DOTA2的机制设计
+### DOTA2的机制设计
 
 明确变化的维度和作用的方式，然后允许互相作用（涌现）。
 
@@ -289,7 +295,7 @@ theme: black
 <!--newVertical-->
 
 
-### jskyzero-动作游戏的本质
+### 动作游戏的本质
 
 通过奖惩设计，让玩家控制角色行动这件事，更有乐趣。
 
