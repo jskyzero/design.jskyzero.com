@@ -1,0 +1,21 @@
+name: Trigger Dispatch
+
+on:
+  push:
+    branches:
+      - jekyll  # 监控的分支
+    paths:
+      - '_posts/1.动作游戏分析/经典/2023-11-13-ACT_with_GDC.md'  # 监控的文件路径
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger repository_dispatch
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/jskyzero/GDC.ACT/dispatches \
+            -d '{"event_type": "trigger-build"}'  # 自定义事件类型
