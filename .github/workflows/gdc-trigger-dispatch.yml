@@ -11,11 +11,20 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
 
+    # 
     steps:
-      - name: Trigger repository_dispatch
-        run: |
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/jskyzero/GDC.ACT/dispatches \
-            -d '{"event_type": "trigger-build"}'  # 自定义事件类型
+      # - name: Trigger repository_dispatch
+      #   run: |
+      #     curl -X POST \
+      #       -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+      #       -H "Accept: application/vnd.github.v3+json" \
+      #       https://api.github.com/repos/jskyzero/GDC.ACT/dispatches \
+      #       -d '{"event_type": "trigger-build"}'  # 自定义事件类型
+  
+      # https://github.com/peter-evans/repository-dispatch?tab=readme-ov-file#token
+      - name: Repository Dispatch 
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GDC_PAT }}
+          repository: jskyzero/GDC.ACT
+          event-type: trigger-build
