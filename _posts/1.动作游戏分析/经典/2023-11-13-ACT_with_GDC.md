@@ -10,7 +10,7 @@ theme: black
 #     transition: 'fade'
 ---
 
-# GDC动作游戏分享精选
+# GDC 动作游戏分享精选
 
 <!--newChapter-->
 
