@@ -72,58 +72,7 @@ theme: black
 
 <!--newChapter-->
 
-<!-- ## KOEI TECMO -->
 
-
-<!--newVertical-->
-
-<!-- ### 2017-仁王
-
-从测试中调整游戏。
-
-+ 🚧待施工
-
-+ 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME) -->
-
-
-<!--newChapter-->
-
-<!-- ## Nintendo -->
-
-
-<!--newVertical-->
-
-<!-- ### 1999-宫本茂
-
-游戏是一个更大、更广阔的世界的一部分。
-
-+ 🚧待施工
-
-+ 相关参考：[Youtube](https://www.youtube.com/watch?v=a9DlhDRZ0yA) -->
-
-<!--newVertical-->
-
-<!-- ### 2005-岩田聪
-
-玩家之心
-
-+ 🚧待施工
-
-+ 相关参考：[Youtube](https://www.youtube.com/watch?v=RMrj8gdUfCU)，[中译](https://www.bilibili.com/video/BV1FA41147j7) -->
-
-
-<!--newVertical-->
-
-<!-- ### 2017-Zelda:BotW
-
-勇气三角，革新玩法；智慧三角，想法落地；力量三角，美学统一。
-
-+ 🚧待施工
-
-+ 相关参考：[Youtube](https://www.youtube.com/watch?v=QyMsF31NdNc)，[中译](https://cowlevel.net/article/2091350)，[中译2](http://www.gamelook.com.cn/2022/12/504104) -->
-
-
-<!--newChapter-->
 ## Santa Monica Studio
 
 
@@ -220,10 +169,6 @@ theme: black
 
 <!--newChapter-->
 
-<!-- ## 其他工作室
-
-### 师傅的美术风格 -->
-
 
 ## 音乐/音效相关
 
@@ -238,6 +183,43 @@ theme: black
 
 + 相关参考：[GDC Vault](https://gdcvault.com/play/1023339/The-Gothic-Horror-Music-of)
 
+
+<!--newChapter-->
+
+
+## Nintendo
+
+<!--newVertical-->
+
+
+### 1999-宫本茂
+
+游戏是一个更大、更广阔的世界的一部分。
+
++ 🚧待施工
+
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=a9DlhDRZ0yA) -->
+
+<!--newVertical-->
+
+### 2005-岩田聪
+
+玩家之心
+
++ 🚧待施工
+
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=RMrj8gdUfCU)，[中译](https://www.bilibili.com/video/BV1FA41147j7)
+
+
+<!-- newVertical -->
+
+### 2017-Zelda:BotW
+
+勇气三角，革新玩法；智慧三角，想法落地；力量三角，美学统一。
+
++ 🚧待施工
+
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=QyMsF31NdNc)，[中译](https://cowlevel.net/article/2091350)，[中译2](http://www.gamelook.com.cn/2022/12/504104)
 
 <!--newChapter-->
 
@@ -302,3 +284,16 @@ theme: black
 ![](/assets/img/act/2022/xmind-0.png)
 
 + 相关参考：[设计者笔记](https://design.jskyzero.com/2024/05/14/ActionGameDesign/)
+
+<!--newChapter-->
+
+
+## 待办
+
+
++ KOEI TECMO
+  + 2017-仁王
+    + 从测试中调整游戏。
+    + 🚧待施工
+    + 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME)
++ 师傅的美术风格
