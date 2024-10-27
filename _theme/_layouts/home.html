@@ -29,14 +29,18 @@ layout: default
     {%- for post in posts -%}
     {% unless post.path contains "archive"  %}
     <li>
-      <!-- 
+
+      <!--
+      {% comment %}
       now useless
       {%- if post.long-term-maintenance -%}
       {%- assign date_format = " LONG-TERM" -%}
       {%- else -%}
       {%- assign date_format = post.date | date:"%Y-%m-%d" -%}
-      {%- endif -%} 
+      {%- endif -%}
+      {% endcomment %}
       -->
+
       {%- assign date_format = post.date | date:"%Y-%m-%d" -%}
 
 
