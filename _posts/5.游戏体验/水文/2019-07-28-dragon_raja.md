@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "设计漫谈：龙族幻想"
+title: "MMO-手游-龙族幻想"
 featured-img: dragon_raja
 mathjax: true
 categories:  [游戏体验]

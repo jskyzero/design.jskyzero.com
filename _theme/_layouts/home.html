@@ -12,13 +12,18 @@ layout: default
 {%- if posts.size > 0 -%}
   <ul>
 
+    <!--
+    {% comment %}
+    now useless
     {% case category %}
     {% when "游戏体验" %}
     <p>古早游戏体验</p>
     {% else %}
     <p>{{ category }}</p>
     {% endcase %}
-
+    {% endcomment %}
+    -->
+    <p>{{ category }}</p>
 
     <!-- index_categories_sort_by_title -->
     {% if site.index_categories_sort_by_title contains category %}

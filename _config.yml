@@ -17,13 +17,13 @@ index_categories:
   - 专题报告
   - 一期一会
   - 摘录与杂谈
-  - 游戏体验
+  # - 游戏体验
 
 index_categories_sort_by_title:
   - 游戏AI
   - 游戏开发
-  - 游戏体验
   - 摘录与杂谈
+  # - 游戏体验
 
 
 style: light # dark (default) or light
