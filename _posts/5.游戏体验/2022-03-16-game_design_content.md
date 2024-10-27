@@ -1,14 +1,14 @@
 ---
 layout: post
-title: 游戏设计：碎片收集
+title: 摘录：游戏知识·总集篇
 featured-img: bg3
 mathjax: true
-categories: [游戏开发]
+categories: [摘录与杂谈]
 # long-term-maintenance: true
 ---
 
 
-本文汇总一些游戏文化科普、设计解析等视频中的知识点，方便复习查阅。
+本文汇总一些游戏相关的零碎知识点，方便复习查阅。
 
 <!--more-->
 
@@ -21,11 +21,12 @@ categories: [游戏开发]
 + [从魂到仁王：两个游戏类型的重构史](https://zhuanlan.zhihu.com/p/25481394)
 + [《艾尔登法环》：“这可比BOTW劲儿大多了”](https://uynad.github.io/2022/03/05/review/20220306-ring/)
 + [黑暗之魂3 冲击力-韧性机制](https://www.bilibili.com/video/av84266583)
-  + 冲击力-硬直对应表，多种情况下换表：比如出招霸体，韧性：韧性清空时换表
-  + 魂1：大多数只有空与非空；只狼：大多数只有冲击力。
 + [《黑魂》的硬直“发展史”](https://www.gcores.com/articles/171143)
-+ 隐藏分
-+ 肉质、斩味机制
+
+
+<!-- + 隐藏分
++ 肉质、斩味机制 -->
+
 
 ## 访谈摘录
 

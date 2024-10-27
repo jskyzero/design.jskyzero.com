@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 高级随机算法
+title: 游戏AI中的高级随机算法
 featured-img: dmc5
 mathjax: true
 categories: [游戏AI]

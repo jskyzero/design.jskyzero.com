@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 只狼狮子猿动作设计
+title: 拆包看狮子猿动作设计
 categories: [动作游戏分析]
 # pro: true
 ---

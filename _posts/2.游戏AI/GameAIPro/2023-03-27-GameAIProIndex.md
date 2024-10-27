@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GameAIPro总览
+title: GameAIPro·总集篇
 categories: [游戏AI]
 ---
 

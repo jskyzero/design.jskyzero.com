@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 技术讨论：PCG相关
+title: PCG相关讨论
 featured-img: terraria
 mathjax: true
-categories: [游戏开发]
+categories: [游戏开发-水文]
 ---
 
 近些年由于玩家对新内容的不断需求，用于内容填充的PCG技术，经常出现在视野内，本文会就此进行一些讨论。
