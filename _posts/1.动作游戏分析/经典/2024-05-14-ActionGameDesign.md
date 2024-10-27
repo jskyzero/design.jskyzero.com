@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 动作游戏的本质
-categories: [动作游戏分析]
+categories: [动作游戏设计]
 pro: true
 ---
 

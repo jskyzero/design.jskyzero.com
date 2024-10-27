@@ -1,7 +1,7 @@
 ---
 layout: post
-title: GDC动作游戏精选·总集篇 
-categories: [动作游戏分析]
+title: GDC 动作游戏分享精选
+categories: [动作游戏设计]
 # for reveal-md
 separator: <!--newChapter-->
 verticalSeparator: <!--newVertical-->
