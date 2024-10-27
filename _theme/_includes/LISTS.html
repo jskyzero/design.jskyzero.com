@@ -1,14 +1,23 @@
 {% comment %}
   Usage:
-  {% include LISTS.html  category="独立游戏" text="做过的独立游戏们" %}
+  {% include LISTS.html  category="独立游戏" text="做过的独立游戏们" sort=false %}
 
   Parameters:
-  * category         (string) - the list's category
+  * category          (string) - the list's category
+  * text              (string) - the ul title text
+  * sort              (bool) - sort by title
+
+
 {% endcomment %}
 
 
 {% assign category = include.category %}
 {% assign posts = site.categories[category] | reverse %}
+
+{% if include.sort %}
+{% assign posts = posts | sort: "title" %}
+{% endif %}
+
 
 <ul>
     <p>{{ include.text }}</p>
