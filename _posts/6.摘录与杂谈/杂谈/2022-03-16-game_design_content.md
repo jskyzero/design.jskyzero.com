@@ -18,10 +18,10 @@ categories: [摘录与杂谈]
 ## 互联网文章
 
 
-+ [从魂到仁王：两个游戏类型的重构史](https://zhuanlan.zhihu.com/p/25481394)
-+ [《艾尔登法环》：“这可比BOTW劲儿大多了”](https://uynad.github.io/2022/03/05/review/20220306-ring/)
-+ [黑暗之魂3 冲击力-韧性机制](https://www.bilibili.com/video/av84266583)
-+ [《黑魂》的硬直“发展史”](https://www.gcores.com/articles/171143)
++ 《仁王》[从魂到仁王：两个游戏类型的重构史](https://zhuanlan.zhihu.com/p/25481394)
++ 《艾尔登法环》[“这可比BOTW劲儿大多了”](https://uynad.github.io/2022/03/05/review/20220306-ring/)
++ 《黑暗之魂3》[冲击力-韧性机制](https://www.bilibili.com/video/av84266583)
++ 《黑魂》[的硬直“发展史”](https://www.gcores.com/articles/171143)
 
 
 <!-- + 隐藏分
