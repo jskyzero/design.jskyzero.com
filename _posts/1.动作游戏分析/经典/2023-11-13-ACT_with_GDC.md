@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GDC 动作游戏分享精选
+title: GDC动作游戏分享精选
 categories: [动作游戏设计]
 # for reveal-md
 separator: <!--newChapter-->
