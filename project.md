@@ -21,8 +21,8 @@ permalink: /project/
 
 |时间|标签|课题|
 |--|--|--|
-|进行中|游戏设计|[动作游戏设计参考索引](https://design.jskyzero.com/2024/07/31/action_design_pve/)|
-|进行中|游戏设计|[GDC分享记录](https://design.jskyzero.com/2023/11/13/ACT_with_GDC/)|
+|就这样吧|游戏设计|[动作游戏设计参考索引](https://design.jskyzero.com/2024/07/31/action_design_pve/)|
+|就这样吧|游戏设计|[GDC分享记录](https://design.jskyzero.com/2023/11/13/ACT_with_GDC/)|
 |🚩已完成|游戏设计|[动作游戏的本质](https://design.jskyzero.com/2024/05/14/ActionGameDesign/)|
 |🚩已完成|游戏设计|[12种动作机制与120+案例⭐️](https://design.jskyzero.com/2024/04/04/12_action_design_type/)|
 |🚩已完成|游戏设计|[状态效果-Dota2⭐️](https://design.jskyzero.com/2024/01/26/dota2/)|
