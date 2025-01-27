@@ -33,7 +33,7 @@ permalink: /project/
 
 |时间|标签|课题|
 |--|--|--|
-|🚩已完成|游戏设计|[动作速查](https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/)|
+|🚩已完成|游戏设计|[动作速查](https://docs.qq.com/sheet/DUklNSWxUaUVQdFBp?tab=BB08J2)|
 |🚩已完成|游戏设计|[地图设计：白模与UE4](https://github.com/Moons-Project/tLoS)|
 |🚩已完成|游戏设计|[动作设计：BOX与节奏](https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/)|
 |🏴‍☠️放弃了|游戏设计|AI深度学习|
