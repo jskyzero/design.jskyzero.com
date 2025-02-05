@@ -250,6 +250,17 @@ theme: black
 
 <!--newVertical-->
 
+### 知久 温-关卡设计术语
+
+掌握常用关卡设计术语
+
+![](/assets/img/skill/GDC/5.png)
+
+
++ 相关参考：[翻译](https://www.kmhgame.com/zhang-wo-chang-yong-guan-qia-she-ji-shu-yu-xian-yi-you-xi/)
+
+<!--newVertical-->
+
 ### 徳田优也-MHW设计
 
 《怪物猎人：世界》从概念、创意、制作和调整。
@@ -257,6 +268,8 @@ theme: black
 + 🚧待施工
 
 + 相关参考：[CEDEC 2018](https://cedil.cesa.or.jp/cedil_sessions/view/1942), [翻译](https://www.bilibili.com/video/BV1LM4y1n7Pd)
+
+
 
 
 <!--newChapter-->
