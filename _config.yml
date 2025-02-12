@@ -57,6 +57,14 @@ plugins_dir         : _theme/_plugins
 sass:
   sass_dir          : _theme/_sass
 
+# # https://github.com/gjtorikian/jekyll-last-modified-at
+# # Optional. The default date format, used if none is specified in the tag.
+# # last-modified-at:
+# #     date-format: '%d-%b-%y'
+
+# if open git_log
+git_log: true
+
 
 # # SITE CONFIGURATION
 # title: 设计者笔记 # your site title
@@ -151,10 +159,4 @@ permalink: /:year/:month/:day/:title/
 #   - jekyll-last-modified-at
 
 
-# # https://github.com/gjtorikian/jekyll-last-modified-at
-# # Optional. The default date format, used if none is specified in the tag.
-# # last-modified-at:
-# #     date-format: '%d-%b-%y'
 
-# if open git_log
-git_log: true

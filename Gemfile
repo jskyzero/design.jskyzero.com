@@ -9,11 +9,13 @@ source "https://rubygems.org"
 # Happy Jekylling!
 
 # 如果是macOS，使用jekyll 4.3.3，否则使用jekyll 4.2.1
-if RUBY_PLATFORM =~ /darwin/
-  gem "jekyll", "~> 4.3.3"
-else
-  gem "jekyll", "~> 4.2.1"
-end
+# if RUBY_PLATFORM =~ /darwin/
+#   gem "jekyll", "~> 4.3.3"
+# else
+#   gem "jekyll", "~> 4.2.1"
+# end
+gem 'jekyll', '~> 4.4', '>= 4.4.1'
+
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "jekyll-theme-console"
@@ -34,7 +36,7 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
-gem "jekyll-mermaid", "~> 1.0"
 gem "webrick", "~> 1.7"
+gem "jekyll-mermaid", "~> 1.0"
+gem 'jekyll-sass-converter', "~> 3.1"
 gem 'jekyll-seo-tag'
-gem 'sass', '>= 2.0.0'
