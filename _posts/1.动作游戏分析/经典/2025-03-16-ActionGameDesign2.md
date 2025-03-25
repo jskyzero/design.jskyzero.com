@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 动作游戏的哲学
-categories: [动作游戏设计]
+title: 动作游戏设计的10个关键词
+categories: [动作游戏设计-施工中]
 pro: true
 ---
 
