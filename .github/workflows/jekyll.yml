@@ -40,14 +40,14 @@ jobs:
           BRANCH: gh-pages
           FOLDER: "./_site"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Executing remote command
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.SSHKEY }}
-          script: cd ${{ secrets.PROJECT_PATH }} && git pull
+      # - name: Executing remote command
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.HOST }}
+      #     USERNAME: ${{ secrets.USERNAME }}
+      #     PORT: ${{ secrets.PORT }}
+      #     KEY: ${{ secrets.SSHKEY }}
+      #     script: cd ${{ secrets.PROJECT_PATH }} && git pull
 
   # deploy:
   #   runs-on: ubuntu-latest
@@ -62,5 +62,3 @@ jobs:
   #     - name: Deploy to GitHub Pages
   #       id: deployment
   #       uses: actions/deploy-pages@v4
-
-      
