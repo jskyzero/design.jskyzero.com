@@ -23,6 +23,12 @@ categories: [摘录与杂谈]
 + 《黑暗之魂3》[冲击力-韧性机制](https://www.bilibili.com/video/av84266583)
 + 《黑魂》[的硬直“发展史”](https://www.gcores.com/articles/171143)
 
+## UyNad 大师的著作
+
++ [L4D+模式乐趣分析：合作PVE角色分工游戏](https://uynad.github.io/2025/01/24/cyborg/20250125-l4d/)
++ [如龙式路人VS刺客信条式路人](https://uynad.github.io/2025/04/15/cyborg/20250416-hangout/)
++ [如何做“正常”的玩法闭环流程体验](https://uynad.github.io/2025/06/30/cyborg/20250701-forfun/)
+
 
 <!-- + 隐藏分
 + 肉质、斩味机制 -->
@@ -48,6 +54,7 @@ categories: [摘录与杂谈]
 
 
 ## 言论摘录
+
 
 
 ### PART 1 这游戏现在的氛围感很糟糕
