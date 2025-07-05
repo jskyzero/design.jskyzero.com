@@ -3,7 +3,7 @@ layout: post
 title: 杂谈：互联网拾遗
 featured-img: bg1
 mathjax: true
-categories: [摘录与杂谈]
+categories: [乱七八糟]
 # long-term-maintenance: true
 ---
 

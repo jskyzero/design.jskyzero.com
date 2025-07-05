@@ -2,7 +2,7 @@
 layout: post
 title: 编辑器：脚本最小集
 mathjax: true
-categories: [游戏开发]
+categories: [游戏开发-水文]
 ---
 
 ## 增补：一些编辑器的脚本（最小）集

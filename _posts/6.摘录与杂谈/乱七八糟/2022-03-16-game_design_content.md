@@ -3,7 +3,7 @@ layout: post
 title: 杂谈：游戏领域拾遗
 featured-img: bg3
 mathjax: true
-categories: [摘录与杂谈]
+categories: [乱七八糟]
 # long-term-maintenance: true
 ---
 
