@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 12种动作机制与120+案例
+title: 12种动作机制与160+案例
 categories: [动作游戏设计]
 pro: true
 ---
