@@ -25,7 +25,7 @@ categories: [乱七八糟]
 
 ## UyNad 大师的著作
 
-+ 《艾尔登法环》[“这可比BOTW劲儿大多了”](https://uynad.github.io/2022/03/05/review/20220306-ring/)
++ [“这可比BOTW劲儿大多了（《艾尔登法环》）”](https://uynad.github.io/2022/03/05/review/20220306-ring/)
 + [L4D+模式乐趣分析：合作PVE角色分工游戏](https://uynad.github.io/2025/01/24/cyborg/20250125-l4d/)
 + [如龙式路人VS刺客信条式路人](https://uynad.github.io/2025/04/15/cyborg/20250416-hangout/)
 + [如何做“正常”的玩法闭环流程体验](https://uynad.github.io/2025/06/30/cyborg/20250701-forfun/)
