@@ -1,25 +1,35 @@
 @charset "utf-8";
+
 // @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
-// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+SansNoto Serif+SC&display=swap');
+// $base-font-family:     'Source Code Pro', 'Noto Sans SC', monospace !default;
+
+
+// @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
+// $base-font-family:     "LXGW WenKai Mono TC", monospace !default;
+
+
+@import url('https://fontsapi.zeoseven.com/159/main/result.css');
+$base-font-family: "Sarasa Mono SC", monospace !default;
+
 
 // @font-face {
 //   font-family: 'sarasa-mono-sc-regular';
 //   src: url(/assets/font/sarasa-monoT-sc-regular.ttf) format('truetype');
 // }
+// $base-font-family:     'sarasa-mono-sc-regular', monospace !default;
+
+
 // @font-face {
 //   font-family: 'LXGWWenKaiMono-Regular';
 //   src: url(/assets/font/LXGWWenKaiMono-Regular.ttf) format('truetype');
 // }
+// $base-font-family:     "LXGWWenKaiMono-Regular", monospace !default;
 
 
 /**
  * Style variables
  */
-// $base-font-family:     'Source Code Pro', 'Noto Sans SC', monospace !default;
-// $base-font-family:     'sarasa-mono-sc-regular', monospace !default;
-$base-font-family:     "LXGW WenKai Mono TC", monospace !default;
-// $base-font-family:     "LXGWWenKaiMono-Regular", monospace !default;
 
 $base-font-size:       12.5px !default;
 $mobile-font-size:     12px !default;
