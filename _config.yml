@@ -2,9 +2,10 @@ encoding: utf-8
 
 header_pages:
  - index.md
- - index.blog.md
+#  - index.blog.md
  - index.github.md
- - project.md
+ - index.resume.md
+ - index.project.md
 #  - _posts/2018-11-15-project.md
 
 
