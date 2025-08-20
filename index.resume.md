@@ -77,8 +77,8 @@ jsky，动作游戏战斗策划（怪物方向），98年出生，目前7年工�
 ||新战神诸神黄昏|🏆全成就|
 |Square Enix|FF16、尼尔机械纪元、狂野之心|🏆全成就|
 ||讨鬼传/极、真三国无双5/6/7/无双大蛇Z等|✔️通关|
-|其他动作游戏|贝优妮塔1/2|✔️通关|
-||碧蓝幻想Relink|🏆全成就|
+|Platinum Games|贝优妮塔1/2、异界锁链|✔️通关|
+|其他|碧蓝幻想Relink、最初狂战士卡赞|🏆全成就|
 |国产动作游戏|**黑神话悟空**、无限机兵、明末渊虚之羽|🏆全成就|
 
 |<img src="https://card.exophase.com/2/0/70821.png?1605682929">|<img src="/assets/img/others/resume/games.PNG"  style="max-height:142px;">|
