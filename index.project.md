@@ -16,6 +16,16 @@ permalink: /project/
 
 <!-- <iframe src="//player.bilibili.com/player.html?aid=843822693&bvid=BV1A54y1x7Dj&cid=294940961&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 500px; max-width: 100%；align:center; padding:20px 0;"> </iframe> -->
 
+## 计划表-其七
+`jskyzero` `2024/07/31`
+
+
+|时间|标签|课题|
+|--|--|--|
+|进行中|游戏设计|[动作游戏设计的3S方法](https://design.jskyzero.com/2025/03/25/SSS/)|
+|进行中|TBD|TBD|
+
+
 ## 计划表-其六
 `jskyzero` `2024/07/31`
 
