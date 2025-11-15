@@ -63,15 +63,12 @@ theme: black
 
 ### 2018-尼尔
 
-3D动作游戏通识 & RPG中“虚假”的自由。
-
-+ 🚧待施工
-
-+ 相关参考：[Youtube](https://www.youtube.com/watch?v=jKbH9i5axxU)，[中译](https://www.bilibili.com/read/cv3530623/)
+自由感是玩家在突破限制的那一刻：“卧槽，还能这样！”
 
 
 ![](/assets/img/skill/GDC/6.png)
 
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=jKbH9i5axxU)，[中译](https://www.bilibili.com/read/cv3530623/)
 
 <!--newChapter-->
 
