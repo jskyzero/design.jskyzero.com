@@ -70,6 +70,9 @@ theme: black
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=jKbH9i5axxU)，[中译](https://www.bilibili.com/read/cv3530623/)
 
 
+![](/assets/img/skill/GDC/6.png)
+
+
 <!--newChapter-->
 
 
@@ -268,8 +271,6 @@ theme: black
 + 🚧待施工
 
 + 相关参考：[CEDEC 2018](https://cedil.cesa.or.jp/cedil_sessions/view/1942), [翻译](https://www.bilibili.com/video/BV1LM4y1n7Pd)
-
-
 
 
 <!--newChapter-->
