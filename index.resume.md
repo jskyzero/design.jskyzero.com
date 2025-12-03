@@ -101,7 +101,7 @@ jsky，动作游戏战斗策划（怪物方向），98年出生，目前7年工�
 
 ### 关于编程/开源/个人博客
 
-|<img src="https://github-readme-stats.vercel.app/api?username=jskyzero&theme=dracula&show_icons=true&hide_border=true&count_private=true">|<img src="https://streak-stats.demolab.com/?user=jskyzero&theme=dracula&hide_border=true">|
+|<img src="https://github-readme-stats-oyovoyo.vercel.app/api?username=jskyzero&theme=dracula&show_icons=true&hide_border=true&count_private=true">|<img src="https://streak-stats.demolab.com/?user=jskyzero&theme=dracula&hide_border=true">|
 
 长期维护个人博客（[design.jskyzero.com](https://design.jskyzero.com/)）和一些开放性文档（如[12种动作机制与160+案例](https://docs.qq.com/slide/DUmNkc2dhcVRXdWZa)），秉持“开源”理念——**将经验与见解长期、持续地分享，希望能让更多人受益、学习与改进。**推动中国游戏行业发展进步，让玩家能够体验到更多精彩好玩的游戏。
 
