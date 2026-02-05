@@ -220,6 +220,26 @@ theme: black
 
 ## 非GDC
 
+<!--newVertical-->
+
+### 知久 温-关卡设计术语
+
+掌握常用关卡设计术语
+
+![](/assets/img/skill/GDC/5.png)
+
+
++ 相关参考：[翻译](https://www.kmhgame.com/zhang-wo-chang-yong-guan-qia-she-ji-shu-yu-xian-yi-you-xi/)
+
+<!--newVertical-->
+
+### 徳田优也-MHW设计
+
+《怪物猎人：世界》从概念、创意、制作和调整。
+
++ 🚧待施工
+
++ 相关参考：[CEDEC 2018](https://cedil.cesa.or.jp/cedil_sessions/view/1942), [翻译](https://www.bilibili.com/video/BV1LM4y1n7Pd)
 
 <!--newVertical-->
 
@@ -243,42 +263,11 @@ theme: black
 
 + 相关参考：[TEDx Talks](https://www.youtube.com/watch?v=QhzUC7yTcoc), [翻译](https://www.bilibili.com/video/BV1eQ4y1E7L4)
 
-<!--newVertical-->
-
-### 知久 温-关卡设计术语
-
-掌握常用关卡设计术语
-
-![](/assets/img/skill/GDC/5.png)
-
-
-+ 相关参考：[翻译](https://www.kmhgame.com/zhang-wo-chang-yong-guan-qia-she-ji-shu-yu-xian-yi-you-xi/)
-
-<!--newVertical-->
-
-### 徳田优也-MHW设计
-
-《怪物猎人：世界》从概念、创意、制作和调整。
-
-+ 🚧待施工
-
-+ 相关参考：[CEDEC 2018](https://cedil.cesa.or.jp/cedil_sessions/view/1942), [翻译](https://www.bilibili.com/video/BV1LM4y1n7Pd)
 
 
 <!--newChapter-->
 
 ## 设计者笔记
-
-<!--newVertical-->
-
-### DOTA2的机制设计
-
-明确变化的维度和作用的方式，然后允许互相作用（涌现）。
-
-![](/assets/img/gameplay/dota2/1.png)
-
-+ 相关参考：[设计者笔记](https://design.jskyzero.com/2024/01/26/dota2/)
-
 
 <!--newVertical-->
 
@@ -293,6 +282,28 @@ theme: black
 
 <!--newChapter-->
 
+
+### 动作游戏设计的SSS方法
+
+本文介绍一种动作游戏设计的SSS（Situation-Solution-Stage / 情形-解决-编排）方法
+
+![](/assets/img/skill/GDC/8.png)
+
++ 相关参考：[设计者笔记](https://design.jskyzero.com//2025/03/25/SSS/)
+
+<!--newChapter-->
+
+
+### DOTA2的机制设计
+
+明确变化的维度和作用的方式，然后允许互相作用（涌现）。
+
+![](/assets/img/gameplay/dota2/1.png)
+
++ 相关参考：[设计者笔记](https://design.jskyzero.com/2024/01/26/dota2/)
+
+
+<!--newVertical-->
 
 ## 待办
 
