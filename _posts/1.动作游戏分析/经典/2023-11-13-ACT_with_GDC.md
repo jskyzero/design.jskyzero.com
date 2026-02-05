@@ -165,8 +165,17 @@ theme: black
 <!--newChapter-->
 
 
-## 音乐/音效相关
+## 其他
 
+<!--newVertical-->
+
+### 2017-仁王
+
+如何通过玩家反馈来重塑游戏。
+
+![](/assets/img/skill/GDC/9.png)
+
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME)，[Gemini总结](https://gemini.google.com/share/f01fb0fc3f6a)
 
 <!--newVertical-->
 
@@ -302,13 +311,3 @@ theme: black
 
 + 相关参考：[设计者笔记](https://design.jskyzero.com/2024/01/26/dota2/)
 
-
-<!--newVertical-->
-
-## 待办
-
-+ KOEI TECMO
-  + 2017-仁王
-    + 从测试中调整游戏。
-    + 🚧待施工
-    + 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME)
