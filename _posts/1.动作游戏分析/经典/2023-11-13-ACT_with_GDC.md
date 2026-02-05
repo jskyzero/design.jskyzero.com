@@ -30,9 +30,9 @@ theme: black
 
 ### 2018-怪物猎人世界
 
-基于试作与反复试验的概念设计。
+实机原型中进行概念的尝试、制作技术和标准的验证和测试。
 
-+ 🚧待施工
+![](/assets/img/skill/GDC/7.png)
 
 + 相关参考：[Bilibili](https://www.bilibili.com/video/BV1vW411u7NN)，[中译](https://www.gcores.com/videos/174499)
 
@@ -64,7 +64,6 @@ theme: black
 ### 2018-尼尔
 
 自由感是玩家在突破限制的那一刻：“卧槽，还能这样！”
-
 
 ![](/assets/img/skill/GDC/6.png)
 
@@ -134,8 +133,6 @@ theme: black
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME) -->
 
-<!--newVertical-->
-
 <!-- ### 2015-骷髅女孩
 
 2D传统动画演示，Skullgirls的动画制作方式。
@@ -144,8 +141,6 @@ theme: black
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=z-5djm1pRpU) -->
 
-
-<!--newVertical-->
 
 ### 2015-罪恶装备Xrd
 
@@ -301,10 +296,8 @@ theme: black
 
 ## 待办
 
-
 + KOEI TECMO
   + 2017-仁王
     + 从测试中调整游戏。
     + 🚧待施工
     + 相关参考：[Youtube](https://www.youtube.com/watch?v=bqCSzO15VME)
-+ 师傅的美术风格
