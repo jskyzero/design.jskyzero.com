@@ -3,13 +3,13 @@ layout: post
 title: /Resume
 mathjax: true
 permalink: /Resume/
-date: 2025-08-15
+date: 2026-03-24
 ---
 
 
 # Resume / 个人简历
 
-jsky，动作游戏战斗策划（怪物方向），98年出生，目前7年工作经验，就职腾讯IEG职级P10。具备程序背景，属于半技术策划。工作中尤其擅长**展现怪物特色的玩法动作设计，与营造交手感的交互AI编写。**
+jsky，动作游戏战斗策划（怪物方向），98年出生，目前7年工作经验，就职腾讯IEG职级P11。具备程序背景，属于半技术策划。工作中尤其擅长**展现怪物特色的玩法动作设计，与营造交手感的交互AI编写。**
 
 联系方式：<jskyzero@outlook.com>
 
@@ -72,13 +72,13 @@ jsky，动作游戏战斗策划（怪物方向），98年出生，目前7年工�
 |FromSoftware|恶魔之魂重制版、血源/老猎人、装甲核心6|🏆全成就|
 ||**只狼**、**艾尔登法环/幽影之地**|🏆全成就|
 ||黑暗之魂3|✔️通关|
-|TeamNinja|仁王1/3DLC、**仁王2/3DLC**、|🏆全成就|
+|TeamNinja|仁王1/3DLC、**仁王2/3DLC**、仁王3|🏆全成就|
 ||最终幻想起源、卧龙/3DLC、浪人崛起|🏆全成就|
 |Santa Monica|战神3、**新战神**|✔️通关|
 ||新战神诸神黄昏|🏆全成就|
 |Square Enix|FF16、尼尔机械纪元、狂野之心|🏆全成就|
 ||讨鬼传/极、真三国无双5/6/7/无双大蛇Z等|✔️通关|
-|Platinum Games|贝优妮塔1/2、异界锁链|✔️通关|
+|Platinum Games|贝优妮塔1/2、异界锁链、忍龙4|✔️通关|
 |其他|碧蓝幻想Relink、最初狂战士卡赞|🏆全成就|
 |国产动作游戏|**黑神话悟空**、无限机兵、明末渊虚之羽|🏆全成就|
 
@@ -90,10 +90,10 @@ jsky，动作游戏战斗策划（怪物方向），98年出生，目前7年工�
 |类别|事项|
 |MiniGame|2017年腾讯游戏校园行公开课**MiniGame评选第一**|
 ||2019年腾讯游戏开普勒计划**MiniGame银奖**|
-|绩效考核|**高绩效占比5/12，无低绩效**（注：腾讯考核实行强制比例末位淘汰）|
-|知识积累|内部论坛发表10余篇文章，次次获编辑推荐/公众号转载，且**2次登上文章热度头条**|
+|绩效考核|**高绩效占比6/13，无低绩效**（注：腾讯考核实行强制比例末位淘汰）|
+|知识积累|内部论坛发表10余篇文章，次次获编辑推荐/公众号转载，且**3次登上文章热度头条**|
 ||2021年、2024年**两次获得腾讯知识奖**（注：全IEG评选约20名）|
-||曾受邀给IEGG进行内部授课，部分文章授权给**魔方工作室官号制作对外学习视频**，[链接](https://www.bilibili.com/video/BV1PbC2YXEJW)|
+||曾受邀给IEG Global进行内部授课，部分文章授权给**魔方工作室官号制作对外学习视频**，[链接](https://www.bilibili.com/video/BV1PbC2YXEJW)|
 |其他类别|2022年因高校产教融合项目获**可持续社会价值奖**，多年来持续参与各类游戏大赛评选|
 ||2024年被聘任为**中山大学软件工程学院职业导师**，参与3D游戏开发课程辅助教学|
 {: .nowrap-col-1}
@@ -103,5 +103,5 @@ jsky，动作游戏战斗策划（怪物方向），98年出生，目前7年工�
 
 |<img src="https://github-readme-stats-oyovoyo.vercel.app/api?username=jskyzero&theme=dracula&show_icons=true&hide_border=true&count_private=true">|<img src="https://streak-stats.demolab.com/?user=jskyzero&theme=dracula&hide_border=true">|
 
-长期维护个人博客（[design.jskyzero.com](https://design.jskyzero.com/)）和一些开放性文档（如[12种动作机制与160+案例](https://docs.qq.com/slide/DUmNkc2dhcVRXdWZa)），秉持“开源”理念——**将经验与见解长期、持续地分享，希望能让更多人受益、学习与改进。**推动中国游戏行业发展进步，让玩家能够体验到更多精彩好玩的游戏。
+长期维护个人博客（[design.jskyzero.com](https://design.jskyzero.com/)）和一些开放性文档（如[12种动作机制与160+案例](https://docs.qq.com/slide/DUmNkc2dhcVRXdWZa)），秉持“开源”理念——**将经验与见解长期、持续地分享，希望能让更多人受益、学习与改进。**推动游戏行业发展进步，让玩家能够体验到更多精彩好玩的游戏。
 
