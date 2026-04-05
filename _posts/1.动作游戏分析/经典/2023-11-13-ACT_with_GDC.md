@@ -1,11 +1,11 @@
 ---
-layout: post
 theme: seriph
 background: https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80
 class: text-center
 highlighter: shiki
 transition: slide-left
 title: GDC动作游戏分享精选
+layout: post
 categories: [动作游戏设计]
 ---
 
@@ -13,7 +13,7 @@ categories: [动作游戏设计]
 动作游戏分析方法论与案例拆解
 
 ---
-# <!-- layout: section -->
+<!-- layout: section -->
 ## Capcom
 
 ---
@@ -43,7 +43,7 @@ categories: [动作游戏设计]
 ![DMC5](/assets/img/skill/GDC/2.png)
 
 ---
-# <!-- layout: section -->
+<!-- layout: section -->
 ## PlatinumGames
 
 ---
@@ -65,7 +65,7 @@ categories: [动作游戏设计]
 + 相关参考：[Youtube](.bilibili.com/read/cv3530623/)
 
 ---
-# <!-- layout: section -->
+<!-- layout: section -->
 ## Santa Monica Studio
 
 ---
@@ -74,49 +74,45 @@ categories: [动作游戏设计]
 
 新视角下战斗系统的革新。
 
-+ 🚧待施工
++ 🚧 待施工
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=hE5tWF-Ou2k)，[中译](https://indienova.com/indie-game-development/evolving-combat-in-god-of-war-for-a-new-perspective/)
 
-
 ---
 
-### 2019-战神-关卡
+### 2019 - 战神 - 关卡
 
 6条新关卡设计规则 & 关卡从概念到完成的最佳实践。
 
-+ 🚧待施工
++ 🚧 待施工
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=eSB29qx6sWw)，[中译](http://www.gamelook.com.cn/2021/06/445171)
 
 ---
 
-### 2019-战神-重启
+### 2019 - 战神 - 重启
 
 创造新战神之路似乎是无休止地攀登一座大山，在无数失败后迎来成功。
 
-+ 🚧待施工
++ 🚧 待施工
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=aIb-Lt7WX_s)，[中译](https://www.bilibili.com/video/av50616216)
 
-
 ---
 
-### 2023-战神-AI
+### 2023 - 战神 - AI
 
 战神AI从Lua转行为树的迭代 & 经验之谈。
 
-+ 🚧待施工
++ 🚧 待施工
 
 + 相关参考：[GDC Vault](https://www.gdcvault.com/play/1029286/Preparing-AI-Systems-for-God)，[中译](https://zhuanlan.zhihu.com/p/627081489)
 
 ---
-# <!-- layout: section -->
-## FTG相关
-
+<!-- layout: section -->
+## FTG 相关
 
 ---
-
 <!-- ### 2014-骷髅女孩
 
 如何在2D游戏中获得最清晰、最流畅的动画并使其与游戏玩法配合。
@@ -132,9 +128,7 @@ categories: [动作游戏设计]
 + 🚧待施工
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=z-5djm1pRpU) -->
-
-
-### 2015-罪恶装备Xrd
+### 2015 - 罪恶装备 Xrd
 
 在现代全3D图形框架内重建经典2D格斗游戏，同时保留其所有老式2D魅力。
 
@@ -142,10 +136,9 @@ categories: [动作游戏设计]
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=yhGjCzxJV3E)
 
-
 ---
 
-### 2019-FTG 10年来的易玩性
+### 2019 - FTG 10年来的易玩性
 
 如何为古老的FTG游戏扩充受众。
 
@@ -153,14 +146,13 @@ categories: [动作游戏设计]
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=yhGjCzxJV3E)
 
-
 ---
-# <!-- layout: section -->
+<!-- layout: section -->
 ## 其他
 
 ---
 
-### 2017-仁王
+### 2017 - 仁王
 
 如何通过玩家反馈来重塑游戏。
 
@@ -170,69 +162,65 @@ categories: [动作游戏设计]
 
 ---
 
-### 2015-血源
+### 2015 - 血源
 
 具有挑战性的合唱写作和扩展的管弦乐技巧如何唤起绝望、疾病缠身的亚南市。
 
-+ 🚧待施工
++ 🚧 待施工
 
 + 相关参考：[GDC Vault](https://gdcvault.com/play/1023339/The-Gothic-Horror-Music-of)
 
-
 ---
-# <!-- layout: section -->
+<!-- layout: section -->
 ## Nintendo
 
 ---
 
-
-### 1999-宫本茂
+### 1999 - 宫本茂
 
 游戏是一个更大、更广阔的世界的一部分。
 
 + 🚧待施工
 
-+ 相关参考：[Youtube](https://www.youtube.com/watch?v=a9DlhDRZ0yA) -->
++ 相关参考：[Youtube](https://www.youtube.com/watch?v=a9DlhDRZ0yA)
 
 ---
 
-### 2005-岩田聪
+### 2005 - 岩田聪
 
 玩家之心
 
-+ 🚧待施工
++ 🚧 待施工
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=RMrj8gdUfCU)，[中译](https://www.bilibili.com/video/BV1FA41147j7)
 
+---
 
-<!-- newVertical -->
-
-### 2017-Zelda:BotW
+### 2017 - Zelda:BotW
 
 勇气三角，革新玩法；智慧三角，想法落地；力量三角，美学统一。
 
-+ 🚧待施工
++ 🚧 待施工
 
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=QyMsF31NdNc)，[中译](https://cowlevel.net/article/2091350)，[中译2](http://www.gamelook.com.cn/2022/12/504104)
 
 ---
-# <!-- layout: section -->
-## 非GDC
+<!-- layout: section -->
+## 非 GDC
 
 ---
 
-### 知久 温-关卡设计术语
+### 知久 温 - 关卡设计术语
 
 掌握常用关卡设计术语
 
 ![](/assets/img/skill/GDC/5.png)
 
-
 + 相关参考：[翻译](https://www.kmhgame.com/zhang-wo-chang-yong-guan-qia-she-ji-shu-yu-xian-yi-you-xi/)
 
 ---
 
-### 徳田优也-MHW设计
+### 徳田优也 - MHW 设计
 
 《怪物猎人：世界》从概念、创意、制作和调整。
 
@@ -242,30 +230,22 @@ categories: [动作游戏设计]
 
 ---
 
-### 迪士尼-动画的12个原则
+### 迪士尼 - 动画的12个原则
 
 一些帮助鉴赏&改进动画的方法论
 
-+ 🚧待施工
-
++ 🚧 待施工
 + 相关参考：[Wikipedia](https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation), [翻译](https://www.bloopanimation.com/zh/the-12-principles-of-animation/)
-
-
 ---
 
-### 河森正治-原创性
+### 河森正治 - 原创性
 
 跟不同次元的事物融合！
 
 ![](/assets/img/skill/GDC/4.png)
-
-
 + 相关参考：[TEDx Talks](https://www.youtube.com/watch?v=QhzUC7yTcoc), [翻译](https://www.bilibili.com/video/BV1eQ4y1E7L4)
-
-
-
 ---
-# <!-- layout: section -->
+<!-- layout: section -->
 ## 设计者笔记
 
 ---
@@ -275,7 +255,9 @@ categories: [动作游戏设计]
 通过奖惩设计，让玩家控制角色行动这件事，更有乐趣。
 
 ![本质](/assets/img/act/2022/xmind-0.png)
+
 + 相关参考：[设计者笔记](https://design.jskyzero.com/2024/05/14/ActionGameDesign/)
+
 ---
 
 ### 动作游戏设计的 SSS 方法
@@ -286,9 +268,9 @@ categories: [动作游戏设计]
 
 + 相关参考：[设计者笔记](https://design.jskyzero.com//2025/03/25/SSS/)
 
+---
 
-
-### DOTA2的机制设计
+### DOTA2 的机制设计
 
 明确变化的维度和作用的方式，然后允许互相作用（涌现）。
 
