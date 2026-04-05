@@ -1,7 +1,4 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Jekyll
+name: 🛠️ Jekyll 自动构建与部署
 
 on:
   push:
@@ -11,54 +8,48 @@ on:
 
 jobs:
   build:
+    name: 构建并发布
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: 检出代码
+        uses: actions/checkout@v4
         with:
           ref: jekyll
-          fetch-depth: 0
-      - uses: ruby/setup-ruby@v1
+          fetch-depth: 0 # 获取完整历史以确保某些插件正常工作
+
+      - name: 设置 Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'   # Not needed with a .ruby-version file
-          bundler-cache: true   # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0      # Increment this number if you need to re-download cached gems
-      - name: Setup Pages
+          ruby-version: '3.1'
+          bundler-cache: true # 自动运行 bundle install 并缓存 gems
+
+      - name: 设置 GitHub Pages 路径
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll # 构建
+
+      - name: 构建 Jekyll 站点
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - name: Upload artifact # 上传
+
+      - name: 上传构建产物 (用于 Actions 内部流转)
         uses: actions/upload-pages-artifact@v3
-        # with:
-        #   path: "./_site" # Automatically uploads an artifact from the './_site' directory by default
-      - name: Deploy # 上传分支
+
+      - name: 部署到 gh-pages 分支
+        # 此步骤会将 _site 目录推送到当前仓库的 gh-pages 分支
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
           BRANCH: gh-pages
           FOLDER: "./_site"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Executing remote command
+
+      - name: 同步至远程服务器 (SSH)
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.SSHKEY }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.SSHKEY }}
+          # 在服务器上执行拉取操作
           script: cd ${{ secrets.PROJECT_PATH }} && git pull
-
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   permissions:
-  #     pages: write
-  #     id-token: write
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4
