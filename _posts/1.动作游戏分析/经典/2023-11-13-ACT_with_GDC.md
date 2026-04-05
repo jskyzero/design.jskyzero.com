@@ -13,7 +13,8 @@ categories: [动作游戏设计]
 动作游戏分析方法论与案例拆解
 
 ---
-<!-- layout: section -->
+layout: section
+---
 ## Capcom
 
 ---
@@ -43,7 +44,8 @@ categories: [动作游戏设计]
 ![DMC5](/assets/img/skill/GDC/2.png)
 
 ---
-<!-- layout: section -->
+layout: section
+---
 ## PlatinumGames
 
 ---
@@ -65,7 +67,8 @@ categories: [动作游戏设计]
 + 相关参考：[Youtube](.bilibili.com/read/cv3530623/)
 
 ---
-<!-- layout: section -->
+layout: section
+---
 ## Santa Monica Studio
 
 ---
@@ -109,7 +112,8 @@ categories: [动作游戏设计]
 + 相关参考：[GDC Vault](https://www.gdcvault.com/play/1029286/Preparing-AI-Systems-for-God)，[中译](https://zhuanlan.zhihu.com/p/627081489)
 
 ---
-<!-- layout: section -->
+layout: section
+---
 ## FTG 相关
 
 ---
@@ -147,7 +151,8 @@ categories: [动作游戏设计]
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=yhGjCzxJV3E)
 
 ---
-<!-- layout: section -->
+layout: section
+---
 ## 其他
 
 ---
@@ -171,7 +176,8 @@ categories: [动作游戏设计]
 + 相关参考：[GDC Vault](https://gdcvault.com/play/1023339/The-Gothic-Horror-Music-of)
 
 ---
-<!-- layout: section -->
+layout: section
+---
 ## Nintendo
 
 ---
@@ -205,7 +211,8 @@ categories: [动作游戏设计]
 + 相关参考：[Youtube](https://www.youtube.com/watch?v=QyMsF31NdNc)，[中译](https://cowlevel.net/article/2091350)，[中译2](http://www.gamelook.com.cn/2022/12/504104)
 
 ---
-<!-- layout: section -->
+layout: section
+---
 ## 非 GDC
 
 ---
@@ -244,8 +251,10 @@ categories: [动作游戏设计]
 
 ![](/assets/img/skill/GDC/4.png)
 + 相关参考：[TEDx Talks](https://www.youtube.com/watch?v=QhzUC7yTcoc), [翻译](https://www.bilibili.com/video/BV1eQ4y1E7L4)
+
 ---
-<!-- layout: section -->
+layout: section
+---
 ## 设计者笔记
 
 ---
