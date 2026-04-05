@@ -9,12 +9,6 @@ layout: post
 categories: [动作游戏设计]
 ---
 
-<!--
----
-layout: main
----
--->
-
 # GDC 动作游戏分享精选
 动作游戏分析方法论与案例拆解
 
