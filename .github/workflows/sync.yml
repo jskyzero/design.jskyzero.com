@@ -1,0 +1,35 @@
+name: Daily Sessions Badge Sync
+
+on:
+  schedule:
+    - cron: '0 1 * * *' # 北京时间上午 9 点运行
+  workflow_dispatch:
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Update footer.html
+        env:
+          CLARITY_TOKEN: ${{ secrets.CLARITY_TOKEN }}
+        run: python scripts/update_footer.py
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _theme/_includes/footer.html
+          git commit -m "docs: update clarity sessions badge [skip ci]" || exit 0
+          git push
