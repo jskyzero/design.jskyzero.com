@@ -7,6 +7,10 @@
 
 jskyzero's notes about game designer.
 
+<img alt="design jskyzero com_(iPad Mini)" src="https://github.com/user-attachments/assets/63868fa0-8475-42b7-a4c0-7ecb85009683" />
+
+
+<!--
 
 ## How to use
 
@@ -30,7 +34,7 @@ rel_path = path.relative_path_from(dir).to_s.force_encoding('utf-8')
 
 ```
 
-<!-- ```ruby
+ ```ruby
 # Encoding::CompatibilityError: incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)
 
 # /opt/homebrew/lib/ruby/gems/3.1.0/gems/listen-3.7.1/lib/listen/silencer.rb
@@ -41,13 +45,15 @@ def _ignore?(path)
       end
       ignore_patterns.any? { |pattern| path =~ pattern }
     end
-``` -->
+```
 + draw a picture: `xmind`, `draw.io`, `marmaid`
 
 
 ## Change Log
 
 + 2023/02/17: change theme to light
+
+ -->
 
 ## License
 
