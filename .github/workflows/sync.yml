@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-          cache: 'pip' # 开启 pip 缓存
+          # cache: 'pip' # 开启 pip 缓存
 
       - name: 安装依赖
         run: pip install requests
