@@ -2,8 +2,8 @@
 [![Jekyll](https://github.com/jskyzero/design.jskyzero.com/actions/workflows/jekyll.yml/badge.svg?branch=jekyll)](https://github.com/jskyzero/design.jskyzero.com/actions/workflows/jekyll.yml)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/jskyzero/design.jskyzero.com/jekyll)
-![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=design.jskyzero.com)
-![](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json)
+![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=design.jskyzero.com&right_color=orange)
+![clarity sessions](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json)
 
 
 jskyzero's notes about game designer.
