@@ -1,10 +1,7 @@
 ---
 layout: default
 ---
-<!--
-  home.html - Home page layout
-  Extends default.html. Sidebar hidden on home, so post list rendered inline.
--->
+<!-- Home page: welcome text + category post listing -->
 {{ content }}
 
 {% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %}
@@ -14,14 +11,30 @@ layout: default
   {%- if posts.size > 0 -%}
     <ul>
       <p>{{ category }}</p>
+
       {% if site.index_categories_sort_by_title contains category %}
         {% assign posts = posts | sort: "title" %}
       {% endif %}
+
+      {%- if site.index_categories_post_order[category] -%}
+        {% assign ordered = site.index_categories_post_order[category] %}
+        {% assign heads = '' | split: '' %}
+        {% assign tails = '' | split: '' %}
+        {%- for post in posts -%}
+          {% if ordered contains post.title %}
+            {% assign heads = heads | push: post %}
+          {% else %}
+            {% assign tails = tails | push: post %}
+          {% endif %}
+        {%- endfor -%}
+        {% assign heads = heads | sort: "title" %}
+        {% assign posts = heads | concat: tails %}
+      {%- endif -%}
+
       {%- for post in posts -%}
         {% unless post.path contains "archive" %}
         <li>
-          {%- assign date_format = post.date | date:"%Y-%m-%d" -%}
-          [{{ date_format }}]&nbsp
+          [{{ post.date | date: "%Y-%m-%d" }}]&nbsp
           <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
           {%- if post.pro -%}⭐️{%- endif -%}
         </li>

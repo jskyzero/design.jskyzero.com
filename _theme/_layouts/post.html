@@ -1,14 +1,12 @@
 ---
 layout: default
 ---
-<!--
-  post.html - Blog post layout
-  Extends default.html (which now includes sidebar + TOC sidebar).
-  Renders PRO badges, post content, git log, and disqus comments.
--->
-
 <div id="index">
   {% include PRO.html html=content %}
+</div>
+
+<div class="toc-inline" id="toc-inline">
+  {% include sidebar-toc.html html=content %}
 </div>
 
 {{ content }}

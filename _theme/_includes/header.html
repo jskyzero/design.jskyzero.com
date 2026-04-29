@@ -1,10 +1,9 @@
 <!--
-  header.html - Site header with navigation menu
-  Renders a right-aligned menu from site.header_pages (configured in _config.yml).
-  The menu displays as a series of inline links with dashed top/bottom borders.
+  header.html - Site header with navigation menu and mobile sidebar toggle
 -->
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 <header>
+  <button class="sidebar-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
   <div class="menu">
     <ul>
       {%- for path in page_paths -%}
