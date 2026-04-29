@@ -1,3 +1,8 @@
+<!--
+  header.html - Site header with navigation menu
+  Renders a right-aligned menu from site.header_pages (configured in _config.yml).
+  The menu displays as a series of inline links with dashed top/bottom borders.
+-->
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 <header>
   <div class="menu">

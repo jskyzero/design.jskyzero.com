@@ -1,31 +1,19 @@
 @charset "utf-8";
 
-// @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
-// @import url('https://fonts.googleapis.com/css2?family=Noto+SansNoto Serif+SC&display=swap');
-// $base-font-family:     'Source Code Pro', 'Noto Sans SC', monospace !default;
-
-
-// @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
-// $base-font-family:     "LXGW WenKai Mono TC", monospace !default;
-
-
-@import url('https://fontsapi.zeoseven.com/159/main/result.css');
+/*
+ * Font: Sarasa Mono SC — loaded from local TTF to avoid external API issues.
+ * The zeoseven.com CSS uses local("Sarasa Mono SC") which can conflict with
+ * system-installed versions. Local TTF gives full control.
+ * Fallback: system monospace (keeps English at correct monospace width)
+ */
+@font-face {
+  font-family: 'Sarasa Mono SC';
+  src: url(/assets/font/sarasa-monoT-sc-regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 $base-font-family: "Sarasa Mono SC", monospace !default;
-
-
-// @font-face {
-//   font-family: 'sarasa-mono-sc-regular';
-//   src: url(/assets/font/sarasa-monoT-sc-regular.ttf) format('truetype');
-// }
-// $base-font-family:     'sarasa-mono-sc-regular', monospace !default;
-
-
-// @font-face {
-//   font-family: 'LXGWWenKaiMono-Regular';
-//   src: url(/assets/font/LXGWWenKaiMono-Regular.ttf) format('truetype');
-// }
-// $base-font-family:     "LXGWWenKaiMono-Regular", monospace !default;
-
 
 /**
  * Style variables
@@ -49,9 +37,307 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 
 /**
- * Layout
+ * Layout - Three-column design
+ *   Left: sidebar (categories + search)
+ *   Center: content (max 600px, terminal style)
+ *   Right: TOC outline
+ *   Home page uses single-column (no-sidebar class)
+ * Responsive: collapses to single column below 900px
  */
+
+// Sidebar widths — wider to avoid long title wrapping
+$sidebar-width: 240px;
+$toc-width: 260px;
+
+// Three-column grid for the page wrapper
+.page-wrapper {
+  display: grid;
+  grid-template-columns: $sidebar-width 1fr $toc-width;
+  max-width: 100%;
+  margin: 0 auto;
+
+  // When no TOC sidebar, use two columns
+  &:has(.toc-sidebar:empty) {
+    grid-template-columns: $sidebar-width 1fr;
+  }
+
+  // Home page: single-column, full-width content
+  &.no-sidebar {
+    grid-template-columns: 1fr;
+
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// Content area centers the original container
+.content-area {
+  min-width: 0; // prevent overflow
+}
+
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
+
+// ==================== LEFT SIDEBAR ====================
+.sidebar {
+  padding: 20px 12px 20px 16px;
+  font-size: $base-font-size;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background: var(--background-color);
+
+  // Hide scrollbar in non-hover
+  &::-webkit-scrollbar { width: 4px; }
+  &::-webkit-scrollbar-thumb { background: var(--text-color); }
+
+  // Dropdown details (collapsible category groups)
+  details {
+    margin-bottom: 8px;
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 4px;
+      list-style: none; // hide default triangle
+      &::-webkit-details-marker { display: none; }
+
+      &:before {
+        content: "▸ ";
+        font-size: 10px;
+        display: inline-block;
+        transition: transform 0.2s;
+      }
+    }
+
+    &[open] > summary:before {
+      content: "▾ ";
+    }
+
+    // Post list within category
+    ul {
+      list-style: none;
+      padding-left: 8px;
+      margin: 4px 0;
+
+      li {
+        margin: 2px 0;
+        line-height: 1.4;
+
+        a {
+          text-decoration: none;
+          color: var(--text-color);
+
+          &:hover {
+            color: var(--background-color);
+            background-color: var(--base-color);
+          }
+        }
+      }
+
+      // No dash prefix in sidebar lists
+      li:before {
+        content: none !important;
+      }
+    }
+  }
+
+  // PRO star
+  .pro-star {
+    font-size: 10px;
+  }
+}
+
+// Sidebar search
+.sidebar-search {
+  margin-bottom: 16px;
+
+  input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 6px;
+    border: var(--border);
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// Search results dropdown
+.search-results {
+  display: none;
+  position: absolute;
+  left: 16px;
+  right: auto;
+  width: $sidebar-width - 28px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: var(--background-color);
+  border: var(--border);
+  z-index: 100;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+
+    li {
+      padding: 2px 8px;
+      line-height: 1.3;
+
+      &:before { content: none !important; }
+
+      a {
+        text-decoration: none;
+        color: var(--text-color);
+        display: block;
+
+        &:hover {
+          color: var(--background-color);
+          background-color: var(--base-color);
+        }
+      }
+    }
+  }
+
+  .search-date {
+    font-size: 10px;
+    opacity: 0.6;
+  }
+
+  .search-no-result {
+    padding: 8px;
+    opacity: 0.6;
+  }
+}
+
+// ==================== RIGHT TOC SIDEBAR ====================
+.toc-sidebar {
+  padding: 20px 16px 20px 12px;
+  font-size: $base-font-size;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--background-color);
+
+  &::-webkit-scrollbar { width: 4px; }
+  &::-webkit-scrollbar-thumb { background: var(--text-color); }
+}
+
+.toc-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.toc-nav {
+  ul {
+    list-style: none;
+    padding-left: 8px;
+    margin: 4px 0;
+
+    ul {
+      padding-left: 12px;
+    }
+
+    li {
+      margin: 2px 0;
+      line-height: 1.4;
+
+      &:before { content: none !important; }
+
+      a {
+        text-decoration: none;
+        color: var(--text-color);
+
+        &:hover {
+          color: var(--background-color);
+          background-color: var(--base-color);
+        }
+      }
+    }
+  }
+}
+
+// TOC active/highlight (scroll spy)
+.toc-nav a.active {
+  font-weight: bold;
+  color: var(--background-color);
+  background-color: var(--base-color);
+}
+
+// ==================== RESPONSIVE ====================
+@media (max-width: 900px) {
+  .page-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    width: $sidebar-width;
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+
+  .toc-sidebar {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 200;
+    width: $toc-width;
+
+    &.open {
+      display: block;
+    }
+  }
+
+  // Mobile toggle buttons
+  .sidebar-toggle,
+  .toc-toggle {
+    position: fixed;
+    bottom: 16px;
+    z-index: 300;
+    padding: 6px 10px;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    background: var(--background-color);
+    border: var(--border);
+    color: var(--text-color);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--background-color);
+      background-color: var(--base-color);
+    }
+  }
+
+  .sidebar-toggle { left: 16px; }
+  .toc-toggle { right: 16px; }
+}
+
+@media (max-width: 500px) {
+  .sidebar { width: 80vw; }
+  .toc-sidebar { width: 70vw; }
+}
+
+/**
+ * Layout (original)
+ */
 p { word-wrap: break-word;  word-break: break-word;  white-space: pre-wrap; margin-bottom: 15px; }
 footer { color: var(--text-color);  border-top: var(--border);  margin: 20px auto 15px;  padding-top: 10px;  text-align: right; }
 header { margin-top: 25px;  margin-bottom: 10px; }

@@ -1,23 +1,45 @@
+---
+layout: null
+---
+<!--
+  default.html - Base layout with three-column design
+  1. Left sidebar (categories + post list + search) — hidden on home page
+  2. Center content area (max 600px, terminal/monospace style)
+  3. Right sidebar (Table of Contents on post pages)
+-->
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
-<!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" /> -->
 <meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
 <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
 
   {%- include head.html -%}
 
   <body>
-    <div class="container">
-
-      {%- include header.html -%}
-
-    <main>
-      {{ content }}
-    </main>
-
-    {%- include footer.html -%}
-
+    <div class="page-wrapper{% if page.layout == 'home' %} no-sidebar{% endif %}">
+      {%- unless page.layout == 'home' -%}
+        {%- include sidebar.html -%}
+      {%- endunless -%}
+      <div class="content-area">
+        <div class="container">
+          {%- include header.html -%}
+          <main>
+            {{ content }}
+          </main>
+          {%- include footer.html -%}
+        </div>
+      </div>
+      {%- if page.layout == 'post' or page.layout == 'page' -%}
+        {%- include sidebar-toc.html html=content -%}
+      {%- endif -%}
     </div>
+
+    {%- unless page.layout == 'home' -%}
+    <button class="sidebar-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+    {%- endunless -%}
+    {%- if page.layout == 'post' or page.layout == 'page' -%}
+    <button class="toc-toggle" onclick="document.getElementById('toc-sidebar').classList.toggle('open')">☷</button>
+    {%- endif -%}
+
+    <script src="/assets/js/search.js"></script>
   </body>
 </html>
