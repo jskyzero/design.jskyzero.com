@@ -1,5 +1,9 @@
 @use "../settings" as *;
 
+// ============================================================
+// 自定义右键菜单（保存章节为图片）
+// ============================================================
+
 .custom-context-menu {
   display: none;
   position: fixed;
@@ -12,10 +16,12 @@
   font-size: $base-font-size;
 }
 
+// 可见状态
 .custom-context-menu.visible {
   display: block;
 }
 
+// 菜单项
 .custom-context-menu__item {
   padding: 4px 12px;
   cursor: pointer;
@@ -23,6 +29,7 @@
   white-space: nowrap;
 }
 
+// 悬停反色效果
 .custom-context-menu__item:hover {
   color: var(--background-color);
   background-color: var(--base-color);

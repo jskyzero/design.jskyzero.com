@@ -1,7 +1,10 @@
 @charset "utf-8";
 
-// Base stylesheet entrypoint. Keep this file as the module load order only;
-// concrete selectors live in focused partials under modules/.
+// ============================================================
+// 样式入口文件——仅控制模块加载顺序
+// 具体选择器逻辑存放于 modules/ 下的独立模块中
+// ============================================================
+
 @use "modules/global";
 @use "modules/layout";
 @use "modules/sidebar";

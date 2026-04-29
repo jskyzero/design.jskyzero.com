@@ -1,5 +1,7 @@
-/**
- * Light theme variables
+/*
+ * 亮色主题变量
+ *
+ * 所有 CSS 自定义属性定义在 :root 上，组件通过 var() 引用。
  */
 
 :root {
@@ -11,6 +13,8 @@
   --text-color: var(--base-color);
   --placeholder-color: var(--base-color);
   --link-color: var(--base-color);
+
+  // Rouge 语法高亮颜色
   --code-color-1: #aaaaaa;
   --code-color-2: #ffffcc;
   --code-color-3: #F00000;

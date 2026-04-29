@@ -1,15 +1,21 @@
 @use "../settings" as *;
 
-// Narrow screens collapse rails and use a fixed mobile navigation drawer.
+// ============================================================
+// 窄屏响应式：收起侧栏，使用固定移动端导航抽屉
+// ============================================================
+
 @media (max-width: ($layout-wide-breakpoint - 1px)) {
+  // 页面恢复单栏
   .page-wrapper {
     grid-template-columns: 1fr !important;
   }
 
+  // 侧栏打开时禁止页面滚动
   body.sidebar-open {
     overflow: hidden;
   }
 
+  // 侧栏从左侧滑入
   .sidebar {
     position: fixed;
     left: 0;
@@ -28,6 +34,7 @@
       opacity: 1;
     }
 
+    // 关闭按钮显示
     .sidebar-close {
       display: block;
       float: right;
@@ -41,6 +48,7 @@
     }
   }
 
+  // 遮罩层
   .sidebar-overlay {
     display: block;
     opacity: 0;
@@ -52,6 +60,7 @@
     pointer-events: auto;
   }
 
+  // 右侧大纲隐藏
   .toc-sidebar {
     opacity: 0 !important;
     visibility: hidden;
@@ -61,6 +70,7 @@
   }
 }
 
+// 侧栏淡入动画
 @keyframes sidebar-fade-in {
   from { opacity: 0; }
   to { opacity: 1; }

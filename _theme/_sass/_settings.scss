@@ -1,21 +1,25 @@
 /*
- * Theme settings shared by the Sass partials.
+ * 主题设置——所有 Sass 模块共享的变量。
  *
- * This file is intentionally small and stable: it owns the font stack,
- * breakpoints, rail widths, and the content column limits. Component styles
- * should read these values through `@use "settings" as *`.
+ * 本文件仅持有字体栈、断点、栏宽和内容列限制。
+ * 组件样式应通过 @use "settings" as * 读取这些值。
+ *
+ * Sarasa 处理 CJK 文本；JetBrains Mono 提供轻量级拉丁/ASCII
+ * 及代码字符（ZeoSeven 的 Sarasa 分割 CSS 不含此部分）。
  */
 
+// 外部字体加载
 @import url("https://fontsapi.zeoseven.com/159/main/result.css");
 @import url("https://fonts.bunny.net/css?family=jetbrains-mono:400");
 
-// Sarasa handles CJK text; JetBrains Mono supplies lightweight Latin/ASCII and
-// code glyphs that ZeoSeven's Sarasa split CSS does not include.
+// 字体
 $base-font-family: "JetBrains Mono", "Sarasa Mono SC" !default;
 $code-font-family: "JetBrains Mono" !default;
 $base-font-size: 12.5px !default;
 $mobile-font-size: 12px !default;
 $base-line-height: 1.5 !default;
+
+// 布局尺寸
 $container-width: 90% !default;
 $container-max-width: 600px !default;
 $sidebar-width: 280px !default;

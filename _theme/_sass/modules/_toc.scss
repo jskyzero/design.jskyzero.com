@@ -1,6 +1,10 @@
 @use "../settings" as *;
 
-// Shared table-of-contents rules plus the right rail and inline mind-map view.
+// ============================================================
+// 目录（TOC）：右侧大纲栏 + 内联思维导图视图
+// ============================================================
+
+// 右侧 TOC 侧栏
 .toc-sidebar {
   padding: clamp(28px, 8vh, 72px) 24px clamp(28px, 8vh, 72px) 12px;
   font-size: $base-font-size;
@@ -19,15 +23,23 @@
   text-align: right;
   transition: opacity 1s ease;
 
+  // 可见状态
   &.visible {
     opacity: 1;
     pointer-events: auto;
   }
 
-  &::-webkit-scrollbar { width: 4px; }
-  &::-webkit-scrollbar-thumb { background: var(--text-color); }
+  // 滚动条
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+  }
 }
 
+// TOC 导航容器
 .toc-nav {
   width: 100%;
 
@@ -57,7 +69,9 @@
       margin: 7px 0 3px;
       line-height: 1.4;
 
-      &:before { content: none !important; }
+      &:before {
+        content: none !important;
+      }
 
       > a:before {
         content: none;
@@ -75,6 +89,7 @@
     }
   }
 
+  // 二级标题编号
   > ul > li > ul > li {
     counter-increment: toc2;
     counter-reset: toc3;
@@ -84,6 +99,7 @@
     }
   }
 
+  // 三级标题编号
   > ul > li > ul > li > ul > li {
     counter-increment: toc3;
 
@@ -93,12 +109,14 @@
   }
 }
 
+// TOC 一级链接加粗
 .toc-sidebar .toc-nav > ul > li > a {
   font-size: 13px;
   font-style: normal;
   font-weight: bold;
 }
 
+// TOC 顶栏列表最小高度
 .toc-sidebar .toc-nav > ul {
   display: flex;
   flex-direction: column;
@@ -107,10 +125,15 @@
   margin: 0;
 }
 
+// TOC 子列表不需要缩进
 .toc-sidebar .toc-nav ul ul {
   padding-left: 0;
   padding-right: 0;
 }
+
+// ============================================================
+// 内联 TOC（思维导图风格）
+// ============================================================
 
 .toc-inline {
   $mindmap-column-width: 150px;
@@ -120,7 +143,10 @@
   margin: 12px 0 20px;
   padding: 6px 16px 6px 2px;
   font-style: italic;
-  background: radial-gradient(color-mix(in srgb, var(--text-color) 22%, transparent) 1px, transparent 1px) 0 0 / 8px 8px;
+  // 点阵背景（SVG 静态方案）
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Ccircle cx='4' cy='4' r='1' fill='rgba(0,0,0,0.22)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 8px 8px;
   overflow-x: auto;
 
   .toc-nav > ul {
@@ -176,6 +202,7 @@
     background: transparent;
   }
 
+  // 根节点竖排文字
   .toc-nav > ul > li > a {
     justify-self: start;
     padding: 0;
@@ -204,6 +231,7 @@
   }
 }
 
+// TOC 滚动高亮
 .toc-nav a.active {
   font-weight: bold;
   color: var(--text-color);

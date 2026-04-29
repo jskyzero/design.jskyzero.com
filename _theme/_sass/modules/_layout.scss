@@ -1,12 +1,17 @@
 @use "../settings" as *;
 
-// Three-column shell: left navigation rail, fixed content column, right outline rail.
+// ============================================================
+// 三栏布局外壳：左侧导航、中间内容、右侧大纲
+// ============================================================
+
+// 页面包裹器——默认单栏，宽屏启用三栏网格
 .page-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   max-width: 100%;
   margin: 0 auto;
 
+  // 首页隐藏侧栏与大纲
   &.no-sidebar .sidebar,
   &.no-sidebar .toc-sidebar {
     visibility: hidden;
@@ -14,14 +19,22 @@
   }
 }
 
+// 宽屏三栏：sidebar / content / toc
 @media (min-width: $layout-wide-breakpoint) {
   .page-wrapper {
     grid-template-columns: $sidebar-width 1fr $toc-width;
   }
 }
 
+// 内容区域——防止溢出
 .content-area {
   min-width: 0;
 }
 
-.container { width: min(#{$container-max-width}, 90vw);  max-width: none;  margin-right: auto;  margin-left: auto; }
+// 内容容器——限制最大宽度并居中
+.container {
+  width: min(#{$container-max-width}, 90vw);
+  max-width: none;
+  margin-right: auto;
+  margin-left: auto;
+}

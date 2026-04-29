@@ -1,22 +1,100 @@
 @use "../settings" as *;
 
-// Selection colors, list markers, and top header navigation.
-::selection { background: var(--selection-background);  color: var(--selection-text); }
-::-moz-selection { background: var(--selection-background);  color: var(--selection-text); }
+// ============================================================
+// 导航栏：选中高亮、列表标记、顶部菜单、站点徽标
+// ============================================================
 
-:not(.menu) > ul { list-style: none;  padding-left: 0; }
-:not(.menu) > ul { list-style-type: none; }
-:not(.menu) > ul > li:before { content: "-";  margin-right: 9px; }
+// 文本选中颜色
+::selection {
+  background: var(--selection-background);
+  color: var(--selection-text);
+}
 
-.menu { border-top: var(--border);  border-bottom: var(--border);  margin-bottom: 25px; }
-.site-logo { float: left; margin: 8px 0; text-decoration: none; }
-.site-logo img { display: block; height: 24px; width: auto; transform: scale(0.9); transform-origin: left center; }
-.sidebar-toggle { display: none; float: left; padding: 2px 6px; margin: 8px 8px; border: var(--border); background: var(--background-color); color: var(--text-color); font-family: $base-font-family; cursor: pointer; }
-.sidebar-toggle:hover { color: var(--background-color); background-color: var(--base-color); }
-.menu ul { margin-top: 12px;  margin-bottom: 12px;  padding-left: 0px;  list-style-type: none;  text-align: right; }
-.menu ul li { display: inline;  margin-left: 10px; }
-.menu ul li a { text-decoration: none;  color: var(--text-color); }
-.menu ul li a:hover { text-decoration: none; color: var(--background-color); background-color: var(--base-color); }
+::-moz-selection {
+  background: var(--selection-background);
+  color: var(--selection-text);
+}
+
+// 非菜单列表用 "-" 前缀
+:not(.menu) > ul {
+  list-style: none;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+:not(.menu) > ul > li:before {
+  content: "-";
+  margin-right: 9px;
+}
+
+// 顶部菜单容器
+.menu {
+  border-top: var(--border);
+  border-bottom: var(--border);
+  margin-bottom: 25px;
+}
+
+// 站点徽标
+.site-logo {
+  float: left;
+  margin: 8px 0;
+  text-decoration: none;
+}
+
+.site-logo img {
+  display: block;
+  height: 24px;
+  width: auto;
+  transform: scale(0.9);
+  transform-origin: left center;
+}
+
+// 侧栏切换按钮（桌面端隐藏）
+.sidebar-toggle {
+  display: none;
+  float: left;
+  padding: 2px 6px;
+  margin: 8px 8px;
+  border: var(--border);
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: $base-font-family;
+  cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+  color: var(--background-color);
+  background-color: var(--base-color);
+}
+
+// 菜单项列表
+.menu ul {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-left: 0;
+  list-style-type: none;
+  text-align: right;
+}
+
+.menu ul li {
+  display: inline;
+  margin-left: 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.menu ul li a:hover {
+  text-decoration: none;
+  color: var(--background-color);
+  background-color: var(--base-color);
+}
+
+// ============================================================
+// 移动端导航（窄屏）
+// ============================================================
 
 @media (max-width: ($layout-wide-breakpoint - 1px)) {
   header {
@@ -28,16 +106,19 @@
     transition: transform 0.2s;
   }
 
+  // 滚动隐藏头部
+  header.header-hidden {
+    transform: translateY(-110%);
+  }
+
+  // 菜单栏改为 flex 三栏：toggle / logo / menu
   .menu {
     display: flex;
     align-items: center;
     margin-bottom: 18px;
   }
 
-  header.header-hidden {
-    transform: translateY(-110%);
-  }
-
+  // 徽标居中
   .site-logo {
     flex: 1;
     display: flex;
@@ -45,16 +126,19 @@
     position: static;
     float: none;
   }
+
   .site-logo img {
     transform-origin: center center;
   }
 
+  // 侧栏按钮左对齐
   .sidebar-toggle {
     flex: 0 0 auto;
     display: inline-block;
     order: -1;
   }
 
+  // 菜单项右对齐
   .menu ul {
     flex: 0 0 auto;
     margin: 0;

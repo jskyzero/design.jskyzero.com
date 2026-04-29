@@ -1,12 +1,39 @@
 @use "../settings" as *;
 
-// Global typography, heading ornaments, and base link behavior.
-body { background-color: var(--background-color);  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
-h1, h2, h3, h4, h5, h6 { display: flex; align-items: center; gap: 8px; margin: 22px 0px 4px; font-weight: bold;  color: var(--text-color); line-height: $base-line-height; }
-h1, h2, h3, h4, h5, h6 { font-size: 13px; }
+// ============================================================
+// 全局排版、标题装饰与基础链接样式
+// ============================================================
+
+// 页面主体
+body {
+  background-color: var(--background-color);
+  margin: 0 auto;
+  padding: 0;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: var(--text-color);
+  text-align: left;
+  line-height: $base-line-height !important;
+}
+
+// 标题基础样式
+h1, h2, h3, h4, h5, h6 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 22px 0 4px;
+  font-weight: bold;
+  font-size: 13px;
+  color: var(--text-color);
+  line-height: $base-line-height;
+}
+
+// 禁用原有 ::after 伪元素（已用 .svg-heading-rule 替代）
 h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
   content: none;
 }
+
+// 标题右侧斜线装饰（SVG 静态方案，确保 html2canvas 可捕获）
 .svg-heading-rule {
   display: block;
   flex: 1 1 auto;
@@ -16,28 +43,50 @@ h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cline x1='0' y1='8' x2='8' y2='0' stroke='rgba(0,0,0,0.16)' stroke-width='1'/%3E%3C/svg%3E");
   background-repeat: repeat;
 }
+
+// 标题文字标签（flex 自适应）
 .svg-heading-label {
   flex: 0 1 auto;
   min-width: 0;
   white-space: nowrap;
 }
-h2:before, h3:before, h4:before, h5:before { content: none !important; }
-h1 .heading-counter, h2 .heading-counter, h3 .heading-counter, h4 .heading-counter, h5 .heading-counter, h6 .heading-counter,
-h1 .heading-label, h2 .heading-label, h3 .heading-label, h4 .heading-label, h5 .heading-label, h6 .heading-label {
+
+// 禁用 h2-h5 的 ::before 装饰
+h2:before, h3:before, h4:before, h5:before {
+  content: none !important;
+}
+
+// 标题计数器与标签背景遮罩
+h1 .heading-counter, h2 .heading-counter, h3 .heading-counter,
+h4 .heading-counter, h5 .heading-counter, h6 .heading-counter,
+h1 .heading-label, h2 .heading-label, h3 .heading-label,
+h4 .heading-label, h5 .heading-label, h6 .heading-label {
   background: var(--background-color);
   padding-right: 4px;
 }
-.content-section h1, .content-section h2, .content-section h3, .content-section h4, .content-section h5, .content-section h6 {
+
+// 内容区块内的标题背景
+.content-section h1, .content-section h2, .content-section h3,
+.content-section h4, .content-section h5, .content-section h6 {
   background: var(--background-color);
 }
+
+// ============================================================
+// 内容区块（content-section）—— 带边框卡片
+// ============================================================
+
 .content-section {
   position: relative;
   margin: 0 0 14px;
   padding: 0 14px 14px;
 }
+
+// 禁用原有 ::before 边框（已用 .content-section-frame 替代）
 .content-section:before {
   content: none;
 }
+
+// 区块边框（SVG 无关，纯 CSS border 即可捕获）
 .content-section-frame {
   position: absolute;
   inset: ($base-line-height * 0.5em) 0 0;
@@ -45,23 +94,35 @@ h1 .heading-label, h2 .heading-label, h3 .heading-label, h4 .heading-label, h5 .
   pointer-events: none;
   z-index: 0;
 }
+
+// 区块内容置于边框之上
 .content-section > :not(.content-section-frame) {
   position: relative;
   z-index: 1;
 }
+
+// 章节分隔线——点阵（SVG 静态方案）
 .content-section-separator {
   height: $base-line-height * 1em;
   margin: $base-line-height * 0.5em 0;
   opacity: 0.28;
-  background: radial-gradient(var(--text-color) 1px, transparent 1px) 0 0 / 8px 8px repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Ccircle cx='4' cy='4' r='1' fill='black'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 8px 8px;
 }
+
+// 边框后的第一个子元素、首个子元素取消上边距
 .content-section > .content-section-frame + *,
 .content-section > :first-child {
   margin-top: 0;
 }
+
+// 最后一个子元素取消下边距
 .content-section > :last-child {
   margin-bottom: 0;
 }
+
+// 独图段落与独立图片加边框
 .site-main > p:has(> img:only-child),
 .site-main > img {
   box-sizing: border-box;
@@ -69,7 +130,27 @@ h1 .heading-label, h2 .heading-label, h3 .heading-label, h4 .heading-label, h5 .
   padding: 14px;
   border: 1px solid rgba(128, 128, 128, 0.45);
 }
-p, ul, ol { margin: 0px;  color: var(--text-color); }
-a { text-decoration: underline;  color: var(--link-color);}
-a:hover { color: var(--background-color); background-color: var(--base-color); }
-@media only screen and (max-device-width: 500px) { body { font-size: $mobile-font-size; } }
+
+// 段落与列表文字颜色
+p, ul, ol {
+  margin: 0;
+  color: var(--text-color);
+}
+
+// 链接基础样式
+a {
+  text-decoration: underline;
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--background-color);
+  background-color: var(--base-color);
+}
+
+// 小屏设备字体缩小
+@media only screen and (max-device-width: 500px) {
+  body {
+    font-size: $mobile-font-size;
+  }
+}

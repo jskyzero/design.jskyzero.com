@@ -1,15 +1,66 @@
-// Article content, generated metadata blocks, comments guide, and terminal-style extras.
-p { word-wrap: break-word;  word-break: break-word;  white-space: pre-wrap; margin-bottom: 15px; }
-footer { color: var(--text-color);  border-top: var(--border);  margin: 20px auto 15px;  padding-top: 10px;  text-align: right; }
-header { margin-top: 25px;  margin-bottom: 10px; }
-header p { text-align: left;  margin: 0; }
-footer { margin-bottom: 20px; }
+// ============================================================
+// 文章内容、元数据块、评论引导、终端风格装扮
+// ============================================================
 
-p {margin: 8px 0px;}
-p > img {display: block; margin: 0 auto; width: 100%;}
-P > a {font-style: italic;}
-li > p {display: inline;}
-strong{text-decoration: underline;}
+// 段落基础
+p {
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+  margin: 8px 0;
+}
+
+// 页脚
+footer {
+  color: var(--text-color);
+  border-top: var(--border);
+  margin: 20px auto 15px;
+  padding-top: 10px;
+  text-align: right;
+}
+
+footer {
+  margin-bottom: 20px;
+}
+
+// 页面头部间距
+header {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+header p {
+  text-align: left;
+  margin: 0;
+}
+
+// 图片
+p > img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+// 段落内链接斜体
+p > a {
+  font-style: italic;
+}
+
+// 列表内段落内联
+li > p {
+  display: inline;
+}
+
+// 加粗文字加下划线
+strong {
+  text-decoration: underline;
+}
+
+// 引用块——点阵背景（SVG 静态方案）
 blockquote {
   position: relative;
   padding: 8px 10px;
@@ -18,70 +69,101 @@ blockquote {
   background-repeat: repeat;
 }
 
+// 引用块内元素用白色遮罩覆盖点阵
 blockquote > * {
   display: inline;
   background: #fff;
 }
-img {max-width: 100%;}
-table {margin-bottom: 15px; width: 100%}
-th {border-bottom: var(--border);}
-ul {padding-inline-start: 8px !important; margin: 8px 0px;}
-li > ul {margin: 0px 0px;}
 
+// 表格
+table {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+th {
+  border-bottom: var(--border);
+}
+
+// 列表
+ul {
+  padding-inline-start: 8px !important;
+  margin: 8px 0;
+}
+
+li > ul {
+  margin: 0;
+}
+
+// 表格首列不换行
 .nowrap-col-1 td:nth-child(1),
-.nowrap-col-1 th:nth-child(1) { white-space: nowrap; }
+.nowrap-col-1 th:nth-child(1) {
+  white-space: nowrap;
+}
 
-#index { ul {margin:0px 0px;}}
+// 首页索引
+#index {
+  ul {
+    margin: 0;
+  }
+}
 
+// PRO 区块
 #pro {
   display: flex;
   margin-top: 15px;
+
   img {
     width: fit-content;
     margin-right: 8px;
   }
 }
 
+// git-log 终端风格区块
 .git-log {
   padding: 1rem 1rem 1rem !important;
+  padding: 2rem;
   background-color: black;
   border-radius: 1rem;
-  margin: 1rem 0rem;
-  padding: 2rem;
+  margin: 1rem 0;
   color: white;
   font: 0.8rem Inconsolata, monospace;
   position: relative;
   overflow: hidden;
   text-shadow: 0 0 5px #C8C8C8;
+
   a {
     color: white;
   }
+
+  // CRT 扫描线效果（SVG 静态方案）
   &::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      rgba(black, 0.15),
-      rgba(black, 0.15) 1px,
-      transparent 1px,
-      transparent 2px
-    );
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='2' viewBox='0 0 1 2'%3E%3Crect x='0' y='0' width='1' height='1' fill='rgba(0,0,0,0.15)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 1px 2px;
     pointer-events: none;
   }
+
   ::selection {
     background: #0080FF;
     text-shadow: none;
   }
+
   pre {
     margin: 0;
   }
-  img{
+
+  img {
     border-width: 0;
   }
 }
 
+// 评论区引导标题
 .comment-guide__title {
   margin-bottom: 10px;
   color: #8fbc8f;
@@ -90,6 +172,7 @@ li > ul {margin: 0px 0px;}
   text-transform: uppercase;
 }
 
+// 评论区引导正文
 .comment-guide__text {
   margin-bottom: 10px;
   color: #f1f1f1;
@@ -97,6 +180,7 @@ li > ul {margin: 0px 0px;}
   line-height: 1.6;
 }
 
+// 评论区引导签名
 .comment-guide__signature {
   margin-bottom: 0;
   color: #f1f1f1;

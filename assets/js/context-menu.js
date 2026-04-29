@@ -88,8 +88,8 @@
       useCORS: true,
       logging: false
     }).then(function (canvas) {
-      var padded = padCanvas(canvas, 20, bgColor);
-      var result = addShadow(padded, 16);
+      var padded = padCanvas(canvas, 40, bgColor);
+      var result = addShadow(padded, 40);
       var link = document.createElement('a');
       link.download = filename;
       link.href = result.toDataURL('image/png');
