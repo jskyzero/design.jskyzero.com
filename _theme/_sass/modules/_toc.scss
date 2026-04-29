@@ -180,7 +180,7 @@
   .toc-nav li {
     position: relative;
     display: grid;
-    grid-template-columns: $mindmap-column-width auto;
+    grid-template-columns: minmax($mindmap-column-width, max-content) auto;
     align-items: center;
     column-gap: $mindmap-branch-width;
     margin: 0;
@@ -244,6 +244,12 @@
   .toc-nav > ul > li {
     grid-template-columns: $mindmap-root-column-width auto;
     column-gap: 0;
+  }
+
+  .toc-nav > ul > li {
+    grid-template-columns: $mindmap-root-column-width auto;
+    column-gap: 0;
+    overflow: visible;
   }
 
   .toc-nav > ul > li > ul > li {

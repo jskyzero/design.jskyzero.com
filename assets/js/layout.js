@@ -80,18 +80,34 @@ function initTocOverflow() {
   const sidebarToc = document.getElementById('toc-sidebar');
   if (!sidebarToc) return;
 
+  var scheduled = false;
+
   function updateOverflow() {
-    sidebarToc.classList.toggle('toc-sidebar--overflowing', sidebarToc.scrollHeight > sidebarToc.clientHeight + 1);
+    scheduled = false;
+    const wasOverflowing = sidebarToc.classList.contains('toc-sidebar--overflowing');
+
+    sidebarToc.classList.remove('toc-sidebar--overflowing');
+    const shouldOverflow = sidebarToc.scrollHeight > sidebarToc.clientHeight + 1;
+    sidebarToc.classList.toggle('toc-sidebar--overflowing', shouldOverflow);
+
+    if (wasOverflowing !== shouldOverflow) sidebarToc.scrollTop = Math.min(sidebarToc.scrollTop, sidebarToc.scrollHeight);
   }
 
-  updateOverflow();
-  window.addEventListener('resize', updateOverflow);
+  function scheduleUpdateOverflow() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(updateOverflow);
+  }
+
+  scheduleUpdateOverflow();
+  window.addEventListener('resize', scheduleUpdateOverflow);
 
   if (window.ResizeObserver) {
-    const observer = new ResizeObserver(updateOverflow);
-    observer.observe(sidebarToc);
     const nav = sidebarToc.querySelector('.toc-nav');
-    if (nav) observer.observe(nav);
+    if (nav) {
+      const observer = new ResizeObserver(scheduleUpdateOverflow);
+      observer.observe(nav);
+    }
   }
 }
 
@@ -99,7 +115,10 @@ function initTocActiveVisibility() {
   const sidebarToc = document.getElementById('toc-sidebar');
   if (!sidebarToc || !window.MutationObserver) return;
 
+  var scrolling = false;
+
   function keepActiveVisible() {
+    if (scrolling) return;
     const active = sidebarToc.querySelector('.toc-nav a.active');
     if (!active || !sidebarToc.classList.contains('toc-sidebar--overflowing')) return;
 
@@ -109,9 +128,13 @@ function initTocActiveVisibility() {
     const bottomGap = 32;
 
     if (activeRect.top < sidebarRect.top + topGap) {
-      sidebarToc.scrollBy({ top: activeRect.top - sidebarRect.top - topGap, behavior: 'smooth' });
+      scrolling = true;
+      sidebarToc.scrollBy({ top: activeRect.top - sidebarRect.top - topGap, behavior: 'instant' });
+      requestAnimationFrame(function () { scrolling = false; });
     } else if (activeRect.bottom > sidebarRect.bottom - bottomGap) {
-      sidebarToc.scrollBy({ top: activeRect.bottom - sidebarRect.bottom + bottomGap, behavior: 'smooth' });
+      scrolling = true;
+      sidebarToc.scrollBy({ top: activeRect.bottom - sidebarRect.bottom + bottomGap, behavior: 'instant' });
+      requestAnimationFrame(function () { scrolling = false; });
     }
   }
 

@@ -6,7 +6,7 @@
     if (menu) return;
     menu = document.createElement('div');
     menu.className = 'custom-context-menu';
-    menu.innerHTML = '<div class="custom-context-menu__item" data-action="save-image">保存该章节为图片</div>';
+    menu.innerHTML = '<div class="custom-context-menu__item" data-action="save-image"></div>';
     document.body.appendChild(menu);
 
     menu.addEventListener('click', function (e) {
@@ -18,7 +18,9 @@
     });
   }
 
-  function showMenu(x, y) {
+  function showMenu(x, y, title) {
+    var item = menu.querySelector('.custom-context-menu__item');
+    item.textContent = '保存「' + title + '」为图片';
     var mw = menu.offsetWidth;
     var mh = menu.offsetHeight;
     var vw = window.innerWidth;
@@ -117,7 +119,7 @@
       }
 
       targetSection = section;
-      showMenu(e.clientX, e.clientY);
+      showMenu(e.clientX, e.clientY, getSectionTitle(section));
     });
 
     document.addEventListener('click', function (e) {
