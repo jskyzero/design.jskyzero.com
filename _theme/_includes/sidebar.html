@@ -3,6 +3,7 @@
   Displays collapsible categories with post lists, mirroring home.html structure
 -->
 <aside class="sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
   <!-- Search box -->
   <div class="sidebar-search">
     <input type="text" id="search-input" placeholder="Search...">
@@ -11,14 +12,17 @@
 
   <!-- Navigation -->
   <nav class="sidebar-nav">
-    {% for category in site.index_categories %}
+    {% for item in site.home.categories %}
+      {% assign category = item.name | default: item %}
       {% assign posts = site.categories[category] %}
       {%- if posts.size > 0 -%}
         <details open>
           <summary>{{ category }}</summary>
           <ul>
-            {% if site.index_categories_sort_by_title contains category %}
+            {% if item.sort == 'title' %}
               {% assign posts = posts | sort: "title" %}
+            {% elsif item.sort == 'order' %}
+              {% assign posts = posts | sort: "date" | sort: "order" %}
             {% endif %}
             {%- for post in posts -%}
               {% unless post.path contains "archive" %}

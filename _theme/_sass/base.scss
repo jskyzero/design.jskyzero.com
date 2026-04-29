@@ -1,19 +1,6 @@
 @charset "utf-8";
 
-/*
- * Font: Sarasa Mono SC — loaded from local TTF to avoid external API issues.
- * The zeoseven.com CSS uses local("Sarasa Mono SC") which can conflict with
- * system-installed versions. Local TTF gives full control.
- * Fallback: system monospace (keeps English at correct monospace width)
- */
-@font-face {
-  font-family: 'Sarasa Mono SC';
-  src: url(/assets/font/sarasa-monoT-sc-regular.ttf) format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-$base-font-family: "Sarasa Mono SC", monospace !default;
+$base-font-family: "Sarasa Mono SC", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace !default;
 
 /**
  * Style variables
@@ -24,16 +11,23 @@ $mobile-font-size:     12px !default;
 $base-line-height:     1.5 !default;
 $container-width:      90% !default;
 $container-max-width:  600px !default;
+$breakpoint-mobile:    900px;
 
 /**
  * Global
  */
 body { background-color: var(--background-color);  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
-h1, h2, h3, h4, h5, h6 { font-size: $base-font-size;  margin: 22px 0px 4px; font-weight: bold;  color: var(--text-color); }
+h1, h2, h3, h4, h5, h6 { margin: 22px 0px 4px; font-weight: bold;  color: var(--text-color); }
+h1 { font-size: 18px; }
+h2 { font-size: 15px; }
+h3 { font-size: 14px; }
+h4 { font-size: 13px; }
+h5 { font-size: 12.5px; }
+h6 { font-size: 12px; }
 p, ul, ol { margin: 0px;  color: var(--text-color); }
 a { text-decoration: underline;  color: var(--link-color);}
 a:hover { color: var(--background-color); background-color: var(--base-color); }
-@media only screen and (max-device-width: 500px) { * { font-size: $mobile-font-size !important; } }
+@media only screen and (max-device-width: 500px) { body { font-size: $mobile-font-size; } }
 
 
 /**
@@ -80,6 +74,14 @@ $toc-width: 260px;
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
 
 // ==================== LEFT SIDEBAR ====================
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--background-color);
+  z-index: 190;
+}
+
 .sidebar {
   padding: 20px 12px 20px 16px;
   font-size: $base-font-size;
@@ -92,6 +94,10 @@ $toc-width: 260px;
   // Hide scrollbar in non-hover
   &::-webkit-scrollbar { width: 4px; }
   &::-webkit-scrollbar-thumb { background: var(--text-color); }
+
+  .sidebar-close {
+    display: none;
+  }
 
   // Dropdown details (collapsible category groups)
   details {
@@ -106,7 +112,7 @@ $toc-width: 260px;
 
       &:before {
         content: "▸ ";
-        font-size: 10px;
+        font-size: 14px;
         display: inline-block;
         transition: transform 0.2s;
       }
@@ -119,7 +125,7 @@ $toc-width: 260px;
     // Post list within category
     ul {
       list-style: none;
-      padding-left: 8px;
+      padding-left: 20px;
       margin: 4px 0;
 
       li {
@@ -227,6 +233,15 @@ $toc-width: 260px;
   height: 100vh;
   overflow-y: auto;
   background: var(--background-color);
+  font-style: italic;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
 
   &::-webkit-scrollbar { width: 4px; }
   &::-webkit-scrollbar-thumb { background: var(--text-color); }
@@ -234,6 +249,7 @@ $toc-width: 260px;
 
 .toc-title {
   font-weight: bold;
+  font-style: normal;
   margin-bottom: 8px;
 }
 
@@ -266,6 +282,15 @@ $toc-width: 260px;
   }
 }
 
+.toc-inline {
+  margin: 12px 0 20px;
+  font-style: italic;
+
+  .toc-title {
+    margin-bottom: 4px;
+  }
+}
+
 // TOC active/highlight (scroll spy)
 .toc-nav a.active {
   font-weight: bold;
@@ -274,65 +299,58 @@ $toc-width: 260px;
 }
 
 // ==================== RESPONSIVE ====================
-@media (max-width: 900px) {
+@media (max-width: $breakpoint-mobile) {
   .page-wrapper {
     grid-template-columns: 1fr !important;
+  }
+
+  body.sidebar-open {
+    overflow: hidden;
   }
 
   .sidebar {
     position: fixed;
     left: 0;
     top: 0;
+    bottom: 0;
     z-index: 200;
-    width: $sidebar-width;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
     transform: translateX(-100%);
     transition: transform 0.2s;
 
     &.open {
       transform: translateX(0);
     }
+
+    .sidebar-close {
+      display: block;
+      float: right;
+      padding: 0 4px;
+      border: none;
+      background: transparent;
+      color: var(--text-color);
+      cursor: pointer;
+      font-family: $base-font-family;
+      font-size: 20px;
+    }
+  }
+
+  .sidebar-overlay {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sidebar.open + .sidebar-overlay {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .toc-sidebar {
     display: none;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 200;
-    width: $toc-width;
-
-    &.open {
-      display: block;
-    }
   }
-
-  // Mobile toggle buttons
-  .sidebar-toggle,
-  .toc-toggle {
-    position: fixed;
-    bottom: 16px;
-    z-index: 300;
-    padding: 6px 10px;
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    background: var(--background-color);
-    border: var(--border);
-    color: var(--text-color);
-    cursor: pointer;
-
-    &:hover {
-      color: var(--background-color);
-      background-color: var(--base-color);
-    }
-  }
-
-  .sidebar-toggle { left: 16px; }
-  .toc-toggle { right: 16px; }
-}
-
-@media (max-width: 500px) {
-  .sidebar { width: 80vw; }
-  .toc-sidebar { width: 70vw; }
 }
 
 /**
@@ -468,10 +486,26 @@ h5:before {
  * Header/Navigation
  */
 .menu { border-top: var(--border);  border-bottom: var(--border);  margin-bottom: 25px; }
+.sidebar-toggle { display: none; float: left; padding: 2px 6px; margin: 8px 0; border: var(--border); background: var(--background-color); color: var(--text-color); font-family: $base-font-family; cursor: pointer; }
+.sidebar-toggle:hover { color: var(--background-color); background-color: var(--base-color); }
 .menu ul { margin-top: 12px;  margin-bottom: 12px;  padding-left: 0px;  list-style-type: none;  text-align: right; }
 .menu ul li { display: inline;  margin-left: 10px; }
 .menu ul li a { text-decoration: none;  color: var(--text-color); }
 .menu ul li a:hover { text-decoration: none; color: var(--background-color); background-color: var(--base-color); }
+
+@media (max-width: $breakpoint-mobile) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 150;
+    background: var(--background-color);
+    padding-top: 1px;
+  }
+
+  .sidebar-toggle {
+    display: inline-block;
+  }
+}
 
 /**
  * Form

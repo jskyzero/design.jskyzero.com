@@ -7,4 +7,11 @@ layout: default
   Used for static pages like /github/, /Home.
 -->
 
+<div class="toc-inline" id="toc-inline">
+  <div class="toc-title">大纲</div>
+  <nav class="toc-nav">
+    {% include TOC.html html=content h_min=1 h_max=3 sanitize=true %}
+  </nav>
+</div>
+
 {{ content }}

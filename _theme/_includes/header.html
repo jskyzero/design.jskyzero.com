@@ -3,9 +3,12 @@
   Renders a right-aligned menu from site.header_pages (configured in _config.yml).
   The menu displays as a series of inline links with dashed top/bottom borders.
 -->
-{%- assign page_paths = site.header_pages | default: default_paths -%}
+{%- assign page_paths = site.nav.header_pages | default: site.header_pages | default: default_paths -%}
 <header>
   <div class="menu">
+    {%- unless page.layout == 'home' -%}
+      <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    {%- endunless -%}
     <ul>
       {%- for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}

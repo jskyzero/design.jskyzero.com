@@ -9,13 +9,16 @@ layout: default
 
 {% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %}
 
-{% for category in site.index_categories %}
+{% for item in site.home.categories %}
+  {% assign category = item.name | default: item %}
   {% assign posts = site.categories[category] %}
   {%- if posts.size > 0 -%}
     <ul>
       <p>{{ category }}</p>
-      {% if site.index_categories_sort_by_title contains category %}
+      {% if item.sort == 'title' %}
         {% assign posts = posts | sort: "title" %}
+      {% elsif item.sort == 'order' %}
+        {% assign posts = posts | sort: "date" | sort: "order" %}
       {% endif %}
       {%- for post in posts -%}
         {% unless post.path contains "archive" %}
