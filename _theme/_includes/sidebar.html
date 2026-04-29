@@ -16,24 +16,31 @@
       {% assign category = item.name | default: item %}
       {% assign posts = site.categories[category] %}
       {%- if posts.size > 0 -%}
-        <details open>
-          <summary>{{ category }}</summary>
+        <section class="sidebar-group">
+          <div class="sidebar-group-title">{{ category }}</div>
           <ul>
-            {% if item.sort == 'title' %}
-              {% assign posts = posts | sort: "title" %}
-            {% elsif item.sort == 'order' %}
-              {% assign posts = posts | sort: "date" | sort: "order" %}
+            {% if item.manual_posts %}
+              {%- for post_path in item.manual_posts -%}
+                {%- assign post = site.posts | where: "path", post_path | first -%}
+                {%- if post -%}
+                  <li>
+                    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                    {%- if post.pro -%}<span class="pro-star">⭐️</span>{%- endif -%}
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            {% else %}
+              {%- for post in posts -%}
+                {% unless post.path contains "archive" %}
+                <li>
+                  <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                  {%- if post.pro -%}<span class="pro-star">⭐️</span>{%- endif -%}
+                </li>
+                {% endunless %}
+              {%- endfor -%}
             {% endif %}
-            {%- for post in posts -%}
-              {% unless post.path contains "archive" %}
-              <li>
-                <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                {%- if post.pro -%}<span class="pro-star">⭐️</span>{%- endif -%}
-              </li>
-              {% endunless %}
-            {%- endfor -%}
           </ul>
-        </details>
+        </section>
       {%- endif -%}
     {%- endfor -%}
   </nav>

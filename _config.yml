@@ -21,19 +21,19 @@ nav:
     - index.project.md
 
 home:
-  # sort: date (Jekyll default), title, or order.
-  # For custom post order, set `order: 10` in a post's front matter.
+  # Use `manual_posts` when a category needs explicit ordering.
+  # Items are post paths under the repository root.
   categories:
     - name: 动作游戏设计
     - name: 动作游戏分析
     - name: 游戏AI
-      sort: title
     - name: 专题报告
     - name: 一期一会
     - name: 游戏开发
-      sort: title
     - name: 摘录与杂谈
-      sort: title
+      manual_posts:
+        - _posts/6.摘录与杂谈/阅读笔记/2021-11-14-possessiveness.md
+        - _posts/6.摘录与杂谈/2025-07-05-collect.md
 
 plugins:
   - jekyll-feed

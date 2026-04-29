@@ -1,6 +1,22 @@
 @charset "utf-8";
 
-$base-font-family: "Sarasa Mono SC", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace !default;
+@font-face {
+  font-family: "Sarasa Mono SC";
+  src: url("/assets/font/sarasa-monoT-sc-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sarasa Mono T SC";
+  src: url("/assets/font/sarasa-monoT-sc-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+$base-font-family: "Sarasa Mono SC", "Sarasa Mono T SC", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace !default;
 
 /**
  * Style variables
@@ -18,12 +34,7 @@ $breakpoint-mobile:    900px;
  */
 body { background-color: var(--background-color);  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
 h1, h2, h3, h4, h5, h6 { margin: 22px 0px 4px; font-weight: bold;  color: var(--text-color); }
-h1 { font-size: 18px; }
-h2 { font-size: 15px; }
-h3 { font-size: 14px; }
-h4 { font-size: 13px; }
-h5 { font-size: 12.5px; }
-h6 { font-size: 12px; }
+h1, h2, h3, h4, h5, h6 { font-size: 13px; }
 p, ul, ol { margin: 0px;  color: var(--text-color); }
 a { text-decoration: underline;  color: var(--link-color);}
 a:hover { color: var(--background-color); background-color: var(--base-color); }
@@ -41,18 +52,20 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 // Sidebar widths — wider to avoid long title wrapping
 $sidebar-width: 240px;
-$toc-width: 260px;
+$toc-width: 340px;
+// Keep the content column visually centered when sidebars have different widths.
+$side-rail-width: max($sidebar-width, $toc-width);
 
 // Three-column grid for the page wrapper
 .page-wrapper {
   display: grid;
-  grid-template-columns: $sidebar-width 1fr $toc-width;
+  grid-template-columns: $side-rail-width 1fr $side-rail-width;
   max-width: 100%;
   margin: 0 auto;
 
   // When no TOC sidebar, use two columns
   &:has(.toc-sidebar:empty) {
-    grid-template-columns: $sidebar-width 1fr;
+    grid-template-columns: $side-rail-width 1fr $side-rail-width;
   }
 
   // Home page: single-column, full-width content
@@ -79,6 +92,8 @@ $toc-width: 260px;
   position: fixed;
   inset: 0;
   background: var(--background-color);
+  opacity: 1;
+  transition: opacity 0.2s ease;
   z-index: 190;
 }
 
@@ -90,6 +105,7 @@ $toc-width: 260px;
   top: 0;
   height: 100vh;
   background: var(--background-color);
+  animation: sidebar-fade-in 0.2s ease;
 
   // Hide scrollbar in non-hover
   &::-webkit-scrollbar { width: 4px; }
@@ -99,33 +115,25 @@ $toc-width: 260px;
     display: none;
   }
 
-  // Dropdown details (collapsible category groups)
-  details {
+  .sidebar-group {
     margin-bottom: 8px;
 
-    summary {
-      cursor: pointer;
+    .sidebar-group-title {
+      display: flex;
+      align-items: baseline;
       font-weight: bold;
-      margin-bottom: 4px;
-      list-style: none; // hide default triangle
-      &::-webkit-details-marker { display: none; }
+      margin: 10px 0 4px;
+      padding: 0;
 
       &:before {
-        content: "▸ ";
-        font-size: 14px;
-        display: inline-block;
-        transition: transform 0.2s;
+        content: "-";
+        margin-right: 9px;
       }
     }
 
-    &[open] > summary:before {
-      content: "▾ ";
-    }
-
-    // Post list within category
     ul {
       list-style: none;
-      padding-left: 20px;
+      padding-left: 16px;
       margin: 4px 0;
 
       li {
@@ -163,8 +171,9 @@ $toc-width: 260px;
   input[type="text"] {
     width: 100%;
     box-sizing: border-box;
-    padding: 4px 6px;
-    border: var(--border);
+    padding: 4px 0;
+    border: none;
+    border-bottom: var(--border);
     background: var(--background-color);
     color: var(--text-color);
     font-family: $base-font-family;
@@ -172,6 +181,7 @@ $toc-width: 260px;
 
     &:focus {
       outline: none;
+      border-bottom-style: solid;
     }
   }
 }
@@ -226,7 +236,7 @@ $toc-width: 260px;
 
 // ==================== RIGHT TOC SIDEBAR ====================
 .toc-sidebar {
-  padding: 20px 16px 20px 12px;
+  padding: 20px 24px 20px 12px;
   font-size: $base-font-size;
   position: sticky;
   top: 0;
@@ -236,7 +246,8 @@ $toc-width: 260px;
   font-style: italic;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s;
+  // Fade only; transforms can create horizontal overflow before the TOC appears.
+  transition: opacity 0.2s ease;
 
   &.visible {
     opacity: 1;
@@ -247,30 +258,46 @@ $toc-width: 260px;
   &::-webkit-scrollbar-thumb { background: var(--text-color); }
 }
 
-.toc-title {
-  font-weight: bold;
-  font-style: normal;
-  margin-bottom: 8px;
-}
-
 .toc-nav {
+  counter-reset: toc2;
+
   ul {
     list-style: none;
-    padding-left: 8px;
+    padding-left: 0;
     margin: 4px 0;
+    counter-reset: toc3;
 
     ul {
-      padding-left: 12px;
+      padding-left: 18px;
+      counter-reset: toc4;
+
+      ul {
+        padding-left: 18px;
+      }
     }
 
     li {
-      margin: 2px 0;
+      margin: 7px 0 3px;
       line-height: 1.4;
 
       &:before { content: none !important; }
 
+      > a:before {
+        content: none;
+      }
+
+      li > a:before {
+        counter-increment: toc2;
+        content: counter(toc2) " ";
+      }
+
+      li li > a:before {
+        counter-increment: toc3;
+        content: counter(toc2) "." counter(toc3) " ";
+      }
+
       a {
-        text-decoration: none;
+        text-decoration: underline;
         color: var(--text-color);
 
         &:hover {
@@ -282,20 +309,22 @@ $toc-width: 260px;
   }
 }
 
+.toc-sidebar .toc-nav > ul > li > a {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: bold;
+}
+
 .toc-inline {
   margin: 12px 0 20px;
   font-style: italic;
-
-  .toc-title {
-    margin-bottom: 4px;
-  }
 }
 
 // TOC active/highlight (scroll spy)
 .toc-nav a.active {
   font-weight: bold;
-  color: var(--background-color);
-  background-color: var(--base-color);
+  color: var(--text-color);
+  background-color: rgba(128, 128, 128, 0.18);
 }
 
 // ==================== RESPONSIVE ====================
@@ -319,9 +348,12 @@ $toc-width: 260px;
     box-sizing: border-box;
     transform: translateX(-100%);
     transition: transform 0.2s;
+    opacity: 0;
+    transition: transform 0.2s, opacity 0.2s ease;
 
     &.open {
       transform: translateX(0);
+      opacity: 1;
     }
 
     .sidebar-close {
@@ -351,6 +383,11 @@ $toc-width: 260px;
   .toc-sidebar {
     display: none;
   }
+}
+
+@keyframes sidebar-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /**
@@ -499,7 +536,16 @@ h5:before {
     top: 0;
     z-index: 150;
     background: var(--background-color);
-    padding-top: 1px;
+    padding: 8px 10px 6px;
+    transition: transform 0.2s;
+  }
+
+  .menu {
+    margin-bottom: 18px;
+  }
+
+  header.header-hidden {
+    transform: translateY(-110%);
   }
 
   .sidebar-toggle {
