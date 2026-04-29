@@ -1,0 +1,29 @@
+@use "../settings" as *;
+
+.custom-context-menu {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  min-width: 160px;
+  padding: 4px 0;
+  background: var(--background-color);
+  border: var(--border);
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+.custom-context-menu.visible {
+  display: block;
+}
+
+.custom-context-menu__item {
+  padding: 4px 12px;
+  cursor: pointer;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+.custom-context-menu__item:hover {
+  color: var(--background-color);
+  background-color: var(--base-color);
+}

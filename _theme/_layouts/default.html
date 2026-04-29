@@ -14,7 +14,7 @@ layout: null
 
   {%- include head.html -%}
 
-  <body>
+  <body data-env="{{ jekyll.environment }}">
     <div class="site-shell page-wrapper{% if page.layout == 'home' %} no-sidebar{% endif %}">
       {%- include sidebar.html -%}
       <div class="sidebar-overlay" data-sidebar-close></div>
@@ -34,7 +34,9 @@ layout: null
         <aside class="outline-sidebar toc-sidebar" aria-hidden="true"></aside>
       {%- endif -%}
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="/assets/js/search.js"></script>
     <script src="/assets/js/layout.js"></script>
+    <script src="/assets/js/context-menu.js"></script>
   </body>
 </html>

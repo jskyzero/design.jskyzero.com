@@ -6,6 +6,7 @@
 {%- assign page_paths = site.nav.header_pages | default: site.header_pages | default: default_paths -%}
 <header class="site-header">
   <div class="site-menu menu">
+    <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/logo.2.png' | relative_url }}" alt="{{ site.title }}"></a>
     {%- unless page.layout == 'home' -%}
       <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
     {%- endunless -%}

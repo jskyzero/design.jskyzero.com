@@ -5,12 +5,21 @@ body { background-color: var(--background-color);  margin: 0 auto;  padding: 0; 
 h1, h2, h3, h4, h5, h6 { display: flex; align-items: center; gap: 8px; margin: 22px 0px 4px; font-weight: bold;  color: var(--text-color); line-height: $base-line-height; }
 h1, h2, h3, h4, h5, h6 { font-size: 13px; }
 h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
-  content: "";
-  flex: 1;
+  content: none;
+}
+.svg-heading-rule {
+  display: block;
+  flex: 1 1 auto;
   height: 1em;
-  background:
-    repeating-linear-gradient(-45deg, color-mix(in srgb, currentColor 16%, transparent) 0 1px, transparent 1px 7px),
-    linear-gradient(var(--background-color), var(--background-color));
+  min-width: 0;
+  background: var(--background-color);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cline x1='0' y1='8' x2='8' y2='0' stroke='rgba(0,0,0,0.16)' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+.svg-heading-label {
+  flex: 0 1 auto;
+  min-width: 0;
+  white-space: nowrap;
 }
 h2:before, h3:before, h4:before, h5:before { content: none !important; }
 h1 .heading-counter, h2 .heading-counter, h3 .heading-counter, h4 .heading-counter, h5 .heading-counter, h6 .heading-counter,
@@ -27,13 +36,16 @@ h1 .heading-label, h2 .heading-label, h3 .heading-label, h4 .heading-label, h5 .
   padding: 0 14px 14px;
 }
 .content-section:before {
-  content: "";
+  content: none;
+}
+.content-section-frame {
   position: absolute;
   inset: ($base-line-height * 0.5em) 0 0;
   border: 1px solid rgba(128, 128, 128, 0.45);
   pointer-events: none;
+  z-index: 0;
 }
-.content-section > * {
+.content-section > :not(.content-section-frame) {
   position: relative;
   z-index: 1;
 }
@@ -43,6 +55,7 @@ h1 .heading-label, h2 .heading-label, h3 .heading-label, h4 .heading-label, h5 .
   opacity: 0.28;
   background: radial-gradient(var(--text-color) 1px, transparent 1px) 0 0 / 8px 8px repeat;
 }
+.content-section > .content-section-frame + *,
 .content-section > :first-child {
   margin-top: 0;
 }

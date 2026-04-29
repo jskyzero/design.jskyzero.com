@@ -54,9 +54,9 @@
         {% assign heading_number = h2_count | append: '.' | append: h3_count | append: '.' | append: h4_count | append: '.' | append: h5_count | append: '.' %}
     {% endcase %}
     {% if heading_number != '' %}
-      {% assign heading = heading_open | append: '<span class="heading-counter">' | append: heading_number | append: '</span><span class="heading-label">' | append: heading_body | append: '</span>' | append: heading_close %}
+      {% assign heading = heading_open | append: '<span class="heading-counter">' | append: heading_number | append: '</span><span class="heading-label">' | append: heading_body | append: '</span><span class="svg-heading-rule" aria-hidden="true"></span>' | append: heading_close %}
     {% else %}
-      {% assign heading = heading_open | append: '<span class="heading-label">' | append: heading_body | append: '</span>' | append: heading_close %}
+      {% assign heading = heading_open | append: '<span class="heading-label">' | append: heading_body | append: '</span><span class="svg-heading-rule" aria-hidden="true"></span>' | append: heading_close %}
     {% endif %}
     {% assign body = trimmed | remove_first: original_heading | strip %}
     {% if heading_level == '1' %}
@@ -68,6 +68,7 @@
       {% endif %}
       {% assign section_count = section_count | plus: 1 %}
       <section class="content-section">
+        <div class="content-section-frame" aria-hidden="true"></div>
         {{ heading }}
         {{ body }}
       </section>
