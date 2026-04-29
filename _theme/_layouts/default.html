@@ -16,10 +16,8 @@ layout: null
 
   <body>
     <div class="site-shell page-wrapper{% if page.layout == 'home' %} no-sidebar{% endif %}">
-      {%- unless page.layout == 'home' -%}
-        {%- include sidebar.html -%}
-        <div class="sidebar-overlay" data-sidebar-close></div>
-      {%- endunless -%}
+      {%- include sidebar.html -%}
+      <div class="sidebar-overlay" data-sidebar-close></div>
       <div class="site-content content-area">
         <div class="container">
           {%- include header.html -%}
@@ -32,6 +30,8 @@ layout: null
       {%- if page.layout == 'post' or page.layout == 'page' -%}
         {%- assign sidebar_toc_content = page.content | markdownify -%}
         {%- include sidebar-toc.html html=sidebar_toc_content -%}
+      {%- else -%}
+        <aside class="outline-sidebar toc-sidebar" aria-hidden="true"></aside>
       {%- endif -%}
     </div>
     <script src="/assets/js/search.js"></script>

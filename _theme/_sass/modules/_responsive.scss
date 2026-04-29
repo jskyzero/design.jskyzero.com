@@ -1,0 +1,67 @@
+@use "../settings" as *;
+
+// Narrow screens collapse rails and use a fixed mobile navigation drawer.
+@media (max-width: ($layout-wide-breakpoint - 1px)) {
+  .page-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.sidebar-open {
+    overflow: hidden;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 200;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: opacity 1s ease;
+
+    &.open {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .sidebar-close {
+      display: block;
+      float: right;
+      padding: 0 4px;
+      border: none;
+      background: transparent;
+      color: var(--text-color);
+      cursor: pointer;
+      font-family: $base-font-family;
+      font-size: 20px;
+    }
+  }
+
+  .sidebar-overlay {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sidebar.open + .sidebar-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .toc-sidebar {
+    opacity: 0 !important;
+    visibility: hidden;
+    overflow: hidden;
+    transition: none;
+    display: none;
+  }
+}
+
+@keyframes sidebar-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,40 @@
+@use "../settings" as *;
+
+// Selection colors, list markers, and top header navigation.
+::selection { background: var(--selection-background);  color: var(--selection-text); }
+::-moz-selection { background: var(--selection-background);  color: var(--selection-text); }
+
+:not(.menu) > ul { list-style: none;  padding-left: 0; }
+:not(.menu) > ul { list-style-type: none; }
+:not(.menu) > ul > li:before { content: "-";  margin-right: 9px; }
+
+.menu { border-top: var(--border);  border-bottom: var(--border);  margin-bottom: 25px; }
+.sidebar-toggle { display: none; float: left; padding: 2px 6px; margin: 8px 0; border: var(--border); background: var(--background-color); color: var(--text-color); font-family: $base-font-family; cursor: pointer; }
+.sidebar-toggle:hover { color: var(--background-color); background-color: var(--base-color); }
+.menu ul { margin-top: 12px;  margin-bottom: 12px;  padding-left: 0px;  list-style-type: none;  text-align: right; }
+.menu ul li { display: inline;  margin-left: 10px; }
+.menu ul li a { text-decoration: none;  color: var(--text-color); }
+.menu ul li a:hover { text-decoration: none; color: var(--background-color); background-color: var(--base-color); }
+
+@media (max-width: ($layout-wide-breakpoint - 1px)) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 150;
+    background: var(--background-color);
+    padding: 8px 10px 6px;
+    transition: transform 0.2s;
+  }
+
+  .menu {
+    margin-bottom: 18px;
+  }
+
+  header.header-hidden {
+    transform: translateY(-110%);
+  }
+
+  .sidebar-toggle {
+    display: inline-block;
+  }
+}

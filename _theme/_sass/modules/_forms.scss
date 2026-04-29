@@ -1,0 +1,13 @@
+@use "../settings" as *;
+
+// Form controls inherit the terminal font and theme variables.
+input, select, textarea { padding: 0;  margin: 0;  -webkit-appearance: none;  -webkit-border-radius: 0;  border: none; }
+input[type=text], select, textarea { width: 100%;  resize: none;  background-color: var(--background-color);  color: var(--text-color);  caret-color: var(--text-color);  font-size: $base-font-size;  font-family: $base-font-family;  line-height: $base-line-height; }
+input, select, textarea, textarea::-webkit-input-placeholder { text-indent: 0px; }
+::placeholder { color: var(--placeholder-color);  opacity: 1; }
+:-ms-input-placeholder { color: var(--placeholder-color); }
+::-ms-input-placeholder { color: var(--placeholder-color); }
+input[type=submit] { font-size: $base-font-size;  font-family: $base-font-family;  line-height: $base-line-height;  cursor: pointer;  color: var(--link-color);  background-color: var(--background-color); }
+input[type=submit]:hover { color: var(--background-color); background-color: var(--base-color); }
+*:focus { outline: none; }
+textarea { vertical-align: top; }

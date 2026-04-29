@@ -8,8 +8,6 @@ url: "https://design.jskyzero.com"
 twitter_username: jskyzero
 github_username: jskyzero
 
-style: light
-listen_for_clients_preferred_style: false
 footer: 'Enjoy :)'
 git_log: true
 

@@ -1,0 +1,27 @@
+@use "../settings" as *;
+
+// Three-column shell: left navigation rail, fixed content column, right outline rail.
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  margin: 0 auto;
+
+  &.no-sidebar .sidebar,
+  &.no-sidebar .toc-sidebar {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@media (min-width: $layout-wide-breakpoint) {
+  .page-wrapper {
+    grid-template-columns: $sidebar-width 1fr $toc-width;
+  }
+}
+
+.content-area {
+  min-width: 0;
+}
+
+.container { width: min(#{$container-max-width}, 90vw);  max-width: none;  margin-right: auto;  margin-left: auto; }

@@ -1,0 +1,62 @@
+@use "../settings" as *;
+
+// Global typography, heading ornaments, and base link behavior.
+body { background-color: var(--background-color);  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
+h1, h2, h3, h4, h5, h6 { display: flex; align-items: center; gap: 8px; margin: 22px 0px 4px; font-weight: bold;  color: var(--text-color); line-height: $base-line-height; }
+h1, h2, h3, h4, h5, h6 { font-size: 13px; }
+h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+  content: "";
+  flex: 1;
+  height: 1em;
+  background:
+    repeating-linear-gradient(-45deg, color-mix(in srgb, currentColor 16%, transparent) 0 1px, transparent 1px 7px),
+    linear-gradient(var(--background-color), var(--background-color));
+}
+h2:before, h3:before, h4:before, h5:before { content: none !important; }
+h1 .heading-counter, h2 .heading-counter, h3 .heading-counter, h4 .heading-counter, h5 .heading-counter, h6 .heading-counter,
+h1 .heading-label, h2 .heading-label, h3 .heading-label, h4 .heading-label, h5 .heading-label, h6 .heading-label {
+  background: var(--background-color);
+  padding-right: 4px;
+}
+.content-section h1, .content-section h2, .content-section h3, .content-section h4, .content-section h5, .content-section h6 {
+  background: var(--background-color);
+}
+.content-section {
+  position: relative;
+  margin: 0 0 14px;
+  padding: 0 14px 14px;
+}
+.content-section:before {
+  content: "";
+  position: absolute;
+  inset: ($base-line-height * 0.5em) 0 0;
+  border: 1px solid rgba(128, 128, 128, 0.45);
+  pointer-events: none;
+}
+.content-section > * {
+  position: relative;
+  z-index: 1;
+}
+.content-section-separator {
+  height: $base-line-height * 1em;
+  margin: $base-line-height * 0.5em 0;
+  opacity: 0.28;
+  background: radial-gradient(var(--text-color) 1px, transparent 1px) 0 0 / 8px 8px repeat;
+}
+.content-section > :first-child {
+  margin-top: 0;
+}
+.content-section > :last-child {
+  margin-bottom: 0;
+}
+.site-main > p:has(> img:only-child),
+.site-main > img {
+  box-sizing: border-box;
+  margin: 14px 0;
+  padding: 14px;
+  border: 1px solid rgba(128, 128, 128, 0.45);
+}
+p, ul, ol { margin: 0px;  color: var(--text-color); }
+a { text-decoration: underline;  color: var(--link-color);}
+a:hover { color: var(--background-color); background-color: var(--base-color); }
+@media only screen and (max-device-width: 500px) { body { font-size: $mobile-font-size; } }
