@@ -1,4 +1,8 @@
-<table style="display: table;">
+<!--
+  arb.html - Data-backed boss move table.
+  Keeps legacy CSV/data rendering intact while exposing a class for theme styles.
+-->
+<table>
   <thead>
     <tr>
       <!-- <th>{{ include.filter }}</th> -->
@@ -24,22 +28,22 @@
 
           {%- assign tag = line.image_tag1-%}
           {% if tag != nil and tag != "" and tag != " " %}
-            <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat">
+            <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat" alt="{{ tag }}">
           {% endif %}
 
           {%- assign tag = line.attack_tag2 -%}
           {% if tag != nil and tag != "" and tag != " " %}
-            <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat">
+            <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat" alt="{{ tag }}">
           {% endif %}
 
           {%- assign tag =line.tag3 -%}
           {% if tag != nil and tag != "" and tag != " " %}
-            <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat">
+            <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat" alt="{{ tag }}">
           {% endif %}
 
           {%- assign tag = line.tag4 -%}
           {% if tag != nil and tag != "" and tag != " " %}
-            <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat">
+            <img src="https://img.shields.io/badge/{{ tag }}.svg?style=flat" alt="{{ tag }}">
           {% endif %}
           
       </td>

@@ -2,24 +2,26 @@
 layout: default
 ---
 <!--
-  post.html - Blog post layout
-  Extends default.html (which now includes sidebar + TOC sidebar).
-  Renders PRO badges, post content, git log, and disqus comments.
+  post.html - Article layout.
+  PRO metadata and the inline outline are positioned by layout.js so they sit
+  directly under the first h1 when a post provides one.
 -->
 
 <div id="index">
-  {% include PRO.html html=content %}
+  {% include pro.html html=content %}
 </div>
 
-<div class="toc-inline" id="toc-inline">
-  <nav class="toc-nav">
-    {% include TOC.html html=content h_min=1 h_max=3 sanitize=true %}
+{% assign article_content = content %}
+
+<div class="inline-outline toc-inline" id="toc-inline">
+  <nav class="toc-nav" aria-label="本文目录">
+    {% include toc.html html=article_content h_min=1 h_max=3 sanitize=true %}
   </nav>
 </div>
 
-{{ content }}
+{% include sectioned-content.html html=article_content %}
 
-{% include LOG.html %}
+{% include log.html %}
 
 <script src="/assets/js/main.js"></script>
 

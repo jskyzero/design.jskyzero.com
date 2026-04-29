@@ -1,40 +1,65 @@
 @charset "utf-8";
 
-@font-face {
-  font-family: "Sarasa Mono SC";
-  src: url("/assets/font/sarasa-monoT-sc-regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sarasa Mono T SC";
-  src: url("/assets/font/sarasa-monoT-sc-regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-$base-font-family: "Sarasa Mono SC", "Sarasa Mono T SC", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace !default;
-
-/**
- * Style variables
- */
-
-$base-font-size:       12.5px !default;
-$mobile-font-size:     12px !default;
-$base-line-height:     1.5 !default;
-$container-width:      90% !default;
-$container-max-width:  600px !default;
-$breakpoint-mobile:    900px;
+@use "settings" as *;
 
 /**
  * Global
  */
 body { background-color: var(--background-color);  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
-h1, h2, h3, h4, h5, h6 { margin: 22px 0px 4px; font-weight: bold;  color: var(--text-color); }
+h1, h2, h3, h4, h5, h6 { display: flex; align-items: center; gap: 8px; margin: 22px 0px 4px; font-weight: bold;  color: var(--text-color); line-height: $base-line-height; }
 h1, h2, h3, h4, h5, h6 { font-size: 13px; }
+h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+  content: "";
+  flex: 1;
+  height: 1em;
+  background:
+    repeating-linear-gradient(-45deg, color-mix(in srgb, currentColor 16%, transparent) 0 1px, transparent 1px 7px),
+    linear-gradient(var(--background-color), var(--background-color));
+}
+h2:before, h3:before, h4:before, h5:before { content: none !important; }
+h1 .heading-counter, h2 .heading-counter, h3 .heading-counter, h4 .heading-counter, h5 .heading-counter, h6 .heading-counter,
+h1 .heading-label, h2 .heading-label, h3 .heading-label, h4 .heading-label, h5 .heading-label, h6 .heading-label {
+  background: var(--background-color);
+  padding-right: 4px;
+}
+.content-section h1, .content-section h2, .content-section h3, .content-section h4, .content-section h5, .content-section h6 {
+  background: var(--background-color);
+}
+.content-section {
+  position: relative;
+  margin: 0 0 14px;
+  padding: 0 14px 14px;
+}
+.content-section:before {
+  content: "";
+  position: absolute;
+  inset: ($base-line-height * 0.5em) 0 0;
+  border: 1px solid rgba(128, 128, 128, 0.45);
+  pointer-events: none;
+}
+.content-section > * {
+  position: relative;
+  z-index: 1;
+}
+.content-section-separator {
+  height: $base-line-height * 1em;
+  margin: $base-line-height * 0.5em 0;
+  opacity: 0.28;
+  background: radial-gradient(var(--text-color) 1px, transparent 1px) 0 0 / 8px 8px repeat;
+}
+.content-section > :first-child {
+  margin-top: 0;
+}
+.content-section > :last-child {
+  margin-bottom: 0;
+}
+.site-main > p:has(> img:only-child),
+.site-main > img {
+  box-sizing: border-box;
+  margin: 14px 0;
+  padding: 14px;
+  border: 1px solid rgba(128, 128, 128, 0.45);
+}
 p, ul, ol { margin: 0px;  color: var(--text-color); }
 a { text-decoration: underline;  color: var(--link-color);}
 a:hover { color: var(--background-color); background-color: var(--base-color); }
@@ -47,25 +72,20 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
  *   Center: content (max 600px, terminal style)
  *   Right: TOC outline
  *   Home page uses single-column (no-sidebar class)
- * Responsive: collapses to single column below 900px
+ * Responsive: side rails appear only when viewport can hold both rails plus
+ * the full content column.
  */
-
-// Sidebar widths — wider to avoid long title wrapping
-$sidebar-width: 240px;
-$toc-width: 340px;
-// Keep the content column visually centered when sidebars have different widths.
-$side-rail-width: max($sidebar-width, $toc-width);
 
 // Three-column grid for the page wrapper
 .page-wrapper {
   display: grid;
-  grid-template-columns: $side-rail-width 1fr $side-rail-width;
+  grid-template-columns: 1fr;
   max-width: 100%;
   margin: 0 auto;
 
   // When no TOC sidebar, use two columns
   &:has(.toc-sidebar:empty) {
-    grid-template-columns: $side-rail-width 1fr $side-rail-width;
+    grid-template-columns: 1fr;
   }
 
   // Home page: single-column, full-width content
@@ -75,6 +95,16 @@ $side-rail-width: max($sidebar-width, $toc-width);
     .container {
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+}
+
+@media (min-width: $layout-wide-breakpoint) {
+  .page-wrapper {
+    grid-template-columns: $sidebar-width 1fr $toc-width;
+
+    &:has(.toc-sidebar:empty) {
+      grid-template-columns: $sidebar-width 1fr $toc-width;
     }
   }
 }
@@ -318,6 +348,11 @@ $side-rail-width: max($sidebar-width, $toc-width);
 .toc-inline {
   margin: 12px 0 20px;
   font-style: italic;
+
+  .toc-nav li {
+    margin: 1px 0;
+    line-height: 1.35;
+  }
 }
 
 // TOC active/highlight (scroll spy)
@@ -328,7 +363,7 @@ $side-rail-width: max($sidebar-width, $toc-width);
 }
 
 // ==================== RESPONSIVE ====================
-@media (max-width: $breakpoint-mobile) {
+@media (max-width: ($layout-wide-breakpoint - 1px)) {
   .page-wrapper {
     grid-template-columns: 1fr !important;
   }
@@ -439,6 +474,8 @@ li > ul {margin: 0px 0px;}
   padding: 2rem;
   color: white;
   font: 0.8rem Inconsolata, monospace;
+  position: relative;
+  overflow: hidden;
   text-shadow: 0 0 5px #C8C8C8;
   a {
     color: white;
@@ -469,42 +506,29 @@ li > ul {margin: 0px 0px;}
   }
 }
 
-body {
-
-  counter-reset: h1;
-  counter-reset: h2;
-
-h1 {
-  counter-reset: h2;
-}
-h2 {
-  counter-reset: h3;
-}
-h3 {
-  counter-reset: h4;
-}
-h4 {
-  counter-reset: h5;
-} /* 接着在每个标题前面自动加上编号 */
-
-h2:before {
-  counter-increment: h2;
-  content:  counter(h2) ". ";
-}
-h3:before {
-  counter-increment: h3;
-  content:  counter(h2) "." counter(h3) ". ";
-}
-h4:before {
-  counter-increment: h4;
-  content:  counter(h2) "." counter(h3) "." counter(h4) ". ";
-}
-h5:before {
-  counter-increment: h5;
-  content:  counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
-}
+.comment-guide__title {
+  margin-bottom: 10px;
+  color: #8fbc8f;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
+.comment-guide__text {
+  margin-bottom: 10px;
+  color: #f1f1f1;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.comment-guide__signature {
+  margin-bottom: 0;
+  color: #f1f1f1;
+  font-size: 1em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: right;
+}
 
 /**
  * Highlight/Markup
@@ -530,7 +554,7 @@ h5:before {
 .menu ul li a { text-decoration: none;  color: var(--text-color); }
 .menu ul li a:hover { text-decoration: none; color: var(--background-color); background-color: var(--base-color); }
 
-@media (max-width: $breakpoint-mobile) {
+@media (max-width: ($layout-wide-breakpoint - 1px)) {
   header {
     position: sticky;
     top: 0;

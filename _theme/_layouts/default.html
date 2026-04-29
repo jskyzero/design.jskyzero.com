@@ -2,10 +2,10 @@
 layout: null
 ---
 <!--
-  default.html - Base layout with three-column design
-  1. Left sidebar (categories + post list + search) — hidden on home page
-  2. Center content area (max 600px, terminal/monospace style)
-  3. Right sidebar (Table of Contents on post pages)
+  default.html - Site shell.
+  Keeps the page in three stable regions: navigation rail, content column,
+  and outline rail. Semantic class names are additive so older selectors and
+  scripts can keep using the established ids/classes.
 -->
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
@@ -15,22 +15,23 @@ layout: null
   {%- include head.html -%}
 
   <body>
-    <div class="page-wrapper{% if page.layout == 'home' %} no-sidebar{% endif %}">
+    <div class="site-shell page-wrapper{% if page.layout == 'home' %} no-sidebar{% endif %}">
       {%- unless page.layout == 'home' -%}
         {%- include sidebar.html -%}
         <div class="sidebar-overlay" data-sidebar-close></div>
       {%- endunless -%}
-      <div class="content-area">
+      <div class="site-content content-area">
         <div class="container">
           {%- include header.html -%}
-          <main>
+          <main class="site-main">
             {{ content }}
           </main>
           {%- include footer.html -%}
         </div>
       </div>
       {%- if page.layout == 'post' or page.layout == 'page' -%}
-        {%- include sidebar-toc.html html=content -%}
+        {%- assign sidebar_toc_content = page.content | markdownify -%}
+        {%- include sidebar-toc.html html=sidebar_toc_content -%}
       {%- endif -%}
     </div>
     <script src="/assets/js/search.js"></script>

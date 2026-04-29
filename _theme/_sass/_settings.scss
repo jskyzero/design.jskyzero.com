@@ -1,0 +1,23 @@
+/*
+ * Theme settings shared by the Sass partials.
+ *
+ * This file is intentionally small and stable: it owns the font stack,
+ * breakpoints, rail widths, and the content column limits. Component styles
+ * should read these values through `@use "settings" as *`.
+ */
+
+@import url("https://fontsapi.zeoseven.com/159/main/result.css");
+@import url("https://fonts.bunny.net/css?family=jetbrains-mono:400");
+
+// ZeoSeven's Sarasa split CSS does not cover Latin/ASCII. JetBrains Mono is a
+// small unicode-range webfont for numbers, letters, and punctuation; Sarasa
+// remains responsible for CJK glyphs.
+$base-font-family: "JetBrains Mono", "Sarasa Mono SC" !default;
+$base-font-size: 12.5px !default;
+$mobile-font-size: 12px !default;
+$base-line-height: 1.5 !default;
+$container-width: 90% !default;
+$container-max-width: 600px !default;
+$sidebar-width: 280px !default;
+$toc-width: 320px !default;
+$layout-wide-breakpoint: $container-max-width + $sidebar-width + $toc-width !default;

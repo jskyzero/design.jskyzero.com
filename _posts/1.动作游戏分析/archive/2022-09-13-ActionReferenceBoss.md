@@ -17,12 +17,12 @@ title: 怪物设计：BOSS索引
 
 ### 装甲核心6
 
-{% include ARB.html filter = "AC6"%}
+{% include arb.html filter = "AC6"%}
 
 
 ### 狂野之心
 
-{% include ARB.html filter = "WildHearts"%}
+{% include arb.html filter = "WildHearts"%}
 
 
 ### Final Fantasy XVI
@@ -32,7 +32,7 @@ title: 怪物设计：BOSS索引
 + [【最终幻想16】各BOSS战（无剧情）](https://www.bilibili.com/video/BV18z4y1i7PS/)
 
 
-{% include ARB.html filter = "FF16"%}
+{% include arb.html filter = "FF16"%}
 
 
 ### 战神诸神黄昏
@@ -55,43 +55,43 @@ title: 怪物设计：BOSS索引
 
 ### 恶魔之魂
 
-{% include ARB.html filter = "DS"%}
+{% include arb.html filter = "DS"%}
 
 
 ### 黑暗灵魂1
 
 其实，我还没玩过，姑且列在这里……
 
-{% include ARB.html filter = "DS1"%}
+{% include arb.html filter = "DS1"%}
 
 
 ### 黑暗灵魂2
 
 其实，我也还没玩过，姑且列在这里……
 
-{% include ARB.html filter = "DS2"%}
+{% include arb.html filter = "DS2"%}
 
 
 ### 黑暗灵魂3
 
-{% include ARB.html filter = "DS3"%}
+{% include arb.html filter = "DS3"%}
 
 + [黑暗之魂3八周目全boss无伤合集](https://www.bilibili.com/video/BV1yA411T7bH)
 
 
 ### 血源
 
-{% include ARB.html filter = "Bloodborne"%}
+{% include arb.html filter = "Bloodborne"%}
 
 
 ### 只狼
 
-{% include ARB.html filter = "Sekiro"%}
+{% include arb.html filter = "Sekiro"%}
 
 
 ### 艾尔登法环
 
-{% include ARB.html filter = "EldenRing"%}
+{% include arb.html filter = "EldenRing"%}
 
 
 + [【艾尔登法环】4K全BOSS合集 (166p 已完结)](https://www.bilibili.com/video/BV1cS4y167a1)
@@ -110,27 +110,27 @@ title: 怪物设计：BOSS索引
 
 ### 怪物猎人世界
 
-{% include ARB.html filter = "MHW"%}
+{% include arb.html filter = "MHW"%}
 
 
 ### 怪物猎人世界冰原
 
-{% include ARB.html filter = "MHWI"%}
+{% include arb.html filter = "MHWI"%}
 
 
 ### 怪物猎人崛起
 
-{% include ARB.html filter = "MHR"%}
+{% include arb.html filter = "MHR"%}
 
 
 ### 怪物猎人崛起曙光
 
-{% include ARB.html filter = "MHRSB"%}
+{% include arb.html filter = "MHRSB"%}
 
 
 ### 鬼泣4
 
-{% include ARB.html filter = "DMC4"%}
+{% include arb.html filter = "DMC4"%}
 
 
 参考：
@@ -141,7 +141,7 @@ title: 怪物设计：BOSS索引
 ### 鬼泣DMC
 
 
-{% include ARB.html filter = "DMCDMC"%}
+{% include arb.html filter = "DMCDMC"%}
 
 
 参考：
@@ -151,7 +151,7 @@ title: 怪物设计：BOSS索引
 
 ### 鬼泣V
 
-{% include ARB.html filter = "DMC5"%}
+{% include arb.html filter = "DMC5"%}
 
 
 参考：
@@ -169,7 +169,7 @@ title: 怪物设计：BOSS索引
 >
 > 最值得学习的地方：意象（感觉动作种类已经跟不上时代了）
 
-{% include ARB.html filter = "NIOH"%}
+{% include arb.html filter = "NIOH"%}
 
 
 参考：
@@ -180,7 +180,7 @@ title: 怪物设计：BOSS索引
 
 ### 仁王2
 
-{% include ARB.html filter = "NIOH2"%}
+{% include arb.html filter = "NIOH2"%}
 
 
 参考：
@@ -190,7 +190,7 @@ title: 怪物设计：BOSS索引
 
 ### 最终幻想起源
 
-{% include ARB.html filter = "FFO"%}
+{% include arb.html filter = "FFO"%}
 
 参考：
 
@@ -203,7 +203,7 @@ title: 怪物设计：BOSS索引
 >
 > 最值得学习的地方：使用物理的连续攻击
 
-{% include ARB.html filter = "Wolong"%}
+{% include arb.html filter = "Wolong"%}
 
 
 参考：
@@ -238,7 +238,7 @@ title: 怪物设计：BOSS索引
   + 招式位移：前冲，向前跳下，后撤斩
 
 
-{% include ARB.html filter = "HollowKnight"%}
+{% include arb.html filter = "HollowKnight"%}
 
 
 参考：

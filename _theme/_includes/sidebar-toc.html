@@ -1,10 +1,10 @@
 <!--
-  sidebar-toc.html - Right sidebar Table of Contents
-  Generates a sticky TOC from headings in the current page content.
-  Uses the existing jekyll-toc logic from TOC.html but wraps it in a sidebar panel.
+  sidebar-toc.html - Desktop outline rail.
+  The same generated outline appears inline first; JavaScript reveals this rail
+  after the inline outline scrolls away, or immediately when a page has no h1.
 -->
-<aside class="toc-sidebar" id="toc-sidebar" aria-hidden="true">
-  <nav class="toc-nav">
+<aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+  <nav class="toc-nav" aria-label="本文目录">
     {% capture tocWorkspace %}
       {% comment %}
         TOC generator - adapted from jekyll-toc (https://github.com/allejo/jekyll-toc)

@@ -2,8 +2,9 @@
 layout: default
 ---
 <!--
-  home.html - Home page layout
-  Extends default.html. Sidebar hidden on home, so post list rendered inline.
+  home.html - Homepage index.
+  This page uses the same category source as the sidebar; manual_posts is the
+  only explicit-order escape hatch, keeping ordering readable in _config.yml.
 -->
 {{ content }}
 
@@ -11,8 +12,8 @@ layout: default
   {% assign category = item.name | default: item %}
   {% assign posts = site.categories[category] %}
   {%- if posts.size > 0 -%}
-    <ul>
-      <p>{{ category }}</p>
+    <ul class="home-index">
+      <p class="home-index__category">{{ category }}</p>
       {% if item.manual_posts %}
         {%- for post_path in item.manual_posts -%}
           {%- assign post = site.posts | where: "path", post_path | first -%}

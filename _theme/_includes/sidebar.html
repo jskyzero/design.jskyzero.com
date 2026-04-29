@@ -1,8 +1,9 @@
 <!--
-  sidebar.html - Left sidebar navigation with category listing and search
-  Displays collapsible categories with post lists, mirroring home.html structure
+  sidebar.html - Persistent article navigation rail.
+  Category groups intentionally mirror home.html so the homepage and sidebar
+  share one ordering model from site.home.categories.
 -->
-<aside class="sidebar" id="sidebar">
+<aside class="nav-sidebar sidebar" id="sidebar">
   <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
   <!-- Search box -->
   <div class="sidebar-search">
@@ -11,7 +12,7 @@
   </div>
 
   <!-- Navigation -->
-  <nav class="sidebar-nav">
+  <nav class="sidebar-nav" aria-label="文章分类">
     {% for item in site.home.categories %}
       {% assign category = item.name | default: item %}
       {% assign posts = site.categories[category] %}

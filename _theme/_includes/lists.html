@@ -1,6 +1,8 @@
 {% comment %}
+  lists.html - Small reusable post list.
+
   Usage:
-  {% include LISTS.html  category="独立游戏" text="做过的独立游戏们" sort=false %}
+  {% include lists.html  category="独立游戏" text="做过的独立游戏们" sort=false %}
 
   Parameters:
   * category          (string) - the list's category
@@ -19,8 +21,8 @@
 {% endif %}
 
 
-<ul>
-    <p>{{ include.text }}</p>
+<ul class="post-list">
+    <p class="post-list__title">{{ include.text }}</p>
 
     {%- for post in posts -%}
     <li>

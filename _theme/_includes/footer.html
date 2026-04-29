@@ -1,14 +1,15 @@
 <!--
-  footer.html - Site footer
-  Displays Enjoy :) message, shields.io badges (last commit, Clarity stats, made with heart),
-  and copyright line. Right-aligned with dashed top border.
+  footer.html - Site footer.
+  Keeps badges grouped in one row so the terminal content column has a compact
+  status-line ending rather than a conventional marketing footer.
 -->
-<footer>
-  <p>{{ site.footer }}</p>
-  <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com">
-  <!-- Clarity Sessions Badge -->
-  <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json">
-  <img src="https://img.shields.io/badge/made with-♥-red">
+<footer class="site-footer">
+  <p class="site-footer__message">{{ site.footer }}</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
   <br>
-  <p>&copy; 2017-{{ site.time | date: '%Y' }} {{ site.title | escape }}. All rights reserved.</p>
+  <p class="site-footer__copyright">&copy; 2017-{{ site.time | date: '%Y' }} {{ site.title | escape }}. All rights reserved.</p>
 </footer>
