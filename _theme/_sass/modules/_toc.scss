@@ -13,6 +13,8 @@
   height: 100vh;
   box-sizing: border-box;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
   background: var(--background-color);
   font-style: italic;
   opacity: 0;
@@ -29,13 +31,10 @@
     pointer-events: auto;
   }
 
-  // 滚动条
+  // Keep long outlines scrollable without showing an extra rail scrollbar.
   &::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--text-color);
+    display: none;
+    width: 0;
   }
 }
 
@@ -125,6 +124,27 @@
   margin: 0;
 }
 
+// Long outlines switch to a denser, top-aligned list. The sidebar still scrolls,
+// but the scrollbar is hidden and active items are kept visible by layout.js.
+.toc-sidebar.toc-sidebar--overflowing {
+  padding-top: clamp(18px, 4vh, 36px);
+  padding-bottom: clamp(18px, 4vh, 36px);
+}
+
+.toc-sidebar.toc-sidebar--overflowing .toc-nav > ul {
+  justify-content: flex-start;
+  min-height: 0;
+}
+
+.toc-sidebar.toc-sidebar--overflowing .toc-nav ul {
+  gap: clamp(4px, 0.9vh, 10px);
+}
+
+.toc-sidebar.toc-sidebar--overflowing .toc-nav ul li {
+  margin: 4px 0 2px;
+  line-height: 1.25;
+}
+
 // TOC 子列表不需要缩进
 .toc-sidebar .toc-nav ul ul {
   padding-left: 0;
@@ -186,15 +206,19 @@
   .toc-nav li > a {
     position: relative;
     z-index: 1;
-    display: block;
+    display: inline-block;
     grid-column: 1;
     grid-row: 1;
-    min-width: 0;
-    padding: 0 5px;
+    width: max-content;
+    max-width: none;
+    min-width: max-content;
+    padding: 1px 5px;
     text-decoration: none;
     white-space: nowrap;
     background: #fff;
-    box-shadow: none;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    box-shadow: 0 0 0 2px #fff;
   }
 
   .toc-nav li:has(> ul) {
@@ -205,7 +229,9 @@
   // 根节点竖排文字
   .toc-nav > ul > li > a {
     justify-self: start;
-    padding: 0;
+    width: auto;
+    min-width: 0;
+    padding: 1px 0;
     font-weight: bold;
     font-style: normal;
     line-height: 1.05;
@@ -224,9 +250,14 @@
     column-gap: 34px;
   }
 
+  .toc-nav a,
+  .toc-nav a.active,
   .toc-nav a:hover {
     color: var(--text-color);
     background: #fff;
+  }
+
+  .toc-nav a:hover {
     text-decoration: underline;
   }
 }

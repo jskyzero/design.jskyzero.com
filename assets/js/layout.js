@@ -76,6 +76,51 @@ function initTocActiveHeading() {
   setActive(headings[0].id);
 }
 
+function initTocOverflow() {
+  const sidebarToc = document.getElementById('toc-sidebar');
+  if (!sidebarToc) return;
+
+  function updateOverflow() {
+    sidebarToc.classList.toggle('toc-sidebar--overflowing', sidebarToc.scrollHeight > sidebarToc.clientHeight + 1);
+  }
+
+  updateOverflow();
+  window.addEventListener('resize', updateOverflow);
+
+  if (window.ResizeObserver) {
+    const observer = new ResizeObserver(updateOverflow);
+    observer.observe(sidebarToc);
+    const nav = sidebarToc.querySelector('.toc-nav');
+    if (nav) observer.observe(nav);
+  }
+}
+
+function initTocActiveVisibility() {
+  const sidebarToc = document.getElementById('toc-sidebar');
+  if (!sidebarToc || !window.MutationObserver) return;
+
+  function keepActiveVisible() {
+    const active = sidebarToc.querySelector('.toc-nav a.active');
+    if (!active || !sidebarToc.classList.contains('toc-sidebar--overflowing')) return;
+
+    const sidebarRect = sidebarToc.getBoundingClientRect();
+    const activeRect = active.getBoundingClientRect();
+    const topGap = 32;
+    const bottomGap = 32;
+
+    if (activeRect.top < sidebarRect.top + topGap) {
+      sidebarToc.scrollBy({ top: activeRect.top - sidebarRect.top - topGap, behavior: 'smooth' });
+    } else if (activeRect.bottom > sidebarRect.bottom - bottomGap) {
+      sidebarToc.scrollBy({ top: activeRect.bottom - sidebarRect.bottom + bottomGap, behavior: 'smooth' });
+    }
+  }
+
+  const observer = new MutationObserver(keepActiveVisible);
+  sidebarToc.querySelectorAll('.toc-nav a').forEach((link) => {
+    observer.observe(link, { attributes: true, attributeFilter: ['class'] });
+  });
+}
+
 function positionInlineToc() {
   const toc = document.getElementById('toc-inline');
   const h1 = document.getElementsByTagName('h1')[0];
@@ -122,5 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
   positionInlineToc();
   initTocSidebar();
   initTocActiveHeading();
+  initTocOverflow();
+  initTocActiveVisibility();
   initMobileHeader();
 });
