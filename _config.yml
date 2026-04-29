@@ -1,30 +1,16 @@
 encoding: utf-8
 
-# ── Site ──
-title: 设计者笔记
-email: jskyzero@outlook.com
-description: "jskyzero's notes about game designer."
-baseurl: ""
-url: "https://design.jskyzero.com"
-twitter_username: jskyzero
-github_username: jskyzero
-
-# ── Style ──
-style: light
-listen_for_clients_preferred_style: false
-
-# ── Header navigation ──
 header_pages:
-  - index.md
-  - index.github.md
-  - index.resume.md
-  - index.project.md
+ - index.md
+#  - index.blog.md
+ - index.github.md
+ - index.resume.md
+ - index.project.md
+#  - _posts/2018-11-15-project.md
 
-# ── Footer ──
+
 footer: 'Enjoy :)'
 
-# ── Home page categories & ordering ──
-# Categories displayed on home page (in order)
 index_categories:
   - 动作游戏设计
   - 动作游戏分析
@@ -33,59 +19,145 @@ index_categories:
   - 一期一会
   - 游戏开发
   - 摘录与杂谈
+  # - 游戏体验
 
-# Categories sorted by title instead of date
 index_categories_sort_by_title:
   - 游戏AI
   - 游戏开发
   - 摘录与杂谈
+  # - 游戏体验
 
-# Custom post ordering by category (higher = first)
-# Posts not listed keep their default order
-index_categories_post_order:
-  摘录与杂谈:
-    - "归档：零碎文章集合"
-  游戏AI:
-    - "GameAIPro·总集篇"
 
-# ── Plugins ──
+style: light # dark (default) or light
+listen_for_clients_preferred_style: false # true or false (default)
+
+title: 设计者笔记
+email: jskyzero@outlook.com
+description: > # this means to ignore newlines until "baseurl:"
+    jskyzero's notes about game designer.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://design.jskyzero.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jskyzero
+github_username:  jskyzero
+
+# Build settings
+# theme: jekyll-theme-console
 plugins:
   - jekyll-feed
   - jekyll-mermaid
   - jekyll-seo-tag
 
-# ── Markdown ──
-markdown: kramdown
-highlighter: rouge
-
-# ── Permalink ──
-permalink: /:year/:month/:day/:title/
-
-# ── Theme paths ──
-layouts_dir: _theme/_layouts
-includes_dir: _theme/_includes
-plugins_dir: _theme/_plugins
-sass:
-  sass_dir: _theme/_sass
-
-# ── Features ──
-git_log: true
-
-# ── Mermaid ──
 mermaid:
   src: '/assets/js/mermaid.min.js'
+  # src: 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js'
+  # src: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'
 
-# ── Disqus ──
+layouts_dir         : _theme/_layouts
+includes_dir        : _theme/_includes
+plugins_dir         : _theme/_plugins
+sass:
+  sass_dir          : _theme/_sass
+
+# # https://github.com/gjtorikian/jekyll-last-modified-at
+# # Optional. The default date format, used if none is specified in the tag.
+# # last-modified-at:
+# #     date-format: '%d-%b-%y'
+
+# if open git_log
+git_log: true
+
+
+# # SITE CONFIGURATION
+# title: 设计者笔记 # your site title
+# author: jskyzero # You :P
+# description: > # Meta description of Homepage
+# # url: "https://jskyzero.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+# # baseurl: "/Designer-Notes" # the subpath of your site, e.g. /blog
+# # img_url: /Designer-Notes/assets/img
+# url: 
+# baseurl: ""
+# # img_url: "/assets/img"
+# excerpt_separator: <!--more-->
+
+# # SEO PLUGIN
+# social:
+#   name: jskyzero
+#   links:
+#     - https://twitter.com/jskyzero
+#     # - https://www.facebook.com/ben.balter
+#     # - https://www.linkedin.com/in/BenBalter
+#     # - https://plus.google.com/+BenBalter
+#     - https://github.com/jskyzero
+#     # - https://keybase.io/benbalter
+
+# # THEME SETTINGS
+# navigation: # Navigation links
+#   - {name: 'Home', link: '/'}
+#   - {name: 'Books', link: '/books'}
+#   # - {name: 'Daily', link: '/daily'}
+#   - {name: 'Program', link: 'https://blog.jskyzero.com'}
+#   - {name: 'Project', link: '/project'}
+#   - {name: 'Categories', link: '/categories'}
+#   # - {name: 'About', link: 'https://jskyzero.com'}
+#   # - {name: 'About', link: '/about'}
+#   # - {name: 'Contact', link: '/contact'}
+
+
+# tagline: >
+#   想做游戏的初衷是『制造欢乐，传播感动』，将相关的记录和文章收录到了这里。
+# hero_img: posts/bg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
+
+# # for daily
+# daily:
+#   tagline: 日常，以及不那么日常。
+#   hero_img: posts/bg.she.jpg
+# # for books
+# books:
+#   tagline: 人丑就要多读书。
+#   hero_img: posts/bg.jpg
+
+# email: jskyzero@outlook.com # email for form submission
+
+# twitter_username: jskyzero # replace with your_twitter_username or comment to remove link from footer
+# github_username:  jskyzero # replace with your_github_username or comment to remove link from footer
+# # instagram_username: shanlongjj # replace with your_instagram_username or comment to remove link from footer
+
 disqus:
-  shortname: designer-notes
+  shortname: designer-notes # to enable comments replace with your_disqus_shortname
 
-# ── Exclude from build ──
+# service_worker: true
+
+# # BUILD SETTINGS
+markdown: kramdown
+highlighter: rouge # or pygments or null
+# # theme: jekyll-sleek # Uncomment if you're using the theme as a ruby gem
 exclude:
   - _posts/日常
   - README.md
   - node_modules
+  - script
   - package.json
   - package-lock.json
   - Gemfile
   - Gemfile.lock
   - vendor
+  - npm-debug.log
+  - gulpfile.js
+  - sleek.jpg
+
+# include: ['_pages']
+permalink: /:year/:month/:day/:title/
+# permalink: /:title/
+
+
+# compress_html:
+#   clippings: all
+
+# plugins:
+#   - jekyll-sitemap
+#   - jekyll-seo-tag
+#   - jekyll-mermaid
+#   - jekyll-last-modified-at
+
+
+

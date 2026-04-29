@@ -1,16 +1,9 @@
-<!--
-  head.html - HTML <head> with meta, fonts, styles, analytics
-  Preloads Sarasa Mono SC TTF for fast font loading.
--->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>{{ page.title }} | {{site.title}}</title>
   <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
-
-  <!-- Preload font for faster rendering -->
-  <link rel="preload" as="font" href="/assets/font/sarasa-monoT-sc-regular.ttf" type="font/ttf" crossorigin>
 
   {%- seo title=false -%}
 
@@ -30,10 +23,12 @@
     {%- endif -%}
   {%- endif -%}
 
+
   {%- include google-analytics.html -%}
   {%- include clarity-analytics.html -%}
 
-  <!-- highlight.js -->
+
+  <!-- high light -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
 </head>

@@ -1,43 +1,45 @@
 ---
 layout: null
 ---
+<!--
+  default.html - Base layout with three-column design
+  1. Left sidebar (categories + post list + search) — hidden on home page
+  2. Center content area (max 600px, terminal/monospace style)
+  3. Right sidebar (Table of Contents on post pages)
+-->
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 <meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
 <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
-{%- include head.html -%}
 
-<body>
-  <div class="page-wrapper{% if page.layout == 'home' %} no-sidebar{% endif %}">
+  {%- include head.html -%}
 
-    {%- unless page.layout == 'home' -%}
-    <aside class="sidebar" id="sidebar">
-      <button class="sidebar-close" onclick="document.getElementById('sidebar').classList.remove('open')">&times;</button>
-      {%- include sidebar.html -%}
-    </aside>
-    <div class="sidebar-overlay" onclick="document.getElementById('sidebar').classList.remove('open')"></div>
-    {%- endunless -%}
-
-    <div class="content-area">
-      <div class="container">
-        {%- include header.html -%}
-        <main>
-          {{ content }}
-        </main>
-        {%- include footer.html -%}
+  <body>
+    <div class="page-wrapper{% if page.layout == 'home' %} no-sidebar{% endif %}">
+      {%- unless page.layout == 'home' -%}
+        {%- include sidebar.html -%}
+      {%- endunless -%}
+      <div class="content-area">
+        <div class="container">
+          {%- include header.html -%}
+          <main>
+            {{ content }}
+          </main>
+          {%- include footer.html -%}
+        </div>
       </div>
+      {%- if page.layout == 'post' or page.layout == 'page' -%}
+        {%- include sidebar-toc.html html=content -%}
+      {%- endif -%}
     </div>
 
+    {%- unless page.layout == 'home' -%}
+    <button class="sidebar-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+    {%- endunless -%}
     {%- if page.layout == 'post' or page.layout == 'page' -%}
-    <aside class="toc-sidebar" id="toc-sidebar">
-      {%- include sidebar-toc.html html=content -%}
-    </aside>
+    <button class="toc-toggle" onclick="document.getElementById('toc-sidebar').classList.toggle('open')">☷</button>
     {%- endif -%}
-  </div>
 
-  <script src="/assets/js/search.js"></script>
-  {%- if page.layout == 'post' or page.layout == 'page' -%}
-  <script src="/assets/js/toc-scroll.js"></script>
-  {%- endif -%}
-</body>
+    <script src="/assets/js/search.js"></script>
+  </body>
 </html>
