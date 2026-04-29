@@ -288,12 +288,12 @@ $side-rail-width: max($sidebar-width, $toc-width);
 
       li > a:before {
         counter-increment: toc2;
-        content: counter(toc2) " ";
+        content: counter(toc2) ". ";
       }
 
       li li > a:before {
         counter-increment: toc3;
-        content: counter(toc2) "." counter(toc3) " ";
+        content: counter(toc2) "." counter(toc3) ". ";
       }
 
       a {
@@ -489,19 +489,19 @@ h4 {
 
 h2:before {
   counter-increment: h2;
-  content:  counter(h2) " ";
+  content:  counter(h2) ". ";
 }
 h3:before {
   counter-increment: h3;
-  content:  counter(h2) "." counter(h3) " ";
+  content:  counter(h2) "." counter(h3) ". ";
 }
 h4:before {
   counter-increment: h4;
-  content:  counter(h2) "." counter(h3) "." counter(h4) " ";
+  content:  counter(h2) "." counter(h3) "." counter(h4) ". ";
 }
 h5:before {
   counter-increment: h5;
-  content:  counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " ";
+  content:  counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
 }
 }
 
