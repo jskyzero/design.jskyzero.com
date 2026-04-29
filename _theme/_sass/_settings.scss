@@ -9,10 +9,10 @@
 @import url("https://fontsapi.zeoseven.com/159/main/result.css");
 @import url("https://fonts.bunny.net/css?family=jetbrains-mono:400");
 
-// ZeoSeven's Sarasa split CSS does not cover Latin/ASCII. JetBrains Mono is a
-// small unicode-range webfont for numbers, letters, and punctuation; Sarasa
-// remains responsible for CJK glyphs.
+// Sarasa handles CJK text; JetBrains Mono supplies lightweight Latin/ASCII and
+// code glyphs that ZeoSeven's Sarasa split CSS does not include.
 $base-font-family: "JetBrains Mono", "Sarasa Mono SC" !default;
+$code-font-family: "JetBrains Mono" !default;
 $base-font-size: 12.5px !default;
 $mobile-font-size: 12px !default;
 $base-line-height: 1.5 !default;

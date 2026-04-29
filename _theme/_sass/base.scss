@@ -266,16 +266,20 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 // ==================== RIGHT TOC SIDEBAR ====================
 .toc-sidebar {
-  padding: 20px 24px 20px 12px;
+  padding: clamp(28px, 8vh, 72px) 24px clamp(28px, 8vh, 72px) 12px;
   font-size: $base-font-size;
   position: sticky;
   top: 0;
   height: 100vh;
+  box-sizing: border-box;
   overflow-y: auto;
   background: var(--background-color);
   font-style: italic;
   opacity: 0;
   pointer-events: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   // Fade only; transforms can create horizontal overflow before the TOC appears.
   transition: opacity 0.2s ease;
 
@@ -289,20 +293,27 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 .toc-nav {
-  counter-reset: toc2;
+  width: 100%;
+
+  > ul {
+    counter-reset: toc2;
+  }
 
   ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: clamp(8px, 1.8vh, 18px);
     list-style: none;
     padding-left: 0;
     margin: 4px 0;
-    counter-reset: toc3;
 
     ul {
-      padding-left: 18px;
-      counter-reset: toc4;
+      display: block;
+      padding-left: 28px;
 
       ul {
-        padding-left: 18px;
+        padding-left: 28px;
       }
     }
 
@@ -316,16 +327,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
         content: none;
       }
 
-      li > a:before {
-        counter-increment: toc2;
-        content: counter(toc2) ". ";
-      }
-
-      li li > a:before {
-        counter-increment: toc3;
-        content: counter(toc2) "." counter(toc3) ". ";
-      }
-
       a {
         text-decoration: underline;
         color: var(--text-color);
@@ -337,6 +338,23 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
       }
     }
   }
+
+  > ul > li > ul > li {
+    counter-increment: toc2;
+    counter-reset: toc3;
+
+    > a:before {
+      content: counter(toc2) ". ";
+    }
+  }
+
+  > ul > li > ul > li > ul > li {
+    counter-increment: toc3;
+
+    > a:before {
+      content: counter(toc2) "." counter(toc3) ". ";
+    }
+  }
 }
 
 .toc-sidebar .toc-nav > ul > li > a {
@@ -345,13 +363,99 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
   font-weight: bold;
 }
 
+.toc-sidebar .toc-nav > ul {
+  min-height: min(72vh, calc(100vh - 120px));
+}
+
 .toc-inline {
+  $mindmap-column-width: 150px;
+  $mindmap-root-column-width: 34px;
+  $mindmap-branch-width: 18px;
+
   margin: 12px 0 20px;
+  padding: 6px 16px 6px 2px;
   font-style: italic;
+  background: radial-gradient(color-mix(in srgb, var(--text-color) 22%, transparent) 1px, transparent 1px) 0 0 / 8px 8px;
+  overflow-x: auto;
+
+  .toc-nav > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin: 0;
+  }
 
   .toc-nav li {
-    margin: 1px 0;
-    line-height: 1.35;
+    position: relative;
+    display: grid;
+    grid-template-columns: $mindmap-column-width auto;
+    align-items: center;
+    column-gap: $mindmap-branch-width;
+    margin: 0;
+    line-height: 1.18;
+  }
+
+  .toc-nav ul ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    margin: 0;
+    padding-left: 0;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .toc-nav > ul > li > ul {
+    gap: 20px;
+  }
+
+  .toc-nav li > a {
+    position: relative;
+    z-index: 1;
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    padding: 0 5px;
+    text-decoration: none;
+    white-space: nowrap;
+    background: #fff;
+    box-shadow: none;
+  }
+
+  .toc-nav li:has(> ul) {
+    padding: 0;
+    background: transparent;
+  }
+
+  .toc-nav > ul > li > a {
+    justify-self: start;
+    padding: 0;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.05;
+    text-align: center;
+    white-space: normal;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+
+  .toc-nav > ul > li {
+    grid-template-columns: $mindmap-root-column-width auto;
+    column-gap: 0;
+  }
+
+  .toc-nav > ul > li > ul > li {
+    column-gap: 34px;
+  }
+
+  .toc-nav a:hover {
+    color: var(--text-color);
+    background: #fff;
+    text-decoration: underline;
   }
 }
 
@@ -596,7 +700,8 @@ textarea { vertical-align: top; }
  */
 .lineno { color: var(--code-color-1); margin-right: 15px; }
 figure.highlight { margin: 5px 0; }
-pre { background-color: var(--background-color);  border: none;  padding: 0;  margin: 0;  overflow:auto;  font-size: $base-font-size;  color: var(--text-color);  line-height: 1.7 !important;  font-family: $base-font-family !important; }
+pre, code, kbd, samp { font-family: $code-font-family !important; }
+pre { background-color: var(--background-color);  border: none;  padding: 0;  margin: 0;  overflow:auto;  font-size: $base-font-size;  color: var(--text-color);  line-height: 1.7 !important; }
 .highlight .hll { background-color: var(--code-color-2); }
 .highlight .c { color: var(--code-color-1); font-style: italic } /* Comment */
 .highlight .err { color: var(--code-color-3); background-color: var(--code-color-4); } /* Error */
