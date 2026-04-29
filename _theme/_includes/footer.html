@@ -1,13 +1,14 @@
+<!--
+  footer.html - Site footer
+  Displays Enjoy :) message, shields.io badges (last commit, Clarity stats, made with heart),
+  and copyright line. Right-aligned with dashed top border.
+-->
 <footer>
   <p>{{ site.footer }}</p>
   <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com">
-  <!-- <img src="https://img.shields.io/github/repo-size/jskyzero/design.jskyzero.com"> -->
-  <!-- <img src="https://hits.dwyl.com/jskyzero/designjskyzerocom.svg?style=flat-square"> -->
   <!-- Clarity Sessions Badge -->
   <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json">
-  <!-- <img src="https://visitor-badge.laobi.icu/badge?page_id=design.jskyzero.com&right_color=orange"> -->
   <img src="https://img.shields.io/badge/made with-♥-red">
   <br>
   <p>&copy; 2017-{{ site.time | date: '%Y' }} {{ site.title | escape }}. All rights reserved.</p>
-
 </footer>

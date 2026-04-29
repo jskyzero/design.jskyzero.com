@@ -1,0 +1,69 @@
+<!--
+  sidebar-toc.html - Right sidebar Table of Contents
+  Generates a sticky TOC from headings in the current page content.
+  Uses the existing jekyll-toc logic from TOC.html but wraps it in a sidebar panel.
+-->
+<aside class="toc-sidebar" id="toc-sidebar">
+  <div class="toc-title">大纲</div>
+  <nav class="toc-nav">
+    {% capture tocWorkspace %}
+      {% comment %}
+        TOC generator - adapted from jekyll-toc (https://github.com/allejo/jekyll-toc)
+        Generates a nested list of heading links from the page's HTML content.
+      {% endcomment %}
+
+      {% capture my_toc %}{% endcapture %}
+      {% assign orderedList = false %}
+      {% assign minHeader = 1 %}
+      {% assign maxHeader = 3 %}
+      {% assign nodes = include.html | split: '<h' %}
+      {% assign firstHeader = true %}
+
+      {% capture listModifier %}{% if orderedList %}1.{% else %}-{% endif %}{% endcapture %}
+
+      {% for node in nodes %}
+        {% if node == "" %}
+          {% continue %}
+        {% endif %}
+
+        {% assign headerLevel = node | replace: '"', '' | slice: 0, 1 | times: 1 %}
+
+        {% if headerLevel < minHeader or headerLevel > maxHeader %}
+          {% continue %}
+        {% endif %}
+
+        {% if firstHeader %}
+          {% assign firstHeader = false %}
+          {% assign minHeader = headerLevel %}
+        {% endif %}
+
+        {% assign indentAmount = headerLevel | minus: minHeader %}
+        {% assign _workspace = node | split: '</h' %}
+
+        {% assign _idWorkspace = _workspace[0] | split: 'id="' %}
+        {% assign _idWorkspace = _idWorkspace[1] | split: '"' %}
+        {% assign html_id = _idWorkspace[0] %}
+
+        {% assign _classWorkspace = _workspace[0] | split: 'class="' %}
+        {% assign _classWorkspace = _classWorkspace[1] | split: '"' %}
+        {% assign html_class = _classWorkspace[0] %}
+
+        {% if html_class contains "no_toc" %}
+          {% continue %}
+        {% endif %}
+
+        {% capture _hAttrToStrip %}{{ _workspace[0] | split: '>' | first }}>{% endcapture %}
+        {% assign header = _workspace[0] | replace: _hAttrToStrip, '' %}
+
+        {% assign space = '' %}
+        {% for i in (1..indentAmount) %}
+          {% assign space = space | prepend: '    ' %}
+        {% endfor %}
+
+        {% capture my_toc %}{{ my_toc }}
+{{ space }}{{ listModifier }} [{{ header | strip_html | replace: "|", "\|" }}]({% if include.baseurl %}{{ include.baseurl }}{% endif %}#{{ html_id }}){% endcapture %}
+      {% endfor %}
+      {% capture my_toc %}{{ my_toc | lstrip }}{% endcapture %}
+    {% endcapture %}{% assign tocWorkspace = '' %}{{ my_toc | markdownify | strip }}
+  </nav>
+</aside>
