@@ -160,6 +160,31 @@ function positionInlineToc() {
   anchor.parentElement.insertBefore(toc, anchor.nextElementSibling);
 }
 
+function formatInlineTocRootBreaks() {
+  document.querySelectorAll('#toc-inline .toc-nav > ul > li > a').forEach((link) => {
+    const text = link.textContent;
+    if (!text || !text.includes('/')) return;
+
+    link.setAttribute('aria-label', text);
+    link.textContent = '';
+
+    text.split('/').forEach((part, index, parts) => {
+      if (part) link.appendChild(document.createTextNode(part));
+      if (index === parts.length - 1) return;
+
+      link.appendChild(document.createElement('br'));
+
+      const slash = document.createElement('span');
+      slash.className = 'toc-inline__break-symbol';
+      slash.setAttribute('aria-hidden', 'true');
+      slash.textContent = '/';
+      link.appendChild(slash);
+
+      link.appendChild(document.createElement('br'));
+    });
+  });
+}
+
 function initMobileHeader() {
   const header = document.querySelector('header');
   if (!header) return;
@@ -188,6 +213,7 @@ function initMobileHeader() {
 document.addEventListener('DOMContentLoaded', () => {
   initSidebar();
   positionInlineToc();
+  formatInlineTocRootBreaks();
   initTocSidebar();
   initTocActiveHeading();
   initTocOverflow();

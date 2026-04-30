@@ -45,8 +45,11 @@
   display: block;
   height: 24px;
   width: auto;
-  transform: scale(0.9);
-  transform-origin: left center;
+}
+
+.site-logo:hover {
+  color: inherit;
+  background: transparent;
 }
 
 // 侧栏切换按钮（桌面端隐藏）
@@ -104,7 +107,7 @@
     top: 0;
     z-index: 150;
     background: var(--background-color);
-    padding: 8px 10px 6px;
+    padding: 8px 10px 3px;
     transition: transform 1s;
   }
 
@@ -117,7 +120,7 @@
   .menu {
     display: flex;
     align-items: center;
-    margin-bottom: 18px;
+    margin-bottom: 9px;
   }
 
   // 徽标居中
@@ -127,10 +130,6 @@
     justify-content: center;
     position: static;
     float: none;
-  }
-
-  .site-logo img {
-    transform-origin: center center;
   }
 
   // 侧栏按钮左对齐

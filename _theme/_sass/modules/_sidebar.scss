@@ -18,7 +18,7 @@
 // 侧栏主体
 .sidebar {
   padding: 20px 12px 20px 16px;
-  font-size: $base-font-size;
+  font-size: 13px;
   overflow-y: auto;
   position: sticky;
   top: 0;
@@ -93,6 +93,7 @@
 // 侧栏搜索框
 .sidebar-search {
   margin-bottom: 16px;
+  position: relative;
 
   input[type="text"] {
     width: 100%;
@@ -103,13 +104,41 @@
     background: var(--background-color);
     color: var(--text-color);
     font-family: $base-font-family;
-    font-size: $base-font-size;
+    font-size: 13px;
 
     &:focus {
       outline: none;
       border-bottom-style: solid;
     }
   }
+
+  .sidebar-search__prompt {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 9ch;
+    overflow: hidden;
+    color: var(--placeholder-color);
+    font-family: $base-font-family;
+    font-size: 13px;
+    line-height: $base-line-height;
+    white-space: nowrap;
+    pointer-events: none;
+    animation: search-prompt-type 4.5s steps(9, end) infinite;
+  }
+
+  input[type="text"]:focus + .sidebar-search__prompt,
+  input[type="text"]:not(:placeholder-shown) + .sidebar-search__prompt {
+    display: none;
+  }
+}
+
+@keyframes search-prompt-type {
+  0% { width: 0; }
+  60% { width: 9ch; }
+  82% { width: 9ch; }
+  83% { width: 0; }
+  100% { width: 0; }
 }
 
 // 搜索结果下拉

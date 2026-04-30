@@ -101,6 +101,9 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     var isDev = document.body.getAttribute('data-env') === 'development';
+    var isTouch = window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
+
+    if (isTouch) return;
 
     buildMenu();
 
@@ -130,38 +133,5 @@
 
     document.addEventListener('scroll', hideMenu);
 
-    // 移动端长按触发
-    if ('ontouchstart' in window) {
-      var touchTimer = null;
-      var touchStartX = 0;
-      var touchStartY = 0;
-      var touchMoved = false;
-
-      document.addEventListener('touchstart', function (e) {
-        if (e.touches.length !== 1) return;
-        if (isDev) return;
-        var section = e.target.closest('.content-section');
-        if (!section) return;
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-        touchMoved = false;
-        clearTimeout(touchTimer);
-        touchTimer = setTimeout(function () {
-          if (!touchMoved) {
-            targetSection = section;
-            showMenu(touchStartX, touchStartY, getSectionTitle(section));
-          }
-        }, 500);
-      }, { passive: true });
-
-      document.addEventListener('touchmove', function () {
-        touchMoved = true;
-        clearTimeout(touchTimer);
-      }, { passive: true });
-
-      document.addEventListener('touchend', function () {
-        clearTimeout(touchTimer);
-      });
-    }
   });
 })();
