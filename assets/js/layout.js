@@ -144,22 +144,6 @@ function initTocActiveVisibility() {
   });
 }
 
-function positionInlineToc() {
-  const toc = document.getElementById('toc-inline');
-  const h1 = document.getElementsByTagName('h1')[0];
-  if (!toc) return;
-
-  // Without an h1 there is no stable inline anchor; let the sidebar TOC carry the outline.
-  if (!h1) {
-    toc.hidden = true;
-    return;
-  }
-
-  const pro = document.getElementById('index');
-  const anchor = pro && pro.parentElement === h1.parentElement ? pro : h1;
-  anchor.parentElement.insertBefore(toc, anchor.nextElementSibling);
-}
-
 function formatInlineTocRootBreaks() {
   document.querySelectorAll('#toc-inline .toc-nav > ul > li > a').forEach((link) => {
     const text = link.textContent;
@@ -169,18 +153,8 @@ function formatInlineTocRootBreaks() {
     link.textContent = '';
 
     text.split('/').forEach((part, index, parts) => {
-      if (part) link.appendChild(document.createTextNode(part));
-      if (index === parts.length - 1) return;
-
-      link.appendChild(document.createElement('br'));
-
-      const slash = document.createElement('span');
-      slash.className = 'toc-inline__break-symbol';
-      slash.setAttribute('aria-hidden', 'true');
-      slash.textContent = '/';
-      link.appendChild(slash);
-
-      link.appendChild(document.createElement('br'));
+      if (part) link.appendChild(document.createTextNode(part.trim()));
+      if (index !== parts.length - 1) link.appendChild(document.createElement('br'));
     });
   });
 }
@@ -210,13 +184,122 @@ function initMobileHeader() {
   update();
 }
 
+function initCursorTrail() {
+  if (!window.matchMedia('(pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const canvas = document.createElement('canvas');
+  canvas.setAttribute('aria-hidden', 'true');
+  Object.assign(canvas.style, {
+    position: 'fixed',
+    inset: '0',
+    zIndex: '240',
+    pointerEvents: 'none',
+    mixBlendMode: 'difference'
+  });
+  document.body.appendChild(canvas);
+
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  const points = Array.from({ length: 36 }, () => ({ x: 0, y: 0 }));
+  const cursor = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+  let width = 0;
+  let height = 0;
+  let raf = 0;
+  let visible = 0;
+  let lastMove = 0;
+  let initialized = false;
+  let targetScale = 1;
+  let scale = 1;
+
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function draw(time) {
+    ctx.clearRect(0, 0, width, height);
+
+    const idle = time - lastMove;
+    visible += (1 - visible) * 0.16;
+    if (targetScale >= scale) {
+      scale += (targetScale - scale) * 0.18;
+    } else {
+      const progress = Math.max(0, Math.min(1, (scale - targetScale) / 2));
+      scale += (targetScale - scale) * (0.012 + progress * 0.09);
+    }
+
+    points[0].x = cursor.x;
+    points[0].y = cursor.y;
+
+    for (let i = 1; i < points.length; i += 1) {
+      points[i].x += (points[i - 1].x - points[i].x) * 0.34;
+      points[i].y += (points[i - 1].y - points[i].y) * 0.34;
+    }
+
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+
+    for (let i = points.length - 1; i > 0; i -= 1) {
+      const point = points[i];
+      const next = points[i - 1];
+      const t = 1 - i / points.length;
+      if (visible <= 0.003) continue;
+
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgba(255, 255, 255, ' + (visible * 0.72).toFixed(3) + ')';
+      ctx.lineWidth = 0.6 + t * 8.4;
+      ctx.moveTo(point.x, point.y);
+      ctx.lineTo(next.x, next.y);
+      ctx.stroke();
+    }
+
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(255, 255, 255, ' + (visible * 0.92).toFixed(3) + ')';
+    ctx.arc(points[0].x, points[0].y, 5.7 * scale, 0, Math.PI * 2);
+    ctx.fill();
+
+    raf = requestAnimationFrame(draw);
+  }
+
+  function move(event) {
+    cursor.x = event.clientX;
+    cursor.y = event.clientY;
+    lastMove = performance.now();
+    const target = document.elementFromPoint(event.clientX, event.clientY);
+    targetScale = target && target.closest('a, button, input, textarea, select, summary, label, [role="button"], [tabindex]:not([tabindex="-1"])') ? 3 : 1;
+
+    if (!initialized) {
+      points.forEach((point) => {
+        point.x = cursor.x;
+        point.y = cursor.y;
+      });
+      initialized = true;
+    }
+
+    if (!raf) raf = requestAnimationFrame(draw);
+  }
+
+  resize();
+  document.documentElement.classList.add('cursor-trail-enabled');
+  window.addEventListener('resize', resize);
+  window.addEventListener('pointermove', move, { passive: true });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initSidebar();
-  positionInlineToc();
   formatInlineTocRootBreaks();
   initTocSidebar();
   initTocActiveHeading();
   initTocOverflow();
   initTocActiveVisibility();
   initMobileHeader();
+  initCursorTrail();
 });
