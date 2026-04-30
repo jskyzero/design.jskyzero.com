@@ -1,7 +1,7 @@
 <!--
   sidebar.html - Persistent article navigation rail.
-  Category groups intentionally mirror home.html so the homepage and sidebar
-  share one ordering model from site.home.categories.
+  Section groups intentionally mirror home.html so the homepage and sidebar
+  share one explicit ordering model from site.home.sections.
 -->
 <aside class="nav-sidebar sidebar" id="sidebar">
   <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
@@ -14,33 +14,20 @@
 
   <!-- Navigation -->
   <nav class="sidebar-nav" aria-label="文章分类">
-    {% for item in site.home.categories %}
-      {% assign category = item.name | default: item %}
-      {% assign posts = site.categories[category] %}
-      {%- if posts.size > 0 -%}
+    {% for item in site.home.sections %}
+      {%- if item.posts.size > 0 -%}
         <section class="sidebar-group">
-          <div class="sidebar-group-title">{{ category }}</div>
+          <div class="sidebar-group-title">{{ item.name }}</div>
           <ul>
-            {% if item.manual_posts %}
-              {%- for post_path in item.manual_posts -%}
-                {%- assign post = site.posts | where: "path", post_path | first -%}
-                {%- if post -%}
-                  <li>
-                    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                    {%- if post.pro -%}<span class="pro-star">⭐️</span>{%- endif -%}
-                  </li>
-                {%- endif -%}
-              {%- endfor -%}
-            {% else %}
-              {%- for post in posts -%}
-                {% unless post.path contains "archive" %}
+            {%- for post_path in item.posts -%}
+              {%- assign post = site.posts | where: "path", post_path | first -%}
+              {%- if post -%}
                 <li>
                   <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
                   {%- if post.pro -%}<span class="pro-star">⭐️</span>{%- endif -%}
                 </li>
-                {% endunless %}
-              {%- endfor -%}
-            {% endif %}
+              {%- endif -%}
+            {%- endfor -%}
           </ul>
         </section>
       {%- endif -%}

@@ -19,32 +19,32 @@ nav:
     - index.project.md
 
 home:
-  # 使用 manual_posts 精确控制每篇文章在首页的显示顺序。
+  # 使用 posts 精确控制每篇文章在首页和侧栏的显示顺序。
   # 条目为文章相对于仓库根目录的路径，按日期升序排列。
-  categories:
+  sections:
     - name: 动作游戏设计
-      manual_posts:
+      posts:
         - _posts/1.动作游戏分析/经典/2024-05-14-ActionGameDesign.md
         - _posts/1.动作游戏分析/经典/2025-03-25-SSS.md
         - _posts/1.动作游戏分析/外链/2024-04-04-12_action_design_type.md
         - _posts/1.动作游戏分析/经典/2023-11-13-ACT_with_GDC.md
 
     - name: 动作游戏分析
-      manual_posts:
+      posts:
         - _posts/1.动作游戏分析/2023-10-10-sekiro_lion_tamarin_AI.md
         - _posts/1.动作游戏分析/2023-02-17-sekiro_lion_tamarin.md
         - _posts/1.动作游戏分析/2022-07-22-mhrsb_ai.md
         - _posts/1.动作游戏分析/2022-09-22-wolong_action_system.md
 
     - name: 游戏AI
-      manual_posts:
+      posts:
         - _posts/2.游戏AI/2021-07-19-GameAI.md
         - _posts/2.游戏AI/GameAIPro/2021-09-09-RandomInGameAI.md
         - _posts/2.游戏AI/GameAIPro/2022-05-24-GameAISkill.md
         - _posts/2.游戏AI/GameAIPro/2023-03-27-GameAIProIndex.md
 
     - name: 专题报告
-      manual_posts:
+      posts:
         - _posts/4.专题报告/2024-01-26-dota2.md
         - _posts/4.专题报告/2021-11-20-mhwi.md
         - _posts/4.专题报告/2019-10-15-横板格斗.md
@@ -52,19 +52,19 @@ home:
         - _posts/4.专题报告/2021-09-21-eastward.md
 
     - name: 一期一会
-      manual_posts:
+      posts:
         - _posts/7.一期一会/2017-10-22-MiniGame.md
         - _posts/7.一期一会/一期一会/2020-01-05-sakura_nagashi.md
         - _posts/7.一期一会/一期一会/2021-01-17-one_last_kiss.md
 
     - name: 游戏开发
-      manual_posts:
+      posts:
         - _posts/3.游戏开发/2021-08-18-LevelDesignEditor.md
         - _posts/3.游戏开发/2022-02-15-GameDesignAbility.md
         - _posts/3.游戏开发/2023-10-23-BattleDesignAbility.md
 
     - name: 摘录与杂谈
-      manual_posts:
+      posts:
         - _posts/6.摘录与杂谈/阅读笔记/2021-11-14-possessiveness.md
         - _posts/6.摘录与杂谈/2025-07-05-collect.md
 

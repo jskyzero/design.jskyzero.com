@@ -3,41 +3,26 @@ layout: default
 ---
 <!--
   home.html - Homepage index.
-  This page uses the same category source as the sidebar; manual_posts is the
-  only explicit-order escape hatch, keeping ordering readable in _config.yml.
+  This page uses the same explicit section source as the sidebar, keeping
+  ordering readable in _config.yml without category-derived fallbacks.
 -->
 {{ content }}
 
-{% for item in site.home.categories %}
-  {% assign category = item.name | default: item %}
-  {% assign posts = site.categories[category] %}
-  {%- if posts.size > 0 -%}
+{% for item in site.home.sections %}
+  {%- if item.posts.size > 0 -%}
     <ul class="home-index">
-      <p class="home-index__category">{{ category }}</p>
-      {% if item.manual_posts %}
-        {%- for post_path in item.manual_posts -%}
-          {%- assign post = site.posts | where: "path", post_path | first -%}
-          {%- if post -%}
-          <li>
-            {%- assign date_format = post.date | date:"%Y-%m-%d" -%}
-            [{{ date_format }}]&nbsp
-            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            {%- if post.pro -%}⭐️{%- endif -%}
-          </li>
-          {%- endif -%}
-        {%- endfor -%}
-      {% else %}
-        {%- for post in posts -%}
-          {% unless post.path contains "archive" %}
-          <li>
-            {%- assign date_format = post.date | date:"%Y-%m-%d" -%}
-            [{{ date_format }}]&nbsp
-            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            {%- if post.pro -%}⭐️{%- endif -%}
-          </li>
-          {% endunless %}
-        {%- endfor -%}
-      {% endif %}
+      <p class="home-index__category">{{ item.name }}</p>
+      {%- for post_path in item.posts -%}
+        {%- assign post = site.posts | where: "path", post_path | first -%}
+        {%- if post -%}
+        <li>
+          {%- assign date_format = post.date | date:"%Y-%m-%d" -%}
+          [{{ date_format }}]&nbsp
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          {%- if post.pro -%}⭐️{%- endif -%}
+        </li>
+        {%- endif -%}
+      {%- endfor -%}
     </ul>
   {%- endif -%}
 {%- endfor -%}
