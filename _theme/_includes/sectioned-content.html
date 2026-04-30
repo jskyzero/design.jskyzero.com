@@ -13,6 +13,7 @@
 {% assign h3_count = 0 %}
 {% assign h4_count = 0 %}
 {% assign h5_count = 0 %}
+{% assign inline_toc_inserted = false %}
 
 {% for part in parts %}
   {% assign trimmed = part | strip %}
@@ -61,6 +62,21 @@
     {% assign body = trimmed | remove_first: original_heading | strip %}
     {% if heading_level == '1' %}
       {{ heading }}
+      {% unless inline_toc_inserted %}
+        {% assign inline_toc_inserted = true %}
+        {% if include.pro_html %}
+          <div id="index">
+            {% include pro.html html=include.pro_html %}
+          </div>
+        {% endif %}
+        {% if include.toc %}
+          <div class="inline-outline toc-inline" id="toc-inline">
+            <nav class="toc-nav" aria-label="本文目录">
+              {% include toc.html html=include.html h_min=1 h_max=4 sanitize=true %}
+            </nav>
+          </div>
+        {% endif %}
+      {% endunless %}
       {{ body }}
     {% elsif body != '' %}
       {% if section_count > 0 %}
@@ -79,3 +95,13 @@
     {{ trimmed }}
   {% endif %}
 {% endfor %}
+
+{% unless inline_toc_inserted %}
+  {% if include.toc %}
+    <div class="inline-outline toc-inline" id="toc-inline" hidden>
+      <nav class="toc-nav" aria-label="本文目录">
+        {% include toc.html html=include.html h_min=1 h_max=4 sanitize=true %}
+      </nav>
+    </div>
+  {% endif %}
+{% endunless %}

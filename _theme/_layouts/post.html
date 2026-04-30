@@ -3,26 +3,14 @@ layout: default
 ---
 <!--
   post.html - Article layout.
-  PRO metadata and the inline outline are positioned by layout.js so they sit
-  directly under the first h1 when a post provides one.
+  PRO metadata and the inline outline are inserted by sectioned-content.html
+  immediately after the first h1 at build time.
 -->
-
-<div id="index">
-  {% include pro.html html=content %}
-</div>
 
 {% assign article_content = content %}
 
-<div class="inline-outline toc-inline" id="toc-inline">
-  <nav class="toc-nav" aria-label="本文目录">
-    {% include toc.html html=article_content h_min=1 h_max=4 sanitize=true %}
-  </nav>
-</div>
-
-{% include sectioned-content.html html=article_content %}
+{% include sectioned-content.html html=article_content pro_html=content toc=true %}
 
 {% include log.html %}
-
-<script src="/assets/js/main.js"></script>
 
 {%- include disqus.html -%}
