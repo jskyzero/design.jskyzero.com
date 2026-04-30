@@ -59,6 +59,8 @@
   background: var(--background-color);
   color: var(--text-color);
   font-family: $base-font-family;
+  font-size: 16px;
+  line-height: 1;
   cursor: pointer;
 }
 
@@ -103,7 +105,7 @@
     z-index: 150;
     background: var(--background-color);
     padding: 8px 10px 6px;
-    transition: transform 0.2s;
+    transition: transform 1s;
   }
 
   // 滚动隐藏头部

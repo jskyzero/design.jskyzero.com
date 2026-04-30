@@ -7,9 +7,7 @@
 <header class="site-header">
   <div class="site-menu menu">
     <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/logo.2.png' | relative_url }}" alt="{{ site.title }}"></a>
-    {%- unless page.layout == 'home' -%}
-      <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
-    {%- endunless -%}
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
     <ul class="site-menu__items">
       {%- for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}
