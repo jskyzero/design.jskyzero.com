@@ -10,11 +10,6 @@
   color: var(--selection-text);
 }
 
-::-moz-selection {
-  background: var(--selection-background);
-  color: var(--selection-text);
-}
-
 // 非菜单列表用 "-" 前缀
 :not(.menu) > ul {
   list-style: none;
@@ -58,17 +53,13 @@
   float: left;
   padding: 2px 6px;
   margin: 8px 8px;
-  border: var(--border);
+  border: none;
   background: var(--background-color);
   color: var(--text-color);
   font-family: $base-font-family;
   font-size: 16px;
   line-height: 1;
   cursor: pointer;
-}
-
-.sidebar-toggle {
-  border: none;
 }
 
 .sidebar-toggle:hover {

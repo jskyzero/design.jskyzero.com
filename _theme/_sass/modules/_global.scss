@@ -120,22 +120,13 @@ h2:hover .svg-heading-rule,
 h3:hover .svg-heading-rule,
 h4:hover .svg-heading-rule,
 h5:hover .svg-heading-rule,
-h6:hover .svg-heading-rule,
-.content-section-separator:hover {
-  background-position: 64px 0;
-}
-
-.content-section:hover .svg-heading-rule,
-h1:hover .svg-heading-rule,
-h2:hover .svg-heading-rule,
-h3:hover .svg-heading-rule,
-h4:hover .svg-heading-rule,
-h5:hover .svg-heading-rule,
 h6:hover .svg-heading-rule {
+  background-position: 64px 0;
   transition: background-position 7s linear, opacity 600ms ease;
 }
 
 .content-section-separator:hover {
+  background-position: 64px 0;
   transition: background-position 12s linear;
 }
 

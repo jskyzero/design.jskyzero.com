@@ -14,13 +14,9 @@ p {
 footer {
   color: var(--text-color);
   border-top: var(--border);
-  margin: 20px auto 15px;
+  margin: 20px auto 20px;
   padding-top: 10px;
   text-align: right;
-}
-
-footer {
-  margin-bottom: 20px;
 }
 
 // 页面头部间距
@@ -137,7 +133,6 @@ li > ul {
 
 // git-log 终端风格区块
 .git-log {
-  padding: 1rem 1rem 1rem !important;
   padding: 2rem;
   background-color: black;
   border-radius: 1rem;

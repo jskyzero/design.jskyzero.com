@@ -61,15 +61,10 @@
 
     ul {
       display: block;
+    }
+
+    ul ul {
       padding-left: 28px;
-
-      ul {
-        padding-left: 28px;
-
-        ul {
-          padding-left: 28px;
-        }
-      }
     }
 
     li {
