@@ -6,6 +6,8 @@ Gemfile.lock
 .jekyll-cache
 .jekyll-metadata
 node_modules
+assets/generated/img
+_data/responsive_images.json
 .DS_Store
 _site
 *.drawio.bkp

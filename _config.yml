@@ -94,9 +94,9 @@ exclude:
   - _posts/日常
   - README.md
   - node_modules
-  - script
   - package.json
   - package-lock.json
+  - scripts
   - Gemfile
   - Gemfile.lock
   - vendor

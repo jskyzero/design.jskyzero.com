@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "images": "node scripts/generate-responsive-images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

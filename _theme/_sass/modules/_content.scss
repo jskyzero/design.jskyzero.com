@@ -37,6 +37,17 @@ p > img {
   width: 100%;
 }
 
+p > picture {
+  display: block;
+  margin: 0 auto;
+}
+
+p > picture > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 img {
   max-width: 100%;
 }

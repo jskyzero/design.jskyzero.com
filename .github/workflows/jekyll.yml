@@ -17,6 +17,28 @@ jobs:
           ref: jekyll
           fetch-depth: 0 # 获取完整历史以确保某些插件正常工作
 
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: 缓存响应式图片
+        uses: actions/cache@v4
+        with:
+          path: |
+            assets/generated/img
+            _data/responsive_images.json
+          key: responsive-images-${{ runner.os }}-${{ hashFiles('assets/img/**/*') }}
+          restore-keys: |
+            responsive-images-${{ runner.os }}-
+
+      - name: 安装 Node 依赖
+        run: npm ci
+
+      - name: 生成响应式图片
+        run: npm run images
+
       - name: 设置 Ruby
         uses: ruby/setup-ruby@v1
         with:

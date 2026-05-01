@@ -9,6 +9,34 @@ jskyzero's notes about game designer.
 
 <img alt="design jskyzero com_(iPad Mini)" src="https://github.com/user-attachments/assets/63868fa0-8475-42b7-a4c0-7ecb85009683" />
 
+## Local Development
+
+Install Ruby dependencies:
+
+```bash
+bundle install
+```
+
+Install Node dependencies for responsive image generation:
+
+```bash
+npm ci
+```
+
+Generate responsive WebP images after adding or changing files under `assets/img`:
+
+```bash
+npm run images
+```
+
+Preview the site locally:
+
+```bash
+bundle exec jekyll serve
+```
+
+Daily text/style edits usually only need `bundle exec jekyll serve`. Run `npm run images` again when new images are added, existing images are replaced, or image references change.
+
 
 <!--
 
