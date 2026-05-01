@@ -70,6 +70,11 @@
           text-decoration: none;
           color: var(--text-color);
 
+          &.current {
+            font-weight: bold;
+            background-color: rgba(128, 128, 128, 0.18);
+          }
+
           &:hover {
             color: var(--background-color);
             background-color: var(--base-color);

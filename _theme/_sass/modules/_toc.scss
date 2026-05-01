@@ -46,6 +46,10 @@
     counter-reset: toc2;
   }
 
+  > ul > li {
+    counter-reset: toc2;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -313,20 +317,31 @@
   }
 
   &:not(:has(.toc-nav > ul > li > ul > li > ul > li > ul > li)) {
+    padding-left: 6px;
+
+    .toc-nav > ul,
+    .toc-nav > ul > li {
+      width: 100%;
+    }
+
     .toc-nav > ul {
       flex-direction: column;
       gap: 0;
     }
 
+    .toc-nav > ul:has(> li + li) {
+      gap: clamp(16px, 3vh, 32px);
+    }
+
     .toc-nav > ul > li {
       display: grid;
-      grid-template-columns: minmax(28px, max-content) auto;
+      grid-template-columns: minmax(28px, max-content) minmax(0, 1fr);
       column-gap: 0;
     }
 
     .toc-nav > ul > li > a {
       display: inline-block;
-      justify-self: start;
+      justify-self: center;
       align-self: center;
       max-height: 14em;
       min-width: 0;
@@ -345,6 +360,7 @@
       grid-row: 1;
       align-self: center;
       margin-top: 0;
+      width: 100%;
     }
 
     .toc-nav > ul > li > ul > li:not(:has(> ul)) {
@@ -360,6 +376,33 @@
       align-self: stretch;
       justify-content: space-evenly;
       min-height: 100%;
+    }
+
+    &:has(.toc-nav > ul > li > ul > li > ul > li) {
+      .toc-nav > ul > li {
+        grid-template-columns: minmax(36px, max-content) minmax(0, 1fr);
+        column-gap: 10px;
+      }
+
+      .toc-nav > ul > li > ul {
+        gap: 34px;
+      }
+
+      .toc-nav > ul > li > ul > li,
+      .toc-nav > ul > li > ul > li > ul {
+        column-gap: 22px;
+      }
+    }
+
+    &:not(:has(.toc-nav > ul > li > ul > li > ul > li)) {
+      .toc-nav > ul > li {
+        grid-template-columns: minmax(42px, max-content) minmax(0, 1fr);
+        column-gap: 10px;
+      }
+
+      .toc-nav > ul > li > ul {
+        gap: clamp(5px, 1.1vh, 11px);
+      }
     }
   }
 

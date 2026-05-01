@@ -23,7 +23,7 @@
               {%- assign post = site.posts | where: "path", post_path | first -%}
               {%- if post -%}
                 <li>
-                  <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                  <a href="{{ post.url | relative_url }}"{% if page.url == post.url %} class="current" aria-current="page"{% endif %}>{{ post.title | escape }}</a>
                   {%- if post.pro -%}<span class="pro-star">⭐️</span>{%- endif -%}
                 </li>
               {%- endif -%}
