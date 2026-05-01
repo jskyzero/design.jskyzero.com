@@ -18,12 +18,13 @@ this.page.url = '{{ page.url | absolute_url }}';
 this.page.identifier = '{{ page.url | absolute_url }}';
 };
 
-(function() {
+window.addEventListener('load', function () {
 var d = document, s = d.createElement('script');
 s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+s.async = true;
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
-})();
+});
 </script>
 <noscript>Please enable JavaScript to view the comments.</noscript>
 {% endif %}

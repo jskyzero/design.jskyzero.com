@@ -84,18 +84,41 @@
     var filename = getSectionTitle(el) + '.png';
     var bgColor = getCssVar('--background-color') || '#ffffff';
 
-    html2canvas(el, {
-      backgroundColor: bgColor,
-      scale: 2,
-      useCORS: true,
-      logging: false
-    }).then(function (canvas) {
-      var padded = padCanvas(canvas, 40, bgColor);
-      var result = addShadow(padded, 40);
-      var link = document.createElement('a');
-      link.download = filename;
-      link.href = result.toDataURL('image/png');
-      link.click();
+    loadHtml2Canvas().then(function () {
+      html2canvas(el, {
+        backgroundColor: bgColor,
+        scale: 2,
+        useCORS: true,
+        logging: false
+      }).then(function (canvas) {
+        var padded = padCanvas(canvas, 40, bgColor);
+        var result = addShadow(padded, 40);
+        var link = document.createElement('a');
+        link.download = filename;
+        link.href = result.toDataURL('image/png');
+        link.click();
+      });
+    });
+  }
+
+  function loadHtml2Canvas() {
+    if (window.html2canvas) return Promise.resolve();
+
+    return new Promise(function (resolve, reject) {
+      var existing = document.querySelector('script[data-html2canvas]');
+      if (existing) {
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', reject, { once: true });
+        return;
+      }
+
+      var script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+      script.async = true;
+      script.dataset.html2canvas = 'true';
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
     });
   }
 

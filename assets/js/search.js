@@ -7,20 +7,26 @@
   'use strict';
 
   var posts = [];
+  var searchIndexPromise = null;
   var searchInput = document.getElementById('search-input');
   var searchResults = document.getElementById('search-results');
 
   if (!searchInput || !searchResults) return;
 
-  // Load the search index from Jekyll-generated JSON
-  fetch('/search.json')
-    .then(function(response) { return response.json(); })
-    .then(function(data) {
-      posts = data;
-    })
-    .catch(function(err) {
-      console.error('Failed to load search index:', err);
-    });
+  function loadSearchIndex() {
+    if (searchIndexPromise) return searchIndexPromise;
+
+    searchIndexPromise = fetch('/search.json')
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        posts = data;
+      })
+      .catch(function(err) {
+        console.error('Failed to load search index:', err);
+      });
+
+    return searchIndexPromise;
+  }
 
   // Filter posts by search query and render results
   function doSearch(query) {
@@ -70,9 +76,13 @@
   searchInput.addEventListener('input', function() {
     clearTimeout(timer);
     timer = setTimeout(function() {
-      doSearch(searchInput.value);
+      loadSearchIndex().then(function() {
+        doSearch(searchInput.value);
+      });
     }, 200);
   });
+
+  searchInput.addEventListener('focus', loadSearchIndex, { once: true });
 
   // Close results when clicking outside
   document.addEventListener('click', function(e) {
