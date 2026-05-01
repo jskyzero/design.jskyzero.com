@@ -11,13 +11,85 @@
 }
 
 // 高亮容器
-figure.highlight {
-  margin: 5px 0;
+div.highlighter-rouge,
+figure.highlight,
+pre:not(.git-log) {
+  position: relative;
+  margin: 18px 0 24px;
+  padding: 32px 16px 16px;
+  border-radius: 12px;
+  background: #050505;
+  color: #f1f1f1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.82);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 14px 34px rgba(0, 0, 0, 0.16);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 14px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff5f57;
+    box-shadow: 18px 0 0 #ffbd2e, 36px 0 0 #28c840;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='2' viewBox='0 0 1 2'%3E%3Crect x='0' y='0' width='1' height='1' fill='rgba(255,255,255,0.05)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 1px 2px;
+    pointer-events: none;
+  }
+
+  pre {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    color: #f1f1f1;
+    text-shadow: 0 0 4px rgba(200, 255, 200, 0.18);
+  }
+}
+
+div.highlighter-rouge .highlight,
+figure.highlight .highlight {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  overflow: visible;
+  box-shadow: none;
+  border: 0;
+  width: max-content;
+  min-width: 100%;
+}
+
+div.highlighter-rouge .highlight::before,
+div.highlighter-rouge .highlight::after,
+figure.highlight .highlight::before,
+figure.highlight .highlight::after {
+  content: none;
 }
 
 // 等宽字体家族
 pre, code, kbd, samp {
   font-family: $code-font-family !important;
+}
+
+p code,
+li code,
+td code,
+blockquote code {
+  border: 0;
+  padding: 0 0.22em;
+  background: rgba(128, 128, 128, 0.14);
+  border-radius: 3px;
+  box-shadow: none;
+  color: var(--text-color);
 }
 
 // 代码块
@@ -26,10 +98,20 @@ pre {
   border: none;
   padding: 0;
   margin: 0;
-  overflow: auto;
+  overflow: visible;
   font-size: $base-font-size;
   color: var(--text-color);
   line-height: 1.7 !important;
+}
+
+pre:not(.git-log) code {
+  position: relative;
+  z-index: 1;
+  display: block;
+  min-width: max-content;
+  color: #f1f1f1;
+  background: transparent;
+  text-shadow: 0 0 4px rgba(200, 255, 200, 0.18);
 }
 
 // ============================================================
@@ -94,3 +176,56 @@ pre {
 .highlight .vg  { color: var(--code-color-7); }
 .highlight .vi  { color: var(--code-color-7); }
 .highlight .il  { color: var(--code-color-14); }
+
+// Monokai-inspired token colors inside large code blocks.
+div.highlighter-rouge .highlight,
+figure.highlight {
+  .hll { background-color: #49483e; }
+  .c,
+  .cm,
+  .c1,
+  .cs { color: #75715e; font-style: italic; }
+  .err { color: #f92672; background-color: transparent; }
+  .k,
+  .kc,
+  .kd,
+  .kn,
+  .kp,
+  .kr,
+  .ow { color: #f92672; }
+  .kt,
+  .nc { color: #66d9ef; }
+  .nf,
+  .na { color: #a6e22e; }
+  .m,
+  .mf,
+  .mh,
+  .mi,
+  .mo,
+  .il { color: #ae81ff; }
+  .s,
+  .sb,
+  .sc,
+  .sd,
+  .s2,
+  .se,
+  .sh,
+  .si,
+  .sx,
+  .s1 { color: #e6db74; }
+  .sr { color: #fd971f; }
+  .nt { color: #f92672; font-weight: normal; }
+  .nb,
+  .bp { color: #f8f8f2; }
+  .no,
+  .nv,
+  .vc,
+  .vg,
+  .vi { color: #fd971f; }
+  .gh,
+  .gu { color: #a6e22e; font-weight: bold; }
+  .gd { color: #f92672; }
+  .gi { color: #a6e22e; }
+  .go,
+  .gp { color: #75715e; }
+}
