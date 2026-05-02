@@ -146,9 +146,11 @@ h6:hover .svg-heading-rule {
   margin-bottom: 0;
 }
 
-// 独图段落与独立图片加边框
+// 独图段落与独立图片加边框（与 content-section-frame 一致）
 .site-main > p:has(> img:only-child),
-.site-main > img {
+.site-main > p:has(> picture),
+.site-main > img,
+.site-main > picture {
   box-sizing: border-box;
   margin: 14px 0;
   padding: 14px;
