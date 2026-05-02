@@ -21,7 +21,9 @@ module Jekyll
         # Process all posts (not pages) for revision history
         %w(posts).each do |type|
           site.send(type).docs.each do |item|
-            item.data['revisions'] = GitLogger.new(site.source, item.path, site.config['revision']).revisions
+            logger = GitLogger.new(site.source, item.path, site.config['revision'])
+            item.data['revisions'] = logger.revisions
+            item.data['revision_summary'] = logger.summary
           end
         end
         puts("FINISH: post-data-revision")
@@ -41,21 +43,57 @@ module Jekyll
       # Returns array of revision hashes: { date, author, message }
       def revisions
         return nil unless is_git_repo?
-        logs = Executor.sh('git', 'log', '--follow',
-              '--pretty=%ci|%an|%s',
-              '--max-count=' + max_count.to_s,
-              relative_path_from_git_dir)
-        logs.lines.map do |line|
-          parts = line.split('|')
-          {"date" => parts[0], "author" => parts[1], "message" => parts[2..-1].join('|')}
-        end
+        truncate(all_revisions)
+      end
+
+      def summary
+        return nil unless is_git_repo?
+        revisions = all_revisions
+        return nil if revisions.empty?
+
+        {
+          "created_at" => revisions.last["date"],
+          "updated_at" => revisions.first["date"],
+          "count" => revisions.length
+        }
       end
 
       private
 
-      # Maximum git log entries to fetch (default 20)
+      # Maximum git log entries to display (default 20)
       def max_count
         config['max_count'] || 20
+      end
+
+      # Fetch extra history so long logs can report how far the history goes.
+      def fetch_count
+        config['fetch_count'] || 1000
+      end
+
+      def all_revisions
+        @all_revisions ||= begin
+          logs = Executor.sh('git', 'log', '--follow',
+                '--pretty=%ci|%an|%s',
+                '--max-count=' + fetch_count.to_s,
+                relative_path_from_git_dir)
+          logs.lines.map do |line|
+            parts = line.split('|')
+            {"date" => parts[0].to_s.strip, "author" => parts[1].to_s.strip, "message" => parts[2..-1].join('|').strip}
+          end
+        end
+      end
+
+      def truncate(revisions)
+        return revisions if revisions.length <= max_count
+
+        oldest_count = 3
+        recent_count = [max_count - oldest_count, 1].max
+        revisions.first(recent_count) + [{
+          "date" => nil,
+          "author" => nil,
+          "message" => "...",
+          "omitted" => true
+        }] + revisions.last(oldest_count)
       end
 
       # Check if current directory is inside a git repo

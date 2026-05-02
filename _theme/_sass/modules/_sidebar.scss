@@ -74,13 +74,28 @@
         margin: 2px 0;
         line-height: 1.4;
 
+        &.current {
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          font-weight: bold;
+          background-color: rgba(128, 128, 128, 0.18);
+        }
+
+        &.current:after {
+          content: "◀";
+          position: absolute;
+          left: calc(100% + 5px);
+          font-weight: bold;
+          font-style: normal;
+        }
+
         a {
           text-decoration: none;
           color: var(--text-color);
 
           &.current {
-            font-weight: bold;
-            background-color: rgba(128, 128, 128, 0.18);
+            background-color: transparent;
           }
 
           &:hover {
@@ -99,7 +114,10 @@
 
   // PRO 星标
   .pro-star {
+    display: inline-block;
     font-size: 10px;
+    line-height: 1;
+    margin-left: 2px;
   }
 }
 

@@ -20,7 +20,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0;
   margin: 22px 0 4px;
   font-weight: bold;
   font-size: 13px;
@@ -64,6 +64,11 @@ h4 .heading-counter, h5 .heading-counter, h6 .heading-counter,
 h1 .heading-label, h2 .heading-label, h3 .heading-label,
 h4 .heading-label, h5 .heading-label, h6 .heading-label {
   background: var(--background-color);
+  padding-right: 0;
+}
+
+h1 .heading-label, h2 .heading-label, h3 .heading-label,
+h4 .heading-label, h5 .heading-label, h6 .heading-label {
   padding-right: 4px;
 }
 

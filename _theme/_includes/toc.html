@@ -75,9 +75,7 @@
             {% assign space = space | prepend: '    ' %}
         {% endfor %}
 
-        {% unless include.item_class == blank %}
-            {% capture listItemClass %}{:.{{ include.item_class | replace: '%level%', headerLevel }}}{% endcapture %}
-        {% endunless %}
+        {% capture listItemClass %}{:.toc-level-{{ headerLevel }}{% unless include.item_class == blank %}.{{ include.item_class | replace: '%level%', headerLevel }}{% endunless %}}{% endcapture %}
 
         {% capture heading_body %}{% if include.sanitize %}{{ header | strip_html }}{% else %}{{ header }}{% endif %}{% endcapture %}
         {% capture my_toc %}{{ my_toc }}

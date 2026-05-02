@@ -60,7 +60,7 @@
         {% endfor %}
 
         {% capture my_toc %}{{ my_toc }}
-{{ space }}{{ listModifier }} [{{ header | strip_html | replace: "|", "\|" }}]({% if include.baseurl %}{{ include.baseurl }}{% endif %}#{{ html_id }}){% endcapture %}
+{{ space }}{{ listModifier }} {:.toc-level-{{ headerLevel }}} [{{ header | strip_html | replace: "|", "\|" }}]({% if include.baseurl %}{{ include.baseurl }}{% endif %}#{{ html_id }}){% endcapture %}
       {% endfor %}
       {% capture my_toc %}{{ my_toc | lstrip }}{% endcapture %}
     {% endcapture %}{% assign tocWorkspace = '' %}{{ my_toc | markdownify | strip }}
