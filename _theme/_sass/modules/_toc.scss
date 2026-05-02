@@ -371,6 +371,23 @@
       width: 100%;
     }
 
+    // h1 根标题竖排显示
+    .toc-nav > ul > li > a {
+      display: inline-block;
+      justify-self: center;
+      align-self: center;
+      max-height: 14em;
+      min-width: 0;
+      width: auto;
+      padding: 1px 0;
+      line-height: 1.05;
+      text-align: center;
+      white-space: normal;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      overflow-wrap: anywhere;
+    }
+
     .toc-nav > ul > li > ul > li:not(:has(> ul)) {
       margin: 0;
     }
@@ -408,22 +425,6 @@
       .toc-nav > ul > li {
         grid-template-columns: minmax(42px, max-content) minmax(0, 1fr);
         column-gap: 10px;
-      }
-
-      .toc-nav > ul > li > a {
-        display: inline-block;
-        justify-self: center;
-        align-self: center;
-        max-height: 14em;
-        min-width: 0;
-        width: auto;
-        padding: 1px 0;
-        line-height: 1.05;
-        text-align: center;
-        white-space: normal;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        overflow-wrap: anywhere;
       }
 
       .toc-nav > ul > li > ul {
