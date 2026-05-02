@@ -143,7 +143,7 @@ li > ul {
 }
 
 // git-log 终端风格区块
-.git-log {
+  .git-log {
   padding: 2rem;
   background-color: black;
   border-radius: 1rem;
@@ -151,8 +151,25 @@ li > ul {
   color: white;
   font: 0.8rem Inconsolata, monospace;
   position: relative;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: pre;
   text-shadow: 0 0 5px #C8C8C8;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 4px;
+  }
 
   a {
     color: white;

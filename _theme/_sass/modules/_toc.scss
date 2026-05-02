@@ -31,10 +31,21 @@
     pointer-events: auto;
   }
 
-  // Keep long outlines scrollable without showing an extra rail scrollbar.
+  // 长大纲滚动条保持极简
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 128, 128, 0.28) transparent;
+
   &::-webkit-scrollbar {
-    display: none;
-    width: 0;
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.28);
+    border-radius: 4px;
   }
 }
 
@@ -183,6 +194,21 @@
   background-size: 8px 8px;
   background-position: 0 0;
   overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 128, 128, 0.25) transparent;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.25);
+    border-radius: 4px;
+  }
 
   &:hover {
     background-position: 64px 0;

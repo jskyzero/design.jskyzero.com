@@ -27,12 +27,20 @@
   animation: sidebar-fade-in 1s ease;
 
   // 滚动条样式
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 128, 128, 0.35) transparent;
+
   &::-webkit-scrollbar {
     width: 4px;
   }
 
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
   &::-webkit-scrollbar-thumb {
-    background: var(--text-color);
+    background: rgba(128, 128, 128, 0.35);
+    border-radius: 4px;
   }
 
   // 关闭按钮（移动端显示）
@@ -159,6 +167,21 @@
   background: var(--background-color);
   border: var(--border);
   z-index: 100;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 128, 128, 0.35) transparent;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.35);
+    border-radius: 4px;
+  }
 
   ul {
     list-style: none;
