@@ -1,3 +1,14 @@
+# ============================================================
+# Jekyll 插件：响应式图片替换
+#
+# 在构建完成后扫描页面输出的 <img> 标签，将其替换为
+# <picture> 元素，包含 WebP 格式的 srcset 响应式变体。
+#
+# 依赖：
+#   - _data/responsive_images.json（由 npm run images 生成）
+#   - 跳过 logo 和 CC 图标等固定小图
+# ============================================================
+
 require "json"
 
 Jekyll::Hooks.register [:posts, :pages], :post_render do |doc|
@@ -9,6 +20,7 @@ Jekyll::Hooks.register [:posts, :pages], :post_render do |doc|
   manifest = JSON.parse(File.read(manifest_path))
   next if manifest.empty?
 
+  # 跳过固定的小图标
   skipped_sources = ["/assets/img/logo.2.png", "/assets/img/CC.png"]
   first_content_image = true
 

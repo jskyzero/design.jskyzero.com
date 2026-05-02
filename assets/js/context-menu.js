@@ -1,7 +1,15 @@
+/**
+ * context-menu.js —— 自定义右键菜单。
+ *
+ * 在内容章节（.content-section）上右键时弹出菜单，
+ * 提供"保存章节为图片"功能（通过 html2canvas 截图）。
+ * html2canvas 按需懒加载，不阻塞页面初始渲染。
+ */
 (function () {
   var menu = null;
   var targetSection = null;
 
+  // 构建菜单 DOM（只创建一次）
   function buildMenu() {
     if (menu) return;
     menu = document.createElement('div');
@@ -18,6 +26,7 @@
     });
   }
 
+  // 显示菜单，自动调整位置避免溢出视口
   function showMenu(x, y, title) {
     var item = menu.querySelector('.custom-context-menu__item');
     item.textContent = '保存「' + title + '」为图片';
@@ -40,6 +49,7 @@
     if (menu) menu.classList.remove('visible');
   }
 
+  // Canvas 白边填充
   function padCanvas(canvas, padding, bgColor) {
     var w = canvas.width + padding * 2;
     var h = canvas.height + padding * 2;
@@ -53,6 +63,7 @@
     return padded;
   }
 
+  // Canvas 阴影效果
   function addShadow(canvas, blur) {
     var w = canvas.width + blur * 2;
     var h = canvas.height + blur * 2;
@@ -70,16 +81,19 @@
     return shadowCanvas;
   }
 
+  // 读取 CSS 自定义属性
   function getCssVar(name) {
     return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
   }
 
+  // 从章节中提取标题作为文件名
   function getSectionTitle(el) {
     var heading = el.querySelector('h1, h2, h3, h4, h5, h6');
     if (!heading) return 'section';
     return heading.textContent.replace(/[\\/:*?"<>|]/g, '').trim() || 'section';
   }
 
+  // 截图并下载
   function captureSection(el) {
     var filename = getSectionTitle(el) + '.png';
     var bgColor = getCssVar('--background-color') || '#ffffff';
@@ -101,6 +115,7 @@
     });
   }
 
+  // 按需懒加载 html2canvas
   function loadHtml2Canvas() {
     if (window.html2canvas) return Promise.resolve();
 
@@ -122,6 +137,7 @@
     });
   }
 
+  // 初始化：触摸设备跳过，生产环境所有章节均可右键
   document.addEventListener('DOMContentLoaded', function () {
     var isDev = document.body.getAttribute('data-env') === 'development';
     var isTouch = window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
@@ -133,6 +149,7 @@
     document.addEventListener('contextmenu', function (e) {
       var section = e.target.closest('.content-section');
 
+      // 开发环境仅允许有章节标题时弹出
       if (isDev) {
         if (!section) return;
       }
@@ -155,6 +172,5 @@
     });
 
     document.addEventListener('scroll', hideMenu);
-
   });
 })();

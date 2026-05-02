@@ -1,8 +1,9 @@
-<!--
-  header.html - Primary site navigation.
-  `site.nav.header_pages` controls link order. The mobile sidebar button lives
-  here so the small-screen header owns all global navigation actions.
--->
+{% comment %}
+  header.html —— 站点主导航。
+  
+  从 site.nav.header_pages 读取页面列表生成顶部导航链接。
+  移动端侧栏切换按钮也放在此处，窄屏时通过 flex 三栏布局排布。
+{% endcomment %}
 {%- assign page_paths = site.nav.header_pages | default: site.header_pages | default: default_paths -%}
 <header class="site-header">
   <div class="site-menu menu">

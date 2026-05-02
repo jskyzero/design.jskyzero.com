@@ -1,11 +1,12 @@
 ---
 layout: default
 ---
-<!--
-  page.html - Static content layout.
-  Static pages use the same outline component as posts when headings exist.
--->
-
+{% comment %}
+  page.html —— 静态页面布局。
+  
+  静态页面与文章共享相同的大纲组件，
+  通过 sectioned-content.html 按标题切分并生成大纲。
+{% endcomment %}
 {% assign article_content = content %}
 
 {% include sectioned-content.html html=article_content toc=true %}

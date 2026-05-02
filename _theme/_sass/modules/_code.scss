@@ -1,7 +1,7 @@
 @use "../settings" as *;
 
 // ============================================================
-// Rouge 语法高亮与等宽代码渲染
+// 代码高亮：暗色终端风格代码块 + Rouge Token 颜色
 // ============================================================
 
 // 行号
@@ -10,7 +10,10 @@
   margin-right: 15px;
 }
 
-// 高亮容器
+// ------------------------------------------------------------------
+// 代码块容器（Jekyll Rouge 输出 + 独立 <pre>）
+// 外观：macOS 窗口控件 + CRT 扫描线 + 暗色背景
+// ------------------------------------------------------------------
 div.highlighter-rouge,
 figure.highlight,
 pre:not(.git-log) {
@@ -25,8 +28,11 @@ pre:not(.git-log) {
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
   border: 1px solid rgba(0, 0, 0, 0.82);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 14px 34px rgba(0, 0, 0, 0.16);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 14px 34px rgba(0, 0, 0, 0.16);
 
+  // 横向滚动条（暗色主题）
   &::-webkit-scrollbar {
     height: 5px;
   }
@@ -40,6 +46,7 @@ pre:not(.git-log) {
     border-radius: 4px;
   }
 
+  // macOS 三色窗口按钮（红/黄/绿）
   &::before {
     content: "";
     position: absolute;
@@ -52,6 +59,7 @@ pre:not(.git-log) {
     box-shadow: 18px 0 0 #ffbd2e, 36px 0 0 #28c840;
   }
 
+  // CRT 扫描线叠加层
   &::after {
     content: "";
     position: absolute;
@@ -62,6 +70,7 @@ pre:not(.git-log) {
     pointer-events: none;
   }
 
+  // 内部 pre 重置为透明，文字带绿色辉光
   pre {
     position: relative;
     z-index: 1;
@@ -71,6 +80,7 @@ pre:not(.git-log) {
   }
 }
 
+// 嵌套 .highlight 容器重置（去掉由父容器提供的装饰）
 div.highlighter-rouge .highlight,
 figure.highlight .highlight {
   margin: 0;
@@ -90,11 +100,14 @@ figure.highlight .highlight::after {
   content: none;
 }
 
+// ------------------------------------------------------------------
 // 等宽字体家族
+// ------------------------------------------------------------------
 pre, code, kbd, samp {
   font-family: $code-font-family !important;
 }
 
+// 内联代码（段落、列表、表格、引用内）
 p code,
 li code,
 td code,
@@ -107,7 +120,7 @@ blockquote code {
   color: var(--text-color);
 }
 
-// 代码块
+// 基础 <pre> 样式（非暗色主题情况）
 pre {
   background-color: var(--background-color);
   border: none;
@@ -119,6 +132,7 @@ pre {
   line-height: 1.7 !important;
 }
 
+// 暗色代码块内 code 元素
 pre:not(.git-log) code {
   position: relative;
   z-index: 1;
@@ -130,7 +144,7 @@ pre:not(.git-log) code {
 }
 
 // ============================================================
-// Rouge 高亮 Token 颜色映射
+// Rouge 高亮 Token 颜色映射（亮色主题默认）
 // ============================================================
 
 .highlight .hll { background-color: var(--code-color-2); }
@@ -192,7 +206,10 @@ pre:not(.git-log) code {
 .highlight .vi  { color: var(--code-color-7); }
 .highlight .il  { color: var(--code-color-14); }
 
-// Monokai-inspired token colors inside large code blocks.
+// ============================================================
+// Monokai 风格颜色（暗色代码块内使用）
+// ============================================================
+
 div.highlighter-rouge .highlight,
 figure.highlight {
   .hll { background-color: #49483e; }

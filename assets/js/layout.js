@@ -1,3 +1,10 @@
+/**
+ * layout.js —— 全局布局交互逻辑。
+ *
+ * 包含：侧栏开关、TOC 侧栏显隐、当前标题高亮、
+ * TOC 溢出检测与滚动、内联目录分/换行、移动端头部隐藏、
+ * 光标拖尾 canvas 动画。
+ */
 function setSidebarOpen(open) {
   const sidebar = document.getElementById('sidebar');
   const toggles = document.querySelectorAll('[aria-controls="sidebar"]');
@@ -8,6 +15,9 @@ function setSidebarOpen(open) {
   toggles.forEach((toggle) => toggle.setAttribute('aria-expanded', String(open)));
 }
 
+// ------------------------------------------------------------------
+// 侧栏开关：按钮点击、关闭按钮、ESC 键
+// ------------------------------------------------------------------
 function initSidebar() {
   document.querySelectorAll('[aria-controls="sidebar"]').forEach((button) => {
     button.addEventListener('click', () => {
@@ -25,12 +35,15 @@ function initSidebar() {
   });
 }
 
+// ------------------------------------------------------------------
+// TOC 侧栏显隐：内联目录滚出视野时显示右侧大纲
+// ------------------------------------------------------------------
 function initTocSidebar() {
   const inlineToc = document.getElementById('toc-inline');
   const sidebarToc = document.getElementById('toc-sidebar');
   if (!inlineToc || !sidebarToc) return;
 
-  // Pages without an h1 hide the inline TOC, so the sidebar TOC should appear immediately.
+  // 无 h1 的页面内联目录隐藏，直接显示侧栏大纲
   if (inlineToc.hidden) {
     sidebarToc.classList.add('visible');
     sidebarToc.setAttribute('aria-hidden', 'false');
@@ -48,6 +61,9 @@ function initTocSidebar() {
   observer.observe(inlineToc);
 }
 
+// ------------------------------------------------------------------
+// 当前标题高亮：根据阅读位置标记活跃标题
+// ------------------------------------------------------------------
 function initTocActiveHeading() {
   const sidebarToc = document.getElementById('toc-sidebar');
   if (!sidebarToc || !window.IntersectionObserver) return;
@@ -65,7 +81,7 @@ function initTocActiveHeading() {
   }
 
   const observer = new IntersectionObserver((entries) => {
-    // Pick the first visible heading near the reading position as the active item.
+    // 选取最接近阅读位置的首个可见标题作为当前项
     const visible = entries
       .filter((entry) => entry.isIntersecting)
       .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
@@ -76,6 +92,9 @@ function initTocActiveHeading() {
   setActive(headings[0].id);
 }
 
+// ------------------------------------------------------------------
+// TOC 溢出检测：大纲过长时切换紧凑布局模式
+// ------------------------------------------------------------------
 function initTocOverflow() {
   const sidebarToc = document.getElementById('toc-sidebar');
   if (!sidebarToc) return;
@@ -90,7 +109,9 @@ function initTocOverflow() {
     const shouldOverflow = sidebarToc.scrollHeight > sidebarToc.clientHeight + 1;
     sidebarToc.classList.toggle('toc-sidebar--overflowing', shouldOverflow);
 
-    if (wasOverflowing !== shouldOverflow) sidebarToc.scrollTop = Math.min(sidebarToc.scrollTop, sidebarToc.scrollHeight);
+    if (wasOverflowing !== shouldOverflow) {
+      sidebarToc.scrollTop = Math.min(sidebarToc.scrollTop, sidebarToc.scrollHeight);
+    }
   }
 
   function scheduleUpdateOverflow() {
@@ -111,6 +132,9 @@ function initTocOverflow() {
   }
 }
 
+// ------------------------------------------------------------------
+// 自动滚动：保持当前高亮项在大纲可见区域内
+// ------------------------------------------------------------------
 function initTocActiveVisibility() {
   const sidebarToc = document.getElementById('toc-sidebar');
   if (!sidebarToc || !window.MutationObserver) return;
@@ -144,6 +168,9 @@ function initTocActiveVisibility() {
   });
 }
 
+// ------------------------------------------------------------------
+// 内联 TOC 一级标题按 "/" 换行（中文竖排效果）
+// ------------------------------------------------------------------
 function formatInlineTocRootBreaks() {
   document.querySelectorAll('#toc-inline .toc-nav > ul > li > a').forEach((link) => {
     const text = link.textContent;
@@ -159,6 +186,9 @@ function formatInlineTocRootBreaks() {
   });
 }
 
+// ------------------------------------------------------------------
+// 移动端顶部导航：向下滚动隐藏、向上滚动显示
+// ------------------------------------------------------------------
 function initMobileHeader() {
   const header = document.querySelector('header');
   if (!header) return;
@@ -184,9 +214,12 @@ function initMobileHeader() {
   update();
 }
 
+// ------------------------------------------------------------------
+// 光标拖尾效果：Canvas 粒子跟随 + 可交互元素放大
+// ------------------------------------------------------------------
 function initCursorTrail() {
-  if (!window.matchMedia('(pointer: fine)').matches) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(pointer: fine)').matches) return;           // 仅鼠标设备
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; // 尊重无障碍偏好
 
   const canvas = document.createElement('canvas');
   canvas.setAttribute('aria-hidden', 'true');
@@ -227,8 +260,11 @@ function initCursorTrail() {
   function draw(time) {
     ctx.clearRect(0, 0, width, height);
 
+    // 闲置时淡出
     const idle = time - lastMove;
     visible += (1 - visible) * 0.16;
+
+    // 光标大小平滑过渡（可交互元素放大 3x）
     if (targetScale >= scale) {
       scale += (targetScale - scale) * 0.18;
     } else {
@@ -239,6 +275,7 @@ function initCursorTrail() {
     points[0].x = cursor.x;
     points[0].y = cursor.y;
 
+    // 粒子链式跟随
     for (let i = 1; i < points.length; i += 1) {
       points[i].x += (points[i - 1].x - points[i].x) * 0.34;
       points[i].y += (points[i - 1].y - points[i].y) * 0.34;
@@ -247,6 +284,7 @@ function initCursorTrail() {
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
 
+    // 绘制拖尾线段（从旧到新）
     for (let i = points.length - 1; i > 0; i -= 1) {
       const point = points[i];
       const next = points[i - 1];
@@ -261,6 +299,7 @@ function initCursorTrail() {
       ctx.stroke();
     }
 
+    // 光标圆点
     ctx.beginPath();
     ctx.fillStyle = 'rgba(255, 255, 255, ' + (visible * 0.92).toFixed(3) + ')';
     ctx.arc(points[0].x, points[0].y, 5.7 * scale, 0, Math.PI * 2);
@@ -293,6 +332,9 @@ function initCursorTrail() {
   window.addEventListener('pointermove', move, { passive: true });
 }
 
+// ------------------------------------------------------------------
+// 启动所有交互
+// ------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   initSidebar();
   formatInlineTocRootBreaks();

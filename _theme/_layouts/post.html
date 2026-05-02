@@ -1,12 +1,13 @@
 ---
 layout: default
 ---
-<!--
-  post.html - Article layout.
-  PRO metadata and the inline outline are inserted by sectioned-content.html
-  immediately after the first h1 at build time.
--->
-
+{% comment %}
+  post.html —— 文章布局。
+  
+  通过 sectioned-content.html 在构建时插入 PRO 元数据 badge
+  和内联目录（紧接第一个 h1 之后）。
+  附带 Git 修订记录和 Disqus 评论区。
+{% endcomment %}
 {% assign article_content = content %}
 
 {% include sectioned-content.html html=article_content pro_html=content toc=true %}

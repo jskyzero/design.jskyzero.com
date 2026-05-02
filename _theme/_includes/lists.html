@@ -1,17 +1,13 @@
 {% comment %}
-  lists.html - Small reusable explicit post list.
-
-  Usage:
-  {% include lists.html posts=page.some_posts text="做过的独立游戏们" %}
-
-  Parameters:
-  * posts             (array) - post paths in display order
-  * text              (string) - the ul title text
-
-
+  lists.html —— 可复用的文章列表组件。
+  
+  用法：
+    {% include lists.html posts=page.some_posts text="标题" %}
+  
+  参数：
+    * posts  — 文章路径数组（按显示顺序）
+    * text   — 列表标题文案
 {% endcomment %}
-
-
 <ul class="post-list">
     <p class="post-list__title">{{ include.text }}</p>
 

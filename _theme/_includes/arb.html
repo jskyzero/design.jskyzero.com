@@ -1,11 +1,12 @@
-<!--
-  arb.html - Data-backed boss move table.
-  Keeps legacy CSV/data rendering intact while exposing a class for theme styles.
--->
+{% comment %}
+  arb.html —— 数据驱动的 BOSS 招式表格。
+  
+  从 _data/ARB.csv 中按 game 字段筛选渲染表格行，
+  每行包含序号、BOSS 名称、特色标签和招式描述。
+{% endcomment %}
 <table>
   <thead>
     <tr>
-      <!-- <th>{{ include.filter }}</th> -->
       <th></th>
       <th>BOSS</th>
       <th>特色</th>
@@ -13,7 +14,6 @@
     </tr>
   </thead>
   <tbody>
-    <!-- game,boss,feature,skills -->
     {%- assign index = 0  -%}
     {%- for line in site.data.ARB -%}
     {% if line.game == include.filter %}

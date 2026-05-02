@@ -1,11 +1,12 @@
 ---
 layout: default
 ---
-<!--
-  home.html - Homepage index.
-  This page uses the same explicit section source as the sidebar, keeping
-  ordering readable in _config.yml without category-derived fallbacks.
--->
+{% comment %}
+  home.html —— 首页文章索引。
+  
+  与侧栏共享 site.home.sections 的显式排序配置，
+  避免依赖分类推导，使排序在 _config.yml 中一目了然。
+{% endcomment %}
 {{ content }}
 
 {% for item in site.home.sections %}

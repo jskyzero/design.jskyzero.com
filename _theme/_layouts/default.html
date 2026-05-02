@@ -1,12 +1,12 @@
 ---
 layout: null
 ---
-<!--
-  default.html - Site shell.
-  Keeps the page in three stable regions: navigation rail, content column,
-  and outline rail. Semantic class names are additive so older selectors and
-  scripts can keep using the established ids/classes.
--->
+{% comment %}
+  default.html —— 站点骨架。
+  
+  三区布局：左侧导航栏 / 中间内容区 / 右侧大纲栏。
+  语义化类名叠加使用，保证旧选择器和脚本兼容。
+{% endcomment %}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {%- include head.html -%}

@@ -1,9 +1,10 @@
-<!--
-  log.html - Git revision log and license footer
-  Displays the git commit history for the current page (via Jekyll plugin log.rb)
-  in a CRT terminal-style block. Includes CC BY-NC-SA 4.0 license badge.
-  Only renders when site.git_log is enabled in _config.yml.
--->
+{% comment %}
+  log.html —— Git 修订记录与许可声明。
+  
+  通过 Jekyll 插件 log.rb 获取当前页面的 Git 提交历史，
+  以 CRT 终端风格展示。包含 CC BY-NC-SA 4.0 许可声明。
+  仅在 _config.yml 中 site.git_log 为 true 时渲染。
+{% endcomment %}
 {% if site.git_log %}
 <div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log{% if page.revisions.size > 0 %}
 {% for rev in page.revisions %}{% if rev.omitted %}{{ rev.message }}{% else %}{{ rev.date | date: "%Y-%m-%d" }} - {{ rev.author }} - {{ rev.message }}{% endif %}

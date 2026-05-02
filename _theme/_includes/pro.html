@@ -1,8 +1,9 @@
-<!--
-  pro.html - Post metadata badges
-  Renders shields.io badges for categories, author, and date at the top of each blog post.
-  Categories are extracted from post/page frontmatter.
--->
+{% comment %}
+  pro.html —— 文章元数据 badge。
+  
+  从文章 frontmatter 中提取分类、作者、日期信息，
+  使用 shields.io 生成对应的徽章图片。
+{% endcomment %}
 <div class="post-meta-badges" id="pro">
   {% if post.categories or page.categories %}
     {% if post %}

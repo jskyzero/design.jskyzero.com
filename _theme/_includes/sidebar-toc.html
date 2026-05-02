@@ -1,14 +1,14 @@
-<!--
-  sidebar-toc.html - Desktop outline rail.
-  The same generated outline appears inline first; JavaScript reveals this rail
-  after the inline outline scrolls away, or immediately when a page has no h1.
--->
+{% comment %}
+  sidebar-toc.html —— 桌面端右侧大纲栏。
+  
+  与内联目录使用相同的生成逻辑。JS 在内联目录滚出视野后
+  显示此侧栏；若页面无 h1 则立即显示。
+{% endcomment %}
 <aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
   <nav class="toc-nav" aria-label="本文目录">
     {% capture tocWorkspace %}
       {% comment %}
-        TOC generator - adapted from jekyll-toc (https://github.com/allejo/jekyll-toc)
-        Generates a nested list of heading links from the page's HTML content.
+        从页面 HTML 中提取标题生成嵌套大纲列表。
       {% endcomment %}
 
       {% capture my_toc %}{% endcapture %}

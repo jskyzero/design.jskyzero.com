@@ -1,4 +1,9 @@
-<!-- head.html - Metadata, selected theme stylesheet, and analytics. -->
+{% comment %}
+  head.html —— 页面元数据、样式表和资源预加载。
+  
+  配置字体的 preconnect/preload、异步字体加载（含 noscript 回退）、
+  SEO 标签、Robots 声明，以及分析脚本。
+{% endcomment %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +12,15 @@
   <title>{{ page.title }} | {{site.title}}</title>
   <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
   <link rel="preload" as="image" href="{{ '/assets/img/logo.2.png' | relative_url }}" fetchpriority="high">
+
+  <!-- 资源预连接 -->
   <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin>
   <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://www.clarity.ms">
   <link rel="preconnect" href="https://{{ site.disqus.shortname }}.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
   <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
@@ -26,7 +35,6 @@
   {% endif %}
 
   <link rel="stylesheet" type="text/css" href="{{ "/assets/main-light.css" | relative_url }}">
-
 
   {%- include google-analytics.html -%}
   {%- include clarity-analytics.html -%}
