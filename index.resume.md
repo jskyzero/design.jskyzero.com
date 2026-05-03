@@ -83,6 +83,22 @@ jsky，动作游戏战斗策划（怪物方向），98年出生，目前7年工�
 |国产动作游戏|**黑神话悟空**、无限机兵、明末渊虚之羽|🏆全成就|
 
 |<img src="https://card.exophase.com/2/0/70821.png?1605682929">|<img src="/assets/img/others/resume/games.PNG"  style="max-height:142px;">|
+{: .resume-images-table}
+
+<style>
+  .resume-images-table td {
+    vertical-align: middle;
+  }
+  .resume-images-table td > picture,
+  .resume-images-table td > picture > img,
+  .resume-images-table td > img {
+    display: block;
+    max-height: min(142px, 28vw);
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+</style>
 
 
 ### 各类奖项/荣誉/事迹
