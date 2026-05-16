@@ -38,7 +38,7 @@ function initSidebar() {
 // ------------------------------------------------------------------
 // TOC 侧栏显隐：内联目录滚出视野时显示右侧大纲
 // ------------------------------------------------------------------
-function initTocSidebar() {
+function initTocSidebar(scheduleOverflow) {
   const inlineToc = document.getElementById('toc-inline');
   const sidebarToc = document.getElementById('toc-sidebar');
   if (!inlineToc || !sidebarToc) return;
@@ -47,6 +47,7 @@ function initTocSidebar() {
   if (inlineToc.hidden) {
     sidebarToc.classList.add('visible');
     sidebarToc.setAttribute('aria-hidden', 'false');
+    if (scheduleOverflow) scheduleOverflow();
     return;
   }
 
@@ -56,6 +57,7 @@ function initTocSidebar() {
     const visible = entries[0].isIntersecting;
     sidebarToc.classList.toggle('visible', !visible);
     sidebarToc.setAttribute('aria-hidden', String(visible));
+    if (!visible && scheduleOverflow) scheduleOverflow();
   }, { threshold: 0 });
 
   observer.observe(inlineToc);
@@ -124,12 +126,15 @@ function initTocOverflow() {
   window.addEventListener('resize', scheduleUpdateOverflow);
 
   if (window.ResizeObserver) {
+    new ResizeObserver(scheduleUpdateOverflow).observe(sidebarToc);
+
     const nav = sidebarToc.querySelector('.toc-nav');
     if (nav) {
-      const observer = new ResizeObserver(scheduleUpdateOverflow);
-      observer.observe(nav);
+      new ResizeObserver(scheduleUpdateOverflow).observe(nav);
     }
   }
+
+  return scheduleUpdateOverflow;
 }
 
 // ------------------------------------------------------------------
@@ -338,9 +343,9 @@ function initCursorTrail() {
 document.addEventListener('DOMContentLoaded', () => {
   initSidebar();
   formatInlineTocRootBreaks();
-  initTocSidebar();
+  const scheduleOverflow = initTocOverflow();
+  initTocSidebar(scheduleOverflow);
   initTocActiveHeading();
-  initTocOverflow();
   initTocActiveVisibility();
   initMobileHeader();
   initCursorTrail();

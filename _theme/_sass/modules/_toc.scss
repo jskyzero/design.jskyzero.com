@@ -12,9 +12,7 @@
   top: 0;
   height: 100vh;
   box-sizing: border-box;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-width: none;
+  overflow-y: hidden;
   background: var(--background-color);
   font-style: italic;
   opacity: 0;
@@ -151,6 +149,8 @@
 // 大纲过长时切换为紧凑模式：顶部对齐、更小间距。
 // 滚动条隐藏，活跃项由 layout.js 保持在可见区域内。
 .toc-sidebar.toc-sidebar--overflowing {
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding-top: clamp(18px, 4vh, 36px);
   padding-bottom: clamp(18px, 4vh, 36px);
   align-items: flex-start;
