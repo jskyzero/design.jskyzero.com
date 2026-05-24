@@ -42,7 +42,7 @@ jobs:
       - name: 设置 Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.3'
           bundler-cache: true # 自动运行 bundle install 并缓存 gems
 
       - name: 设置 GitHub Pages 路径

@@ -31,6 +31,3 @@ gem "webrick", "~> 1.7"
 gem "jekyll-mermaid", "~> 1.0"
 gem 'jekyll-sass-converter', "~> 3.1"
 gem 'jekyll-seo-tag'
-
-# 🚀 解决 sass-embedded 编译报错的核心：强制使用不含 bug 的新版 json 核心库
-gem 'json', '>= 2.7.2'
