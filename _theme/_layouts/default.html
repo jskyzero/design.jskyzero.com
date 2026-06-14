@@ -11,7 +11,7 @@ layout: null
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {%- include head.html -%}
 
-  <body data-env="{{ jekyll.environment }}">
+  <body data-env="{{ jekyll.environment }}" data-cursor-trail="{{ site.cursor_trail | default: false }}">
     <div class="site-shell page-wrapper{% if page.layout == 'home' %} no-sidebar{% endif %}">
       {%- include sidebar.html -%}
       <div class="sidebar-overlay" data-sidebar-close></div>

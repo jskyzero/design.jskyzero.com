@@ -221,15 +221,10 @@ function initMobileHeader() {
 
 // ------------------------------------------------------------------
 // 光标拖尾效果：Canvas 粒子跟随 + 可交互元素放大
-// 可通过 window.__cursorTrailConfig 配置 { trailLength, trailTime }
+// 由 _config.yml 中 cursor_trail 控制启用（默认 false）
 // ------------------------------------------------------------------
 function initCursorTrail() {
-  var config = window.__cursorTrailConfig || {};
-  var trailLength = config.trailLength || 0;
-  var trailTime = config.trailTime || 0;
-
-  if (!trailLength || !trailTime) return;
-
+  if (document.body.getAttribute('data-cursor-trail') !== 'true') return;
   if (!window.matchMedia('(pointer: fine)').matches) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -247,6 +242,7 @@ function initCursorTrail() {
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
 
+  const trailLength = 36;
   const points = Array.from({ length: trailLength }, () => ({ x: 0, y: 0 }));
   const cursor = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
   let width = 0;
@@ -273,8 +269,7 @@ function initCursorTrail() {
     ctx.clearRect(0, 0, width, height);
 
     const idle = time - lastMove;
-    var fadeRate = trailTime > 0 ? Math.min(1, 16 / trailTime) : 1;
-    visible += (1 - visible) * (idle > trailTime ? 0.96 : fadeRate);
+    visible += (1 - visible) * 0.16;
 
     if (targetScale >= scale) {
       scale += (targetScale - scale) * 0.18;
