@@ -148,29 +148,18 @@
     position: absolute;
     left: 0;
     top: 4px;
-    width: 9ch;
-    overflow: hidden;
     color: var(--placeholder-color);
     font-family: $base-font-family;
     font-size: 13px;
     line-height: $base-line-height;
     white-space: nowrap;
     pointer-events: none;
-    animation: search-prompt-type 4.5s steps(9, end) infinite;
   }
 
   input[type="text"]:focus + .sidebar-search__prompt,
   input[type="text"]:not(:placeholder-shown) + .sidebar-search__prompt {
     display: none;
   }
-}
-
-@keyframes search-prompt-type {
-  0% { width: 0; }
-  60% { width: 9ch; }
-  82% { width: 9ch; }
-  83% { width: 0; }
-  100% { width: 0; }
 }
 
 // 搜索结果下拉

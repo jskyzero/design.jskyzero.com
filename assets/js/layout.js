@@ -221,10 +221,17 @@ function initMobileHeader() {
 
 // ------------------------------------------------------------------
 // 光标拖尾效果：Canvas 粒子跟随 + 可交互元素放大
+// 可通过 window.__cursorTrailConfig 配置 { trailLength, trailTime }
 // ------------------------------------------------------------------
 function initCursorTrail() {
-  if (!window.matchMedia('(pointer: fine)').matches) return;           // 仅鼠标设备
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; // 尊重无障碍偏好
+  var config = window.__cursorTrailConfig || {};
+  var trailLength = config.trailLength || 0;
+  var trailTime = config.trailTime || 0;
+
+  if (!trailLength || !trailTime) return;
+
+  if (!window.matchMedia('(pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const canvas = document.createElement('canvas');
   canvas.setAttribute('aria-hidden', 'true');
@@ -240,7 +247,7 @@ function initCursorTrail() {
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
 
-  const points = Array.from({ length: 36 }, () => ({ x: 0, y: 0 }));
+  const points = Array.from({ length: trailLength }, () => ({ x: 0, y: 0 }));
   const cursor = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
   let width = 0;
   let height = 0;
@@ -265,11 +272,10 @@ function initCursorTrail() {
   function draw(time) {
     ctx.clearRect(0, 0, width, height);
 
-    // 闲置时淡出
     const idle = time - lastMove;
-    visible += (1 - visible) * 0.16;
+    var fadeRate = trailTime > 0 ? Math.min(1, 16 / trailTime) : 1;
+    visible += (1 - visible) * (idle > trailTime ? 0.96 : fadeRate);
 
-    // 光标大小平滑过渡（可交互元素放大 3x）
     if (targetScale >= scale) {
       scale += (targetScale - scale) * 0.18;
     } else {
@@ -280,7 +286,6 @@ function initCursorTrail() {
     points[0].x = cursor.x;
     points[0].y = cursor.y;
 
-    // 粒子链式跟随
     for (let i = 1; i < points.length; i += 1) {
       points[i].x += (points[i - 1].x - points[i].x) * 0.34;
       points[i].y += (points[i - 1].y - points[i].y) * 0.34;
@@ -289,7 +294,6 @@ function initCursorTrail() {
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
 
-    // 绘制拖尾线段（从旧到新）
     for (let i = points.length - 1; i > 0; i -= 1) {
       const point = points[i];
       const next = points[i - 1];
@@ -304,7 +308,6 @@ function initCursorTrail() {
       ctx.stroke();
     }
 
-    // 光标圆点
     ctx.beginPath();
     ctx.fillStyle = 'rgba(255, 255, 255, ' + (visible * 0.92).toFixed(3) + ')';
     ctx.arc(points[0].x, points[0].y, 5.7 * scale, 0, Math.PI * 2);
