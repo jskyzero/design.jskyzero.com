@@ -11,7 +11,7 @@ layout: null
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {%- include head.html -%}
 
-  <body data-env="{{ jekyll.environment }}" data-cursor-trail="{{ site.cursor_trail | default: false }}">
+  <body data-env="{{ jekyll.environment }}">
     <div class="site-shell page-wrapper{% if page.layout == 'home' %} no-sidebar{% endif %}">
       {%- include sidebar.html -%}
       <div class="sidebar-overlay" data-sidebar-close></div>
@@ -26,12 +26,19 @@ layout: null
       </div>
       {%- if page.layout == 'post' or page.layout == 'page' -%}
         {%- assign sidebar_toc_content = page.content | markdownify -%}
-        {%- include sidebar-toc.html html=sidebar_toc_content -%}
+        <aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录">
+            {% include toc.html html=sidebar_toc_content sanitize=true h_min=1 h_max=4 %}
+          </nav>
+        </aside>
       {%- else -%}
         <aside class="outline-sidebar toc-sidebar" aria-hidden="true"></aside>
       {%- endif -%}
     </div>
     <script src="/assets/js/search.js" defer></script>
-    <script src="/assets/js/layout.js" defer></script>
+    <script src="/assets/js/sidebar.js" defer></script>
+    <script src="/assets/js/toc-sidebar.js" defer></script>
+    <script src="/assets/js/post-format.js" defer></script>
+    <script src="/assets/js/header.js" defer></script>
   </body>
 </html>
