@@ -80,5 +80,10 @@ jobs:
           username: "${{ secrets.USERNAME }}"
           port: "${{ secrets.PORT }}"
           key: "${{ secrets.SSHKEY }}"
-          # 在服务器上执行拉取操作
-          script: cd "${{ secrets.PROJECT_PATH }}" && git pull
+          # 服务器强制同步到远程 jekyll 分支。
+          # 用 fetch + reset --hard 代替 git pull，避免服务器本地
+          # 与远程分支出现 divergent 时 git pull 报错退出。
+          script: |
+            cd "${{ secrets.PROJECT_PATH }}"
+            git fetch origin jekyll
+            git reset --hard origin/jekyll
