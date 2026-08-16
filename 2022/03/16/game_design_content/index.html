@@ -1,0 +1,330 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>杂谈：游戏领域拾遗 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="杂谈：游戏领域拾遗">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="本文汇总一些游戏相关的零碎知识点，方便复习查阅。">
+<meta property="og:description" content="本文汇总一些游戏相关的零碎知识点，方便复习查阅。">
+<link rel="canonical" href="https://design.jskyzero.com/2022/03/16/game_design_content/">
+<meta property="og:url" content="https://design.jskyzero.com/2022/03/16/game_design_content/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-03-16T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="杂谈：游戏领域拾遗">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-16T00:00:00+00:00","datePublished":"2022-03-16T00:00:00+00:00","description":"本文汇总一些游戏相关的零碎知识点，方便复习查阅。","headline":"杂谈：游戏领域拾遗","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/03/16/game_design_content/"},"url":"https://design.jskyzero.com/2022/03/16/game_design_content/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>本文汇总一些游戏相关的零碎知识点，方便复习查阅。</p>
+
+<!--more-->
+
+<h1 id="游戏访谈--摘录"><span class="heading-label">游戏访谈 &amp; 摘录</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/乱七八糟-blue.svg?style=flat" alt="乱七八糟"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2022/03/16-brightgreen.svg?style=flat" alt="日期 2022/03/16"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#游戏访谈--摘录">游戏访谈 &amp; 摘录</a><ul><li><a href="#互联网文章">互联网文章</a></li><li><a href="#uynad-大师的著作">UyNad 大师的著作</a></li><li><a href="#访谈摘录">访谈摘录</a><ul><li><a href="#宫崎英高">宫崎英高</a></li><li><a href="#小岛秀夫">小岛秀夫</a></li><li><a href="#柴田刚平仁王3制作人">柴田刚平（《仁王3》制作人）</a></li></ul></li><li><a href="#言论摘录">言论摘录</a><ul><li><a href="#part-1-这游戏现在的氛围感很糟糕">PART 1 这游戏现在的氛围感很糟糕</a></li></ul></li></ul></li></ul></nav></div>
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="互联网文章"><span class="heading-counter">1.</span><span class="heading-label">互联网文章</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>《仁王》<a href="https://zhuanlan.zhihu.com/p/25481394">从魂到仁王：两个游戏类型的重构史</a></li>
+  <li>《黑暗之魂3》<a href="https://www.bilibili.com/video/av84266583">冲击力-韧性机制</a></li>
+  <li>《黑魂》<a href="https://www.gcores.com/articles/171143">的硬直“发展史”</a></li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="uynad-大师的著作"><span class="heading-counter">2.</span><span class="heading-label">UyNad 大师的著作</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li><a href="https://uynad.github.io/2022/03/05/review/20220306-ring/">“这可比BOTW劲儿大多了（《艾尔登法环》）”</a></li>
+  <li><a href="https://uynad.github.io/2025/01/24/cyborg/20250125-l4d/">L4D+模式乐趣分析：合作PVE角色分工游戏</a></li>
+  <li><a href="https://uynad.github.io/2025/04/15/cyborg/20250416-hangout/">如龙式路人VS刺客信条式路人</a></li>
+  <li><a href="https://uynad.github.io/2025/06/30/cyborg/20250701-forfun/">如何做“正常”的玩法闭环流程体验</a></li>
+</ul>
+
+<!-- + 隐藏分
++ 肉质、斩味机制 -->
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="访谈摘录"><span class="heading-counter">3.</span><span class="heading-label">访谈摘录</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="宫崎英高"><span class="heading-counter">3.1.</span><span class="heading-label">宫崎英高</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<blockquote>
+  <p>—— 与其他敌人所完全不同的特色攻击招式也是 Boss 战值得期待的要素之一，请问在设计 Boss 动作的时候，你们有什么特别注重的地方吗？</p>
+
+  <p>宫崎：除了在游戏层面上不要显得太不讲道理外，我们还非常重视为 Boss 的动作增添压迫感和杀意。因此哪怕无视高额的伤害数值，这些攻击招式也能够让玩家感受到巨大的威胁。只有这样，在打倒 Boss 之后，玩家才能收获强烈的喜悦和安心感。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="小岛秀夫"><span class="heading-counter">3.2.</span><span class="heading-label">小岛秀夫</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<blockquote>
+  <p>——在您心中“好玩的游戏”的标准是什么？作为走在时代前沿的创作者，您认为游戏这一艺术形式还存在哪些不足？有没有什么急需突破的瓶颈？</p>
+
+  <p>小岛秀夫：我觉得游戏最重要的还是沉浸感，因为我希望做一个游戏的世界让玩家进入以后，他觉得仿佛自己真的生活在这个世界里面，让他完全沉浸在里面。当然如果玩家觉得这个世界是由其他人创作出来的话，一瞬间就会拉回现实世界，就没有沉浸感了。所以我现在做的所有创作都是为了让玩家感受到他就是在这个世界中生活的，他所有的行动都是跟这个世界相符的。虽然这是一种错觉，但也希望把这个错觉最大化。</p>
+
+  <p>另外，关于现在艺术形式的瓶颈和不足，如何赋予玩家足够自由度的同时，能够让他享受一个很高度的故事性。举一个例子，现在的作品还是类似一个高速路，你一旦上了高速，就算改变车道，也没办法在行驶中离开高速。我希望在今后故事创作的方面，能够跟玩家一起选择不同的故事支线。但是我不喜欢多结局的设计，我觉得游戏的故事结局就像命运一样，如果这个主人公最终是一个会死亡的命运，中途可以有很多的选项和过程，让玩家去选择不同的支线，但是最后的结局可能还是同一种死亡的命运。</p>
+</blockquote>
+
+<!--
+
+
+### 怪物猎人
+
+-->
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="柴田刚平仁王3制作人"><span class="heading-counter">3.3.</span><span class="heading-label">柴田刚平（《仁王3》制作人）</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<blockquote>
+  <p>Q：在如今魂游众多的当下，你觉得动作游戏是否达到了瓶颈？</p>
+
+  <p>A：我认为动作游戏还是会会持续进化下去，我认为其实动作游戏有点像人类的本能，比如说大家面对战斗的时候会想要去求胜，会想要跨越眼前的困难，那动作游戏就是刺激了我们身为人的本能的这一个部分。当然一直以来动作游戏的发展都是相互参照相互学习的过程。</p>
+
+  <p>比如说我自己也担任了《忍者龙剑传：大师合集》制作人。在制作大师合集的时候，我又回去重新玩了一遍。《忍者龙剑传》在当时也被称之为动作游戏的巅峰，但是在实际回去游玩的时候会发现动作游戏到现在有了很大的进化，因此我相信这样子的进化是会继续下去的。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="言论摘录"><span class="heading-counter">4.</span><span class="heading-label">言论摘录</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="part-1-这游戏现在的氛围感很糟糕"><span class="heading-counter">4.1.</span><span class="heading-label">PART 1 这游戏现在的氛围感很糟糕</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>这游戏现在的氛围感很糟糕，已经不再是当初的怪物猎人主题公园了，现在只剩下一堆所谓的“遗老”。他们霸占了这个游戏的话语权。
+说实话他们自己爱怎么玩别人管不着，但是他们喜欢管萌新，萌新用个防卫队装备要被骂，萌新叫个救援要被说你这是逃课，你逃的课迟早要补回来。
+建了无数的群(小圈子)每天在群里一口一个天尊一口一个巨佬互相奉承着，比比游戏时长和武器使用次数。一问联机吗就是只打黑龙或者王冰。
+好不容易愿意一起打了，不是嫌弃你营地没开全，就是嫌你聚魔之地没诱饵，要么嫌你乱打影响他操作了，要么说你“处理”不好耽误时间了。
+在这里跟各位萌新说一下，那些所谓的“大佬”不一定比你强，他们已经脱不下来那套毕业配装了，如果让他们像你一样穿着开荒装备打霜漂，他们还不知道打成什么狗样呢
+但是就是这样一群人，他们自认为对这个游戏有着顶级的理解，还要不停地教导别人。
+所以我劝买了的萌新，如果你已经买了，那么这个游戏你想怎么玩就怎么玩(联机还开挂十几倍伤害的除外)，你愿意怎么打就怎么打，不要去学什么”处理“，”处理”学多了的后果就是你只会处理那几只怪了，随机应变才是玩这个游戏的真道理，这样你不但能够玩好这一部，上手系列其他作品也能得心应手。不要在乎打了多久，打败怪物就是好的。
+还没买的萌新，如果你只打算单人或者只和现实中的朋友联机，欢迎购买，但凡你有加群找网友的念头，别买，别加。什么这个盒那个网这个站那个主播各种群我都进过，都一路货色。
+什么处理啊什么理解啊，支撑不了你玩这个游戏玩100个小时，但是快乐可以让你玩1000个小时玩不够</p>
+
+<p>出自<a href="https://bbs.nga.cn/read.php?&amp;tid=36864877">https://bbs.nga.cn/read.php?&amp;tid=36864877</a></p>
+
+<!-- ## [ExtraCredit 系列](https://www.youtube.com/user/ExtraCreditz)
+
++ Persona 5 and Jungian Psychology
+  + 人格面具和荣格心理学
+  + 人格面具、阿尼玛和阿尼姆斯、阴影、自性
+  + [分析心理学的概述](https://wiki.mbalib.com/wiki/%E5%88%86%E6%9E%90%E5%BF%83%E7%90%86%E5%AD%A6)
++ The Pacing of PUBG
+  + BR（大逃杀）游戏其实是惊悚游戏
+  + 延长悬念时间、四个特征：明确赌注、无处不在的威胁、时间压力、不断升高的风险
++ Balancing for Skill
+  + 傻瓜策略帮助玩家入坑，但需要尽早失效，以免玩家无聊或者碰壁无法转向其他策略。
++ NieR Automata Sacrifice and the Meaning of Kindness
+  + 善行所付出的代价
++ Prey - The Enemy Inside
+  + 双重心里问答
++ Overwatch and Asymmetric Level Design
+  + 关卡与角色的双重平衡，不断演变的冲突点
++ Overwatch and Asymmetric Character Design
+  + 队伍的构成
+  + 角色的属性与地图的契合
++ The Witcher III: Wild Hunt
+  + 场景（游戏片段）的美
+  + 线索与开放世界
+  + 侦探与冒险精神主角特征 -->
+
+<!-- ## 动作参考
+
++ [ULTRAMAN 机动奥特曼 第二季](https://www.bilibili.com/bangumi/play/ss41511)
+  + 第二集16:30，第六集6：00，摔跤格斗
++ [日本剑术专家重现仁王2招式动作](https://www.bilibili.com/video/BV11q4y1f7k4)
+  + 如何描述招式的动作？
+    + “两次从下而上的攻击，袈裟斩（kesagiri），横切斩（yokogiri）”
++ [剑道基础教学](https://www.bilibili.com/video/BV1ox411b77h)
+  + 构、击打 -->
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2025-08-05 - jskyzero - update UyNad 大师的著作
+2025-08-05 - jskyzero - add 柴田刚平（《仁王3》制作人）
+2025-07-14 - jskyzero - add 小岛秀夫
+2025-07-05 - jskyzero - 📝 归档文章
+2025-07-03 - jskyzero - Update 2022-03-16-game_design_content.md
+2024-11-02 - jskyzero - 📝 update article
+2024-10-28 - jskyzero - 📝 mv 杂谈：游戏领域拾遗
+2024-10-27 - jskyzero - ✨ update structure
+2024-08-01 - jskyzero - Update 2022-03-16-game_design_content.md
+2024-07-31 - jskyzero - 📝 change structure
+2024-07-26 - jskyzero - Update 2022-03-16-game_design_content.md
+2024-07-25 - jskyzero - Update 2022-03-16-game_design_content.md
+2024-07-19 - jskyzero - 📝 update structure
+
+<em>（本文编写于2024年7月，最后修改于2025年8月，共修改4次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2022/03/16/game_design_content/';
+this.page.identifier = 'https://design.jskyzero.com/2022/03/16/game_design_content/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#游戏访谈--摘录">游戏访谈 &amp; 摘录</a><ul><li><a href="#互联网文章">互联网文章</a></li><li><a href="#uynad-大师的著作">UyNad 大师的著作</a></li><li><a href="#访谈摘录">访谈摘录</a><ul><li><a href="#宫崎英高">宫崎英高</a></li><li><a href="#小岛秀夫">小岛秀夫</a></li><li><a href="#柴田刚平仁王3制作人">柴田刚平（《仁王3》制作人）</a></li></ul></li><li><a href="#言论摘录">言论摘录</a><ul><li><a href="#part-1-这游戏现在的氛围感很糟糕">PART 1 这游戏现在的氛围感很糟糕</a></li></ul></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

@@ -1,0 +1,851 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>状态效果-Dota2 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="状态效果-Dota2">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="浅聊一下从「机制」开始的游戏设计，然后对Dota2的状态效果进行一些介绍。">
+<meta property="og:description" content="浅聊一下从「机制」开始的游戏设计，然后对Dota2的状态效果进行一些介绍。">
+<link rel="canonical" href="https://design.jskyzero.com/2024/01/26/dota2/">
+<meta property="og:url" content="https://design.jskyzero.com/2024/01/26/dota2/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2024-01-26T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="状态效果-Dota2">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-26T00:00:00+00:00","datePublished":"2024-01-26T00:00:00+00:00","description":"浅聊一下从「机制」开始的游戏设计，然后对Dota2的状态效果进行一些介绍。","headline":"状态效果-Dota2","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2024/01/26/dota2/"},"url":"https://design.jskyzero.com/2024/01/26/dota2/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li class="current">
+                  <a href="/2024/01/26/dota2/" class="current" aria-current="page">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>浅聊一下从「机制」开始的游戏设计，然后对Dota2的状态效果进行一些介绍。</p>
+
+<!-- TODO：NGA -->
+
+<h1 id="机制设计以dota2中的25种状态效果为例"><span class="heading-label">机制设计——以Dota2中的25种状态效果为例</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/专题报告-blue.svg?style=flat" alt="专题报告"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2024/01/26-brightgreen.svg?style=flat" alt="日期 2024/01/26"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#机制设计以dota2中的25种状态效果为例">机制设计——以Dota2中的25种状态效果为例</a><ul><li><a href="#前言机制设计与dota2">前言：机制设计与DOTA2</a><ul><li><a href="#mda理论与机制设计">MDA理论与机制设计</a></li><li><a href="#困难的机制设计">困难的机制设计</a></li><li><a href="#dota2与机制的关系">Dota2与机制的关系</a><ul><li><a href="#为什么是dota2">为什么是Dota2</a></li><li><a href="#为什么讨论状态机制">为什么讨论状态机制</a></li></ul></li></ul></li><li><a href="#从眩晕状态开始">从“眩晕”状态开始</a><ul><li><a href="#状态的基础效果">状态的基础效果</a><ul><li><a href="#眩晕-无法移动和执行任何动作">眩晕-无法移动和执行任何动作</a></li><li><a href="#眩晕-打断当前动作">眩晕-打断当前动作</a></li></ul></li><li><a href="#状态之间叠加">状态之间叠加</a><ul><li><a href="#眩晕-重复叠加时取效果最强">眩晕-重复叠加时（取效果最强）</a></li></ul></li><li><a href="#提前结束状态驱散">提前结束状态：驱散</a></li><li><a href="#加速状态的流逝状态抗性">加速状态的流逝：状态抗性</a></li></ul></li><li><a href="#更多的状态效果">更多的状态效果</a><ul><li><a href="#从归类开始">从归类开始</a></li><li><a href="#状态效果的根基">状态效果的根基</a></li><li><a href="#单维度效果类">单维度效果类</a><ul><li><a href="#移动指令">移动指令</a></li><li><a href="#技能">技能</a></li><li><a href="#普通攻击">普通攻击</a></li><li><a href="#物品">物品</a></li><li><a href="#被动技能">被动技能</a></li></ul></li><li><a href="#复合效果类">复合效果类</a><ul><li><a href="#常规复合">常规复合</a></li><li><a href="#强制行为">强制行为</a></li><li><a href="#总结禁止类控制技能">总结——禁止类控制技能</a></li></ul></li><li><a href="#基础属性类">基础属性类</a><ul><li><a href="#移动速度">移动速度</a></li><li><a href="#移动速度极端化">移动速度（极端化）</a></li><li><a href="#攻击">攻击</a></li><li><a href="#基础属性">基础属性</a></li><li><a href="#无敌">无敌</a></li></ul></li></ul></li><li><a href="#简要总结">简要总结</a><ul><li><a href="#设计方法论要素-x-方式">设计方法论：要素 X 方式</a></li><li><a href="#对抗与涌现的乐趣">对抗与涌现的乐趣</a></li></ul></li><li><a href="#附录dota2的美学实现速览">附录：DOTA2的美学实现速览</a><ul><li><a href="#少就是多的动画">少就是多的动画</a></li><li><a href="#出现即巅峰的特效">出现即巅峰的特效</a></li></ul></li></ul></li></ul></nav></div>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/1-480.webp 480w, /assets/generated/img/gameplay/dota2/1-760.webp 760w, /assets/generated/img/gameplay/dota2/1-1140.webp 1140w, /assets/generated/img/gameplay/dota2/1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/1.png" alt="" width="3326" height="1881" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+
+<p>这是一篇相当长，内容相当多的文章，不得不提醒读者预留出时间&amp;精力，做好准备再开始阅读。也强烈推荐先右键点开章节⬆️的脑图查看，理清思路再进入细节。</p>
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="前言机制设计与dota2"><span class="heading-counter">1.</span><span class="heading-label">前言：机制设计与DOTA2</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<blockquote>
+  <p>导语：机制设计可以使游戏开发更简单，也可以使游戏开发更难。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="mda理论与机制设计"><span class="heading-counter">1.1.</span><span class="heading-label">MDA理论与机制设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-1-480.webp 480w, /assets/generated/img/gameplay/dota2/X-1-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-1.png" alt="" width="1124" height="363" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>先从MDA开始聊起吧，也方便统一文章的描述语境。</p>
+
+<p>MDA框架是游戏设计中常用的理论框架，它将游戏划分为不同层次的多个概念，以此来让设计师更好地理解玩家的游玩过程，最终设计出更好的游戏。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/MDA-480.webp 480w, /assets/generated/img/gameplay/dota2/MDA-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/MDA.png" alt="" width="969" height="735" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>熟悉MDA框架的同学可能会知道，实际使用这个框架来指导设计时，从任意层次开始，都是可以的——当然从机制层面出发也是可以的。</p>
+
+<p>这听起来非常合理：<strong>设计底层机制，改变玩家的动态行为，带来不同感受</strong>。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="困难的机制设计"><span class="heading-counter">1.2.</span><span class="heading-label">困难的机制设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>但是事实上，设计机制远没有说起来那么简单，甚至是一件<strong>非常困难的事情</strong>。</p>
+
+<blockquote>
+  <p>想到一个好的“概念”或许是简单的，但是将“概念”具体化为规则、放入游戏中，变成玩家接触到的信息，需要理解、思考、利用的规则，还要肩负起玩家长期的体验，这并不是一件简单的事情。</p>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/MDA2-480.webp 480w, /assets/generated/img/gameplay/dota2/MDA2-760.webp 760w, /assets/generated/img/gameplay/dota2/MDA2-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/MDA2.png" alt="" width="1337" height="754" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>抛开难度的话题，从评价上来说，一个好的机制可能有以下五个特征：</p>
+
+<ul>
+  <li>超出预期：突破玩家的想象，没有见过的新东西</li>
+  <li>容易理解：有自然的“呈现”和“解释”，有代入感</li>
+  <li>有可玩性：从游玩角度而言，有选择的空间、可对抗</li>
+  <li>成本可控：从开发侧角度，能实现、可测试、可维护</li>
+  <li>能互相作用：涌现出多样的情形</li>
+</ul>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/0-480.webp 480w, /assets/generated/img/gameplay/dota2/0-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/0.png" alt="" width="852" height="731" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>本文，试图从Dota2的25种状态机制为切入，以“一个体验丰富且成熟的MOBA游戏中，丰富的机制与其带来的体验”为例，希望能为读者带来一些启发，帮助读者设计出更好的机制。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="dota2与机制的关系"><span class="heading-counter">1.3.</span><span class="heading-label">Dota2与机制的关系</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-2-480.webp 480w, /assets/generated/img/gameplay/dota2/X-2-760.webp 760w, /assets/generated/img/gameplay/dota2/X-2-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-2-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-2.png" alt="" width="1616" height="296" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>读者可能会好奇：</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="为什么是dota2"><span class="heading-counter">1.3.1.</span><span class="heading-label">为什么是Dota2</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>因为Dota2很好的满足了上面提到的，好的机制的特征。在笔者所体验过的游戏中，如果要挑选一个机制最为天马行空、最为复杂丰富的游戏，那可能就是Dota2了，甚至，这款游戏还是一款经历过长久运营，和PVP平衡性考验的游戏。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="为什么讨论状态机制"><span class="heading-counter">1.3.2.</span><span class="heading-label">为什么讨论状态机制</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>笔者曾经思考过对于Dota2，最为出彩的地方是什么，思考下来有两点，一点是MOBA的底层机制；另一点是有趣的英雄玩法。</p>
+
+<p>MOBA的底层机制已经有太多文章，并且有一些品类的局限性，和些许失去时效性。而有趣的英雄玩法，笔者粗略思考下来，核心是英雄丰富的体验，与自身、敌我带来的组合变化，而<strong>状态效果和底层机制，则为这些丰富的体验和变化，提供了根基和发挥空间</strong>。如果有可能的话，下文也会结合一些英雄设计的例子，来进一步说明这种关系。</p>
+
+<blockquote>
+  <p>⚠️注意⚠️</p>
+
+  <p>Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游戏，这意味着本文所记载的内容可能随着时间的经过而过时。虽然本文的核心目标是给读者带来启发——这并不依赖于最新版本的规则，但是为了严谨性，也希望读者以实际版本为准。</p>
+
+  <p>同时，人非圣贤，笔者的叙述也可能存在纰漏或者错误，Dota2是一款细节和定制逻辑相当多的游戏，笔者会尽量进行测试，但仍然重申，以实际游戏的运行规则为准。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="从眩晕状态开始"><span class="heading-counter">2.</span><span class="heading-label">从“眩晕”状态开始</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-3-480.webp 480w, /assets/generated/img/gameplay/dota2/X-3-760.webp 760w, /assets/generated/img/gameplay/dota2/X-3-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-3-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-3.png" alt="" width="1951" height="410" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>眩晕是最为基础（和常见）的状态机制，在眩晕期间，<strong>无法移动和执行任何动作</strong>。一个特殊的情况是，眩晕时<strong>当前当前正在进行的动作将会被打断</strong>。</p>
+
+<p>空说定义是一件很无趣的事情，举一些例子看看：</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="状态的基础效果"><span class="heading-counter">2.1.</span><span class="heading-label">状态的基础效果</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="眩晕-无法移动和执行任何动作"><span class="heading-counter">2.1.1.</span><span class="heading-label">眩晕-无法移动和执行任何动作</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.1.gif" alt=""></p>
+
+<p>可以看到，1、眩晕时，人物会进入特殊的演出动画，2、同时人物头顶会有一个旋转的效果，3、在血条上方还可以看到眩晕的计时槽的流逝，4、在人物下方UI的状态区域，也可以看到对应的状态图标，状态图标外层也可以看出倒计时。</p>
+
+<p>前面说过，眩晕期间无法移动和执行任何操作，这里的任何操作具体来说，有：普通攻击、使用技能、使用道具。</p>
+
+<p>从设计目的上来说，眩晕是一种极其强力的控制手段，它剥夺了个人的操作空间，让对抗变得更为策略向与数值向——即便是操作高手也只能眼睁睁地看着别人“演出”，过程中任人宰割——当然，这也是有对策的，具体可见下文。</p>
+
+<p>一个有意思的点是，<strong>被动仍然是生效</strong>的——留意斧王自动释放的被动反击螺旋。</p>
+
+<blockquote>
+  <p>引申话题：</p>
+
+  <p>其一，指令缓存：虽然在状态持续过程中，无法执行任何操作，但是过程中下达的指令，在眩晕状态结束、能执行操作的时候，是会立刻去执行的。比如开BKB（黑黄杖）或者使用闪烁类技能逃走。一定程度上，这是给被控者处于被动方的优待，不至于要不停的狂按才能在第一时间行动。（dota2还有个shift指令队列，不是本文重点，略过）</p>
+
+  <p>其二，转向机制：留意斧王的行动过程，结束移动收到R指令时候，同时在进行技能前摇和转向过程，这里技能前摇大于转向过程，对于技能前摇小于转向过程的技能，仍需要等待转向过程结束才能发起行为（最为经典的案例是向身后使用0前摇的道具跳刀会先转向），这个等待过程有时相当致命。</p>
+
+  <p>其三：突破限制的机制：拍拍熊的A杖可以使大招在被控制时使用！没错，竟然可以在眩晕时使用！（测试了下，大部分控制都行，但是沉默变羊恐惧之类禁用技能的状态是用不出来的，类似嘲讽的虽然用出来，但是无法驱散的话还是会继续被嘲讽）</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="眩晕-打断当前动作"><span class="heading-counter">2.1.2.</span><span class="heading-label">眩晕-打断当前动作</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.2.gif" alt=""></p>
+
+<p>眩晕期间是没操作空间了，那么之前<strong>进行到一半的操作呢？答案是直接被打断！</strong></p>
+
+<p>留意齐天大圣试图释放猴子猴孙时，被发条技师的弹幕冲击一直打断。</p>
+
+<p>这里有个有意思的地方是，被打断的行为如果要再次使用，是<strong>重新开始计算前摇</strong>的，也就是例子上，怎么放都放不出来的效果。</p>
+
+<blockquote>
+  <p>是否有感受到Dota2中的“以下克上”。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="状态之间叠加"><span class="heading-counter">2.2.</span><span class="heading-label">状态之间叠加</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="眩晕-重复叠加时取效果最强"><span class="heading-counter">2.2.1.</span><span class="heading-label">眩晕-重复叠加时（取效果最强）</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.3.gif" alt=""></p>
+
+<p>前面提到过状态之间的相互作用，作为我们认识的第一个状态，先看看这类状态<strong>同类和同类会发生什么反应</strong>。</p>
+
+<p>可以看到，即便是同时叠加了两个眩晕状态，受害者的头上显示的计时条也是时长较长的那一个。也就是<strong>会取时长最长（效果最强）的那一个</strong>进行显示。</p>
+
+<p>从结果来看貌似很合理？细致分析一下：</p>
+
+<p>首先眩晕的<strong>负面效果是无法升级叠加的</strong>——无法执行动作就无法执行动作了，还能咋办。需要考虑的是持续的时长，那么，对于时长有三种处理方式：</p>
+
+<p>1、叠加，取两者之和，
+2、后覆盖前，取最后添加的，
+3、并存，独立计时。</p>
+
+<p>考虑到<strong>Dota2是一个团队游戏</strong>，对于叠加的逻辑，粗看是符合多人合作的，众人拾柴火焰高嘛，大家一起控就完事了；对于后覆盖前，考虑到有时候会将技能用来打伤害，万一这个技能带有小眩晕效果，可能会提前结束之前较长的眩晕时长的控制，反而坏了事，这个场合是有很多弊端、会带来不可控的体验的；对于并存独立计时，这会导致一定程度上时长的浪费，但是却把浪费多少的选择给到了操作者，将<strong>收益直接绑定到了玩家的操作</strong>，让玩家卷无止境，比简单的叠加更具有操作导向。</p>
+
+<blockquote>
+  <p>引申话题：阅读了Dota2 WIKI中<a href="https://liquipedia.net/dota2game/Stun">眩晕的相关文章</a>，事实上：</p>
+
+  <p>其一：游戏中的眩晕有三类，1类和3类符合传统眩晕的概念，两者区别是，1类添加的通用的眩晕标示，而3类一般是自定义的名字，但是带有眩晕的效果，这点可以打开战斗日志，留意对应的描述。而2类则是<a href="https://liquipedia.net/dota2game/Bash">重击类</a>，简单理解而言，重击类是普通攻击可能附带眩晕，由于普通攻击的高频性（甚至有一件道具可以赋予概率眩晕），又有着相当多的细节，这里不再展开。</p>
+
+  <p>如图，大鱼人被动晕属于重击，可以与大晕锤的主动重击眩晕叠加。
+<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/7-480.webp 480w, /assets/generated/img/gameplay/dota2/7-760.webp 760w, /assets/generated/img/gameplay/dota2/7-1140.webp 1140w, /assets/generated/img/gameplay/dota2/7-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/7.png" alt="" width="1920" height="760" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+  <p>其二：Dota2中，有时一些不可撤销不可以行动的技能前摇或发生过程，也会给自己施加对应的状态，比如虚空假面的跳、猴子的跳下、海民的雪球，这些技能都是有一个过程的，过程中“相当于自己在眩晕”。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="提前结束状态驱散"><span class="heading-counter">2.3.</span><span class="heading-label">提前结束状态：驱散</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.4.gif" alt=""></p>
+
+<p>如上图所示，亚巴顿的无光之盾技能驱散了兽王的吼的眩晕。</p>
+
+<p>作为一个讲究对抗的竞技游戏，Dota2遵循着互相克制的设计思路，对于眩晕而言，被眩晕的玩家虽然无法行动，但是队友可以使用带有驱散效果的技能或物品（当然有些英雄也有着被动会触发驱散），对眩晕效果进行驱散。</p>
+
+<p>Dota2的驱散分为两种，强驱散和弱驱散（当然有些效果比如光环类是无法驱散的），一般都在技能中有相关描述。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/5-480.webp 480w, /assets/generated/img/gameplay/dota2/5-760.webp 760w, /assets/generated/img/gameplay/dota2/5-1140.webp 1140w, /assets/generated/img/gameplay/dota2/5-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/5.png" alt="" width="2161" height="770" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<blockquote>
+  <p>引申话题</p>
+
+  <p>其一，驱散：作为结束手动结束状态机制的方法，有着相当多的细节，从作用上，可以分强弱驱散，从来源上，可以分为技能或者道具；从作用目标上，可以分为自身，敌人，队友。具体可以<a href="https://liquipedia.net/dota2game/Dispel">阅读参考</a>。</p>
+
+  <p>其二，光环的生效与消失：测试是生效延迟一帧(0.033秒)，而消失是延迟0.5秒。
+<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/8-480.webp 480w, /assets/generated/img/gameplay/dota2/8-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/8.png" alt="" width="1017" height="432" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="加速状态的流逝状态抗性"><span class="heading-counter">2.4.</span><span class="heading-label">加速状态的流逝：状态抗性</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>除了提前结束，玩家也可以通过状态抗性来减少大部分负面效果的持续时间。</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.5.gif" alt=""></p>
+
+<p>留意上图熊战士使用激怒获得状态抗性后，被眩晕的时间大幅减少了。</p>
+
+<p>面对敌方控制不足的阵容，状态抗性可以降低对方的控制时间，进一步降低对方控制链打出的伤害总值，变相增加了生存能力，起到奇效。</p>
+
+<blockquote>
+  <p>引申话题：</p>
+
+  <p>最近的7.36版本更新中，状态抗性被从散华等物品中移除，转而替代为只针对减速的减速抗性。这可能是因为上个版本肉核太过吃香，状态抗性一定程度上为肉核的生存提供了便利。削弱状态抗性也能一定程度上削弱肉核。</p>
+
+  <p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/6-480.webp 480w, /assets/generated/img/gameplay/dota2/6-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/6.png" alt="" width="1028" height="714" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="更多的状态效果"><span class="heading-counter">3.</span><span class="heading-label">更多的状态效果</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-4-480.webp 480w, /assets/generated/img/gameplay/dota2/X-4-760.webp 760w, /assets/generated/img/gameplay/dota2/X-4-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-4-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-4.png" alt="" width="1820" height="384" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="从归类开始"><span class="heading-counter">3.1.</span><span class="heading-label">从归类开始</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>本文一开始试图整理的<a href="https://liquipedia.net/dota2game/Mechanics#Status_effects">25种状态效果</a>出自Dota2 Wiki的机制页面，一开始准备逐条进行介绍，但是又感觉很枯燥，缺乏一个指导性的思路（事实上本文的编写在本节卡了很久）。</p>
+
+<p>这个困境直到有一天，在对这些状态效果进行反复划分和归类时，得到了解决，最终得到了右边所示的、一个相对优雅的划分和思路，后文将沿着这个思路逐渐展开。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/11-480.webp 480w, /assets/generated/img/gameplay/dota2/11-760.webp 760w, /assets/generated/img/gameplay/dota2/11-1140.webp 1140w, /assets/generated/img/gameplay/dota2/11-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/11.png" alt="" width="2756" height="851" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<blockquote>
+
+  <p>有意思的是，事后才发现，Wiki中也有个类似的划分，早点发现也许就不用思考这么久了。</p>
+
+  <p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/12-480.webp 480w, /assets/generated/img/gameplay/dota2/12-760.webp 760w, /assets/generated/img/gameplay/dota2/12-1140.webp 1140w, /assets/generated/img/gameplay/dota2/12-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/12.png" alt="" width="1588" height="150" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="状态效果的根基"><span class="heading-counter">3.2.</span><span class="heading-label">状态效果的根基</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>一切的起点是，这个游戏给了玩家的是什么？这里以“玩家动态操作，与角色静态属性”，两个维度进行一个划分：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/13-480.webp 480w, /assets/generated/img/gameplay/dota2/13-760.webp 760w, /assets/generated/img/gameplay/dota2/13-1140.webp 1140w, /assets/generated/img/gameplay/dota2/13-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/13.png" alt="" width="1745" height="198" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>在Dota2中，玩家的操作大类别上可以分为下达移动指令、使用普通攻击、使用技能，和使用物品；对于角色静态属性来说，攻防血蓝，移速等等这些也都是有的。</p>
+
+<p>从本质上来说，Dota2的异常状态，就是以这些项目为基础，施加以不同的效果。</p>
+
+<p>以前面我们知道的强力控制——眩晕为例：眩晕限制了所有的玩家操作输入（无法下达移动、技能、攻击、使用物品的指令），但是并未对角色基础属性造成影响。</p>
+
+<blockquote>
+  <p>虽然本质和思路非常简单，但是实际执行时，也会面对前面提到的“机制的若干困难和问题”，也将反应出设计师想象力与设计能力的差别。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="单维度效果类"><span class="heading-counter">3.3.</span><span class="heading-label">单维度效果类</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>先看一些简单的，单维度改变的效果：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/14-480.webp 480w, /assets/generated/img/gameplay/dota2/14-760.webp 760w, /assets/generated/img/gameplay/dota2/14-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/14.png" alt="" width="1240" height="341" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="移动指令"><span class="heading-counter">3.3.1.</span><span class="heading-label">移动指令</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<blockquote>
+  <ul>
+    <li>✨缠绕：缠绕状态会使英雄无法移动，但可以攻击和使用技能。例如，孽主的圈，大树的捆，小仙女的花，道具缚灵锁的捆……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.1.1.gif" alt=""></p>
+
+<p>如图，大树的大招，捆住敌人。意象上，大叔让植物高速生长，一定范围内的敌人都被树丛藤蔓所捆绑，还是很形象的。</p>
+
+<blockquote>
+  <p>引申话题：</p>
+
+  <p>其一，禁止位移：缠绕过程中，位移性质的道具、技能会被禁用，如跳刀和闪烁类技能（但是推推棒是可以用的）。</p>
+
+  <p>其二，真实视野：部分技能在缠绕中会附带对方的真实视野（过程中隐身也是被看到的），有意思的是如果本来就在隐身，虽然会被缠绕，但是是看不到的。</p>
+
+  <p>其三，缴械，部分技能在缠绕中是附带缴械效果的（很快就会介绍缴械），其实也属于后文的复合效果。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="技能"><span class="heading-counter">3.3.2.</span><span class="heading-label">技能</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<blockquote>
+  <ul>
+    <li>✨沉默：沉默状态下禁止使用技能（也会打断持续施法的技能），例如沉默大招，帕克的粉，紫苑……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.2.1.gif" alt=""></p>
+
+<p>沉默相当克制一些法师技能哥，直接让其退化成超级兵。（如果你想问法师哥被沉默了怎么办？可参考前文的驱散）</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="普通攻击"><span class="heading-counter">3.3.3.</span><span class="heading-label">普通攻击</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<blockquote>
+  <ul>
+    <li>✨缴械：缴械状态下无法进行普通攻击，比如道具天堂，卡尔推波，哈斯卡心炎……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.3.1.gif" alt=""></p>
+
+<p>缴械相当克制一些平A哥，直接让其呆住。（如果你想问被缴械了怎么办？缴械一般还不能驱散，建议是活到缴械结束）</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="物品"><span class="heading-counter">3.3.4.</span><span class="heading-label">物品</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<blockquote>
+  <ul>
+    <li>✨锁闭：锁闭状态会使英雄无法使用物品。例如，Doom的末日，萨尔的大招……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.4.1.gif" alt=""></p>
+
+<p>锁闭事实上是个相当稀缺的高贵属性（从上图锁闭是25级质变级天赋就可以看出来），在后期大家道具起来以后，被锁闭相当致命。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="被动技能"><span class="heading-counter">3.3.5.</span><span class="heading-label">被动技能</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<blockquote>
+  <ul>
+    <li>✨破坏：破坏会使被动技能无效，例如大影刀，毒龙大，PA魔晶……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.5.1.gif" alt=""></p>
+
+<p>破坏相当克制一些被动哥，很多被动能使得角色承伤能力增加，直接一个效果破坏，让肉盾变成正常人。</p>
+
+<blockquote>
+  <p>引申话题：</p>
+
+  <p>其一，新手教学：游戏内部的术语说明中，也有介绍这基础的5种状态（还有十分常见的眩晕和恐惧）。
+<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/17-480.webp 480w, /assets/generated/img/gameplay/dota2/17-760.webp 760w, /assets/generated/img/gameplay/dota2/17-1140.webp 1140w, /assets/generated/img/gameplay/dota2/17-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/17.png" alt="" width="1538" height="1164" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+  <p>其二，状态叠加时：时长大概是显示最久的？一些效果表现是叠加显示的。
+<img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.5.2.gif" alt="1"></p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="复合效果类"><span class="heading-counter">3.4.</span><span class="heading-label">复合效果类</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>接下来我们看一些影响多维度的叠加状态。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/15-480.webp 480w, /assets/generated/img/gameplay/dota2/15-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/15.png" alt="" width="1006" height="1083" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="常规复合"><span class="heading-counter">3.4.1.</span><span class="heading-label">常规复合</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<blockquote>
+  <ul>
+    <li>✨眩晕： 眩晕状态会打断所有动作，效果期间无法移动或者执行任何动作。例如，人马的踩，龙骑的duang，骷髅王的锤子……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.1.gif" alt=""></p>
+
+<p>再次看到眩晕，我们会发现，眩晕实际上就是同时禁止了所有玩家主动操作类的的行为。</p>
+
+<blockquote>
+  <ul>
+    <li>✨吹风：吹风状态会使英雄被吹起，无法移动、攻击或使用技能。例如，卡尔的吹风，酒仙风熊猫的吹风，风杖的吹风</li>
+  </ul>
+</blockquote>
+
+<p>吹风和下面的妖术应该是DOTA2最具想象力的两个状态属性了，吹风和眩晕最大区别是，吹风由于在空中，很多攻击无法造成伤害。同时吹风一般会附带弱驱散。</p>
+
+<p>由于这两点特性，风杖也可以作为保命的拉扯装备。（后续V社还设计了大风帐吹起时可以移动，甚至可以对队友使用，吹风的吹起无敌能覆盖之前的控制状态的危险期，成为究极保命装。）</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.2.1.gif" alt="2"></p>
+
+<blockquote>
+  <ul>
+    <li>✨睡眠：睡眠状态会使英雄无法进行任何操作，但受到伤害会将睡眠状态转移。例如祸乱之源的噩梦。</li>
+  </ul>
+</blockquote>
+
+<p>事实上，睡眠是个相当罕见的状态，目前游戏里面应该只有祸乱之源和大牛有，大牛的睡眠还不会被转移（更像眩晕了）。</p>
+
+<p>总感觉之前某个版本娜迦的大招也是睡眠，同时附加无敌，但是刚测了下也改成眩晕了。</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.3.1.gif" alt="2"></p>
+
+<blockquote>
+  <ul>
+    <li>✨隐藏/驱逐：隐藏/驱逐状态会使英雄消失，无法被攻击或使用技能。例如，黑鸟和毒狗的关。</li>
+  </ul>
+</blockquote>
+
+<p>简单理解而言，就是个带无敌的眩晕。只有极少数技能能影响到隐藏的目标，比如毒狗的飘毒。</p>
+
+<p>有意思的，很多技能、效果的无敌阶段都可以理解为隐藏，比如海民的雪球，产生幻像前的短暂消失等。</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.4.1.gif" alt="2"></p>
+
+<blockquote>
+  <ul>
+    <li>✨妖术：状态会使英雄变成无害的小动物、无法攻击或使用技能和道具。例如，小Y的变羊，莱恩的变羊，还有最著名的羊刀。</li>
+  </ul>
+</blockquote>
+
+<p>DOTA2最具想象力的状态效果其二，妖术，“功夫再高，也怕羊刀”中的羊刀，施加的效果就是妖术（羊刀的强力，主要是作为道具释放，0抬手，释放范围也不错，后期强先手秒人）。</p>
+
+<p>简单理解而言，妖术给“眩晕”怜悯地增加了“可以缓慢移动”，虽然是可以动，但是移动速度很低，看着自己的小动物努力在跑，但有时也跑不了，这就是妖术带来的独特体验。</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.5.1.gif" alt="2"></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="强制行为"><span class="heading-counter">3.4.2.</span><span class="heading-label">强制行为</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>除了上述控制，接下来的这几个状态属性除了传统的禁止，还会强制玩家执行行为（比如执行移动和执行攻击）</p>
+
+<blockquote>
+  <ul>
+    <li>✨嘲讽：嘲讽状态会使英雄被迫攻击某个目标。例如，斧王的吼可以嘲讽周围的敌方英雄，哈斯卡的A杖心炎。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/3.1.1.gif" alt="2"></p>
+
+<p>嘲讽也是非常经典的设计了，以斧王为例，使用道具跳刀切入吼嘲讽敌人，使用刃甲来使敌人攻击自己时受到反伤，再配合被动被攻击时自动反击，和大招低血量斩杀，非常自成体系的设计。</p>
+
+<blockquote>
+  <ul>
+    <li>✨恐惧：恐惧状态会使英雄被迫向某个方向移动（通常是基地），无法进行其他操作。例如，小仙女的大招的恐惧，影魔的大招，奶绿的子弹。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/3.2.1.gif" alt="2"></p>
+
+<p>恐惧利用的就是常规移动了，以小仙女为例，恐惧时候敌人更易踩到花中缠绕、奶绿更容易被中魂魄沉默、影魔大除了伤害，还为为压炮提供了宝贵的控制。</p>
+
+<blockquote>
+  <ul>
+    <li>✨强制移动：比如蝙蝠的拉、屠夫的勾。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/3.3.1.gif" alt="2"></p>
+
+<p>强制移动则是更为广泛的强制对方进行移动，通常会搭配其他状态属性使用，比如屠夫的钩，一度被称为Dota2中正反馈最强的技能（细节上，勾命中会有短暂眩晕），如图所示是巫妖的吸（吸的移动甚至还可以无视地形，又是定制逻辑）。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="总结禁止类控制技能"><span class="heading-counter">3.4.3.</span><span class="heading-label">总结——禁止类控制技能</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>Dota2 Wiki中有个单独的页面介绍了不同控制状态的区别，这里简单翻译整理如下。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/16-480.webp 480w, /assets/generated/img/gameplay/dota2/16-760.webp 760w, /assets/generated/img/gameplay/dota2/16-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/16.png" alt="" width="1419" height="1100" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>单维度里面的就是前面提到的简单状态属性，数值类下文会进行介绍，复合类就是刚刚介绍的一些多重控制叠加的状态属性。</p>
+
+<p>这个表事实上更多偏向于规则层面，就实际设计而言，这些规则能否有一个好的抽象，配合技能的样式，达到既独特又有趣，就是设计的要点。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="基础属性类"><span class="heading-counter">3.5.</span><span class="heading-label">基础属性类</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="移动速度"><span class="heading-counter">3.5.1.</span><span class="heading-label">移动速度</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<blockquote>
+  <ul>
+    <li>✨减速：减速状态会降低英雄的移动速度。例如，冰女的nova可以降低50%的移速。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/4.1.1.gif" alt="2"></p>
+
+<p>降移速就是典型软控，在追击和阻止对方进攻时候都可以派上用场，事实上游戏中还有转身速度等更细致的减速。</p>
+
+<blockquote>
+  <ul>
+    <li>✨陷阱：陷阱状态会使英雄的移动受到路径阻挡者的限制，但仍可执行操作。英雄移动时会尽可能尝试绕过它们。例如，发条的框，先知的框，牛头的板（没有封死），海民的冰片等……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/4.3.1.gif" alt="2"></p>
+
+<p>陷阱听起来更像是造出了一些带阻挡的物体，挡住了玩家移动，不同的是有时阻挡是完全把玩家封死的，甚至有时候玩家靠近阻挡还可能触发被推开或眩晕等效果。</p>
+
+<blockquote>
+  <ul>
+    <li>✨束缚：束缚状态会使英雄无法在有限范围外移动（部分是软性的或者逐渐生效的），但仍可执行操作（除了位移性质的道具）。例如，小鱼人的跳，帕克的缠绕，墨客的连……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/4.2.1.gif" alt="2"></p>
+
+<p>束缚是一种更弱的的移动限制，一般是玩家移动到边界时候速度会被降为0（小鱼人的跳使得目标虽然可以移动，但是空间不大、墨客的连使得两个人无法分开太远），或者触发眩晕等其他效果（上图帕克的大）。</p>
+
+<blockquote>
+  <ul>
+    <li>✨屏障：靠近区域边缘就会将速度降低为0，例如干扰者的圈，马尔斯的大等……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/4.4.1.gif" alt="2"></p>
+
+<p>屏障和束缚类似，一般会有一个具象化的范围（比如墙），同样也是承担卡住玩家的责任。</p>
+
+<p>感觉上，陷阱（阻挡）、束缚（一定范围内可移动）、屏障（被墙挡住）目的上是比较类似的，有些效果可能同时符合多个特征，本质上是对移动限制的不同方式。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="移动速度极端化"><span class="heading-counter">3.5.2.</span><span class="heading-label">移动速度（极端化）</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>对于数值向属性，还有一个思路是极端化，比如如果我们将移动极端化，就可以得到闪现。</p>
+
+<blockquote>
+  <ul>
+    <li>✨传送/闪烁：立刻移动到目标位置，例如跳刀，女王、敌法、PA的跳……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.1.1.gif" alt="5"></p>
+
+<p>留意闪烁的抬手，和前文提到的先转向再抬手，这个时间就可以被对方使用技能控住。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="攻击"><span class="heading-counter">3.5.3.</span><span class="heading-label">攻击</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>攻击属性也相当复杂（比如攻击速度、弹道、格挡等等），这里介绍攻击直接落空的Miss，致盲。</p>
+
+<blockquote>
+  <ul>
+    <li>✨致盲：使攻击概率落空，例如光法的弹、TK的激光，力丸的雾</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.2.1.gif" alt="5"></p>
+
+<p>Miss事实上是一个相当数值向的属性，主要就靠抽象来给玩家提供代入感了，比如例子中的被激光刺瞎了眼（</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="基础属性"><span class="heading-counter">3.5.4.</span><span class="heading-label">基础属性</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<blockquote>
+  <ul>
+    <li>✨隐形：使英雄无法通过正常视野看到，必须通过真实视野看到。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.3.1.gif" alt="5"></p>
+
+<p>隐身和真实视野是Dota2的相当底层的机制，上图演示了使用真眼来看到隐身的地方的效果。</p>
+
+<blockquote>
+  <p>引申话题</p>
+
+  <p>无法被真眼看到的隐身！诡计之雾：正常来说真实视野就可以看到隐身状态了，但是却有这样一个消耗道具，即便暴露在真实事业下也不会显形，那就是诡计之雾——这也是Dota2中相当基础的设计，通过诡计之雾的显形距离，可以控制敌我双方的交战距离，此外，开雾也为劣势方反击抓人提供了可能，提高了Dota2的团战的观赏性。</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>✨相位：使英雄可以穿过其他单位，忽略碰撞体。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.4.1.gif" alt="5"></p>
+
+<p>上图演示了使用相位穿过了小Y的大招。（小Y：凭什么我的大招一件1500的装备就给破解了）</p>
+
+<p>现在幽鬼的天生技能就自带相位，鬼没有阻挡也很合理吧！然后幽鬼就没法卡兵了（</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="无敌"><span class="heading-counter">3.5.5.</span><span class="heading-label">无敌</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<blockquote>
+  <ul>
+    <li>✨无敌：无敌状态会使英雄无法被攻击和使用技能，但可以移动。例如，主宰的无敌斩过程中就是无敌状态。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.5.1.gif" alt="5"></p>
+
+<p>留意剑圣结束无敌状态落地后，可以开出跳刀。(正常由于NEC的光环和辉耀造成的伤害，跳刀会进入CD)</p>
+
+<p>一个有趣的现象是，NEC的光环和辉耀都是每秒伤害，GIF中是刚好15帧，严丝合缝。（一个玩家侧的案例是，职业选手可以通过切臂章规避整秒的tick伤害。）</p>
+
+<blockquote>
+  <ul>
+    <li>✨技能免疫：技能免疫状态会使英雄免疫所有技能效果。例如，BKB和小狗的魔免。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.7.1.gif" alt="5"></p>
+
+<p>其实现在叫做减益免疫了，好像具体的调整有：1、状态持续时长如果大于减益免疫，还是会生效的，典型案例比如船长的X。2、不再是100%免疫魔法伤害了，好像是50%还是40%，也就是说伤害够高还是可以顶着你大的。</p>
+
+<p>魔免也是DOTA2相当底层的设计，简单来说，BKB提供了物理平A哥宝贵的输出环境（免大部分控），开启后会让平A哥和甩技能哥的克制关系直接两级反转，同时BKB持续时间有限，而且有长CD，而且每次开启时间会变短！简直是潘多拉的魔盒但是又得用。</p>
+
+<p>BKB这种通过免疫状态直接对整个游戏玩法产生影响，相当有想象力。</p>
+
+<blockquote>
+  <ul>
+    <li>✨攻击免疫：攻击免疫状态会使英雄免疫所有物理攻击。例如，全能骑士的守护天使可以免疫物理伤害。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.6.1.gif" alt="5"></p>
+
+<p>物理免疫游戏里面投放的就克制得多了，全能大算一个，更多是通过护甲、伤害格挡、护盾，来造成物理减伤。</p>
+
+<blockquote>
+  <ul>
+    <li>✨虚灵：虚灵状态会使英雄免疫所有物理攻击（但是自己也不能攻击），但会受到额外的魔法伤害。例如，帕格纳的衰老可以使目标进入虚灵状态。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.8.1.gif" alt="5"></p>
+
+<p>虚灵又是一个堪称传奇的设计，物理免疫，但是自身也无法进行物理攻击，同时增加受到的魔法伤害，一方面是自己的代价，一方面还可以转为主动进攻的道具，让敌人受到魔法攻击伤害更多。</p>
+
+<p>同时虚灵的抽象也很合理，虚化的魂灵，只能说是仅次于BKB的天才数值类机制设计。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="简要总结"><span class="heading-counter">4.</span><span class="heading-label">简要总结</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-5-480.webp 480w, /assets/generated/img/gameplay/dota2/X-5-760.webp 760w, /assets/generated/img/gameplay/dota2/X-5-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-5-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-5.png" alt="" width="1555" height="257" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>简要总结一下：</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="设计方法论要素-x-方式"><span class="heading-counter">4.1.</span><span class="heading-label">设计方法论：要素 X 方式</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>简单来说就是明确游戏提供给玩家的要素，不仅仅有静态属性，还有动态输入也能作为要素！</p>
+
+<p>再就是设计这些要素的变化方式，过程中注意整体的抽象方式，最好能有一个好的意象，能利于玩家的理解和增加代入感。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="对抗与涌现的乐趣"><span class="heading-counter">4.2.</span><span class="heading-label">对抗与涌现的乐趣</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>现在很多设计都强调涌现，因为单纯的设计机制很快就被玩家消耗，会希望机制之间能互相作用，既能给玩家带来海量可能性，还能给玩家带来意外之喜。</p>
+
+<p>就状态机制而言，需要设计通用的状态规则（比如叠加、驱散等），再设计彼此的优先级（比如后覆盖前，或者依照强者），作为一个PVP游戏，注意给对抗留有余地（可以通过操作、数值等多重方式进行反制。）</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="附录dota2的美学实现速览"><span class="heading-counter">5.</span><span class="heading-label">附录：DOTA2的美学实现速览</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>一方面DOTA2得益于引擎对粒子系统的高效实现，有着相当精美的画面表现；另一方面，游戏中丰富的内容设计，也给玩家提供了海量审美体验；最后，游戏基于时间的规则设计，也为提供了良好的对抗性。</p>
+
+<p>夸夸环节结束，这里也简单聊一下游戏美学设计与实现的一些倾向性：</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="少就是多的动画"><span class="heading-counter">5.1.</span><span class="heading-label">少就是多的动画</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/10-480.webp 480w, /assets/generated/img/gameplay/dota2/10-760.webp 760w, /assets/generated/img/gameplay/dota2/10-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/10.png" alt="" width="1342" height="1239" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>游戏中英雄的基础动画数并不多，以至宝冰女的动画为例，仅有5个定制动作与6个基础动作合计11个动画。（注意，上文可是提到了25种以上的状态机制，尤其是控制机制是会需要动画表现的！这个问题如何解决？）</p>
+
+<p>大体的倾向是这样的，提供通用的攻击和施法动作，同时可能不止一个，尤其是攻击，近战角色普遍是3种以上的攻击以特定随机模型进行随机，满足定制&amp;重复的需求。</p>
+
+<p>对于基础动作，一般有两套idle和两套奔跑，idle应该是有个个性演出的idle2，提供差异性，奔跑则是有个残血版本（多少人第一次观察到残血时角色会佝偻对细节发出了惊叹），同时有一个通用的眩晕和摇晃动作，特殊的机制需求就从这俩动作和前面的基础动作中实现。（比如吹风、睡眠都是用的摇晃动作）</p>
+
+<p>低体量，机制化的实现方式也为至宝能替换角色动画提供了可能，想想女王至宝把角色从远程角色的投掷飞镖动作替换为了近战使用鞭子！（这种替换角色动画甚至，还，影响到了逻辑，比如著名的龙骑士喷火的位点发生了改变于是变相削弱了角色，付费削弱.jpeg）</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="出现即巅峰的特效"><span class="heading-counter">5.2.</span><span class="heading-label">出现即巅峰的特效</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/9-480.webp 480w, /assets/generated/img/gameplay/dota2/9-760.webp 760w, /assets/generated/img/gameplay/dota2/9-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/9.png" alt="" width="1211" height="1160" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>Dota2是一个强竞技性游戏，留意道具的使用是没有抬手的，那么请问附加的特效表现是如何实现的？</p>
+
+<p>答案是出现即巅峰！只能看到巅峰和衰减的过程，出现？依靠人类的大脑进行脑补吧。</p>
+
+<p>特效还有一个特点是海量定制，很多相同状态效果的技能都有不同且细致的效果表现，只能说，羡慕羡慕。</p>
+
+<p>（全文完）</p>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-07-27 - jskyzero - 📝 fix 措辞
+2024-07-27 - jskyzero - 📝 fix 错别字
+2024-07-19 - jskyzero - 📝 add 提醒
+2024-07-19 - jskyzero - 📝 update structure
+2024-07-19 - jskyzero - 📝 fix 错别字
+2024-07-17 - jskyzero - 📝 update img url
+2024-07-16 - jskyzero - 📝 update toc
+2024-07-16 - jskyzero - 📝 finish dota2
+2024-07-16 - jskyzero - 📝 update 复合状态
+2024-07-15 - jskyzero - 📝 update dota2
+2024-07-15 - jskyzero - 📝 add new img
+2024-07-11 - jskyzero - 📝 almost finish 2
+2024-07-10 - jskyzero - 📝 almost finish
+2024-07-09 - jskyzero - 📝 begin final part
+2024-07-09 - jskyzero - 📝 update dota2
+2024-07-08 - jskyzero - 📝 fix 错别字 &amp; add dota2 美学
+2024-07-08 - jskyzero - 📝 update 眩晕 agagin
+2024-07-05 - jskyzero - 📝 update dota2
+2024-07-02 - jskyzero - 📝 almost finish dota2
+2024-07-01 - jskyzero - 📝 add xmind
+...
+
+<em>（本文编写于2024年7月，最后修改于2024年7月，共修改30次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2024/01/26/dota2/';
+this.page.identifier = 'https://design.jskyzero.com/2024/01/26/dota2/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#机制设计以dota2中的25种状态效果为例">机制设计——以Dota2中的25种状态效果为例</a><ul><li><a href="#前言机制设计与dota2">前言：机制设计与DOTA2</a><ul><li><a href="#mda理论与机制设计">MDA理论与机制设计</a></li><li><a href="#困难的机制设计">困难的机制设计</a></li><li><a href="#dota2与机制的关系">Dota2与机制的关系</a><ul><li><a href="#为什么是dota2">为什么是Dota2</a></li><li><a href="#为什么讨论状态机制">为什么讨论状态机制</a></li></ul></li></ul></li><li><a href="#从眩晕状态开始">从“眩晕”状态开始</a><ul><li><a href="#状态的基础效果">状态的基础效果</a><ul><li><a href="#眩晕-无法移动和执行任何动作">眩晕-无法移动和执行任何动作</a></li><li><a href="#眩晕-打断当前动作">眩晕-打断当前动作</a></li></ul></li><li><a href="#状态之间叠加">状态之间叠加</a><ul><li><a href="#眩晕-重复叠加时取效果最强">眩晕-重复叠加时（取效果最强）</a></li></ul></li><li><a href="#提前结束状态驱散">提前结束状态：驱散</a></li><li><a href="#加速状态的流逝状态抗性">加速状态的流逝：状态抗性</a></li></ul></li><li><a href="#更多的状态效果">更多的状态效果</a><ul><li><a href="#从归类开始">从归类开始</a></li><li><a href="#状态效果的根基">状态效果的根基</a></li><li><a href="#单维度效果类">单维度效果类</a><ul><li><a href="#移动指令">移动指令</a></li><li><a href="#技能">技能</a></li><li><a href="#普通攻击">普通攻击</a></li><li><a href="#物品">物品</a></li><li><a href="#被动技能">被动技能</a></li></ul></li><li><a href="#复合效果类">复合效果类</a><ul><li><a href="#常规复合">常规复合</a></li><li><a href="#强制行为">强制行为</a></li><li><a href="#总结禁止类控制技能">总结——禁止类控制技能</a></li></ul></li><li><a href="#基础属性类">基础属性类</a><ul><li><a href="#移动速度">移动速度</a></li><li><a href="#移动速度极端化">移动速度（极端化）</a></li><li><a href="#攻击">攻击</a></li><li><a href="#基础属性">基础属性</a></li><li><a href="#无敌">无敌</a></li></ul></li></ul></li><li><a href="#简要总结">简要总结</a><ul><li><a href="#设计方法论要素-x-方式">设计方法论：要素 X 方式</a></li><li><a href="#对抗与涌现的乐趣">对抗与涌现的乐趣</a></li></ul></li><li><a href="#附录dota2的美学实现速览">附录：DOTA2的美学实现速览</a><ul><li><a href="#少就是多的动画">少就是多的动画</a></li><li><a href="#出现即巅峰的特效">出现即巅峰的特效</a></li></ul></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

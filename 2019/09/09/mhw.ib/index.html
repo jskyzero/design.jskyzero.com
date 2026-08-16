@@ -1,0 +1,438 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACT-共斗-怪猎冰原 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="ACT-共斗-怪猎冰原">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="通關了冰原又刷了一陣（200小时），來稍微總結一下…">
+<meta property="og:description" content="通關了冰原又刷了一陣（200小时），來稍微總結一下…">
+<link rel="canonical" href="https://design.jskyzero.com/2019/09/09/mhw.ib/">
+<meta property="og:url" content="https://design.jskyzero.com/2019/09/09/mhw.ib/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-09-09T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="ACT-共斗-怪猎冰原">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2019-09-09T00:00:00+00:00","datePublished":"2019-09-09T00:00:00+00:00","description":"通關了冰原又刷了一陣（200小时），來稍微總結一下…","headline":"ACT-共斗-怪猎冰原","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2019/09/09/mhw.ib/"},"url":"https://design.jskyzero.com/2019/09/09/mhw.ib/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>通關了冰原又刷了一陣（200小时），來稍微總結一下…</p>
+
+<!--more-->
+
+<h1 id="怪物獵人世界冰原--monster-hunter-world-iceborne"><span class="heading-label">怪物獵人世界：冰原 / Monster Hunter World: Iceborne</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/游戏体验-blue.svg?style=flat" alt="游戏体验"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2019/09/09-brightgreen.svg?style=flat" alt="日期 2019/09/09"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#怪物獵人世界冰原--monster-hunter-world-iceborne">怪物獵人世界：冰原 / Monster Hunter World: Iceborne</a><ul><li><a href="#簡介">簡介</a></li><li><a href="#主綫流程">主綫流程</a></li><li><a href="#值得一提的事情">值得一提的事情</a></li><li><a href="#寫在一開始">寫在一開始</a><ul><li><a href="#關於通用格式">關於通用格式</a></li><li><a href="#關於體驗耗時">關於體驗耗時</a></li></ul></li><li><a href="#一些截圖參考">一些截圖參考</a></li></ul></li></ul></nav></div>
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="簡介"><span class="heading-counter">1.</span><span class="heading-label">簡介</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>是怪獵世界的超大型DLC，依舊很棒，继承扩充了原来的核心体验，新的怪物新的刷刷刷，超棒。</p>
+
+<p>我是5號的時候店家就偷跑了，6號凌晨就已經錘到冰咒龍，6號晚上卡了冰咒龍，7號中午就給錘通關了，後面由陸陸續續（其實是每天都在玩X）把聚魔之地的隱藏怪也給錘了。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="主綫流程"><span class="heading-counter">2.</span><span class="heading-label">主綫流程</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>冰原新手期
+    <ul>
+      <li>冰魚龍，亞種，雪地類比泥潭，還可。</li>
+      <li>猛牛龍，有點點像泥沙龍，還可。</li>
+    </ul>
+  </li>
+  <li>冰原平臺期
+    <ul>
+      <li>痹毒龍，亞種，加了麻痹 + 毒屬性。</li>
+      <li>眠浮龍，亞種，加了睡眠。</li>
+      <li>水妖鳥，亞洲，加了水。</li>
+      <li>冰牙龍，用飛翔爪會比較合適打。</li>
+    </ul>
+  </li>
+  <li>冰原平臺期-冰咒龍-起
+    <ul>
+      <li>迅龍，舊怪物，黑色快速。</li>
+      <li>斬龍，舊怪物，斬尾，火炎。</li>
+      <li>轟龍，舊怪物，龍車。</li>
+      <li>碎龍，舊怪物，頭槌爆炸。</li>
+    </ul>
+  </li>
+  <li>冰原平臺期-冰咒龍-承
+    <ul>
+      <li>霜翼風飄龍，亞中，加冰。</li>
+      <li>雷顎龍，亞種，强化雷。</li>
+      <li>硫斬龍，亞種，感覺强度不如原版。</li>
+      <li>兇爪龍，亞種，加了龍屬性？</li>
+      <li>冰咒龍，古龍，卡關，多人會好打很多。</li>
+    </ul>
+  </li>
+  <li>冰原平臺期-冰咒龍-轉
+    <ul>
+      <li>紅蓮爆鱗龍，亞種，强化爆炸。</li>
+      <li>怒食恐暴龍，亞種，依舊的惡心絲瓜。</li>
+      <li>霧瘴尸套龍，古龍亞種，該錘一樣的錘。</li>
+      <li>溟波龍，古龍，使用水+電，初見眼前一亮。</li>
+    </ul>
+  </li>
+  <li>冰原平臺期-冰咒龍-結
+    <ul>
+      <li>殲世滅燼龍，古龍亞種，該錘一樣的錘。</li>
+      <li>天地煌啼龍，古龍，偉大存在，對標冥燈龍，還可。</li>
+    </ul>
+  </li>
+  <li>聚魔之地
+    <ul>
+      <li>雷狼龍，帥就一個字。</li>
+      <li>黑狼鳥，該錘一樣的錘。</li>
+      <li>金火龍，特化毒屬性。</li>
+      <li>銀火龍，特化火屬性。</li>
+      <li>片耳黑狼鳥，特化噴射。</li>
+      <li>黑轟龍，特化吼叫。</li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="值得一提的事情"><span class="heading-counter">3.</span><span class="heading-label">值得一提的事情</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>關於如何做DLC</li>
+</ul>
+
+<p>翻舊怪+亞種，好，學到了。</p>
+
+<p>其實只擴展了一張新地圖 + 一張雜燴大秘境地圖，新怪物，數數只有3古龍+6常規+2隱藏，略微微有點少（不滿足，還想要。</p>
+
+<ul>
+  <li>關於飛翔爪</li>
+</ul>
+
+<p>莽就對了，有特殊衣裝的時候就飛翔爪莽上去！（你</p>
+
+<p>因爲不同武器的姿態和傷害也不太一樣，所以還是要斟酌斟酌。</p>
+
+<p>（因為之前沒有去專門做自由任務所以理解偏差很大）</p>
+
+<p>認真分析起來，飛翔爪最直觀的是可以造成傷害，某些武器比如大錘是可以加入連段的。其次是可以軟化肉質，提供輸出加成。最後是可以配合全彈發射，在怪物非發怒狀態讓其倒地。</p>
+
+<p>飛翔爪提供給獵人更多可能的操作空間（比如造成傷害、快速移動、使怪物倒地等），直接導致了當前抱臉蟲重弩、零解劍斧等強勢流派的出現，更廣泛的層面，凤翔爪也帶有風險，曆戰古龍騎臉騎得不對直接就可能貓車。</p>
+
+<ul>
+  <li>關於武器的新招式</li>
+</ul>
+
+<p>慣用的盾斧大概是多了斧强化，用起來還可，其他舊武器沒摸，試著想全武器練成，封盤前就快達成了其實。</p>
+
+<p>回想起來大劍是真的強，造了一把眠大劍，見誰砍誰。</p>
+
+<p>（現在全武器了，稍微總結一下武器流派吧。）</p>
+
+<ul>
+  <li>近戰派生
+    <ul>
+      <li>太刀：實際上的大太刀，講究開刃、見切、登龍，新增收刀派生。</li>
+      <li>大劍：超大，講究三蓄，傷害爆表。</li>
+      <li>錘子：鈍器，和大劍有些類似但是手短很多。</li>
+      <li>片手：自帶小盾牌，攻擊稍弱但是靈活。</li>
+      <li>雙劍：高攻速猛烈攻擊。講究鬼人化轉陀螺。</li>
+      <li>狩獵笛：輔助型武器，可以吹buff，實際打可以當棒槌用（你</li>
+      <li>操蟲棍：棍子與蟲，有點遠程武器的意味，講究三燈與飛天（騎乘）</li>
+      <li>盾斧：本命武器，講究雙形態超解。</li>
+      <li>劍斧：類似盾斧，講究集能量零解。</li>
+    </ul>
+  </li>
+  <li>防禦派生
+    <ul>
+      <li>長槍：防禦+突刺+防反。</li>
+      <li>銃槍：長槍改裝，加了砲。</li>
+    </ul>
+  </li>
+  <li>遠程派生
+    <ul>
+      <li>弓箭：特殊瓶與屬性弓。</li>
+      <li>輕弩：子彈派生。</li>
+      <li>重弩：重型弩槍，可以克制防禦。</li>
+    </ul>
+  </li>
+  <li>關於聚魔之地</li>
+</ul>
+
+<p>看起來大秘境一勞永逸解決了刷刷刷的問題，不過本身基本的内容量在這裏，我不太清楚和之前摸痕跡那個真正卡玩家的時長和流失比（或者説，接受程度）。</p>
+
+<p>反正目前是看到風飄跑到森林區域之類的，很微妙的事情發生，不太能觀測隨機在其中具體的比例，只是想説隨機有好有壞。</p>
+
+<p>（系統資源層面，聚魔之地提供了克制素材的產出，目前看到的吐槽多為吐槽機制的細節上的，總體上有一個連續戰鬥的場所體驗還是可以的，基於原有單次戰鬥有足夠的豐富性）</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="寫在一開始"><span class="heading-counter">4.</span><span class="heading-label">寫在一開始</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="關於通用格式"><span class="heading-counter">4.1.</span><span class="heading-label">關於通用格式</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>我的體驗總結一般都是想到哪寫到哪，但是最近看來這樣似乎不太好，以從業者的角度來看，有點過分業餘了。</p>
+
+<p>是有一些通用的框架、或者思路可以采用的，雖然我現在的思路是聚焦於游戲流程和值得一提的點，不過還是太隨心所欲了。</p>
+
+<p>然後就是關於可讀性和思路概覽，目前做的也還不夠…</p>
+
+<p>（下次就重新起一篇文章整理一份格式吧。）</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="關於體驗耗時"><span class="heading-counter">4.2.</span><span class="heading-label">關於體驗耗時</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>冰原花了大概6天的整的時間吧…説實話很久了，自己又像是在逃避一樣對應該做的事情充耳不聞。</p>
+
+<p>一直以來我對體驗的最基本的要求就是自己要通關，但現在看來可能已經是奢求了，或許以後“云通關”會比較好呢。</p>
+
+<p>應該説是體驗核心玩法以後，對於細節和刷刷刷的部分就需要云通關了23333。</p>
+
+<p>還是不要太在意虛擬的東西會比較好，尤其是需要自己拿現實的時間來進行交換的時候。</p>
+
+<p>（現在就已經花了超過200h了，真好玩（你）</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="一些截圖參考"><span class="heading-counter">5.</span><span class="heading-label">一些截圖參考</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<blockquote>
+  <p><em>我就是最强獵人噠！</em></p>
+</blockquote>
+
+<p><img src="/assets/img/gameplay/mhw.ib/1 (1).jpg" alt=""></p>
+
+<blockquote>
+  <p><em>給個正面。</em></p>
+</blockquote>
+
+<p><img src="/assets/img/gameplay/mhw.ib/1 (2).jpg" alt=""></p>
+
+<blockquote>
+  <p><em>是我，冰咒龍！</em></p>
+</blockquote>
+
+<p><img src="/assets/img/gameplay/mhw.ib/1 (3).jpg" alt=""></p>
+
+<blockquote>
+  <p><em>版本三巨頭（三古龍的衣服）</em></p>
+</blockquote>
+
+<p><img src="/assets/img/gameplay/mhw.ib/1 (4).jpg" alt=""></p>
+
+<blockquote>
+  <p><em>怪獵暖暖！</em></p>
+</blockquote>
+
+<p><img src="/assets/img/gameplay/mhw.ib/1 (5).jpg" alt=""></p>
+
+<blockquote>
+  <p><em>怪獵暖暖X2！</em></p>
+</blockquote>
+
+<p><img src="/assets/img/gameplay/mhw.ib/1 (7).jpg" alt=""></p>
+
+<blockquote>
+  <p><em>怪獵暖暖X3！</em></p>
+</blockquote>
+
+<p><img src="/assets/img/gameplay/mhw.ib/1 (8).jpg" alt=""></p>
+
+<blockquote>
+  <p><em>怪獵暖暖X4！</em></p>
+</blockquote>
+
+<p><img src="/assets/img/gameplay/mhw.ib/1 (9).jpg" alt=""></p>
+
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-10-27 - jskyzero - 🚧 update 5.游戏体验
+2024-04-04 - jskyzero - 🚚 update structure
+2024-01-24 - jskyzero - 📝 update title
+2024-01-02 - jskyzero - 📝 test change strcuture
+2023-05-27 - jskyzero - 🚚 re:re:change file folder
+2022-04-15 - jskyzero - 📝 update title
+2021-09-21 - jskyzero - 🔥 remove {{site.img_url}}
+2021-08-19 - jskyzero - ✨ update tags
+2021-08-19 - jskyzero - 🔀  change structure
+2021-08-12 - jskyzero - fix wrong words
+2021-06-27 - jskyzero - 🚧 format markdown code
+2021-06-15 - jskyzero - 📝 少看二次元
+2019-10-07 - jskzyero - update 怪物獵人世界：冰原
+2019-09-28 - jskzyero - update 《MHWI》體驗報告
+2019-09-17 - jskyzero - 修改錯別字
+2019-09-16 - jskyzero - update 《MHWI》體驗報告
+2019-09-16 - jskyzero - finish 《MHWI》體驗報告
+2019-09-09 - jskyzero - add 《MHW:IB》體驗報告
+
+<em>（本文编写于2019年9月，最后修改于2024年10月，共修改1次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2019/09/09/mhw.ib/';
+this.page.identifier = 'https://design.jskyzero.com/2019/09/09/mhw.ib/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#怪物獵人世界冰原--monster-hunter-world-iceborne">怪物獵人世界：冰原 / Monster Hunter World: Iceborne</a><ul><li><a href="#簡介">簡介</a></li><li><a href="#主綫流程">主綫流程</a></li><li><a href="#值得一提的事情">值得一提的事情</a></li><li><a href="#寫在一開始">寫在一開始</a><ul><li><a href="#關於通用格式">關於通用格式</a></li><li><a href="#關於體驗耗時">關於體驗耗時</a></li></ul></li><li><a href="#一些截圖參考">一些截圖參考</a></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

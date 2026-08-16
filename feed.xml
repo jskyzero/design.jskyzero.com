@@ -1,0 +1,1820 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://design.jskyzero.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://design.jskyzero.com/" rel="alternate" type="text/html" hreflang="zh-CN" /><updated>2026-08-16T16:04:54+00:00</updated><id>https://design.jskyzero.com/feed.xml</id><title type="html">设计者笔记</title><subtitle>jskyzero&apos;s notes about game designer.</subtitle><entry><title type="html">归档：零碎文章集合</title><link href="https://design.jskyzero.com/2025/07/05/collect/" rel="alternate" type="text/html" title="归档：零碎文章集合" /><published>2025-07-05T00:00:00+00:00</published><updated>2025-07-05T00:00:00+00:00</updated><id>https://design.jskyzero.com/2025/07/05/collect</id><content type="html" xml:base="https://design.jskyzero.com/2025/07/05/collect/"><![CDATA[<ul class="post-list">
+    <p class="post-list__title">乱七八糟</p><li>[2022-03] 
+      <a href="/2022/03/16/game_design_content/">杂谈：游戏领域拾遗</a></li><li>[2022-03] 
+      <a href="/2022/03/16/gunpla/">杂谈：GUNPLA相关</a></li><li>[2021-09] 
+      <a href="/2021/09/14/other_reading/">杂谈：互联网拾遗</a></li></ul>
+
+<ul class="post-list">
+    <p class="post-list__title">零碎阅读摘要</p><li>[2018-10] 
+      <a href="/2018/10/08/game_design_vocabulary/">摘录：《游戏设计词汇表》</a></li><li>[2020-08] 
+      <a href="/2020/08/31/gamefeeling/">游戏设计：《游戏感》</a></li><li>[2019-11] 
+      <a href="/2019/11/22/how_to_write_game_plot/">叙事：《如何写游戏剧本》</a></li><li>[2018-09] 
+      <a href="/2018/09/25/introduction_to_game/">摘录：《游戏专业概论》</a></li><li>[2018-09] 
+      <a href="/2018/09/09/peoples/">游戏设计：《世界游戏制作大师》</a></li><li>[2019-08] 
+      <a href="/2019/08/28/save_cat/">叙事：《救猫咪》</a></li><li>[2020-08] 
+      <a href="/2020/08/31/story/">叙事：《故事》</a></li><li>[2024-11] 
+      <a href="/2024/11/29/wushu/">摘录：《中国武术实用大全》</a></li></ul>
+
+<ul class="post-list">
+    <p class="post-list__title">非具体书籍</p><li>[2022-04] 
+      <a href="/2022/04/15/study/">杂谈：学习的一些方法论</a></li><li>[2021-09] 
+      <a href="/2021/09/09/history-1/">简明中国历史与人类史</a></li></ul>
+
+<ul class="post-list">
+    <p class="post-list__title">游戏开发-水文</p><li>[2019-02] 
+      <a href="/2019/02/18/Excel/">编辑器：Excel使用</a></li><li>[2023-04] 
+      <a href="/2023/04/01/GameMarket/">游戏设计：游戏市场通识</a></li><li>[2021-08] 
+      <a href="/2021/08/18/LevelDesignEditor.Min/">编辑器：脚本最小集</a></li><li>[2021-11] 
+      <a href="/2021/11/21/ProceduralContentGeneration/">PCG相关讨论</a></li></ul>
+
+<ul class="post-list">
+    <p class="post-list__title">非具体游戏</p><li>[2023-07] 
+      <a href="/2023/07/17/2023_half_arpg/">2023年的ARPG们</a></li><li>[2021-01] 
+      <a href="/recently/">2021年前的零碎体验</a></li><li>[2021-10] 
+      <a href="/2021/10/28/sekiro/">标准拆解工具示例</a></li></ul>
+
+<ul class="post-list">
+    <p class="post-list__title">一些零碎游戏体验</p><li>[2020-05] 
+      <a href="/2020/05/18/13sar/">叙事-十三机兵</a></li><li>[2018-06] 
+      <a href="/2018/06/25/dnf/">ACT-横版-DNF</a></li><li>[2018-07] 
+      <a href="/2018/07/19/detroit/">叙事-底特律</a></li><li>[2019-07] 
+      <a href="/2019/07/28/dragon_raja/">MMO-手游-龙族幻想</a></li><li>[2020-03] 
+      <a href="/2020/03/04/honkai_punish/">ACT-手游-崩三&amp;战双</a></li><li>[2020-11] 
+      <a href="/2020/11/25/hyrule_warriors/">ACT-无双-塞尔达无双</a></li><li>[2019-09] 
+      <a href="/2019/09/09/mhw.ib/">ACT-共斗-怪猎冰原</a></li><li>[2018-08] 
+      <a href="/2018/08/11/mhw/">ACT-共斗-怪猎世界</a></li><li>[2021-04] 
+      <a href="/2021/04/12/mhr/">ACT-共斗-怪猎崛起</a></li><li>[2018-07] 
+      <a href="/2018/07/31/mgsv/">大世界-潜行-MGSV</a></li><li>[2017-10] 
+      <a href="/2017/10/19/nioh/">ACT-忍者组-仁王</a></li><li>[2018-09] 
+      <a href="/2018/09/09/okami_hd/">大世界-OKAMI</a></li><li>[2018-08] 
+      <a href="/2018/08/30/ori.blind_forest/">ACT-横版-奧日</a></li><li>[2023-11] 
+      <a href="/2023/11/28/zzz/">ACT-手游-绝区零</a></li></ul>]]></content><author><name></name></author><category term="摘录与杂谈" /><summary type="html"><![CDATA[乱七八糟[2022-03] 杂谈：游戏领域拾遗[2022-03] 杂谈：GUNPLA相关[2021-09] 杂谈：互联网拾遗 零碎阅读摘要[2018-10] 摘录：《游戏设计词汇表》[2020-08] 游戏设计：《游戏感》[2019-11] 叙事：《如何写游戏剧本》[2018-09] 摘录：《游戏专业概论》[2018-09] 游戏设计：《世界游戏制作大师》[2019-08] 叙事：《救猫咪》[2020-08] 叙事：《故事》[2024-11] 摘录：《中国武术实用大全》 非具体书籍[2022-04] 杂谈：学习的一些方法论[2021-09] 简明中国历史与人类史 游戏开发-水文[2019-02] 编辑器：Excel使用[2023-04] 游戏设计：游戏市场通识[2021-08] 编辑器：脚本最小集[2021-11] PCG相关讨论 非具体游戏[2023-07] 2023年的ARPG们[2021-01] 2021年前的零碎体验[2021-10] 标准拆解工具示例 一些零碎游戏体验[2020-05] 叙事-十三机兵[2018-06] ACT-横版-DNF[2018-07] 叙事-底特律[2019-07] MMO-手游-龙族幻想[2020-03] ACT-手游-崩三&amp;战双[2020-11] ACT-无双-塞尔达无双[2019-09] ACT-共斗-怪猎冰原[2018-08] ACT-共斗-怪猎世界[2021-04] ACT-共斗-怪猎崛起[2018-07] 大世界-潜行-MGSV[2017-10] ACT-忍者组-仁王[2018-09] 大世界-OKAMI[2018-08] ACT-横版-奧日[2023-11] ACT-手游-绝区零]]></summary></entry><entry><title type="html">动作游戏设计的SSS方法</title><link href="https://design.jskyzero.com/2025/03/25/SSS/" rel="alternate" type="text/html" title="动作游戏设计的SSS方法" /><published>2025-03-25T00:00:00+00:00</published><updated>2025-03-25T00:00:00+00:00</updated><id>https://design.jskyzero.com/2025/03/25/SSS</id><content type="html" xml:base="https://design.jskyzero.com/2025/03/25/SSS/"><![CDATA[<p>本文介绍一种动作游戏设计的「SSS」方法，一方面总结了过去七年多的动作游戏设计经验，另一方面希望沉淀出一套可复用、可推广的“80分工作流”。本文分为上下两部分：上半部分以怪物设计为例，讨论方法论及其实操应用，下半部分我们将看到更多用法，然后讨论背后的理论和补充一些知识。笔者能力有限，行文多有纰漏，欢迎读者批评指正。</p>
+
+<h1 id="动作游戏设计的sss方法">动作游戏设计的SSS方法</h1>
+
+<h2 id="上文方法论及其实操应用">上文：方法论及其实操应用</h2>
+
+<p>我们先讨论使用3S方法设计一个动作游戏的BOSS。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/0-480.webp 480w, /assets/generated/img/act/SSS/0-760.webp 760w, /assets/generated/img/act/SSS/0-1140.webp 1140w, /assets/generated/img/act/SSS/0-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/0.png" alt="" width="1976" height="646" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+
+<p>从执行层面概括来说，3S设计方法（Situation-Solution-Stage / 情形-解决-编排）分为以下几个步骤：</p>
+
+<ol>
+  <li><strong>确立基础情形与应对方式</strong>：
+    <ul>
+      <li>分析游戏的基本规则与玩家能力，总结出基础的“敌人出招–玩家应对”范式。</li>
+    </ul>
+  </li>
+  <li><strong>根据BOSS特点补充具体情形</strong>：
+    <ul>
+      <li>结合BOSS的设定与特征，设计独特且难度有差异的攻击动作，并思考每个攻击玩家的应对方式。</li>
+    </ul>
+  </li>
+  <li><strong>编排整场战斗流程</strong>：
+    <ul>
+      <li>调整招式组合与出现顺序，控制玩家的交互感受，努力让玩家体验随着战斗进程产生变化。</li>
+    </ul>
+  </li>
+</ol>
+
+<p>浓缩成一句话：<strong>设计玩家遇到的挑战（Situation），想好玩家对应的解决方案（Solution），最后对“问题–解法”单元进行合理编排（Stage）</strong>。</p>
+
+<p>下面我们用黑暗之魂3，和游戏中玩家遇到的第一个BOSS——“灰烬审判者”古达，来举例：</p>
+
+<blockquote>
+  <p>注：举例的价值在于说明思路，部分信息（如AI逻辑）未经过完整拆解，仅作参考。</p>
+</blockquote>
+
+<h3 id="确立基础情形与应对方式">确立基础情形与应对方式</h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/rewrite/1-480.webp 480w, /assets/generated/img/act/SSS/rewrite/1-760.webp 760w, /assets/generated/img/act/SSS/rewrite/1-1140.webp 1140w, /assets/generated/img/act/SSS/rewrite/1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/rewrite/1.png" alt="" width="2465" height="1012" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>动作游戏最基础的“情形”，就是“敌人发起攻击，玩家应对攻击，并找机会反击”，放在黑魂3里面，玩家的应对除了常规位移躲开攻击外，还可以原地持盾，用精力（和少量血量）直接承受这次攻击。</p>
+
+<p>在进阶的强时间/空间要求的操作上，黑魂3有盾反和利用无敌帧翻滚躲避两种，前者可以中断敌人动作，并让玩家获得一次处决的机会（不过，盾反只能处理敌人的部分攻击，且魂3的盾反需要提前出手，有一定难度）。后者则会根据玩家的负重不同，产生不同的位移性能和无敌帧长度，并受到明显的RPG数值化影响。</p>
+
+<p>图中右边有一列很有意思，说的是<strong>如何让招式能达到筛选玩家行为的目的</strong>，客观来说，玩家往往能采取多种行为应对同一情形，为了达到我们的设计目的，我们需要<strong>有意识的让其他的行为无效或者低效</strong>。比如：</p>
+
+<ul>
+  <li>BOSS处于破绽时，攻击BOSS，比站着不动浪费输出窗口期要更有意义。</li>
+  <li>当有多种躲开方式时，选择资源消耗小或更利于接下来“发起攻击”的避让方式。</li>
+  <li>不希望玩家能用“持盾”处理所有的攻击时，刻意大幅调高部分招式对持盾玩家的精力伤害，让持盾应对的玩家直接被打进破盾僵直。</li>
+</ul>
+
+<h4 id="题外话-为什么需要总结范式">题外话-为什么需要总结“范式”</h4>
+
+<p>在开始设计怪物的具体招式时，出于工程学的角度，我们会希望招式的“类型”是可以复用的，正如<a href="http://www.gamelook.com.cn/2020/12/407406/">GDC2013“优秀关卡设计的十大原则”的分享</a>中所说：<strong>优秀的关卡设计师并不只是简单的做一个关卡，而是制作一系列的模块来组成一个又一个关卡。</strong></p>
+
+<p>在项目开发中，一般在DEMO期就会确立基础的“问题情形”，这些基础情形有如音乐的基础乐符、画作的基础色彩般，不断通过重复出现、组合叠加，构成上层的BOSS或者关卡设计，总结出“范式”，能够大大降低后续的设计难度，提高工作效率。</p>
+
+<h4 id="题外话-多种应对与风险回报理论">题外话-多种应对与风险回报理论</h4>
+
+<p>刚才我们提到：玩家往往能采取多种行为应对同一情形，我们需要有意识的让其他的行为无效或者低效。或者换句话说，<strong>玩家的行为有不同的难度/风险，我们需要让玩家行为承担的风险后，有相匹配的回报。</strong></p>
+
+<p>这种“风险–回报”的思路，一方面给了玩家选择权，让玩家能主动选择自己想要的战斗风格，另一方面也让战斗也有了更多进阶空间，带来更高的“重玩价值”。</p>
+
+<p>一个衍生的阅读是<a href="https://www.bilibili.com/video/BV1be4y1d781"><strong>樱井政博的游戏性：风险回报理论</strong></a>，感兴趣的同学可以自行查阅。</p>
+
+<h4 id="题外话-是先有的情形还是先有的解决">题外话-是先有的“情形”？还是先有的“解决”</h4>
+
+<!-- ![](/assets/img/act/SSS/10.png) -->
+
+<p>这听起来有点先画靶再射箭，还是先射箭再画靶的哲学思辨。</p>
+
+<p><a href="https://igdshare.org/content/making_platinum_act">GDC2016白金工作室《无国界的动作游戏》的分享</a>中提到：<strong>动作游戏，是一种需要玩家应对「状况」的被动游戏。卖点的设计，是从「状况」开始的，设想着「我们要把玩家放进什么样的状况之中，然后让玩家们去做什么样的事情？」</strong>，游戏的特色卖点通常是从情形开始设计的！这是对的，理想上，我们希望能先有问题，再有问题解决，这样也能更加契合“敌人使用自身特点的能力阻碍主角，而主角再突破这些阻碍”。</p>
+
+<p>然而现实中，有时主角能力已经先行确定，比如大量持续运营的动作游戏，会以售卖角色为核心商业化途径（比如崩三战双原神绝区零鸣潮），或者将角色更新作为最重要的内容更新之一（比如仁王1仁王2卧龙更DLC会更新新武器，怪猎冰原/曙光G位DLC一定会改武器动作），主角能力先确定的情况下，我们需要针对确定的能力量身定做题目，虽然先射箭再画靶，可能会对题目本身的创造性有一定的限制。</p>
+
+<p>本质上，这是一种<strong>价值排序后的功利主义</strong>：在资源或选择有限的情况下，次要的牺牲（不重要的服从）会被视为合理，因为它服务于更大的整体“幸福”或重要目标。</p>
+
+<blockquote>
+  <p>在玩家的视角，随着游玩进程的深入，除了老情形的组合，有时也会出现全新的情形。这里有些新情形是开发人员早就想好，后期才释放给玩家；也有一些新情形是随着开发深入，过程中才想到的“新点子”。</p>
+
+  <p>不管是先情形还是先解决，又或者是开发到一半才决定加入新点子新逻辑，我们都会希望游戏有一个健壮的底层，能支持新体验新机制新规则的出现，对于灵光一现的“新点子”，也一定想办法将它抽象化规则化，让这个机制能反复出现。</p>
+</blockquote>
+
+<h3 id="根据boss特点补充具体情形">根据BOSS特点补充具体情形</h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/rewrite/2-480.webp 480w, /assets/generated/img/act/SSS/rewrite/2-760.webp 760w, /assets/generated/img/act/SSS/rewrite/2-1140.webp 1140w, /assets/generated/img/act/SSS/rewrite/2-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/rewrite/2.png" alt="" width="1746" height="706" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>在了解完游戏的基础情况和“攻击-应对”的基本范式以后，我们开始初步的设计BOSS招式并思考玩家的应对。</p>
+
+<p>设计BOSS招式时，最核心要点是<strong>充分发挥BOSS的特点/特色，要能给玩家带来独特的体验和记忆点</strong>。往往我们需要将自己代入这个角色，思考这个角色会采取何种独特的手段/方式攻击玩家。</p>
+
+<p>以古达为例，古达穿有铠甲，体型巨大，约两倍于玩家，手持长柄兵器，是角色的主要攻击手段。</p>
+
+<ul>
+  <li>从长柄兵器出发，我们可以给角色设计出横挥、纵劈、前戳等基础动作，这几个攻击方式天然有不同的攻击覆盖范围，进而玩家会有不同的避让方式。</li>
+  <li>更进一步的，古达有没有不使用武器的攻击？于是我们补充了肩撞的攻击方式。</li>
+  <li>考虑到要对玩家行为进行筛选，我们可以设计不同的前摇长度和攻击转向性能。</li>
+  <li>考虑到要覆盖远距离攻击，我们可以添加突进后攻击/跳跃后攻击的形式。</li>
+</ul>
+
+<p>特别的，古达还有二阶段，理论上是否需要有二阶段和二阶段的变化，是第三部分“舞台编排”的内容，不过假定人物设定上给古达安排了二阶段……二阶段和一阶段的形态发生了巨大变化，攻击方式也截然不同——比如跳砸、撕咬等。</p>
+
+<p>以彰显角色个性为设计目的，设计了大量可能的攻击方式后，我们也要<strong>初步考虑玩家对招式的应对方式，至少要避免所有招式玩家都可以以相同的方式应对</strong>，尽量让招式的难度是有层次/有进阶的。</p>
+
+<p>简而言之，BOSS招式的设计必须围绕角色的核心特色，让角色用自己的方式来构成对玩家有威胁的“情形”。</p>
+
+<h4 id="题外话独特性的重要性">题外话：独特性的重要性</h4>
+
+<p>动作游戏时常会出现“撞车”的情况，比如许多作品都选取剑戟等冷兵器为题材。又如下图所示，《狂野之心》和《怪物猎人》不仅“玩法撞车”（高情商说法：借鉴改进），其怪物姬冠禽与千刃龙在“二足类鸟型怪”的体型上也高度相似。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/16-480.webp 480w, /assets/generated/img/act/SSS/16-760.webp 760w, /assets/generated/img/act/SSS/16-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/16.png" alt="" width="1235" height="565" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>这其实是一个很有意思的例子，因为千刃龙“佛山无影脚”的下踹动作形象和鳞片攻击的裂伤玩法十分有特色，而姬冠禽甚至一时想不起来有什么专属的动作。对于动作游戏的动作设计而言，能像千刃龙这样，<strong>将一些特色个性的动作通过诸多手段，让打过的玩家能印象深刻</strong>，笔者认为已经非常了不起了。</p>
+
+<p>至于如何能做到这一点，除了前面提到的要将自己代入这个角色，思考“这个角色才能做出来的行为”，另外也很考验设计师动作设计的综合把控——比如用镜头等各种动作游戏的常见感受手段来增加体验独特性。</p>
+
+<h4 id="题外话从攻击来源来找灵感">题外话：从攻击来源来找灵感</h4>
+
+<p>在设计发挥角色能力的攻击时候，如果一时没有灵感，可以考虑从攻击的不同的来源出发思考：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/7-480.webp 480w, /assets/generated/img/act/SSS/7-760.webp 760w, /assets/generated/img/act/SSS/7-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/7.png" alt="" width="1306" height="390" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>上图按照攻击的来源，对攻击情形进行了一个通用的划分。配图的例子是<a href="https://www.bilibili.com/video/BV1Xv41167BN">《怪物猎人世界：冰原》的黑龙</a>，其攻击动作包括以下几类：近身体术物理攻击，和远程吐息魔法攻击，非常规攻击的演出攻击，和特殊玩法的场景攻击。</p>
+
+<p>这个分类方式几乎可以概括所有的攻击的来源，当你对“角色还能发起怎样的攻击”感到迷茫的时候，可以思考下对应的类别。</p>
+
+<blockquote>
+  <p>这个分类也存在一些暧昧的部分，比如我们假设黑龙的爪子上带有火焰，挥动爪子产生的攻击就同时有了体术的特征，和可扩散火焰的远程攻击特征，客观来说，<strong>分类的类别彼此并不严格互斥，甚至是可以互相结合的。</strong></p>
+</blockquote>
+
+<h4 id="题外话基础的难度递进方法">题外话：基础的难度递进方法</h4>
+
+<p>让招式变难的基础策略有两种：一种是提高单次行为的难度，另一种是将多个单次行为组合起来。</p>
+
+<ul>
+  <li>单次更难</li>
+</ul>
+
+<p>我们控制变量，假定玩家只使用位移方式避开敌人的攻击：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/14-480.webp 480w, /assets/generated/img/act/SSS/14-760.webp 760w, /assets/generated/img/act/SSS/14-1140.webp 1140w, /assets/generated/img/act/SSS/14-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/14.png" alt="" width="2209" height="490" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>如上图所示，避开可以进行一些难度层次的划分：除了基础的躲开，还可以进一步要求玩家要往固定方向才能躲开，或者在固定时机才能躲开。</p>
+
+<blockquote>
+  <p>有时游戏中也会遇到，不移动/慢速移动反而更好躲开的情形，这里可以将其视为精准移动的一种，也归纳到固定方向躲开的类别。</p>
+</blockquote>
+
+<ul>
+  <li>组合更难</li>
+</ul>
+
+<p>当然，没人规定敌人两次攻击间一定会给玩家留充足的调整时间，我们完全可以把若干单次攻击组合成更连贯的连续攻击。</p>
+
+<p>不过要注意的是，连续攻击一般攻击性能/躲避难度需要维持在相近的难度，对于攻击性能/躲避难度有变化的攻击，一般需要额外前摇动作暗示难度的变化，让玩家有心理预期，同时也可以给玩家留出读动作的反应时间。</p>
+
+<h3 id="编排整场战斗流程">编排整场战斗流程</h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/rewrite/3-480.webp 480w, /assets/generated/img/act/SSS/rewrite/3-760.webp 760w, /assets/generated/img/act/SSS/rewrite/3-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/rewrite/3.png" alt="" width="1519" height="1354" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>客观来说，随着时代的进步，现在市场上没有编排和设计的BOSS战流程已然失去竞争力。最基础的，我们<strong>需要考虑流程的开始和结束</strong>：BOSS战开始时BOSS的状态是怎样的？是以怎样的动作、怎样的方式将叙事上的信息传达给玩家；玩家竭尽全力击败BOSS后，我们必须重视玩家的付出，并极力放大玩家获胜的成就感，（叙事上）BOSS被击败后是怎样的状态？玩家又获得了怎样的成长？如何用游戏中的具体的内容呈现这些设计？</p>
+
+<p>此外，在具体的流程设计中也有两点需要注意：</p>
+
+<ul>
+  <li>要点1：使用动态交互传达信息/营造感受</li>
+</ul>
+
+<p>游戏是一门互动的艺术，动作游戏更是以玩家操作的反馈见长，在玩家挑战BOSS时，我们需要想尽办法<strong>利用动作游戏的各种交互机制/AI逻辑，辅助传达BOSS的各种信息</strong>，让玩家在动态交互中获得独特的感受。</p>
+
+<p>这个听起来有点玄学，我们举一些游戏中具体的例子：</p>
+
+<ol>
+  <li>古达一二阶段的攻击方式和AI都是不同的，一阶段更有章法而二阶段更狂暴。相反的，血源路德维希则是一阶段狂暴而二阶段捡起月光剑后端庄神圣。</li>
+  <li>只狼中相当多BOSS都塑造的很有个性，最典型的可能是义父使用道具/烟雾弹/毒圈/手里剑起手的狡诈。</li>
+  <li>怪猎黑龙开荒时候要面对5次全屏大招，来渲染黑龙毁灭国家、禁忌存在的强大。</li>
+</ol>
+
+<ul>
+  <li>要点2：设计流程的变化</li>
+</ul>
+
+<p>大部分BOSS的标准战斗时长要来到3分钟，微观上大部分游戏每若干秒（可以通过战斗时长/动作总数估算）会让玩家见识一个新动作，宏观上，长期持续不变的战斗节奏/策略会让玩家感到无聊，<strong>有意识的设计流程的变化是非常有必要的。</strong></p>
+
+<p>可以举一些例子：</p>
+
+<ol>
+  <li>换模型/形象发生改变，例子太多了，比如古达二阶段，只狼狮子猿二阶段，卡赞奥兹玛二三阶段，怪猎煌黑龙转属性……</li>
+  <li>随时间解锁新技能/释放固定技能，印象最深的是老头环里面的大树守卫，半血以后开始放新技能，难度陡增。</li>
+  <li>使用某种逻辑控制怪物状态，比如怪猎的进怒/消怒，仁王里面的精力槽/妖怪进常暗，各种形式的盾条/精力条/架势条等</li>
+</ol>
+
+<p>最后，设计流程时候要<strong>注意玩家应对的难度</strong>：建议是多数考验玩家策略正确操作难度中低，对于刚需玩家“反应力”的情形要注意频率，也要避免同时叠加多种考验导致情形过难。</p>
+
+<h4 id="题外话从玩家感受角度的流程设计">题外话：从“玩家感受”角度的流程设计</h4>
+
+<p>在<a href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/">两年前对《只狼》的狮子猿一阶段进行拆包学习</a>时，曾经根据玩家视角对怪物攻击动作的“印象”进行分类：没有威胁的演出动作，常规的填充攻击动作，特殊的记忆点动作。</p>
+
+<p>这样编排流程时，其实我们就是<strong>交错安排常规攻击、演出破绽、记忆点，这三种类型的行为</strong>：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/8.rewrite-480.webp 480w, /assets/generated/img/act/SSS/8.rewrite-760.webp 760w, /assets/generated/img/act/SSS/8.rewrite-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/8.rewrite.png" alt="" width="1505" height="438" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h3 id="小结与一页设计案">小结与“一页设计案”</h3>
+
+<p>总结下，我们尝试用<a href="https://gdcvault.com/play/1012356/One-Page">GDC2010《一页设计案》的分享</a>中的思路，将一个BOSS几个部分汇总到一起，大致如下：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/rewrite/0-480.webp 480w, /assets/generated/img/act/SSS/rewrite/0-760.webp 760w, /assets/generated/img/act/SSS/rewrite/0-1140.webp 1140w, /assets/generated/img/act/SSS/rewrite/0-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/rewrite/0.png" alt="" width="2972" height="1216" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>至此，3S方法的实操部分介绍完毕。其核心质朴而直接：<strong>为玩家设计“问题”与“答案”，并合理安排节奏</strong>。如果读者只需要一个可执行的工作流，到这里其实已经足够。但读者若想深入理解背后的原理，在设计层有所突破，还请耐心继续往下读。</p>
+
+<h2 id="下文理论探讨和知识补充">下文：理论探讨和知识补充</h2>
+
+<p>下文内容较多且相对独立，包括以下几个部分：</p>
+
+<ol>
+  <li>会介绍SSS方法的其他使用方式，并引出奖惩导向理论。</li>
+  <li>动作游戏语境下，对SSS方法和一些事项的进一步讨论。</li>
+  <li>一些零碎信息补充，比如其他的设计方法和对比。</li>
+</ol>
+
+<h3 id="当sss方法应用于更多场景">当SSS方法应用于更多场景</h3>
+
+<p>前面我们看了3S方法用于动作游戏怪物的设计，其实3S方法还<strong>可以用在更多地方</strong>：</p>
+
+<h4 id="用于流程boss战设计">用于流程BOSS战设计</h4>
+
+<p>以《超级马里奥：奥德赛》为例，<a href="https://www.bilibili.com/video/BV1Pi4y1u7TG">游戏里面的第一个BOSS帽子兔</a>的流程如下图所示：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/rewrite/4-480.webp 480w, /assets/generated/img/act/SSS/rewrite/4-760.webp 760w, /assets/generated/img/act/SSS/rewrite/4-1140.webp 1140w, /assets/generated/img/act/SSS/rewrite/4-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/rewrite/4.png" alt="" width="2081" height="920" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>我们一般会将《超级马里奥：奥德赛》归类于平台跳跃或者<strong>动作冒险游戏</strong>，可以看到此类游戏对玩家能力划分更为概括（常规攻击/下压处决攻击/任意躲避方式），且<strong>依然具备“情形-应对”的筛选机制</strong>，通过不同阶段对玩家不同能力的校验，我们就有了帽子兔这样偏流程机制的BOSS。</p>
+
+<h4 id="用于关卡设计">用于关卡设计</h4>
+
+<p>以《双影奇境》为例，<a href="https://www.bilibili.com/video/BV1AmRKYBEXQ?p=51">游戏里面的第五章“龙魂”小节中</a>的部分流程如下图所示：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/rewrite/5-480.webp 480w, /assets/generated/img/act/SSS/rewrite/5-760.webp 760w, /assets/generated/img/act/SSS/rewrite/5-1140.webp 1140w, /assets/generated/img/act/SSS/rewrite/5-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/rewrite/5.png" alt="" width="1822" height="1126" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>我们会发现流程中，玩家也是会遇到一些需要“自己特殊能力”解决的问题——虽然《双影奇境》是双人游戏，更强调双人配合。不管怎样，<strong>关卡流程中其实也是存在“情形-应对”的筛选机制的</strong>，通过流程中设计要求玩家使用特定技巧来解决的难题，并对难题的出现进行适当编排，我们就有了一段特定的关卡流程。</p>
+
+<h4 id="情形-应对的本质">“情形-应对”的本质</h4>
+
+<p>通过上面有共性的两个例子，读者或多或少能感觉到：<strong>“情形-应对”是广泛存在的！</strong>从使用角度来说，我们遵循这个规律即可，但是，从理论角度上，“情形-应对”就是最本质的逻辑吗？</p>
+
+<p>这或许要回到电子游戏的最大特征“互动性”上来说。电子游戏作为一种承载信息的媒介，它与音乐绘画雕塑戏剧等等媒介都不同，它是可以互动的，玩家是需要操作输入的，<strong>玩家自己的控制和决策，将带来无比的代入感和电子游戏这种媒介独一无二的体验乐趣。</strong></p>
+
+<p>关于玩家的这个互动过程，有一个非常有意思的概念叫做“奖惩导向”：</p>
+
+<h3 id="用奖惩导向为玩家控制赋予更多意义">用奖惩导向为玩家控制赋予更多意义</h3>
+
+<p>在前文：<a href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/">动作游戏的本质，与相关设计方法论</a> 中，我们曾讨论了动作游戏使用“奖惩导向”，让“玩家控制游戏内的角色”有更多深度和意义，接下来我们将沿着这条脉络继续深入进行一些讨论。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/1.rewrite-480.webp 480w, /assets/generated/img/act/SSS/1.rewrite-760.webp 760w, /assets/generated/img/act/SSS/1.rewrite-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/1.rewrite.png" alt="" width="1482" height="633" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h4 id="奖惩导向让控制-奖励成为循环带来更多乐趣">奖惩导向让“控制-奖励”成为循环带来更多乐趣</h4>
+
+<p>简要总结前文的话，奖惩导向是为了避免玩家随意、无目的控制角色，<strong>通过奖惩给玩家确定控制目标，让“控制-奖励”成为循环带来更多乐趣。</strong>在这个语境下，设计师就相当于是“上帝”，通过对玩家行为的奖励与惩罚，来引导玩家进行对应的操作，从而让玩家能持续地进行“控制”，持续的在游玩中获得乐趣。</p>
+
+<p>奖惩导向强调<strong>对玩家行为的筛选，有意识的只让部分行为能通过筛选（或者让部分行为带来的结果更好）</strong>。但是要注意，上帝可不是那么好当的，奖惩的逻辑必须清晰明确符合道理，小心玩家会在一头雾水中怒骂设计师：这是啥不合理的垃圾游戏！</p>
+
+<blockquote>
+  <p>举两个动作游戏的例子来说：大多数情况下，面对敌人的攻击，玩家是要躲开的，如果设计师设计了一个无法躲开的敌人的攻击，就需要做很多额外的事情来告知玩家应该做什么，比如教导玩家要用特定行为打断敌人的攻击。</p>
+
+  <p>另一个例子是，多数情况下，玩家是需要攻击敌人的，如果此时玩家不能攻击敌人！那么也一定要有途径告知玩家，否则玩家极有可能在习惯性的攻击中被疯狂惩罚。</p>
+</blockquote>
+
+<h4 id="奖惩导向是一个玩法层面的描述并不是游戏的全部">奖惩导向是一个“玩法层面”的描述，并不是游戏的全部</h4>
+
+<p>显然，奖惩导向并不是游戏的全部，奖惩导向是一种通过“奖励玩家正确的行为，惩罚玩家错误的行为”，来筛选引导玩家行为的思路。这种筛选和引导广泛存在，在游戏中面对强大的敌人时，奖惩导向机制的运作会让<strong>让玩家不断进行各种设计师想要的操作输入，玩家可以在一次次正确交互，一次次获取奖励中，持续获得无上的快感</strong>。</p>
+
+<p>从这个角度，奖惩导向是一个“玩法层面”的描述，描述玩家应该“怎么玩”，应该做什么，对于内容型或者PVE的游戏，除了奖惩导向暗示的玩法，我们还需要内容本身，比如叙事层面的人物，环境，情节，情感，等等；对于规则型或者PVP的游戏，我们可能需要刻意地去引导玩家的“冲突”，以让玩家与玩家之间持续的发生“碰撞”，让玩家在碰撞中不断地“被奖惩”。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/2-480.webp 480w, /assets/generated/img/act/SSS/2-760.webp 760w, /assets/generated/img/act/SSS/2-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/2.png" alt="" width="1319" height="643" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<blockquote>
+  <p>题外话：反馈（Feedback）在游戏设计和控制论/工程学里有时指的不是同一个层级的东西，这里我们额外解释下：</p>
+
+  <p>游戏设计交互层面的“反馈”通常是让玩家知道自己“做了什么 → 发生了什么”。通常是即时/单次的。控制系统循环调节的“反馈”是“让输出的一部分回流到输入”，通常是系统层面的。比如正反馈让系统越来越极端、负反馈让系统趋于稳定。</p>
+
+  <p>在本文的语境下，对于玩家单次行为结果的“正反馈奖励”或者“负反馈惩罚”，并不一定会影响玩家下次的行为或者系统状态，且交互反馈在不同条件下可能既是越来越极端的“正反馈循环”也是趋于稳定的“负反馈循环”，无法简单划为正或负循环。（比如游戏中敌人是有不同难度的，有些玩家会调节自身投入/操作到“对应要求”来应对，而有些玩家会觉得困难越来越不愿意尝试\觉得简单越来越无聊）</p>
+</blockquote>
+
+<h4 id="如何设计奖惩导向">如何设计奖惩导向？</h4>
+
+<p>前文就这个话题进行了一些简单的讨论，比如<strong>奖惩导向成立的前提</strong>和一些奖惩导向<strong>制作中的注意事项</strong>。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/3-480.webp 480w, /assets/generated/img/act/SSS/3-760.webp 760w, /assets/generated/img/act/SSS/3-1140.webp 1140w, /assets/generated/img/act/SSS/3-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/3.png" alt="" width="1638" height="445" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>前文的要求该来说就一句话：“清晰明确，符合道理”。这会要求我们找到合适的“抽象”：<strong>要回归到动作游戏的动作表现本身上，用游戏中角色实际的动作，和敌我之间动作的交互逻辑来传达交互关系</strong>。用画面/声音/触感等方式，告诉玩家敌人的状态是什么，接下来会发生哪种情形，玩家又应该选择何种对策，输入何种行为。</p>
+
+<p><a href="https://zhuanlan.zhihu.com/p/56750629">GDC2017街霸5的美术总监龟井敏征的分享</a>也说过类似的话：格斗游戏中的美术表现，必须能够在瞬间将信息传达给玩家。</p>
+
+<blockquote>
+  <p>举个例子来说，敌人的攻击只能覆盖特定区域，我们离开了判定区域，就不会受到攻击判定。这是符合常识和逻辑的；有时我们设计了一些特殊交互动作，比如过程中（被某种形式的）击中会会无效化敌方的攻击（比如怪猎太刀特殊回避动作见切，黑猴的切手技识破），这类动作往往是以后退回避为载体的，这样就能能更好的让玩家理解。</p>
+</blockquote>
+
+<p>上文我们也提到了具体达成奖惩导向的方式，即：有意识的让多种应对策略彼此出现优劣之分，具体来说，这里其实有两种方式：</p>
+
+<ul>
+  <li>其一是<strong>白名单方向，只有部分应对有效</strong>（比如新战神只有盾击才能打断敌人的某类特殊攻击，仁王2只有妖反能处理敌人的红光攻击，只狼的三种危只有对应的处理方式，不吃通解，卡赞里面敌人红光攻击只有特殊动作能打断……）此类行为有时也能用基础的位移方式躲避，不过要看是否给怪物的此次攻击增加特别强的转向性能。</li>
+  <li>其二是<strong>黑名单方向，部分应对无效，或者会让玩家大劣势</strong>（当然你要说被打进受击，这种结果是算大劣势还是算白名单里面的应对无效，笔者感觉应该已经算应对无效了），比如防御会消耗体力时，放下这次攻击会消耗大量体力或者直接破防，又或者应对起来非常苛刻很吃理解和操作，比如躲避可以不用跑而是用走，会对玩家位移的方向把控提出更高的要求。</li>
+</ul>
+
+<p>关于奖惩导向的讨论至此结束，之所以花了如此长的篇幅先介绍这些理论，是希望读者能透彻的理解3S设计法、乃至动作游戏玩家决策、设计师设计交互的底层逻辑，从而更好的运用3S设计法。</p>
+
+<h3 id="在动作游戏语境下的进一步讨论">在动作游戏语境下的进一步讨论</h3>
+
+<p>下面我们将针对动作游戏语境下的“情形-解决-编排”，进行更进一步的讨论。</p>
+
+<h4 id="克服困难带来的成就感和困难的必要性讨论">克服困难带来的成就感，和困难的必要性讨论</h4>
+
+<blockquote>
+  <p>你不可能要求一个没有风暴的海洋。那不是海，是泥塘。——毕淑敏</p>
+</blockquote>
+
+<p>心流理论中，为了维持玩家在心流区间，游戏会需要（和玩家技能水平匹配的）难度和挑战。而对于动作游戏来说，难题的设计和克服难题为玩家带来的成就感，也非常重要。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/10.rewrite-480.webp 480w, /assets/generated/img/act/SSS/10.rewrite-760.webp 760w, /assets/generated/img/act/SSS/10.rewrite-1140.webp 1140w, /assets/generated/img/act/SSS/10.rewrite-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/10.rewrite.png" alt="" width="1611" height="596" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>如上图右边，伊津野英昭在<a href="http://www.gamelook.com.cn/2019/04/355818/">GDC2019《鬼泣5 创造一款杰出的动作游戏》的分享</a>中说过：<strong>玩家在游玩过程中，因克服困难与挑战而获得的成就感，是动作游戏30年来始终不变的真理。</strong></p>
+
+<p>在奖惩导向思路和“情形-解决-编排”的语境下，“克服困难挑战”描述的是：玩家以某种编排的节奏，持续面对不同的情形挑战，玩家需要持续做出应对，在一次次奖惩判定中，玩家需要不断累积正确应对带来的奖励，最终战胜强大的敌人。</p>
+
+<ul>
+  <li>乐趣来自于投入和专注</li>
+</ul>
+
+<p>客观来说，<strong>动作游戏要有成就感，游戏还是需要一定的困难给玩家克服的</strong>，这并不是鼓吹那些“很粪”的招式设计和无脑给玩家上强度，而是强调玩家需要付出精力理解奖惩的规则，练习招式的应对。强调在战斗中玩家要集中注意力盯紧敌人动作的变化，时刻思考准备采取正确的决策，这样竭尽全力聚精会神投入的状态，和千辛万苦终于克服困难挑战的喜悦感，是动作游戏独一份的乐趣。</p>
+
+<ul>
+  <li>简单的动作游戏是否没有乐趣</li>
+</ul>
+
+<p>我们一般会认为无双的割草类游戏是很简单的动作游戏，甚至有人讨论时会把它放到鄙视链的底端。（因为无双的动作系统十分简单，且战斗中大多数时候玩家都可以随意攻击。）</p>
+
+<p>但是，对于无双割草类游戏，奖惩导向也依然是存在的，我们假定敌人出手低到极限或者完全不会攻击，也就是变成玩家的完全任意行动，此时，<strong>玩家自身的行动仍然是有优劣之分的</strong>，比如玩家自身的输出手法是有效率差异的、战局决策拾取掉落的增益道具也是有时机差异的、玩家进军的路线和是否执行剧本的战略，等等。</p>
+
+<p>对于无双类或者简单的动作游戏，玩家的交互依然有差异，奖惩导向依然存在，只是对玩家的专注和投入要求没有那么高。专注自身“打桩输出”的游戏，也会有打桩输出的快乐，有时设计师还会给打桩叠加外部的数值成长，来让玩家“打桩输出”快乐能更久。</p>
+
+<ul>
+  <li>排除干扰让玩家享受挑战自我</li>
+</ul>
+
+<p>动作游戏的玩家的差异是非常大的，以笔者怪猎的游戏经验来说，高手猎人和新手猎人的通关时长可能有着3倍的差距，传统ACT如鬼泣等的玩家，差距是更大的，核心玩家和初见玩家的技术差异已经大到了无法调和的程度。<strong>设计时考虑给核心玩家的挑战固然重要，但是让新玩家有“入坑”的想法，和持续挑战下去的动力，也很重要。</strong></p>
+
+<p>在这个思路下，近些年的动作游戏的一个典型的例子是：古早的动作游戏或者ARPG几乎不允许玩家更换Build/加点等，只能新开账号/角色（黑魂3）；逐渐变成消耗道具允许玩家洗点（老头环）；到现在很多游戏都允许玩家任意洗点（黑神话悟空等）。门槛逐渐被下放，可见设计师越来越希望希望流派/加点切换的限制，不要成为阻碍“玩家挑战困难敌人”的绊脚石。</p>
+
+<h4 id="决定动作游戏怎么玩的底层逻辑">决定“动作游戏怎么玩”的底层逻辑</h4>
+
+<p>通俗来说，我们可以用“立回”（玩家调整选择优势位置）和“择”（根据情况挑选合适对策，猜也是一种挑选！）来描述格斗游戏或者说动作游戏的游玩过程，如果读者有一定动作游戏积累的话，对<strong>如何玩一个角色或者说如何打一些BOSS</strong>，肯定是有自己的心得的。我们这里以怪物猎人世界的太刀为例，太刀的招式派生状态机大致可以参考下图，下图左侧有一些关键词描述了对于太刀而言一些关键的行为：输出/调整战位&amp;蹭刀/积累资源/爆发输出。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/rewrite/6-480.webp 480w, /assets/generated/img/act/SSS/rewrite/6-760.webp 760w, /assets/generated/img/act/SSS/rewrite/6-1140.webp 1140w, /assets/generated/img/act/SSS/rewrite/6-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/rewrite/6.png" alt="" width="3015" height="1730" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>对于很多动作游戏我们都可以做类似的归纳或者对比，这里可以展开来讲的细节非常多——甚至可以单独再写一篇文章，网络上也有很多不错的内容，比如下面这些描述角色玩法或者BOSS打法相关的链接：</p>
+
+<ul>
+  <li><a href="https://www.bilibili.com/video/BV1DW41177Hq/">怪猎世界太刀基础操作指南</a></li>
+  <li><a href="https://www.bilibili.com/opus/853904004580638727">动作游戏间的战斗思路差异</a></li>
+  <li><a href="https://www.bilibili.com/video/BV1GUgWzPEbE">老牌共斗游戏（梦幻之星、怪物猎人、讨鬼传、黑夜君临等等）玩法相关</a></li>
+</ul>
+
+<p>这里我们想说的是，<strong>是什么决定了角色的玩法/BOSS的攻略方式</strong>？</p>
+
+<p>首先，动作游戏有一个最基础的规则，即基于框体判定产生的攻受击关系，什么意思呢：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/rewrite/7-480.webp 480w, /assets/generated/img/act/SSS/rewrite/7-760.webp 760w, /assets/generated/img/act/SSS/rewrite/7-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/rewrite/7.png" alt="" width="1479" height="1079" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>如上图1、3行红叉所示，如果某一时刻，敌人攻击框命中玩家的受击框，则会产生对应的<strong>攻击命中判定</strong>，最常见的攻击命中判定效果是“被命中的人进入受击动画”，因为受击时候往往会剥夺角色的行动能力，所以也可以说进了受击僵直。</p>
+
+<p>从这个角度，如果我们控制角色，在攻击框体到来之前，远离了攻击框判定区域，如上图2、4行绿勾所示，那我们就能避免被这次攻击命中。（或者反过来说，如果我们控制的是攻击方，那在攻击前，我们也需要确保攻击判定时，敌人要在我们的攻击范围内，这样攻击才能命中）</p>
+
+<p>动作游戏最底层的铁律的上半部分，就是<strong>基于框体（或者其他范围限定）的判定机制，而且这些判定会和角色动画/特效等表现，严格绑定互相耦合</strong>。从实际制作的角度，这些将通过角色动画轴里的功能脚本序列来实现。</p>
+
+<p>我们刚说攻击命中判定，最常见的受击判定效果是被命中的人进入受击僵直，事实上还有非常多不同的攻击命中判定效果，比如攻击方命中处于格挡状态的受击方，受击方可能仍然在格挡循环/格挡成功的状态中，且僵直为0或者比受击僵直要短。（当然设计师一般会通过别的方式来平衡某些行为的强度，来让避免一个行为成为无代价的通解。）</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/rewrite/8-480.webp 480w, /assets/generated/img/act/SSS/rewrite/8-760.webp 760w, /assets/generated/img/act/SSS/rewrite/8-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/rewrite/8.png" alt="" width="1435" height="600" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>那，对于选择使用格挡策略的玩家，他就不必要位移到如此远的安全距离避开攻受击判定，而是可以在攻击框的覆盖区域中，使用格挡的攻击判定效果来应对这次攻击。如上图第二行所示。</p>
+
+<p>动作游戏最底层的铁律的下半部分，就是<strong>根据角色状态（和其他系统规则）决定的丰富攻击命中判定效果，又或者说敌我僵直交互机制</strong>。对于动作游戏而言，各类僵直是非常强硬的效果，僵直将剥夺敌方行动能力，提到玩家自由行动的场面（玩家优势局面），否则玩家只能预判/配合敌方的行动（敌方优势局面），从这个角度，<strong>动作游戏其实是在敌方优势回合和我方优势回合之前来回切换的。</strong></p>
+
+<p>收一收，上下两部分决定了玩家和敌方交互的规则，规则再决定了玩家的游玩方式，以下图所示举个例子：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/rewrite/9-480.webp 480w, /assets/generated/img/act/SSS/rewrite/9-760.webp 760w, /assets/generated/img/act/SSS/rewrite/9-1140.webp 1140w, /assets/generated/img/act/SSS/rewrite/9-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/rewrite/9.png" alt="" width="3026" height="295" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<ul>
+  <li>敌方动作前摇/发生阶段
+    <ul>
+      <li>我是否有攻击可以中断敌人攻击动作/使其进入某种僵直？是否需要使用？</li>
+      <li>如果没有，是否有快速攻击动作可以再攻击判定前安全蹭刀？</li>
+    </ul>
+  </li>
+  <li>敌方攻击阶段
+    <ul>
+      <li>我是否需要移动到安全距离？</li>
+      <li>我是否能进入某些状态，使其敌方攻击命中判定产生其他效果？
+        <ul>
+          <li>包括但不限于霸体/格挡/无敌帧/被敌方命中自身各种强化或者敌方各种弱化……</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>敌方后摇阶段
+    <ul>
+      <li>我是否能发起某种攻击，攻击命中判定是否会让敌人进入某种僵直，僵直何时结束……</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="3d动作游戏攻击的避让模型和玩家对策">3D动作游戏攻击的避让模型和玩家对策</h4>
+
+<p>接着上文，我们讨论一下敌方一个具体攻击动作的命中/修正性能问题：</p>
+
+<p>我们可以将3D动作游戏的基础攻击情形抽象为，一个以某种移动方式朝玩家移动，并在过程中的某些时刻进行攻击判定的过程，按照这个思路，玩家的躲避事实上是一个离散时间（动作游戏以帧为单位更新逻辑）下的避让模型。</p>
+
+<p>那么过程中最重要的有两个参数，敌人的速度和转向速度，也或者相对来看，敌我的速度比和转向速度比。</p>
+
+<p>敌我速度和转向速度的优劣会让玩家的最优避让策略不同，具体来说，当玩家速度更快，直接远离即可；当速度不够的时候，尽量沿切线方向躲避，当两方都处于劣势，则可能无法躲开敌人的攻击判定。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/13-480.webp 480w, /assets/generated/img/act/SSS/13-760.webp 760w, /assets/generated/img/act/SSS/13-1140.webp 1140w, /assets/generated/img/act/SSS/13-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/13.png" alt="" width="1635" height="560" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>从数学模型回到游戏中敌人的一次攻击，<strong>敌人难度主要体现在靠近玩家的位移性能，和靠近过程中的转向性能</strong>。</p>
+
+<p>但是动作游戏毕竟不是简单的数学模型，比如，不同攻击的攻击框体大小甚至持续时间都不同，事实上，<strong>动作游戏往往耦合极深，各种参数彼此复杂交织</strong>，比如一次攻击中，位移性能不是持续不变的，而是随着动画的变化而变化的，转向性能也是一样，玩家往往要通过阅读敌人动画的变化来识别当前敌人的具体行动逻辑，从而辅助自己在最正确的时机做出合适的行为。</p>
+
+<p>结合一下上文提到的应对敌方攻击阶段中，玩家的两大类对策</p>
+
+<blockquote>
+  <ul>
+    <li>敌方攻击阶段
+      <ul>
+        <li>我是否需要移动到安全距离？</li>
+        <li>我是否能进入某些状态，使其敌方攻击命中判定产生其他效果？</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p>其实就分为两种，<strong>一种是玩家不希望和敌人产生攻击命中判定，另一种则是玩家希望和敌人产生某种攻击命中判定。</strong></p>
+
+<p>第一种很好理解，第二种我们举更多具体的例子吧：</p>
+
+<ul>
+  <li>闪避无敌帧或者极限闪避类。</li>
+  <li>格挡/盾反/精准格挡类。</li>
+  <li>相杀/拼刀/GP……</li>
+</ul>
+
+<blockquote>
+  <p>这里有很多细分不同，比如是敌方攻击阶段中敌人打到我，敌方攻击阶段中我打到敌人，敌方攻击阶段中我们互相打到，甚至有些都不是敌方攻击阶段也行……</p>
+</blockquote>
+
+<p>这里不具体展开，有兴趣的同学可以阅读笔者整理的<a href="https://docs.qq.com/slide/DUmNkc2dhcVRXdWZa">12种动作机制与160+案例</a>。（某种攻击命中判定的交互的机制一直在创新，从规则设计的角度思考对应的命中规则和效果也是非常有意义的。）</p>
+
+<p>对于第二类，客观来说我们是希望敌人修正/跟踪性能尽可能强的，这样更容易发生对应的攻击命中判定，甚至有时候我们需要主动蹭上去“碰瓷”。第二类往往还对玩家阅读阅读敌人动画状态有更高的要求。这里我们可以引入《游戏感》一书中提到的“观察决策行动”的循环，来进一步理解这个过程，根据<a href="https://humanbenchmark.com/tests/reactiontime">humanbenchmark</a>的数据，<strong>大多数人的接收到到完成执行的时间是200-250毫秒。60帧下是15帧。</strong></p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/15-480.webp 480w, /assets/generated/img/act/SSS/15-760.webp 760w, /assets/generated/img/act/SSS/15-1140.webp 1140w, /assets/generated/img/act/SSS/15-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/15.png" alt="" width="1625" height="488" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<!-- 总结下，当玩家需要阅读敌人动作时候，**敌人难度也会体现在动作是否易于阅读，和给玩家留下多少反应的时间** -->
+
+<!-- > 这里也给出一些例子：
+>
+> ![](/assets/img/act/SSS/v1.2.EG1.png)
+>
+> 这里我们同样以黑魂3的宝石结晶龙为例，他有若干不同难度/不同攻击方式的招式，除了基础的爪抓身体撞吐息，将蜷缩成车轮来滚还颇具想象力。
+>
+> 宝石龙这个例子比较偏向单段单段攻击的难度递进，可以留意追进性能/攻击框的大小的递进，回头有空再补充些以多段组合来做难度递进的案例。 -->
+
+<h4 id="游戏里的第一个敌人和第一次奖惩">游戏里的第一个敌人和第一次奖惩</h4>
+
+<p>在计算机科学中曾有道知名的面试题目，即询问“在浏览器输出一串网址，到浏览器渲染出网页的整个过程的细节”，那我们这里也参考这种刨根问底的思路，看看游戏中<strong>玩家遭遇的第一个敌人和发生的第一次奖惩</strong>。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/12-480.webp 480w, /assets/generated/img/act/SSS/12-760.webp 760w, /assets/generated/img/act/SSS/12-1140.webp 1140w, /assets/generated/img/act/SSS/12-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/12.png" alt="" width="1650" height="628" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>在战斗前，玩家一般已经学会了基础的控制角色，而在最初的战斗中，玩家一般需要控制角色，向敌人发起攻击动作，然后不断攻击直到消灭敌人，在这个过程中掌握角色基础的攻击行为。</p>
+
+<blockquote>
+  <p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/v1.1.EG1-480.webp 480w, /assets/generated/img/act/SSS/v1.1.EG1-760.webp 760w, /assets/generated/img/act/SSS/v1.1.EG1-1140.webp 1140w, /assets/generated/img/act/SSS/v1.1.EG1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/v1.1.EG1.png" alt="" width="2222" height="911" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+在《鬼泣V》中，如图所示的螳螂小怪（它应该有自己的名字，这里简单给个特色代号指代吧）应该是游戏第一只也是最基础的近战小怪，拥有三种不同的近战攻击方式，单爪戳地/单爪二连/双爪前收。虽然都是近战行为但是各有不同。</p>
+
+  <p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/v1.1.EG2-480.webp 480w, /assets/generated/img/act/SSS/v1.1.EG2-760.webp 760w, /assets/generated/img/act/SSS/v1.1.EG2-1140.webp 1140w, /assets/generated/img/act/SSS/v1.1.EG2-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/v1.1.EG2.png" alt="" width="2243" height="918" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+《黑暗之魂3》的第一只小怪则更加阴险，除了可互相衔接的基础挥刀外，还有一个长达六次的连续挥刀（黑魂3后续的怪物中也有很多这种疯狗刀法的设计）如果玩家被打中，极大可能被当场莽死，“乱拳干死老师傅”。</p>
+</blockquote>
+
+<p>有意思的是，游戏往往不会选择一个木桩，而是给一个“会动”的敌人给玩家打，初次游玩时的玩家，往往对自身的攻击手段还不熟悉，大概率会面临敌人的攻击（有时设计师也会狡猾的给玩家安排多个对手，让玩家无法轻松解决），当<strong>敌人的攻击袭来，玩家将在危机中第一次学习如何应对敌人的攻击</strong>，或者手忙脚乱地慌张避开，又或者闪躲不及被怪物打中。</p>
+
+<p>这里我们再精准描述下第一次“奖惩”：怪物发动了某种攻击（进入了某种动作，产生了某种形式的攻击），而这种攻击，将会对玩家行为进行某种筛选：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/11-480.webp 480w, /assets/generated/img/act/SSS/11-760.webp 760w, /assets/generated/img/act/SSS/11-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/11.png" alt="" width="1409" height="433" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<ul>
+  <li>若玩家进行了错误的行为没能处理好该攻击，则会受到伤害</li>
+  <li>若玩家进行了正确的行为处理得当，则可以对怪物造成伤害或者获得其他场面的优势。</li>
+</ul>
+
+<p>前面我们其实提到了，对于玩家处理敌人攻击的方式，最常见的方式是躲开，或者说是离开敌人攻击范围（避开敌人的攻击判定），现在的动作游戏经过多年发展，玩家有了更多处理敌人攻击手段的方式，<strong>这种多样化“处理敌人攻击”的过程，也是是近些年来玩家追求的“敌我交互”的重要组成部分。</strong></p>
+
+<h3 id="附录其他游戏设计方法与对比">附录：其他游戏设计方法与对比</h3>
+
+<p>本节我们花一点笔墨，聊一下什么是设计方法，简单介绍笔者知道的其他游戏设计方法/理论，并将3S方法和它们进行比较。</p>
+
+<h4 id="什么是设计方法论">什么是设计方法论</h4>
+
+<p>什么是设计方法论？设计方法论解决什么问题？答案很简单，设计方法指导设计师做设计。</p>
+
+<!-- 可能有同学会觉得为什么需要使用方法论，偶尔“灵感来了，才思泉涌，设计出无敌的游戏玩法/内容！”，这样不行吗？ -->
+
+<p>天才或许可以依靠灵感，但是对于普罗大众，这样太随机和偶然了。设计方法论是对偶然灵感，或者成功路径的总结，形成一种可靠<strong>思维方式，或者思考的步骤</strong>，力求井井有条，没有遗漏。利用规则和科学，解决一些<strong>拍脑袋设计</strong>很容易出现的问题。用规则，让高质量的内容产出能够持续，最终带来整体游戏体验的提高。</p>
+
+<!-- 设计方法论并不是“束缚创造力”，而是**帮助设计师建立稳定、可靠的思维框架**。天才可以依靠灵感，但大部分人需要可复用的方法，来保证设计结果的质量与一致性。 -->
+
+<p>我们看一些具体的设计方法论感受一下，这里分一下类：</p>
+
+<h4 id="普适流程">普适流程</h4>
+
+<p>一部分设计方法论是偏流程向的，比如：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/4-480.webp 480w, /assets/generated/img/act/SSS/4-760.webp 760w, /assets/generated/img/act/SSS/4-1140.webp 1140w, /assets/generated/img/act/SSS/4-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/4.png" alt="" width="1644" height="629" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>偏流程向的方法论更<strong>像一个引导手册，指导在某些阶段做某些事情</strong>，阶段完成后再进行下个阶段，按部就班，东西就可以稳定做完。</p>
+
+<p>比如：</p>
+
+<ol>
+  <li>游戏周期理论：分为新手期，成长期，平台期，强调不同时期要做不同的设计倾向。</li>
+  <li>开放世界分层设计方法：强调对世界进行区域，POI的分层设计，以大化小。</li>
+  <li>游戏制作流程/软件开发生命周期理论：概念、原型、预生产、生产</li>
+  <li>任天堂关卡“起 承 转 合”思路：强调难度的递进和组合。</li>
+</ol>
+
+<h4 id="设计思路">设计思路</h4>
+
+<p>另外一部分设计方法论<strong>更偏向设计思路</strong>，这部分往往没办法直接告诉你你要做什么，但是这些方法论或者思维方式，往往能<strong>在面对复杂问题时，让你清醒地明白什么是真正起作用的部分。</strong></p>
+
+<p>比如：</p>
+
+<ol>
+  <li>MDA理论：游戏可以分为机制，动态，美学几个层次</li>
+  <li>游戏感理论：游戏的感受可以分为实时操控，模拟空间，润色（特殊物理体验）</li>
+  <li>心流理论：强调游戏的难度应该随着玩家水平的提升而提升，让玩家持续投入地有玩游戏。</li>
+  <li>传统学术理论，如罗斯·凯洛斯的游戏四乐趣：竞争，机会，模仿，眩晕；游戏的四种思维能力：建模，专注，共情，想象</li>
+  <li>GMT理论：Goal-Means-Tools理论，目标（玩家、体验、设计）-完成目标的手段-支持手段落地的理论/逻辑工具，<a href="https://zhuanlan.zhihu.com/p/329912608">推荐阅读原文</a><!-- ![](/assets/img/act/SSS/5.png) --></li>
+  <li>KRS设计方法，Knowledge知识/概念、Rule规则、Skill技巧，<a href="https://zhuanlan.zhihu.com/p/55891408">可阅读参考</a><!--![](/assets/img/act/SSS/6.png) --></li>
+</ol>
+
+<p>对比而言，3S方法<strong>更偏向于普适流程</strong>，能直接指导具体设计的实行，当然，3S方法也可以用在对现有游戏或者流程的分析中，后文介绍3S方法时，会有很多具体的案例。</p>
+
+<h4 id="sss方法的特别之处">SSS方法的特别之处</h4>
+
+<p>上一节中我们已经见到了非常多的设计方法和理论，3S有什么特别的呢？这里有两点：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/SSS/9-480.webp 480w, /assets/generated/img/act/SSS/9-760.webp 760w, /assets/generated/img/act/SSS/9-1140.webp 1140w, /assets/generated/img/act/SSS/9-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/SSS/9.png" alt="" width="1647" height="376" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<ul>
+  <li>3S用于内容设计</li>
+</ul>
+
+<p>3S方法并不追求大而全，而是相对实在朴素地<strong>解决游戏具体内容设计的问题</strong>，比如设计一个关卡，设计一场BOSS战斗。</p>
+
+<p>对于现有游戏的开发，宏观上，很多都是在一种已有的模式/框架上产生变体，微观的内容设计上，虽然也需要有参考，但是更加需要脚踏实地、注重细节，需要设计师一砖一瓦的构建游戏的具体内容。随着现在开发成本和复杂的上升，有些时候并不是简单的加钱加资源，就能把内容产出做好。</p>
+
+<p>3S就希望在这些地方想得足够清楚，不浪费资源，能够扎实，且经得起考究。</p>
+
+<ul>
+  <li>3S在强调交互和玩法的设计</li>
+</ul>
+
+<p>在具体的内容制作上，3S以“问题-解决”的方式<strong>强调底层玩家行为的筛选（奖惩导向）</strong>，解决忽视底层的“交互玩法”的内容设计，很容易出现的“不好玩”、“没区别”的问题。</p>
+
+<p>大家同样都是做一段内容体验，都希望做得有趣，为玩家带来惊喜，如何在早期设计，就能从底层的“交互玩法”层面，进行设计，然后推动落地，希望使用3S方法可以帮到你。</p>
+
+<h2 id="全文总结">全文总结</h2>
+
+<p>本文内容较多，上半部分用实操讲了使用3S方法设计一个BOSS，下文则引出了“奖惩导向”的规则和3S方法用于动作游戏设计的更多要点，最后简单枚列了一些别的游戏设计方法。</p>
+
+<p>全文文字内容有1.7万字，还有很多内容是以图的形式呈现的，（笔者很希望每个概念都能有对应的示意图帮助读者理解，费了很大功夫在画图上），同时本文很努力插入了很多GDC分享的精华片段在对应章节……本文从3月开始编写，到现在完成已经是9月份了，来回其实经历过2次结构大变的“重写”，也或许就像《黑神话:悟空》制作人冯骥所说：“踏上取经路，比抵达灵山更重要”。</p>
+
+<p>希望能对读者有所帮助，也希望读者能做出好玩的游戏。</p>]]></content><author><name></name></author><category term="动作游戏设计" /><summary type="html"><![CDATA[本文介绍一种动作游戏设计的「SSS」方法，一方面总结了过去七年多的动作游戏设计经验，另一方面希望沉淀出一套可复用、可推广的“80分工作流”。本文分为上下两部分：上半部分以怪物设计为例，讨论方法论及其实操应用，下半部分我们将看到更多用法，然后讨论背后的理论和补充一些知识。笔者能力有限，行文多有纰漏，欢迎读者批评指正。]]></summary></entry><entry><title type="html">动作游戏设计中的节奏感</title><link href="https://design.jskyzero.com/2025/03/16/ActionGameDesign2/" rel="alternate" type="text/html" title="动作游戏设计中的节奏感" /><published>2025-03-16T00:00:00+00:00</published><updated>2025-03-16T00:00:00+00:00</updated><id>https://design.jskyzero.com/2025/03/16/ActionGameDesign2</id><content type="html" xml:base="https://design.jskyzero.com/2025/03/16/ActionGameDesign2/"><![CDATA[<p>本文继续介绍一些动作游戏的节奏感相关讨论，方便读者在分析、理解、设计动作游戏时使用。</p>
+
+<h1 id="动作游戏的哲学与相关设计方法论">动作游戏的哲学，与相关设计方法论</h1>
+
+<p>施工中……</p>
+
+<h2 id="再抽象">再抽象</h2>
+
+<p>亮着红蓝光的灯泡</p>
+
+<h2 id="节奏">节奏</h2>
+
+<p>基础节奏和变化</p>
+
+<h2 id="风险理论">风险理论</h2>
+
+<p>风险回报</p>
+
+<h2 id="余波效应">余波效应</h2>]]></content><author><name></name></author><category term="动作游戏设计-施工中" /><summary type="html"><![CDATA[本文继续介绍一些动作游戏的节奏感相关讨论，方便读者在分析、理解、设计动作游戏时使用。]]></summary></entry><entry><title type="html">摘录：《中国武术实用大全》</title><link href="https://design.jskyzero.com/2024/11/29/wushu/" rel="alternate" type="text/html" title="摘录：《中国武术实用大全》" /><published>2024-11-29T00:00:00+00:00</published><updated>2024-11-29T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/11/29/wushu</id><content type="html" xml:base="https://design.jskyzero.com/2024/11/29/wushu/"><![CDATA[<h1 id="摘录中国武术实用大全">摘录：《中国武术实用大全》</h1>
+
+<h2 id="序">序</h2>
+
+<ul>
+  <li>《纪效新书》由戚继光编著，纪效说的选实用记录，新书说的是有遵循也有创新。武术也像这本书一样需要总结历史，结合当下。</li>
+  <li>正名：
+    <ul>
+      <li>武术名称从公元前21世纪开始演变，</li>
+      <li>武术二字出于南朝《昭明文选》的“偃闭武术，阐扬文令”，意思是停止战争，宣扬文治</li>
+      <li>国术是中国武术的简称，但是武术不限于中国</li>
+      <li>功夫是两广地区的通俗叫法，是有功力、本事的意思，和武术的内涵是不一致的</li>
+      <li>Martial Art不仅包括武术，也包括其他多元武技比如柔道空手道合气道等</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="概论">概论</h2>
+
+<ul>
+  <li>定义
+    <ul>
+      <li>武术是以中国传统文化为理论基础，以徒手和器械的攻防动作为主要锻炼内容，有功法运动、套路运动、格斗运动三种运动形式的体育项目。</li>
+      <li>功法是指锻炼某种攻防绝技的锻炼方式
+        <ul>
+          <li>西方体育：强调训练量快速提升素质</li>
+          <li>武术功法则强调内外统一，有序配合</li>
+        </ul>
+      </li>
+      <li>套路是指按照一定格律将单个攻防动作编串成套进行练习的方法
+        <ul>
+          <li>体操、花样滑冰强调肢体开展</li>
+          <li>武术套路则强调动作开中有合</li>
+        </ul>
+      </li>
+      <li>格斗是指两人遵循一定规律，运用攻防动作互较胜负的锻炼方法
+        <ul>
+          <li>拳击、散打强调以大打小，以快打慢</li>
+          <li>武术格斗则注重由小转大，“四两拨千金”</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>起源和产生
+    <ul>
+      <li>徒手格斗：九黎族蚩尤，崇尚牛，以角抵人</li>
+      <li>古代武术的雏形：武器，军队出现，以格杀为唯一目的，兵械为主</li>
+      <li>近代武术的雏形：明代，练功、单舞、对搏并重，健身价值，审美价值得到重视</li>
+      <li>清代民国：，火器大规模使用，民间蓬勃发展</li>
+      <li>当代：套路比赛，跨入世界体坛</li>
+    </ul>
+  </li>
+  <li>特点
+    <ul>
+      <li>中华传统文化、攻防在线性和表现性（体现意向但实际不一定有用，花架子）、多武艺多形式统一……</li>
+    </ul>
+  </li>
+  <li>价值
+    <ul>
+      <li>健身、防身、审美、中华文化</li>
+    </ul>
+  </li>
+  <li>分类
+    <ul>
+      <li>江流分类法：长拳（少林拳）、长击（通背拳、劈挂拳）、短打（南拳、形意拳）、圆柔（太极拳、八卦掌）</li>
+    </ul>
+  </li>
+  <li>功法运动
+    <ul>
+      <li>柔功：肢体关节活动幅度和肌肉伸缩性能</li>
+      <li>内功：意、气、劲、形完整一体</li>
+      <li>硬功：肢体攻击能力和抗击能力</li>
+      <li>轻功：发展人体平衡能力和翻腾奔跑能力</li>
+    </ul>
+  </li>
+  <li>十八般武艺
+    <ul>
+      <li>抛射兵器：弓、弩、箭矢、铳</li>
+      <li>长兵器：戈、矛、枪、棍、殳（shū）、杵、杆、枝、棒、斧、钺（yuè）、戟、（长杆）大刀、镋（tǎng）、耙头（把头）、扒、挝（wō）、铲</li>
+      <li>短兵器：剑、（短柄）刀、鞭、锏（简）、钩、镰、锤、拐、环（圈）</li>
+      <li>软兵器：链、流星、绵绳套索</li>
+      <li>徒手：统称为“白打”。</li>
+    </ul>
+  </li>
+  <li>武术与其他文化
+    <ul>
+      <li>兵法：战略原则、诡道</li>
+      <li>医学：治疗、锻炼、穴位</li>
+      <li>气功：八段锦、易筋经</li>
+      <li>宗教：
+        <ul>
+          <li>原始宗教：主张图腾崇拜，“角抵”</li>
+          <li>道教：主张方术修炼长生不老，太极拳</li>
+          <li>佛教：主张生即是苦，修炼来生前往极乐世界陪伴佛祖，中唐慧能改造，放下屠刀立地成佛，融合儒道形成中国佛教禅宗，少林拳</li>
+          <li>民间宗教：修炼硬气功喊“坚如磐石”</li>
+        </ul>
+      </li>
+      <li>与中国传统哲学（仅简要摘录）</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>名词</th>
+      <th>出处</th>
+      <th>原意</th>
+      <th>拳家思想</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>无极</td>
+      <td>复归于无极</td>
+      <td>宇宙是原始的，无形无象的本体</td>
+      <td>无极虽名无，但无限由此始</td>
+    </tr>
+    <tr>
+      <td>太极</td>
+      <td>易有太极，是生两仪</td>
+      <td>以太极产生万物的本源</td>
+      <td>有意无形的内外动静之态就是太极，内意的运转可以导出千姿百态</td>
+    </tr>
+    <tr>
+      <td>两仪</td>
+      <td>易有太极，是生两仪</td>
+      <td>指天地或者阴阳</td>
+      <td>引申为动静之理</td>
+    </tr>
+    <tr>
+      <td>阴阳</td>
+      <td>一阴一阳之谓道</td>
+      <td>阴阳是两种对应而统一的物质或者状态，他们的互相交替作用是宇宙的根本道理（道）</td>
+      <td>武术也遵循这个道理</td>
+    </tr>
+    <tr>
+      <td>刚柔</td>
+      <td>乾刚坤柔</td>
+      <td>刚柔相推，宇宙间的万事万物才能产生变化</td>
+      <td>刚柔互易、刚柔相济、柔化刚发、刚阻柔乘，以柔克刚</td>
+    </tr>
+    <tr>
+      <td>三才</td>
+      <td>有天道焉，有人道焉，有地道焉，兼三才而两之</td>
+      <td>以天地人，合为三才</td>
+      <td>三才者，头手足</td>
+    </tr>
+    <tr>
+      <td>四象</td>
+      <td>两仪生四象</td>
+      <td>金木水火</td>
+      <td>方位，移动方式</td>
+    </tr>
+    <tr>
+      <td>五行</td>
+      <td>金木水火土</td>
+      <td>五行相生相克，事务存在滋生与克制</td>
+      <td>五行系统（劈崩钻炮横）、人体器官、攻防属性</td>
+    </tr>
+    <tr>
+      <td>八卦</td>
+      <td>阳爻阴爻组成乾、坤、震、巽xùn、坎、离、艮gèn、兑</td>
+      <td>象征各种天人现象和万事万物</td>
+      <td>头为乾、以卦立象、以卦喻象、以方位名象</td>
+    </tr>
+    <tr>
+      <td>先后天说</td>
+      <td> </td>
+      <td>混沌未分/天地判分或者婴儿出生前/后</td>
+      <td>后天补先天，后天反先天，先后天合一</td>
+    </tr>
+    <tr>
+      <td>天人合一说</td>
+      <td> </td>
+      <td>天人相类、天人相通、天人感应、天道人道统一等</td>
+      <td>以天人相通、天人感应为基础的天人合一</td>
+    </tr>
+    <tr>
+      <td>自然</td>
+      <td> </td>
+      <td>人的行为要效法自然才符合道</td>
+      <td>顺其自然、合乎自然、自然而然</td>
+    </tr>
+    <tr>
+      <td>形神</td>
+      <td> </td>
+      <td>形外形，神内在</td>
+      <td>既练形体筋骨皮，又练内在精气神</td>
+    </tr>
+    <tr>
+      <td>体用</td>
+      <td> </td>
+      <td>体性质、本质，用功用、属性</td>
+      <td>动静体用说，静为本体，动为动作</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="技法--教学--训练">技法 &amp; 教学 &amp; 训练</h2>
+
+<h2 id="拳种流派">拳种流派</h2>
+
+<ul>
+  <li><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E6%AD%A6%E6%9C%AF">中国武术</a>
+<picture><source type="image/webp" srcset="/assets/generated/img/books/wushu/2-480.webp 480w, /assets/generated/img/books/wushu/2-760.webp 760w, /assets/generated/img/books/wushu/2-1140.webp 1140w, /assets/generated/img/books/wushu/2-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/books/wushu/2.png" alt="" width="1689" height="746" loading="lazy" decoding="async" fetchpriority="auto"></picture></li>
+</ul>
+
+<h2 id="古今兵械">古今兵械</h2>
+
+<ul>
+  <li><a href="https://zh.wikipedia.org/wiki/%E5%8D%81%E5%85%AB%E8%88%AC%E5%85%B5%E5%99%A8">十八般兵器</a>
+<picture><source type="image/webp" srcset="/assets/generated/img/books/wushu/1-480.webp 480w, /assets/generated/img/books/wushu/1-760.webp 760w, /assets/generated/img/books/wushu/1-1140.webp 1140w, /assets/generated/img/books/wushu/1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/books/wushu/1.png" alt="" width="1699" height="480" loading="lazy" decoding="async" fetchpriority="auto"></picture></li>
+</ul>
+
+<h2 id="功法--技法--常识">功法 &amp; 技法 &amp; 常识</h2>]]></content><author><name></name></author><category term="阅读笔记" /><summary type="html"><![CDATA[摘录：《中国武术实用大全》]]></summary></entry><entry><title type="html">动作游戏设计参考索引</title><link href="https://design.jskyzero.com/2024/07/31/action_design_pve/" rel="alternate" type="text/html" title="动作游戏设计参考索引" /><published>2024-07-31T00:00:00+00:00</published><updated>2024-07-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/07/31/action_design_pve</id><content type="html" xml:base="https://design.jskyzero.com/2024/07/31/action_design_pve/"><![CDATA[<p>重定向中……</p>
+
+<script>window.location.replace("https://docs.qq.com/slide/DUmFsa1VlY3JOUlNR");</script>]]></content><author><name></name></author><summary type="html"><![CDATA[重定向中……]]></summary></entry><entry><title type="html">动作游戏的本质</title><link href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/" rel="alternate" type="text/html" title="动作游戏的本质" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/05/14/ActionGameDesign</id><content type="html" xml:base="https://design.jskyzero.com/2024/05/14/ActionGameDesign/"><![CDATA[<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
+
+<h1 id="动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</h1>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/xmind-0-480.webp 480w, /assets/generated/img/act/2022/xmind-0-760.webp 760w, /assets/generated/img/act/2022/xmind-0-1140.webp 1140w, /assets/generated/img/act/2022/xmind-0-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/xmind-0.png" alt="" width="3111" height="1555" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<!-- 🚧🚧🚧注意：本文有部分章节未补充详细案例，有待施工，但是本文结构是完整的。 -->
+
+<h2 id="广义和狭义的动作游戏">广义和狭义的动作游戏</h2>
+
+<!-- ![](/assets/img/act/2022/xmind-1.png) -->
+
+<p>本节想先讨论一些远离具体的设计的、有关动作游戏的宏观理解，这些作为一些基础铺垫，帮助我们深入理解动作游戏的核心特征与乐趣，逐步导出下文的一些理解、设计方法论。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/03-480.webp 480w, /assets/generated/img/act/2022/03-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/03.jpg" alt="动作游戏核心体验" width="1045" height="354" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h3 id="动作游戏的分类">动作游戏的分类</h3>
+
+<h4 id="广义动作游戏">广义动作游戏</h4>
+
+<p>本文无意对动作游戏的今生往世做细致详细的介绍，但是动作游戏是一个不同人理解起来相当容易产生歧义的游戏类型。归根结底，动作游戏的历史和内涵过于丰富，广泛存在于不同类型游戏的体验与机制上。</p>
+
+<p>从这个角度，我们可以得到维基百科对动作游戏的广义定义：<strong>任何以动作为主要表现内容的游戏，都可以算作动作游戏。</strong>比如一些跨类别的动作游戏“影子”的例子：MOBA游戏中英雄的技能、射击游戏中近战动作……</p>
+
+<!-- + 动作游戏与射击游戏的比较
+
+从感受上来说，都是对于显示的模拟，一种是古朴一种是现代。
+从制作上来说，射击易于制作
+从玩家角度，射击易于掌握，同样都作为广泛基础类型 -->
+
+<h4 id="狭义日式动作游戏">狭义（日式）动作游戏</h4>
+
+<p>以广义去探讨，可能会像面对一整片森林去观察某种特定植物，未必能得到想要的答案。</p>
+
+<p>如果你看了本博客的其他游戏分析，你会发现其中大多为日系动作游戏，维基百科中存在于另一个关于<strong><a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B2%E3%83%BC%E3%83%A0">日式狭义动作的定义：分为2D和3D，2D分为横版卷轴、纵向卷轴、俯视角、固定画面；3D分为无双类、硬核动作、怪猎、魂like，格斗类则作为掌上明珠单独枚举</a></strong>。</p>
+
+<h4 id="我们所讨论的是">我们所讨论的是</h4>
+
+<p>更接近上面狭义（日式）动作游戏的定义，正如<a href="https://zhuanlan.zhihu.com/p/25481394">旗舰评论所言</a>：</p>
+
+<blockquote>
+  <p>日本定义下的狭义动作游戏，是若干个特别强调“反应与操作”的细分类型游戏的松散集合……把这些游戏类型从老到新列成一张表，它本身就是动作游戏设计的发展史：我们几乎找不出由欧美游戏设计师做出的设计创举。从最早的碰撞块和帧数判定理论开始，攻击-防御-投掷的基本三角克制关系是日本动作游戏设计出来的；跳跃和空中战是日本动作游戏设计出来的；群体战斗AI、主动性、QTE、一闪……这些设计也都是日本动作游戏先设计出来的……</p>
+</blockquote>
+
+<h2 id="动作游戏的哲学与本质">动作游戏的哲学与本质</h2>
+
+<!-- ![](/assets/img/act/2022/xmind-2.png) -->
+
+<p>“动作”伴随着人类从动物形成社会的全过程，早已写入了人类的基因。当动作这个概念进行抽象并用于游戏娱乐，动作游戏诞生了。</p>
+
+<p>动作游戏本质或者核心逻辑，抽象起来非常简单：<strong>玩家 控制 游戏角色 播放 动作。</strong></p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/03-1-480.webp 480w, /assets/generated/img/act/2022/03-1-760.webp 760w, /assets/generated/img/act/2022/03-1-1140.webp 1140w, /assets/generated/img/act/2022/03-1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/03-1.jpg" alt="动作游戏核心体验" width="1780" height="332" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h3 id="设计方法论奖惩导向-上">设计方法论：奖惩导向 上</h3>
+
+<!-- ![](/assets/img/act/2022/xmind-2.1.png) -->
+
+<h4 id="控制的乐趣">控制的乐趣</h4>
+
+<p>岔一下话题，按照上文的抽象，如何让“控制”变得有趣？（这是一个很大的话题，也不局限于动作游戏。）</p>
+
+<p>事实上，纯粹的控制的乐趣是很有限的，以游戏感理论框架来解释的话，单纯的控制主要的感受是：即时控制 &amp; 润色（特殊物理感受）。</p>
+
+<!-- ![](/assets/img/books/game_feeling/2.png) -->
+
+<p>一种常见的，使得控制变得有趣的方式是，在设计上<strong>赋予控制这件事更多意义</strong>，也即，游戏感中理论的模拟空间的相关感受。（换个说法，这也是为什么动作游戏通常不是随意的控制就行，而是讲究观察画面获取信息，再进行控制。）</p>
+
+<blockquote>
+  <p>对于一些动作游戏的高手玩家，一个有意思的说法是，动作游戏就好像音乐游戏。这个说法非常有趣，音乐游戏对于时机和判定的显示十分简单，甚至可能对大多数人都会感到枯燥和重复，对于这些已经完全掌握了游戏规则（设计师的决策导向）和阅读画面信息（完美获取动画关键信息）的玩家而言，要做的事情事实上和音乐游戏，差不太多。</p>
+
+  <p>当然这对于动作游戏的大部分玩家都是不太成立的，大众玩家不一定知道决策的方式，也不一定能掌握好画面信息的阅读，更重要的是对动作游戏复杂动态交互的表现远没有厌烦。</p>
+</blockquote>
+
+<h4 id="奖惩导向">奖惩导向</h4>
+
+<p>赋予更多意义这个思路下，一个非常有效的做法是<strong>奖惩导向</strong>，听起来很单纯：在玩家做出正确的控制时奖励，做出错误控制时惩罚。奖惩导向最基本也最广泛的例子是血量。</p>
+
+<blockquote>
+  <p>沿着奖惩这个思路，我们还可以理解，<a href="https://archive.org/details/GDC2016Inaba">2016年GDC白金工作室的分享《无国界的动作游戏》</a>，中提到的，“动作游戏是一种根据情形选择行为的被动游戏”，“动作游戏就是设计考验场合与突破考验场合的方法”，这个设计思路。</p>
+
+  <p><a href="https://zhuanlan.zhihu.com/p/25481394">旗舰评论在谈论动作游戏的重构中也有段文字</a>，表达相同的概念：“狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。”</p>
+
+  <p>事实上，奖惩思路或者说概念，是不局限于动作游戏的，早在<a href="https://archive.org/details/2004_GDC_-_03-24-2004_Sakurai_1230-130p_2-Channel">2004年GDC樱井政博的分享《游戏设计：风险与回报》</a>中，针对玩家行为的反馈设计就有所提及。</p>
+</blockquote>
+
+<h3 id="设计方法论奖惩导向-下">设计方法论：奖惩导向 下</h3>
+
+<p>本节简单聊下对于动作游戏，奖惩导向一些需要注意的东西。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/08-480.webp 480w, /assets/generated/img/act/2022/08-760.webp 760w, /assets/generated/img/act/2022/08-1140.webp 1140w, /assets/generated/img/act/2022/08-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/08.png" alt="" width="1890" height="271" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h4 id="奖惩设计的基本要求">奖惩设计的基本要求</h4>
+
+<p><strong>为了让奖惩导向生效，游戏会需要有一些最基础的要求</strong>，这里按照过程细分为以下三个环节：</p>
+
+<ol>
+  <li>获取信息：动作、画面清晰明确；位移、判定符合预期、经验</li>
+  <li>采取行动：玩家有应对各种情况的处理方式；玩家知道有这些方式存在，并知道如何选择</li>
+  <li>行动产生结果：结果呈现清晰明确，自然</li>
+</ol>
+
+<blockquote>
+  <p>这里可以带入一些没那么好的游戏作为反向例子理解，比如：当一些游戏的动画看不清，就会影响玩家对信息的获取，然后干扰玩家的决策，导致结果不符合预期，给玩家带来不好的体验。</p>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/09-480.webp 480w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/09.png" alt="" width="634" height="283" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h4 id="奖惩设计方向的取舍">奖惩设计方向的取舍</h4>
+
+<p>在基本的奖惩导向方针以后，可能还会面临一个分配问题，是设计更多的考核场景？还是给玩家设计更多的选项？这里其实有一些选择的方式，比如：</p>
+
+<ol>
+  <li>场合少选项多（比如无双类游戏，主角性能较强角色较多，怪物考核较弱）</li>
+  <li>场合多选项少（比如近些年的魂like游戏，主角能力种类较少，而关卡和敌人丰富度和考核方式极多）</li>
+  <li>两者试图都多（也即，处于相对均衡的状态）。</li>
+</ol>
+
+<p><strong>不同的倾向也可以为不同的游戏带来不同的乐趣</strong>，也或者有人会说，这是一个更侧重于主角，或者更侧重于怪物，或者两者相对均衡的游戏。</p>
+
+<blockquote>
+  <p>这里我们没有说两者都非常重要，而是说两者相对均衡，是因为，一般不能要求玩家“左手画圆，同时右手画框”，如果俩都想要，那最好降低各自的难度，或者至少是逐步给玩家提高难度的。</p>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/10-480.webp 480w, /assets/generated/img/act/2022/10-760.webp 760w, /assets/generated/img/act/2022/10-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/10.png" alt="" width="1348" height="253" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h4 id="让奖惩设计长期有效">让奖惩设计长期有效</h4>
+
+<p>奖惩导向会让玩家<strong>自然而然的去追求奖励收益最大化，如何让这个行为长期有效</strong>？这里有一些具体的思路参考：</p>
+
+<ol>
+  <li>避免追求奖励方式的同质化：比如上文说过场合、选项的配比，这里重点提下攻击类行为的命中产生的受击僵直，可以设计不同僵直的连招序列，或者不同控制方式：浮空、投技、眩晕等，或者不同怪物有着不同的僵直甚至是没有僵直（霸体）</li>
+  <li>让奖励的最大化有一定难度：比如操作难度，或者需要玩家自行学习探索才能发现</li>
+</ol>
+
+<blockquote>
+  <p>动作游戏的很多行为是即时响应、高耦合且多重状态变化的（比如攻击动作会伴随着位移），从这个角度来说，动作游戏天生就是有深度和门槛的，从设计者的角度来说，设计动作也是天生具有复杂度的。</p>
+</blockquote>
+
+<p>总结下，在某种程度上，奖惩导向是否有效和有趣，决定了一款动作游戏的耐玩性和乐趣度。</p>
+
+<blockquote>
+  <p>近些年来提到动作游戏经常会提起另一个词：“交互”，个人认为交互的内涵是非常丰富的，交互概念上更强调电子游戏的互动性，对比而言，<strong>奖惩判定</strong>像是某种静态瞬间的交互结果描述，<strong>奖惩导向</strong>更多是说玩家玩游戏时，选择交互方式的这个过程，这里不再进一步展开。</p>
+</blockquote>
+
+<h2 id="基于m-d-a理论的理解">基于M-D-A理论的理解</h2>
+
+<!-- ![](/assets/img/act/2022/xmind-3.png) -->
+
+<p>收一收，我们继续把“玩家 控制 游戏角色 播放 动作。”这个底层逻辑，放入<strong>M机制-D动态-A美学</strong>理论框架中：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/03-2-480.webp 480w, /assets/generated/img/act/2022/03-2-760.webp 760w, /assets/generated/img/act/2022/03-2-1140.webp 1140w, /assets/generated/img/act/2022/03-2-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/03-2.jpg" alt="动作游戏核心体验" width="1747" height="493" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>这里给动作游戏的归纳了两种乐趣（不具备啥泛用性，可能也就在乐趣区分的时候有点用）</p>
+
+<ul>
+  <li>控制感：内涵较为丰富，1.符合直觉的控制 2.丰富的控制选项 3.丰富的考核场景（带来不同的正面应对意义）</li>
+  <li>打击感：聚焦于动作本身的美学呈现。</li>
+</ul>
+
+<p>我们可以尝试继续挖掘M-D-A三层：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/04-480.webp 480w, /assets/generated/img/act/2022/04-760.webp 760w, /assets/generated/img/act/2022/04-1140.webp 1140w, /assets/generated/img/act/2022/04-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/04.jpg" alt="MDA框架" width="1743" height="905" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h3 id="设计方法论底层机制">设计方法论：底层机制</h3>
+
+<p>这部分主要是一些经典或者传统的动作游戏规则和对应的实现方式。比如：</p>
+
+<h4 id="状态机-逻辑轴-系统逻辑">状态机 逻辑轴 系统逻辑</h4>
+
+<p>具体来说：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>项目</th>
+      <th>说明</th>
+      <th>举例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>状态机</td>
+      <td>决定有多少个动画状态：长度、表现、跳转等</td>
+      <td>一个Actor有idle walk show三个状态</td>
+    </tr>
+    <tr>
+      <td>逻辑轴</td>
+      <td>决定单个动画的框体变化、逻辑脚本执行、表现创建等</td>
+      <td>walk状态有受击框</td>
+    </tr>
+    <tr>
+      <td>系统规则</td>
+      <td>其余更上层的规则，比如数值积蓄</td>
+      <td>比如必须有3格能量才能释放（从idle跳转）show技能</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="一些比较典型的动作游戏的底层机制实现过程">一些比较典型的动作游戏的底层机制实现过程</h4>
+
+<p>具体来说：</p>
+
+<ol>
+  <li>攻击命中进入受击动画：攻击框与受击框有交集……（后略）</li>
+  <li>投技的实现：投技框与受击框有交集……（后略）</li>
+</ol>
+
+<p>我们也会看到一些底层机制相对比较“模糊”的动作游戏（非刻板印象，但是欧美厂商的居多）：</p>
+
+<ul>
+  <li>比如动画多用融合导致动画切换、帧数感知不清晰；判定和移动方式引入较多辅助算法，导致性能感知弱</li>
+  <li>动作之间的打断规则不清晰，指令预输入规则不统一影响手感</li>
+</ul>
+
+<p>最近的经验来说，这些问题并不是决定性的缺陷，但是这些细节确实决定了一款动作游戏是否能达到殿堂级的“高度”。</p>
+
+<h3 id="设计方法论微观循环">设计方法论：微观循环</h3>
+
+<p>事实上，动作游戏的玩家不断在重复着：感知、认知、行动的循环过程。</p>
+
+<p>认知和行动是操控的一部分，很好理解；感知的话，前面已经提到了玩家阅读画面获取信息的重要性——本质上是为了利用奖惩机制让玩家的控制有能更多乐趣。</p>
+
+<h4 id="针对感知的设计">针对感知的设计</h4>
+
+<p>可以引入信息传递模型：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/05-480.webp 480w, /assets/generated/img/act/2022/05-760.webp 760w, /assets/generated/img/act/2022/05-1140.webp 1140w, /assets/generated/img/act/2022/05-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/05.jpg" alt="" width="1782" height="482" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>针对发送、噪声、接收等环节都可以对应上一些具体的设计，这里不再具体举例。</p>
+
+<h4 id="针对认知的设计">针对认知的设计</h4>
+
+<p>这部分，理论上，玩家的认知决策规则，应该与设计师设计的规则维持一致（为了让“奖惩”有效且持续有效）。</p>
+
+<p>这里补充一些典型的认知到的行为的目标，和目标可能侧重的层次，如下：</p>
+
+<ol>
+  <li>【感知】精准交互类：配合敌方动作判定，释放动作，一般可以产生额外效果，比如当身/返技/弹反/防反/GP等等</li>
+  <li>【认知】抉：结合当前情景，多为敌我位置、状态，从可选行为中选择最优行为</li>
+  <li>【认知】量表计算类：显性或者隐性地统计攻击等造成的计数量表增加或者减少，并合理利用计数满额后的效果比如产生硬直等</li>
+  <li>【行动】移动-回避类：使用某些手段远离某个区域——多为攻击区域</li>
+  <li>【行动】移动-进攻类：精确地调整人物位置、朝向等，使得下次行为刚好命中目标或目标特定部位</li>
+  <li>【行动】连招/Combo：连续完成一系列指令输入，通常控制在僵直时窗口内，输入方式可能会需要摇杆组合按键——搓招</li>
+</ol>
+
+<h4 id="针对行动的设计">针对行动的设计</h4>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/05-1-480.webp 480w, /assets/generated/img/act/2022/05-1-760.webp 760w, /assets/generated/img/act/2022/05-1-1140.webp 1140w, /assets/generated/img/act/2022/05-1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/05-1.jpg" alt="" width="1782" height="243" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>这部分主要是玩家控制的方式，事实上玩家也有着屏幕、键盘鼠标、手柄等多种输入设备，各自也有一些经典输入模式设计。</p>
+
+<h4 id="注意事项">注意事项</h4>
+
+<p>再次重申，一般不能要求玩家“左手画圆，同时右手画框”，尤其是上面提到了多个层次的设计内容，如果你既要要求玩家精准阅读信息来及时操作，还要要求复杂输入高精准瞄准，那多半是太为难玩家了，倒不是说不能为难玩家，只是，“同时要求玩家做多件事情”是件困难的事情，经常被设计师忘记，以致于玩家的谩骂。</p>
+
+<h3 id="设计方法论打击感">设计方法论：打击感</h3>
+
+<p>这个话题太大了，这里不额外展开，典型打击感有：</p>
+
+<ul>
+  <li>攻击动作：开始、攻击、结束</li>
+  <li>攻击特效：（略）</li>
+  <li>受击动作：（略）</li>
+</ul>
+
+<h2 id="从微观到宏观">从微观到宏观</h2>
+
+<!-- ![](/assets/img/act/2022/xmind-4.png) -->
+
+<p>前面讨论的更多是微观体验的切片，玩家玩到的游戏是一个具体的内容序列。就像离散的画面组成了电影；离散的动作组成了角色，离散的角色（作为敌人而言）组成了关卡，进而构成了游戏。</p>
+
+<h3 id="内容构建理论和工具">内容构建理论和工具</h3>
+
+<h4 id="体验蓝图与玩家阶段">体验蓝图与玩家阶段</h4>
+
+<p>在具体的组成方式上，也是相当具有技巧的（比如，如何控制玩家在心流区间），一种常见的，用于指导构建复杂体验的方式，是体验蓝图，如下图：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/06-480.webp 480w, /assets/generated/img/act/2022/06-760.webp 760w, /assets/generated/img/act/2022/06-1140.webp 1140w, /assets/generated/img/act/2022/06-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/06.jpg" alt="宏观设计" width="1920" height="962" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h4 id="叙事与英雄之旅">叙事与英雄之旅</h4>
+
+<p>考虑到游戏是一个整体，主角怪物都离不开关卡和叙事——对于PVE游戏而言尤甚，叙事或者说剧作，已经是一门相当有学问和知识经验积累的单独学科，有很多经典的结构，比如“英雄之旅”。</p>
+
+<p>让动作设计贴合这些结构，会让整体的呈现，更容易被玩家接受，也能给玩家留下更强的印象。</p>
+
+<h2 id="简要总结">简要总结</h2>
+
+<p>一图流，如图：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/07-480.webp 480w, /assets/generated/img/act/2022/07-760.webp 760w, /assets/generated/img/act/2022/07-1140.webp 1140w, /assets/generated/img/act/2022/07-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/07.jpg" alt="简要总结" width="1818" height="687" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>]]></content><author><name></name></author><category term="动作游戏设计" /><summary type="html"><![CDATA[本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。]]></summary></entry><entry><title type="html">12种动作机制与160+案例</title><link href="https://design.jskyzero.com/2024/04/04/12_action_design_type/" rel="alternate" type="text/html" title="12种动作机制与160+案例" /><published>2024-04-04T00:00:00+00:00</published><updated>2024-04-04T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/04/04/12_action_design_type</id><content type="html" xml:base="https://design.jskyzero.com/2024/04/04/12_action_design_type/"><![CDATA[<p>重定向中……</p>
+
+<script>window.location.replace("https://docs.qq.com/slide/DUmNkc2dhcVRXdWZa");</script>]]></content><author><name></name></author><category term="动作游戏设计" /><summary type="html"><![CDATA[重定向中……]]></summary></entry><entry><title type="html">状态效果-Dota2</title><link href="https://design.jskyzero.com/2024/01/26/dota2/" rel="alternate" type="text/html" title="状态效果-Dota2" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://design.jskyzero.com/2024/01/26/dota2</id><content type="html" xml:base="https://design.jskyzero.com/2024/01/26/dota2/"><![CDATA[<p>浅聊一下从「机制」开始的游戏设计，然后对Dota2的状态效果进行一些介绍。</p>
+
+<!-- TODO：NGA -->
+
+<h1 id="机制设计以dota2中的25种状态效果为例">机制设计——以Dota2中的25种状态效果为例</h1>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/1-480.webp 480w, /assets/generated/img/gameplay/dota2/1-760.webp 760w, /assets/generated/img/gameplay/dota2/1-1140.webp 1140w, /assets/generated/img/gameplay/dota2/1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/1.png" alt="" width="3326" height="1881" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>这是一篇相当长，内容相当多的文章，不得不提醒读者预留出时间&amp;精力，做好准备再开始阅读。也强烈推荐先右键点开章节⬆️的脑图查看，理清思路再进入细节。</p>
+
+<h2 id="前言机制设计与dota2">前言：机制设计与DOTA2</h2>
+
+<blockquote>
+  <p>导语：机制设计可以使游戏开发更简单，也可以使游戏开发更难。</p>
+</blockquote>
+
+<h3 id="mda理论与机制设计">MDA理论与机制设计</h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-1-480.webp 480w, /assets/generated/img/gameplay/dota2/X-1-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-1.png" alt="" width="1124" height="363" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>先从MDA开始聊起吧，也方便统一文章的描述语境。</p>
+
+<p>MDA框架是游戏设计中常用的理论框架，它将游戏划分为不同层次的多个概念，以此来让设计师更好地理解玩家的游玩过程，最终设计出更好的游戏。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/MDA-480.webp 480w, /assets/generated/img/gameplay/dota2/MDA-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/MDA.png" alt="" width="969" height="735" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>熟悉MDA框架的同学可能会知道，实际使用这个框架来指导设计时，从任意层次开始，都是可以的——当然从机制层面出发也是可以的。</p>
+
+<p>这听起来非常合理：<strong>设计底层机制，改变玩家的动态行为，带来不同感受</strong>。</p>
+
+<h3 id="困难的机制设计">困难的机制设计</h3>
+
+<p>但是事实上，设计机制远没有说起来那么简单，甚至是一件<strong>非常困难的事情</strong>。</p>
+
+<blockquote>
+  <p>想到一个好的“概念”或许是简单的，但是将“概念”具体化为规则、放入游戏中，变成玩家接触到的信息，需要理解、思考、利用的规则，还要肩负起玩家长期的体验，这并不是一件简单的事情。</p>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/MDA2-480.webp 480w, /assets/generated/img/gameplay/dota2/MDA2-760.webp 760w, /assets/generated/img/gameplay/dota2/MDA2-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/MDA2.png" alt="" width="1337" height="754" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>抛开难度的话题，从评价上来说，一个好的机制可能有以下五个特征：</p>
+
+<ul>
+  <li>超出预期：突破玩家的想象，没有见过的新东西</li>
+  <li>容易理解：有自然的“呈现”和“解释”，有代入感</li>
+  <li>有可玩性：从游玩角度而言，有选择的空间、可对抗</li>
+  <li>成本可控：从开发侧角度，能实现、可测试、可维护</li>
+  <li>能互相作用：涌现出多样的情形</li>
+</ul>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/0-480.webp 480w, /assets/generated/img/gameplay/dota2/0-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/0.png" alt="" width="852" height="731" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>本文，试图从Dota2的25种状态机制为切入，以“一个体验丰富且成熟的MOBA游戏中，丰富的机制与其带来的体验”为例，希望能为读者带来一些启发，帮助读者设计出更好的机制。</p>
+
+<h3 id="dota2与机制的关系">Dota2与机制的关系</h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-2-480.webp 480w, /assets/generated/img/gameplay/dota2/X-2-760.webp 760w, /assets/generated/img/gameplay/dota2/X-2-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-2-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-2.png" alt="" width="1616" height="296" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>读者可能会好奇：</p>
+
+<h4 id="为什么是dota2">为什么是Dota2</h4>
+
+<p>因为Dota2很好的满足了上面提到的，好的机制的特征。在笔者所体验过的游戏中，如果要挑选一个机制最为天马行空、最为复杂丰富的游戏，那可能就是Dota2了，甚至，这款游戏还是一款经历过长久运营，和PVP平衡性考验的游戏。</p>
+
+<h4 id="为什么讨论状态机制">为什么讨论状态机制</h4>
+
+<p>笔者曾经思考过对于Dota2，最为出彩的地方是什么，思考下来有两点，一点是MOBA的底层机制；另一点是有趣的英雄玩法。</p>
+
+<p>MOBA的底层机制已经有太多文章，并且有一些品类的局限性，和些许失去时效性。而有趣的英雄玩法，笔者粗略思考下来，核心是英雄丰富的体验，与自身、敌我带来的组合变化，而<strong>状态效果和底层机制，则为这些丰富的体验和变化，提供了根基和发挥空间</strong>。如果有可能的话，下文也会结合一些英雄设计的例子，来进一步说明这种关系。</p>
+
+<blockquote>
+  <p>⚠️注意⚠️</p>
+
+  <p>Dota2是一款尚在运营，且持续更新（且时不时重大更新）的游戏，这意味着本文所记载的内容可能随着时间的经过而过时。虽然本文的核心目标是给读者带来启发——这并不依赖于最新版本的规则，但是为了严谨性，也希望读者以实际版本为准。</p>
+
+  <p>同时，人非圣贤，笔者的叙述也可能存在纰漏或者错误，Dota2是一款细节和定制逻辑相当多的游戏，笔者会尽量进行测试，但仍然重申，以实际游戏的运行规则为准。</p>
+</blockquote>
+
+<h2 id="从眩晕状态开始">从“眩晕”状态开始</h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-3-480.webp 480w, /assets/generated/img/gameplay/dota2/X-3-760.webp 760w, /assets/generated/img/gameplay/dota2/X-3-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-3-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-3.png" alt="" width="1951" height="410" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>眩晕是最为基础（和常见）的状态机制，在眩晕期间，<strong>无法移动和执行任何动作</strong>。一个特殊的情况是，眩晕时<strong>当前当前正在进行的动作将会被打断</strong>。</p>
+
+<p>空说定义是一件很无趣的事情，举一些例子看看：</p>
+
+<h3 id="状态的基础效果">状态的基础效果</h3>
+
+<h4 id="眩晕-无法移动和执行任何动作">眩晕-无法移动和执行任何动作</h4>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.1.gif" alt="" /></p>
+
+<p>可以看到，1、眩晕时，人物会进入特殊的演出动画，2、同时人物头顶会有一个旋转的效果，3、在血条上方还可以看到眩晕的计时槽的流逝，4、在人物下方UI的状态区域，也可以看到对应的状态图标，状态图标外层也可以看出倒计时。</p>
+
+<p>前面说过，眩晕期间无法移动和执行任何操作，这里的任何操作具体来说，有：普通攻击、使用技能、使用道具。</p>
+
+<p>从设计目的上来说，眩晕是一种极其强力的控制手段，它剥夺了个人的操作空间，让对抗变得更为策略向与数值向——即便是操作高手也只能眼睁睁地看着别人“演出”，过程中任人宰割——当然，这也是有对策的，具体可见下文。</p>
+
+<p>一个有意思的点是，<strong>被动仍然是生效</strong>的——留意斧王自动释放的被动反击螺旋。</p>
+
+<blockquote>
+  <p>引申话题：</p>
+
+  <p>其一，指令缓存：虽然在状态持续过程中，无法执行任何操作，但是过程中下达的指令，在眩晕状态结束、能执行操作的时候，是会立刻去执行的。比如开BKB（黑黄杖）或者使用闪烁类技能逃走。一定程度上，这是给被控者处于被动方的优待，不至于要不停的狂按才能在第一时间行动。（dota2还有个shift指令队列，不是本文重点，略过）</p>
+
+  <p>其二，转向机制：留意斧王的行动过程，结束移动收到R指令时候，同时在进行技能前摇和转向过程，这里技能前摇大于转向过程，对于技能前摇小于转向过程的技能，仍需要等待转向过程结束才能发起行为（最为经典的案例是向身后使用0前摇的道具跳刀会先转向），这个等待过程有时相当致命。</p>
+
+  <p>其三：突破限制的机制：拍拍熊的A杖可以使大招在被控制时使用！没错，竟然可以在眩晕时使用！（测试了下，大部分控制都行，但是沉默变羊恐惧之类禁用技能的状态是用不出来的，类似嘲讽的虽然用出来，但是无法驱散的话还是会继续被嘲讽）</p>
+</blockquote>
+
+<h4 id="眩晕-打断当前动作">眩晕-打断当前动作</h4>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.2.gif" alt="" /></p>
+
+<p>眩晕期间是没操作空间了，那么之前<strong>进行到一半的操作呢？答案是直接被打断！</strong></p>
+
+<p>留意齐天大圣试图释放猴子猴孙时，被发条技师的弹幕冲击一直打断。</p>
+
+<p>这里有个有意思的地方是，被打断的行为如果要再次使用，是<strong>重新开始计算前摇</strong>的，也就是例子上，怎么放都放不出来的效果。</p>
+
+<blockquote>
+  <p>是否有感受到Dota2中的“以下克上”。</p>
+</blockquote>
+
+<h3 id="状态之间叠加">状态之间叠加</h3>
+
+<h4 id="眩晕-重复叠加时取效果最强">眩晕-重复叠加时（取效果最强）</h4>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.3.gif" alt="" /></p>
+
+<p>前面提到过状态之间的相互作用，作为我们认识的第一个状态，先看看这类状态<strong>同类和同类会发生什么反应</strong>。</p>
+
+<p>可以看到，即便是同时叠加了两个眩晕状态，受害者的头上显示的计时条也是时长较长的那一个。也就是<strong>会取时长最长（效果最强）的那一个</strong>进行显示。</p>
+
+<p>从结果来看貌似很合理？细致分析一下：</p>
+
+<p>首先眩晕的<strong>负面效果是无法升级叠加的</strong>——无法执行动作就无法执行动作了，还能咋办。需要考虑的是持续的时长，那么，对于时长有三种处理方式：</p>
+
+<p>1、叠加，取两者之和，
+2、后覆盖前，取最后添加的，
+3、并存，独立计时。</p>
+
+<p>考虑到<strong>Dota2是一个团队游戏</strong>，对于叠加的逻辑，粗看是符合多人合作的，众人拾柴火焰高嘛，大家一起控就完事了；对于后覆盖前，考虑到有时候会将技能用来打伤害，万一这个技能带有小眩晕效果，可能会提前结束之前较长的眩晕时长的控制，反而坏了事，这个场合是有很多弊端、会带来不可控的体验的；对于并存独立计时，这会导致一定程度上时长的浪费，但是却把浪费多少的选择给到了操作者，将<strong>收益直接绑定到了玩家的操作</strong>，让玩家卷无止境，比简单的叠加更具有操作导向。</p>
+
+<blockquote>
+  <p>引申话题：阅读了Dota2 WIKI中<a href="https://liquipedia.net/dota2game/Stun">眩晕的相关文章</a>，事实上：</p>
+
+  <p>其一：游戏中的眩晕有三类，1类和3类符合传统眩晕的概念，两者区别是，1类添加的通用的眩晕标示，而3类一般是自定义的名字，但是带有眩晕的效果，这点可以打开战斗日志，留意对应的描述。而2类则是<a href="https://liquipedia.net/dota2game/Bash">重击类</a>，简单理解而言，重击类是普通攻击可能附带眩晕，由于普通攻击的高频性（甚至有一件道具可以赋予概率眩晕），又有着相当多的细节，这里不再展开。</p>
+
+  <p>如图，大鱼人被动晕属于重击，可以与大晕锤的主动重击眩晕叠加。
+<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/7-480.webp 480w, /assets/generated/img/gameplay/dota2/7-760.webp 760w, /assets/generated/img/gameplay/dota2/7-1140.webp 1140w, /assets/generated/img/gameplay/dota2/7-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/7.png" alt="" width="1920" height="760" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+  <p>其二：Dota2中，有时一些不可撤销不可以行动的技能前摇或发生过程，也会给自己施加对应的状态，比如虚空假面的跳、猴子的跳下、海民的雪球，这些技能都是有一个过程的，过程中“相当于自己在眩晕”。</p>
+</blockquote>
+
+<h3 id="提前结束状态驱散">提前结束状态：驱散</h3>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.4.gif" alt="" /></p>
+
+<p>如上图所示，亚巴顿的无光之盾技能驱散了兽王的吼的眩晕。</p>
+
+<p>作为一个讲究对抗的竞技游戏，Dota2遵循着互相克制的设计思路，对于眩晕而言，被眩晕的玩家虽然无法行动，但是队友可以使用带有驱散效果的技能或物品（当然有些英雄也有着被动会触发驱散），对眩晕效果进行驱散。</p>
+
+<p>Dota2的驱散分为两种，强驱散和弱驱散（当然有些效果比如光环类是无法驱散的），一般都在技能中有相关描述。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/5-480.webp 480w, /assets/generated/img/gameplay/dota2/5-760.webp 760w, /assets/generated/img/gameplay/dota2/5-1140.webp 1140w, /assets/generated/img/gameplay/dota2/5-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/5.png" alt="" width="2161" height="770" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<blockquote>
+  <p>引申话题</p>
+
+  <p>其一，驱散：作为结束手动结束状态机制的方法，有着相当多的细节，从作用上，可以分强弱驱散，从来源上，可以分为技能或者道具；从作用目标上，可以分为自身，敌人，队友。具体可以<a href="https://liquipedia.net/dota2game/Dispel">阅读参考</a>。</p>
+
+  <p>其二，光环的生效与消失：测试是生效延迟一帧(0.033秒)，而消失是延迟0.5秒。
+<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/8-480.webp 480w, /assets/generated/img/gameplay/dota2/8-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/8.png" alt="" width="1017" height="432" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+</blockquote>
+
+<h3 id="加速状态的流逝状态抗性">加速状态的流逝：状态抗性</h3>
+
+<p>除了提前结束，玩家也可以通过状态抗性来减少大部分负面效果的持续时间。</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.5.gif" alt="" /></p>
+
+<p>留意上图熊战士使用激怒获得状态抗性后，被眩晕的时间大幅减少了。</p>
+
+<p>面对敌方控制不足的阵容，状态抗性可以降低对方的控制时间，进一步降低对方控制链打出的伤害总值，变相增加了生存能力，起到奇效。</p>
+
+<blockquote>
+  <p>引申话题：</p>
+
+  <p>最近的7.36版本更新中，状态抗性被从散华等物品中移除，转而替代为只针对减速的减速抗性。这可能是因为上个版本肉核太过吃香，状态抗性一定程度上为肉核的生存提供了便利。削弱状态抗性也能一定程度上削弱肉核。</p>
+
+  <p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/6-480.webp 480w, /assets/generated/img/gameplay/dota2/6-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/6.png" alt="" width="1028" height="714" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+</blockquote>
+
+<h2 id="更多的状态效果">更多的状态效果</h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-4-480.webp 480w, /assets/generated/img/gameplay/dota2/X-4-760.webp 760w, /assets/generated/img/gameplay/dota2/X-4-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-4-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-4.png" alt="" width="1820" height="384" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h3 id="从归类开始">从归类开始</h3>
+
+<p>本文一开始试图整理的<a href="https://liquipedia.net/dota2game/Mechanics#Status_effects">25种状态效果</a>出自Dota2 Wiki的机制页面，一开始准备逐条进行介绍，但是又感觉很枯燥，缺乏一个指导性的思路（事实上本文的编写在本节卡了很久）。</p>
+
+<p>这个困境直到有一天，在对这些状态效果进行反复划分和归类时，得到了解决，最终得到了右边所示的、一个相对优雅的划分和思路，后文将沿着这个思路逐渐展开。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/11-480.webp 480w, /assets/generated/img/gameplay/dota2/11-760.webp 760w, /assets/generated/img/gameplay/dota2/11-1140.webp 1140w, /assets/generated/img/gameplay/dota2/11-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/11.png" alt="" width="2756" height="851" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<blockquote>
+
+  <p>有意思的是，事后才发现，Wiki中也有个类似的划分，早点发现也许就不用思考这么久了。</p>
+
+  <p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/12-480.webp 480w, /assets/generated/img/gameplay/dota2/12-760.webp 760w, /assets/generated/img/gameplay/dota2/12-1140.webp 1140w, /assets/generated/img/gameplay/dota2/12-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/12.png" alt="" width="1588" height="150" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+</blockquote>
+
+<h3 id="状态效果的根基">状态效果的根基</h3>
+
+<p>一切的起点是，这个游戏给了玩家的是什么？这里以“玩家动态操作，与角色静态属性”，两个维度进行一个划分：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/13-480.webp 480w, /assets/generated/img/gameplay/dota2/13-760.webp 760w, /assets/generated/img/gameplay/dota2/13-1140.webp 1140w, /assets/generated/img/gameplay/dota2/13-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/13.png" alt="" width="1745" height="198" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>在Dota2中，玩家的操作大类别上可以分为下达移动指令、使用普通攻击、使用技能，和使用物品；对于角色静态属性来说，攻防血蓝，移速等等这些也都是有的。</p>
+
+<p>从本质上来说，Dota2的异常状态，就是以这些项目为基础，施加以不同的效果。</p>
+
+<p>以前面我们知道的强力控制——眩晕为例：眩晕限制了所有的玩家操作输入（无法下达移动、技能、攻击、使用物品的指令），但是并未对角色基础属性造成影响。</p>
+
+<blockquote>
+  <p>虽然本质和思路非常简单，但是实际执行时，也会面对前面提到的“机制的若干困难和问题”，也将反应出设计师想象力与设计能力的差别。</p>
+</blockquote>
+
+<h3 id="单维度效果类">单维度效果类</h3>
+
+<p>先看一些简单的，单维度改变的效果：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/14-480.webp 480w, /assets/generated/img/gameplay/dota2/14-760.webp 760w, /assets/generated/img/gameplay/dota2/14-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/14.png" alt="" width="1240" height="341" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h4 id="移动指令">移动指令</h4>
+
+<blockquote>
+  <ul>
+    <li>✨缠绕：缠绕状态会使英雄无法移动，但可以攻击和使用技能。例如，孽主的圈，大树的捆，小仙女的花，道具缚灵锁的捆……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.1.1.gif" alt="" /></p>
+
+<p>如图，大树的大招，捆住敌人。意象上，大叔让植物高速生长，一定范围内的敌人都被树丛藤蔓所捆绑，还是很形象的。</p>
+
+<blockquote>
+  <p>引申话题：</p>
+
+  <p>其一，禁止位移：缠绕过程中，位移性质的道具、技能会被禁用，如跳刀和闪烁类技能（但是推推棒是可以用的）。</p>
+
+  <p>其二，真实视野：部分技能在缠绕中会附带对方的真实视野（过程中隐身也是被看到的），有意思的是如果本来就在隐身，虽然会被缠绕，但是是看不到的。</p>
+
+  <p>其三，缴械，部分技能在缠绕中是附带缴械效果的（很快就会介绍缴械），其实也属于后文的复合效果。</p>
+</blockquote>
+
+<h4 id="技能">技能</h4>
+
+<blockquote>
+  <ul>
+    <li>✨沉默：沉默状态下禁止使用技能（也会打断持续施法的技能），例如沉默大招，帕克的粉，紫苑……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.2.1.gif" alt="" /></p>
+
+<p>沉默相当克制一些法师技能哥，直接让其退化成超级兵。（如果你想问法师哥被沉默了怎么办？可参考前文的驱散）</p>
+
+<h4 id="普通攻击">普通攻击</h4>
+
+<blockquote>
+  <ul>
+    <li>✨缴械：缴械状态下无法进行普通攻击，比如道具天堂，卡尔推波，哈斯卡心炎……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.3.1.gif" alt="" /></p>
+
+<p>缴械相当克制一些平A哥，直接让其呆住。（如果你想问被缴械了怎么办？缴械一般还不能驱散，建议是活到缴械结束）</p>
+
+<h4 id="物品">物品</h4>
+
+<blockquote>
+  <ul>
+    <li>✨锁闭：锁闭状态会使英雄无法使用物品。例如，Doom的末日，萨尔的大招……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.4.1.gif" alt="" /></p>
+
+<p>锁闭事实上是个相当稀缺的高贵属性（从上图锁闭是25级质变级天赋就可以看出来），在后期大家道具起来以后，被锁闭相当致命。</p>
+
+<h4 id="被动技能">被动技能</h4>
+
+<blockquote>
+  <ul>
+    <li>✨破坏：破坏会使被动技能无效，例如大影刀，毒龙大，PA魔晶……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.5.1.gif" alt="" /></p>
+
+<p>破坏相当克制一些被动哥，很多被动能使得角色承伤能力增加，直接一个效果破坏，让肉盾变成正常人。</p>
+
+<blockquote>
+  <p>引申话题：</p>
+
+  <p>其一，新手教学：游戏内部的术语说明中，也有介绍这基础的5种状态（还有十分常见的眩晕和恐惧）。
+<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/17-480.webp 480w, /assets/generated/img/gameplay/dota2/17-760.webp 760w, /assets/generated/img/gameplay/dota2/17-1140.webp 1140w, /assets/generated/img/gameplay/dota2/17-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/17.png" alt="" width="1538" height="1164" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+  <p>其二，状态叠加时：时长大概是显示最久的？一些效果表现是叠加显示的。
+<img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.5.2.gif" alt="1" /></p>
+</blockquote>
+
+<h3 id="复合效果类">复合效果类</h3>
+
+<p>接下来我们看一些影响多维度的叠加状态。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/15-480.webp 480w, /assets/generated/img/gameplay/dota2/15-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/15.png" alt="" width="1006" height="1083" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h4 id="常规复合">常规复合</h4>
+
+<blockquote>
+  <ul>
+    <li>✨眩晕： 眩晕状态会打断所有动作，效果期间无法移动或者执行任何动作。例如，人马的踩，龙骑的duang，骷髅王的锤子……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.1.gif" alt="" /></p>
+
+<p>再次看到眩晕，我们会发现，眩晕实际上就是同时禁止了所有玩家主动操作类的的行为。</p>
+
+<blockquote>
+  <ul>
+    <li>✨吹风：吹风状态会使英雄被吹起，无法移动、攻击或使用技能。例如，卡尔的吹风，酒仙风熊猫的吹风，风杖的吹风</li>
+  </ul>
+</blockquote>
+
+<p>吹风和下面的妖术应该是DOTA2最具想象力的两个状态属性了，吹风和眩晕最大区别是，吹风由于在空中，很多攻击无法造成伤害。同时吹风一般会附带弱驱散。</p>
+
+<p>由于这两点特性，风杖也可以作为保命的拉扯装备。（后续V社还设计了大风帐吹起时可以移动，甚至可以对队友使用，吹风的吹起无敌能覆盖之前的控制状态的危险期，成为究极保命装。）</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.2.1.gif" alt="2" /></p>
+
+<blockquote>
+  <ul>
+    <li>✨睡眠：睡眠状态会使英雄无法进行任何操作，但受到伤害会将睡眠状态转移。例如祸乱之源的噩梦。</li>
+  </ul>
+</blockquote>
+
+<p>事实上，睡眠是个相当罕见的状态，目前游戏里面应该只有祸乱之源和大牛有，大牛的睡眠还不会被转移（更像眩晕了）。</p>
+
+<p>总感觉之前某个版本娜迦的大招也是睡眠，同时附加无敌，但是刚测了下也改成眩晕了。</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.3.1.gif" alt="2" /></p>
+
+<blockquote>
+  <ul>
+    <li>✨隐藏/驱逐：隐藏/驱逐状态会使英雄消失，无法被攻击或使用技能。例如，黑鸟和毒狗的关。</li>
+  </ul>
+</blockquote>
+
+<p>简单理解而言，就是个带无敌的眩晕。只有极少数技能能影响到隐藏的目标，比如毒狗的飘毒。</p>
+
+<p>有意思的，很多技能、效果的无敌阶段都可以理解为隐藏，比如海民的雪球，产生幻像前的短暂消失等。</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.4.1.gif" alt="2" /></p>
+
+<blockquote>
+  <ul>
+    <li>✨妖术：状态会使英雄变成无害的小动物、无法攻击或使用技能和道具。例如，小Y的变羊，莱恩的变羊，还有最著名的羊刀。</li>
+  </ul>
+</blockquote>
+
+<p>DOTA2最具想象力的状态效果其二，妖术，“功夫再高，也怕羊刀”中的羊刀，施加的效果就是妖术（羊刀的强力，主要是作为道具释放，0抬手，释放范围也不错，后期强先手秒人）。</p>
+
+<p>简单理解而言，妖术给“眩晕”怜悯地增加了“可以缓慢移动”，虽然是可以动，但是移动速度很低，看着自己的小动物努力在跑，但有时也跑不了，这就是妖术带来的独特体验。</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/2.5.1.gif" alt="2" /></p>
+
+<h4 id="强制行为">强制行为</h4>
+
+<p>除了上述控制，接下来的这几个状态属性除了传统的禁止，还会强制玩家执行行为（比如执行移动和执行攻击）</p>
+
+<blockquote>
+  <ul>
+    <li>✨嘲讽：嘲讽状态会使英雄被迫攻击某个目标。例如，斧王的吼可以嘲讽周围的敌方英雄，哈斯卡的A杖心炎。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/3.1.1.gif" alt="2" /></p>
+
+<p>嘲讽也是非常经典的设计了，以斧王为例，使用道具跳刀切入吼嘲讽敌人，使用刃甲来使敌人攻击自己时受到反伤，再配合被动被攻击时自动反击，和大招低血量斩杀，非常自成体系的设计。</p>
+
+<blockquote>
+  <ul>
+    <li>✨恐惧：恐惧状态会使英雄被迫向某个方向移动（通常是基地），无法进行其他操作。例如，小仙女的大招的恐惧，影魔的大招，奶绿的子弹。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/3.2.1.gif" alt="2" /></p>
+
+<p>恐惧利用的就是常规移动了，以小仙女为例，恐惧时候敌人更易踩到花中缠绕、奶绿更容易被中魂魄沉默、影魔大除了伤害，还为为压炮提供了宝贵的控制。</p>
+
+<blockquote>
+  <ul>
+    <li>✨强制移动：比如蝙蝠的拉、屠夫的勾。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/3.3.1.gif" alt="2" /></p>
+
+<p>强制移动则是更为广泛的强制对方进行移动，通常会搭配其他状态属性使用，比如屠夫的钩，一度被称为Dota2中正反馈最强的技能（细节上，勾命中会有短暂眩晕），如图所示是巫妖的吸（吸的移动甚至还可以无视地形，又是定制逻辑）。</p>
+
+<h4 id="总结禁止类控制技能">总结——禁止类控制技能</h4>
+
+<p>Dota2 Wiki中有个单独的页面介绍了不同控制状态的区别，这里简单翻译整理如下。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/16-480.webp 480w, /assets/generated/img/gameplay/dota2/16-760.webp 760w, /assets/generated/img/gameplay/dota2/16-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/16.png" alt="" width="1419" height="1100" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>单维度里面的就是前面提到的简单状态属性，数值类下文会进行介绍，复合类就是刚刚介绍的一些多重控制叠加的状态属性。</p>
+
+<p>这个表事实上更多偏向于规则层面，就实际设计而言，这些规则能否有一个好的抽象，配合技能的样式，达到既独特又有趣，就是设计的要点。</p>
+
+<h3 id="基础属性类">基础属性类</h3>
+
+<h4 id="移动速度">移动速度</h4>
+
+<blockquote>
+  <ul>
+    <li>✨减速：减速状态会降低英雄的移动速度。例如，冰女的nova可以降低50%的移速。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/4.1.1.gif" alt="2" /></p>
+
+<p>降移速就是典型软控，在追击和阻止对方进攻时候都可以派上用场，事实上游戏中还有转身速度等更细致的减速。</p>
+
+<blockquote>
+  <ul>
+    <li>✨陷阱：陷阱状态会使英雄的移动受到路径阻挡者的限制，但仍可执行操作。英雄移动时会尽可能尝试绕过它们。例如，发条的框，先知的框，牛头的板（没有封死），海民的冰片等……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/4.3.1.gif" alt="2" /></p>
+
+<p>陷阱听起来更像是造出了一些带阻挡的物体，挡住了玩家移动，不同的是有时阻挡是完全把玩家封死的，甚至有时候玩家靠近阻挡还可能触发被推开或眩晕等效果。</p>
+
+<blockquote>
+  <ul>
+    <li>✨束缚：束缚状态会使英雄无法在有限范围外移动（部分是软性的或者逐渐生效的），但仍可执行操作（除了位移性质的道具）。例如，小鱼人的跳，帕克的缠绕，墨客的连……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/4.2.1.gif" alt="2" /></p>
+
+<p>束缚是一种更弱的的移动限制，一般是玩家移动到边界时候速度会被降为0（小鱼人的跳使得目标虽然可以移动，但是空间不大、墨客的连使得两个人无法分开太远），或者触发眩晕等其他效果（上图帕克的大）。</p>
+
+<blockquote>
+  <ul>
+    <li>✨屏障：靠近区域边缘就会将速度降低为0，例如干扰者的圈，马尔斯的大等……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/4.4.1.gif" alt="2" /></p>
+
+<p>屏障和束缚类似，一般会有一个具象化的范围（比如墙），同样也是承担卡住玩家的责任。</p>
+
+<p>感觉上，陷阱（阻挡）、束缚（一定范围内可移动）、屏障（被墙挡住）目的上是比较类似的，有些效果可能同时符合多个特征，本质上是对移动限制的不同方式。</p>
+
+<h4 id="移动速度极端化">移动速度（极端化）</h4>
+
+<p>对于数值向属性，还有一个思路是极端化，比如如果我们将移动极端化，就可以得到闪现。</p>
+
+<blockquote>
+  <ul>
+    <li>✨传送/闪烁：立刻移动到目标位置，例如跳刀，女王、敌法、PA的跳……</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.1.1.gif" alt="5" /></p>
+
+<p>留意闪烁的抬手，和前文提到的先转向再抬手，这个时间就可以被对方使用技能控住。</p>
+
+<h4 id="攻击">攻击</h4>
+
+<p>攻击属性也相当复杂（比如攻击速度、弹道、格挡等等），这里介绍攻击直接落空的Miss，致盲。</p>
+
+<blockquote>
+  <ul>
+    <li>✨致盲：使攻击概率落空，例如光法的弹、TK的激光，力丸的雾</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.2.1.gif" alt="5" /></p>
+
+<p>Miss事实上是一个相当数值向的属性，主要就靠抽象来给玩家提供代入感了，比如例子中的被激光刺瞎了眼（</p>
+
+<h4 id="基础属性">基础属性</h4>
+
+<blockquote>
+  <ul>
+    <li>✨隐形：使英雄无法通过正常视野看到，必须通过真实视野看到。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.3.1.gif" alt="5" /></p>
+
+<p>隐身和真实视野是Dota2的相当底层的机制，上图演示了使用真眼来看到隐身的地方的效果。</p>
+
+<blockquote>
+  <p>引申话题</p>
+
+  <p>无法被真眼看到的隐身！诡计之雾：正常来说真实视野就可以看到隐身状态了，但是却有这样一个消耗道具，即便暴露在真实事业下也不会显形，那就是诡计之雾——这也是Dota2中相当基础的设计，通过诡计之雾的显形距离，可以控制敌我双方的交战距离，此外，开雾也为劣势方反击抓人提供了可能，提高了Dota2的团战的观赏性。</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>✨相位：使英雄可以穿过其他单位，忽略碰撞体。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.4.1.gif" alt="5" /></p>
+
+<p>上图演示了使用相位穿过了小Y的大招。（小Y：凭什么我的大招一件1500的装备就给破解了）</p>
+
+<p>现在幽鬼的天生技能就自带相位，鬼没有阻挡也很合理吧！然后幽鬼就没法卡兵了（</p>
+
+<h4 id="无敌">无敌</h4>
+
+<blockquote>
+  <ul>
+    <li>✨无敌：无敌状态会使英雄无法被攻击和使用技能，但可以移动。例如，主宰的无敌斩过程中就是无敌状态。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.5.1.gif" alt="5" /></p>
+
+<p>留意剑圣结束无敌状态落地后，可以开出跳刀。(正常由于NEC的光环和辉耀造成的伤害，跳刀会进入CD)</p>
+
+<p>一个有趣的现象是，NEC的光环和辉耀都是每秒伤害，GIF中是刚好15帧，严丝合缝。（一个玩家侧的案例是，职业选手可以通过切臂章规避整秒的tick伤害。）</p>
+
+<blockquote>
+  <ul>
+    <li>✨技能免疫：技能免疫状态会使英雄免疫所有技能效果。例如，BKB和小狗的魔免。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.7.1.gif" alt="5" /></p>
+
+<p>其实现在叫做减益免疫了，好像具体的调整有：1、状态持续时长如果大于减益免疫，还是会生效的，典型案例比如船长的X。2、不再是100%免疫魔法伤害了，好像是50%还是40%，也就是说伤害够高还是可以顶着你大的。</p>
+
+<p>魔免也是DOTA2相当底层的设计，简单来说，BKB提供了物理平A哥宝贵的输出环境（免大部分控），开启后会让平A哥和甩技能哥的克制关系直接两级反转，同时BKB持续时间有限，而且有长CD，而且每次开启时间会变短！简直是潘多拉的魔盒但是又得用。</p>
+
+<p>BKB这种通过免疫状态直接对整个游戏玩法产生影响，相当有想象力。</p>
+
+<blockquote>
+  <ul>
+    <li>✨攻击免疫：攻击免疫状态会使英雄免疫所有物理攻击。例如，全能骑士的守护天使可以免疫物理伤害。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.6.1.gif" alt="5" /></p>
+
+<p>物理免疫游戏里面投放的就克制得多了，全能大算一个，更多是通过护甲、伤害格挡、护盾，来造成物理减伤。</p>
+
+<blockquote>
+  <ul>
+    <li>✨虚灵：虚灵状态会使英雄免疫所有物理攻击（但是自己也不能攻击），但会受到额外的魔法伤害。例如，帕格纳的衰老可以使目标进入虚灵状态。</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/5.8.1.gif" alt="5" /></p>
+
+<p>虚灵又是一个堪称传奇的设计，物理免疫，但是自身也无法进行物理攻击，同时增加受到的魔法伤害，一方面是自己的代价，一方面还可以转为主动进攻的道具，让敌人受到魔法攻击伤害更多。</p>
+
+<p>同时虚灵的抽象也很合理，虚化的魂灵，只能说是仅次于BKB的天才数值类机制设计。</p>
+
+<h2 id="简要总结">简要总结</h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-5-480.webp 480w, /assets/generated/img/gameplay/dota2/X-5-760.webp 760w, /assets/generated/img/gameplay/dota2/X-5-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-5-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-5.png" alt="" width="1555" height="257" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>简要总结一下：</p>
+
+<h3 id="设计方法论要素-x-方式">设计方法论：要素 X 方式</h3>
+
+<p>简单来说就是明确游戏提供给玩家的要素，不仅仅有静态属性，还有动态输入也能作为要素！</p>
+
+<p>再就是设计这些要素的变化方式，过程中注意整体的抽象方式，最好能有一个好的意象，能利于玩家的理解和增加代入感。</p>
+
+<h3 id="对抗与涌现的乐趣">对抗与涌现的乐趣</h3>
+
+<p>现在很多设计都强调涌现，因为单纯的设计机制很快就被玩家消耗，会希望机制之间能互相作用，既能给玩家带来海量可能性，还能给玩家带来意外之喜。</p>
+
+<p>就状态机制而言，需要设计通用的状态规则（比如叠加、驱散等），再设计彼此的优先级（比如后覆盖前，或者依照强者），作为一个PVP游戏，注意给对抗留有余地（可以通过操作、数值等多重方式进行反制。）</p>
+
+<h2 id="附录dota2的美学实现速览">附录：DOTA2的美学实现速览</h2>
+
+<p>一方面DOTA2得益于引擎对粒子系统的高效实现，有着相当精美的画面表现；另一方面，游戏中丰富的内容设计，也给玩家提供了海量审美体验；最后，游戏基于时间的规则设计，也为提供了良好的对抗性。</p>
+
+<p>夸夸环节结束，这里也简单聊一下游戏美学设计与实现的一些倾向性：</p>
+
+<h3 id="少就是多的动画">少就是多的动画</h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/10-480.webp 480w, /assets/generated/img/gameplay/dota2/10-760.webp 760w, /assets/generated/img/gameplay/dota2/10-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/10.png" alt="" width="1342" height="1239" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>游戏中英雄的基础动画数并不多，以至宝冰女的动画为例，仅有5个定制动作与6个基础动作合计11个动画。（注意，上文可是提到了25种以上的状态机制，尤其是控制机制是会需要动画表现的！这个问题如何解决？）</p>
+
+<p>大体的倾向是这样的，提供通用的攻击和施法动作，同时可能不止一个，尤其是攻击，近战角色普遍是3种以上的攻击以特定随机模型进行随机，满足定制&amp;重复的需求。</p>
+
+<p>对于基础动作，一般有两套idle和两套奔跑，idle应该是有个个性演出的idle2，提供差异性，奔跑则是有个残血版本（多少人第一次观察到残血时角色会佝偻对细节发出了惊叹），同时有一个通用的眩晕和摇晃动作，特殊的机制需求就从这俩动作和前面的基础动作中实现。（比如吹风、睡眠都是用的摇晃动作）</p>
+
+<p>低体量，机制化的实现方式也为至宝能替换角色动画提供了可能，想想女王至宝把角色从远程角色的投掷飞镖动作替换为了近战使用鞭子！（这种替换角色动画甚至，还，影响到了逻辑，比如著名的龙骑士喷火的位点发生了改变于是变相削弱了角色，付费削弱.jpeg）</p>
+
+<h3 id="出现即巅峰的特效">出现即巅峰的特效</h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/9-480.webp 480w, /assets/generated/img/gameplay/dota2/9-760.webp 760w, /assets/generated/img/gameplay/dota2/9-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/9.png" alt="" width="1211" height="1160" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>Dota2是一个强竞技性游戏，留意道具的使用是没有抬手的，那么请问附加的特效表现是如何实现的？</p>
+
+<p>答案是出现即巅峰！只能看到巅峰和衰减的过程，出现？依靠人类的大脑进行脑补吧。</p>
+
+<p>特效还有一个特点是海量定制，很多相同状态效果的技能都有不同且细致的效果表现，只能说，羡慕羡慕。</p>
+
+<p>（全文完）</p>]]></content><author><name></name></author><category term="专题报告" /><summary type="html"><![CDATA[浅聊一下从「机制」开始的游戏设计，然后对Dota2的状态效果进行一些介绍。]]></summary></entry><entry><title type="html">技术讨论：Excel必知必会</title><link href="https://design.jskyzero.com/2023/12/31/Excel/" rel="alternate" type="text/html" title="技术讨论：Excel必知必会" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/12/31/Excel</id><content type="html" xml:base="https://design.jskyzero.com/2023/12/31/Excel/"><![CDATA[<p>本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。</p>
+
+<h1 id="游戏策划的excel手册">游戏策划的Excel手册</h1>
+
+<h2 id="前言">前言</h2>
+
+<h2 id="how-to">How-to</h2>
+
+<h3 id="下拉框">下拉框</h3>
+
+<h2 id="总结">总结</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[本文希望从游戏策划的角度，讲讲Excel的一些基础知识和常见用法，希望能对读者有所启发。]]></summary></entry><entry><title type="html">ACT-手游-绝区零</title><link href="https://design.jskyzero.com/2023/11/28/zzz/" rel="alternate" type="text/html" title="ACT-手游-绝区零" /><published>2023-11-28T00:00:00+00:00</published><updated>2023-11-28T00:00:00+00:00</updated><id>https://design.jskyzero.com/2023/11/28/zzz</id><content type="html" xml:base="https://design.jskyzero.com/2023/11/28/zzz/"><![CDATA[<h1 id="绝区零战斗系统拆解">绝区零战斗系统拆解</h1>
+
+<h2 id="关键结论">关键结论</h2>
+
+<ul>
+  <li>战斗体验偏爽（数字、角色动作速度、特写）</li>
+  <li>基础战斗品质很高</li>
+  <li>剧情演出有分级+节约成本（播片、角色大头对话、动态漫画、场景模型镜头对话、短信）</li>
+  <li>场景和怪物，资产&amp;体验，有重复度</li>
+  <li>养成、玩法系统基本手游&amp;米家老套路</li>
+</ul>
+
+<h2 id="战斗玩法">战斗玩法</h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/zzz/1-480.webp 480w, /assets/generated/img/gameplay/zzz/1-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/zzz/1.png" alt="" width="1009" height="711" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h2 id="角色能力">角色能力</h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/zzz/2-480.webp 480w, /assets/generated/img/gameplay/zzz/2-760.webp 760w, /assets/generated/img/gameplay/zzz/2-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/zzz/2.png" alt="" width="1486" height="927" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>附上应该是官网的机制说明：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/zzz/0-0-480.webp 480w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/zzz/0-0.png" alt="" width="600" height="2504" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/zzz/0-1-480.webp 480w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/zzz/0-1.png" alt="" width="600" height="3061" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<h2 id="角色数值">角色数值</h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/zzz/3-480.webp 480w, /assets/generated/img/gameplay/zzz/3-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/zzz/3.png" alt="" width="878" height="649" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>]]></content><author><name></name></author><category term="游戏体验" /><summary type="html"><![CDATA[绝区零战斗系统拆解]]></summary></entry></feed>

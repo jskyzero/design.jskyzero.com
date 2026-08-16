@@ -1,0 +1,634 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Cheatsheet | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="Markdown Cheatsheet">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="From adam-p/markdown-here">
+<meta property="og:description" content="From adam-p/markdown-here">
+<link rel="canonical" href="https://design.jskyzero.com/2017/10/15/markdown-cheatsheet/">
+<meta property="og:url" content="https://design.jskyzero.com/2017/10/15/markdown-cheatsheet/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-10-15T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Markdown Cheatsheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2017-10-15T00:00:00+00:00","datePublished":"2017-10-15T00:00:00+00:00","description":"From adam-p/markdown-here","headline":"Markdown Cheatsheet","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2017/10/15/markdown-cheatsheet/"},"url":"https://design.jskyzero.com/2017/10/15/markdown-cheatsheet/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>From <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">adam-p/markdown-here</a></p>
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h5 id="table-of-contents"><span class="heading-counter">0.0.0.1.</span><span class="heading-label">Table of Contents</span><span class="svg-heading-rule" aria-hidden="true"></span></h5>
+<p><a href="#headers">Headers</a>
+<a href="#emphasis">Emphasis</a>
+<a href="#lists">Lists</a>
+<a href="#links">Links</a>
+<a href="#images">Images</a>
+<a href="#code">Code and Syntax Highlighting</a>
+<a href="#tables">Tables</a>
+<a href="#blockquotes">Blockquotes</a>
+<a href="#html">Inline HTML</a>
+<a href="#hr">Horizontal Rule</a>
+<a href="#lines">Line Breaks</a>
+<a href="#videos">Youtube videos</a></p>
+
+<p><a name="headers"></a></p>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="headers"><span class="heading-counter">1.</span><span class="heading-label">Headers</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<pre><code class="language-no-highlight"># H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+</code></pre>
+
+</section><h1 id="h1"><span class="heading-label">H1</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/sample-blue.svg?style=flat" alt="Sample"><img src="https://img.shields.io/badge/guides-blue.svg?style=flat" alt="Guides"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2017/10/15-brightgreen.svg?style=flat" alt="日期 2017/10/15"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#headers">Headers</a></li></ul><ul><li><a href="#h1">H1</a><ul><li><a href="#h2">H2</a><ul><li><a href="#h3">H3</a><ul><li><a href="#h4">H4</a></li></ul></li></ul></li></ul></li><li><a href="#alt-h1">Alt-H1</a><ul><li><a href="#alt-h2">Alt-H2</a></li><li><a href="#emphasis">Emphasis</a></li><li><a href="#lists">Lists</a></li><li><a href="#links">Links</a></li><li><a href="#images">Images</a></li><li><a href="#code-and-syntax-highlighting">Code and Syntax Highlighting</a></li><li><a href="#tables">Tables</a></li><li><a href="#blockquotes">Blockquotes</a></li><li><a href="#inline-html">Inline HTML</a></li><li><a href="#horizontal-rule">Horizontal Rule</a></li><li><a href="#line-breaks">Line Breaks</a></li><li><a href="#youtube-videos">Youtube videos</a></li></ul></li></ul></nav></div>
+<div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="h2"><span class="heading-counter">1.</span><span class="heading-label">H2</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="h3"><span class="heading-counter">1.1.</span><span class="heading-label">H3</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="h4"><span class="heading-counter">1.1.1.</span><span class="heading-label">H4</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h5 id="h5"><span class="heading-counter">1.1.1.1.</span><span class="heading-label">H5</span><span class="svg-heading-rule" aria-hidden="true"></span></h5>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h6 id="h6"><span class="heading-label">H6</span><span class="svg-heading-rule" aria-hidden="true"></span></h6>
+
+<p>Alternatively, for H1 and H2, an underline-ish style:</p>
+
+</section><h1 id="alt-h1"><span class="heading-label">Alt-H1</span><span class="svg-heading-rule" aria-hidden="true"></span></h1>
+
+<div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="alt-h2"><span class="heading-counter">1.</span><span class="heading-label">Alt-H2</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><a name="emphasis"></a></p>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="emphasis"><span class="heading-counter">2.</span><span class="heading-label">Emphasis</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<pre><code class="language-no-highlight">Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+</code></pre>
+
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+
+<p><a name="lists"></a></p>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="lists"><span class="heading-counter">3.</span><span class="heading-label">Lists</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>(In this example, leading and trailing spaces are shown with with dots: ⋅)</p>
+
+<pre><code class="language-no-highlight">1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list.
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+</code></pre>
+
+<ol>
+  <li>First ordered list item</li>
+  <li>Another item
+    <ul>
+      <li>Unordered sub-list.</li>
+    </ul>
+  </li>
+  <li>Actual numbers don’t matter, just that it’s a number</li>
+  <li>Ordered sub-list</li>
+  <li>
+    <p>And another item.</p>
+
+    <p>You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we’ll use three here to also align the raw Markdown).</p>
+
+    <p>To have a line break without a paragraph, you will need to use two trailing spaces.
+Note that this line is separate, but within the same paragraph.
+(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p>
+  </li>
+</ol>
+
+<ul>
+  <li>Unordered list can use asterisks</li>
+  <li>Or minuses</li>
+  <li>Or pluses</li>
+</ul>
+
+<p><a name="links"></a></p>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="links"><span class="heading-counter">4.</span><span class="heading-label">Links</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>There are two ways to create links.</p>
+
+<pre><code class="language-no-highlight">[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself].
+
+URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or &lt;http://www.example.com&gt; and sometimes
+example.com (but not on Github, for example).
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+</code></pre>
+
+<p><a href="https://www.google.com">I’m an inline-style link</a></p>
+
+<p><a href="https://www.google.com" title="Google's Homepage">I’m an inline-style link with title</a></p>
+
+<p><a href="https://www.mozilla.org">I’m a reference-style link</a></p>
+
+<p><a href="../blob/master/LICENSE">I’m a relative reference to a repository file</a></p>
+
+<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a>.</p>
+
+<p>URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or <a href="http://www.example.com">http://www.example.com</a> and sometimes
+example.com (but not on Github, for example).</p>
+
+<p>Some text to show that the reference links can follow later.</p>
+
+<p><a name="images"></a></p>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="images"><span class="heading-counter">5.</span><span class="heading-label">Images</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<pre><code class="language-no-highlight">Here's our logo (hover to see the title text):
+
+Inline-style:
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+Reference-style:
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+</code></pre>
+
+<p>Here’s our logo (hover to see the title text):</p>
+
+<p>Inline-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 1"></p>
+
+<p>Reference-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 2"></p>
+
+<p><a name="code"></a></p>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="code-and-syntax-highlighting"><span class="heading-counter">6.</span><span class="heading-label">Code and Syntax Highlighting</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>Code blocks are part of the Markdown spec, but syntax highlighting isn’t. However, many renderers – like Github’s and <em>Markdown Here</em> – support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. <em>Markdown Here</em> supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the <a href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+
+<pre><code class="language-no-highlight">Inline `code` has `back-ticks around` it.
+</code></pre>
+
+<p>Inline <code class="language-plaintext highlighter-rouge">code</code> has <code class="language-plaintext highlighter-rouge">back-ticks around</code> it.</p>
+
+<p>Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks – they’re easier and only they support syntax highlighting.</p>
+
+<pre lang="no-highlight"><code>```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+```
+No language indicated, so no syntax highlighting.
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+```
+</code></pre>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">JavaScript syntax highlighting</span><span class="dl">"</span><span class="p">;</span>
+<span class="nf">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Python syntax highlighting</span><span class="sh">"</span>
+<span class="k">print</span> <span class="n">s</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre></div></div>
+
+<p><a name="tables"></a></p>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="tables"><span class="heading-counter">7.</span><span class="heading-label">Tables</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>Tables aren’t part of the core Markdown spec, but they are part of GFM and <em>Markdown Here</em> supports them. They are an easy way of adding tables to your email – a task that would otherwise require copy-pasting from another application.</p>
+
+<pre><code class="language-no-highlight">Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+</code></pre>
+
+<p>Colons can be used to align columns.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tables</th>
+      <th style="text-align: center">Are</th>
+      <th style="text-align: right">Cool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>col 3 is</td>
+      <td style="text-align: center">right-aligned</td>
+      <td style="text-align: right">$1600</td>
+    </tr>
+    <tr>
+      <td>col 2 is</td>
+      <td style="text-align: center">centered</td>
+      <td style="text-align: right">$12</td>
+    </tr>
+    <tr>
+      <td>zebra stripes</td>
+      <td style="text-align: center">are neat</td>
+      <td style="text-align: right">$1</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>There must be at least 3 dashes separating each header cell. The outer pipes (</td>
+      <td>) are optional, and you don’t need to make the raw Markdown line up prettily. You can also use inline Markdown.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Markdown</th>
+      <th>Less</th>
+      <th>Pretty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Still</em></td>
+      <td><code class="language-plaintext highlighter-rouge">renders</code></td>
+      <td><strong>nicely</strong></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a name="blockquotes"></a></p>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="blockquotes"><span class="heading-counter">8.</span><span class="heading-label">Blockquotes</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<pre><code class="language-no-highlight">&gt; Blockquotes are very handy in email to emulate reply text.
+&gt; This line is part of the same quote.
+
+Quote break.
+
+&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+</code></pre>
+
+<blockquote>
+  <p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p>
+</blockquote>
+
+<p>Quote break.</p>
+
+<blockquote>
+  <p>This is a very long line that will still be quoted properly when it wraps. Oh boy let’s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p>
+</blockquote>
+
+<p><a name="html"></a></p>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="inline-html"><span class="heading-counter">9.</span><span class="heading-label">Inline HTML</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>You can also use raw HTML in your Markdown, and it’ll mostly work pretty well.</p>
+
+<pre><code class="language-no-highlight">&lt;dl&gt;
+  &lt;dt&gt;Definition list&lt;/dt&gt;
+  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
+
+  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
+  &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+<p><a name="hr"></a></p>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="horizontal-rule"><span class="heading-counter">10.</span><span class="heading-label">Horizontal Rule</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+</code></pre></div></div>
+
+<p>Three or more…</p>
+
+<hr>
+
+<p>Hyphens</p>
+
+<hr>
+
+<p>Asterisks</p>
+
+<hr>
+
+<p>Underscores</p>
+
+<p><a name="lines"></a></p>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="line-breaks"><span class="heading-counter">11.</span><span class="heading-label">Line Breaks</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>My basic recommendation for learning how line breaks work is to experiment and discover – hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You’ll soon learn to get what you want. “Markdown Toggle” is your friend.</p>
+
+<p>Here are some things to try out:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Here's a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+</code></pre></div></div>
+
+<p>Here’s a line for us to start with.</p>
+
+<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
+
+<p>This line is also begins a separate paragraph, but…
+This line is only separated by a single newline, so it’s a separate line in the <em>same paragraph</em>.</p>
+
+<p>(Technical note: <em>Markdown Here</em> uses GFM line breaks, so there’s no need to use MD’s two-space line breaks.)</p>
+
+<p><a name="videos"></a></p>
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="youtube-videos"><span class="heading-counter">12.</span><span class="heading-label">Youtube videos</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>They can’t be added directly but you can add an image with a link to the video like this:</p>
+
+<pre><code class="language-no-highlight">&lt;a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE
+" target="_blank"&gt;&lt;img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg"
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /&gt;&lt;/a&gt;
+</code></pre>
+
+<p>Or, in pure Markdown, but losing the image sizing and border:</p>
+
+<pre><code class="language-no-highlight">[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+</code></pre>
+
+<p>Referencing a bug by #bugID in your git commit links it to the slip. For example #1.</p>
+
+<hr>
+
+<p>License: <a href="https://creativecommons.org/licenses/by/3.0/">CC-BY</a></p>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-07-31 - jskyzero - 📝 change structure
+2018-11-27 - jskzyero - re:initial &amp; delete histories
+
+<em>（本文编写于2018年11月，最后修改于2024年7月，共修改1次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2017/10/15/markdown-cheatsheet/';
+this.page.identifier = 'https://design.jskyzero.com/2017/10/15/markdown-cheatsheet/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#headers">Headers</a></li></ul><ul><li><a href="#h1">H1</a><ul><li><a href="#h2">H2</a><ul><li><a href="#h3">H3</a><ul><li><a href="#h4">H4</a></li></ul></li></ul></li></ul></li><li><a href="#alt-h1">Alt-H1</a><ul><li><a href="#alt-h2">Alt-H2</a></li><li><a href="#emphasis">Emphasis</a></li><li><a href="#lists">Lists</a></li><li><a href="#links">Links</a></li><li><a href="#images">Images</a></li><li><a href="#code-and-syntax-highlighting">Code and Syntax Highlighting</a></li><li><a href="#tables">Tables</a></li><li><a href="#blockquotes">Blockquotes</a></li><li><a href="#inline-html">Inline HTML</a></li><li><a href="#horizontal-rule">Horizontal Rule</a></li><li><a href="#line-breaks">Line Breaks</a></li><li><a href="#youtube-videos">Youtube videos</a></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

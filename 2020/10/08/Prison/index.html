@@ -1,0 +1,375 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>穿越时空 X 叙事：笼中旋狱 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="穿越时空 X 叙事：笼中旋狱">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="被采纳的剧本，自己还挺喜欢的，尤其是一些设定。">
+<meta property="og:description" content="被采纳的剧本，自己还挺喜欢的，尤其是一些设定。">
+<link rel="canonical" href="https://design.jskyzero.com/2020/10/08/Prison/">
+<meta property="og:url" content="https://design.jskyzero.com/2020/10/08/Prison/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-10-08T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="穿越时空 X 叙事：笼中旋狱">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2020-10-08T00:00:00+00:00","datePublished":"2020-10-08T00:00:00+00:00","description":"被采纳的剧本，自己还挺喜欢的，尤其是一些设定。","headline":"穿越时空 X 叙事：笼中旋狱","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2020/10/08/Prison/"},"url":"https://design.jskyzero.com/2020/10/08/Prison/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>被采纳的剧本，自己还挺喜欢的，尤其是一些设定。</p>
+
+<!--more-->
+
+<h1 id="剧情设计架空世界-x-视觉小说方向"><span class="heading-label">剧情设计——架空世界 X 视觉小说方向</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/独立游戏-blue.svg?style=flat" alt="独立游戏"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2020/10/08-brightgreen.svg?style=flat" alt="日期 2020/10/08"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#剧情设计架空世界-x-视觉小说方向">剧情设计——架空世界 X 视觉小说方向</a><ul><li><a href="#游戏的基本情况">游戏的基本情况</a></li><li><a href="#剧本的目标">剧本的目标</a></li><li><a href="#剧本的方向">剧本的方向</a></li></ul></li><li><a href="#笼中旋狱故事黑暗格局相对大">笼中旋狱：故事黑暗，格局相对大</a><ul><li><a href="#基础设定">基础设定</a></li><li><a href="#游戏内容">游戏内容</a></li><li><a href="#住户设计">住户设计</a><ul><li><a href="#旅行者一开始和玩家沟通的人">旅行者：一开始和玩家沟通的人</a></li><li><a href="#列车车长一位蒸汽列车车长">列车车长：一位蒸汽列车车长</a></li><li><a href="#乞丐老人">乞丐老人</a></li><li><a href="#骗术师">骗术师</a></li><li><a href="#国王">国王</a></li><li><a href="#杀人犯">杀人犯</a></li><li><a href="#结局">结局</a></li></ul></li></ul></li></ul></nav></div>
+
+<!-- `jskyzero` `2020/09/18` -->
+
+<!-- [TOC] -->
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="游戏的基本情况"><span class="heading-counter">1.</span><span class="heading-label">游戏的基本情况</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>本节使用一些框架对游戏基本情况进行描述，以免产生误解。</p>
+
+<ul>
+  <li>Character, Controls, Camera</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Character</th>
+      <th>Controls</th>
+      <th>Camera</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>满足“普通人”职能的载体</td>
+      <td>移动、与场景交互</td>
+      <td>第三人称（固定、跟随）视角</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Mechanics-Dynamics-Aesthetics</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mechanics</th>
+      <th>Dynamics</th>
+      <th>Aesthetics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>你的行为会影响游戏内NPC的行为。</td>
+      <td>游戏内NPC处于各自的某个情感状态<br>你的不同选择（行动）会影响NPC们的后续行为</td>
+      <td>感觉、幻想、叙事、发现</td>
+    </tr>
+  </tbody>
+</table>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="剧本的目标"><span class="heading-counter">2.</span><span class="heading-label">剧本的目标</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>目标：满足当前游戏玩法形式，为游戏提供内容。</p>
+
+<ol>
+  <li>内容符合生产能力，不会出现无法传达、无法想象、无法制作的内容。</li>
+  <li>内容设计尽可能地巧妙，从高质量、多种类的内容上吸引玩家。</li>
+  <li>传达需要传达之事，正能量意味上的主旨。</li>
+  <li>现实的角度上，需要控制篇幅和发展节奏，控制量。</li>
+</ol>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="剧本的方向"><span class="heading-counter">3.</span><span class="heading-label">剧本的方向</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>剧本本质上是给读者提供情感、知识体验，给玩家新的生活方式的追寻参考。</p>
+
+<p>可以把剧本的内容的点（比如具体的情节、人物的性格发展、故事的背景设定）和故事的展开叙述方法（比如正序倒序插叙、叙述视角、游戏的呈现形式技法）分开，选取大家喜欢的内容的点，用最巧妙地组织形式组成面，来作为最后的定稿，因而接下来会经可能多的提供内容和维度上差异性的故事设计，提供参考。</p>
+
+</section><h1 id="笼中旋狱故事黑暗格局相对大"><span class="heading-label">笼中旋狱：故事黑暗，格局相对大</span><span class="svg-heading-rule" aria-hidden="true"></span></h1>
+
+<ul>
+  <li>引言</li>
+</ul>
+
+<blockquote>
+  <p>啊，陌生人你好，已经很久没有人造访这哈皮尼斯监狱了。有新面孔真是不错……</p>
+
+  <p>哦？你是听说去最下层可以救回心爱之人？我不得不赞许你的勇气，并祝福你的旅程，可你应该听过监狱的传闻，这所监狱越往下便越是炼狱，而且一直向下，永无止境。</p>
+
+  <p>啊，我知道我没法停下你的脚步，不过还是要给你一个忠告，你接下来遇到的人可一定不会是我这样和蔼可亲的人，若是锁着门还好，那些愿意跟你交谈还要欺骗你的人，才最为恶毒。毕竟你也知道，留在这所监狱的人，都有着无法放下的罪恶……</p>
+
+  <p>祝你好运，我的朋友。</p>
+</blockquote>
+
+<div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="基础设定"><span class="heading-counter">1.</span><span class="heading-label">基础设定</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>哈皮尼斯监狱是一个外层类似鸟笼的螺旋监狱（无需外围表现），类似旋梯，入口在最上方，螺旋向下。</li>
+  <li>每一层住户都有着“放不下的东西”，所以留在了监狱，其实监狱是不设锁的。</li>
+  <li>每一层六位住户，和一个隔门，穿过隔门便是下一层。</li>
+  <li>下一层仍然是这六位住户的房间，不过随着每下一层便经过数十年的光阴，有的人或许已经生老病死。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="游戏内容"><span class="heading-counter">2.</span><span class="heading-label">游戏内容</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>需要和住户沟通获取情报（形式类似血源的敲门沟通）</li>
+  <li>住户一开始并不一定乐意和外来人说话</li>
+  <li>故事发展后，可以通过住户的邀请、或者获取住户的钥匙进入室内进一步发现线索。</li>
+  <li>发现关键线索后可以解锁新的对话。</li>
+  <li>主角可以来回穿梭每一层，用未来发现的线索和过去的人搞好关系，来回发现更多隐藏的秘密。</li>
+  <li>发展控制上使用关键线索（知道知道某个全局线索后推进局部发展，再发现下一个关键全局线索。），类似十三机兵防卫圈。</li>
+  <li>如果未来一个角色死去，就永远死去，但是仍有机会去到他的房间。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="住户设计"><span class="heading-counter">3.</span><span class="heading-label">住户设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="旅行者一开始和玩家沟通的人"><span class="heading-counter">3.1.</span><span class="heading-label">旅行者：一开始和玩家沟通的人</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>失败的玩家的倒影，上一次怀有目的来这所监狱的旅行者，不过失败了。</li>
+  <li>心里其实不希望玩家成功，小事情愿意帮助玩家但是会在关键事实上欺骗玩家。</li>
+  <li>放不下的东西是懦弱的自己。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="列车车长一位蒸汽列车车长"><span class="heading-counter">3.2.</span><span class="heading-label">列车车长：一位蒸汽列车车长</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>有着贵族礼仪的坚持，实际上出生下层家庭。</li>
+  <li>放不下的东西是因为资本出卖了自己的员工。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="乞丐老人"><span class="heading-counter">3.3.</span><span class="heading-label">乞丐老人</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>衣衫褴褛、白发苍苍、看起来神志不清的疯癫老人。</li>
+  <li>实际上是监狱的制造者，曾经的大魔法师。</li>
+  <li>放不下的东西是加害导师的自己。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="骗术师"><span class="heading-counter">3.4.</span><span class="heading-label">骗术师</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>看起来和善，为主角思考的好人。</li>
+  <li>想害死主角。</li>
+  <li>会催眠欺骗自己，其实已经精神失常，把真相记录在本子上每次看本子想起过去。</li>
+  <li>放不下的东西是没能救下生病的爱人。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="国王"><span class="heading-counter">3.5.</span><span class="heading-label">国王</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>货真价实的国王，有王者的气概。</li>
+  <li>放不下的东西是在国家和自己之间做出了错误选择。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="杀人犯"><span class="heading-counter">3.6.</span><span class="heading-label">杀人犯</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>完全的疯子，即便来到监狱也想杀害其他人。</li>
+  <li>放不下的东西是，无。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="结局"><span class="heading-counter">3.7.</span><span class="heading-label">结局</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>旅行者结局：主角留在了监狱。（只有自己永远在监狱承受苦难，才能救回心爱之人）</li>
+  <li>杀人犯结局：主角不幸死于杀人犯之手</li>
+  <li>列车车长结局：主角放弃了爱人，离开了监狱</li>
+  <li>国王结局：放弃了爱人，离开了监狱，主角出去找到了国王财宝</li>
+  <li>骗术师结局：blabla</li>
+  <li>乞丐老人结局：blabla</li>
+  <li>完美结局：主角发现了所有真相，并拯救了能拯救的人，明白了逝者终究无法挽回，放下了过去。</li>
+</ul>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-10-26 - jskyzero - ✨ add category 独立游戏
+2024-04-04 - jskyzero - 🚚 update structure
+
+<em>（本文编写于2024年4月，最后修改于2024年10月，共修改1次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2020/10/08/Prison/';
+this.page.identifier = 'https://design.jskyzero.com/2020/10/08/Prison/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#剧情设计架空世界-x-视觉小说方向">剧情设计——架空世界 X 视觉小说方向</a><ul><li><a href="#游戏的基本情况">游戏的基本情况</a></li><li><a href="#剧本的目标">剧本的目标</a></li><li><a href="#剧本的方向">剧本的方向</a></li></ul></li><li><a href="#笼中旋狱故事黑暗格局相对大">笼中旋狱：故事黑暗，格局相对大</a><ul><li><a href="#基础设定">基础设定</a></li><li><a href="#游戏内容">游戏内容</a></li><li><a href="#住户设计">住户设计</a><ul><li><a href="#旅行者一开始和玩家沟通的人">旅行者：一开始和玩家沟通的人</a></li><li><a href="#列车车长一位蒸汽列车车长">列车车长：一位蒸汽列车车长</a></li><li><a href="#乞丐老人">乞丐老人</a></li><li><a href="#骗术师">骗术师</a></li><li><a href="#国王">国王</a></li><li><a href="#杀人犯">杀人犯</a></li><li><a href="#结局">结局</a></li></ul></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

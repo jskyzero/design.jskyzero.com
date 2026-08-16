@@ -1,0 +1,562 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2021年前的零碎体验 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="2021年前的零碎体验">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="之前在玩的一些游戏的汇总，一些零碎的感受和想法。">
+<meta property="og:description" content="之前在玩的一些游戏的汇总，一些零碎的感受和想法。">
+<link rel="canonical" href="https://design.jskyzero.com/recently/">
+<meta property="og:url" content="https://design.jskyzero.com/recently/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-01-28T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="2021年前的零碎体验">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-01-28T00:00:00+00:00","datePublished":"2021-01-28T00:00:00+00:00","description":"之前在玩的一些游戏的汇总，一些零碎的感受和想法。","headline":"2021年前的零碎体验","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/recently/"},"url":"https://design.jskyzero.com/recently/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>之前在玩的一些游戏的汇总，一些零碎的感受和想法。</p>
+
+<!--more-->
+
+<h1 id="零碎汇总-體驗報告"><span class="heading-label">零碎汇总 體驗報告</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/游戏体验-非具体游戏-blue.svg?style=flat" alt="游戏体验-非具体游戏"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2021/01/28-brightgreen.svg?style=flat" alt="日期 2021/01/28"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#零碎汇总-體驗報告">零碎汇总 體驗報告</a><ul><li><a href="#格式">格式</a></li><li><a href="#mhr-demo">MHR DEMO</a></li><li><a href="#demons-souls">Demon’s Souls</a></li><li><a href="#cyberpunk-2077">Cyberpunk 2077</a></li><li><a href="#nioh2">NIOH2</a></li><li><a href="#mhwib">MHW:IB</a></li><li><a href="#final-fantasy-vii">Final Fantasy VII</a></li><li><a href="#mhgu">MHGU</a></li><li><a href="#風之旅人--journey">風之旅人 / Journey</a></li><li><a href="#死亡擱淺--death-stranding">死亡擱淺 / DEATH STRANDING</a></li><li><a href="#寶可夢劍--pokémon-sword">寶可夢劍 / Pokémon Sword</a></li><li><a href="#異界鎖鏈--astral-chain">異界鎖鏈 / ASTRAL CHAIN</a></li><li><a href="#進化之地--evoland">進化之地 / Evoland</a></li><li><a href="#鬼泣5--devil-may-cry-5">鬼泣5 / Devil May Cry 5</a></li><li><a href="#只狼--sekiro">只狼 / Sekiro</a></li><li><a href="#王者榮耀--honor-of-kings">王者榮耀 / Honor of Kings</a></li><li><a href="#心之卡比新星聯盟--kirby-star-allies">心之卡比：新星聯盟 / Kirby Star Allies</a></li><li><a href="#inside">INSIDE</a></li><li><a href="#上古卷軸v天際--the-elder-scrolls-v-skyrim-special-edition">上古卷軸V天際 / The Elder Scrolls V: Skyrim Special Edition</a></li><li><a href="#侍魂朧月傳說">侍魂：朧月傳說</a></li><li><a href="#圍攻--besiege">圍攻 / Besiege</a></li><li><a href="#超級馬里奧奧德賽--super-mario-odyssey">超級馬里奧：奧德賽 / Super Mario Odyssey</a></li><li><a href="#刀塔-2--dota-2">刀塔 2 / DOTA 2</a></li><li><a href="#古墓麗影崛起--rise-of-the-tomb-raider">古墓麗影：崛起 / Rise of the Tomb Raider</a></li><li><a href="#獵天使魔女-2--bayonetta-2">獵天使魔女 2 / Bayonetta 2</a></li></ul></li></ul></nav></div>
+
+<!-- 
+暂留的一些图片
+
+# featured-img: mhw.ib.2
+# featured-img: 
+# featured-img: dmc5
+# featured-img: besiege
+# featured-img: Bayonetta2 
+-->
+
+<!-- ---
+layout: post
+title: "體驗報告：20.5月"
+featured-img: mhw.ib.2
+mathjax: true
+categories: [Rencently, Gameplay]
+permalink: /recently/
+--- -->
+
+<!-- 最近玩過的一些游戲，包括《NIOH2》、《Final Fantasy VII》、《MHW:IB》、《MHGU》。 -->
+
+<!--more-->
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="格式"><span class="heading-counter">1.</span><span class="heading-label">格式</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>本节介绍一些记录一款游戏的体验的工具</p>
+
+<ul>
+  <li>表格：基础情况介绍
+    <ul>
+      <li>发售日、销量、开发商、发行商、游戏技术</li>
+    </ul>
+  </li>
+  <li>透镜：内容分解图
+    <ul>
+      <li>逻辑结构（内容结构、成长循环、玩法循环等）</li>
+    </ul>
+  </li>
+  <li>映射：MDA/游戏感理论
+    <ul>
+      <li>理论分析，指导方向</li>
+    </ul>
+  </li>
+  <li>连线图：系统流转
+    <ul>
+      <li>系统玩法、产出道具、养成系统、商业化</li>
+    </ul>
+  </li>
+  <li>表格/曲线图：体验蓝图/叙事节奏
+    <ul>
+      <li>内容释放节奏</li>
+    </ul>
+  </li>
+  <li>饼图：运营活动
+    <ul>
+      <li>运营更新节奏、内容比例</li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="mhr-demo"><span class="heading-counter">2.</span><span class="heading-label">MHR DEMO</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://lh3.googleusercontent.com/pw/ACtC-3dIBheWIJyJALGvh_So2l7EeTerAaIHJc4P05JhsD4E8Ny3ClDANshKg6h0FY8rVTUzTWkq3TZLuhLOdSi96bCPb77rpU5DB227h2km3pLo3_IiN6vAouGLWjP3KWq5XSCgeZwifaRH0RAbCeJy1nZ-Jg=w800-h496-no?authuser=0" alt=""></p>
+
+<p>终于打过怨虎龙了！期待上线！</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="demons-souls"><span class="heading-counter">3.</span><span class="heading-label">Demon’s Souls</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://lh3.googleusercontent.com/pw/ACtC-3cX5YB-wUTOW2tbMtT_Kd96uvBo2fPUvT7Ccn8dVSgVsqH3os-sKBLG0_kFVaLaPuCJn1trGRxriLwtb6YRl1pqw92Pl-so_UoaDFF2Ygn_QLftS4pVKN6-MLFPqlhZoR4l_dfrlDfbFMV1ec6OIj1DXA=w2309-h1731-no?authuser=0" alt=""></p>
+
+<p>恭喜自己白金，PS5唯一指定独占。</p>
+
+<p>游戏很旧了，设计却没有过时，打下来还是体会到相当多的东西。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="cyberpunk-2077"><span class="heading-counter">4.</span><span class="heading-label">Cyberpunk 2077</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://lh3.googleusercontent.com/pw/ACtC-3cQc29Ww6hNDLUZ4qNDwhQdRr6mb5bxRs-sk1M_OTpwgQbJeChhTX8ovTIbN3dF84aJhQvozv4ZKLhnxC7f1xf8D-uXQxLUNUb5YipUQfM-92auWXz4rEqFRy2GJp9Dkt3Vo_bvh_edsYRCVe0h6EqLRg=w1176-h879-no?authuser=0" alt=""></p>
+
+<p>虽然我很早就觉得这游戏会暴死，并且希望不要暴死。</p>
+
+<p>但是没想到发售的完成度只有这么点，很可惜，初期玩家社区之间的反应也很有意思。</p>
+
+<!-- ## The Last of Us™ Part II
+
+
+些许有些遗憾，一代封神的情感表达，二代却成为制作者和玩家之间的巨大隔阂。
+
+游戏质量还是没得说的，只是可惜了这剧本。创作者似乎并没能明白玩家想要的是什么。 -->
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="nioh2"><span class="heading-counter">5.</span><span class="heading-label">NIOH2</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>白金撒花🎉</p>
+
+<p>和大家常世同行很快乐！可以唐突暴毙让好兄弟在怪堆里面扶我起来（然后一尸两命买一送一（一代白金已经是好久前的事情了，有点物是人非233</p>
+
+<blockquote>
+  <p>體驗版</p>
+</blockquote>
+
+<p>仁王2体验版捶完了喵，这分明是大型鬼反教学关喵，3人常世同行超爽喵，打boss就是猫捉老鼠，你-打-boss-打-我喵，点了相关技能+扶的快，组队变得意外的简单喵，鬼系技能感觉还是鬼反靠谱其他的都花里胡哨的喵，残心判定变宽松在下也可以用了喵，幻化辣么好，结算时候人物立绘可太高清了喵，在下好了喵（</p>
+
+<p><img src="https://pbs.twimg.com/media/ETefm53UcAA8XtQ?format=jpg&amp;name=large" alt=""></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="mhwib"><span class="heading-counter">6.</span><span class="heading-label">MHW:IB</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://lh3.googleusercontent.com/BvRdwJAmkRcBn7Ux5RU0R3efdTQznfshoJXc0lnoE46t0ZsG4BPbNagMDzKES74X5hcM52FdClB8QC6MpU_TnCw7VI6xaxrAmpoH3yjKTsuZHtVnb0yqV23CUGF_MYkgYeXlU3vkJvDBpQZJEPuTLs6KFzjIXREX22in882-_8Q-kj-FtTHt96LqlK5lrZckZipKrH71Hz8IVNNVenBeV-rQn9icjntg3HG4eu2W4J0Tgtw4-e8DFCVKrf0PuUp0uOGrb9B1Ujt_XafEDpJToi4tqeDPXHfQtQP3Xl9_jGQMCfXR51IIRocxKJ7Gu9y97NQELnluNY4-Fzd5h_6vaewZ4Icf_f6Cq2q2s-UOE8pHmRXmahEGAZC2u3jVuiIR_-6FMMeZgSeJ7shhmfwXu1p3B8IrlcfUEiNVvlFRBljOHPIm4iIxH5tqMf-2kPPDcV1v_upSPrVmYSDWqizMgqIP7ZyyfSjoXXjqnW8PHrWIkim3v60Txbn7DuowYSeyRU5Neckdlmr7HERS4hacevfhJs7mwsfXJSj8SvytcxC34RVYkpaw1Yyr6A1X4mPUCjaMOYHCvBEWfDDiawJf9zTuSpsGzPA5FB8JWjLRRAM2Ue5wJ7XsstZNQF0KqlpwPkbCyVMZ8awOzTV5rYqwz0IL6vR-FjR6V93NV1L7ystbeQ90-dVIuDOPSkckK7gbXBvefR-Bju3UUQRnTlD2vaS9mpbiJfeQr5ZRBoTnjFu7eiSdsAElL2c=w3197-h1798-no" alt=""></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="final-fantasy-vii"><span class="heading-counter">7.</span><span class="heading-label">Final Fantasy VII</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://pbs.twimg.com/media/EVUTkp8UUAAOjUl?format=jpg&amp;name=4096x4096" alt=""></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="mhgu"><span class="heading-counter">8.</span><span class="heading-label">MHGU</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://pbs.twimg.com/media/EXJtQdcUMAEzGk9?format=jpg&amp;name=large" alt=""></p>
+
+<!-- ---
+layout: post
+title: "體驗報告：19.11月"
+featured-img: death_stranding
+mathjax: true
+categories: [Rencently, Gameplay]
+--- -->
+
+<!-- 最近玩過的一些游戲，包括《Death Stranding》、《Journey》、《Pokémon Sword》、《ASTRAL CHAIN》。 -->
+
+<!--more-->
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="風之旅人--journey"><span class="heading-counter">9.</span><span class="heading-label">風之旅人 / Journey</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://thatgamecompany.com/wp-content/uploads/thatgamecompany-journey-cardbg-3.jpg" alt=""></p>
+
+<p>是的我終於把三年前的遊戲通關了（你</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="死亡擱淺--death-stranding"><span class="heading-counter">10.</span><span class="heading-label">死亡擱淺 / DEATH STRANDING</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="http://www.kojimaproductions.jp/img/works/modal/menu-img-01.png" alt=""></p>
+
+<p>重新看了遍死亡擱淺最後的播片，島哥哥這劇情真滴棒（延遲開吹（就是有些挑受眾（比如我就不大合適</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="寶可夢劍--pokémon-sword"><span class="heading-counter">11.</span><span class="heading-label">寶可夢劍 / Pokémon Sword</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://pbs.twimg.com/media/EJmCIP0UYAAI1gi?format=jpg&amp;name=large" alt=""></p>
+
+<p>在下就是：伽勒爾地區的救世主，劍之神獸蒼響的戰友，無極汰那的新主人，七大道館徽章持有者，新晉聯盟大賽冠軍，正義的夥伴，481號萌新參賽選手（</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="異界鎖鏈--astral-chain"><span class="heading-counter">12.</span><span class="heading-label">異界鎖鏈 / ASTRAL CHAIN</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://pbs.twimg.com/media/EHt16lJUYAAoJWJ?format=jpg&amp;name=large" alt=""></p>
+
+<p>本來想誇這遊戲的場景，但是有幾段黑不溜秋的體驗太差，動作部分還好，就是有幾關糞怪組合，高難度下只會換血，被怪群毆眩暈一條命基本白給，主線碰到倆流程bug，被迫重新讀檔，體驗極差。</p>
+
+<!-- ---
+layout: post
+title: "體驗報告：19年5月"
+featured-img: dmc5
+mathjax: true
+categories: [Rencently, Gameplay]
+--- -->
+
+<!-- 最近玩的一些游戲，包括《Evoland》、《鬼泣5》、《只狼》、《心之卡比：新星聯盟》等等。 -->
+
+<!--more-->
+
+<!-- yahoo!已經到了要畢業的時候啦，畢業之前當然也是要玩喜歡的遊戲~ -->
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="進化之地--evoland"><span class="heading-counter">13.</span><span class="heading-label">進化之地 / Evoland</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/recently/19.05/evoland-480.webp 480w, /assets/generated/img/gameplay/recently/19.05/evoland-760.webp 760w, /assets/generated/img/gameplay/recently/19.05/evoland-1140.webp 1140w, /assets/generated/img/gameplay/recently/19.05/evoland-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/recently/19.05/evoland.jpg" alt="" width="2048" height="1536" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+
+<p>是之前的朋友推薦給我的遊戲，大概展示了遊戲的進化歷史，從過去黑白畫面、場景的逐幀刷新，到後面的彩色畫面、RPG元素，3D畫面，最後的boss戰相較最開始的起始之地簡直是兩個遊戲。中間的解密設計也很有意思，唯一的瑕疵是存檔點不夠多，在某個地牢被其中的機關卡殼，心態崩潰。</p>
+
+<p>劇情方面也是相對王道的劇情，不過對這種強行死妹子的遊戲有點，不太喜歡，另一方面遊戲也有一些隱藏要素，比如后後期解鎖能力才能解開的謎題設計。總體還是不錯的。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="鬼泣5--devil-may-cry-5"><span class="heading-counter">14.</span><span class="heading-label">鬼泣5 / Devil May Cry 5</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://steamuserimages-a.akamaihd.net/ugc/1003645806922933498/51C5D06FB68F321E92D3F07AF80E771AB7EA87FD/?imw=1024&amp;imh=576&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true" alt=""></p>
+
+<p>是我喜歡的鬼泣5，去年E3看到就很喜歡，玩爆，遊戲解鎖當天晚上就熬夜通關，V、Nero、Dante都很棒，敏銳的嗅到了可能會出DLC和追加角色的感覺。</p>
+
+<p>劇情故事上仔細想想有一點反智，不過玩的時候有誰在意呢。動作方面，風格比較接近4代而不是DMC，明明DMC打起來更爽，四代的手搓技能就會很累，經常要好幾個按鍵一起按下，會有點手酸。</p>
+
+<p>技能和動作設計上和之前的“大同小異”或者說本質無差別，新的武器、動作用起來也很爽。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="只狼--sekiro"><span class="heading-counter">15.</span><span class="heading-label">只狼 / Sekiro</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/recently/19.05/sekiro-480.webp 480w, /assets/generated/img/gameplay/recently/19.05/sekiro-760.webp 760w, /assets/generated/img/gameplay/recently/19.05/sekiro-1140.webp 1140w, /assets/generated/img/gameplay/recently/19.05/sekiro-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/recently/19.05/sekiro.jpg" alt="" width="2560" height="1440" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>哇喔，是只狼！這次買了PC版本，因為去封閉培訓的原因並沒有玩完，不過還是很棒。</p>
+
+<p>和之前比最大的區別應該是遊戲體驗上的，只狼的循環更鼓勵玩家去攻擊和彈反，地圖上也引入了高度的變量，地圖設計和高難度的怪物設計一如既往，復生系統給人的體驗並沒有感覺那麼「新穎」和重要，感覺體力槽和石頭剪刀佈的拆招方法才是重點循環。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="王者榮耀--honor-of-kings"><span class="heading-counter">16.</span><span class="heading-label">王者榮耀 / Honor of Kings</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/recently/19.05/honer-480.webp 480w, /assets/generated/img/gameplay/recently/19.05/honer-760.webp 760w, /assets/generated/img/gameplay/recently/19.05/honer-1140.webp 1140w, /assets/generated/img/gameplay/recently/19.05/honer-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/recently/19.05/honer.jpg" alt="" width="2160" height="1080" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>王者榮耀確實很好玩，或者說很成功的把MOBA遊戲類型搬到手機上，遊戲有著相當多的英雄與內容，十分詳實，人與人斗，其樂無窮。我是玩得輔助位置，會比較看隊友的能力水平，遇到很厲害的大哥就可以比較安逸地躺過，比較喜歡玩帶傳送技能的大橋與附身玩法的遙，在這裡倆英雄的幫助下上分也比較順利。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="心之卡比新星聯盟--kirby-star-allies"><span class="heading-counter">17.</span><span class="heading-label">心之卡比：新星聯盟 / Kirby Star Allies</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/recently/19.05/kirby-480.webp 480w, /assets/generated/img/gameplay/recently/19.05/kirby-760.webp 760w, /assets/generated/img/gameplay/recently/19.05/kirby-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/recently/19.05/kirby.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>是可愛肥嘟嘟的粉紅不明球體卡比，卡比又能飛又能吸收（消滅或者轉化）物體，還會拋桃心誘惑敵人變成隊友，可以說是很強了，中間的關卡整體上對於平台跳躍要求不高，畢竟卡比可以飛，關卡的玩法總體差異不大，解密主要是利用隊友的合作技來解決特定的謎題，說明了隊友的重要性2333。</p>
+
+<!-- ---
+layout: post
+title: "體驗報告：19年2月"
+featured-img: besiege
+mathjax: true
+categories: [Rencently, Gameplay]
+--- -->
+
+<!-- 最近玩過的一些遊戲，包括《INSIDE》、《上古卷軸V天際》、《侍魂：朧月傳說》、《Besiege》等。 -->
+
+<!--more-->
+
+<!-- 不是，首先我不只玩了這幾個遊戲，其他的比如空洞騎士、荒野大鏢客、MHGU，以及一直玩玩丟丟的DOTA2、MHW之類的，這裡還是說一些相對玩得時間更久、完整通關的，這樣。 -->
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="inside"><span class="heading-counter">18.</span><span class="heading-label">INSIDE</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://steamuserimages-a.akamaihd.net/ugc/964231063354165636/36300E6727A23781A74AF09C0DB1234C67F6D9E8/?imw=1024&amp;imh=576&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true" alt=""></p>
+
+<p>INSIDE似乎是IGN10分吧，之前有看過絆愛的遊玩視頻的開頭一小點，這自然不是一個大遊戲，但是實際流程比想象中還是長很多，很難得解密不需要去查攻略的遊戲，玩起來很流暢，從這種意味上來說是真的很不錯，獎杯是有一些隱藏的地點的小範圍解密，首次流程就解鎖幾個，很喜歡這種設計。</p>
+
+<p>遊戲只有左右兩個方向，瘦弱的主角跳也跳不高，行動力也比較弱，但是在解密上卻沒什麼重複的感覺，像分歧路線隱藏開關、一些需要配合地形、環境設置反復或者按節奏移動的解密，中間場景上是逃脫追捕、混入城鎮、然後海岸、深海、人群中，有畫面感的場景還很多。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="上古卷軸v天際--the-elder-scrolls-v-skyrim-special-edition"><span class="heading-counter">19.</span><span class="heading-label">上古卷軸V天際 / The Elder Scrolls V: Skyrim Special Edition</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://steamuserimages-a.akamaihd.net/ugc/961980531739056049/2FAD90569849ADAF206DC7B94306B3598D5FFE33/?imw=1024&amp;imh=576&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true" alt=""></p>
+
+<p>玩了以後最大的感覺就是巫師三可能沒那麼好玩了，老滾5真的是會讓人上癮的遊戲。</p>
+
+<p>末世龍裔的王道故事，唔，習慣畫面以後遊戲棒的不行，沉迷屠龍、找寶貝、掙錢，買了家領養了孩子，主線沒有急著推進，似乎是做了DLC的個主線，設計的頗有克蘇魯的風格。</p>
+
+<p>遊戲本身有足夠大的地圖、足夠豐富的地牢、足夠多的流派、足夠多的物品，還有方便作弊的控制台，這種讓玩家滾雪球的遊戲對我一玩起來就會沉迷。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="侍魂朧月傳說"><span class="heading-counter">20.</span><span class="heading-label">侍魂：朧月傳說</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/recently/shihun-480.webp 480w, /assets/generated/img/gameplay/recently/shihun-760.webp 760w, /assets/generated/img/gameplay/recently/shihun-1140.webp 1140w, /assets/generated/img/gameplay/recently/shihun-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/recently/shihun.jpg" alt="" width="2160" height="1080" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>截圖應該是開服務器前幾天的情況，唔遊戲本身質量並不高，畫面和流暢度不可兩全，一些多人團本我也沒完整體驗。</p>
+
+<p>但是這應該是第一個遊戲中體驗到氪金玩家心態的遊戲，商城的禮包基本不用看售價，新出就買，大量資源被花在武器強化，然後碎了就退坑，最後是+16的武器碎了就退遊了。</p>
+
+<p>唔，之前晚上強化不停點擊點的手痛，感覺概率真的很迷，經常碎到最後一把才成功。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="圍攻--besiege"><span class="heading-counter">21.</span><span class="heading-label">圍攻 / Besiege</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><img src="https://steamuserimages-a.akamaihd.net/ugc/958608272198902086/8BFCBA18574C07F822E635E6DB4BC98D19AE48E1/?imw=1024&amp;imh=640&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true" alt=""></p>
+
+<p>本來是抱著快樂遊戲的心態在玩，中途被卡關以後就找了攻略學思路在玩，關卡上大概可分為破懷、運送等類型，大部分是通過地形天氣啊等限制條件要求搭建固定的機械，中間的建築原件常用的可能也只有那麼幾種，基本上每關都需要一個車的底盤，然後根據設計搭建不同的部件，見招拆招，有時候機械受力不均就會斷裂，可以用鋼筋加固，隱約覺得有點雙刃劍的意味，有時候就不管物理受力就直接上鋼筋加固，那為什麼不直接把基礎木頭做的結實一點呢，伸縮木塊和自轉木塊有點IMBA，現實中顯然是不存在這樣的東西的，對於一塊模擬真實物理的遊戲隱約覺得有點敗筆。</p>
+
+<p>當然，把創造力交給玩家就可以看到很多很多有意思的建造，比如飛機啊高達啊，對於裡面很多基礎部件特效都沒了解全的我來說就有點太困難了。</p>
+
+<!-- ## 後記 -->
+
+<p>最近要到檢查論文的時候了，唔，加油吧。</p>
+
+<!-- ---
+layout: post
+title: "體驗報告：18年12月"
+featured-img: Bayonetta2
+mathjax: true
+categories: [Rencently, Gameplay]
+--- -->
+
+<!-- 最近玩的一些游戲，包括《超級馬里奧：奧德賽》、《DOTA 2》、《古墓麗影：崛起》、《獵天使魔女 2》。 -->
+
+<!--more-->
+
+<p>稍微聊一下，唔就簡單說一些值得說的點，最近是寫不了之前那種長篇的文章了，分析一下自身的話，最近有點頹，然後就是最近玩的這幾個也沒太多好説的，所以就簡單的説一下就好。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="超級馬里奧奧德賽--super-mario-odyssey"><span class="heading-counter">22.</span><span class="heading-label">超級馬里奧：奧德賽 / Super Mario Odyssey</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<blockquote>
+  <p><em>yahoo 通關啦。</em></p>
+</blockquote>
+
+<p><img src="https://pbs.twimg.com/media/DoXXmR6UgAAPQTV.jpg" alt=""></p>
+
+<p>感覺上，奧德賽是需要你不要那麽功利的去玩的游戲，游戲并沒有過分明確的目的，救公主并不是那麽強動力的目標，所以我流失了好幾次，如果不是確實無聊，我可能現在也不會玩完。</p>
+
+<p>大體上是很多個國家，每個國家都是有一些區域性的目標，在區域性的目標過程中可以發現很多可以收集的金幣或者月亮，往往在你想不到的地方發現了好東西，這種驚喜和設法達到某些目的的成就感可能就是我最後的強動力了。</p>
+
+<p>再試著説的再具體一點吧，這個世界，你可以任何的去探索，你的動作大多數情況非常簡單，就是簡單的移動，奔跑，跳躍，下落，在這些簡單的動作上有一些稍微複雜的動作，比如三段跳，後跳等，比較難得的是這些基礎動作做的非常“細緻”，到了可怕的程度，裏面的移動的移動速度，跳躍的高度和距離，等等是在任何地方都通用的，尤其是跳躍，單單是想到都會讓人覺得頭痛。</p>
+
+<p>然後就是裏面的帽子附身這個動作，在特定的地方提供了額外的動作和謎題解法，能產生很多有意思的東西，我的感覺就是附身和原始的移動跳躍支撐起了整個游戲。</p>
+
+<p>在這兩者之上，提供了相當多且豐富有意思的場景，去給玩家隨意探索，去到了意想不到的地方卻發現了金幣，小游戲中隱藏著的月亮，等等，不那麽功利的話，還是能發現這個游戲是相當有趣的。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="刀塔-2--dota-2"><span class="heading-counter">23.</span><span class="heading-label">刀塔 2 / DOTA 2</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<blockquote>
+  <p><em>“這個水晶侍女有點好看，但是我想起來我第一次因爲好看選了水晶侍女上去就開始送，再見（生無可戀臉，建議推出幻化系統”</em></p>
+</blockquote>
+
+<p><img src="https://steamuserimages-a.akamaihd.net/ugc/960851554628814442/CFEE4016BDD2CE9304E2BC0B738381E8E323F163/" alt=""></p>
+
+<p>最近看了相當多的DOTA2中PSG.LGD隊伍的比賽，maybe、ame、chalice、fy、xNova，幾位隊員都很棒，比賽有輸有贏，電子競技的樂趣也就在這裏，雖然一些碾壓局看得很舒服，但是可能更吸引的還是雙方對質，勝負難解難分的那種比賽吧。</p>
+
+<p>也試著玩了新的一批英雄，想想之前我已經玩過龍騎士、冥界亞龍、狙擊手等，最近是體驗了卓爾游俠、血魔、幻影長矛手、育母蜘蛛等，比之前還是稍微有了長進一點。</p>
+
+<p>剛好趕上這次版本大更新，似乎是推薦前期大量帶雙挂件來打架，刪除了天鷹戒但是對應的王冠卻沒太多人出，有點尷尬。</p>
+
+<p>我還是在打人機，有輸有贏，還是沒辦法做到一定會贏，要看雙方整容和實際的局勢，不過玩的還算開心，畢竟最近兩個周應該超過40小時的游戲時間了吧。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="古墓麗影崛起--rise-of-the-tomb-raider"><span class="heading-counter">24.</span><span class="heading-label">古墓麗影：崛起 / Rise of the Tomb Raider</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<blockquote>
+  <p><em>“BUG，没有提示射的是可以拉的箭，这是我全游戏唯一一个卡关的地方。”</em></p>
+</blockquote>
+
+<p><img src="https://steamuserimages-a.akamaihd.net/ugc/963103894340643076/990A3FA373A428D1E45567F961F7468172C207F3/?interpolation=lanczos-none&amp;output-format=jpeg&amp;output-quality=95&amp;fit=inside%7C1024%3A576&amp;composite-to=*,*%7C1024%3A576&amp;background-color=black" alt=""></p>
+
+<p>之前是玩了可能2/5的内容就棄坑了，又撿起來再玩，唔感覺一上來就是中後期的話已經變成無雙游戲了，因爲之前的被卡關之類的搞得很不爽所以拒絕再去支綫古墓了，跳過極其不想瞭解的劇情的主綫一步一步的走。</p>
+
+<p>我應該是完全沒有潛行，全部正面打的的，子彈溢出，感覺難度不打，我一個武器的子彈槽都沒打空就可以結束戰鬥，後面强行帶防暴盾，防暴裝，以及需要兩下才能死的蒙古兵真的很無奈。</p>
+
+<p>碰到若干bug，細節上體驗很差，勞拉動作很多時候都很僵硬，一次出戲以後會越來越覺得尷尬。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="獵天使魔女-2--bayonetta-2"><span class="heading-counter">25.</span><span class="heading-label">獵天使魔女 2 / Bayonetta 2</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<blockquote>
+  <p><em>yahoo 通關啦。</em></p>
+</blockquote>
+
+<p><img src="https://pbs.twimg.com/media/DtVxaiyVAAYI2c5.jpg" alt=""></p>
+
+<p>是我喜歡的貝姐2，和貝姐1沒能看到有什麽突破。</p>
+
+<p>劇情和内容上感覺有退步，可能和我對人物的感覺有關，内容指很多方面，可能一個原因是主綫上本來就會錯過很多，唔，可是我也不打算再玩第二遍了。</p>
+
+<p>一些新注意到的細節、連段的方式、武器還是不錯的，看了一下收集攻略還是有很多東西的，總之可以玩的很爽很開心，是我喜歡的游戲。</p>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-10-27 - jskyzero - 🚧 update 5.游戏体验
+2024-04-04 - jskyzero - 🚚 update structure
+2024-01-24 - jskyzero - 📝 update title
+2024-01-02 - jskyzero - 📝 test change strcuture
+2023-05-27 - jskyzero - 🚚 re:re:change file folder
+2022-04-15 - jskyzero - 📝 update title
+2021-10-18 - jskyzero - 📝 add 格式
+2021-09-21 - jskyzero - 🔥 remove {{site.img_url}}
+2021-09-14 - jskyzero - 🚚 迁移 阅读记录 &amp; 问答总结
+2021-09-09 - jskyzero - 🎨 add 用于AI的高级随机技术 &amp; update histroy
+2021-08-19 - jskyzero - ✨ update tags
+2021-08-19 - jskyzero - 🔀  change structure
+2021-08-12 - jskyzero - fix wrong words
+2021-07-22 - jskyzero - update GameAI
+2021-07-22 - jskyzero - update AI行为树
+2021-07-19 - jskyzero - add AI 行为树
+2021-06-27 - jskyzero - 🚧 format markdown code
+2021-06-17 - jskyzero - 📝 update mhr
+2021-06-15 - jskyzero - 📝 少看二次元
+2021-03-21 - jskyzero - update 零碎汇总 體驗報告
+
+<em>（本文编写于2021年3月，最后修改于2024年10月，共修改1次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/recently/';
+this.page.identifier = 'https://design.jskyzero.com/recently/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#零碎汇总-體驗報告">零碎汇总 體驗報告</a><ul><li><a href="#格式">格式</a></li><li><a href="#mhr-demo">MHR DEMO</a></li><li><a href="#demons-souls">Demon’s Souls</a></li><li><a href="#cyberpunk-2077">Cyberpunk 2077</a></li><li><a href="#nioh2">NIOH2</a></li><li><a href="#mhwib">MHW:IB</a></li><li><a href="#final-fantasy-vii">Final Fantasy VII</a></li><li><a href="#mhgu">MHGU</a></li><li><a href="#風之旅人--journey">風之旅人 / Journey</a></li><li><a href="#死亡擱淺--death-stranding">死亡擱淺 / DEATH STRANDING</a></li><li><a href="#寶可夢劍--pokémon-sword">寶可夢劍 / Pokémon Sword</a></li><li><a href="#異界鎖鏈--astral-chain">異界鎖鏈 / ASTRAL CHAIN</a></li><li><a href="#進化之地--evoland">進化之地 / Evoland</a></li><li><a href="#鬼泣5--devil-may-cry-5">鬼泣5 / Devil May Cry 5</a></li><li><a href="#只狼--sekiro">只狼 / Sekiro</a></li><li><a href="#王者榮耀--honor-of-kings">王者榮耀 / Honor of Kings</a></li><li><a href="#心之卡比新星聯盟--kirby-star-allies">心之卡比：新星聯盟 / Kirby Star Allies</a></li><li><a href="#inside">INSIDE</a></li><li><a href="#上古卷軸v天際--the-elder-scrolls-v-skyrim-special-edition">上古卷軸V天際 / The Elder Scrolls V: Skyrim Special Edition</a></li><li><a href="#侍魂朧月傳說">侍魂：朧月傳說</a></li><li><a href="#圍攻--besiege">圍攻 / Besiege</a></li><li><a href="#超級馬里奧奧德賽--super-mario-odyssey">超級馬里奧：奧德賽 / Super Mario Odyssey</a></li><li><a href="#刀塔-2--dota-2">刀塔 2 / DOTA 2</a></li><li><a href="#古墓麗影崛起--rise-of-the-tomb-raider">古墓麗影：崛起 / Rise of the Tomb Raider</a></li><li><a href="#獵天使魔女-2--bayonetta-2">獵天使魔女 2 / Bayonetta 2</a></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

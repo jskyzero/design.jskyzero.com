@@ -1,0 +1,651 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>叙事：《救猫咪》 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="叙事：《救猫咪》">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="最近在上一些叙事方面的课，于是就去读了一些相关的书籍，《救猫咪》自然是十分通俗易懂的一本。">
+<meta property="og:description" content="最近在上一些叙事方面的课，于是就去读了一些相关的书籍，《救猫咪》自然是十分通俗易懂的一本。">
+<link rel="canonical" href="https://design.jskyzero.com/2019/08/28/save_cat/">
+<meta property="og:url" content="https://design.jskyzero.com/2019/08/28/save_cat/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-08-28T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="叙事：《救猫咪》">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2019-08-28T00:00:00+00:00","datePublished":"2019-08-28T00:00:00+00:00","description":"最近在上一些叙事方面的课，于是就去读了一些相关的书籍，《救猫咪》自然是十分通俗易懂的一本。","headline":"叙事：《救猫咪》","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2019/08/28/save_cat/"},"url":"https://design.jskyzero.com/2019/08/28/save_cat/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>最近在上一些叙事方面的课，于是就去读了一些相关的书籍，《救猫咪》自然是十分通俗易懂的一本。</p>
+
+<!--more-->
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="前言"><span class="heading-counter">1.</span><span class="heading-label">前言</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>游戏作为一种媒介，也越来越多的看重叙事这部分，于是就把目光投向了已经十分成熟的电影行业，电影除了演员、场景，还有剧本，而且剧本是相当重要的一个部分，很大程度上已经决定了电影的成败。</p>
+
+<p>感觉剧作家会有点像游戏设计师，本质上也是设计向的岗位，不过大概不会像游戏设计这样不同种类之间有着这么大的差别。</p>
+
+<p>书中让我很意外的一点是，电影剧本的创作也需要大量的知识积累，就想如果妳要做游戏，自己得先有一定量的游戏的积累一样。</p>
+
+<p>本文希望能总结书中的一些知识，比如一些相对通用的故事结构，用作后续拆解剧本（电影或者文学作品等）。</p>
+
+</section><h1 id="救猫咪总结"><span class="heading-label">《救猫咪》总结</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/阅读笔记-blue.svg?style=flat" alt="阅读笔记"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2019/08/28-brightgreen.svg?style=flat" alt="日期 2019/08/28"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#前言">前言</a></li></ul><ul><li><a href="#救猫咪总结">《救猫咪》总结</a><ul><li><a href="#导论">导论</a></li><li><a href="#救猫咪的含义">“救猫咪”的含义</a></li><li><a href="#似而不同">似而不同</a></li><li><a href="#主角是谁">主角是谁</a></li><li><a href="#开始写剧本">开始写剧本</a></li><li><a href="#创造完美的野兽">创造完美的野兽</a></li><li><a href="#剧本写作的金科玉律">剧本写作的金科玉律</a></li><li><a href="#影片出了什么问题">影片出了什么问题</a></li><li><a href="#结尾淡出">结尾淡出</a></li><li><a href="#后记如何分析一部影片">后记——如何分析一部影片</a></li></ul></li></ul></nav></div>
+
+<p>唔，最开始的时候写起来就像知识点的罗列，而不是一篇文章，或许这种目的的话，我更应该去选择思维道路等形式，而不是写一篇文章来记录。</p>
+
+<div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="导论"><span class="heading-counter">1.</span><span class="heading-label">导论</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>重新浏览导论让我意识到，作者试图通过导论来吸引读者的兴趣，而且他成功了，我看到他列举了很多、很多或许是剧作领域知名的一些书籍，然后列举一些名人，等等一些因素，或者是其他什么的。对于一篇文章，这样或许是有意义且必要的。</p>
+
+<p>导论部分还提到了：</p>
+
+<ul>
+  <li>不要以敬畏的态度对待电影，这可能起到阻碍的作用。</li>
+  <li>本书注重实践、基于常识，“有效”（是真的。）</li>
+  <li>让观众喜欢上影片主角是把观众吸引到故事中的最为重要的一个元素
+    <ul>
+      <li>“救猫咪”：见到主角发现他在做某事
+        <ul>
+          <li>场景界定他是谁</li>
+          <li>行为让观众喜欢上她</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="救猫咪的含义"><span class="heading-counter">2.</span><span class="heading-label">“救猫咪”的含义</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>当妳推销一部电影…会介绍：“这部电影讲了什么”</li>
+  <li>繁杂的曲线：故事曲线，通俗易懂，能传达
+    <ul>
+      <li>评价好的故事曲线的标准，“为什么我想不到”</li>
+      <li>四个成功的元素
+        <ul>
+          <li>是否有意外：意外起到了鱼钩的作用， 勾起兴趣</li>
+          <li>强烈的心理影像：激发读者灵感，想象力</li>
+          <li>观众和成本：预算，目标人群，题材，开发预算</li>
+          <li>有杀伤力的片名：包含意外并且体现故事</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>市场调研：是否吸引人的注意力</li>
+  <li>高度概念化：清晰而又有创意的告诉用户玩法</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="似而不同"><span class="heading-counter">3.</span><span class="heading-label">似而不同</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>电影故事的同类影片：市面上已经有大量影片，有很多分类方法可以分类这些影片，这里从故事类型的角度出发</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>类别</th>
+      <th>分类</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>鬼怪屋</td>
+      <td>简介</td>
+      <td>怪兽+屋子，人类介入产生杀戮或者被杀戮。</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>例子</td>
+      <td>侏罗纪公园、大白鲨</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>规则</td>
+      <td>空间有限；鬼怪产生的原因；躲藏与追杀；</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>翻新要点</td>
+      <td>“全新的故事纠葛”</td>
+    </tr>
+    <tr>
+      <td>金羊毛</td>
+      <td>简介</td>
+      <td>主角上路寻找某物，历尽艰辛发现别的东西。</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>例子</td>
+      <td>回到未来、绿野仙踪</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>规则</td>
+      <td>看起来遇到的人物和冲突松散，实则联系；主题是内心成长，展现冲突如何影响主角；</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>要点</td>
+      <td>重要的不是事件，而是事件给人的影响。</td>
+    </tr>
+    <tr>
+      <td>如愿以偿</td>
+      <td>简介</td>
+      <td>要是…该多好</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>例子</td>
+      <td>小鬼富翁</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>规则</td>
+      <td>愿望实现带来的改变+诅咒的愿望</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>要点</td>
+      <td>魔法不是万能的（教训） or 因果报应从诅咒中获得了好处（救猫咪：提供可救之处）</td>
+    </tr>
+    <tr>
+      <td>麻烦家伙</td>
+      <td>简介</td>
+      <td>普通人置于特殊环境中</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>例子</td>
+      <td>泰坦尼克号、辛德勒的名单、终结者</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>规则</td>
+      <td>麻烦+主角的组合</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>要点</td>
+      <td>坏单越坏，主角越伟大。</td>
+    </tr>
+    <tr>
+      <td>变迁仪式</td>
+      <td>简介</td>
+      <td>特殊时期，记录痛苦和折磨的故事。</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>例子</td>
+      <td>凡夫俗子</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>规则</td>
+      <td>“鬼怪出没”，屈服，回归人性。</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>要点</td>
+      <td>对自然力量不情愿的接受，最终提升主角能力。</td>
+    </tr>
+    <tr>
+      <td>伙伴之情</td>
+      <td>简介</td>
+      <td>主角无人交流，假如有个伙伴呢？</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>例子</td>
+      <td>反斗智多星、海底总动员</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>规则</td>
+      <td>伪装的爱情故事，互相厌恶+一无所有+放下自尊</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>要点</td>
+      <td>结构的动态关系十分类似，节奏相似。</td>
+    </tr>
+    <tr>
+      <td>推理侦探</td>
+      <td>简介</td>
+      <td>不是谁干，而是为什么干。</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>例子</td>
+      <td>公民凯恩，唐人街</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>规则</td>
+      <td>故事游走于黑暗面，发现让自己震惊的人性深处。</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>要点</td>
+      <td>对人性深处黑暗面的研究。</td>
+    </tr>
+    <tr>
+      <td>愚者成功</td>
+      <td>简介</td>
+      <td>愚者是最聪明的，身在暗处使人们低估。</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>例子</td>
+      <td>阿甘正传</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>规则</td>
+      <td>失败者、知情者、知名人士</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>要点</td>
+      <td>带给观众外来者的体验、间接的胜利体验。</td>
+    </tr>
+    <tr>
+      <td>被制度化</td>
+      <td>简介</td>
+      <td>关于团队、组织、家庭的故事</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>例子</td>
+      <td>美国丽人，教父</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>规则</td>
+      <td>群体前进中赞成与反对的故事、通常以外来者的角度讲述。</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>要点</td>
+      <td>似而不同的“自我牺牲”</td>
+    </tr>
+    <tr>
+      <td>超级英雄</td>
+      <td>简介</td>
+      <td>与麻烦家伙对立的英雄</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>例子</td>
+      <td>蜘蛛侠</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>规则</td>
+      <td>赋予优势的同时增加痛苦，让观众同情英雄。</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>要点</td>
+      <td>展开幻想，结合现实。</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>好莱坞的非常小秘密：有些相似很偶然，也有些很有益，采用相似的故事模板并不是问题，可以考虑增加新的情节纠葛或者找一个新的方法，突破限制后可以理解到自由度很大。</li>
+  <li>总结&amp;技巧
+    <ul>
+      <li>选取最为接近的类型，了解那个类型的规律。</li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="主角是谁"><span class="heading-counter">4.</span><span class="heading-label">主角是谁</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>在有了创意以后，塑造一个把观众吸引到故事中的主角至关重要，主角是能引起目标观众的共鸣的替身，而且要满足故事的需求和目标。</p>
+
+<p>将“主角形容词”，“坏蛋形容词”，“扣人心弦的目标”加入到故事线中。</p>
+
+<ul>
+  <li>主角是谁：主角服务于故事，进一步阐明主线。</li>
+  <li>扩展故事线：让主角有最多的冲突，最长的过程，最原始的目标。</li>
+  <li>原始动力：主角努力成功的动机必须是最原始的（吸引观众的注意力）。</li>
+  <li>为主角选演员：梦幻剧本选上梦幻演员的几率是很小的。</li>
+  <li>演员原型：荣格原型与观众期望的故事线。</li>
+  <li>特殊情况：传记（微妙修改）、多线叙事（中心）</li>
+  <li>服务于故事线：成为故事线的奴隶，设立参数，坚决执行。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="开始写剧本"><span class="heading-counter">5.</span><span class="heading-label">开始写剧本</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>结构，结构，结构：合理的结构是坚实的蓝图，章节的小的修改也不会有影响。</li>
+  <li>15个节拍
+    <ul>
+      <li>开场：第一印象，基调、情绪、影片的题材和类型。 （总结开场成功的一些要素）</li>
+      <li>主题呈现：通过陈述或者提问先展示影片主题。</li>
+      <li>铺垫：人物登场，赋予人物细节（展示主角缺失的东西）</li>
+      <li>推动：改变生命历程的事件通常以坏消息的方式出现。</li>
+      <li>争执：必须要有某种问题，用符合基调的技巧性方式展现。</li>
+      <li>第二幕衔接点：离开旧世界</li>
+      <li>B故事：喘口气，另一半人物。</li>
+      <li>娱乐游戏：多点精彩部分（伙伴类型中矛盾最大的时候）</li>
+      <li>中点：表面顶点，开始转向发展。</li>
+      <li>坏蛋逼近：最为艰难的部分。</li>
+      <li>一无所有：彻底失败，死亡气息（事物消亡）。</li>
+      <li>灵魂的黑夜：黎明前的黑暗</li>
+      <li>第三幕衔接点：解决方案出现</li>
+      <li>结尾：人物定形，“改变世界”</li>
+      <li>终场画面：对比，确实发生变化</li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="创造完美的野兽"><span class="heading-counter">6.</span><span class="heading-label">创造完美的野兽</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>案板之王：用一些看得见，摸得着，可以挑战的东西调整故事（渗透入潜意识）</li>
+  <li>第一张卡：分幕，卡片记载场景。</li>
+  <li>大转折点：幕与幕之间的大转折点</li>
+  <li>过载幕与黑洞：链接，填补空白。</li>
+  <li>轻飘飘的第三幕：留意B故事、坏单的报应、主角的改变。</li>
+  <li>色彩编码：用视觉元素呈现</li>
+  <li>精减：去掉不必要的部分，记录情绪冲突。</li>
+  <li>准备展翅飞翔：案板只是练习，可以动手写作。</li>
+  <li>本主题的最后寄语：“冲突”</li>
+  <li>我的秘密武器：求助于熟人。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="剧本写作的金科玉律"><span class="heading-counter">7.</span><span class="heading-label">剧本写作的金科玉律</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>一些剧本的漂亮规则，欢迎推翻。</p>
+
+<ul>
+  <li>救猫咪：让另类主角或者复仇故事能够得到认同。</li>
+  <li>泳池里的教皇：给观众一些看点，让观众能比较愉快地接受必知信息。</li>
+  <li>不要有双重神秘力量：每部影片中请只使用一种魔力。</li>
+  <li>铺垫：铺垫不要太多。</li>
+  <li>黑人兽医，糖太多了：一个时间，一个点子，太多或许反而不好。</li>
+  <li>小心那块冰川：危险必须是眼前的危险，接近得太慢、没有威胁、无聊都是不可取的。</li>
+  <li>曲线公约：每个人物在故事中都要有所转变，主角和他的朋友们（坏蛋或许不需要）</li>
+  <li>被让媒体介入：除非影片中有世界性的问题，不然媒体的介入会破坏局部环境的体验</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="影片出了什么问题"><span class="heading-counter">8.</span><span class="heading-label">影片出了什么问题</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>主角主导：主角必须积极主动：
+    <ul>
+      <li>主角的目标要清晰</li>
+      <li>主角需要主动且艰难的决策下一步</li>
+      <li>主角的行动源于他的迫切愿望</li>
+      <li>主角知道应该怎么做。</li>
+    </ul>
+  </li>
+  <li>说情节：电影是用影像讲述故事的，而不是文字。</li>
+  <li>让坏蛋坏到家：不择手段，六亲不认。</li>
+  <li>转折、转折、再转折：情节需要螺旋形上升。</li>
+  <li>情绪色环：将情绪色环中的所有颜色都用上，提供经可能丰富的体验。</li>
+  <li>妳好吗我很好：人物台词的语气要符合人物性格。</li>
+  <li>后退：弓弦越靠后，拉出来的力量越大，后退以展示更好地成长与变化。</li>
+  <li>瘸腿和眼罩：确保每个人有独特的说话方式，视觉提示，形象的提醒物。</li>
+  <li>原始吗：影片的原始驱动力，基于DNA中的原始需求。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="结尾淡出"><span class="heading-counter">9.</span><span class="heading-label">结尾淡出</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>抱负和机遇：努力去做，运气也很重要。</li>
+  <li>为这个领域做准备：保持自己随时是准备好的状态。</li>
+  <li>备受煎熬的首次联系：正式的去讲述，指定一些联系别人的长远计划。</li>
+  <li>网络：网络可以突破空间的限制…</li>
+  <li>别闷在家里做：多跟人打交道。</li>
+  <li>一些剧本成败案例：一些案例</li>
+  <li>事实就是这样：事实就是这样，放手去做吧。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="后记如何分析一部影片"><span class="heading-counter">10.</span><span class="heading-label">后记——如何分析一部影片</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>基础信息
+    <ul>
+      <li>影片名、导演、影片类别</li>
+      <li>上映时间、分析时间</li>
+      <li>一句话概括：讲了什么、核心创意、想不到的地方</li>
+      <li>为何值得分析</li>
+    </ul>
+  </li>
+  <li>故事设计
+    <ul>
+      <li>人物：
+        <ul>
+          <li>主角：主角的表、里需求，主角的成长。</li>
+          <li>人物关系，其他人物的成长</li>
+        </ul>
+      </li>
+      <li>故事：
+        <ul>
+          <li>故事原型类别</li>
+          <li>一句话填入15个节拍：开场、主题呈现、铺垫、推动、争执、第二幕衔接点、B故事、娱乐游戏、中点、坏蛋逼近、一无所有、灵魂的黑夜、第三幕衔接点、结尾、终场画面</li>
+          <li>节拍表：将不同场景体现出节拍表，记录情绪变化</li>
+          <li>使用技巧</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>场景设计
+    <ul>
+      <li>待补充</li>
+    </ul>
+  </li>
+  <li>其他
+    <ul>
+      <li>待补充</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-10-27 - jskyzero - 🚧 update 6.摘录与杂谈
+2024-10-27 - jskyzero - 📝 add LISTS.HTML &amp; update structure
+2024-04-04 - jskyzero - 🚚 update structure
+2024-01-24 - jskyzero - 📝 update title
+2024-01-02 - jskyzero - 📝 test change strcuture
+2023-05-27 - jskyzero - 🚚 re:re:change file folder
+2022-04-15 - jskyzero - 📝 update title
+2021-08-19 - jskyzero - 🔀  change structure
+2021-08-18 - jskyzero - update tages
+2021-08-12 - jskyzero - fix wrong words
+2021-06-27 - jskyzero - 🚧 format markdown code
+2021-01-19 - jskyzero - 📝 繁体转简体，update One Last Kiss
+2019-12-27 - jskzyero - update tags system in gameplay part
+2019-10-10 - jskyzero - update 后记——如何分析一部影片
+2019-10-10 - jskyzero - add 后记——如何分析一部影片
+2019-10-10 - jskyzero - 完成救猫咪w
+
+<em>（本文编写于2019年10月，最后修改于2024年10月，共修改1次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2019/08/28/save_cat/';
+this.page.identifier = 'https://design.jskyzero.com/2019/08/28/save_cat/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#前言">前言</a></li></ul><ul><li><a href="#救猫咪总结">《救猫咪》总结</a><ul><li><a href="#导论">导论</a></li><li><a href="#救猫咪的含义">“救猫咪”的含义</a></li><li><a href="#似而不同">似而不同</a></li><li><a href="#主角是谁">主角是谁</a></li><li><a href="#开始写剧本">开始写剧本</a></li><li><a href="#创造完美的野兽">创造完美的野兽</a></li><li><a href="#剧本写作的金科玉律">剧本写作的金科玉律</a></li><li><a href="#影片出了什么问题">影片出了什么问题</a></li><li><a href="#结尾淡出">结尾淡出</a></li><li><a href="#后记如何分析一部影片">后记——如何分析一部影片</a></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

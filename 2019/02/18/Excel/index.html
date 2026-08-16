@@ -1,0 +1,404 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>编辑器：Excel使用 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="编辑器：Excel使用">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="本文將講述Excel的一些基礎用法，函數相關部分，以及如何設計表格的數據字段。">
+<meta property="og:description" content="本文將講述Excel的一些基礎用法，函數相關部分，以及如何設計表格的數據字段。">
+<link rel="canonical" href="https://design.jskyzero.com/2019/02/18/Excel/">
+<meta property="og:url" content="https://design.jskyzero.com/2019/02/18/Excel/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-02-18T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="编辑器：Excel使用">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2019-02-18T00:00:00+00:00","datePublished":"2019-02-18T00:00:00+00:00","description":"本文將講述Excel的一些基礎用法，函數相關部分，以及如何設計表格的數據字段。","headline":"编辑器：Excel使用","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2019/02/18/Excel/"},"url":"https://design.jskyzero.com/2019/02/18/Excel/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>本文將講述Excel的一些基礎用法，函數相關部分，以及如何設計表格的數據字段。</p>
+
+<!--more-->
+
+<h1 id="excel用法相關"><span class="heading-label">EXCEL用法相關</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/游戏开发-水文-blue.svg?style=flat" alt="游戏开发-水文"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2019/02/18-brightgreen.svg?style=flat" alt="日期 2019/02/18"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#excel用法相關">EXCEL用法相關</a><ul><li><a href="#增补一些常用需求">增补：一些常用需求</a><ul><li><a href="#用法相关">用法相关</a></li><li><a href="#公式相关">公式相关</a></li></ul></li><li><a href="#繪制圖表">繪制圖表</a></li><li><a href="#公式基礎">公式基礎</a></li><li><a href="#表格设计">表格设计</a><ul><li><a href="#关系数据库字段设计">关系数据库字段设计</a></li><li><a href="#示例">示例</a></li></ul></li></ul></li></ul></nav></div>
+
+<p>Microsoft Excel是當下最流行的個人數據處理軟件，這裏自然不太想展開說Excel是如何流行起來的，只是說在數據處理上，Excel足夠強大而且足夠友好。</p>
+
+<p>並不是每個人都有編程基礎，能接受諸如<code class="language-plaintext highlighter-rouge">json</code>、<code class="language-plaintext highlighter-rouge">xml</code>、<code class="language-plaintext highlighter-rouge">binary</code>的數據組織格式——而且在可讀性，修改性等等方便，也不見得這些會比Excel方便到哪裏去。</p>
+
+<p>當然這也不是說Excel就是萬能的——世界上真的存在萬能的解決方案嗎？一切都是取決於需求和當前環境，是在各方因素的糾纏下的一種取舍、讓步和折中。</p>
+
+<p>但是這並不影響些什麽，Excel還是很強大，並且可以做很多事情。</p>
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="增补一些常用需求"><span class="heading-counter">1.</span><span class="heading-label">增补：一些常用需求</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="用法相关"><span class="heading-counter">1.1.</span><span class="heading-label">用法相关</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>去重：在“数据”选项卡上，单击“删除重复项”。</li>
+  <li><a href="https://support.microsoft.com/zh-cn/office/%E5%88%9B%E5%BB%BA%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8-7693307a-59ef-400a-b769-c5402dce407b">创建下拉列表</a></li>
+  <li>仅粘贴值！可以将其添加到快捷操作栏</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="公式相关"><span class="heading-counter">1.2.</span><span class="heading-label">公式相关</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>填0补位：<code class="language-plaintext highlighter-rouge">=TEXT(A1,REPT("0",n))</code></li>
+  <li>次方A1**B1：<code class="language-plaintext highlighter-rouge">POWER(A1,B1)</code></li>
+  <li>先乘再求和：<code class="language-plaintext highlighter-rouge">SUMPRODUCT()</code></li>
+  <li>转换进制：<code class="language-plaintext highlighter-rouge">BASE(F5,2)</code></li>
+  <li>取字符串：<code class="language-plaintext highlighter-rouge">RIGHT()</code>，<code class="language-plaintext highlighter-rouge">LEFT()</code>，<code class="language-plaintext highlighter-rouge">MID()</code></li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="繪制圖表"><span class="heading-counter">2.</span><span class="heading-label">繪制圖表</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<blockquote>
+  <p><em>我們可以轻松制作出的表格。</em></p>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/skill/excel/plot-480.webp 480w, /assets/generated/img/skill/excel/plot-760.webp 760w, /assets/generated/img/skill/excel/plot-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/excel/plot.png" alt="" width="1345" height="695" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+
+<p>眾所周知，Excel的圖表功能很強大，簡單來說繪制一個圖表我們需要：</p>
+
+<ol>
+  <li>選擇數據源</li>
+  <li>繪制圖表（明確圖表類型）</li>
+  <li>修改圖表細節</li>
+</ol>
+
+<ul>
+  <li>描述文字，UI元素。</li>
+  <li>風格，顏色，元素位置。</li>
+</ul>
+
+<p>我們可以按住<code class="language-plaintext highlighter-rouge">CTRL</code>拖動選擇數據源（要修改也可以右鍵選擇數據源，然後拖動選擇），然後鍵入<code class="language-plaintext highlighter-rouge">CTRL</code>+<code class="language-plaintext highlighter-rouge">F1</code>快速新建表格。</p>
+
+<p>然後我們需要根據我們的目標選擇合適的圖表類型，比如廣泛使用的條形圖、折線圖等等，在設計面板的類型選項下面可以找到更改圖表類型。</p>
+
+<p>同樣的，我們在設計面板上可以找到圖表樣式、快速布局等等選項，單擊表格可以找到添加元素、樣式、篩選選項，右鍵表格也可以找到若按選項，雙擊則可以彈出選項設置框，總之需要調啥就找到設置然後調就是了。</p>
+
+<p>對於未處理的原始數據，我們可以使用數據透視圖，可以選擇原有數據進行求合匯總；對於多列元素，除了並列顯示，我們也可以采用組合的形式展現，比如組合折線圖和條形圖。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="公式基礎"><span class="heading-counter">3.</span><span class="heading-label">公式基礎</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<blockquote>
+  <p><em>一些簡單基本的函數。</em></p>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/skill/excel/function-480.webp 480w, /assets/generated/img/skill/excel/function-760.webp 760w, /assets/generated/img/skill/excel/function-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/excel/function.jpg" alt="" width="1468" height="432" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>公式當然也是使用Excel避不開的一部分，內置的為各種場景定制的函數，極其詳實，讓人看到就心生退意，這裏挑一些簡單的說一下。</p>
+
+<p>我們自然註意到Excel是有一個行和列的，列的字母表示+行的行數就組成了單元格的id，然後就可以用到函數裏面，比如<code class="language-plaintext highlighter-rouge">A1</code>，<code class="language-plaintext highlighter-rouge">A2</code> ，<code class="language-plaintext highlighter-rouge">B1</code>這樣，然後指定範圍可以<code class="language-plaintext highlighter-rouge">A1:A10</code>，<code class="language-plaintext highlighter-rouge">A1:B10</code>這樣。跨視圖、表格的話大概這麽寫<code class="language-plaintext highlighter-rouge">'./[filename.xlsx]viewname'!A1</code>。</p>
+
+<p>基本的單元格是可以簡單的加減乘除冪運算（^）的，對於結果有一定格式化的手段，比如用<code class="language-plaintext highlighter-rouge">A1&amp;','&amp;B1</code>，或者是<code class="language-plaintext highlighter-rouge">A1&amp;TEXT(B1, "YYYY年M月D日")</code>這樣的。</p>
+
+<p>特別值得一提的是<code class="language-plaintext highlighter-rouge">VLOOKUP</code>函數，幾個參數的含義如下。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/skill/excel/vlookup-480.webp 480w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/excel/vlookup.jpg" alt="" width="605" height="427" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="表格设计"><span class="heading-counter">4.</span><span class="heading-label">表格设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>接下來將講述關係型數據庫中字段的設計，然後給出一個實際工作中的例子並進一步熟悉Excel的使用。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="关系数据库字段设计"><span class="heading-counter">4.1.</span><span class="heading-label">关系数据库字段设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>先從範式開始講起吧，範式這個詞是指符合某種關係模式，然後有這麽幾種範式</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>名字</th>
+      <th>要求</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1NF</td>
+      <td>每個屬性都是不可再分的</td>
+    </tr>
+    <tr>
+      <td>2NF</td>
+      <td>消除非主屬性對碼的部分函數依賴</td>
+    </tr>
+    <tr>
+      <td>3NF</td>
+      <td>消除非主屬性對碼的傳遞函數依賴</td>
+    </tr>
+    <tr>
+      <td>BCNF</td>
+      <td>消除主屬性對碼的部分和傳遞函數依賴</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>稍微解釋一下這幾個名詞，首先是：</p>
+
+<ul>
+  <li>碼：除了碼以外的所有屬性都完全函數依賴與的一個或一組屬性。</li>
+  <li>非主屬性：不在任何一個碼中的屬性。</li>
+  <li>主屬性：存在于任何一個碼中的屬性。</li>
+</ul>
+
+<p>然後是：</p>
+
+<ul>
+  <li>函數依賴：<code class="language-plaintext highlighter-rouge">y=f(x)</code>，唯一x確定y。</li>
+  <li>完全函數依賴：對於x的真子集不成立。</li>
+  <li>部分函數依賴：不是完全的函數依賴</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="示例"><span class="heading-counter">4.2.</span><span class="heading-label">示例</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>這裏給出一個關於關卡與玩家的對於表格的例子，具體字段暫且不解釋其含義（似乎不解釋含義也很難理解究竟是在幹啥OTZ）</p>
+
+<p>我們先考慮拆分一個id的各個字段對應的屬性：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/skill/excel/id-480.webp 480w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/excel/id.png" alt="" width="597" height="390" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>然後將各個字段對應的子表格拆開：</p>
+
+<p>這是數據池表格，具體的value會再根據屬性表去更新。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/skill/excel/table1-480.webp 480w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/excel/table1.png" alt="" width="625" height="400" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>分別是屬性對應表、職業枚舉名稱對應表、組隊方式對應表、地圖難度對應表</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/skill/excel/table2-480.webp 480w, /assets/generated/img/skill/excel/table2-760.webp 760w, /assets/generated/img/skill/excel/table2-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/excel/table2.png" alt="" width="1441" height="210" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>我是比較習慣使用名稱管理器，方面在子表中間查找。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/skill/excel/name-480.webp 480w, /assets/generated/img/skill/excel/name-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/excel/name.png" alt="" width="1103" height="626" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>然後在子表1裏面我們就可以這樣根據id的子段去lookup</p>
+
+<pre><code class="language-excel">=INDEX(
+  DB_Table[name], 
+  MATCH(RIGHT(A2,4), 
+        DB_Table[total_id], 
+        0)
+  , 1)
+</code></pre>
+
+<p>在子表2裏面我們可以根據pair和name_id生產對於的id字段</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=100&amp;
+  TEXT(VLOOKUP(H2, 
+               Dungeon_Difficult_Table, 
+               2), "00")&amp;
+  INDEX(Role_Table[key], 
+        MATCH(VLOOKUP(H2, 
+                      Pair_Table, 
+                      COLUMN()), 
+              Role_Table[enum],
+              0))&amp;
+  TEXT(I2, "00")
+</code></pre></div></div>
+
+<p>簡單來看就是各種來回查找，其實邏輯並不算複雜。</p>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2025-07-05 - jskyzero - 📝 归档文章
+2025-04-15 - jskyzero - Update 2019-02-18-Excel.md
+2024-10-27 - jskyzero - ✨ update structure
+2024-04-04 - jskyzero - 🚚 update structure
+2024-01-02 - jskyzero - 📝 test change strcuture
+2023-03-30 - jskyzero - 🐛 fix title
+2023-02-09 - jskyzero - update excel
+2022-09-20 - jskyzero - 更新标点符号
+2022-09-20 - jskyzero - update 增补：一些常用需求
+2022-04-15 - jskyzero - 📝 update Excel使用与数据字段设计
+2022-03-08 - jskyzero - 📝 add a lot reference &amp; delete useless file
+2021-09-21 - jskyzero - 🔥 remove {{site.img_url}}
+2021-08-19 - jskyzero - ✨ update tags
+2021-08-19 - jskyzero - 🔀  change structure
+2021-06-27 - jskyzero - 🚧 format markdown code
+2020-01-10 - jskyzero - update toc again
+2019-03-09 - jskyzero - update excel.md
+2019-02-20 - jskyzero - fix error
+2019-02-20 - jskyzero - half finish excel
+2019-02-19 - jskyzero - add Excel.md
+
+<em>（本文编写于2019年2月，最后修改于2025年7月，共修改1次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2019/02/18/Excel/';
+this.page.identifier = 'https://design.jskyzero.com/2019/02/18/Excel/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#excel用法相關">EXCEL用法相關</a><ul><li><a href="#增补一些常用需求">增补：一些常用需求</a><ul><li><a href="#用法相关">用法相关</a></li><li><a href="#公式相关">公式相关</a></li></ul></li><li><a href="#繪制圖表">繪制圖表</a></li><li><a href="#公式基礎">公式基礎</a></li><li><a href="#表格设计">表格设计</a><ul><li><a href="#关系数据库字段设计">关系数据库字段设计</a></li><li><a href="#示例">示例</a></li></ul></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

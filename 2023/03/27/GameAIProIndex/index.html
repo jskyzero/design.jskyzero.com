@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameAIPro·总集篇 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="GameAIPro·总集篇" />
+<meta property="og:locale" content="zh_CN" />
+<meta name="description" content="本文将汇总记录GameAIPro的相关文章的记录，更新较慢。" />
+<meta property="og:description" content="本文将汇总记录GameAIPro的相关文章的记录，更新较慢。" />
+<link rel="canonical" href="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" />
+<meta property="og:url" content="https://design.jskyzero.com/2023/03/27/GameAIProIndex/" />
+<meta property="og:site_name" content="设计者笔记" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="GameAIPro·总集篇" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-27T00:00:00+00:00","datePublished":"2023-03-27T00:00:00+00:00","description":"本文将汇总记录GameAIPro的相关文章的记录，更新较慢。","headline":"GameAIPro·总集篇","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2023/03/27/GameAIProIndex/"},"url":"https://design.jskyzero.com/2023/03/27/GameAIProIndex/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li class="current">
+                  <a href="/2023/03/27/GameAIProIndex/" class="current" aria-current="page">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>本文将汇总记录GameAIPro的相关文章的记录，更新较慢。</p>
+
+<p>此外，强烈推荐访问<a href="https://gameaipro.jsky.wiki/">GameAIPro中文索引</a>，来快速找到GameAIPro中自己感兴趣的文章。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/1-480.webp 480w, /assets/generated/img/skill/GameAIPro/1-760.webp 760w, /assets/generated/img/skill/GameAIPro/1-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/1.JPG" alt="" width="1280" height="720" loading="eager" decoding="async" fetchpriority="high"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/2-480.webp 480w, /assets/generated/img/skill/GameAIPro/2-760.webp 760w, /assets/generated/img/skill/GameAIPro/2-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/2.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/3-480.webp 480w, /assets/generated/img/skill/GameAIPro/3-760.webp 760w, /assets/generated/img/skill/GameAIPro/3-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/3.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/4-480.webp 480w, /assets/generated/img/skill/GameAIPro/4-760.webp 760w, /assets/generated/img/skill/GameAIPro/4-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/4.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/5-480.webp 480w, /assets/generated/img/skill/GameAIPro/5-760.webp 760w, /assets/generated/img/skill/GameAIPro/5-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/5.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/6-480.webp 480w, /assets/generated/img/skill/GameAIPro/6-760.webp 760w, /assets/generated/img/skill/GameAIPro/6-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/6.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/7-480.webp 480w, /assets/generated/img/skill/GameAIPro/7-760.webp 760w, /assets/generated/img/skill/GameAIPro/7-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/7.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/8-480.webp 480w, /assets/generated/img/skill/GameAIPro/8-760.webp 760w, /assets/generated/img/skill/GameAIPro/8-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/8.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/9-480.webp 480w, /assets/generated/img/skill/GameAIPro/9-760.webp 760w, /assets/generated/img/skill/GameAIPro/9-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/9.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/10-480.webp 480w, /assets/generated/img/skill/GameAIPro/10-760.webp 760w, /assets/generated/img/skill/GameAIPro/10-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/10.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/11-480.webp 480w, /assets/generated/img/skill/GameAIPro/11-760.webp 760w, /assets/generated/img/skill/GameAIPro/11-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/11.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/12-480.webp 480w, /assets/generated/img/skill/GameAIPro/12-760.webp 760w, /assets/generated/img/skill/GameAIPro/12-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/12.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/13-480.webp 480w, /assets/generated/img/skill/GameAIPro/13-760.webp 760w, /assets/generated/img/skill/GameAIPro/13-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/13.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/14-480.webp 480w, /assets/generated/img/skill/GameAIPro/14-760.webp 760w, /assets/generated/img/skill/GameAIPro/14-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/14.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/15-480.webp 480w, /assets/generated/img/skill/GameAIPro/15-760.webp 760w, /assets/generated/img/skill/GameAIPro/15-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/15.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/16-480.webp 480w, /assets/generated/img/skill/GameAIPro/16-760.webp 760w, /assets/generated/img/skill/GameAIPro/16-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/16.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/17-480.webp 480w, /assets/generated/img/skill/GameAIPro/17-760.webp 760w, /assets/generated/img/skill/GameAIPro/17-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/17.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/18-480.webp 480w, /assets/generated/img/skill/GameAIPro/18-760.webp 760w, /assets/generated/img/skill/GameAIPro/18-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/18.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/19-480.webp 480w, /assets/generated/img/skill/GameAIPro/19-760.webp 760w, /assets/generated/img/skill/GameAIPro/19-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/19.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/20-480.webp 480w, /assets/generated/img/skill/GameAIPro/20-760.webp 760w, /assets/generated/img/skill/GameAIPro/20-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/20.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/21-480.webp 480w, /assets/generated/img/skill/GameAIPro/21-760.webp 760w, /assets/generated/img/skill/GameAIPro/21-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/21.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/22-480.webp 480w, /assets/generated/img/skill/GameAIPro/22-760.webp 760w, /assets/generated/img/skill/GameAIPro/22-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/22.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/23-480.webp 480w, /assets/generated/img/skill/GameAIPro/23-760.webp 760w, /assets/generated/img/skill/GameAIPro/23-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/23.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/24-480.webp 480w, /assets/generated/img/skill/GameAIPro/24-760.webp 760w, /assets/generated/img/skill/GameAIPro/24-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/24.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/25-480.webp 480w, /assets/generated/img/skill/GameAIPro/25-760.webp 760w, /assets/generated/img/skill/GameAIPro/25-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/25.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/26-480.webp 480w, /assets/generated/img/skill/GameAIPro/26-760.webp 760w, /assets/generated/img/skill/GameAIPro/26-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/26.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/27-480.webp 480w, /assets/generated/img/skill/GameAIPro/27-760.webp 760w, /assets/generated/img/skill/GameAIPro/27-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/27.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/28-480.webp 480w, /assets/generated/img/skill/GameAIPro/28-760.webp 760w, /assets/generated/img/skill/GameAIPro/28-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/28.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/29-480.webp 480w, /assets/generated/img/skill/GameAIPro/29-760.webp 760w, /assets/generated/img/skill/GameAIPro/29-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/29.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/30-480.webp 480w, /assets/generated/img/skill/GameAIPro/30-760.webp 760w, /assets/generated/img/skill/GameAIPro/30-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/30.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/31-480.webp 480w, /assets/generated/img/skill/GameAIPro/31-760.webp 760w, /assets/generated/img/skill/GameAIPro/31-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/31.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/32-480.webp 480w, /assets/generated/img/skill/GameAIPro/32-760.webp 760w, /assets/generated/img/skill/GameAIPro/32-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/32.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/33-480.webp 480w, /assets/generated/img/skill/GameAIPro/33-760.webp 760w, /assets/generated/img/skill/GameAIPro/33-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/33.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/34-480.webp 480w, /assets/generated/img/skill/GameAIPro/34-760.webp 760w, /assets/generated/img/skill/GameAIPro/34-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/34.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/35-480.webp 480w, /assets/generated/img/skill/GameAIPro/35-760.webp 760w, /assets/generated/img/skill/GameAIPro/35-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/35.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/36-480.webp 480w, /assets/generated/img/skill/GameAIPro/36-760.webp 760w, /assets/generated/img/skill/GameAIPro/36-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/36.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/37-480.webp 480w, /assets/generated/img/skill/GameAIPro/37-760.webp 760w, /assets/generated/img/skill/GameAIPro/37-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/37.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/38-480.webp 480w, /assets/generated/img/skill/GameAIPro/38-760.webp 760w, /assets/generated/img/skill/GameAIPro/38-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/38.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/39-480.webp 480w, /assets/generated/img/skill/GameAIPro/39-760.webp 760w, /assets/generated/img/skill/GameAIPro/39-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/39.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/40-480.webp 480w, /assets/generated/img/skill/GameAIPro/40-760.webp 760w, /assets/generated/img/skill/GameAIPro/40-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/40.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/41-480.webp 480w, /assets/generated/img/skill/GameAIPro/41-760.webp 760w, /assets/generated/img/skill/GameAIPro/41-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/41.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/42-480.webp 480w, /assets/generated/img/skill/GameAIPro/42-760.webp 760w, /assets/generated/img/skill/GameAIPro/42-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/42.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/43-480.webp 480w, /assets/generated/img/skill/GameAIPro/43-760.webp 760w, /assets/generated/img/skill/GameAIPro/43-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/43.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/44-480.webp 480w, /assets/generated/img/skill/GameAIPro/44-760.webp 760w, /assets/generated/img/skill/GameAIPro/44-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/44.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/45-480.webp 480w, /assets/generated/img/skill/GameAIPro/45-760.webp 760w, /assets/generated/img/skill/GameAIPro/45-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/45.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/46-480.webp 480w, /assets/generated/img/skill/GameAIPro/46-760.webp 760w, /assets/generated/img/skill/GameAIPro/46-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/46.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/47-480.webp 480w, /assets/generated/img/skill/GameAIPro/47-760.webp 760w, /assets/generated/img/skill/GameAIPro/47-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/47.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture>
+<picture><source type="image/webp" srcset="/assets/generated/img/skill/GameAIPro/48-480.webp 480w, /assets/generated/img/skill/GameAIPro/48-760.webp 760w, /assets/generated/img/skill/GameAIPro/48-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/skill/GameAIPro/48.JPG" alt="" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+
+
+
+<div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-10-27 - jskyzero - ✨ update structure
+2024-04-04 - jskyzero - 🚚 update structure
+2024-01-02 - jskyzero - 📝 test change strcuture
+2023-12-29 - jskyzero - 📝 re:update index
+2023-12-29 - jskyzero - 📝 update index
+2023-10-10 - jskyzero - 📝 update title
+2023-05-27 - jskyzero - 🚚 re:re:change file folder
+2023-05-27 - jskyzero - 🚚 re:change file folder
+2023-05-27 - jskyzero - 🚚 test change file folder
+2023-04-04 - jskyzero - 📝 update title
+2023-03-31 - jskyzero - 🍱 finish Game AI Pro 索引
+2023-03-30 - jskyzero - 🐛 fix title
+2023-03-29 - jskyzero - 📝 update Game AI Pro
+2023-03-27 - jskyzero - 📝 update Game AI Pro 索引
+2023-03-27 - jskyzero - init Game AI Pro 大全
+
+<em>（本文编写于2023年3月，最后修改于2024年10月，共修改1次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png" />
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log" >
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2023/03/27/GameAIProIndex/';
+this.page.identifier = 'https://design.jskyzero.com/2023/03/27/GameAIProIndex/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">&copy; 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录">
+            <!-- 目录由 _theme/_plugins/section_processor.rb 在构建期填充 -->
+          </nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer></script>
+    <script src="/assets/js/sidebar.js" defer></script>
+    <script src="/assets/js/toc-sidebar.js" defer></script>
+    <script src="/assets/js/post-format.js" defer></script>
+    <script src="/assets/js/header.js" defer></script>
+  </body>
+</html>

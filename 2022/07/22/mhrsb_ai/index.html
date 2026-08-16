@@ -1,0 +1,559 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>怪物猎人中的AI出招设计 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="怪物猎人中的AI出招设计">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！">
+<meta property="og:description" content="以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！">
+<link rel="canonical" href="https://design.jskyzero.com/2022/07/22/mhrsb_ai/">
+<meta property="og:url" content="https://design.jskyzero.com/2022/07/22/mhrsb_ai/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-07-22T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="怪物猎人中的AI出招设计">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-22T00:00:00+00:00","datePublished":"2022-07-22T00:00:00+00:00","description":"以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！","headline":"怪物猎人中的AI出招设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/07/22/mhrsb_ai/"},"url":"https://design.jskyzero.com/2022/07/22/mhrsb_ai/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li class="current">
+                  <a href="/2022/07/22/mhrsb_ai/" class="current" aria-current="page">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>以拆包和体验来推导一下怪物猎人的AI出招逻辑，感受可能是市面上PVE动作游戏TTK最长、规则最丰富的单局战斗体验！</p>
+
+<!--more-->
+
+<h1 id="怪物猎人中的ai出招设计"><span class="heading-label">怪物猎人中的AI出招设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/动作游戏分析-blue.svg?style=flat" alt="动作游戏分析"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2022/07/22-brightgreen.svg?style=flat" alt="日期 2022/07/22"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#怪物猎人中的ai出招设计">怪物猎人中的AI出招设计</a><ul><li><a href="#前言">前言</a></li><li><a href="#拆包">拆包</a><ul><li><a href="#繁多的状态机">繁多的状态机</a></li><li><a href="#盲人摸象">盲人摸象</a></li></ul></li><li><a href="#体验反推">体验反推</a><ul><li><a href="#结论1出招跟状态相关">结论1：出招跟状态相关</a></li><li><a href="#结论2出招满足反应性与随机性">结论2：出招满足反应性与随机性</a></li><li><a href="#结论3出招存在固定派生">结论3：出招存在固定派生</a></li></ul></li><li><a href="#总结">总结</a></li><li><a href="#其他参考">其他参考</a></li></ul></li></ul></nav></div>
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="前言"><span class="heading-counter">1.</span><span class="heading-label">前言</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>如果要参考学习动作游戏PVE的BOSS设计的话，我想怪猎系列的怪物可能是绕不开的一个课题，它有着相对简单的关卡设计，衬托出纯度更高的战斗、丰富的机制与动作，带来反复游玩的乐趣。在MHW这一作，它经受住了大环境下ACT品类没落的考验，一跃成为了ACT游戏中最耀眼的明星之一。</p>
+
+<p>本文将<strong>从拆包、体验反推两个视角</strong>来窥视怪物猎人的AI，聚焦在怪物AI出招的设计、和这些设计是如何影响玩家的体验的。也可以通过本文对比这两种方式，了解它俩各自的特点，以及在游戏反拆时适用的场合。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="拆包"><span class="heading-counter">2.</span><span class="heading-label">拆包</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>基本上，只要<strong>有MOD的游戏，就代表玩家群体已经掌握了游戏文件组织的大体结构</strong>——毕竟MOD，就是把玩家的内容，替换、修改厂商的内容。得先弄明白文件放到哪里，才能放过去让文件生效。对于大多数对MOD没有积极持支持态度的游戏开发商，这往往意味着已经有一个工具可以针对玩家的二进制分发文件进行解密解压缩处理。</p>
+
+<p>感谢卡普空从MHW以来对PC的友好态度，MHW/MHWIB、MHR/MHRSB，都有着相当多的外观、易用性MOD，繁荣的MOD当然也就意味着，玩家对游戏文件有着相当的了解，从Github、NEXUSMODS上顺藤摸瓜成功找到了MHRSB的<a href="https://github.com/mhvuze/MonsterHunterRiseModding">MOD教程</a>，里面自然有<a href="https://github.com/mhvuze/MonsterHunterRiseModding/wiki/Extracting-Game-Files-(PC)">拆包过程的说明</a>，事不宜迟，拆了看看AI配置吧！</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="繁多的状态机"><span class="heading-counter">2.1.</span><span class="heading-label">繁多的状态机</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>从<code class="language-plaintext highlighter-rouge">re_chunk_000\natives\STM\enemy\em001\</code>就可以定位到具体怪物，查一下<a href="https://github.com/mhvuze/MonsterHunterRiseModding/wiki/Monster-IDs">怪物ID表</a>，001是Rathian，也就是我们的老朋友——雌火龙。</p>
+
+<p>对于一只具体的怪物，解包后的文件目录如下，我们关注的也就是<code class="language-plaintext highlighter-rouge">ai_fsm_user_data</code>下的文件，fsm，看起来底层驱动的技术是有限状态机。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span>
+├── 00
+│&nbsp;&nbsp; ├── ai_fsm_user_data
+│&nbsp;&nbsp; ├── collision
+│&nbsp;&nbsp; ├── mod
+│&nbsp;&nbsp; ├── mot
+│&nbsp;&nbsp; ├── prefab
+│&nbsp;&nbsp; ├── shell
+│&nbsp;&nbsp; ├── user_data
+│&nbsp;&nbsp; └── user_variables
+├── 02
+├── 07
+└── common
+    ├── act_tbl_user_data
+    ├── mod
+    ├── mot
+    ├── motion_fsm
+    └── user_data
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">ai_fsm_user_data</code>下的文件就多起来了，以雌火龙00的<code class="language-plaintext highlighter-rouge">em001\00\ai_fsm_user_data</code>的为例，有多达125个文件：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span>
+├── flow
+│&nbsp;&nbsp; └── em001_00_predator_relevant_action.user.2
+├── hub
+│&nbsp;&nbsp; ├── damage
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── fly
+│&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; ├── em001_00_fly_element_weak_damage.user.2
+│&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; ├── em001_00_fly_em2em_damage.user.2
+│&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; └── ...
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── stand
+│&nbsp;&nbsp; │&nbsp;&nbsp;     ├── em001_00_stand_element_weak_damage.user.2
+│&nbsp;&nbsp; │&nbsp;&nbsp;     ├── em001_00_stand_em2em_damage.user.2
+│&nbsp;&nbsp; │&nbsp;&nbsp;     └── ...
+│&nbsp;&nbsp; ├── die
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── fly
+│&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; ├── em001_00_fly_capture.user.2
+│&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; └── em001_00_fly_normal_die.user.2
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── stand
+│&nbsp;&nbsp; │&nbsp;&nbsp;     ├── em001_00_stand_capture.user.2
+│&nbsp;&nbsp; │&nbsp;&nbsp;     └── em001_00_stand_normal_die.user.2
+│&nbsp;&nbsp; ├── em001_00_arrange.user.2
+│&nbsp;&nbsp; ├── em001_00_arrange_hyakuryu.user.2
+│&nbsp;&nbsp; └── ...
+└── think
+    ├── em001_00_damage.user.2
+    ├── em001_00_die.user.2
+    └── ...
+
+9 directories, 125 files
+</code></pre></div></div>
+
+<blockquote>
+  <p>果然“软件开发没有银弹”，怪猎的怪物单局行为丰富，连AI配置文件都有120多个……太强了。</p>
+</blockquote>
+
+<p>很可惜，目前用于拆包后的<code class="language-plaintext highlighter-rouge">.user.2</code>类型文件的<a href="https://github.com/Synthlight/MHR-Editor">MHR Editor</a>，尚且不支持打开编辑这些AI文件，姑且用<code class="language-plaintext highlighter-rouge">HexEditor</code>试着看了下一些文件的内容，看到了一些类似USR开头、RSZ用作分割之类的信息，但是也没有啥有价值的内容。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/mhrsb.AI/HexEditor-480.webp 480w, /assets/generated/img/gameplay/mhrsb.AI/HexEditor-760.webp 760w, /assets/generated/img/gameplay/mhrsb.AI/HexEditor-1140.webp 1140w, /assets/generated/img/gameplay/mhrsb.AI/HexEditor-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/mhrsb.AI/HexEditor.jpg" alt="" width="2137" height="1550" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+
+<p>看不到具体的文件，就只能看看能不能从文件名中间得到些信息了。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="盲人摸象"><span class="heading-counter">2.2.</span><span class="heading-label">盲人摸象</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>试着对文件名进行了一些标注（拿不准胡猜的东西标了黄色）：</p>
+
+<p><img src="/assets/img/gameplay/mhrsb.AI/em001-00.svg" alt=""></p>
+
+<ul>
+  <li>硬直</li>
+</ul>
+
+<p>在标注的过程中发现了一些<a href="https://bbs.nga.cn/read.php?tid=21732718&amp;rand=636">硬直机制</a>相关的文件，这些文件相较于AI，更像是动作跳转的逻辑。</p>
+
+<p>比如死亡、捕获，又比如经典麻痹、眩晕、睡眠。</p>
+
+<p>合理推测，可能有一部分硬直的动作逻辑是靠这些AI来控制的？</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/mhrsb.AI/1-480.webp 480w, /assets/generated/img/gameplay/mhrsb.AI/1-760.webp 760w, /assets/generated/img/gameplay/mhrsb.AI/1-1140.webp 1140w, /assets/generated/img/gameplay/mhrsb.AI/1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/mhrsb.AI/1.jpg" alt="" width="1781" height="623" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<ul>
+  <li>避障/场地移动</li>
+</ul>
+
+<p>可以把动作游戏的AI划分为攻击/移动，而移动中免不了的一部分就是类似避障、返回场地中央之类的逻辑，这么一看大家还是都会面临这些问题的。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/mhrsb.AI/2-480.webp 480w, /assets/generated/img/gameplay/mhrsb.AI/2-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/mhrsb.AI/2.jpg" alt="" width="1010" height="359" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<ul>
+  <li>横向比较</li>
+</ul>
+
+<p>除了001我们也看一下093爵银龙，对比一下各自的<code class="language-plaintext highlighter-rouge">ai_fsm_user_data</code>的文件列表</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>比较对象</th>
+      <th>比较结论</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>em001-00/em001-02/em001-07</td>
+      <td>02和07都是00的子集，02和07略有不同</td>
+    </tr>
+    <tr>
+      <td>em093-00/em093-01</td>
+      <td>01是00的子集</td>
+    </tr>
+    <tr>
+      <td>em001-00/em093-00</td>
+      <td>略有不同</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>简要总结</li>
+</ul>
+
+<p>MHRSB的AI通过划分不同场景，将复杂的逻辑成功细分到多种场合的单个逻辑，这种做法可以<strong>降低单个文件的复杂度</strong>，同时，单个逻辑文件<strong>可以作为特性组件</strong>动态的给某只怪物添加或者删除（比如觅食逻辑）。</p>
+
+<p>我们最关心的出招逻辑AI，目测是在某个单个细分逻辑中。尝试继续寻找出招逻辑AI，从文件大小里面筛了一下，还是没有结论。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="体验反推"><span class="heading-counter">3.</span><span class="heading-label">体验反推</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>这部分开始就进入相对比较“虚”的部分了，没有那么多确定的知识，只能通过游戏的体验去反向思考。</p>
+
+<!-- 这一部分我们会先根据“经验”设定一个推理的“起点”，再选取几只经典的怪物的逐只看看，逐步去修正我们的“起点”，试图得到最终的结论。 -->
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/mhrsb.AI/3-480.webp 480w, /assets/generated/img/gameplay/mhrsb.AI/3-760.webp 760w, /assets/generated/img/gameplay/mhrsb.AI/3-1140.webp 1140w, /assets/generated/img/gameplay/mhrsb.AI/3-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/mhrsb.AI/3.jpg" alt="" width="2073" height="1459" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>参考上图，考虑到怪物猎人是一个规则设计非常繁多的游戏，我们先把怪物的AI行为分为战斗和其他两部分，本文主要讨论战斗相关的AI逻辑。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/mhrsb.AI/4-480.webp 480w, /assets/generated/img/gameplay/mhrsb.AI/4-760.webp 760w, /assets/generated/img/gameplay/mhrsb.AI/4-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/mhrsb.AI/4.jpg" alt="" width="1369" height="541" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>进一步的分析，我们以一些UP主的视频为参考展开：</p>
+
+<p><a href="https://www.bilibili.com/video/BV1JF411c7f7">【曙光怪物底裤系列#1爵银龙】爵银龙的常见招式派生解析</a></p>
+
+<p>整理如下：</p>
+
+<ul>
+  <li>特殊状态：劫血状态</li>
+  <li>连招中猎人位置变化：
+    <ul>
+      <li>判断猎人位置不合适：小后跳or短车，再继续</li>
+      <li>判断猎人位置不合适且无法修正：强制结束</li>
+      <li>多数连招判断猎人在背后：尾刺连招</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>状态</th>
+      <th>连招</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>非怒</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>伯爵三血球»站立尾刺(尾刺)»翼爪穿刺(下砸)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>侧飞»鲜血吐息</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>螺旋冲锋(螺旋冲)»翻沙舞石(空气炮)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>捞手»翼爪穿刺(下砸)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>前咬»翼爪穿刺(下砸)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>空翻»站立尾刺(尾刺)»翼爪穿刺(下砸)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>普通怒</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>螺旋冲锋(螺旋冲)»中远距离»三血球»站立尾刺(尾刺)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>螺旋冲锋(螺旋冲)»头前距离»溅石飞扑(前扑)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>侧飞»翼爪穿刺(下砸)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>普通状态选择性连招</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>侧咬»前砸/捕食/翼爪挥击(扫地)/(背后)尾刺</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>翼爪挥击(扫地)»大部分体术/(背后)尾刺</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>蛇形车»大部分体术/(背后)尾刺</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>原地狠砸(大下砸)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>鲜血之球(吐痰挥球)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>迅捷扇风(风压)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>……</td>
+      <td>……</td>
+      <td>……</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>后续有机会会在这里继续补充其他怪物的连招派生</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="结论1出招跟状态相关"><span class="heading-counter">3.1.</span><span class="heading-label">结论1：出招跟状态相关</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>根据体验，怪物一般会有正常状态、愤怒状态（、疲劳状态）几种，同时怪物可能还有自身的强化状态的逻辑：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/mhrsb.AI/5-480.webp 480w, /assets/generated/img/gameplay/mhrsb.AI/5-760.webp 760w, /assets/generated/img/gameplay/mhrsb.AI/5-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/mhrsb.AI/5.jpg" alt="" width="1366" height="541" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>怪物处于不同状态时，其出招派生是不一样的，用行为树来描述的话大概如下图：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/mhrsb.AI/6-480.webp 480w, /assets/generated/img/gameplay/mhrsb.AI/6-760.webp 760w, /assets/generated/img/gameplay/mhrsb.AI/6-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/mhrsb.AI/6.jpg" alt="" width="1187" height="497" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="结论2出招满足反应性与随机性"><span class="heading-counter">3.2.</span><span class="heading-label">结论2：出招满足反应性与随机性</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>用人话来说就是，，怪物会对不同条件做出反应，出招不同；相同条件时，怪物有若干技能可以选择。</p>
+
+<p>条件除了上面提到的怪物自身处于不同的状态，大概率还和玩家位置相关。一个很典型的例子是红莲爆鳞龙头大尾大肉质好，本来应该是弹属性远程武器的活靶子，但是因为对远程武器AI导致远程武器狩猎难度也不简单。</p>
+
+<p>总结起来大致可参考下图：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/mhrsb.AI/7-480.webp 480w, /assets/generated/img/gameplay/mhrsb.AI/7-760.webp 760w, /assets/generated/img/gameplay/mhrsb.AI/7-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/mhrsb.AI/7.jpg" alt="" width="1191" height="589" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="结论3出招存在固定派生"><span class="heading-counter">3.3.</span><span class="heading-label">结论3：出招存在固定派生</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>固定派生让玩家可以背版，提前预判怪物的行动，为持续游玩的玩家带来经验积累的优势。</p>
+
+<p>做一个反例思考，如果怪物的出招是纯随机的，一些没有特别好处理方式的招式将使得玩家的狩猎难度大增，甚至只要招式后摇大于任何一个怪物的出招前摇都可能被揍。另一个例子是早期雌火龙无前兆身前龙车，导致玩家甚至都会避免站在身前。</p>
+
+<p>另一方面，固定派生的中途也会根据玩家位置释放不同的招式；甚至当玩家位置偏移怪物下一招式的打击范围，怪物会调整自己的位置来减少空挥；当进行调整也无法命中的时候，甚至会取消攻击，可以参考下图：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/mhrsb.AI/8-480.webp 480w, /assets/generated/img/gameplay/mhrsb.AI/8-760.webp 760w, /assets/generated/img/gameplay/mhrsb.AI/8-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/mhrsb.AI/8.jpg" alt="" width="1191" height="637" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="总结"><span class="heading-counter">4.</span><span class="heading-label">总结</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>就结论上而言，怪物猎人中的AI出招是十分“规矩”且“丰富”的，就特征层面上讲，符合广泛动作游戏的AI框架，但是牛就牛在量大且细节好。</p>
+
+<p>量大不仅体现在不同AI的状态多，也体现在一个状态下的派生多，还体现在一个派生下的规则多。三多，直接提供了长TTK下的丰富度。</p>
+
+<p>遗憾的是本文受限于时间，没有结合招式和AI去分析不同怪物的战斗体验，这部分如果细说对设计应该也是颇有益处的，后续有时间再补足吧。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="其他参考"><span class="heading-counter">5.</span><span class="heading-label">其他参考</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li><a href="https://mhrise.kiranico.com/data/monsters/366824395">MHRISE.KIRANICO Rathian</a></li>
+  <li><a href="https://mhworld.kiranico.com/zh">MHWORLD.KIRANIC</a></li>
+  <li><a href="https://mhrise.mhrice.info/version/10.0.2/monster/001_00.html">mhrice.info Rathian</a></li>
+</ul>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-10-27 - jskyzero - ✨ update structure
+2024-01-02 - jskyzero - 📝 test change strcuture
+2023-12-29 - jskyzero - 📝 update index
+2023-07-18 - jskyzero - 🐛 修错别字
+2023-07-18 - jskyzero - 📝 finish 怪物猎人中的AI出招设计
+2023-07-17 - jskyzero - 📝 update mhrsb ai
+2023-07-06 - jskyzero - finish mhrsb ai
+2023-07-06 - jskyzero - 🔥 rm drawio
+2023-07-05 - jskyzero - add 爵银龙
+2023-05-30 - jskyzero - 📝 finish 盲人摸象
+2023-05-29 - jskyzero - update 盲人摸象
+2023-05-27 - jskyzero - 🚚 re:re:change file folder
+2023-05-27 - jskyzero - 🚚 re:change file folder
+2023-05-27 - jskyzero - 🚚 change file folder
+2023-05-26 - jskyzero - finish 繁多的状态机 part
+2023-05-26 - jskyzero - update 前言 &amp; 拆包
+2023-05-17 - jskyzero - 📝 start 拆包 part
+2023-05-11 - jskyzero - update index in 动作分析：怪猎AI设计
+2023-01-18 - jskyzero - 🐛 hide unfinished works
+2022-12-05 - jskyzero - 📝 add long-term-maintenance
+
+<em>（本文编写于2022年12月，最后修改于2024年10月，共修改2次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2022/07/22/mhrsb_ai/';
+this.page.identifier = 'https://design.jskyzero.com/2022/07/22/mhrsb_ai/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#怪物猎人中的ai出招设计">怪物猎人中的AI出招设计</a><ul><li><a href="#前言">前言</a></li><li><a href="#拆包">拆包</a><ul><li><a href="#繁多的状态机">繁多的状态机</a></li><li><a href="#盲人摸象">盲人摸象</a></li></ul></li><li><a href="#体验反推">体验反推</a><ul><li><a href="#结论1出招跟状态相关">结论1：出招跟状态相关</a></li><li><a href="#结论2出招满足反应性与随机性">结论2：出招满足反应性与随机性</a></li><li><a href="#结论3出招存在固定派生">结论3：出招存在固定派生</a></li></ul></li><li><a href="#总结">总结</a></li><li><a href="#其他参考">其他参考</a></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

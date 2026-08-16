@@ -1,0 +1,1093 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拆包看狮子猿AI设计 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="拆包看狮子猿AI设计">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="之前拆包看了只狼的狮子猿的一阶段动画，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。">
+<meta property="og:description" content="之前拆包看了只狼的狮子猿的一阶段动画，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。">
+<link rel="canonical" href="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/">
+<meta property="og:url" content="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-10-10T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="拆包看狮子猿AI设计">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-10-10T00:00:00+00:00","datePublished":"2023-10-10T00:00:00+00:00","description":"之前拆包看了只狼的狮子猿的一阶段动画，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。","headline":"拆包看狮子猿AI设计","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/"},"url":"https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li class="current">
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/" class="current" aria-current="page">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>之前拆包看了<a href="https://design.jskyzero.com/2023/02/17/sekiro_lion_tamarin/">只狼的狮子猿的一阶段动画</a>，本文则会对怪物的AI进行一些讨论和分析，并对之前文章的一些错误结论进行勘误。</p>
+
+<p>本文的目标是以狮子猿一阶段<strong>成熟完备的AI</strong>为例子，让读者能对动作游戏中AI的设计有一个初步的理解，并分析一些对实际工作中设计有启发的逻辑细节。本文会分为三个部分：初步的体验反推、拆包后对主AI分析的架构设计、以及细节和感受分析和讨论。</p>
+
+<h1 id="拆包看狮子猿ai设计"><span class="heading-label">拆包看狮子猿AI设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/动作游戏分析-blue.svg?style=flat" alt="动作游戏分析"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2023/10/10-brightgreen.svg?style=flat" alt="日期 2023/10/10"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#拆包看狮子猿ai设计">拆包看狮子猿AI设计</a><ul><li><a href="#相关阅读">相关阅读</a></li><li><a href="#初步的体验反推">初步的体验反推</a><ul><li><a href="#交错比例与招式cd">交错比例与招式CD</a></li><li><a href="#用行为树的简单拟合">用行为树的简单拟合</a></li><li><a href="#小结一定收获但局限">小结：一定收获但局限</a></li></ul></li><li><a href="#基于lua的架构设计">基于LUA的架构设计</a><ul><li><a href="#决策与逻辑分离">决策与逻辑分离</a><ul><li><a href="#高效复用">高效复用</a></li><li><a href="#分离逻辑">分离逻辑</a></li></ul></li><li><a href="#带条件检测的行为队列">带条件检测的行为队列</a><ul><li><a href="#行为队列">行为队列</a></li><li><a href="#条件检测的时效性">条件检测的时效性</a></li></ul></li><li><a href="#其他架构逻辑">其他架构逻辑</a><ul><li><a href="#行为概率与行为cd">行为概率与行为CD</a></li><li><a href="#信息感知与标记buff">信息感知与标记BUFF</a></li><li><a href="#计时器角色变量事件与打断">计时器/角色变量/事件与打断</a></li><li><a href="#封装">封装</a></li></ul></li><li><a href="#小结思路与格局打开">小结：思路与格局打开</a></li></ul></li><li><a href="#感受与细节设计">感受与细节设计</a><ul><li><a href="#行为逻辑">行为逻辑</a><ul><li><a href="#act01-96-r2230003001">Act01 9.6-R(2.2);3000;3001</a></li><li><a href="#act02-92-r22300334-3004">Act02 9.2-R(2.2);3003;3.4-&gt;3004</a></li><li><a href="#act03-268-r223008">Act03 26.8-R(2.2);…;3008</a></li><li><a href="#act04-以后">Act04 以后</a></li><li><a href="#简要小结">简要小结</a></li></ul></li><li><a href="#主决策逻辑">主决策逻辑</a><ul><li><a href="#前置行为">前置行为</a></li><li><a href="#决策部分-外围">决策部分-外围</a></li><li><a href="#决策部分-event1-10-or-1--1">决策部分-Event(1) 10 or 1 == 1</a></li><li><a href="#决策部分-默认">决策部分-默认</a></li><li><a href="#后置行为">后置行为</a></li></ul></li><li><a href="#剑戟弹刀逻辑等">剑戟（弹刀）逻辑等</a></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#全文总结">全文总结</a></li></ul></li></ul></nav></div>
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="相关阅读"><span class="heading-counter">1.</span><span class="heading-label">相关阅读</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>事后在网上搜了相关主题的文章，已经有大量有价值的文章了，本文的突出特点是直达实现本质、体验分析不足，可以阅读下面的文章用作参考：</p>
+
+<ul>
+  <li><a href="https://zhuanlan.zhihu.com/p/614731111">如何设计有“对话感”的BOSS？《只狼》AI完全拆解。</a></li>
+  <li><a href="https://www.gcores.com/articles/173664">剑戟交错——浅探《只狼》的战斗AI</a></li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="初步的体验反推"><span class="heading-counter">2.</span><span class="heading-label">初步的体验反推</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>首个尝试，使用挑选一段战斗序列进行反推的古典方式，初步分析一些关于节奏和感受的结论。</p>
+
+<p>和狮子猿录了一段素材，用肉眼将动作与之前的状态机进行匹配，得到了如下的结果：</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/1.png" alt=""></p>
+
+<blockquote>
+  <p>全程视频可参考：<a href="https://www.bilibili.com/video/BV1kj411Y7bC">Bilibili 笨办法</a></p>
+</blockquote>
+
+<p>其中的标注和动画状态机对应如下表所示：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>标注</th>
+      <th>类别</th>
+      <th>动画</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>连段1</td>
+      <td>花里胡哨类</td>
+      <td>3019;3020</td>
+    </tr>
+    <tr>
+      <td>连段2</td>
+      <td>花里胡哨类</td>
+      <td>3000;3001</td>
+    </tr>
+    <tr>
+      <td>连段2.变种</td>
+      <td>花里胡哨类</td>
+      <td>3000</td>
+    </tr>
+    <tr>
+      <td>连段3</td>
+      <td>花里胡哨类</td>
+      <td>3003;3004</td>
+    </tr>
+    <tr>
+      <td>连段4</td>
+      <td>花里胡哨类</td>
+      <td>3021</td>
+    </tr>
+    <tr>
+      <td>跳跃攻击</td>
+      <td>记忆点类</td>
+      <td>3014</td>
+    </tr>
+    <tr>
+      <td>红光1</td>
+      <td>记忆点类</td>
+      <td>3016</td>
+    </tr>
+    <tr>
+      <td>空窗期</td>
+      <td>表演类</td>
+      <td>四方向闪避位移</td>
+    </tr>
+    <tr>
+      <td>空窗期</td>
+      <td>表演类</td>
+      <td>原地吼，3018</td>
+    </tr>
+  </tbody>
+</table>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="交错比例与招式cd"><span class="heading-counter">2.1.</span><span class="heading-label">交错比例与招式CD</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>从这个视频中我们可以得出一些初步的结论:</p>
+
+<ul>
+  <li>攻击与空隙交错，比例是？</li>
+</ul>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/2.png" alt=""></p>
+
+<p>大体上，狮子猿会维持如上图所示【攻击，空窗期】这样的单元重复，以此营造出凶猛进攻和灵动移动结合的交手体验。</p>
+
+<p>其中，攻击的长度观察为1-4个完整招式，而空窗期通常为一次闪避位移。</p>
+
+<ul>
+  <li>招式没有复读，CD是？</li>
+</ul>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/3.png" alt=""></p>
+
+<p>将招式分别拆开，我们会发现同个招式没有连续两次出现的情况。观察两个招式之间的最短间隔时长（从上一个末尾到下一个的开始）：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>标注</th>
+      <th>最短时间间隔约</th>
+      <th>动画</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>连段1</td>
+      <td>&nbsp;</td>
+      <td>3019;3020</td>
+    </tr>
+    <tr>
+      <td>连段2与变种</td>
+      <td>6</td>
+      <td>3000;3001</td>
+    </tr>
+    <tr>
+      <td>连段3</td>
+      <td>&nbsp;</td>
+      <td>3003;3004</td>
+    </tr>
+    <tr>
+      <td>连段4</td>
+      <td>6</td>
+      <td>3021</td>
+    </tr>
+    <tr>
+      <td>跳跃攻击</td>
+      <td>50</td>
+      <td>3014</td>
+    </tr>
+    <tr>
+      <td>红光1</td>
+      <td>9</td>
+      <td>3016</td>
+    </tr>
+    <tr>
+      <td>空窗期</td>
+      <td>5</td>
+      <td>四方向闪避位移</td>
+    </tr>
+  </tbody>
+</table>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="用行为树的简单拟合"><span class="heading-counter">2.2.</span><span class="heading-label">用行为树的简单拟合</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>总结一些关键结论：</p>
+
+<ol>
+  <li>攻击行为与空窗期相间</li>
+  <li>攻击行为自身有间隔</li>
+</ol>
+
+<p>我们可以使用行为树对这个<code class="language-plaintext highlighter-rouge">出招序列</code>进行一个简单的拟合：</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/4.png" alt=""></p>
+
+<p>这个决策逻辑逻辑看起来很简单，因为这段战斗也只是一个局部序列，有着一定的局限性，不过还是做一个思考练习，如何让这个逻辑变得更好？</p>
+
+<ul>
+  <li>与战斗进程挂钩的空窗间隔</li>
+</ul>
+
+<p>简单来说，通过<strong>控制空窗期的CD来控制玩家的战斗压力</strong>，结合一个能反映玩家战斗进程的数值——比如血量或者时间，就可以形成差异化的心流体验或者战斗历程。</p>
+
+<ul>
+  <li>更加复杂且细致的条件</li>
+</ul>
+
+<p>和上面的思路类似，我们可以<strong>为不同的技能设置除了CD以外更加细致的条件</strong>，比如关联自身血量，对于只狼来说，基础重要属性还有自身的架势槽；对于一个常规的动作游戏，还可以关联敌我的空间位置关系等条件。</p>
+
+<ul>
+  <li>攻击前的调整位置</li>
+</ul>
+
+<p>对于一个动作游戏，招式的适用打击距离，一般是有限的。比如一个前冲拳，能冲的距离可能最多4米，那么对于4米外的目标，可能就<strong>需要先靠近目标再释放</strong>，不然就会形成空挥的体验（当然，空挥也是一种体验！）。对于4米内过近的目标，可能也需要先远离，避免一些不好的表现。</p>
+
+<p>这部分可以通过设置招式前的距离检测来避免。这些检测相应的也会造成限制从而降低释放的可能性，这是一个取舍问题。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="小结一定收获但局限"><span class="heading-counter">2.3.</span><span class="heading-label">小结：一定收获但局限</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>以传统而经典的行为树配置方法的话，对狮子猿AI的分析大致如上所述。当然，文章的长度已经出卖了作者，下文才是本次分析的重点，但是上文所叙述一些经典分析方法乃至思路也是相当重要的。</p>
+
+<p>那么话不多说，我们来看看拆包/反编译后的狮子猿AI的LUA脚本。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="基于lua的架构设计"><span class="heading-counter">3.</span><span class="heading-label">基于LUA的架构设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>本部分我们讨论一些宏观架构相关的话题，有时会使用行为树来对比，方便理解两者之间使用和思维的差异性。</p>
+
+<p>本节的目标是通过对架构的分析，带来一些思路的启发，从规则层面改善AI编写的效能。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="决策与逻辑分离"><span class="heading-counter">3.1.</span><span class="heading-label">决策与逻辑分离</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>拆包后的lua文件大致如下所示：</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/5.png" alt=""></p>
+
+<blockquote>
+  <p>原始内容可以参考：<a href="/assets/img/gameplay/sekiro_lion_tamarion_ai/510000_battle.dec.lua">狮子猿 510000_battle.dec.lua</a>，后文部分内容涉及到<a href="/assets/img/gameplay/sekiro_lion_tamarion_ai/509000_battle.dec.lua">蝴蝶夫人 509000_battle.dec.lua</a></p>
+</blockquote>
+
+<p>最外层是若干函数，如下图所示这里将其分了四类，具体的逻辑我们将在第三部分展开叙述。</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/6.png" alt=""></p>
+
+<p>和传统的行为树比，有一个非常具体的区别，只狼（或者说FromSoftware的游戏）的AI是将主决策逻辑和行为逻辑分开的。比如上图所示的<code class="language-plaintext highlighter-rouge">Activate</code>函数里面是主决策逻辑，里面会在一定条件下调用不同的<code class="language-plaintext highlighter-rouge">ActXX</code>系列函数。</p>
+
+<p>这样做有什么好处呢？我认为是<strong>高效复用</strong>和<strong>分离逻辑</strong>。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="高效复用"><span class="heading-counter">3.1.1.</span><span class="heading-label">高效复用</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>先从高效复用说起，在行为树的语境里，如果<strong>在两个地方都需要同一段逻辑</strong>，最简单的方法是直接拷贝一串逻辑过去，这样会很简单，但是问题就是，下次修改时，容易遗漏，或者出其他差错。</p>
+
+<p>相对完善的方法是，<strong>编写一个AI子树</strong>，去定义一些传递的黑板变量，但是这个操作的成本就会变高，普遍需要管理独立的新文件，增加心智上的负担。</p>
+
+<p>而使用脚本语言，则可以利用编程语言自带的函数的语法，来高效实现这一过程。（这里并不是说使用LUA脚本，就比行为树要好，只是各自有不同的特点。）</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/7.png" alt=""></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="分离逻辑"><span class="heading-counter">3.1.2.</span><span class="heading-label">分离逻辑</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>另一个话题则是分离逻辑，如果你配置过复杂AI的话，应该能理解<strong>AI设计的核心问题之一，就是解决复杂度的问题</strong>，这需要工程学的方法、可扩展且表达力强的通用架构、编写时符合直觉的逻辑思路等等……</p>
+
+<p><strong>将问题划分、以大化小的分治法</strong>也是核心思路之一，将行为逻辑和决策逻辑分开，能让双方聚焦各自的问题：决策逻辑负责复杂的条件检测，调用行为；而行为逻辑则只解决一个具体行为的实现，这里也可能会有一定的条件检测。但是是服务于这个行为的。这样，在面对复杂逻辑时，就可以将复杂逻辑化为若干部分，分别实现，避免干扰。</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/8.png" alt=""></p>
+
+<blockquote>
+  <p>一个类似思路的、在软件工程的语境的例子是<a href="https://developer.mozilla.org/en-US/docs/Glossary/MVC">MVC架构（Model-View-Controller，模型-视图-控制器）</a>。将软件分为：数据描述相关、处理交互视图相关、处理如何控制数据相关，三个部分各司其职，避免互相干涉带来的心智负担。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="带条件检测的行为队列"><span class="heading-counter">3.2.</span><span class="heading-label">带条件检测的行为队列</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>本小节我们聚焦到一个具体的行为的架构设计。比如【靠近，A招式，B招式】的一个行动序列。</p>
+
+<p>在行为树的语境中，会使用运行节点来描述一个耗时的行为，大概会如下图所示去实现：</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/9.png" alt=""></p>
+
+<p>想象一下这样的命令在Lua的一个函数中应该怎样描述实现？对于单个命令，下达单个的命令指令就行，但是当涉及到一连串连续执行的命令，就会麻烦一些。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="行为队列"><span class="heading-counter">3.2.1.</span><span class="heading-label">行为队列</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>答案是维护一个行为的“队列”，对于【靠近，A招式，B招式】这个序列，就添加靠近，A招式，B招式三个命令，等到执行的时候按照队列的先进先出的顺序挨个执行。</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ApproachTarget</span><span class="p">,</span> <span class="n">f3_local4</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">f3_local1</span><span class="p">,</span> <span class="n">TARGET_SELF</span><span class="p">,</span> <span class="n">f3_local3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboTunable_SuccessAngle180</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f3_local5</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">999</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboRepeat_SuccessAngle180</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f3_local6</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">999</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>类似下图，这是Act01行为的<strong>两个攻击的添加命令的代码</strong>和<strong>开发者工具观察实际执行的Goal队列</strong></p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/10.png" alt=""></p>
+
+<p>可以观察到，添加命令（或者，行动目标，这里维持统一还是使用命令这个词）时候，有非常多的参数，除了常规描述行为是啥的自身关键参数，还有一个时间参数。主要是用于避免操控的对象一致处于某个行为中，给个超时。</p>
+
+<blockquote>
+  <p>在只狼的架构中，这个时间在自己执行的时候才会开始倒数，还有一种做法是，在添加入执行队列就开始倒数，应该也是一种规则。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="条件检测的时效性"><span class="heading-counter">3.2.2.</span><span class="heading-label">条件检测的时效性</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>找了一个移动和释放攻击的命令的指令，大概对应的一下参数的含义，如下图所示。</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/11.png" alt=""></p>
+
+<ul>
+  <li>对于移动来说，当达到距离时则视为成功，这里是用作判断持续行为的成功结束条件。</li>
+  <li>而对于释放攻击来说，如果不满足释放距离则会释放失败，这里是用作开始执行的前置条件。</li>
+</ul>
+
+<p>留意<strong>开始执行的前置条件</strong>，在添加命令的时候就可以进行一次检测，那为什么不在添加命令的时候就进行检测呢？对比下面这两个例子：</p>
+
+<ul>
+  <li>添加指令时检测距离</li>
+</ul>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 添加指令时检测距离</span>
+<span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9999</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作1、时间10秒、释放前检测9999米</span>
+<span class="k">if</span> <span class="n">L</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="k">then</span> <span class="c1">-- 判断距离小于5米</span>
+    <span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9999</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作2、时间10秒、释放前检测9999米</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<ul>
+  <li>指令执行时检测距离</li>
+</ul>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 指令执行时检测距离</span>
+<span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9999</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作1、时间10秒、释放前检测9999米</span>
+<span class="n">AddGoal_BlaBla</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1">-- 添加释放攻击动作2、时间10秒、释放前检测5米内</span>
+</code></pre></div></div>
+
+<p>其实标注已经暴露了核心问题，添加指令时和指令执行时，可能不是同一时刻，而这个单独的检测选项就是解决这个问题，<strong>确保能在指令执行时，进行检测。</strong></p>
+
+<p>听起来有点像打补丁的做法，解决的核心问题是：决策进行的瞬间，一次性可能添加了很多动作序列；序列靠后被执行的单个动作，<strong>轮到它的时候，前置条件已经失去了意义</strong>。</p>
+
+<p>在行为树的语境中其实不存在这个问题，运行节点会完美过渡时间，轮到这个节点执行前才会真的进行这个节点的检测，但也可能，就是因为这种模糊性，会带来类似“空挥”的体验，这里不再展开讨论了。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="其他架构逻辑"><span class="heading-counter">3.3.</span><span class="heading-label">其他架构逻辑</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>这里讨论一些其他的、用于逻辑表达的小设计。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="行为概率与行为cd"><span class="heading-counter">3.3.1.</span><span class="heading-label">行为概率与行为CD</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>前面我们提到过，由决策逻辑调用行动逻辑的函数：</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/13.png" alt=""></p>
+
+<p>但是这个过程还是挺有意思的，并没有直接去调用函数，而是使用概率做中转，再去调用对应的函数。</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 首先整了几个“表格”做中转</span>
+<span class="kd">local</span> <span class="n">f2_local0</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="kd">local</span> <span class="n">f2_local1</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="kd">local</span> <span class="n">f2_local2</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1">-- 当决策的时候，</span>
+<span class="c1">-- 将X号行为的发生概率储存到，0号表格，Key为X的值里</span>
+<span class="k">if</span> <span class="n">f2_local5</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="k">then</span>
+    <span class="n">f2_local0</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">f2_local0</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="o">=</span> <span class="mi">800</span>
+    <span class="n">f2_local0</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">f2_local0</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">f2_local0</span><span class="p">[</span><span class="mi">43</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">elseif</span> <span class="n">f2_local5</span> <span class="o">&gt;=</span> <span class="mi">12</span> <span class="k">then</span>
+<span class="c1">-- ...</span>
+<span class="k">elseif</span> <span class="n">f2_local5</span> <span class="o">&gt;=</span> <span class="mi">5</span> <span class="k">then</span>
+<span class="c1">-- ...</span>
+<span class="k">end</span>
+
+<span class="c1">-- 检查冷却，如果不满足，概率直接打到1</span>
+<span class="n">f2_local0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">SetCoolTime</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">f2_local0</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">f2_local0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">SetCoolTime</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="mi">3003</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">f2_local0</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1">-- ...</span>
+<span class="n">f2_local0</span><span class="p">[</span><span class="mi">46</span><span class="p">]</span> <span class="o">=</span> <span class="n">SetCoolTime</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="mi">3005</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f2_local0</span><span class="p">[</span><span class="mi">46</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">-- 将X号行为的函数储存到，1号表格，Key为X的值里</span>
+<span class="n">f2_local1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">REGIST_FUNC</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg0</span><span class="p">.</span><span class="n">Act01</span><span class="p">)</span>
+<span class="n">f2_local1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">REGIST_FUNC</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg0</span><span class="p">.</span><span class="n">Act02</span><span class="p">)</span>
+<span class="c1">-- ...</span>
+<span class="n">f2_local1</span><span class="p">[</span><span class="mi">48</span><span class="p">]</span> <span class="o">=</span> <span class="n">REGIST_FUNC</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg0</span><span class="p">.</span><span class="n">Act48</span><span class="p">)</span>
+
+<span class="c1">-- 最后调用，根据0号表格的概率调用 1号表格储存的函数行为</span>
+<span class="c1">-- 此处函数完整内容可参考</span>
+<span class="c1">-- aicommon-luabnd-dcx\script\ai\out\bin\common_battle_func.dec.lua</span>
+<span class="n">Common_Battle_Activate</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">f2_local0</span><span class="p">,</span> <span class="n">f2_local1</span><span class="p">,</span> <span class="n">f2_local13</span><span class="p">,</span> <span class="n">f2_local2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>如果上面的内容稍微有点复杂，没关系，举个具体的例子：</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/14.png" alt=""></p>
+
+<p>在某个情形下，如果我们决定使用Act01和Act02行为，且概率为100:50，那么我们<strong>并不会直接进行随机数的比较后调用函数</strong>，而是会将概率储存下来，同时将行为也储存下来，两者维持下标相同。这样脱钩后，甚至还可以进行一次CD的检测，如果不满足CD，则可以直接将概率打到最小，（为1不为0也处理了所有行为都CD时，至少可以随机出结果。）最后，再根据概率去调用对应的行为。</p>
+
+<p>这样做的好处是显而易见的，它允许我们<strong>将可用性检测——比如CD或者其他规则，放在决策之后</strong>，一方面保证了可用性的筛选，另一方面也避免了先进行可用性检测的麻烦，甚至概率为1而不为0的小细节，也覆盖了全部行为都在CD的边界情况。</p>
+
+<blockquote>
+  <p>在行为树的语境中，先进行可用性检测可以使用封装了自规划的算法的节点，选取可用性最高的行为。</p>
+
+  <p>在实际的工作中，有时没有规划算法的节点，最常见的情形和解决是，检测到攻击仍然处于CD，干脆失败向后决策，用发呆来作为保底。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="信息感知与标记buff"><span class="heading-counter">3.3.2.</span><span class="heading-label">信息感知与标记BUFF</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>对于一个动作游戏的AI，除了常规的HP、MP、位置等信息，对于敌我<strong>动作状态</strong>的检测逻辑应该会很多，动作游戏嘛，玩的就是动作之间的规则。</p>
+
+<p>只狼也不例外，一些信息的获取、判断如下所示：</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Goal.Activate 局部变量</span>
+<span class="kd">local</span> <span class="n">f2_local3</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetHpRate</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local4</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetSpRate</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local5</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetDist</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local6</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetRandam_Int</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local7</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetExcelParam</span><span class="p">(</span><span class="n">AI_EXCEL_THINK_PARAM_TYPE__thinkAttr_doAdmirer</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local8</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetEventRequest</span><span class="p">()</span>
+<span class="kd">local</span> <span class="n">f2_local9</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetEventRequest</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local10</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetDistY</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local11</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetDistY</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">f2_local12</span> <span class="o">=</span> <span class="n">arg1</span><span class="p">:</span><span class="n">HasSpecialEffectId</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">,</span> <span class="mi">200050</span><span class="p">)</span>
+<span class="c1">-- Goal.Activate 变量检测</span>
+<span class="k">elseif</span> <span class="ow">not</span> <span class="ow">not</span> <span class="n">arg1</span><span class="p">:</span><span class="n">HasSpecialEffectId</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">110060</span><span class="p">)</span> <span class="ow">or</span> <span class="n">arg1</span><span class="p">:</span><span class="n">HasSpecialEffectId</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">110010</span><span class="p">)</span> <span class="k">then</span>
+        <span class="n">f2_local0</span><span class="p">[</span><span class="mi">39</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">elseif</span> <span class="n">Common_ActivateAct</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span> <span class="k">then</span>
+</code></pre></div></div>
+
+<p>总结归纳一下，常规的信息大致包括这些：</p>
+
+<ul>
+  <li>属性类
+    <ul>
+      <li>HP</li>
+      <li>SP</li>
+      <li>固有Excel变量</li>
+    </ul>
+  </li>
+  <li>空间类
+    <ul>
+      <li>敌我距离</li>
+      <li>距地面高度</li>
+      <li>敌我角度</li>
+      <li>障碍物检测</li>
+    </ul>
+  </li>
+  <li>随机类
+    <ul>
+      <li>随机整数</li>
+      <li>随机小数</li>
+    </ul>
+  </li>
+</ul>
+
+<p>而关于动作的检测，除了一些经过封装的函数或者事件，大部分都是<strong>用标记BUFF实现</strong>的。</p>
+
+<p>一个很典型的例子是蝴蝶夫人的弹反动作，左方向8400，右方向8401，分别添加了200211和200210，两个不同的标记异常状态，这样AI就可以通过检测对于的标记buff，来知道是蝴蝶夫人是在左弹还是右弹。</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/12.png" alt=""></p>
+
+<p>再进一步，可以根据左右弹设计不同的出招逻辑：</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 509000 蝴蝶夫人</span>
+<span class="c1">-- Goal.Kengeki_Activate 逻辑判断</span>
+    <span class="k">elseif</span> <span class="n">f48_local0</span> <span class="o">==</span> <span class="mi">200210</span> <span class="k">then</span>
+        <span class="k">if</span> <span class="n">f48_local4</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="k">then</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="k">elseif</span> <span class="n">SpaceCheck</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">false</span> <span class="k">then</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">80</span>
+        <span class="k">else</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="k">end</span>
+    <span class="k">elseif</span> <span class="n">f48_local0</span> <span class="o">==</span> <span class="mi">200211</span> <span class="k">then</span>
+        <span class="k">if</span> <span class="n">f48_local4</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="k">then</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="k">elseif</span> <span class="n">SpaceCheck</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">false</span> <span class="k">then</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span>
+        <span class="k">else</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+            <span class="n">f48_local1</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span>
+        <span class="k">end</span>
+</code></pre></div></div>
+
+<p>猜测接口上，除了自己给自己加标记buff，应该也是可以定向给敌人加的。</p>
+
+<p>小结一下：以标记buff作为检测动作的中间层，可以<strong>一定程度上让逻辑与具体的Action检测脱钩</strong>，避免AI与动作的强耦合，带来修改时的麻烦。但是也会需要buff自身是一个简单易用、高效的功能。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="计时器角色变量事件与打断"><span class="heading-counter">3.3.3.</span><span class="heading-label">计时器/角色变量/事件与打断</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>这里是发现到的一些适用于逻辑编写的功能。</p>
+
+<ul>
+  <li>计时器</li>
+</ul>
+
+<p>上文提到CD其实也是一种计时器，有些时候如果要控制指定逻辑出现的间隔，就可以使用计时器，大概有以下功能：</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 开始计时，参数1是记时器的编号，参数2是计时器的倒计时时间</span>
+<span class="n">arg0</span><span class="p">:</span><span class="n">SetTimer</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="c1">-- 比较指定计时器的现在的记时</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">GetTimer</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="c1">-- 检测指定计时器的记时是否结束</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">IsFinishTimer</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">true</span>
+</code></pre></div></div>
+
+<p>只狼的计时器大概是只有16个，事实上也足够了。</p>
+
+<ul>
+  <li>角色变量</li>
+</ul>
+
+<p>使用角色变量可以方便的在不同逻辑之前储存信息、检查信息：</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 设置指定变量到指定值</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">SetNumber</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="c1">-- 设置指定变量自增</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">SetNumber</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">arg1</span><span class="p">:</span><span class="n">GetNumber</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1">-- 检测指定变量的值</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">GetNumber</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<p>之前在哪里看到过好像4号变量和弹刀有关，记不清了，可见有些变量应该是全角色通用、有统一含义的。</p>
+
+<p>变量的槽位好像也是16个，和计时器一样，固定数目一方面一般不会达到上限，另一方面也可以保证实现起来较为简单、性能开销较为可控。<strong>16这个数值感觉是个可参考值</strong>。</p>
+
+<ul>
+  <li>事件与打断</li>
+</ul>
+
+<p>严格意义上感觉不能叫事件，或者叫监听？当发生一些事件时，就会打断原有决策，重新进行打断决策。</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 添加区域监听</span>
+<span class="n">arg0</span><span class="p">:</span><span class="n">AddObserveArea</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">TARGET_SELF</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">AI_DIR_TYPE_F</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="c1">-- 删除区域监听</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">DeleteObserve</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1">-- 判断打断类型：在区域外打断</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">IsInterupt</span><span class="p">(</span><span class="n">INTERUPT_Outside_ObserveArea</span><span class="p">)</span>
+
+<span class="c1">-- 添加Buff监听</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">AddObserveSpecialEffectAttribute</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">,</span> <span class="mi">5025</span><span class="p">)</span>
+<span class="c1">-- 判断打断Buff类型</span>
+<span class="n">arg1</span><span class="p">:</span><span class="n">GetSpecialEffectActivateInterruptType</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5039</span>
+
+<span class="c1">-- 处理打断</span>
+<span class="n">Goal</span><span class="p">.</span><span class="n">Interrupt</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+    <span class="c1">-- ...</span>
+    <span class="c1">-- 打断后检测使用道具！药检.jpeg</span>
+    <span class="k">if</span> <span class="n">Interupt_Use_Item</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">Replanning</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="k">end</span>
+    <span class="c1">-- ...</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>在打断的逻辑里面看到了使用道具，合理推测这就是传说中的药检的逻辑。</p>
+
+<p>事件与打断为AI提供了<strong>一种针对环境的变化快速反应的能力——反应性</strong>，合理使用这部分机制，可以让AI更加生动。但这部分逻辑如果过于“单薄”，也会很容易被玩家利用。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="封装"><span class="heading-counter">3.3.4.</span><span class="heading-label">封装</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>前面提到过解决复杂度的问题，是游戏AI的核心问题之一，封装也是一种有效的方法，它可以<strong>有效提供逻辑的复用</strong>。</p>
+
+<p>只狼中大部分封装的逻辑都在<code class="language-plaintext highlighter-rouge">aicommon-luabnd-dcx\script\ai\out\bin\</code>目录，大概分为以下几类：</p>
+
+<ul>
+  <li><strong>常量类</strong>：比如<code class="language-plaintext highlighter-rouge">ai_define.dec.lua</code>、<code class="language-plaintext highlighter-rouge">logic_list.dec.lua</code>，</li>
+</ul>
+
+<p>构成：里面定义了一堆常量变量</p>
+
+<p>功能：当枚举值用，增加可读性</p>
+
+<ul>
+  <li><strong>具体行为类</strong>：比如<code class="language-plaintext highlighter-rouge">approach_on_failed_path.dec.lua</code></li>
+</ul>
+
+<p>构成：描述一个行为的过程，里面分为<code class="language-plaintext highlighter-rouge">Activate</code>、<code class="language-plaintext highlighter-rouge">Update</code>、<code class="language-plaintext highlighter-rouge">Terminate</code>、<code class="language-plaintext highlighter-rouge">Interupt</code>几个部分</p>
+
+<p>功能：大概可以分为移动、攻击、功能三大类</p>
+
+<ul>
+  <li><strong>辅助函数类</strong>：比如<code class="language-plaintext highlighter-rouge">common_battle_func.dec.lua</code></li>
+</ul>
+
+<p>构成：直接以函数的语法编写一些函数</p>
+
+<p>功能：提供编写逻辑的一些便利性</p>
+
+<p>理论上来说，好的封装是成功的一半，能极大降低新AI编写的工作量。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="小结思路与格局打开"><span class="heading-counter">3.4.</span><span class="heading-label">小结：思路与格局打开</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>本节讨论了相当多的思路、机制上的东西，使用这些“手法”，可以解决非常多的问题。</p>
+
+<p>在这一节结束的时候想重新强调，“使用成本”这个话题，很多时候应该<strong>尽可能的降低使用成本</strong>，减少中间环节。比如申明一个Buff这样基础的操作，如果成本增加——比如步骤多一步，时长增加5秒，由于行为处于基层位置，很可能对最后产生指数级别的时长影响。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="感受与细节设计"><span class="heading-counter">4.</span><span class="heading-label">感受与细节设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>讨论了很多“虚”的东西以后，本部分我们讨论具体的狮子猿AI逻辑，着重分析行为逻辑和对应的感受。</p>
+
+<p>思考了很久这部分应该如何去呈现，最后的结论是还是<strong>一条一条过一遍</strong>。也方便读者感受一个真实的AI是什么样子的。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="行为逻辑"><span class="heading-counter">4.1.</span><span class="heading-label">行为逻辑</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>本来是打算先说决策逻辑的，后来发现如果<strong>不看行为看决策会一头雾水</strong>，所以这里先从行为开始看起。</p>
+
+<p>一共40个具体行为，有一部分后续的决策中没有使用。这里按照动画之前行为的感受初步划分：黄色为花里胡哨、红色为高危记忆点、绿色演出性质，总览整理如下：</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/20.png" alt=""></p>
+
+<blockquote>
+  <p>这里也录制了1-20号行为的演示视频，末尾还有一段战斗过程的切片，可以参考<a href="https://www.bilibili.com/video/BV1iw411M74j">Bilibili 狮子猿 AI行为演示</a></p>
+</blockquote>
+
+<p>接下来我们挑一些行为具体看看：</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="act01-96-r2230003001"><span class="heading-counter">4.1.1.</span><span class="heading-label">Act01 9.6-R(2.2);3000;3001</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>一些没用到的变量这里就直接删掉了，精简后如下：</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Goal</span><span class="p">.</span><span class="n">Act01</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f3_local0</span> <span class="o">=</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetDist</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f3_local1</span> <span class="o">=</span> <span class="mi">9</span><span class="p">.</span><span class="mi">6</span> <span class="o">-</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetMapHitRadius</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f3_local4</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="k">if</span> <span class="n">f3_local1</span> <span class="o">&lt;</span> <span class="n">f3_local0</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ApproachTarget</span><span class="p">,</span> <span class="n">f3_local4</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">f3_local1</span><span class="p">,</span> <span class="n">TARGET_SELF</span><span class="p">,</span> <span class="n">f3_local3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="kd">local</span> <span class="n">f3_local5</span> <span class="o">=</span> <span class="mi">3000</span>
+    <span class="kd">local</span> <span class="n">f3_local6</span> <span class="o">=</span> <span class="mi">3001</span>
+    <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboTunable_SuccessAngle180</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f3_local5</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">999</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboRepeat_SuccessAngle180</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f3_local6</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">999</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">arg0</span><span class="p">:</span><span class="n">SetNumber</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">GetWellSpace_Odds</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">GetWellSpace_Odds</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>这部分逻辑还是挺简单的，大概的意思是调整位置，放俩攻击。</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/3-1.png" alt=""></p>
+
+<p>虽然简单，但是基本上所有的行为<strong>都是这个的简化或者复杂化</strong>，后面的行为也会以这个为模板展开说明。</p>
+
+<p>说一些中间有意思的点：</p>
+
+<ul>
+  <li>距离比较与狮子猿半径</li>
+</ul>
+
+<p>之前简要标注的时候写的是<code class="language-plaintext highlighter-rouge">9.6-R(2.2);3000;3001</code>，后面俩是招式名字，为啥前面写的是9.6-R呢？</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/3-2.png" alt=""></p>
+
+<p>画了一个图方便理解，用于与敌我距离进行比较的值，是<strong>固定值减去了自身半径的值</strong>，也就是说只狼中敌我距离的计算是<strong>计算到阻挡外边缘</strong>的，由于这个值同时用到了后面的靠近逻辑中的目标值，我们可以反向算出狮子猿猴的半径是2.2米，于是有了上面这个标注。</p>
+
+<ul>
+  <li>运行时检测之距离不敏感</li>
+</ul>
+
+<p>后面两个攻击的检测距离都是999，前面架构方面有提到相关的东西，这里就是一个<strong>会空挥的、距离不敏感</strong>的例子。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="act02-92-r22300334-3004"><span class="heading-counter">4.1.2.</span><span class="heading-label">Act02 9.2-R(2.2);3003;3.4-&gt;3004</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>Act02和Act01的区别除了换了招式和距离，另外就是释放时是<strong>距离敏感</strong>的，太远就不会放了。</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Goal</span><span class="p">.</span><span class="n">Act02</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f4_local0</span> <span class="o">=</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetDist</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f4_local1</span> <span class="o">=</span> <span class="mi">9</span><span class="p">.</span><span class="mi">2</span> <span class="o">-</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetMapHitRadius</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f4_local2</span> <span class="o">=</span> <span class="kc">false</span>
+    <span class="kd">local</span> <span class="n">f4_local3</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">if</span> <span class="n">f4_local1</span> <span class="o">&lt;</span> <span class="n">f4_local0</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ApproachTarget</span><span class="p">,</span> <span class="n">f4_local3</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">f4_local1</span><span class="p">,</span> <span class="n">TARGET_SELF</span><span class="p">,</span> <span class="n">f4_local2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span>
+
+    <span class="k">end</span>
+    <span class="kd">local</span> <span class="n">f4_local4</span> <span class="o">=</span> <span class="mi">3003</span>
+    <span class="kd">local</span> <span class="n">f4_local5</span> <span class="o">=</span> <span class="mi">3004</span>
+    <span class="kd">local</span> <span class="n">f4_local7</span> <span class="o">=</span> <span class="mi">9</span><span class="p">.</span><span class="mi">2</span> <span class="o">-</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetMapHitRadius</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f4_local8</span> <span class="o">=</span> <span class="mi">5</span><span class="p">.</span><span class="mi">6</span> <span class="o">-</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetMapHitRadius</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f4_local9</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kd">local</span> <span class="n">f4_local10</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboAttackTunableSpin</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f4_local4</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">f4_local7</span><span class="p">,</span> <span class="n">f4_local9</span><span class="p">,</span> <span class="n">f4_local10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboFinal</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f4_local5</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">f4_local8</span><span class="p">,</span> <span class="n">f4_local9</span><span class="p">,</span> <span class="n">f4_local10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">arg0</span><span class="p">:</span><span class="n">SetNumber</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">GetWellSpace_Odds</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">GetWellSpace_Odds</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>这里的3003的这个前置距离检测，其实可以不用检测，因为上面刚刚执行了靠近，两个距离数值一样，且中中间没有时间差。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="act03-268-r223008"><span class="heading-counter">4.1.3.</span><span class="heading-label">Act03 26.8-R(2.2);…;3008</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>这应该是第一个稍微复杂的逻辑，和之前思路是类似的。</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Goal</span><span class="p">.</span><span class="n">Act03</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f5_local0</span> <span class="o">=</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetDist</span><span class="p">(</span><span class="n">TARGET_ENE_0</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f5_local1</span> <span class="o">=</span> <span class="mi">26</span><span class="p">.</span><span class="mi">8</span> <span class="o">-</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetMapHitRadius</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f5_local2</span> <span class="o">=</span> <span class="kc">false</span>
+    <span class="kd">local</span> <span class="n">f5_local3</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="c1">-- 太远靠近</span>
+    <span class="k">if</span> <span class="n">f5_local1</span> <span class="o">&lt;</span> <span class="n">f5_local0</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ApproachTarget</span><span class="p">,</span> <span class="n">f5_local3</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">f5_local1</span><span class="p">,</span> <span class="n">TARGET_SELF</span><span class="p">,</span> <span class="n">f5_local2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1">-- 太近远离1</span>
+    <span class="k">elseif</span> <span class="n">f5_local1</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">&lt;</span> <span class="n">f5_local0</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_AttackTunableSpin</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3023</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">SuccessDist1</span><span class="p">,</span> <span class="n">TurnTime</span><span class="p">,</span> <span class="n">FrontAngle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="c1">-- 太太近远离2</span>
+    <span class="k">elseif</span> <span class="n">f5_local1</span> <span class="o">-</span> <span class="mi">24</span> <span class="o">&lt;</span> <span class="n">f5_local0</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_SpinStep</span><span class="p">,</span> <span class="n">StepLife</span><span class="p">,</span> <span class="mi">5211</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">TurnTime</span><span class="p">,</span> <span class="n">AI_DIR_TYPE_F</span><span class="p">,</span> <span class="n">CourseLong</span><span class="p">)</span>
+    <span class="k">else</span>
+    <span class="c1">-- 太太太近远离并直接中断</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_AttackTunableSpin</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3023</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="n">SuccessDist1</span><span class="p">,</span> <span class="n">TurnTime</span><span class="p">,</span> <span class="n">FrontAngle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">false</span>
+    <span class="k">end</span>
+    <span class="kd">local</span> <span class="n">f5_local4</span> <span class="o">=</span> <span class="mi">3008</span>
+    <span class="kd">local</span> <span class="n">f5_local5</span> <span class="o">=</span> <span class="mi">26</span><span class="p">.</span><span class="mi">8</span> <span class="o">-</span> <span class="n">arg0</span><span class="p">:</span><span class="n">GetMapHitRadius</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">f5_local6</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kd">local</span> <span class="n">f5_local7</span> <span class="o">=</span> <span class="mi">120</span>
+    <span class="c1">-- 检测阻挡相关</span>
+    <span class="k">if</span> <span class="n">arg0</span><span class="p">:</span><span class="n">IsExistMeshOnLine</span><span class="p">(</span><span class="n">TARGET_SELF</span><span class="p">,</span> <span class="n">AI_DIR_TYPE_F</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="k">then</span>
+        <span class="n">arg1</span><span class="p">:</span><span class="n">AddSubGoal</span><span class="p">(</span><span class="n">GOAL_COMMON_ComboTunable_SuccessAngle180</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">f5_local4</span><span class="p">,</span> <span class="n">TARGET_ENE_0</span><span class="p">,</span> <span class="mi">9999</span><span class="p">,</span> <span class="n">f5_local6</span><span class="p">,</span> <span class="n">f5_local7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="kc">false</span>
+    <span class="k">end</span>
+    <span class="n">GetWellSpace_Odds</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">GetWellSpace_Odds</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>简单来说，在执行一个有很长一段靠近前摇的抓取攻击前，有一些<strong>差异化的自定义远离</strong>逻辑。（也侧面说明了前面的俩行为是<strong>只管玩家和怪物过远</strong>、不管过近的，默认近是可以兼容的）</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/3-3.png" alt=""></p>
+
+<p>此外，这里还第一次出现了空间障碍相关检测，后面也可以看到，只狼里面<strong>有相当多的、细致的空间检测</strong>，以避免不合适的行为——比如怼墙走等行为。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="act04-以后"><span class="heading-counter">4.1.4.</span><span class="heading-label">Act04 以后</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>后面我们就不逐一展开说了，有兴趣的同学可以去看<a href="/assets/img/gameplay/sekiro_lion_tamarion_ai/510000_battle.dec.lua">原始文件</a>。</p>
+
+<p>这里我们给出一个将行为放到状态机上的联动图，可以点开查看大图：</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/3-0.png" alt=""></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="简要小结"><span class="heading-counter">4.1.5.</span><span class="heading-label">简要小结</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>简单总结下：</p>
+
+<ul>
+  <li>微观的基本范式：靠近+攻击</li>
+</ul>
+
+<p>除了原地直接放的招式，大部分都是靠近后攻击，再在此基础上进行<strong>距离敏感、调整位置、随机变招、距离决策</strong>等行为的丰富逻辑。</p>
+
+<ul>
+  <li>宏观攻击感受的营造：短而密</li>
+</ul>
+
+<p>大部分的连招都是2个攻击动作——当然具体的攻击Hit数可能不止，最多也就是3个，并没有之前分析中的超超超长连招。</p>
+
+<p>但是，攻击的构成是非常密的，应该只有两处刻意发呆对峙，以此来营造<strong>战斗的持续压迫感</strong>。</p>
+
+<ul>
+  <li>唯一指定未使用动作：3007</li>
+</ul>
+
+<p>整个AI里面未发现使用3007的行为，但是实际体验中记得还是会出现。可见在目前AI的范围之外，应该还是有一些动作自动跳转之类的逻辑的。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="主决策逻辑"><span class="heading-counter">4.2.</span><span class="heading-label">主决策逻辑</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>决策部分，分成三个部分方便理解：</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="前置行为"><span class="heading-counter">4.2.1.</span><span class="heading-label">前置行为</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>正如架构篇所讨论的，在主决策逻辑的一开始是一些初始化工作，大致如下图所示：</p>
+
+<ul>
+  <li>获取一些信息储存到变量</li>
+</ul>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/15.png" alt=""></p>
+
+<ul>
+  <li>添加一些Buff的监听。</li>
+</ul>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/15-1.png" alt=""></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="决策部分-外围"><span class="heading-counter">4.2.2.</span><span class="heading-label">决策部分-外围</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>然后就开始了具体的决策部分：</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/17-1.png" alt=""></p>
+
+<p>最外围，这里认为是一些针对特定情况立刻做出反应的逻辑，一共10个。</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/17-2.png" alt=""></p>
+
+<ul>
+  <li>立刻反应：死亡</li>
+</ul>
+
+<p>比如动作20其实是死亡结算动作，可见这个事件应该就是检测死亡（或者检测转阶段）。大部分逻辑都可以通过行为去揣测检测条件的含义，部分不知道是啥的也不乱猜了。</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/17-3.png" alt=""></p>
+
+<ul>
+  <li>特殊情况：距离太远</li>
+</ul>
+
+<p>稍微有点意思的是处理距离过远时候，用的数值是10米，10米并不不算远，所以还配合了一个标记Buff 5030。执行的行为也很有意思，是原地拍地吼，之前拆动画的时候还没有意思到，后面才想起来这个动作是可以用义手勾过去快速拉近距离的。感觉意思是：<strong>距离太远，直接勾引你过来</strong>。你不来，我再主动靠近。</p>
+
+<ul>
+  <li>特殊情况：处于背后</li>
+</ul>
+
+<p>另外一个类似的特殊检测是在玩家背后，其实这里感觉是玩家在狮子猿背后？</p>
+
+<p>这里有两个需要注意的，其一是这些行为都是挑选出来的可以有转向过程能自然转向覆盖打到玩家的。</p>
+
+<p>其二是这里先进行了一个距离划分，10、11、42比较普通，重点是7米内时还会有一个专门打身后的4号行为，而且比重很大。可以认为大多情况都是4。下面我们也会看到很多<strong>以较大比重来突出主要行为的技巧</strong>。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="决策部分-event1-10-or-1--1"><span class="heading-counter">4.2.3.</span><span class="heading-label">决策部分-Event(1) 10 or 1 == 1</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>这里是上文第三个决策的展开，因为选项太多了所以单独陈述。</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/18.png" alt=""></p>
+
+<p>首先我们可以看到因为处于比较靠前的位置，这里仍然处理了3.1背后、3.2 &amp; 3.3等特殊标记等情况下的行为。</p>
+
+<p>并且这里还有一个<strong>检测敌人崩架势</strong>后的逻辑，远就扔屎、近就敏捷一打。</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/18-1.png" alt=""></p>
+
+<p>最后是一切默认情况下的攻击，也是目前看到决策最复杂的一个。粗看了一下行为，概率最高的行为分别是扔屎和下端危，似乎压力还蛮大的。</p>
+
+<p>在默认情况以后，还会做一些后置检测有一个计时器和空间位置的检测。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="决策部分-默认"><span class="heading-counter">4.2.4.</span><span class="heading-label">决策部分-默认</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>这里就是最最最默认情况下狮子猿的出招逻辑。</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/19-1.png" alt=""></p>
+
+<p>首先10.1也还是进行了一些特殊情况的检测，不过由于外层就已是是最后一个检测的了，所以重复检测也没意义。</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/19-2.png" alt=""></p>
+
+<p>然后是默认情况的攻击行为。分得非常细，行为也很多，没有明显的特征，可以结合前面的行为含义表具体分析下。并且还有检测3号计时器完成，增加33 &amp; 34侧跳的逻辑。</p>
+
+<blockquote>
+  <p>发现上面截图的时候真不能用行为:行为 = 概率:概率，很容易看错位。</p>
+</blockquote>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/19-3.png" alt=""></p>
+
+<p>最后是一堆后置检测，比如</p>
+
+<ul>
+  <li>计时器4未完成 &amp; 血量太低，关掉原地吼的概率。</li>
+  <li>计时器1未完成，关掉36 &amp; 42的侧跳位移概率。</li>
+  <li>空间比较少，42左右小跳步</li>
+  <li>一些特殊标记Buff……</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="后置行为"><span class="heading-counter">4.2.5.</span><span class="heading-label">后置行为</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>这部分也和架构篇所讨论的没啥区别，给对应的行为检测CD，如果在CD中就把概率改到最小。</p>
+
+<p>应该基本都是攻击行为，似乎位移发呆之类的用单独的计时器去统计了。</p>
+
+<p><img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/16.png" alt=""></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="剑戟弹刀逻辑等"><span class="heading-counter">4.3.</span><span class="heading-label">剑戟（弹刀）逻辑等</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>狮子猿是似乎没弹刀逻辑的，狮子猿的部分逻辑如下所示
+<img src="https://design.jskyzero.com/assets/img/gameplay/sekiro_lion_tamarion_ai/21.png" alt=""></p>
+
+<p>这部分参考蝴蝶夫人会比较好，就目前的了解来说，似乎是<code class="language-plaintext highlighter-rouge">Goal.Parry</code>负责格挡，然后<code class="language-plaintext highlighter-rouge">Kengeki_Activate</code>在负责根据敌我关系——主要是格挡的动作，来进行格挡派生的选择，类似上文有举到的案例，有兴趣的同学可以自行研究。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="总结"><span class="heading-counter">4.4.</span><span class="heading-label">总结</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>对于具体行为的分析的工作量比预想中要大很多，甚至没能做到在脑海中模拟这些行为跑起来的样子。</p>
+
+<p>虽然细节上做的不够，但是框架上还是盘得很明白的：</p>
+
+<ul>
+  <li>行为上是以【靠近、攻击】为基本模板。</li>
+  <li>决策上优先处理必须相应和特殊状态的行为，最后再默认行为。</li>
+  <li>以CD、计时器等工具再次调控行为。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="全文总结"><span class="heading-counter">5.</span><span class="heading-label">全文总结</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>本文三个部分概述了体验层次的反推、架构设计的一些讨论、复杂的动作游戏AI的全貌，希望能对读者有所启发。</p>
+
+<p>本文断断续续写了有一个月左右，文字内容很长，需要一边思考一边阅读。本文是从逆向工程出发，难免有所纰漏，欢迎指正讨论。</p>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-10-27 - jskyzero - ✨ update structure
+2024-07-19 - jskyzero - 📝 update structure
+2024-06-24 - jskyzero - update 参考
+2024-01-02 - jskyzero - 📝 test change strcuture
+2023-12-29 - jskyzero - 📝 update index
+2023-11-13 - jskyzero - 📝 add GDC
+2023-11-09 - jskyzero - add 相关阅读
+2023-11-07 - jskyzero - 🐛 fix error
+2023-11-06 - jskyzero - 🐛 fix error
+2023-11-06 - jskyzero - 📝 finish 拆包看狮子猿AI设计
+2023-11-03 - jskyzero - 📝 almost finish
+2023-11-01 - jskyzero - 📝 add 小结
+2023-11-01 - jskyzero - 📝 add 感受与细节设计
+2023-10-31 - jskyzero - 📝 almost finish 其他架构逻辑
+2023-10-30 - jskyzero - 📝 add 行为队列 &amp; 条件检测
+2023-10-30 - jskyzero - 📝 update main structure
+2023-10-27 - jskyzero - add 初步的体验反推
+2023-10-26 - jskyzero - 📝 update 拆包看狮子猿AI设计
+2023-10-10 - jskyzero - add 拆包看狮子猿AI设计
+
+<em>（本文编写于2023年10月，最后修改于2024年10月，共修改4次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/';
+this.page.identifier = 'https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#拆包看狮子猿ai设计">拆包看狮子猿AI设计</a><ul><li><a href="#相关阅读">相关阅读</a></li><li><a href="#初步的体验反推">初步的体验反推</a><ul><li><a href="#交错比例与招式cd">交错比例与招式CD</a></li><li><a href="#用行为树的简单拟合">用行为树的简单拟合</a></li><li><a href="#小结一定收获但局限">小结：一定收获但局限</a></li></ul></li><li><a href="#基于lua的架构设计">基于LUA的架构设计</a><ul><li><a href="#决策与逻辑分离">决策与逻辑分离</a><ul><li><a href="#高效复用">高效复用</a></li><li><a href="#分离逻辑">分离逻辑</a></li></ul></li><li><a href="#带条件检测的行为队列">带条件检测的行为队列</a><ul><li><a href="#行为队列">行为队列</a></li><li><a href="#条件检测的时效性">条件检测的时效性</a></li></ul></li><li><a href="#其他架构逻辑">其他架构逻辑</a><ul><li><a href="#行为概率与行为cd">行为概率与行为CD</a></li><li><a href="#信息感知与标记buff">信息感知与标记BUFF</a></li><li><a href="#计时器角色变量事件与打断">计时器/角色变量/事件与打断</a></li><li><a href="#封装">封装</a></li></ul></li><li><a href="#小结思路与格局打开">小结：思路与格局打开</a></li></ul></li><li><a href="#感受与细节设计">感受与细节设计</a><ul><li><a href="#行为逻辑">行为逻辑</a><ul><li><a href="#act01-96-r2230003001">Act01 9.6-R(2.2);3000;3001</a></li><li><a href="#act02-92-r22300334-3004">Act02 9.2-R(2.2);3003;3.4-&gt;3004</a></li><li><a href="#act03-268-r223008">Act03 26.8-R(2.2);…;3008</a></li><li><a href="#act04-以后">Act04 以后</a></li><li><a href="#简要小结">简要小结</a></li></ul></li><li><a href="#主决策逻辑">主决策逻辑</a><ul><li><a href="#前置行为">前置行为</a></li><li><a href="#决策部分-外围">决策部分-外围</a></li><li><a href="#决策部分-event1-10-or-1--1">决策部分-Event(1) 10 or 1 == 1</a></li><li><a href="#决策部分-默认">决策部分-默认</a></li><li><a href="#后置行为">后置行为</a></li></ul></li><li><a href="#剑戟弹刀逻辑等">剑戟（弹刀）逻辑等</a></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#全文总结">全文总结</a></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

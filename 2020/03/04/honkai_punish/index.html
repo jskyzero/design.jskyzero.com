@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACT-手游-崩三&amp;战双 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="ACT-手游-崩三&amp;战双">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="本文我們將對比《戰雙：帕尼什》來拆分一下動作遊戲《崩壞三》。">
+<meta property="og:description" content="本文我們將對比《戰雙：帕尼什》來拆分一下動作遊戲《崩壞三》。">
+<link rel="canonical" href="https://design.jskyzero.com/2020/03/04/honkai_punish/">
+<meta property="og:url" content="https://design.jskyzero.com/2020/03/04/honkai_punish/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-03-04T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="ACT-手游-崩三&amp;战双">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2020-03-04T00:00:00+00:00","datePublished":"2020-03-04T00:00:00+00:00","description":"本文我們將對比《戰雙：帕尼什》來拆分一下動作遊戲《崩壞三》。","headline":"ACT-手游-崩三&amp;战双","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2020/03/04/honkai_punish/"},"url":"https://design.jskyzero.com/2020/03/04/honkai_punish/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>本文我們將對比《戰雙：帕尼什》來拆分一下動作遊戲《崩壞三》。</p>
+
+<!--more-->
+
+<h1 id="崩壞三--honkai-3rd"><span class="heading-label">崩壞三 / honkai 3rd</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/游戏体验-blue.svg?style=flat" alt="游戏体验"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2020/03/04-brightgreen.svg?style=flat" alt="日期 2020/03/04"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#崩壞三--honkai-3rd">崩壞三 / honkai 3rd</a><ul><li><a href="#概述簡介--原因">概述：簡介 &amp; 原因</a></li><li><a href="#體驗藍圖遊戲內容詳細分析">體驗藍圖：遊戲內容詳細分析</a></li><li><a href="#系統系統流轉與投放">系統：系統流轉與投放</a></li><li><a href="#單局單局分析與擴充">單局：單局分析與擴充</a></li><li><a href="#運營活動製作成本性價比">運營活動：製作成本性價比</a></li><li><a href="#關於戰雙崩三模式的新風格初生代">關於戰雙：崩三模式的新風格初生代</a></li></ul></li></ul></nav></div>
+
+<p><img src="https://lh3.googleusercontent.com/vT54lxa-R8ccWRch8YGNrp5mAkffovySWofCf3-UwxYM3RaVyhqFUaU-dd1XKdU4xthEHuNl09MXDi29CVdzmSc7ZdtX8q-h9c1yui7UwvtqsvhblW6sxkZd07Fn5eCRmfD_hMHLCAA=w2436-h1125-no" alt=""></p>
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="概述簡介--原因"><span class="heading-counter">1.</span><span class="heading-label">概述：簡介 &amp; 原因</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>崩壞三是上海米哈遊於15年推出的一款動作ACT手游，長期以來一直以高畫面質量、高話題性在ACT手游中佔據一席之地，本文試圖系統的拆分一下崩壞三，從中吸取有意義的經驗。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="體驗藍圖遊戲內容詳細分析"><span class="heading-counter">2.</span><span class="heading-label">體驗藍圖：遊戲內容詳細分析</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>新手期：基礎教學 / 慢熱轉向 / 情感鋪墊
+    <ul>
+      <li>（因為時間久遠，這裡對新手期的介紹可能有不正確的地方）</li>
+      <li>主要內容是主線關卡，劇情上是故事早期平靜生活和問題初顯的，角色上是各位主角的初期角色。</li>
+      <li>有對分支攻擊、閃避、換人等機制做基礎的教學，但是因為強制性不夠高，玩家掌握程度可能不夠。</li>
+      <li>和“後期內容”基本脫節，內容吸引力較弱，記憶中時間也較長，如果是純萌新玩家很可能會流失。</li>
+    </ul>
+  </li>
+  <li>成長期
+    <ul>
+      <li>劇情逐漸升溫，逐步解鎖各個系統。</li>
+      <li>萌新補給，指導新玩家入場，逐步轉向平台期。</li>
+      <li>開放世界有劇情前期引導，家園補給有角色和裝備</li>
+    </ul>
+  </li>
+  <li>平台期
+    <ul>
+      <li>倆主要排名活動（深淵、戰場），開放世界、曜日關卡、艦團、活動關卡、懸賞，大版本更新的主線關卡。</li>
+      <li>主要是核心資源產出的節奏與玩家數值成長的問題</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://lh3.googleusercontent.com/Iw667i6XYi0RXgy4ChljX-eyqqaK5fCUzbNFvCE4_rWC44qnWeNvWwbhHZFHxNaQrYjynqqgZ5iimp0Pdzhb-ad4nmWFO1eJdWLEe4MovRhLJJq8BwLccilTval0ytX5VfDOIYraUlx4k3qbEwtsjKqgUrhq-co1IE4GY5VFcrwgLvAtRVkRwCU6II_kKBezd2jLHgosS7IY0ZmH_UM1ubry8GIPvICe9ch1AX5xNQMILg0bWYRIiCZhVIYQl-US4jlB6MTcM1XVo4ZfTOG5ykgcBJR-vAxtGqLPHbiEu2T9zJGmj3AUDs5UWFecV6_LmtDsG56O3FHFCX4wAAoS_Etly3atje8si5lXjGT79gmvRAm_0wDCC3aqUOBeUUzsAhq5N4y90yOaoqshC_434LMoyKHadCQlVYnmHK36M_KfoFcH1vUxyd6r5h7gcDOMcXKvbhzrDkaVikhte8sZmiCJv-GWYT88QoJtQVV9Vb1LFpw5c360TL2xxfruMOEluqtXe7e7CCaWzv_kadOOPAiRt5zIVy6PdBPiIwUgR01vHcFef5f9tPWWJza3E9a1knHgZ8jQk8iecCS-pyHZ0OY3_uJPWPFhGFymV_eSQRGTI7eVAnPUXD-8sn-ptBxcKW7mvbNodZFlGI6QfIVdgUUFaVZNmgCSCtP4gKYT9bVhxK-6SEljfkge4D3ihcqrxx5JkM1Kqdo1sx5TTXeisMUu5ItPeRlH5iX_Hhq3VPV4r3DosQ=w2436-h1125-no" alt=""></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="系統系統流轉與投放"><span class="heading-counter">3.</span><span class="heading-label">系統：系統流轉與投放</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>我們逆著看，主要系統和需求對於的關係如下</p>
+
+<ul>
+  <li>核心戰鬥：角色
+    <ul>
+      <li>角色本體、進階：碎片</li>
+      <li>角色武器：卡池，懸賞合成，裝備合成，升級進階消耗素材</li>
+      <li>角色聖痕：卡池，懸賞合成，裝備合成，升級進階消耗素材</li>
+      <li>角色技能：消耗素材和金幣</li>
+    </ul>
+  </li>
+  <li>周邊系統
+    <ul>
+      <li>家園：包括家、遠征、養成、打工</li>
+      <li>神之鍵：包含數值和開啟短期增強</li>
+    </ul>
+  </li>
+  <li>主要依賴的玩法和每日活躍是綁定的
+    <ul>
+      <li>深淵、戰場、開放世界、曜日關卡、艦團、懸賞…</li>
+    </ul>
+  </li>
+</ul>
+
+<p>這裡就不繪製具體的流轉圖了…</p>
+
+<p>對於具體的定量分析，這裡也不展開，遊戲中因為兌換，黑核、白核、星石、徽章等都有著相當的靈活性轉換性，遊戲中主要是通過核心突破資源來做卡點。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="單局單局分析與擴充"><span class="heading-counter">4.</span><span class="heading-label">單局：單局分析與擴充</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>因為主要數值養成的用途是深淵、戰場的排名，以獲得更多好的獎勵，所以這裡的單局也只對這裡展開</p>
+
+<p><img src="https://lh3.googleusercontent.com/R9gavVp8Ho_gmQ0o3vL6Jomqmp9v1OPP5CpB70NFaVelC9mBnYBlqUOzI5FICwyi-Ex5bh_n37l2r-sYOCyTqzkta2WWrtYNBOT4v5177QjIZVlCNYB2K7BBYro9Eeq475mQ6tjMYWdFbPtDvtqG4gRj8mzAgufBxmz09DHx90We5BNDSJkLabJ4Mg3FnjIEq-Qi7j3LG_AoRK37kF3vcrqxpVUcK0-6n10GbKzcHylCQjppyTW-CMvbPvncGfY5v5HjrW26dK_uzcbA__97a5DXB5mrXHLmG6JfbMGqImGylzArmkDKMYlbIXApBVb48JHgtx9a34gpAH9KzmN75DCWTyRjuvDKuzm6AZbcD5TQIAXI-Y9xoMdmfMxARs508oQl2EGjSp_OxVaZ7d6I6B1b0TP_EDTxFdrnex1KJhO6jQ0JXBj9LQ2wmVnN5gU2lShd8T_BFCw9nBZo1mdDWEsOBBgqHcwrRLkNVbsIvVDhLtzIFOJaL8l29Wro7kYCskwVAf_DBVNgKPZEZyTRYBDxEqk9qc7pCRdGA9_FmMyrPHoNMoAZSDBKu8jP-rMF1WsFBdSibSejQupkERpf9XvLWb_xzOFw1jZpqnsO7oGkHWBw8sC8ad1mnnsdW2d0b8EKe3A98miu7L0Iliuoi1pCK5WdXNoToPNwwuO7LjO6waIa5NVFD2D-gSQnrUzSz-bdQhql9FmMULOu0slSm0mfnW0qUvfmm35ZKtCsyDyDxCeqeA=w2436-h1125-no" alt=""></p>
+
+<p>總體的思路是BOX的深度</p>
+
+<ul>
+  <li>C位人物單體強度：物理 + 元素（火冰累） * （3 + 1）種不同屬性</li>
+  <li>輔助人物（帶武器、聖痕）：核心技能加傷、減防、控制等</li>
+</ul>
+
+<p>這裡可能需要對裝備更新的時間和設計維度進行一個分析…先鴿了</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="運營活動製作成本性價比"><span class="heading-counter">5.</span><span class="heading-label">運營活動：製作成本性價比</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>崩三有著相當不錯和有深度的運營玩法</p>
+
+<ul>
+  <li>人偶玩法</li>
+  <li>複用單局</li>
+  <li>外部活動</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="關於戰雙崩三模式的新風格初生代"><span class="heading-counter">6.</span><span class="heading-label">關於戰雙：崩三模式的新風格初生代</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>總體上，戰雙的系統和崩三相對應，但是更為簡化，同時遊戲早期build深度並未完全顯現…</p>
+
+<p><img src="https://lh3.googleusercontent.com/qnk0nNmMCNr1fpLsK0fU8g4RbH3SLM1VacSFmryA6_FVECm2NOPVIrFzgyHJS_3EE5QvMFIVqiqjFgaRHzFTAwoEHoW7kb0-87-rzdItRuj9QTUZeyYaAdkIaU-5nR-rxYcI5eJ-SUMFwtCMqpVLiBx_zyCkmXENs622pTk0wv9W2A1Yc8SMYl4PSho4WTPIczOzvSTtVN-4d0X-8wdnI89zjEIeWDtMb6oM3CZg9MpLKfPMNjdFrC7aElXbUGOtxWd7BYfjTdhkBNLL7nuIL9VBpT6ykZOyQc28TsU7vOp1vpYzOdG1Y5vRKF3QOmaFj2UKlGzXvtedgUSmGENqhWhuxY7FTWDv9tfzDWai9PZcBpVqtuxFjDMiFMQJYNbJ4evjsK3YtjKxmNkJErzT7GgLel5iIqaeQ2izkykMnyu3k2wC6UBAxkMVblDDW55AgKGuaV1wLEMuEaSafAIQHyj4pS6hxel_Lj_zglPpoCuT5vrSAWX7dj2lnTz0cGyWzUbeQb2GrvoHSYgtait_mHPEiVzCLlW79bDllRBMwNUm-l_TyYdiuVEoPVzu8xbyB1re525l9GthEW8z7qrH-sCIxLzHGDCns6t4eLSXcoD3u6hXzvqsDs_pMEqfNTjJ8ylOBnEiyIXiZ4-CU-Ow8N8bc-89PaJUfpWVm3nlxSS0DQuOZoz5PhRYWbJltXlpsdyHhuWTLwzxovh0D_zR1ygr87bVUg0Tidp47BDO9gpjTR2U2A=w853-h394-no" alt=""></p>
+
+<p>遊戲內容基本對位，但是內容種類是有一定區別…</p>
+
+<p><img src="https://lh3.googleusercontent.com/PWnMPSwOifDqgDs8h5TvjSOA3mCVUZGYmSJIgi1myqLIsr8pOEzT5H8ZnVtDi-7jMBP-ovqA91Wn-CH2vTY2IqA8flbXbQnm93dGFa4-39nHE8ID0_xWtvrjb_i5-mTZji1VRiBQToBHMqvm8EJxZxcs728J3yKBwionJ2tZt9pOr5DHNocxtXPJNJj-O_uf_nNfQzB9UaxPeX1_20z3VR9dbIii3RgJGGvBNTps4uttGRUGuL9cywik4ji05UhFAouPfca6_cnlhHVYcf_0n3zsAuyP1ekNbYZUwuaGSmzbCzuSA1L2Zs11LQn49xA27fi23KXSy1X4M2kwaMuw3zM0vsnuQw4PNEDBn--iMLfWpyPWU2OppnIq7FR3GTbk2-N-e35E8HEf8wPI8wskpxmXNCyLQ1YPbn5n0UbKupIsa0BM1AzvA0799FG4T0r1ZPTQ9I2Bbu-nnqas_vLkMM2m4Bly4EExaq7oy9Iv-5zdsOsAiltO2Y7pjuOejCo3mGj8NhDw_c-BrvILYSJxntb1dXepK07BSepJHdLMHGDi9ckqu7L_1jznUzL6_zrv3tHfIYb10n31FFR2WD1qTYqOfixnCaAM1T7abaOSDoGppdkK-8-5HbtrQ8CdT7fDd0ObMYE2ecG942Qvt-CPXmlGXPHSu0tvXUhiOMqVeR-yrwyw8VauViXYA67RaWp8gdxHNaCV5Wz9yaTj0hA_Qg39GqQ3mbzGJOkMETrEhaOVlCG_Sg=w853-h394-no" alt=""></p>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-10-27 - jskyzero - 🚧 update 5.游戏体验
+2024-04-04 - jskyzero - 🚚 update structure
+2024-01-24 - jskyzero - 📝 update title
+2024-01-02 - jskyzero - 📝 test change strcuture
+2023-05-27 - jskyzero - 🚚 re:re:change file folder
+2022-04-15 - jskyzero - 📝 update title
+2021-08-19 - jskyzero - ✨ update tags
+2021-08-19 - jskyzero - 🔀  change structure
+2021-06-27 - jskyzero - 🚧 format markdown code
+2020-03-09 - jskzyero - update 《崩坏3》體驗報告
+2020-03-04 - jskzyero - add 《崩坏3》體驗報告
+
+<em>（本文编写于2020年3月，最后修改于2024年10月，共修改1次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2020/03/04/honkai_punish/';
+this.page.identifier = 'https://design.jskyzero.com/2020/03/04/honkai_punish/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#崩壞三--honkai-3rd">崩壞三 / honkai 3rd</a><ul><li><a href="#概述簡介--原因">概述：簡介 &amp; 原因</a></li><li><a href="#體驗藍圖遊戲內容詳細分析">體驗藍圖：遊戲內容詳細分析</a></li><li><a href="#系統系統流轉與投放">系統：系統流轉與投放</a></li><li><a href="#單局單局分析與擴充">單局：單局分析與擴充</a></li><li><a href="#運營活動製作成本性價比">運營活動：製作成本性價比</a></li><li><a href="#關於戰雙崩三模式的新風格初生代">關於戰雙：崩三模式的新風格初生代</a></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

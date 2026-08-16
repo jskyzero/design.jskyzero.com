@@ -1,0 +1,376 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>游戏设计：能力模型 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="游戏设计：能力模型">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。">
+<meta property="og:description" content="本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。">
+<link rel="canonical" href="https://design.jskyzero.com/2022/02/15/GameDesignAbility/">
+<meta property="og:url" content="https://design.jskyzero.com/2022/02/15/GameDesignAbility/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-02-15T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="游戏设计：能力模型">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-02-15T00:00:00+00:00","datePublished":"2022-02-15T00:00:00+00:00","description":"本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。","headline":"游戏设计：能力模型","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/02/15/GameDesignAbility/"},"url":"https://design.jskyzero.com/2022/02/15/GameDesignAbility/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li class="current">
+                  <a href="/2022/02/15/GameDesignAbility/" class="current" aria-current="page">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>本文试图分析概述游戏设计——或者更广泛的制作游戏，所需要的能力。</p>
+
+<h1 id="游戏设计所需要的能力"><span class="heading-label">游戏设计所需要的能力</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/游戏开发-blue.svg?style=flat" alt="游戏开发"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2022/02/15-brightgreen.svg?style=flat" alt="日期 2022/02/15"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#游戏设计所需要的能力">游戏设计所需要的能力</a><ul><li><a href="#为什么要读这篇文章">为什么要读这篇文章</a></li><li><a href="#能力模型">能力模型</a><ul><li><a href="#硬实力说话客观能力">硬实力说话：客观能力</a><ul><li><a href="#持续变强的能力">持续变强的能力</a></li><li><a href="#创造新内容的能力">创造新内容的能力</a></li><li><a href="#了解过去的能力">了解过去的能力</a></li><li><a href="#专业设计能力">专业设计能力</a></li></ul></li><li><a href="#能力放大器主观意愿">能力放大器：主观意愿</a><ul><li><a href="#行动的意义">行动的意义</a></li><li><a href="#调整自身状态">调整自身状态</a></li></ul></li><li><a href="#拥抱现实协同合作">拥抱现实：协同合作</a><ul><li><a href="#沟通合作能力">沟通合作能力</a></li></ul></li></ul></li><li><a href="#附录冰山模型">附录：冰山模型</a></li><li><a href="#附录游戏开发过程">附录：游戏开发过程</a><ul><li><a href="#阶段划分">阶段划分</a></li><li><a href="#角色划分">角色划分</a></li><li><a href="#开发结果盈利">开发结果：盈利</a></li></ul></li><li><a href="#结语">结语</a></li></ul></li></ul></nav></div>
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="为什么要读这篇文章"><span class="heading-counter">1.</span><span class="heading-label">为什么要读这篇文章</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>我知道这个世界上有一万篇教你如何设计游戏的文章，文章中包含着方法论、技巧指南、和辅助证明成功案例的纸醉金迷。</p>
+
+<p>那些文章当然很好，读起来令人心潮澎湃，仿佛照着这上面的做，明天就可以像文章作者一样成功。但是一段时间过后，你的工作、生活真的改变了吗？</p>
+
+<p>本文试图提出一个模型，用于解剖游戏设计、分析其中各个所需要的能力——以及这些能力所占的比例，真正的帮助你理解市面上纷纷攘攘的案例，辅助你不被这些因素干扰脚步、坚实稳定的走在自己的成长之路上。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="能力模型"><span class="heading-counter">2.</span><span class="heading-label">能力模型</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>先给出一个结果的拆解，互相之间是连乘关系。</p>
+
+<blockquote>
+  <p>客观能力 X 主观意愿 X 合作过程 = 结果</p>
+</blockquote>
+
+<script src="/assets/js/mermaid.min.js"></script>
+<div class="mermaid">
+graph TD
+    A[客观能力]
+    A --&gt; A1[学习]
+    A --&gt; A2[创新]
+    A --&gt; A3[视野]
+    A --&gt; A4[专业]
+    B[主观意愿]
+    B --&gt; B1[意义]
+    B --&gt; B2[心态]
+    C[合作能力]
+    C --&gt; C1[合作]
+</div>
+
+<!-- ### Pure Ability / 硬实力说话：客观能力 -->
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="硬实力说话客观能力"><span class="heading-counter">2.1.</span><span class="heading-label">硬实力说话：客观能力</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>打铁还需自身硬，这部分是所谓的硬实力。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="持续变强的能力"><span class="heading-counter">2.1.1.</span><span class="heading-label">持续变强的能力</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>没有人能一开始就很强，只是别人付出的更多。毕竟，“大多数人”的努力程度都还远远没有到拼天赋的程度。</p>
+
+<p>具体来说：</p>
+
+<ul>
+  <li>对新知识的理解、运用能力</li>
+  <li>愿意主动了解、接纳新技术</li>
+</ul>
+
+<p>世界上唯一不变的就是变化，所以怀抱一个开放的心态吧。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="创造新内容的能力"><span class="heading-counter">2.1.2.</span><span class="heading-label">创造新内容的能力</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>从设计高度上来讲，设计最需要的是创造力，即便现在大的玩法已经固定，小的体验点上还有很多可以借鉴理解、挖掘的地方。</p>
+
+<ul>
+  <li>对于问题新的思考视角</li>
+  <li>一个改进流程的解决问题的新方案</li>
+  <li>一个新的体验</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="了解过去的能力"><span class="heading-counter">2.1.3.</span><span class="heading-label">了解过去的能力</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>“人类总是在重复过去的错误。”，“知己知彼，百战不殆”，很多时候决策只是因为双方有信息差，这部分主要是想弥补这点。</p>
+
+<ul>
+  <li>了解行业市场环境。</li>
+  <li>了解专业品类历史。</li>
+  <li>了解当前项目开发周期、运营情况</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="专业设计能力"><span class="heading-counter">2.1.4.</span><span class="heading-label">专业设计能力</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>这部分是指具体如何推进你的工作，毕竟前面都是虚的标准。</p>
+
+<p>对于设计，除了基础的满足设计目的外，还有一些个人的简单想法。</p>
+
+<ul>
+  <li>达成设计目的</li>
+  <li>理性逻辑</li>
+  <li>注意“尖叫度”</li>
+</ul>
+
+<!-- ### Mood / 能力放大器：主观意愿 -->
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="能力放大器主观意愿"><span class="heading-counter">2.2.</span><span class="heading-label">能力放大器：主观意愿</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>“状态不好，下次再聊”，不要让这样的原因成为你无法高质量工作的理由。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="行动的意义"><span class="heading-counter">2.2.1.</span><span class="heading-label">行动的意义</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>为什么要做这个设计？想清楚真正要的什么。</p>
+
+<ul>
+  <li>满足用户需求</li>
+  <li>个人表达</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="调整自身状态"><span class="heading-counter">2.2.2.</span><span class="heading-label">调整自身状态</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>三英可车轮战吕布，不要当吕布被三英车轮战，合理安排自己要面的事物。</p>
+
+<ul>
+  <li>工作规划，指定计划并执行。</li>
+  <li>学会生活，让生活成为能量补充而非负担。</li>
+</ul>
+
+<!-- ### Cooperation / 拥抱现实：协同合作 -->
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="拥抱现实协同合作"><span class="heading-counter">2.3.</span><span class="heading-label">拥抱现实：协同合作</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>君子性非异也，善假于物也。再好的设计，没人帮你做，或者帮你做的人不大行，岂不是僵住。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="沟通合作能力"><span class="heading-counter">2.3.1.</span><span class="heading-label">沟通合作能力</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<ul>
+  <li>交流传达信息</li>
+  <li>统一立场</li>
+  <li>推进项目进展。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="附录冰山模型"><span class="heading-counter">3.</span><span class="heading-label">附录：冰山模型</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>事后突然发现一个前人总结好的东西：</p>
+
+<p><img src="/assets/img/others/iceberg.webp" alt=""></p>
+
+<p>和本文提出的东西还挺类似的，可以参考对比看看。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="附录游戏开发过程"><span class="heading-counter">4.</span><span class="heading-label">附录：游戏开发过程</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="阶段划分"><span class="heading-counter">4.1.</span><span class="heading-label">阶段划分</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>一个软件制品有着自己的<a href="https://wiki.mbalib.com/wiki/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">软件生命周期</a>，大致包括：问题，需求，设计，实现，测试，维护几个过程。</p>
+
+<p>从大的角度来讲，游戏也是一种软件制品，在游戏开发中也会划分阶段，以移动端游戏的开发为例，大致会有：概念阶段验证概念模型、试玩版本提供核心体验、轻测/重测版本验证长期数据。</p>
+
+<p>软件生命周期阶段的规划，主要是带有产出约束，用于有序推进软件开发，而移动端游戏每一个阶段都像是包含一个软件生命周期，更注重每个阶段需要验证的风险点。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="角色划分"><span class="heading-counter">4.2.</span><span class="heading-label">角色划分</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>从大的工作种类进行划分，一般会将游戏开发中涉及到的角色分为：策划、美术、开发。分别负责游戏的设计、资产、逻辑。</p>
+
+<p>从一个工作的切片进行剖析，策划同学需要（理解问题然后）提出需求，将需求传达给美术以及开发同学，并在制作全程维持沟通，以及最后的验收。</p>
+
+<p>工种的细分实际上是因为游戏制作需要的能力太多：设计能力（理解需求并解决需求）、美学能力（抽象感受并再现）、规划能力（抽象数据逻辑管理），这些能力多到一个人无法专精掌控。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="开发结果盈利"><span class="heading-counter">4.3.</span><span class="heading-label">开发结果：盈利</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>从资本的角度来看，游戏是一种流量变现工具。大家所熟知的另外一种直接变现便是广告。</p>
+
+<p>从公司的角度来看，游戏只是一个商品，不管是卖拷贝还是卖服务，游戏是要用来赚钱的，是要用来将消费的钱，用各种方式置换到自己口袋里。</p>
+
+<p>当然，在盈利以上，我很乐意给游戏赋予个人表达、情感体验等等上层的东西，但是为了使一帮人长久的聚在一起，除了热爱以外，盈利可能是绕不开的话题。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="结语"><span class="heading-counter">5.</span><span class="heading-label">结语</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>也许有些你周围的人，他们只是不想好好工作，并不是能力太差。学会调用自己、也学会调动别人的主观能动性吧！</p>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-01-02 - jskyzero - 📝 test change strcuture
+2023-06-13 - jskyzero - update 能力模型
+2023-03-30 - jskyzero - 🐛 fix title
+2022-10-07 - jskyzero - update pro tag
+2022-03-30 - jskyzero - 📝 update article
+2022-03-10 - jskyzero - 🎨 change file name
+2022-03-04 - jskyzero - 🐛 fix bug
+2022-03-04 - jskyzero - 🐛 fix titile
+2022-03-04 - jskyzero - finish 游戏设计所需要的能力
+2022-03-03 - jskyzero - finish 游戏设计所需要的能力 &amp; add index to title
+2022-02-16 - jskyzero - 📝 test wsl commit
+2022-02-15 - jskyzero - 📝 update build2 test
+2022-02-15 - jskyzero - 📝 test build
+2022-02-15 - jskyzero - 📝 add 为什么要读这篇文章 to 游戏设计所需要的能力
+
+<em>（本文编写于2022年2月，最后修改于2024年1月，共修改1次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2022/02/15/GameDesignAbility/';
+this.page.identifier = 'https://design.jskyzero.com/2022/02/15/GameDesignAbility/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#游戏设计所需要的能力">游戏设计所需要的能力</a><ul><li><a href="#为什么要读这篇文章">为什么要读这篇文章</a></li><li><a href="#能力模型">能力模型</a><ul><li><a href="#硬实力说话客观能力">硬实力说话：客观能力</a><ul><li><a href="#持续变强的能力">持续变强的能力</a></li><li><a href="#创造新内容的能力">创造新内容的能力</a></li><li><a href="#了解过去的能力">了解过去的能力</a></li><li><a href="#专业设计能力">专业设计能力</a></li></ul></li><li><a href="#能力放大器主观意愿">能力放大器：主观意愿</a><ul><li><a href="#行动的意义">行动的意义</a></li><li><a href="#调整自身状态">调整自身状态</a></li></ul></li><li><a href="#拥抱现实协同合作">拥抱现实：协同合作</a><ul><li><a href="#沟通合作能力">沟通合作能力</a></li></ul></li></ul></li><li><a href="#附录冰山模型">附录：冰山模型</a></li><li><a href="#附录游戏开发过程">附录：游戏开发过程</a><ul><li><a href="#阶段划分">阶段划分</a></li><li><a href="#角色划分">角色划分</a></li><li><a href="#开发结果盈利">开发结果：盈利</a></li></ul></li><li><a href="#结语">结语</a></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>杂谈：学习的一些方法论 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="杂谈：学习的一些方法论">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="学习的一些方法论">
+<meta property="og:description" content="学习的一些方法论">
+<link rel="canonical" href="https://design.jskyzero.com/2022/04/15/study/">
+<meta property="og:url" content="https://design.jskyzero.com/2022/04/15/study/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-04-15T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="杂谈：学习的一些方法论">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-04-15T00:00:00+00:00","datePublished":"2022-04-15T00:00:00+00:00","description":"学习的一些方法论","headline":"杂谈：学习的一些方法论","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/04/15/study/"},"url":"https://design.jskyzero.com/2022/04/15/study/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<h1 id="学习的一些方法论"><span class="heading-label">学习的一些方法论</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/阅读笔记-非具体书籍-blue.svg?style=flat" alt="阅读笔记-非具体书籍"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2022/04/15-brightgreen.svg?style=flat" alt="日期 2022/04/15"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#学习的一些方法论">学习的一些方法论</a><ul><li><a href="#学习">学习</a><ul><li><a href="#循序渐进的阶段">循序渐进的阶段</a></li><li><a href="#学习的具体阶段">学习的具体阶段</a></li><li><a href="#参考">参考</a></li></ul></li><li><a href="#练习与复习">练习与复习</a><ul><li><a href="#练习">练习</a></li><li><a href="#复习">复习</a></li></ul></li></ul></li></ul></nav></div>
+
+<p>我们说过知识的重要性，而且学习作为获取知识的途径，自然也是相当重要的，本文试图将学习划分为阶段，解决一些学习上的常见问题：</p>
+
+<ul>
+  <li>没有彻底掌握</li>
+  <li>不会学以致用</li>
+  <li>没法举一反三</li>
+</ul>
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="学习"><span class="heading-counter">1.</span><span class="heading-label">学习</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="循序渐进的阶段"><span class="heading-counter">1.1.</span><span class="heading-label">循序渐进的阶段</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>任何一件事都是循序渐进的、无法一蹴而就的，我们可以把复杂的目标拆分为阶段，完成每个阶段，最终完成大的目标。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/books/reading/2-1-1-480.webp 480w, /assets/generated/img/books/reading/2-1-1-760.webp 760w, /assets/generated/img/books/reading/2-1-1-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/books/reading/2-1-1.png" alt="" width="1306" height="356" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+
+<p>对于学习也是一样。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="学习的具体阶段"><span class="heading-counter">1.2.</span><span class="heading-label">学习的具体阶段</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/books/reading/2-1-2-480.webp 480w, /assets/generated/img/books/reading/2-1-2-760.webp 760w, /assets/generated/img/books/reading/2-1-2-1140.webp 1140w, /assets/generated/img/books/reading/2-1-2-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/books/reading/2-1-2.png" alt="" width="2406" height="696" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<ul>
+  <li>粗览
+    <ul>
+      <li>快速浏览概念内容</li>
+      <li>第一印象，初步认知</li>
+      <li>核心概念</li>
+    </ul>
+  </li>
+  <li>建模
+    <ul>
+      <li>完全理解概念内容</li>
+      <li>使用列表、脑图、等概念组织方式</li>
+      <li>关注细节内容的理解</li>
+    </ul>
+  </li>
+  <li>自述
+    <ul>
+      <li>能完整复述概念内容</li>
+      <li>找到内容间的线索</li>
+      <li>完整用自己的话复述内容</li>
+    </ul>
+  </li>
+  <li>手册
+    <ul>
+      <li>给出无脑使用概念的规则</li>
+      <li>总结问题情形，解决方式</li>
+      <li>泛用性，无脑性</li>
+    </ul>
+  </li>
+  <li>联系
+    <ul>
+      <li>组合跨领域理解概念</li>
+      <li>同领域其他概念的异同</li>
+      <li>不同领域概念层的类比</li>
+    </ul>
+  </li>
+  <li>阶
+    <ul>
+      <li>概念上下层</li>
+      <li>下层概念</li>
+      <li>上层逻辑</li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="参考"><span class="heading-counter">1.3.</span><span class="heading-label">参考</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li><a href="https://zhuanlan.zhihu.com/p/100121940">罗斯福专业法、费曼4步学习法、达芬奇笔记</a></li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="练习与复习"><span class="heading-counter">2.</span><span class="heading-label">练习与复习</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>本文试图简单论证练习和复习的重要性和一些可行的具体措施。</p>
+
+<ul>
+  <li>练习：实际的使用以检验知识的掌握，在实际练习中加深理解。</li>
+  <li>复习：想办法让知识在脑海中停留的更久一些。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="练习"><span class="heading-counter">2.1.</span><span class="heading-label">练习</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>练习的时机：“种下一棵树最好是十年前，其次是现在。”</li>
+  <li>练习的方式：从实际出发，提出知识的可能运用场景。</li>
+  <li>练习的反馈：从问题的解决中找到不足，加以改进。</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="复习"><span class="heading-counter">2.2.</span><span class="heading-label">复习</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li><a href="https://zhuanlan.zhihu.com/p/25050071">人类记忆模型</a>：</li>
+</ul>
+
+<p><img src="https://pic4.zhimg.com/80/v2-6d66188890ea70ececb529bb77cae2d3_1440w.jpg" alt=""></p>
+
+<ul>
+  <li><a href="https://zh.wikipedia.org/wiki/%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF">艾宾浩斯遗忘曲线</a></li>
+</ul>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ForgettingCurve.svg/500px-ForgettingCurve.svg.png" alt=""></p>
+
+<ul>
+  <li>选取合适的时间节点：当日，本周，本月。</li>
+  <li>采取合适的检验手法：复述、练习等。</li>
+</ul>
+
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-10-27 - jskyzero - 🚧 update 6.摘录与杂谈
+2024-10-27 - jskyzero - 📝 add LISTS.HTML &amp; update structure
+2024-04-04 - jskyzero - 🚚 update structure
+2024-01-02 - jskyzero - 📝 test change strcuture
+2023-11-10 - jskyzero - 📝 update 杂谈 part
+2023-03-07 - jskyzero - 📝 update structure
+2022-04-15 - jskyzero - 📝 update title
+
+<em>（本文编写于2022年4月，最后修改于2024年10月，共修改1次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2022/04/15/study/';
+this.page.identifier = 'https://design.jskyzero.com/2022/04/15/study/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#学习的一些方法论">学习的一些方法论</a><ul><li><a href="#学习">学习</a><ul><li><a href="#循序渐进的阶段">循序渐进的阶段</a></li><li><a href="#学习的具体阶段">学习的具体阶段</a></li><li><a href="#参考">参考</a></li></ul></li><li><a href="#练习与复习">练习与复习</a><ul><li><a href="#练习">练习</a></li><li><a href="#复习">复习</a></li></ul></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

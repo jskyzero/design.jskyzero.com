@@ -1,0 +1,342 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACT-忍者组-仁王 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="ACT-忍者组-仁王">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="大概拆解、闡述了仁王中的一些系統。寫完後晚些日子還是白金了仁王。">
+<meta property="og:description" content="大概拆解、闡述了仁王中的一些系統。寫完後晚些日子還是白金了仁王。">
+<link rel="canonical" href="https://design.jskyzero.com/2017/10/19/nioh/">
+<meta property="og:url" content="https://design.jskyzero.com/2017/10/19/nioh/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-10-19T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="ACT-忍者组-仁王">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2017-10-19T00:00:00+00:00","datePublished":"2017-10-19T00:00:00+00:00","description":"大概拆解、闡述了仁王中的一些系統。寫完後晚些日子還是白金了仁王。","headline":"ACT-忍者组-仁王","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2017/10/19/nioh/"},"url":"https://design.jskyzero.com/2017/10/19/nioh/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>大概拆解、闡述了仁王中的一些系統。寫完後晚些日子還是白金了仁王。</p>
+
+<!--more-->
+
+<h1 id="仁王--nioh"><span class="heading-label">仁王 / NIOH</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/游戏体验-blue.svg?style=flat" alt="游戏体验"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2017/10/19-brightgreen.svg?style=flat" alt="日期 2017/10/19"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#仁王--nioh">仁王 / NIOH</a><ul><li><a href="#简介">简介</a></li><li><a href="#系统">系统</a><ul><li><a href="#战斗">战斗</a></li><li><a href="#成长">成长</a></li></ul></li><li><a href="#后记">后记</a></li><li><a href="#参考">参考</a></li></ul></li></ul></nav></div>
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="简介"><span class="heading-counter">1.</span><span class="heading-label">简介</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>《仁王》是由光荣特库摩推出的动作角色扮演游戏，2017年2月发布PlayStation4版本，截至目前2017年10月19日为止，三个DLC已经全部推出，并于不久前放出了完整版登录PC steam平台的消息。</p>
+
+<p>《仁王》由著名的忍者小组开发，游戏素质十分优秀，IGN评分9.6/10，Fami通 评分36/40，在发售两周后便达到100万份的销量。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="系统"><span class="heading-counter">2.</span><span class="heading-label">系统</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>我打算将整个游戏分为在关卡里面的战斗部分和在关卡以外的成长部分。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="战斗"><span class="heading-counter">2.1.</span><span class="heading-label">战斗</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>战斗部分作为游戏的核心内容，设计的十分出彩，作为动作游戏来说难度很高，稍不留意就可能落命。游戏依靠关卡的推进来进展。</p>
+
+<blockquote>
+  <p><em>游戏中初看略显复杂的 UI界面（如下图）</em></p>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/nioh/ui_preview-480.webp 480w, /assets/generated/img/gameplay/nioh/ui_preview-760.webp 760w, /assets/generated/img/gameplay/nioh/ui_preview-1140.webp 1140w, /assets/generated/img/gameplay/nioh/ui_preview-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/nioh/ui_preview.jpg" alt="" width="1920" height="1080" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+
+<ul>
+  <li>攻击模式：
+    <ul>
+      <li>游戏中提供近距离攻击和远距离攻击两种攻击方式，近距离的武器有太刀双刀等等，每种武器都有自己的攻击模式和连段方式。对于特定的一种武器，又分为上中下三种攻击段位，每种段位的技能组合又不一样，而且游戏的攻击动作设计的比较贴近现实。</li>
+    </ul>
+  </li>
+  <li>残心：
+    <ul>
+      <li>游戏中妖魔会释放出一种名为“常世”的区域，在常世中会影响精力值的回复，玩家每次动作都需要消耗精力值，在一套连段结束，可以通过残心来收回部分精力值并加快精力值的回复，同时残心的时机如果完美将会净化常世区域。</li>
+      <li>要注意残心是有一定破绽的，很容易就在残心时被杀掉，残心的本意是不要过于莽撞，攻击以后要保留残心准备下次攻击。</li>
+    </ul>
+  </li>
+  <li>忍术，阴阳术：
+    <ul>
+      <li>游戏中也提供了一些非常规的攻击方式和辅助状态，这是通过忍术和阴阳术提供的，比如一些投掷物品和增强自身状态，削弱敌方状态的符咒，在一定程度上灵活地使用这些辅助道具将能大大降低游戏难度。</li>
+    </ul>
+  </li>
+  <li>守护灵：
+    <ul>
+      <li>当剧情推进和关键人物的关系发生改变，就会发生分灵获得新地守护灵的现象，守护灵每个都有自己的介绍，外观，技能。游戏中提供一种名为九十九武器的终结技能，释放时将会通过守护灵的出现使得武器被属性包裹，同时增加属性，原有的生命条也会被九十九武器耐久条所取代。</li>
+      <li>守护灵在后期可以通过升级来增强属性，并允许选择两个守护灵。副守护灵也提供部分属性加成。</li>
+    </ul>
+  </li>
+  <li>怪物
+    <ul>
+      <li>游戏中的怪物种类有超过三十种，大概可以分为人物，妖魔两类，人物的话大多是和玩家拥有同样的攻击模式，并且有些强力的人物还会释放九十九武器，十分难缠。妖魔的话相对灵活程度不如人物怪物，但是在攻击力，抗打击方面更棘手。</li>
+      <li>所有怪物/人物都可以在图鉴中查询出处和历史背景，可以说是十分良心了。</li>
+    </ul>
+  </li>
+  <li>地图
+    <ul>
+      <li>关卡是通过在路途种布置普通怪物，关卡最后会有一个十分强大的boss。在很多地方都设有第一眼无法察觉的怪物，一旦陷入被围攻的情况就很危险了。</li>
+      <li>有些时候的推进只是为了打开地图上的捷径，因为存档点是以灵庙的形式体现的，因而到达下一个灵庙并祈祷保存进度就会很重要。</li>
+      <li>地图的风格很多样，捷径和一些隐藏路线设计的也很精巧。</li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="成长"><span class="heading-counter">2.2.</span><span class="heading-label">成长</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<blockquote>
+  <p><em>游戏中锻造铺消耗金币后可获得的亲密点数的强化（如下图）</em></p>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/nioh/system-480.webp 480w, /assets/generated/img/gameplay/nioh/system-760.webp 760w, /assets/generated/img/gameplay/nioh/system-1140.webp 1140w, /assets/generated/img/gameplay/nioh/system-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/nioh/system.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<ul>
+  <li>世界地图</li>
+</ul>
+
+<p>世界地图界面基本上就是日本的地图，然后剧情时间发生的地方是上面一个点。</p>
+
+<ul>
+  <li>锻造铺</li>
+</ul>
+
+<p>游戏中的装备很重要，锻造铺就是用来打造装备的，合成消耗的金钱会呈指数爆炸增加，所以金钱一直都是稀缺资源。</p>
+
+<p>另外重铸出现装备的新属性是完全随机的，这也导致要想获得完美属性装备需要大量时间精力投入。</p>
+
+<ul>
+  <li>稀世茶屋</li>
+</ul>
+
+<p>这个系统为玩家提供了选择势力的可能，势力可以加成属性，势力之间还有排名。</p>
+
+<p>同时可以交换NPC人物外观，并幻化成对应外观。游戏中的装备的外观也可以幻化，这样为玩家提供了相当的乐趣。</p>
+
+<ul>
+  <li>神社</li>
+</ul>
+
+<p>这里的神社不是指存档点的那个神社，而是联机的神社。</p>
+
+<p>游戏的联机机能十分有意思，由于游戏难度很高，很多人在卡关以后可能会选择召唤稀人来帮忙，你也可以选择帮助别人。</p>
+
+<p>不得不说联机的风气是相当好的，陌生人一见面基本上都会做动作表达友善，多人游戏使得游戏的乐趣大大上升。（我的一周目和3个DLC是完全和好友一起组队的）</p>
+
+<ul>
+  <li>成就</li>
+</ul>
+
+<p>游戏种提供成就系统，将会统计很多数据，由于某些数据在后期是大量增加所以不太有参考价值，但是某些很有意思的数据比如第一次的关卡过关等级、至今和妖怪心意相通的次数等等都很有意思。也有很多玩家挑战一级通关、空手通关等等。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="后记"><span class="heading-counter">3.</span><span class="heading-label">后记</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<blockquote>
+  <p><em>中后期幻化后的角色形象以及装备（如下图）</em></p>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/nioh/player_info-480.webp 480w, /assets/generated/img/gameplay/nioh/player_info-760.webp 760w, /assets/generated/img/gameplay/nioh/player_info-1140.webp 1140w, /assets/generated/img/gameplay/nioh/player_info-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/nioh/player_info.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>选择《仁王》来谈只是因为最近自己恰好在玩这个游戏，截止到上周5周目（最高五周目）通关已经有100多个小时的游戏时间了，期间经历过被boss统治的恐惧、被修炼场师傅们一刀刀教导的成长、和好友一起组队的快乐。到最后五周目通关，就像一件事情终于做完长舒一口气。</p>
+
+<p>现在来看的话，仁王最打动人大概就是核心的动作系统，精妙的地图设计，魂系列的难度，以及资料详实的剧情。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="参考"><span class="heading-counter">4.</span><span class="heading-label">参考</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>仁王网站：<a href="http://www.gamecity.ne.jp/nioh/">http://www.gamecity.ne.jp/nioh/</a></p>
+
+<p>维基百科 仁王：<a href="https://en.wikipedia.org/wiki/Nioh">https://en.wikipedia.org/wiki/Nioh</a></p>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-10-27 - jskyzero - 🚧 update 5.游戏体验
+2024-01-24 - jskyzero - 📝 update title
+2024-01-02 - jskyzero - 📝 test change strcuture
+2023-05-27 - jskyzero - 🚚 re:re:change file folder
+2022-04-15 - jskyzero - 📝 update title
+2021-09-21 - jskyzero - 🔥 remove {{site.img_url}}
+2021-08-19 - jskyzero - 🔀  change structure
+2021-08-12 - jskyzero - fix wrong words
+2021-06-27 - jskyzero - 🚧 format markdown code
+2019-12-27 - jskzyero - update tags system in gameplay part
+2018-11-27 - jskzyero - re:initial &amp; delete histories
+
+<em>（本文编写于2018年11月，最后修改于2024年10月，共修改1次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2017/10/19/nioh/';
+this.page.identifier = 'https://design.jskyzero.com/2017/10/19/nioh/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#仁王--nioh">仁王 / NIOH</a><ul><li><a href="#简介">简介</a></li><li><a href="#系统">系统</a><ul><li><a href="#战斗">战斗</a></li><li><a href="#成长">成长</a></li></ul></li><li><a href="#后记">后记</a></li><li><a href="#参考">参考</a></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

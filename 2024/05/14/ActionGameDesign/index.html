@@ -1,0 +1,514 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动作游戏的本质 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="动作游戏的本质">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。">
+<meta property="og:description" content="本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。">
+<link rel="canonical" href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/">
+<meta property="og:url" content="https://design.jskyzero.com/2024/05/14/ActionGameDesign/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2024-05-14T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="动作游戏的本质">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-05-14T00:00:00+00:00","datePublished":"2024-05-14T00:00:00+00:00","description":"本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。","headline":"动作游戏的本质","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2024/05/14/ActionGameDesign/"},"url":"https://design.jskyzero.com/2024/05/14/ActionGameDesign/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li class="current">
+                  <a href="/2024/05/14/ActionGameDesign/" class="current" aria-current="page">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>本文介绍一种基于MDA理论的，理解动作游戏的方式或框架，方便读者在分析、理解、设计动作游戏时使用。</p>
+
+<h1 id="动作游戏的本质与相关设计方法论"><span class="heading-label">动作游戏的本质，与相关设计方法论</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/动作游戏设计-blue.svg?style=flat" alt="动作游戏设计"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2024/05/14-brightgreen.svg?style=flat" alt="日期 2024/05/14"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</a><ul><li><a href="#广义和狭义的动作游戏">广义和狭义的动作游戏</a><ul><li><a href="#动作游戏的分类">动作游戏的分类</a><ul><li><a href="#广义动作游戏">广义动作游戏</a></li><li><a href="#狭义日式动作游戏">狭义（日式）动作游戏</a></li><li><a href="#我们所讨论的是">我们所讨论的是</a></li></ul></li></ul></li><li><a href="#动作游戏的哲学与本质">动作游戏的哲学与本质</a><ul><li><a href="#设计方法论奖惩导向-上">设计方法论：奖惩导向 上</a><ul><li><a href="#控制的乐趣">控制的乐趣</a></li><li><a href="#奖惩导向">奖惩导向</a></li></ul></li><li><a href="#设计方法论奖惩导向-下">设计方法论：奖惩导向 下</a><ul><li><a href="#奖惩设计的基本要求">奖惩设计的基本要求</a></li><li><a href="#奖惩设计方向的取舍">奖惩设计方向的取舍</a></li><li><a href="#让奖惩设计长期有效">让奖惩设计长期有效</a></li></ul></li></ul></li><li><a href="#基于m-d-a理论的理解">基于M-D-A理论的理解</a><ul><li><a href="#设计方法论底层机制">设计方法论：底层机制</a><ul><li><a href="#状态机-逻辑轴-系统逻辑">状态机 逻辑轴 系统逻辑</a></li><li><a href="#一些比较典型的动作游戏的底层机制实现过程">一些比较典型的动作游戏的底层机制实现过程</a></li></ul></li><li><a href="#设计方法论微观循环">设计方法论：微观循环</a><ul><li><a href="#针对感知的设计">针对感知的设计</a></li><li><a href="#针对认知的设计">针对认知的设计</a></li><li><a href="#针对行动的设计">针对行动的设计</a></li><li><a href="#注意事项">注意事项</a></li></ul></li><li><a href="#设计方法论打击感">设计方法论：打击感</a></li></ul></li><li><a href="#从微观到宏观">从微观到宏观</a><ul><li><a href="#内容构建理论和工具">内容构建理论和工具</a><ul><li><a href="#体验蓝图与玩家阶段">体验蓝图与玩家阶段</a></li><li><a href="#叙事与英雄之旅">叙事与英雄之旅</a></li></ul></li></ul></li><li><a href="#简要总结">简要总结</a></li></ul></li></ul></nav></div>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/xmind-0-480.webp 480w, /assets/generated/img/act/2022/xmind-0-760.webp 760w, /assets/generated/img/act/2022/xmind-0-1140.webp 1140w, /assets/generated/img/act/2022/xmind-0-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/xmind-0.png" alt="" width="3111" height="1555" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+
+<!-- 🚧🚧🚧注意：本文有部分章节未补充详细案例，有待施工，但是本文结构是完整的。 -->
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="广义和狭义的动作游戏"><span class="heading-counter">1.</span><span class="heading-label">广义和狭义的动作游戏</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<!-- ![](/assets/img/act/2022/xmind-1.png) -->
+
+<p>本节想先讨论一些远离具体的设计的、有关动作游戏的宏观理解，这些作为一些基础铺垫，帮助我们深入理解动作游戏的核心特征与乐趣，逐步导出下文的一些理解、设计方法论。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/03-480.webp 480w, /assets/generated/img/act/2022/03-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/03.jpg" alt="动作游戏核心体验" width="1045" height="354" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="动作游戏的分类"><span class="heading-counter">1.1.</span><span class="heading-label">动作游戏的分类</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="广义动作游戏"><span class="heading-counter">1.1.1.</span><span class="heading-label">广义动作游戏</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>本文无意对动作游戏的今生往世做细致详细的介绍，但是动作游戏是一个不同人理解起来相当容易产生歧义的游戏类型。归根结底，动作游戏的历史和内涵过于丰富，广泛存在于不同类型游戏的体验与机制上。</p>
+
+<p>从这个角度，我们可以得到维基百科对动作游戏的广义定义：<strong>任何以动作为主要表现内容的游戏，都可以算作动作游戏。</strong>比如一些跨类别的动作游戏“影子”的例子：MOBA游戏中英雄的技能、射击游戏中近战动作……</p>
+
+<!-- + 动作游戏与射击游戏的比较
+
+从感受上来说，都是对于显示的模拟，一种是古朴一种是现代。
+从制作上来说，射击易于制作
+从玩家角度，射击易于掌握，同样都作为广泛基础类型 -->
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="狭义日式动作游戏"><span class="heading-counter">1.1.2.</span><span class="heading-label">狭义（日式）动作游戏</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>以广义去探讨，可能会像面对一整片森林去观察某种特定植物，未必能得到想要的答案。</p>
+
+<p>如果你看了本博客的其他游戏分析，你会发现其中大多为日系动作游戏，维基百科中存在于另一个关于<strong><a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B2%E3%83%BC%E3%83%A0">日式狭义动作的定义：分为2D和3D，2D分为横版卷轴、纵向卷轴、俯视角、固定画面；3D分为无双类、硬核动作、怪猎、魂like，格斗类则作为掌上明珠单独枚举</a></strong>。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="我们所讨论的是"><span class="heading-counter">1.1.3.</span><span class="heading-label">我们所讨论的是</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>更接近上面狭义（日式）动作游戏的定义，正如<a href="https://zhuanlan.zhihu.com/p/25481394">旗舰评论所言</a>：</p>
+
+<blockquote>
+  <p>日本定义下的狭义动作游戏，是若干个特别强调“反应与操作”的细分类型游戏的松散集合……把这些游戏类型从老到新列成一张表，它本身就是动作游戏设计的发展史：我们几乎找不出由欧美游戏设计师做出的设计创举。从最早的碰撞块和帧数判定理论开始，攻击-防御-投掷的基本三角克制关系是日本动作游戏设计出来的；跳跃和空中战是日本动作游戏设计出来的；群体战斗AI、主动性、QTE、一闪……这些设计也都是日本动作游戏先设计出来的……</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="动作游戏的哲学与本质"><span class="heading-counter">2.</span><span class="heading-label">动作游戏的哲学与本质</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<!-- ![](/assets/img/act/2022/xmind-2.png) -->
+
+<p>“动作”伴随着人类从动物形成社会的全过程，早已写入了人类的基因。当动作这个概念进行抽象并用于游戏娱乐，动作游戏诞生了。</p>
+
+<p>动作游戏本质或者核心逻辑，抽象起来非常简单：<strong>玩家 控制 游戏角色 播放 动作。</strong></p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/03-1-480.webp 480w, /assets/generated/img/act/2022/03-1-760.webp 760w, /assets/generated/img/act/2022/03-1-1140.webp 1140w, /assets/generated/img/act/2022/03-1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/03-1.jpg" alt="动作游戏核心体验" width="1780" height="332" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="设计方法论奖惩导向-上"><span class="heading-counter">2.1.</span><span class="heading-label">设计方法论：奖惩导向 上</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<!-- ![](/assets/img/act/2022/xmind-2.1.png) -->
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="控制的乐趣"><span class="heading-counter">2.1.1.</span><span class="heading-label">控制的乐趣</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>岔一下话题，按照上文的抽象，如何让“控制”变得有趣？（这是一个很大的话题，也不局限于动作游戏。）</p>
+
+<p>事实上，纯粹的控制的乐趣是很有限的，以游戏感理论框架来解释的话，单纯的控制主要的感受是：即时控制 &amp; 润色（特殊物理感受）。</p>
+
+<!-- ![](/assets/img/books/game_feeling/2.png) -->
+
+<p>一种常见的，使得控制变得有趣的方式是，在设计上<strong>赋予控制这件事更多意义</strong>，也即，游戏感中理论的模拟空间的相关感受。（换个说法，这也是为什么动作游戏通常不是随意的控制就行，而是讲究观察画面获取信息，再进行控制。）</p>
+
+<blockquote>
+  <p>对于一些动作游戏的高手玩家，一个有意思的说法是，动作游戏就好像音乐游戏。这个说法非常有趣，音乐游戏对于时机和判定的显示十分简单，甚至可能对大多数人都会感到枯燥和重复，对于这些已经完全掌握了游戏规则（设计师的决策导向）和阅读画面信息（完美获取动画关键信息）的玩家而言，要做的事情事实上和音乐游戏，差不太多。</p>
+
+  <p>当然这对于动作游戏的大部分玩家都是不太成立的，大众玩家不一定知道决策的方式，也不一定能掌握好画面信息的阅读，更重要的是对动作游戏复杂动态交互的表现远没有厌烦。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="奖惩导向"><span class="heading-counter">2.1.2.</span><span class="heading-label">奖惩导向</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>赋予更多意义这个思路下，一个非常有效的做法是<strong>奖惩导向</strong>，听起来很单纯：在玩家做出正确的控制时奖励，做出错误控制时惩罚。奖惩导向最基本也最广泛的例子是血量。</p>
+
+<blockquote>
+  <p>沿着奖惩这个思路，我们还可以理解，<a href="https://archive.org/details/GDC2016Inaba">2016年GDC白金工作室的分享《无国界的动作游戏》</a>，中提到的，“动作游戏是一种根据情形选择行为的被动游戏”，“动作游戏就是设计考验场合与突破考验场合的方法”，这个设计思路。</p>
+
+  <p><a href="https://zhuanlan.zhihu.com/p/25481394">旗舰评论在谈论动作游戏的重构中也有段文字</a>，表达相同的概念：“狭义动作游戏的历史，就是想尽办法去设计玩家可以判读的资讯，然后在他们做出正确的操作时奖励他们，在他们做出错误操作时惩罚他们。”</p>
+
+  <p>事实上，奖惩思路或者说概念，是不局限于动作游戏的，早在<a href="https://archive.org/details/2004_GDC_-_03-24-2004_Sakurai_1230-130p_2-Channel">2004年GDC樱井政博的分享《游戏设计：风险与回报》</a>中，针对玩家行为的反馈设计就有所提及。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="设计方法论奖惩导向-下"><span class="heading-counter">2.2.</span><span class="heading-label">设计方法论：奖惩导向 下</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>本节简单聊下对于动作游戏，奖惩导向一些需要注意的东西。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/08-480.webp 480w, /assets/generated/img/act/2022/08-760.webp 760w, /assets/generated/img/act/2022/08-1140.webp 1140w, /assets/generated/img/act/2022/08-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/08.png" alt="" width="1890" height="271" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="奖惩设计的基本要求"><span class="heading-counter">2.2.1.</span><span class="heading-label">奖惩设计的基本要求</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p><strong>为了让奖惩导向生效，游戏会需要有一些最基础的要求</strong>，这里按照过程细分为以下三个环节：</p>
+
+<ol>
+  <li>获取信息：动作、画面清晰明确；位移、判定符合预期、经验</li>
+  <li>采取行动：玩家有应对各种情况的处理方式；玩家知道有这些方式存在，并知道如何选择</li>
+  <li>行动产生结果：结果呈现清晰明确，自然</li>
+</ol>
+
+<blockquote>
+  <p>这里可以带入一些没那么好的游戏作为反向例子理解，比如：当一些游戏的动画看不清，就会影响玩家对信息的获取，然后干扰玩家的决策，导致结果不符合预期，给玩家带来不好的体验。</p>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/09-480.webp 480w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/09.png" alt="" width="634" height="283" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="奖惩设计方向的取舍"><span class="heading-counter">2.2.2.</span><span class="heading-label">奖惩设计方向的取舍</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>在基本的奖惩导向方针以后，可能还会面临一个分配问题，是设计更多的考核场景？还是给玩家设计更多的选项？这里其实有一些选择的方式，比如：</p>
+
+<ol>
+  <li>场合少选项多（比如无双类游戏，主角性能较强角色较多，怪物考核较弱）</li>
+  <li>场合多选项少（比如近些年的魂like游戏，主角能力种类较少，而关卡和敌人丰富度和考核方式极多）</li>
+  <li>两者试图都多（也即，处于相对均衡的状态）。</li>
+</ol>
+
+<p><strong>不同的倾向也可以为不同的游戏带来不同的乐趣</strong>，也或者有人会说，这是一个更侧重于主角，或者更侧重于怪物，或者两者相对均衡的游戏。</p>
+
+<blockquote>
+  <p>这里我们没有说两者都非常重要，而是说两者相对均衡，是因为，一般不能要求玩家“左手画圆，同时右手画框”，如果俩都想要，那最好降低各自的难度，或者至少是逐步给玩家提高难度的。</p>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/10-480.webp 480w, /assets/generated/img/act/2022/10-760.webp 760w, /assets/generated/img/act/2022/10-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/10.png" alt="" width="1348" height="253" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="让奖惩设计长期有效"><span class="heading-counter">2.2.3.</span><span class="heading-label">让奖惩设计长期有效</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>奖惩导向会让玩家<strong>自然而然的去追求奖励收益最大化，如何让这个行为长期有效</strong>？这里有一些具体的思路参考：</p>
+
+<ol>
+  <li>避免追求奖励方式的同质化：比如上文说过场合、选项的配比，这里重点提下攻击类行为的命中产生的受击僵直，可以设计不同僵直的连招序列，或者不同控制方式：浮空、投技、眩晕等，或者不同怪物有着不同的僵直甚至是没有僵直（霸体）</li>
+  <li>让奖励的最大化有一定难度：比如操作难度，或者需要玩家自行学习探索才能发现</li>
+</ol>
+
+<blockquote>
+  <p>动作游戏的很多行为是即时响应、高耦合且多重状态变化的（比如攻击动作会伴随着位移），从这个角度来说，动作游戏天生就是有深度和门槛的，从设计者的角度来说，设计动作也是天生具有复杂度的。</p>
+</blockquote>
+
+<p>总结下，在某种程度上，奖惩导向是否有效和有趣，决定了一款动作游戏的耐玩性和乐趣度。</p>
+
+<blockquote>
+  <p>近些年来提到动作游戏经常会提起另一个词：“交互”，个人认为交互的内涵是非常丰富的，交互概念上更强调电子游戏的互动性，对比而言，<strong>奖惩判定</strong>像是某种静态瞬间的交互结果描述，<strong>奖惩导向</strong>更多是说玩家玩游戏时，选择交互方式的这个过程，这里不再进一步展开。</p>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="基于m-d-a理论的理解"><span class="heading-counter">3.</span><span class="heading-label">基于M-D-A理论的理解</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<!-- ![](/assets/img/act/2022/xmind-3.png) -->
+
+<p>收一收，我们继续把“玩家 控制 游戏角色 播放 动作。”这个底层逻辑，放入<strong>M机制-D动态-A美学</strong>理论框架中：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/03-2-480.webp 480w, /assets/generated/img/act/2022/03-2-760.webp 760w, /assets/generated/img/act/2022/03-2-1140.webp 1140w, /assets/generated/img/act/2022/03-2-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/03-2.jpg" alt="动作游戏核心体验" width="1747" height="493" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>这里给动作游戏的归纳了两种乐趣（不具备啥泛用性，可能也就在乐趣区分的时候有点用）</p>
+
+<ul>
+  <li>控制感：内涵较为丰富，1.符合直觉的控制 2.丰富的控制选项 3.丰富的考核场景（带来不同的正面应对意义）</li>
+  <li>打击感：聚焦于动作本身的美学呈现。</li>
+</ul>
+
+<p>我们可以尝试继续挖掘M-D-A三层：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/04-480.webp 480w, /assets/generated/img/act/2022/04-760.webp 760w, /assets/generated/img/act/2022/04-1140.webp 1140w, /assets/generated/img/act/2022/04-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/04.jpg" alt="MDA框架" width="1743" height="905" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="设计方法论底层机制"><span class="heading-counter">3.1.</span><span class="heading-label">设计方法论：底层机制</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>这部分主要是一些经典或者传统的动作游戏规则和对应的实现方式。比如：</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="状态机-逻辑轴-系统逻辑"><span class="heading-counter">3.1.1.</span><span class="heading-label">状态机 逻辑轴 系统逻辑</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>具体来说：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>项目</th>
+      <th>说明</th>
+      <th>举例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>状态机</td>
+      <td>决定有多少个动画状态：长度、表现、跳转等</td>
+      <td>一个Actor有idle walk show三个状态</td>
+    </tr>
+    <tr>
+      <td>逻辑轴</td>
+      <td>决定单个动画的框体变化、逻辑脚本执行、表现创建等</td>
+      <td>walk状态有受击框</td>
+    </tr>
+    <tr>
+      <td>系统规则</td>
+      <td>其余更上层的规则，比如数值积蓄</td>
+      <td>比如必须有3格能量才能释放（从idle跳转）show技能</td>
+    </tr>
+  </tbody>
+</table>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="一些比较典型的动作游戏的底层机制实现过程"><span class="heading-counter">3.1.2.</span><span class="heading-label">一些比较典型的动作游戏的底层机制实现过程</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>具体来说：</p>
+
+<ol>
+  <li>攻击命中进入受击动画：攻击框与受击框有交集……（后略）</li>
+  <li>投技的实现：投技框与受击框有交集……（后略）</li>
+</ol>
+
+<p>我们也会看到一些底层机制相对比较“模糊”的动作游戏（非刻板印象，但是欧美厂商的居多）：</p>
+
+<ul>
+  <li>比如动画多用融合导致动画切换、帧数感知不清晰；判定和移动方式引入较多辅助算法，导致性能感知弱</li>
+  <li>动作之间的打断规则不清晰，指令预输入规则不统一影响手感</li>
+</ul>
+
+<p>最近的经验来说，这些问题并不是决定性的缺陷，但是这些细节确实决定了一款动作游戏是否能达到殿堂级的“高度”。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="设计方法论微观循环"><span class="heading-counter">3.2.</span><span class="heading-label">设计方法论：微观循环</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>事实上，动作游戏的玩家不断在重复着：感知、认知、行动的循环过程。</p>
+
+<p>认知和行动是操控的一部分，很好理解；感知的话，前面已经提到了玩家阅读画面获取信息的重要性——本质上是为了利用奖惩机制让玩家的控制有能更多乐趣。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="针对感知的设计"><span class="heading-counter">3.2.1.</span><span class="heading-label">针对感知的设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>可以引入信息传递模型：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/05-480.webp 480w, /assets/generated/img/act/2022/05-760.webp 760w, /assets/generated/img/act/2022/05-1140.webp 1140w, /assets/generated/img/act/2022/05-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/05.jpg" alt="" width="1782" height="482" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>针对发送、噪声、接收等环节都可以对应上一些具体的设计，这里不再具体举例。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="针对认知的设计"><span class="heading-counter">3.2.2.</span><span class="heading-label">针对认知的设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>这部分，理论上，玩家的认知决策规则，应该与设计师设计的规则维持一致（为了让“奖惩”有效且持续有效）。</p>
+
+<p>这里补充一些典型的认知到的行为的目标，和目标可能侧重的层次，如下：</p>
+
+<ol>
+  <li>【感知】精准交互类：配合敌方动作判定，释放动作，一般可以产生额外效果，比如当身/返技/弹反/防反/GP等等</li>
+  <li>【认知】抉：结合当前情景，多为敌我位置、状态，从可选行为中选择最优行为</li>
+  <li>【认知】量表计算类：显性或者隐性地统计攻击等造成的计数量表增加或者减少，并合理利用计数满额后的效果比如产生硬直等</li>
+  <li>【行动】移动-回避类：使用某些手段远离某个区域——多为攻击区域</li>
+  <li>【行动】移动-进攻类：精确地调整人物位置、朝向等，使得下次行为刚好命中目标或目标特定部位</li>
+  <li>【行动】连招/Combo：连续完成一系列指令输入，通常控制在僵直时窗口内，输入方式可能会需要摇杆组合按键——搓招</li>
+</ol>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="针对行动的设计"><span class="heading-counter">3.2.3.</span><span class="heading-label">针对行动的设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/05-1-480.webp 480w, /assets/generated/img/act/2022/05-1-760.webp 760w, /assets/generated/img/act/2022/05-1-1140.webp 1140w, /assets/generated/img/act/2022/05-1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/05-1.jpg" alt="" width="1782" height="243" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>这部分主要是玩家控制的方式，事实上玩家也有着屏幕、键盘鼠标、手柄等多种输入设备，各自也有一些经典输入模式设计。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="注意事项"><span class="heading-counter">3.2.4.</span><span class="heading-label">注意事项</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>再次重申，一般不能要求玩家“左手画圆，同时右手画框”，尤其是上面提到了多个层次的设计内容，如果你既要要求玩家精准阅读信息来及时操作，还要要求复杂输入高精准瞄准，那多半是太为难玩家了，倒不是说不能为难玩家，只是，“同时要求玩家做多件事情”是件困难的事情，经常被设计师忘记，以致于玩家的谩骂。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="设计方法论打击感"><span class="heading-counter">3.3.</span><span class="heading-label">设计方法论：打击感</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>这个话题太大了，这里不额外展开，典型打击感有：</p>
+
+<ul>
+  <li>攻击动作：开始、攻击、结束</li>
+  <li>攻击特效：（略）</li>
+  <li>受击动作：（略）</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="从微观到宏观"><span class="heading-counter">4.</span><span class="heading-label">从微观到宏观</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<!-- ![](/assets/img/act/2022/xmind-4.png) -->
+
+<p>前面讨论的更多是微观体验的切片，玩家玩到的游戏是一个具体的内容序列。就像离散的画面组成了电影；离散的动作组成了角色，离散的角色（作为敌人而言）组成了关卡，进而构成了游戏。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="内容构建理论和工具"><span class="heading-counter">4.1.</span><span class="heading-label">内容构建理论和工具</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="体验蓝图与玩家阶段"><span class="heading-counter">4.1.1.</span><span class="heading-label">体验蓝图与玩家阶段</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>在具体的组成方式上，也是相当具有技巧的（比如，如何控制玩家在心流区间），一种常见的，用于指导构建复杂体验的方式，是体验蓝图，如下图：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/06-480.webp 480w, /assets/generated/img/act/2022/06-760.webp 760w, /assets/generated/img/act/2022/06-1140.webp 1140w, /assets/generated/img/act/2022/06-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/06.jpg" alt="宏观设计" width="1920" height="962" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="叙事与英雄之旅"><span class="heading-counter">4.1.2.</span><span class="heading-label">叙事与英雄之旅</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<p>考虑到游戏是一个整体，主角怪物都离不开关卡和叙事——对于PVE游戏而言尤甚，叙事或者说剧作，已经是一门相当有学问和知识经验积累的单独学科，有很多经典的结构，比如“英雄之旅”。</p>
+
+<p>让动作设计贴合这些结构，会让整体的呈现，更容易被玩家接受，也能给玩家留下更强的印象。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="简要总结"><span class="heading-counter">5.</span><span class="heading-label">简要总结</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>一图流，如图：</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/07-480.webp 480w, /assets/generated/img/act/2022/07-760.webp 760w, /assets/generated/img/act/2022/07-1140.webp 1140w, /assets/generated/img/act/2022/07-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/07.jpg" alt="简要总结" width="1818" height="687" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2025-09-20 - jskyzero - add 反馈（Feedback）
+2025-08-05 - jskyzero - 📝 update 动作游戏的本质
+2025-08-05 - jskyzero - 📝 update title
+2025-08-04 - jskyzero - update 动作游戏的本质
+2025-08-04 - jskyzero - update 动作游戏的本质
+2025-07-24 - jskyzero - update 动作游戏的本质
+2025-03-11 - jskyzero - 📝 add 游戏设计：风险与回报
+2025-01-29 - jskyzero - 📝 update 认知目标
+2025-01-29 - jskyzero - 📝 修改措辞
+2024-12-27 - jskyzero - 📝 修复错别字
+2024-12-27 - jskyzero - 📝 update 动作游戏的本质
+2024-10-27 - jskyzero - 🎨 add 动作游戏设计
+2024-09-20 - jskyzero - 📝 update structure
+2024-09-09 - jskyzero - 📝 fix 错别字
+2024-09-07 - jskyzero - 📝 add xmind
+2024-09-03 - jskyzero - 📝 update 奖惩导向
+2024-09-02 - jskyzero - 📝 update 动作游戏的本质
+2024-05-14 - jskyzero - 📝 修措辞
+2024-05-14 - jskyzero - 📝 add 动作游戏的本质 &amp; update structure
+
+<em>（本文编写于2024年5月，最后修改于2025年9月，共修改13次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2024/05/14/ActionGameDesign/';
+this.page.identifier = 'https://design.jskyzero.com/2024/05/14/ActionGameDesign/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</a><ul><li><a href="#广义和狭义的动作游戏">广义和狭义的动作游戏</a><ul><li><a href="#动作游戏的分类">动作游戏的分类</a><ul><li><a href="#广义动作游戏">广义动作游戏</a></li><li><a href="#狭义日式动作游戏">狭义（日式）动作游戏</a></li><li><a href="#我们所讨论的是">我们所讨论的是</a></li></ul></li></ul></li><li><a href="#动作游戏的哲学与本质">动作游戏的哲学与本质</a><ul><li><a href="#设计方法论奖惩导向-上">设计方法论：奖惩导向 上</a><ul><li><a href="#控制的乐趣">控制的乐趣</a></li><li><a href="#奖惩导向">奖惩导向</a></li></ul></li><li><a href="#设计方法论奖惩导向-下">设计方法论：奖惩导向 下</a><ul><li><a href="#奖惩设计的基本要求">奖惩设计的基本要求</a></li><li><a href="#奖惩设计方向的取舍">奖惩设计方向的取舍</a></li><li><a href="#让奖惩设计长期有效">让奖惩设计长期有效</a></li></ul></li></ul></li><li><a href="#基于m-d-a理论的理解">基于M-D-A理论的理解</a><ul><li><a href="#设计方法论底层机制">设计方法论：底层机制</a><ul><li><a href="#状态机-逻辑轴-系统逻辑">状态机 逻辑轴 系统逻辑</a></li><li><a href="#一些比较典型的动作游戏的底层机制实现过程">一些比较典型的动作游戏的底层机制实现过程</a></li></ul></li><li><a href="#设计方法论微观循环">设计方法论：微观循环</a><ul><li><a href="#针对感知的设计">针对感知的设计</a></li><li><a href="#针对认知的设计">针对认知的设计</a></li><li><a href="#针对行动的设计">针对行动的设计</a></li><li><a href="#注意事项">注意事项</a></li></ul></li><li><a href="#设计方法论打击感">设计方法论：打击感</a></li></ul></li><li><a href="#从微观到宏观">从微观到宏观</a><ul><li><a href="#内容构建理论和工具">内容构建理论和工具</a><ul><li><a href="#体验蓝图与玩家阶段">体验蓝图与玩家阶段</a></li><li><a href="#叙事与英雄之旅">叙事与英雄之旅</a></li></ul></li></ul></li><li><a href="#简要总结">简要总结</a></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

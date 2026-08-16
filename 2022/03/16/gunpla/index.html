@@ -1,0 +1,1653 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>杂谈：GUNPLA相关 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="杂谈：GUNPLA相关">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="GUNPLA相关">
+<meta property="og:description" content="GUNPLA相关">
+<link rel="canonical" href="https://design.jskyzero.com/2022/03/16/gunpla/">
+<meta property="og:url" content="https://design.jskyzero.com/2022/03/16/gunpla/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-03-16T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="杂谈：GUNPLA相关">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-16T00:00:00+00:00","datePublished":"2022-03-16T00:00:00+00:00","description":"GUNPLA相关","headline":"杂谈：GUNPLA相关","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/03/16/gunpla/"},"url":"https://design.jskyzero.com/2022/03/16/gunpla/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<h1 id="gunpla相关"><span class="heading-label">GUNPLA相关</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/乱七八糟-blue.svg?style=flat" alt="乱七八糟"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2022/03/16-brightgreen.svg?style=flat" alt="日期 2022/03/16"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#gunpla相关">GUNPLA相关</a><ul><li><a href="#在下所拥有的模型">在下所拥有的模型</a></li><li><a href="#高达机型设计赏析">高达机型设计赏析</a></li><li><a href="#zgmf-x10a-自由高达">ZGMF-X10A 自由高达</a></li><li><a href="#zgmf-x20a-强袭自由高达">ZGMF-X20A 强袭自由高达</a></li><li><a href="#rx-78-2-元祖高达">RX-78-2 元祖高达</a></li><li><a href="#rx-93-ν高达">RX-93 ν高达</a></li><li><a href="#gn-0000gnr-010-00-raiser">GN-0000+GNR-010 00 Raiser</a></li><li><a href="#xxxg-00w0-飞翼零式高达">XXXG-00W0 飞翼零式高达</a></li><li><a href="#附录玩具厂商份额--ip价值">附录：玩具厂商份额 &amp; IP价值</a></li><li><a href="#附录审美的变化">附录：审美的变化</a></li><li><a href="#附录时间线">附录：时间线</a></li></ul></li></ul></nav></div>
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="在下所拥有的模型"><span class="heading-counter">1.</span><span class="heading-label">在下所拥有的模型</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>截止至目前，在下所拥有的模型</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>机型</th>
+      <th>数量</th>
+      <th>评价</th>
+      <th>堆积</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RG 普通版 08 RX-178 高达Mk-Ⅱ 奥古配色</td>
+      <td>2</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 10 MSZ-006 Z高达</td>
+      <td>2</td>
+      <td>❌</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 11 ZGMF-X42S 命运高达</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 17 XXXG-00W0 飞翼高达零式 EW</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 18 GN-0000+GNR-010 00 RAISER</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 29 MSN-04 沙扎比</td>
+      <td>3</td>
+      <td>✅</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 31 XM-X1 海盗高达X1</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 32 RX-93 ν高达</td>
+      <td>6</td>
+      <td>✅</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 33 ZGMF-X56S/α 威力型脉冲高达</td>
+      <td>2</td>
+      <td>✅</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 34 MSN-02 吉翁号</td>
+      <td>1</td>
+      <td>✅</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 35 XXXG-01W 飞翼高达</td>
+      <td>3</td>
+      <td>✅</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 36 RX-93-ν2 Hi-ν高达</td>
+      <td>6</td>
+      <td>✅</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 37 GF13-017NJⅡ 神高达</td>
+      <td>4</td>
+      <td>✅</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 38 OZ-13MS 艾比安高达</td>
+      <td>3</td>
+      <td>✅</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 40 RX-78-2 高达 Ver.2.0</td>
+      <td>2</td>
+      <td>✅</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 42 闪光高达</td>
+      <td>2</td>
+      <td>✅</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>RG 普通版 43 飞翼高达零式</td>
+      <td>1</td>
+      <td>✅</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>RG 其他限定版 RX-93ff ν高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>RG 其他限定版 自由高达 Ver.GCP</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>RG EVA系列 EVA 初号机</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MSM-07S 指挥官型魔蟹[夏亚·阿兹纳布尔专用机]</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 RX-78GP03S 高达GP03S</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG82 高达Mk-Ⅱ2.0版</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG98 夏亚专用扎古Ⅱ 2.0版</td>
+      <td>3</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG99 夏亚专用勇士 2.0版</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG100 倒A高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG120 老虎2.0</td>
+      <td>2</td>
+      <td>✅</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG128 GN-X</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG129 红色异端高达 改</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG137 EW死神高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG143 飞翼高达EW</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG162 RX-93 ν高达 Ver.Ka</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG163 托鲁基斯</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG168 空战型强袭高达 Ver.RM</td>
+      <td>2</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG171 RX-78-2 高达 Ver. 3.0</td>
+      <td>2</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG174 MSN-04 沙扎比 Ver.Ka</td>
+      <td>1</td>
+      <td>✅</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG185 百式 Ver.2.0</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG188 RX-78-02 高达 Ver.GTO</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG190 自由高达 Ver.2.0</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG196 MSZ-010 ZZ高达 Ver.KA</td>
+      <td>2</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG201 高达F91 Ver.2.0</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG202 杰刚</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG205 力天使高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG210 高达·巴巴托斯</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 MG213 飞翼零式高达EW Ver.Ka</td>
+      <td>3</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 Z高达 Ver.Ka</td>
+      <td>2</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 叙述高达 C装备 Ver.Ka</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 普通版 高达维达尔</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 网络限定版 吉姆加农(RED HEAD) 查布罗防卫队版</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 网络限定版 MSA-003 雷姆 独角兽配色Ver.</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 其他限定版 自由高达Ver. 2.0(典藏Ver.)</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MG 其他限定版 铁球Ver.Ka[机械透明版]</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG 其他限定版 百式 Ver.2.0 [机械透明版]</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>FM 普通版 风灵高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MGSD 普通版 风灵高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MGSD 普通版 自由高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MGSD 普通版 高达巴巴托斯</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MGSD 普通版 飞翼高达零式EW</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MGSD 普通版 命运高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MG MGEX 强袭自由高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>PG PGU RX-78-2 高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>MB系列 普通版 自由高达 CONCEPT 2</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>ROBOT魂 限定版 ZGMF-X10A 自由高达 Ver.GCP</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MR魂 普通版 红高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>MR魂 普通版 GQuuuuuuX</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h56 海兹尔改</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h78 龟霸</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h73 贾普兰 TR-5[Hrairoo]</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h89 京宝梵</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h151 MS-06R-1A 黑色三连星扎古II</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h163 高达Double X</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h167 F91高达</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h171 空装强袭高达</td>
+      <td>3</td>
+      <td>✅</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h177 倒A高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h189 V2 Assault-Buster高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h190 RX-77-2 钢加农 (新生版)</td>
+      <td>2</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h191 RX-78-2 高达 (新生版)</td>
+      <td>4</td>
+      <td>✅</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h193 高达Mk-II[奥古] (新生版)</td>
+      <td>3</td>
+      <td>✅</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h194 高达Mk-II(新生版)</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h195 卡碧尼（新生版）</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h196 MS-07B 老虎 （新生版）</td>
+      <td>2</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h197 强人（新生版）</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h200 百式（新生版）</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h201 强袭自由高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h202 陆战型吉姆</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h203 Z高达（GEP版）</td>
+      <td>4</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h204 RMS-154 巴扎姆</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h210 陆战型高达 (新版)</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h217 新安洲原石（NT.Ver）</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h219 迪杰</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h222 叙述高达 C装备</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h224 命运高达</td>
+      <td>4</td>
+      <td>✅</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h231 无限正义高达</td>
+      <td>3</td>
+      <td>✅</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h234 夏亚专用扎古II (新版)</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h237 短剑L</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h239 死神高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h243 飞升自由高达</td>
+      <td>6</td>
+      <td>✅</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h244 不朽正义高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h245 黑骑士小队 毁灭</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h250 非凡强袭自由高达</td>
+      <td>3</td>
+      <td>&nbsp;</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h251 无限正义高达二式</td>
+      <td>2</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h252 决斗迅雷高达</td>
+      <td>2</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h253 雷霆暴风高达</td>
+      <td>2</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h254 扎古II 索拉里机 (复仇的安魂曲)</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h255 高达EX (复仇的安魂曲)</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h258 命运高达 SpecII&amp;宙斯魅影</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h259 波里诺克·萨曼</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGUC 普通版 h262 卡尔斯J</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGCE 普通版 h263 传说高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HGGTO 普通版 RX-78-02 高达(GTO版)</td>
+      <td>5</td>
+      <td>✅</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>HGGTO 普通版 MS-06S 夏亚专用扎古II 红色彗星Ver.</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HGGTO 普通版 MS-06C-6/R6 绿扎古2 C6/R6形态</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>高达AGE HG AGE 普通版 01 高达AGE-1 标准型</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>高达AGE HG AGE 普通版 10 高达AGE-2 标准型</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>高达AGE HG AGE 普通版 27 高达AGE-FX</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>高达铁血拼装模型 HG IBO 27 高达维达尔</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>高达水星魔女 HG TWFM 01 XGF-02 魔灵高达(高达Lfrith)</td>
+      <td>2</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>高达水星魔女 HG TWFM 03 XVX-016 风灵高达(高达Aerial)</td>
+      <td>4</td>
+      <td>✅</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>高达水星魔女 HG TWFM 08 MD-0064 达利尔巴尔德</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>高达水星魔女 HG TWFM 19 XVX-016RN 风灵高达(改修型)</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>高达水星魔女 HG TWFM 25 战骑高达(高达Schwarzette)</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>高达水星魔女 HG TWFM 26 异灵高达(高达Calibarn)</td>
+      <td>3</td>
+      <td>✅</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>HG RIG 普通版 高达G-self(完美背包装备型)</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HG MSGG 普通版 01 GQuuuuuuX (吉夸克斯/夸克斯高达)</td>
+      <td>3</td>
+      <td>&nbsp;</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>HG MSGG 普通版 03 格鲁古古 菅井机(GQ)</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HG MSGG 普通版 04 红高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HG MSGG 普通版 06 轻加农</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HG MSGG 普通版 07 泽维尔专用强人(白瓷装备)</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HG MSGG 普通版 08 GFreD</td>
+      <td>3</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>HG MSGG 普通版 09 力克･大魔 盖亚机/奥尔迪加机 (GQ)</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>HG MSGG 普通版 11 白高达</td>
+      <td>2</td>
+      <td>&nbsp;</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>钢普拉Build综合 HGBF 009 星际创制突击高达 帕拉夫斯基之翼</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>钢普拉Build综合 HGBF 017 新生凤凰高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>钢普拉Build综合 HGBF 040 闪电Z高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>钢普拉Build综合 HGBF 043 神木燃烧高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>钢普拉Build综合 HGBF 050 瞬变高达冰川</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>钢普拉Build综合 HGGBM 04 神燃焰高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>钢普拉Build综合 HGGBM 10 00量子高达指挥官 沙漠型 ​​​</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>GU成品系列 普通版 GU-32 地狱死神高达 EW</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>超时空要塞拼装 HG 1/100系列 雨燕II(麦克斯米利安·吉纳斯机)</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>EG 高达系列 ν高达</td>
+      <td>4</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>EG 高达系列 强袭高达</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>EG 高达系列 RX-78-2高达(全武器套装)</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>EG 高达系列 RX-78 高达 上色用模型</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>SDCS 普通版 异灵高达</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>万代综合拼装模型 机甲战记龙骑 HG 龙骑1号机 Rifter1装备型</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30 MINUTES MISSIONS Espossito eEXM-30 Espossito α</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30 MINUTES MISSIONS Forestieri eEXM-S01U Forestieri 01</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30 MINUTES MISSIONS Revernova bEXM-28 Revernova[绿色]</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30 MINUTES MISSIONS Spinatio EXM-A9n Spinatio(忍者式样)</td>
+      <td>1</td>
+      <td>❌</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30 MINUTES MISSIONS Spinatio EXM-A9k Spinatio(骑士样式)</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30MF 进阶职业套装 利贝尔神圣骑士</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30MF 进阶职业套装 利贝尔主教</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30MF 罗萨剑士</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30MM 装甲核心 RaD CC-2000 ORBITER nightfall</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30MM 装甲核心 SCHNEIDER NACHTREIHER/40E Steel Haze</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30MM 装甲核心 RaD CC-2000 ORBITER</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30MM 装甲核心 BALAM INDUSTRIES BD-011 MELANDER Liger Tail</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30MM 装甲核心 BALAM INDUSTRIES BD-011 MELANDER</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30MM 装甲核心 RaD CC-3000 WRECKER Milk Tooth</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30MM 装甲核心 ARQUEBUS ADD VE-40A Open Faith</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>30MM 装甲核心 武器套装02</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>合计共：<span id="result">计算中……</span>台，堆积共<span id="result2">计算中……</span>台，堆积比例<span id="result3">计算中……</span>。</p>
+
+<script>
+  // 结果节点
+  const result = document.getElementById("result");
+  const result2 = document.getElementById("result2");
+  const result3 = document.getElementById("result3");
+
+
+  // 表格
+  const table = result.parentElement.previousElementSibling;
+  const rows = table.rows;
+
+  let sumVal = 0;
+  let sumVal2 = 0;
+
+  // 从 1 开始跳过表头
+  for (let i = 1; i < rows.length; i++) {
+    const cells = rows[i].cells;
+
+    const v1 = Number(cells[1]?.innerText);
+    const v2 = Number(cells[3]?.innerText);
+
+    if (!Number.isNaN(v1)) sumVal += v1;
+
+    if (!Number.isNaN(v2)) {
+      sumVal2 += v2;
+
+      if (v2 > 0) {
+        console.log(cells[0].innerText,"+"+v2,sumVal2);
+      }
+    }
+  }
+
+  result.textContent = sumVal;
+  result2.textContent = sumVal2;
+  result3.textContent = sumVal
+  ? ((sumVal2 / sumVal) * 100).toFixed(1) + '%'
+  : '0.0%';
+</script>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="高达机型设计赏析"><span class="heading-counter">2.</span><span class="heading-label">高达机型设计赏析</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>《高达系列》为富野由悠季自1979年所制作机动战士高达一作所派生出来的一连串续作、外传及其他系列的总称。本身品牌市值据估计逾500亿日元。</p>
+
+<p>最近在沉迷高达玩具——又被称为GUNPLA，本文打算分析一下其中帅气高达的设计特征。</p>
+
+<p>注：GUNPLA，在动画GUNDAM系列剧中登场的兵器被模型化的塑胶模型系列。</p>
+
+<!-- 色卡style -->
+<style>
+div.color {
+    width: 20px;
+    height: 10px;
+    border: 1px  solid white;
+    display: inline-block;
+}
+</style>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="zgmf-x10a-自由高达"><span class="heading-counter">3.</span><span class="heading-label">ZGMF-X10A 自由高达</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<div class="color" style="background-color:rgb(223, 223, 238);"></div>
+<div class="color" style="background-color:rgb(76, 74, 179);"></div>
+<div class="color" style="background-color:rgb(32, 31, 36);"></div>
+
+<p>基拉·大和在强袭高达爆炸后从拉克丝手处接过的机体，四倍于强袭的出力让基拉直接化身成为人棍王（指把敌方杂兵削成人棍）。SEED系的“偶像剧”标签，也许部分也来自于主角机实力渲染强得过分。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>部分</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>核心视觉</td>
+      <td>高机动力：5对机翼与肩甲、腿部出气口</td>
+    </tr>
+    <tr>
+      <td>核心视觉</td>
+      <td>五彩大炮：机翼隐藏的与裙甲展开的大炮</td>
+    </tr>
+    <tr>
+      <td>核心视觉</td>
+      <td>人棍王：指自由飞过，光剑已经把敌机削成人棍</td>
+    </tr>
+    <tr>
+      <td>翅膀</td>
+      <td>5对机翼+隐藏“鲸鱼”离子加农炮</td>
+    </tr>
+    <tr>
+      <td>裙甲</td>
+      <td>三段式接口可以展开“旗鱼”电磁炮</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><a href="http://dalong.net/reviews/rg/rg05/rg05_p.htm">RG ZGMF-X10A Freedom Gundam</a></li>
+  <li><a href="http://dalong.net/reviews/mg/m192/m192_p.htm">MG ZGMF-X10A Freedom Gundam Ver.2.0</a></li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="zgmf-x20a-强袭自由高达"><span class="heading-counter">4.</span><span class="heading-label">ZGMF-X20A 强袭自由高达</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<div class="color" style="background-color:rgb(223, 223, 238);"></div>
+<div class="color" style="background-color:rgb(76, 74, 179);"></div>
+<div class="color" style="background-color:rgb(32, 31, 36);"></div>
+<div class="color" style="background-color:rgb(135, 127, 84);"></div>
+
+<p>自由被小鸟打爆以后的基拉新机体，金色骨架，追加浮游炮，配合原版五彩大炮+光翼，天神降临。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>部分</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>核心视觉</td>
+      <td>金色骨架：内部骨架的PS装甲相转移为金色</td>
+    </tr>
+    <tr>
+      <td>核心视觉</td>
+      <td>光束翼+浮游炮：4对超级龙骑兵机动兵装翼</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><a href="http://dalong.net/reviews/rg/rg14/rg14_p.htm">RG ZGMF-X20A Strike Freedom Gundam</a></li>
+</ul>
+
+<blockquote>
+  <p>SEED系列其余机体</p>
+
+  <ol>
+    <li>红色系列的正义与搭载大量光束刃的无限正义。</li>
+    <li>幻影光翼的命运高达。</li>
+    <li>模型大放异彩的异端系列（红异端大剑、蓝异端光刃、金异端背包）</li>
+  </ol>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="rx-78-2-元祖高达"><span class="heading-counter">5.</span><span class="heading-label">RX-78-2 元祖高达</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<div class="color" style="background-color:rgb(239, 250, 253);"></div>
+<div class="color" style="background-color:rgb(180, 51, 59);"></div>
+<div class="color" style="background-color:rgb(56, 96, 176);"></div>
+
+<p>阿姆罗·雷驾驶的初代高达，相关作品太老就没有看过了，作为初代高达，同时也可能是最广为人知的高达，其朴素的外观，经常会让人看完各种浮夸装备后感慨“返璞归真”。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>部分</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>核心视觉</td>
+      <td>经典三件套：枪、盾、光束剑</td>
+    </tr>
+    <tr>
+      <td>核心视觉</td>
+      <td>经典三原色：白 蓝 红</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>[HG RX-78 Gundam [Beyond Global]](<a href="http://dalong.net/)，需要手动选择HG页签">http://dalong.net/)，需要手动选择HG页签</a></li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="rx-93-ν高达"><span class="heading-counter">6.</span><span class="heading-label">RX-93 ν高达</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<div class="color" style="background-color:rgb(196, 201, 210);"></div>
+<div class="color" style="background-color:rgb(41, 53, 62);"></div>
+<div class="color" style="background-color:rgb(189, 133, 62);"></div>
+<div class="color" style="background-color:rgb(158, 56, 61);"></div>
+
+<p>UC最高潮《逆袭的夏亚》中，阿姆罗·雷的王牌座驾，人气投票绝对王者机型之一。其模玩设计往往代表万代最跨时代的产品。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>部分</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>核心视觉</td>
+      <td>配色：白蓝为主，蓝色偏暗，黄红点缀。</td>
+    </tr>
+    <tr>
+      <td>核心视觉</td>
+      <td>浮游炮：非对称设计，陈列具空间科技感。</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><a href="http://dalong.net/reviews/mg/m162/m162_p.htm">MG RX-93 Nu Gundam Ver. Ka</a></li>
+  <li><a href="http://dalong.net/">RG RX-93 Nu Gundam</a>，需要手动选择RG页签</li>
+</ul>
+
+<blockquote>
+  <p>UC宇宙系列其余机体</p>
+
+  <ol>
+    <li>继承改进元祖的朴素耐看系MK2</li>
+    <li>变形的zeta与后继的的double zeta</li>
+    <li>平行小说中的蓝色机体hi-ν高达</li>
+    <li>夏亚一众红色机体，最为出名的是沙扎比（夜莺）</li>
+    <li>强化精神骨架与爆甲的独角兽等。</li>
+    <li>后继的重型状态柯西与涅罗佩妮</li>
+  </ol>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="gn-0000gnr-010-00-raiser"><span class="heading-counter">7.</span><span class="heading-label">GN-0000+GNR-010 00 Raiser</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<div class="color" style="background-color:rgb(73, 91, 163);"></div>
+<div class="color" style="background-color:rgb(182, 183, 201);"></div>
+<div class="color" style="background-color:rgb(145, 42, 59);"></div>
+
+<p>00系列的核心特征是太阳炉。由于相关动画没有看完，这里只概述相关形象。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>部分</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>核心视觉</td>
+      <td>00系列太阳炉和粒子。</td>
+    </tr>
+    <tr>
+      <td>核心视觉</td>
+      <td>由支援机合体来的标志性肩甲。</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>00系列其余机体</p>
+
+  <ol>
+    <li>“白板”能天使，绿色护盾狙击力天使，黄色飞机主天使</li>
+    <li>雪橇、肩甲强化的雪崩突进型能天使高达</li>
+    <li>多把近战武器的七剑型00高达</li>
+  </ol>
+</blockquote>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="xxxg-00w0-飞翼零式高达"><span class="heading-counter">8.</span><span class="heading-label">XXXG-00W0 飞翼零式高达</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<div class="color" style="background-color:rgb(229, 240, 240);"></div>
+<div class="color" style="background-color:rgb(23, 36, 76);"></div>
+
+<p>羽翼与机械的完美融合。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>部分</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>核心视觉</td>
+      <td>宛如天使的羽翼翅膀</td>
+    </tr>
+    <tr>
+      <td>核心视觉</td>
+      <td>超高出力的双手长管枪</td>
+    </tr>
+  </tbody>
+</table>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="附录玩具厂商份额--ip价值"><span class="heading-counter">9.</span><span class="heading-label">附录：玩具厂商份额 &amp; IP价值</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li><a href="https://www.statista.com/statistics/241241/revenue-of-major-toy-companies-worldwide/">21年收入</a>，乐高80亿刀、万代70亿刀</li>
+</ul>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/others/gunpla/ToyMarket-480.webp 480w, /assets/generated/img/others/gunpla/ToyMarket-760.webp 760w, /assets/generated/img/others/gunpla/ToyMarket-1140.webp 1140w, /assets/generated/img/others/gunpla/ToyMarket-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/others/gunpla/ToyMarket.jpg" alt="" width="2150" height="1154" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+
+<ul>
+  <li>从<a href="https://www.sohu.com/a/456055946_120046429">WikiMili 21年IP收入排名</a>的表格可以看到，高达的衍生品是总收入是237亿刀</li>
+</ul>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/others/gunpla/IPValue-480.webp 480w, /assets/generated/img/others/gunpla/IPValue-760.webp 760w, /assets/generated/img/others/gunpla/IPValue-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/others/gunpla/IPValue.jpg" alt="" width="1220" height="1169" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="附录审美的变化"><span class="heading-counter">10.</span><span class="heading-label">附录：审美的变化</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+<p><code class="language-plaintext highlighter-rouge">2023/10/01</code></p>
+
+<p>随着时间的推移，我对模型的「审美」确实发生了一些变化。</p>
+
+<p>最大的体现是，一开始我会喜欢一些「大翅膀」机体，只关注静态的美。</p>
+
+<p>渐渐地就发现，这种机体甚至连自立都做不到，把玩起来更是灾难。</p>
+
+<p>现在就会更喜欢一些扎实、有机械美感的机体，但是遗憾的，已经好久没有购买过新机体了。</p>
+
+<p>一方面万代新品出的很慢，另一方面存量模型也很难再找到符合自己喜好和价位要求的产品。</p>
+
+<p>同时，也面临空间的问题，于是开始了第二次模型整理计划，下面汇总有标注类似<code class="language-plaintext highlighter-rouge">1~&gt;0</code>或者<code class="language-plaintext highlighter-rouge">0</code>的就是在调整中被消灭掉的模型……</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="附录时间线"><span class="heading-counter">11.</span><span class="heading-label">附录：时间线</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>TV 动画时间线</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>动画名</th>
+      <th>主角机</th>
+      <th>时间</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>无印</td>
+      <td>元祖高达</td>
+      <td>1979</td>
+      <td>UC起点</td>
+    </tr>
+    <tr>
+      <td>Zeta</td>
+      <td>MK2 Z</td>
+      <td>1985</td>
+      <td>UC续</td>
+    </tr>
+    <tr>
+      <td>Double Zeta</td>
+      <td>Z ZZ</td>
+      <td>1986</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Victory</td>
+      <td>V V2</td>
+      <td>1993</td>
+      <td>UC衰退</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>神高达</td>
+      <td>1994</td>
+      <td>平成三部曲</td>
+    </tr>
+    <tr>
+      <td>W</td>
+      <td>飞翼零式</td>
+      <td>1995</td>
+      <td>平成三部曲</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>X DX</td>
+      <td>1996</td>
+      <td>平成三部曲</td>
+    </tr>
+    <tr>
+      <td>Turn A</td>
+      <td>月光</td>
+      <td>1999</td>
+      <td>二十周年</td>
+    </tr>
+    <tr>
+      <td>SEED</td>
+      <td>Freedom</td>
+      <td>2002</td>
+      <td>入坑作</td>
+    </tr>
+    <tr>
+      <td>SEED Destiny</td>
+      <td>Destiny</td>
+      <td>2005</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>O &amp;&amp; OO</td>
+      <td>O &amp;&amp; OO</td>
+      <td>2007</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>AGE</td>
+      <td>AGE</td>
+      <td>2011</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>创战者</td>
+      <td>创战者</td>
+      <td>2013</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>铁血的奥尔芬斯</td>
+      <td>巴巴托斯</td>
+      <td>2015</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>……</td>
+      <td>……</td>
+      <td>……</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>UC纪元的一些高达作品，额外做一个说明。</p>
+
+<ul>
+  <li>无印：殖民地造反，造反后被篡权，地球与之战斗。</li>
+  <li>Z：地球左派右派内战。</li>
+  <li>ZZ：内战损耗太多，殖民地反干地球。</li>
+  <li>逆袭的夏亚：殖民地妄图摧毁地球。</li>
+  <li>口袋里的战争：小孩子介入到间谍的作战。</li>
+  <li>第80MS小队：一只小队与原住民、敌人之间的爱情与战争。</li>
+  <li>UC：精神感应框架与UC起点。</li>
+  <li>闪光的哈撒韦：匿名反政府组织。</li>
+  <li>F91：宇宙巴比伦建国战争，衔接后续海盗系列。</li>
+  <li>V：赞斯卡尔战争</li>
+</ul>
+
+<p>看了以后发现最初入坑的SEED的许多经典桥段都是从UC宇宙中抄袭的，完蛋。</p>
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2026-07-24 - jskyzero - update gunpla
+2026-06-10 - jskyzero - update gunpla
+2026-06-10 - jskyzero - update gunpla
+2026-06-10 - jskyzero - update gunpla
+2026-06-07 - jskyzero - update GUNPLA
+2026-06-05 - jskyzero - update gunpla &amp; resume
+2026-06-04 - jskyzero - update gunpla
+2026-05-04 - jskyzero - update gunpla
+2026-04-13 - jskyzero - add gunpla
+2026-04-12 - jskyzero - update gunpla
+2026-04-12 - jskyzero - update gunpla
+2026-04-10 - jskyzero - update gunpla
+2026-03-22 - jskyzero - update gunpla
+2026-03-14 - jskyzero - update gunpla
+2026-03-01 - jskyzero - 📝 update gunpla
+2026-02-19 - jskyzero - 📝 fix error
+2026-02-19 - jskyzero - 📝 update gunpla
+2026-02-14 - jskyzero - 📝 update gunpla
+2026-02-01 - jskyzero - 📝 update gunpla
+2026-02-01 - jskyzero - 📝 update gunpla
+...
+
+<em>（本文编写于2026年2月，最后修改于2026年7月，共修改39次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2022/03/16/gunpla/';
+this.page.identifier = 'https://design.jskyzero.com/2022/03/16/gunpla/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#gunpla相关">GUNPLA相关</a><ul><li><a href="#在下所拥有的模型">在下所拥有的模型</a></li><li><a href="#高达机型设计赏析">高达机型设计赏析</a></li><li><a href="#zgmf-x10a-自由高达">ZGMF-X10A 自由高达</a></li><li><a href="#zgmf-x20a-强袭自由高达">ZGMF-X20A 强袭自由高达</a></li><li><a href="#rx-78-2-元祖高达">RX-78-2 元祖高达</a></li><li><a href="#rx-93-ν高达">RX-93 ν高达</a></li><li><a href="#gn-0000gnr-010-00-raiser">GN-0000+GNR-010 00 Raiser</a></li><li><a href="#xxxg-00w0-飞翼零式高达">XXXG-00W0 飞翼零式高达</a></li><li><a href="#附录玩具厂商份额--ip价值">附录：玩具厂商份额 &amp; IP价值</a></li><li><a href="#附录审美的变化">附录：审美的变化</a></li><li><a href="#附录时间线">附录：时间线</a></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

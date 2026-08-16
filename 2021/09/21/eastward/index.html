@@ -1,0 +1,519 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>结构拆解-风来之国 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="结构拆解-风来之国">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="本年度最佳游戏！满足了我对RPG的一切幻想。本文接下来将对游戏的进行一些内容设计向的分析。">
+<meta property="og:description" content="本年度最佳游戏！满足了我对RPG的一切幻想。本文接下来将对游戏的进行一些内容设计向的分析。">
+<link rel="canonical" href="https://design.jskyzero.com/2021/09/21/eastward/">
+<meta property="og:url" content="https://design.jskyzero.com/2021/09/21/eastward/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-09-21T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="结构拆解-风来之国">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-09-21T00:00:00+00:00","datePublished":"2021-09-21T00:00:00+00:00","description":"本年度最佳游戏！满足了我对RPG的一切幻想。本文接下来将对游戏的进行一些内容设计向的分析。","headline":"结构拆解-风来之国","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2021/09/21/eastward/"},"url":"https://design.jskyzero.com/2021/09/21/eastward/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li class="current">
+                  <a href="/2021/09/21/eastward/" class="current" aria-current="page">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>本年度最佳游戏！满足了我对RPG的一切幻想。本文接下来将对游戏的进行一些内容设计向的分析。</p>
+
+<!--more-->
+
+<h1 id="风来之国--eastward"><span class="heading-label">风来之国 / EASTWARD</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/专题报告-blue.svg?style=flat" alt="专题报告"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2021/09/21-brightgreen.svg?style=flat" alt="日期 2021/09/21"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#风来之国--eastward">风来之国 / EASTWARD</a><ul><li><a href="#special-experience-upgrade">SPECIAL! EXPERIENCE UPGRADE</a></li><li><a href="#分析概述">分析概述</a></li><li><a href="#宏观分析">宏观分析</a><ul><li><a href="#游戏简介">游戏简介</a></li><li><a href="#理论分析">理论分析</a></li><li><a href="#3c镜头对比">3C镜头对比</a></li></ul></li><li><a href="#具象分析">具象分析</a><ul><li><a href="#叙事体验">叙事体验</a></li><li><a href="#体验蓝图">体验蓝图</a></li></ul></li><li><a href="#总结与参考">总结与参考</a></li></ul></li></ul></nav></div>
+
+<!-- ![](/assets/img/gameplay/eastward/1.jpg) -->
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="special-experience-upgrade"><span class="heading-counter">1.</span><span class="heading-label">SPECIAL! EXPERIENCE UPGRADE</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>本节为特殊插入内容，如果需要看正文请移步后文。</p>
+
+<p>最初“ 游戏体验”系列文章，是用来记录最近玩过的游戏，并将分析和感悟记录下来的系列分析文章。但是很可惜，明明已经进行了内容和模块拆分，但是还是没能达成如此目的，大部分重视内容的游戏，对内容的记录过少。</p>
+
+<p>于是便有了全新的——“体验蓝图”系列。</p>
+
+<p>本系列希望能以更加具体、更加细致的方式，记录游戏的内容流程，并加以分析，从中学习到有益的部分。</p>
+
+<p>以下，便是本系列的初篇文章——</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/eastward/1-480.webp 480w, /assets/generated/img/gameplay/eastward/1-760.webp 760w, /assets/generated/img/gameplay/eastward/1-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/eastward/1.jpg" alt="封面" width="1280" height="720" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="分析概述"><span class="heading-counter">2.</span><span class="heading-label">分析概述</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/eastward/2-480.webp 480w, /assets/generated/img/gameplay/eastward/2-760.webp 760w, /assets/generated/img/gameplay/eastward/2-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/eastward/2.jpg" alt="为什么要分析游戏" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>分析游戏是为了从体验中反拆设计，学习、提高设计能力。</p>
+
+<p>而之所以会选取风来之国，是因为觉得它有可以学习的地方，具体来说，风来之国：</p>
+
+<ul>
+  <li>单位内容成本可控：选取了开发代价没那么高的内容的美学呈现形式：平面 + 像素 + 打光</li>
+  <li>游戏整体内容详实：有足以媲美3A级游戏的内容框架和内容呈现，即便游戏本身尚有不足之处</li>
+</ul>
+
+<p>以此为玩家带来了一段独特的旅途体验。</p>
+
+<p>本文的分析主要会聚焦在<strong><u>内容设计</u></strong>上——这也正是风来之国如此特别的原因。会使用一些诸如MDA和游戏感之类的理论框架。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/eastward/3-480.webp 480w, /assets/generated/img/gameplay/eastward/3-760.webp 760w, /assets/generated/img/gameplay/eastward/3-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/eastward/3.jpg" alt="目录" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>本文会先进行一些<strong><u>宏观的叙述</u></strong>，比如讲讲游戏的主要体验，游戏传达的感受等等。</p>
+
+<p>然后会进行<strong><u>微观的分析</u></strong>，游戏整体的叙事体验、玩法体验等等。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/eastward/4-480.webp 480w, /assets/generated/img/gameplay/eastward/4-760.webp 760w, /assets/generated/img/gameplay/eastward/4-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/eastward/4.jpg" alt="剧透警告" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>编写本文无法绕开对内容的讨论，阅读本文可能会对您的初次游玩体验<strong><u>造成不可逆的、灾难性的破坏。</u></strong></p>
+
+<p>考虑到游戏是个好游戏，自己的亲身体验说不定能带来更多的思考，因而大可以在这里先停下，待完整体验游戏后再继续阅读。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="宏观分析"><span class="heading-counter">3.</span><span class="heading-label">宏观分析</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="游戏简介"><span class="heading-counter">3.1.</span><span class="heading-label">游戏简介</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p>先对游戏基本情况进行一个说明：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>类别</th>
+      <th>内容</th>
+      <th>批注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>发售日</td>
+      <td><a href="http://www.pixpil.com/archives/18434">2021/09/16</a></td>
+      <td>同期发售国产游戏《暗影火炬城》、《山海旅人》等</td>
+    </tr>
+    <tr>
+      <td>销量</td>
+      <td><a href="https://steamdb.info/app/977880/graphs/">约20-50万量级</a></td>
+      <td>接近<a href="https://steamdb.info/app/1288310/graphs/">《烟火》</a>，高于同期的<a href="https://steamdb.info/app/1161170/graphs/">《山海旅人》</a></td>
+    </tr>
+    <tr>
+      <td>开发商</td>
+      <td><a href="http://www.pixpil.com/about">Pixpil</a></td>
+      <td>位于上海的独立游戏工作室。15年立项时仅3人</td>
+    </tr>
+    <tr>
+      <td>发行商</td>
+      <td><a href="http://chucklefish.org/">Chucklefish</a></td>
+      <td>发行了《雨中冒险》和《星露谷物语》的英国工作室</td>
+    </tr>
+    <tr>
+      <td>发行商(国内)</td>
+      <td><a href="https://www.xd.com/">心动</a></td>
+      <td>页游到手游到TapTap，“专注长期价值”</td>
+    </tr>
+    <tr>
+      <td>评价</td>
+      <td>数据见批注</td>
+      <td><a href="https://steamdb.info/app/977880/graphs/">steam 😋 84.74%</a>；<a href="https://www.metacritic.com/game/pc/eastward">metacritic 84/100</a></td>
+    </tr>
+    <tr>
+      <td>游戏引擎</td>
+      <td><a href="https://moaiwebsite.github.io/">MOAI</a></td>
+      <td><a href="https://github.com/moai/moai-dev">开源</a>，基于C++，使用Lua编写脚本</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>阅读了Pixpil 17年的一篇<a href="http://www.pixpil.com/archives/93">关于开发工具的文章</a>，其中使用开源软件的风格十分讨喜，有些工具还颇为受用，有兴趣的同学可以自行查阅。</p>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/eastward/6-480.webp 480w, /assets/generated/img/gameplay/eastward/6-760.webp 760w, /assets/generated/img/gameplay/eastward/6-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/eastward/6.jpg" alt="游戏拆解" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>游戏属于一次性买断制的单机游戏，组织内容也采用经典的剧情玩法结合的形式。</p>
+
+<p>游戏的主轴是沉默大叔约翰带着神秘白发女孩珊的冒险故事，在此基础上插入了各种关卡玩法。</p>
+
+<p>另一方面，游戏也十分鼓励玩家在城镇、野外探索，给了内容体验上、数值收集上的奖励。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="理论分析"><span class="heading-counter">3.2.</span><span class="heading-label">理论分析</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/eastward/7-480.webp 480w, /assets/generated/img/gameplay/eastward/7-760.webp 760w, /assets/generated/img/gameplay/eastward/7-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/eastward/7.jpg" alt="体验枚举" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>游戏的标准体验大致有如上七种。</p>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/eastward/8-480.webp 480w, /assets/generated/img/gameplay/eastward/8-760.webp 760w, /assets/generated/img/gameplay/eastward/8-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/eastward/8.jpg" alt="体验出发的3C" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>从以上玩家体验出发，向美学层，导向游戏的通用乐趣。向动态和机制层，依附与游戏的系统和规则设计。</p>
+
+<ul>
+  <li>幻想而非叙事</li>
+</ul>
+
+<p>从美学层的角度，游戏核心的感受应该是：幻想、叙事、和探索。而其中最重要的应该是幻想而非叙事。</p>
+
+<p>风来之国用了大量的支线任务、自由行动的选择来补足了“城镇”和“冒险”这一内容主题，其<strong><u>内涵是高于主线的叙事的</u></strong>，这也是我认为它的难能可贵之处。</p>
+
+<ul>
+  <li>可圈可点的系统规则</li>
+</ul>
+
+<p>从动态和机制层，为了保证基础体验的持续可发展，系统必须要有能支撑起30小时的“丰富度”，以各种成长和收集系统缓慢释放。</p>
+
+<p>中间值得一提的依然是<strong><u>支线NPC的设计</u></strong>，比如在大坝城的画家会随着剧情推进先后在不同地方作画，这些小细节极大提高了游戏幻想可信度的传达</p>
+
+<p>战斗能力和解密可以用大体完善 + 小有瑕疵来总结，辅以各种有趣的小游戏体验，整体是不错的。</p>
+
+<blockquote>
+  <p>顺口提一口小有瑕疵和对应的解决：</p>
+
+  <ol>
+    <li>解密的跟踪炸弹定位重复，而且用途不明显，需要修改关卡谜题和场景暗示</li>
+    <li>后期拼刀玩法虽然耳目一新，但是实际体验很差（纯摸奖），可以考虑时间缩放，调大窗口期</li>
+    <li>受击无敌保护有时起不到保护的作用，可能对于小怪还需要一个击退</li>
+  </ol>
+</blockquote>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/eastward/9-480.webp 480w, /assets/generated/img/gameplay/eastward/9-760.webp 760w, /assets/generated/img/gameplay/eastward/9-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/eastward/9.jpg" alt="游戏感" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>从游戏感的角度，游戏做的最为成功的是模拟空间的感受。通过剧情和战斗带来了一场精彩的冒险。实施操控方面可圈可点，游戏中有不同场景移动速度不同的控制操控感影响感受的例子，主要问题还是像拼刀之类的操作手感较差。而润色方便作为最差，对于感受向的还原尚可，但是没有一些<strong><u>耳目一新的独特物理交互感受</u></strong>，是可以补足的地方。</p>
+
+<p>游戏感理论还提到了感受延伸的五种体验，其中最为重要的依然是<strong><u>身份认知的延长</u></strong>。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="3c镜头对比"><span class="heading-counter">3.3.</span><span class="heading-label">3C镜头对比</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/eastward/10-480.webp 480w, /assets/generated/img/gameplay/eastward/10-760.webp 760w, /assets/generated/img/gameplay/eastward/10-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/eastward/10.jpg" alt="3C镜头对比" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>简单看一下镜头的一些对比，</p>
+
+<ul>
+  <li>优点：风来之国的场景明显地传达了空间感和高低差的感受</li>
+  <li>缺点：有些地方会无法判断是否可以通行</li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="具象分析"><span class="heading-counter">4.</span><span class="heading-label">具象分析</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="叙事体验"><span class="heading-counter">4.1.</span><span class="heading-label">叙事体验</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/eastward/11-480.webp 480w, /assets/generated/img/gameplay/eastward/11-760.webp 760w, /assets/generated/img/gameplay/eastward/11-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/eastward/11.jpg" alt="叙事体验" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<p>大致把UP主的流程以城镇为单位进行了划分，可以先简单看一下各个部分的时长。</p>
+
+<p>风来之国的叙事结构并不是标准的“英雄之旅”节奏的起承转合，这种非标准（或者说传统）的叙事结构一定程度上增加了玩家的理解门槛，也是一部分对剧情和后半部分虎头蛇尾的评价的原因。</p>
+
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiICBqb3VybmV5XG4gICAgdGl0bGUg6aOO5p2l5LmL5Zu95Y-Z5LqL6IqC5aWPXG4gICAgc2VjdGlvbiDlnLDlupXmnZHluoRcbiAgICAgIOWwj-mVh-aOoumZqTogMlxuICAgICAg5bqf5qW85pqC5YirOiAzXG4gICAgc2VjdGlvbiDmuKnmg4XlsbHosLdcbiAgICAgIOajruael-Wvu-eJqTogM1xuICAgICAg6YCD56a76buR5r2uOiA1IDog6buR5r2uXG4gICAgc2VjdGlvbiDlpKflkZfln45cbiAgICAgIOeGn-e7nOaJk-i1jDogNFxuICAgICAg6aOO56We5ZCv5YqoOiA3IDog6buR5r2uXG4gICAgICDlpKflnZ3mg6jliac6IDYgOiDpu5Hmva5cbiAgICBzZWN0aW9uIOeMqeiOseWdnlxuICAgICAg54yp6I6x5Z2eOiAzXG4gICAgc2VjdGlvbiDmnKrmnaXlsptcbiAgICAgIOacquadpeWymzogM1xuICAgIHNlY3Rpb24g5Y2h5oiO5YiX6L2mXG4gICAgICDljaHmiI7liJfovaY6IDQgOiDpu5Hmva4iLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOnRydWV9"><img src="https://mermaid.ink/img/eyJjb2RlIjoiICBqb3VybmV5XG4gICAgdGl0bGUg6aOO5p2l5LmL5Zu95Y-Z5LqL6IqC5aWPXG4gICAgc2VjdGlvbiDlnLDlupXmnZHluoRcbiAgICAgIOWwj-mVh-aOoumZqTogMlxuICAgICAg5bqf5qW85pqC5YirOiAzXG4gICAgc2VjdGlvbiDmuKnmg4XlsbHosLdcbiAgICAgIOajruael-Wvu-eJqTogM1xuICAgICAg6YCD56a76buR5r2uOiA1IDog6buR5r2uXG4gICAgc2VjdGlvbiDlpKflkZfln45cbiAgICAgIOeGn-e7nOaJk-i1jDogNFxuICAgICAg6aOO56We5ZCv5YqoOiA3IDog6buR5r2uXG4gICAgICDlpKflnZ3mg6jliac6IDYgOiDpu5Hmva5cbiAgICBzZWN0aW9uIOeMqeiOseWdnlxuICAgICAg54yp6I6x5Z2eOiAzXG4gICAgc2VjdGlvbiDmnKrmnaXlsptcbiAgICAgIOacquadpeWymzogM1xuICAgIHNlY3Rpb24g5Y2h5oiO5YiX6L2mXG4gICAgICDljaHmiI7liJfovaY6IDQgOiDpu5Hmva4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6dHJ1ZX0" alt=""></a></p>
+
+<p>剧情上以车站到达的每一个村庄/小镇为划分单位，都会与本地的人经历初识、熟络、分别的阶段，会发生很多故事，并背负起这些羁绊。</p>
+
+<p>本来是很好的结构，但是从山谷黑潮将分别体验一下子拉高，大坝城又以长且丰满的内容——打赌的承接、风神启动的高潮、大坝的悲伤结局，继续将情绪维持在一个高点，这个高度和后续承接的失误，使得游戏的显得<strong><u>中部丰满而尾部不足</u></strong>。</p>
+
+<p>时间迷雾的猩莱坞、无限循环的未来岛，这两个都属于设定奇特——而非<strong><u>情感传达强</u></strong>的单元，虽然高纬度的奇特设定不失为一种内容生产的有效思考方向，但是情绪渲染就一下子降了下来。</p>
+
+<p>到了最后的无限大厦和卡戎列车，已经变为关卡玩法为主而非叙事为主，两者比例从一般的73已经变为了夸张的91开，最后的玩法设计可圈可点，但是情感上却失去了一个高潮释放和终结。</p>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="体验蓝图"><span class="heading-counter">4.2.</span><span class="heading-label">体验蓝图</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/eastward/12-480.webp 480w, /assets/generated/img/gameplay/eastward/12-760.webp 760w, /assets/generated/img/gameplay/eastward/12-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/eastward/12.jpg" alt="体验蓝图" width="1280" height="720" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+<blockquote>
+  <p>体验蓝图是一种规划玩家体验的工具，方便从全局控制玩家体验。来自USC的相关设计课程</p>
+</blockquote>
+
+<p>最后我们将玩法体验也放入表格，大致如上。</p>
+
+<p>风来之国的详实内容，来源于：玩法本身的扩展和重复、实打实的关卡内容（场景、怪物、BOSS）、点缀和调剂的独立玩法。</p>
+
+<p>这里不再对体验进行更细致的节奏分析，而是讨论一些具体的话题</p>
+
+<ul>
+  <li>玩法的可扩展性或者说可重复性。</li>
+</ul>
+
+<p>《游戏设计词汇表》一书中曾经将角色能力视为谓语，涵义越丰富的谓语，便可以承接更多的宾语，也就拥有了更多的扩展性。就比如游戏中的炸弹，炸开是一个可以承接墙壁、机关等等的谓语；珊的元素球可以触发蘑菇、各种遗迹类机关。在此丰富内涵“谓语”的基础上上可以方便的扩展出各种机关玩法。</p>
+
+<ul>
+  <li>游戏难度的控制和考验</li>
+</ul>
+
+<p>除了数值，在无限大厦甚至引入了时间限制的维度，对操作进行更进一步的考核。</p>
+
+<ul>
+  <li>血量数值的膨胀</li>
+</ul>
+
+<p>后期20颗血，没有加星的料理感觉已经回不上来了，或许恢复品的数值还需要一些增强的规则（比如塞尔达中的满月必定完美料理）。</p>
+
+<!-- 简单来说，风来之国的核心玩法/体验是
+
+1. 角色扮演：和NPC对话推动剧情
+2. 战斗：使用差异化的攻击方式战胜敌人
+3. 解密：使用能力破除机关，顺利前进
+4. 探索：找到地图上的隐藏内容
+5. ……
+
+以谓语的角度来理解，游戏角色为了支撑这些体验能力大致包括：
+
++ 基础：
+  + 移动
+  + 对话、分支选择
+  + NPC交互（存档、烹饪、购买物品等）
+  + 使用道具
++ 战斗：
+  + 使用武器
+    + 平底锅、手枪、喷火器、回旋镖；能量球
+  + 使用能力、炸弹
+    + 炸弹；眩晕、护盾、恢复
+  + 场景交互
+    + 推搬箱子、地藏、接电源
+  + 交换角色、分开组合角色
+
+从MDA的乐趣的角度来理解：感官、幻想、叙事、挑战、探索、投入 -->
+
+<!-- 
+感觉（感觉愉悦的游戏）：玩家享受令人难忘的视听效果。
+幻想（让人假扮的游戏）：虚幻想像的世界。
+叙事（作为戏剧的游戏）：驱使玩家不断回头的故事
+挑战（超越障碍的训练游戏）：敦促掌握一些东西。增强游戏的可重复玩的乐趣。
+团契（社交框架的游戏）：玩家在其中活跃的社区。这点为多人游戏所独有。
+发现（未知领域的游戏）：激励玩家探索游戏世界。
+表达（自我发现的游戏）：自己的创造角色，展现自己的创造力。
+提交（作为消遣的游戏）：整体连结到游戏，让人沉浸在其中。
+-->
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="总结与参考"><span class="heading-counter">5.</span><span class="heading-label">总结与参考</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<p>虽然游戏叙事节奏和玩法设计细节上存在一些问题，但是这不太影响游戏核心“幻想”体验的传达，我认为《风来之国》是一个很好的一次性内容向游戏的例子，相信未来的国产游戏能继承这些优点，换用自己的内容生产模式，甚至是3A级别的资产生产，做出伟大的作品。</p>
+
+<ul>
+  <li>游戏官网
+    <ul>
+      <li><a href="https://eastwardgame.com/zh/">https://eastwardgame.com/zh/</a></li>
+      <li><a href="http://www.pixpil.com/">http://www.pixpil.com/</a></li>
+    </ul>
+  </li>
+  <li>游戏WIKI
+    <ul>
+      <li><a href="https://eastwardwiki.com/Eastward_Wiki">https://eastwardwiki.com/Eastward_Wiki</a></li>
+    </ul>
+  </li>
+  <li>数据参考
+    <ul>
+      <li><a href="https://steamdb.info/">https://steamdb.info/</a></li>
+      <li><a href="https://howlongtobeat.com/">https://howlongtobeat.com/</a></li>
+    </ul>
+  </li>
+  <li>设计理论
+    <ul>
+      <li><a href="http://www.cs.northwestern.edu/~hunicke/MDA.pdf">http://www.cs.northwestern.edu/~hunicke/MDA.pdf</a></li>
+      <li><a href="http://www.game-feel.com/">http://www.game-feel.com/</a></li>
+    </ul>
+  </li>
+  <li>游戏流程
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1xf4y1n79Z">https://www.bilibili.com/video/BV1xf4y1n79Z</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-07-19 - jskyzero - 📝 update structure
+2024-04-04 - jskyzero - 🚚 update structure
+2024-01-24 - jskyzero - 📝 update title
+2024-01-02 - jskyzero - 📝 test change strcuture
+2023-05-27 - jskyzero - 🚚 re:re:change file folder
+2023-02-19 - jskyzero - 📝 update title
+2022-06-17 - jskyzero - 🚚 update index
+2021-10-16 - jskyzero - 🐛 改一些错别字
+2021-10-11 - jskyzero - 😊 改了一些错别字
+2021-10-08 - jskyzero - update eastward
+2021-10-05 - jskyzero - 📝 update title
+2021-10-04 - jskyzero - 📝 finish 《风来之国》内容设计
+2021-10-04 - jskyzero - 📝 update eastward
+2021-09-30 - jskyzero - 📝 update 《风来之国》内容设计
+2021-09-26 - jskyzero - update 游戏内容
+2021-09-25 - jskyzero - 📝 update 游戏玩法
+2021-09-25 - jskyzero - 不知道怎么写了，姑且先提交一下。
+2021-09-22 - jskyzero - 📝 add 游戏简介
+2021-09-21 - jskyzero - 📝 finish SPECIAL! EXPERIENCE UPGRADE part
+2021-09-21 - jskyzero - ✨ add pro tag
+
+<em>（本文编写于2021年9月，最后修改于2024年7月，共修改2次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2021/09/21/eastward/';
+this.page.identifier = 'https://design.jskyzero.com/2021/09/21/eastward/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#风来之国--eastward">风来之国 / EASTWARD</a><ul><li><a href="#special-experience-upgrade">SPECIAL! EXPERIENCE UPGRADE</a></li><li><a href="#分析概述">分析概述</a></li><li><a href="#宏观分析">宏观分析</a><ul><li><a href="#游戏简介">游戏简介</a></li><li><a href="#理论分析">理论分析</a></li><li><a href="#3c镜头对比">3C镜头对比</a></li></ul></li><li><a href="#具象分析">具象分析</a><ul><li><a href="#叙事体验">叙事体验</a></li><li><a href="#体验蓝图">体验蓝图</a></li></ul></li><li><a href="#总结与参考">总结与参考</a></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

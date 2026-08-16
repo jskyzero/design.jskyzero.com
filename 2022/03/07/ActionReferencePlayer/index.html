@@ -1,0 +1,687 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动作设计参考·角色篇 | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="动作设计参考·角色篇">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="本文希望充当一个索引，方便概览大量动作游戏中的动作设计。">
+<meta property="og:description" content="本文希望充当一个索引，方便概览大量动作游戏中的动作设计。">
+<link rel="canonical" href="https://design.jskyzero.com/2022/03/07/ActionReferencePlayer/">
+<meta property="og:url" content="https://design.jskyzero.com/2022/03/07/ActionReferencePlayer/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-03-07T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="动作设计参考·角色篇">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-07T00:00:00+00:00","datePublished":"2022-03-07T00:00:00+00:00","description":"本文希望充当一个索引，方便概览大量动作游戏中的动作设计。","headline":"动作设计参考·角色篇","mainEntityOfPage":{"@type":"WebPage","@id":"https://design.jskyzero.com/2022/03/07/ActionReferencePlayer/"},"url":"https://design.jskyzero.com/2022/03/07/ActionReferencePlayer/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<p>本文希望充当一个索引，方便概览大量动作游戏中的动作设计。</p>
+
+<blockquote>
+  <p>本文现在已废弃，可以参考<a href="https://docs.qq.com/slide/DUmFsa1VlY3JOUlNR">迭代后的动作游戏设计参考索引</a></p>
+</blockquote>
+
+<h1 id="动作设计参考"><span class="heading-label">动作设计参考</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2022/03/07-brightgreen.svg?style=flat" alt="日期 2022/03/07"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#动作设计参考">动作设计参考</a><ul><li><a href="#new">NEW</a><ul><li><a href="#街霸vi">街霸VI</a></li><li><a href="#艾尔登法环">艾尔登法环</a></li><li><a href="#地平线2-西之绝境">地平线2 西之绝境</a></li></ul></li><li><a href="#常规">常规</a><ul><li><a href="#dnf">DNF</a></li><li><a href="#无双">无双</a><ul><li><a href="#鬼泣">鬼泣</a></li><li><a href="#战神">战神</a></li><li><a href="#猎天使魔女">猎天使魔女</a></li><li><a href="#忍者龙剑传">忍者龙剑传</a></li></ul></li><li><a href="#仁王">仁王</a></li><li><a href="#怪物猎人">怪物猎人</a></li><li><a href="#黑暗之魂">黑暗之魂</a></li><li><a href="#白金工作室">白金工作室</a></li><li><a href="#其他">其他</a></li></ul></li><li><a href="#手游">手游</a><ul><li><a href="#崩坏3">崩坏3</a></li><li><a href="#战双">战双</a></li><li><a href="#原神">原神</a></li></ul></li></ul></li></ul></nav></div>
+
+<p>本文只解决一个问题，要做一个动作的时候，参考美学表现、节奏、打击感等。</p>
+
+<!-- 
+在正式的动作积累与讨论之前想重申——如何学习一个动作？
+
+1. 动作种类和形式（本文主要）
+2. 动作机制和实现（本文次要或者无）
+-->
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="new"><span class="heading-counter">1.</span><span class="heading-label">NEW</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="街霸vi"><span class="heading-counter">1.1.</span><span class="heading-label">街霸VI</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>前瞻：<a href="https://www.bilibili.com/video/BV1JB4y1s7qi">轻松上手一键出招！《街头霸王6》前瞻与系统介绍</a>
+    <ul>
+      <li>现代模式（一键出招）
+        <ul>
+          <li>必杀技：方向键+必杀技按钮</li>
+          <li>超必杀技：方向键+2按钮</li>
+          <li>自动连招：Assit按钮+攻击</li>
+        </ul>
+      </li>
+      <li>斗气系统，6格斗气槽
+        <ul>
+          <li>出场满、自动恢复、打人或招架成功打加速恢复</li>
+          <li>斗气招架：按住持续消耗，自动格挡，格挡成功恢复斗气；绝佳时机格挡，停止对方动作，慢动作演出，增加利于反击时间</li>
+          <li>斗气迸发：接住攻击，释放打断；版边自动撞墙</li>
+          <li>超载：EX技能</li>
+          <li>突进：斗气招架（1格）or普通攻击（3格） 快速前冲</li>
+          <li>格挡反击：（2格）取消防御硬直反击</li>
+        </ul>
+      </li>
+      <li>超级必杀技槽：3格，3种必杀技（继承）</li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="艾尔登法环"><span class="heading-counter">1.2.</span><span class="heading-label">艾尔登法环</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>分类：
+    <ul>
+      <li>近战武器：短剑、直剑、大剑、特大剑、刺剑、重刺剑、曲剑、大曲剑、打刀、双头剑、斧、大斧、槌、连枷、大槌、特大武器、矛、大矛、戟、镰刀、软鞭、拳头、小弓、长弓、大弓、弩、手杖、圣印记、火把、小盾、中盾、大盾</li>
+      <li>魔法、祷告、战技</li>
+      <li>攻击属性：魔力、火、雷、圣（冰冻、出血、咒死、中毒、猩红腐败）</li>
+    </ul>
+  </li>
+  <li>动作说明：
+    <ul>
+      <li>短剑、直剑、大剑、特大剑：先横挥在斜挥收尾，次数分别为6、5、4、3</li>
+      <li>刺剑、重刺剑：戳，次数为6，5</li>
+      <li>曲剑、大曲剑：（类似大刀）横挥，打点偏上</li>
+      <li>打刀：（武士刀）打点分布均衡</li>
+      <li>斧、大斧：前者类似匕首，砸地收尾、后者主要是砸地</li>
+      <li>槌、连枷、大槌、特大武器：前三者横挥，最后那个砸地三下</li>
+      <li>矛、大矛、戟：全是戳</li>
+      <li>镰刀：从外向中间砍</li>
+    </ul>
+  </li>
+  <li>魔法说明
+    <ul>
+      <li>小光砾、大帚星、增强圆、大彗星、十二道流星、创星雨</li>
+      <li>魔力弓、魔力弓4连、暗月、魔力大剑、魔力冰大剑横挥、镇定</li>
+      <li>背后石砾、模糊石砾</li>
+      <li>冰附魔、冰风暴、大范围结晶、小范围结晶、飞散结晶</li>
+      <li>重力球、多颗重力球、3颗岩石块、大量陨石</li>
+      <li>幽魂、烟雾、死者群</li>
+    </ul>
+  </li>
+  <li>祷告、战技：略过</li>
+  <li>参考
+    <ul>
+      <li><a href="https://eldenring.wiki.fextralife.com/Weapons">武器参考</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1q3411W7AJ">91种全战灰效果</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1B54y1Z7VW">全武器展示+攻击派生展示</a></li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="地平线2-西之绝境"><span class="heading-counter">1.3.</span><span class="heading-label">地平线2 西之绝境</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>分类：
+    <ul>
+      <li>远程武器：猎手弓、射手弓、爆破弹弓、射钉枪、爆破枪、绳索枪</li>
+      <li>属性：酸蚀、冰霜、火焰、爆破、等离子</li>
+    </ul>
+  </li>
+  <li>动作说明：
+    <ul>
+      <li>R1-R1-R1-R1：长矛横向基础四连</li>
+      <li>R1-停顿-R1 * N：单体</li>
+      <li>R1-R1-停顿-R1 * N：范围击退</li>
+      <li>R1-R1-R1-停顿-R1 * N：快速充能</li>
+    </ul>
+  </li>
+  <li>参考
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1Cu411D7M8">近战连招技能展示合集</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1g44y1P7fv">坚堡城墙-格斗场 极难难度</a></li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="常规"><span class="heading-counter">2.</span><span class="heading-label">常规</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="dnf"><span class="heading-counter">2.1.</span><span class="heading-label">DNF</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>分类：
+    <ul>
+      <li>剑士、枪手、格斗家、法师、圣职者、刺客、缔造者、守护者、枪剑士</li>
+    </ul>
+  </li>
+  <li>动作说明：
+    <ul>
+      <li>技能分布：30、35、40、45、一次觉醒、60、二次觉醒、三次觉醒</li>
+      <li>鬼剑士：剑魂（剑气）、鬼泣（鬼神、暗）、狂战士（血气）、阿修罗（元素）</li>
+      <li>神枪手：漫游枪手（浪漫）、弹药专家（属性）、机械师（召唤）、重炮师（重火力）</li>
+      <li>格斗家：柔道（抓取）、散打（硬打）、毒王（异常）、气功（气功）</li>
+      <li>圣职者：圣骑士（圣光）、驱魔师（物法）、蓝拳（格斗）、复仇者（暗）</li>
+      <li>圣职者（女）：圣骑士（圣光）、异端审判者（火焰）、巫女（东方）、异端者（暗）</li>
+      <li>暗夜使者：刺客（连击）、死灵法师（暗、召唤）、忍者（火焰）、影舞者（背后攻击）</li>
+      <li>魔法师：元素（元素）、魔道（搞怪）、召唤（召唤）、战法（符文）</li>
+    </ul>
+  </li>
+  <li>参考
+    <ul>
+      <li><a href="https://dnf.fandom.com/zh/wiki/%E8%81%8C%E4%B8%9A">FANDOM 地下城与勇士 维基百科</a></li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="无双"><span class="heading-counter">2.2.</span><span class="heading-label">无双</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>分类：
+    <ul>
+      <li>5（太旧了，同太旧了被开除：6、7）：枪、刀、剑（双手）、扇、弓、棍、剑（单手）、鞭、戟、杖、锤</li>
+      <li>8：长柄双刀，鸳鸯钺，羽扇，翳扇，偃月刀，月牙铲，细剑，迅雷剑，锡杖，锁镰，锁分铜，碎棒，双钺，双扇，双矛，双流星，双节棍，双剑，双鞭，双钩，鞭箭弓，手斧，伸细剑，射刃枪，扇刃，三尖刀，圈，峨嵋刺，枪，蛇矛，朴刀，投牙弓，龙枪，两刃枪，狼牙棒，昊转锤，九环刀，火尘双刀，九齿钯，将剑，击剑，戟，棍，三节棍，鬼神手甲，钢鞭剑，飞刀，飞镖，钩爪，方天戟，多节鞭，铁笛，盾牌剑，十字戟，短戟，刀，弧刀，大铡刀，大钺，大剑，大斧</li>
+    </ul>
+  </li>
+  <li>动作说明
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1os411c71p">游戏动画设计-真三国无双8 35种武器 双视图招式参考</a></li>
+    </ul>
+  </li>
+  <li>参考
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1QW411h7rH">『真・三國無双８』武将动作演示合集</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1qi4y1L7nc">《塞尔达无双：灾厄启示录》全角色动作技能演示</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1ZU4y1W7yj">《女神异闻录5对决：幽灵先锋》全角色动作合集</a></li>
+      <li>姑且把 Omega Force（ω-Force）的其他作品的流程也放在这里
+        <ul>
+          <li><a href="https://www.bilibili.com/video/BV1xE411D77b">勇者斗恶龙：英雄集结</a></li>
+          <li><a href="https://www.bilibili.com/video/BV1Up411o7bX">勇者斗恶龙：英雄集结2</a></li>
+          <li><a href="https://www.bilibili.com/video/BV174411F7Pg">无双大蛇Z</a></li>
+          <li><a href="https://www.bilibili.com/video/BV1bW411t7Xr">无双大蛇2U</a></li>
+          <li><a href="https://www.bilibili.com/video/BV1L64y197XB">战国无双5</a></li>
+          <li><a href="https://www.bilibili.com/video/BV17A411x7LD">塞尔达无双：灾厄启示录</a></li>
+          <li><a href="https://www.bilibili.com/video/BV1RA411v7fX">女神异闻录5对决：幽灵先锋</a></li>
+          <li>其他比如：剑风传奇无双、火纹无双、刀剑乱舞无双暂略</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="鬼泣"><span class="heading-counter">2.2.1.</span><span class="heading-label">鬼泣</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<ul>
+  <li>分类：
+    <ul>
+      <li>待补充</li>
+    </ul>
+  </li>
+  <li>参考：
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1CW411Q7q3">《鬼泣4:特别版》全角色动作展示</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1mb411K7BN?p=7">《鬼泣DMC》人物慢动作赏析合集</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1nb411575p">《鬼泣5》『但丁』</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1Jb41157yY">《鬼泣5》『尼禄』</a></li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="战神"><span class="heading-counter">2.2.2.</span><span class="heading-label">战神</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<ul>
+  <li>参考：
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1is411B7Ej">战神3武器招式（部分）</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1Js411m7mx">战神3华丽连技</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1bb411j732">新战神招式展示小合集</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1KP4y1m7Fa">【战神5】全符文攻击演示</a></li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="猎天使魔女"><span class="heading-counter">2.2.3.</span><span class="heading-label">猎天使魔女</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<ul>
+  <li>概览
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1aQ4y167f4">猎天使魔女1进阶技巧</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1nJ411X7or">猎天使魔女2 全武器动画鉴赏</a></li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="忍者龙剑传"><span class="heading-counter">2.2.4.</span><span class="heading-label">忍者龙剑传</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
+
+<ul>
+  <li>概览
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1m44y1i7YU">忍龙3全武器动作展示</a></li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="仁王"><span class="heading-counter">2.3.</span><span class="heading-label">仁王</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>概览（不准）
+    <ul>
+      <li>1：刀，锁链，双刀，大太刀，旋棍，双手斧，长枪</li>
+      <li>2：刀，大太刀，双刀，机关棍，手甲，长枪，旋棍</li>
+    </ul>
+  </li>
+  <li>动作
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=rlgslxpQ0iQ">Nioh: Sanada Yukimura - All weapons showcase</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1kp4y1b7zP">【仁王2】长枪全招式慢动作演示</a>，其他武器翻翻也有。</li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="怪物猎人"><span class="heading-counter">2.4.</span><span class="heading-label">怪物猎人</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>概览：
+    <ul>
+      <li>太刀，大剑，盾斧，斩斧，轻弩，重弩，双刀，操虫棍，锤子，单手剑，狩猎笛，长枪，铳枪，弓，</li>
+    </ul>
+  </li>
+  <li>动作
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1gE411s7po">表演动作</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1Fx411W76R">世界 全武器动作</a></li>
+      <li><a href="https://www.bilibili.com/video/BV134411W7GS">冰原 全武器新动作</a></li>
+      <li><a href="https://www.bilibili.com/video/BV12t411S7jg">XX/GU 狩技</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1D5411P7vr">RISE 替换技</a></li>
+      <li><a href="https://www.bilibili.com/video/BV17f4y1x7pL">Rise 全14种武器替换动作及虫技演示</a></li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="黑暗之魂"><span class="heading-counter">2.5.</span><span class="heading-label">黑暗之魂</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>动作
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV15x411x74z">血源诅咒 老猎人 全武器、法术、装备展示</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1ms411j75P">黑暗之魂1重置版 全装备与全法术展示</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1Rx411e7nh">黑暗之魂2原罪学者 全装备与全法术展示</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1ss411B7d6">黑暗之魂3 全装备与全法术展示</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1bb411T7Po">只狼：影逝二度 全义手忍具、流派招式、体术、忍术展示</a></li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="白金工作室"><span class="heading-counter">2.6.</span><span class="heading-label">白金工作室</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>动作
+    <ul>
+      <li>猎天使魔女四大那儿已经有了</li>
+      <li><a href="https://www.bilibili.com/video/BV1Jt411y7KY">变形金刚：毁灭行动 流程</a></li>
+      <li><a href="https://www.bilibili.com/video/BV1Js411i7iB">忍者神龟：曼哈顿变种 流程</a></li>
+      <li>尼尔：自动人形
+        <ul>
+          <li><a href="https://www.bilibili.com/video/BV1us411G7QQ">【尼尔：机械纪元】2B全武器动作鑑賞動画 All actions（Moveset）</a></li>
+        </ul>
+      </li>
+      <li>异界锁链
+        <ul>
+          <li><a href="https://www.bilibili.com/video/BV1CJ411N7rk">《异界锁链》全部技能＆雷基恩＆同步攻击展示</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="其他"><span class="heading-counter">2.7.</span><span class="heading-label">其他</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<ul>
+  <li>动作
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1Yb411w7J7">【灵魂能力6/刀魂6】全角色爆衣展示</a></li>
+    </ul>
+  </li>
+  <li>街霸</li>
+  <li>参考
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1Fx41147YZ">受击动作参考 街霸5隆</a></li>
+    </ul>
+  </li>
+  <li>拳皇</li>
+  <li>其他</li>
+  <li>罪恶装备</li>
+  <li>苍翼</li>
+  <li>真人快打</li>
+  <li>铁拳</li>
+  <li>侍魂</li>
+  <li>破晓传说
+    <ul>
+      <li><a href="https://www.bilibili.com/video/BV1664y1e7RB">体验版 破晓传说全角色技能展示合集</a></li>
+    </ul>
+  </li>
+</ul>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="手游"><span class="heading-counter">3.</span><span class="heading-label">手游</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="崩坏3"><span class="heading-counter">3.1.</span><span class="heading-label">崩坏3</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>特征</th>
+      <th>技能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>琪亚娜</td>
+      <td>双手枪</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>芽衣</td>
+      <td>单手剑</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>布洛妮娅</td>
+      <td>重炮</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>德莉莎</td>
+      <td>十字架</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>姬子</td>
+      <td>大剑</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>卡莲</td>
+      <td>双手枪</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>八重樱</td>
+      <td>单手剑</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>符华</td>
+      <td>拳套</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>丽塔</td>
+      <td>镰刀</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>希儿</td>
+      <td>镰刀</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>幽兰黛尔</td>
+      <td>长枪</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="战双"><span class="heading-counter">3.2.</span><span class="heading-label">战双</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="原神"><span class="heading-counter">3.3.</span><span class="heading-label">原神</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
+
+<!-- ## MOBA游戏
+
+
+### 王者荣耀
+
+参考资料
+
++ [王者荣耀首页 > 英雄介绍](https://pvp.qq.com/web201605/herolist.shtml)
+
+
+|英雄|武器|说明|
+|--|--|--|
+|桑启|法杖|绿色，自然；草，飞来飞去|
+|瑶|法杖|法球；附身|
+|大乔|长柄灯笼|水系；灯笼、大型水旋涡传送|
+|张飞|长柄蛇矛|战士；变身|
+|牛魔|犄角|牛头人（不）；冲刺、劈开大地|
+|金蝉||
+|鲁班大师||
+|盾山||
+|明世隐||
+|苏烈||
+|鬼谷子||
+|东皇太一||
+|太乙真人||
+|蔡文姬||
+|钟馗||
+|孙膑||
+|刘婵||
+|庄周||
+|暃（Fēi）|弯刀|王子，华贵；可以上墙|
+|澜|双刀|刺客，蓝色；变成鲨鱼|
+|夏侯惇|大刀|肉盾；护盾、眩晕|
+|芈月|法球|蝙蝠、紫色；吸血、无法选中|
+
+
+### DOTA2
+
++ [DOTA2全英雄技能](https://www.bilibili.com/video/BV1rb411r7CT)
+
+
+### LOL
+
+
+### LOLM -->
+
+
+
+
+
+</section><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+2024-07-31 - jskyzero - 📝 update project 2024
+2024-07-31 - jskyzero - 📝 change structure
+2023-05-27 - jskyzero - 🚚 re:change file folder
+2023-01-18 - jskyzero - 🐛 hide unfinished works
+2022-11-22 - jskyzero - update 动作设计参考
+2022-09-13 - jskyzero - add 动作设计参考与赏析·BOSS篇
+2022-06-17 - jskyzero - 📝 update action game
+2022-06-17 - jskyzero - 📝 add 街霸VI
+2022-06-17 - jskyzero - 🚚 update index
+2022-04-29 - jskyzero - 📝 update 动作游戏设计参考
+2022-04-19 - jskyzero - update MOBA游戏 王者荣耀
+2022-04-15 - jskyzero - 📝 add 王者荣耀
+2022-04-15 - jskyzero - 📝 update article
+2022-04-13 - jskyzero - 📝 update config &amp; 动作游戏设计参考
+2022-04-13 - jskyzero - update 学术讨论
+2022-04-12 - jskyzero - 📝 update article
+2022-04-06 - jskyzero - 📝 施工中
+2022-03-30 - jskyzero - 📝 update article
+2022-03-29 - jskyzero - 📝 add 标准体验
+2022-03-15 - jskyzero - 📝 add content
+
+<em>（本文编写于2022年3月，最后修改于2024年7月，共修改1次。）</em>
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/2022/03/07/ActionReferencePlayer/';
+this.page.identifier = 'https://design.jskyzero.com/2022/03/07/ActionReferencePlayer/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#动作设计参考">动作设计参考</a><ul><li><a href="#new">NEW</a><ul><li><a href="#街霸vi">街霸VI</a></li><li><a href="#艾尔登法环">艾尔登法环</a></li><li><a href="#地平线2-西之绝境">地平线2 西之绝境</a></li></ul></li><li><a href="#常规">常规</a><ul><li><a href="#dnf">DNF</a></li><li><a href="#无双">无双</a><ul><li><a href="#鬼泣">鬼泣</a></li><li><a href="#战神">战神</a></li><li><a href="#猎天使魔女">猎天使魔女</a></li><li><a href="#忍者龙剑传">忍者龙剑传</a></li></ul></li><li><a href="#仁王">仁王</a></li><li><a href="#怪物猎人">怪物猎人</a></li><li><a href="#黑暗之魂">黑暗之魂</a></li><li><a href="#白金工作室">白金工作室</a></li><li><a href="#其他">其他</a></li></ul></li><li><a href="#手游">手游</a><ul><li><a href="#崩坏3">崩坏3</a></li><li><a href="#战双">战双</a></li><li><a href="#原神">原神</a></li></ul></li></ul></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

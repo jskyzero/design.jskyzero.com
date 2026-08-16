@@ -1,0 +1,668 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>/Project | 设计者笔记</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.2.png">
+  <link rel="preload" as="image" href="/assets/img/logo.2.png" fetchpriority="high">
+
+  <!-- 资源预连接 -->
+  <link rel="preconnect" href="https://fontsapi.zeoseven.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin="">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.clarity.ms">
+  <link rel="preconnect" href="https://designer-notes.disqus.com">
+
+  <!-- 字体异步加载，加载完成后切换 rel 为 stylesheet -->
+  <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/159/main/result.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/159/main/result.css">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=jetbrains-mono:400&amp;display=swap">
+  </noscript><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="/Project">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="jskyzero’s notes about game designer.">
+<meta property="og:description" content="jskyzero’s notes about game designer.">
+<link rel="canonical" href="https://design.jskyzero.com/project/">
+<meta property="og:url" content="https://design.jskyzero.com/project/">
+<meta property="og:site_name" content="设计者笔记">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="/Project">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"jskyzero’s notes about game designer.","headline":"/Project","url":"https://design.jskyzero.com/project/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" type="text/css" href="/assets/main-light.css"><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener('load', function () {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-V2SSPG3YGX';
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-V2SSPG3YGX');
+  });
+
+</script>
+<!-- clarity-analytics.html - Microsoft Clarity tracking snippet. -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jt8gmzbake");
+  });
+</script>
+</head>
+<body data-env="production">
+    <div class="site-shell page-wrapper">
+<aside class="nav-sidebar sidebar" id="sidebar">
+  <button class="sidebar-close" type="button" aria-controls="sidebar" aria-expanded="true">×</button>
+
+  <!-- 搜索框 -->
+  <div class="sidebar-search">
+    <input type="text" id="search-input" aria-label="search" placeholder=" ">
+    <span class="sidebar-search__prompt" aria-hidden="true">search...</span>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <!-- 文章分类导航 -->
+  <nav class="sidebar-nav" aria-label="文章分类">
+    <section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏设计</div>
+          <ul><li>
+                  <a href="/2024/05/14/ActionGameDesign/">动作游戏的本质</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/03/25/SSS/">动作游戏设计的SSS方法</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2024/04/04/12_action_design_type/">12种动作机制与160+案例</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/11/13/ACT_with_GDC/">GDC动作游戏分享精选</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">动作游戏分析</div>
+          <ul><li>
+                  <a href="/2023/10/10/sekiro_lion_tamarin_AI/">拆包看狮子猿AI设计</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2023/02/17/sekiro_lion_tamarin/">拆包看狮子猿动作设计</a></li><li>
+                  <a href="/2022/07/22/mhrsb_ai/">怪物猎人中的AI出招设计</a></li><li>
+                  <a href="/2022/09/22/wolong_action_system/">卧龙气势槽设计杂谈</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏AI</div>
+          <ul><li>
+                  <a href="/2021/07/19/GameAI/">游戏AI与行为树</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/09/09/RandomInGameAI/">游戏AI中的高级随机算法</a></li><li>
+                  <a href="/2022/05/24/GameAISkill/">游戏AI常用架构技巧</a></li><li>
+                  <a href="/2023/03/27/GameAIProIndex/">GameAIPro·总集篇</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">专题报告</div>
+          <ul><li>
+                  <a href="/2024/01/26/dota2/">状态效果-Dota2</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2021/11/20/mhwi/">结构拆解-怪猎冰原</a></li><li>
+                  <a href="/2019/10/15/%E6%A8%AA%E6%9D%BF%E6%A0%BC%E6%96%97/">横板格斗-多人共斗</a></li><li>
+                  <a href="/2019/10/15/%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/">开放世界-拟真的度</a></li><li>
+                  <a href="/2021/09/21/eastward/">结构拆解-风来之国</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">一期一会</div>
+          <ul><li>
+                  <a href="/2017/10/22/MiniGame/">一些尝试 / Mini Game</a></li><li>
+                  <a href="/2020/01/05/sakura_nagashi/">桜流し / Sakura Nagashi</a></li><li>
+                  <a href="/2021/01/17/one_last_kiss/">最後のキス / One Last Kiss</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">游戏开发</div>
+          <ul><li>
+                  <a href="/2021/08/18/LevelDesignEditor/">编辑器：若干好的特性</a></li><li>
+                  <a href="/2022/02/15/GameDesignAbility/">游戏设计：能力模型</a></li><li>
+                  <a href="/2023/10/23/BattleDesignAbility/">游戏设计：战斗策划要求</a></li></ul>
+        </section><section class="sidebar-group">
+          <div class="sidebar-group-title">摘录与杂谈</div>
+          <ul><li>
+                  <a href="/2021/11/14/possessiveness/">摘录：《自制力》</a><span class="pro-star">⭐️</span></li><li>
+                  <a href="/2025/07/05/collect/">归档：零碎文章集合</a></li></ul>
+        </section></nav>
+</aside>
+<div class="sidebar-overlay" data-sidebar-close=""></div>
+      <div class="site-content content-area">
+        <div class="container"><header class="site-header">
+  <div class="site-menu menu">
+    <a class="site-logo" href="/"><img src="/assets/img/logo.2.png" alt="设计者笔记" width="128" height="128" fetchpriority="high" decoding="async"></a>
+    <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <ul class="site-menu__items"><li class="site-menu__item"><a href="/">/Home</a></li><li class="site-menu__item"><a href="/github/">/Github</a></li><li class="site-menu__item"><a href="/Resume/">/Resume</a></li><li class="site-menu__item"><a href="/project/">/Project</a></li></ul>
+  </div>
+</header>
+<main class="site-main">
+            
+<!-- 唔這裡打算放置一些短期的或者長期的計劃，省的記憶力越來越差的自己老是忘記要做啥來著。 -->
+
+<p>我还是我，除了长大，没变太多。(出自：BILIBILI 拜年祭节目 <a href="https://www.bilibili.com/video/BV1A54y1x7Dj">时光盲盒</a>)</p>
+
+<!--more-->
+
+<!-- <iframe src="//player.bilibili.com/player.html?aid=843822693&bvid=BV1A54y1x7Dj&cid=294940961&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 500px; max-width: 100%；align:center; padding:20px 0;"> </iframe> -->
+
+<section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="计划表-其八"><span class="heading-counter">1.</span><span class="heading-label">计划表-其八</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+<p><code class="language-plaintext highlighter-rouge">jskyzero</code> <code class="language-plaintext highlighter-rouge">2026/05/24</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>标签</th>
+      <th>课题</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>进行中</td>
+      <td>游戏设计</td>
+      <td>机制设计-洛克王国</td>
+    </tr>
+    <tr>
+      <td>进行中</td>
+      <td>游戏设计</td>
+      <td>动作游戏中的节奏感</td>
+    </tr>
+  </tbody>
+</table>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="计划表-其七"><span class="heading-counter">2.</span><span class="heading-label">计划表-其七</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+<p><code class="language-plaintext highlighter-rouge">jskyzero</code> <code class="language-plaintext highlighter-rouge">2025/03/25</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>标签</th>
+      <th>课题</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>进行中</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2025/03/25/SSS/">动作游戏设计的3S方法</a></td>
+    </tr>
+  </tbody>
+</table>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="计划表-其六"><span class="heading-counter">3.</span><span class="heading-label">计划表-其六</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+<p><code class="language-plaintext highlighter-rouge">jskyzero</code> <code class="language-plaintext highlighter-rouge">2024/07/31</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>标签</th>
+      <th>课题</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>就这样吧</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2024/07/31/action_design_pve/">动作游戏设计参考索引</a></td>
+    </tr>
+    <tr>
+      <td>就这样吧</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2023/11/13/ACT_with_GDC/">GDC分享记录</a></td>
+    </tr>
+    <tr>
+      <td>🚩已完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2024/05/14/ActionGameDesign/">动作游戏的本质</a></td>
+    </tr>
+    <tr>
+      <td>🚩已完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2024/04/04/12_action_design_type/">12种动作机制与120+案例⭐️</a></td>
+    </tr>
+    <tr>
+      <td>🚩已完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2024/01/26/dota2/">状态效果-Dota2⭐️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="计划表-其五"><span class="heading-counter">4.</span><span class="heading-label">计划表-其五</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+<p><code class="language-plaintext highlighter-rouge">jskyzero</code> <code class="language-plaintext highlighter-rouge">2023/03/09</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>标签</th>
+      <th>课题</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🚩已完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://docs.qq.com/sheet/DUklNSWxUaUVQdFBp?tab=BB08J2">动作速查</a></td>
+    </tr>
+    <tr>
+      <td>🚩已完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://github.com/Moons-Project/tLoS">地图设计：白模与UE4</a></td>
+    </tr>
+    <tr>
+      <td>🚩已完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2022/09/13/ActionReferenceBoss/">动作设计：BOX与节奏</a></td>
+    </tr>
+    <tr>
+      <td>🏴‍☠️放弃了</td>
+      <td>游戏设计</td>
+      <td>AI深度学习</td>
+    </tr>
+    <tr>
+      <td>🚩已完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2023/04/01/GameMarket/">市场洞察</a></td>
+    </tr>
+  </tbody>
+</table>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="计划表-其四"><span class="heading-counter">5.</span><span class="heading-label">计划表-其四</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+<p><code class="language-plaintext highlighter-rouge">jskyzero</code> <code class="language-plaintext highlighter-rouge">2022/02/14</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>标签</th>
+      <th>课题</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🚩已完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2022/05/24/GameAISkill/">AI体系架构</a></td>
+    </tr>
+    <tr>
+      <td>🏴‍☠️待排期</td>
+      <td>游戏设计</td>
+      <td>AI深度学习</td>
+    </tr>
+    <tr>
+      <td>🏴‍☠️放弃了</td>
+      <td>游戏设计</td>
+      <td>MARKOV CHAIN</td>
+    </tr>
+    <tr>
+      <td>🚩半完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2021/11/20/mhwi/">PPT文章迁移</a></td>
+    </tr>
+    <tr>
+      <td>🚩半完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2020/08/31/gamefeeling/">补完《游戏感》</a></td>
+    </tr>
+    <tr>
+      <td>🚩已完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2022/02/15/game_design_ability/">游戏策划能力</a></td>
+    </tr>
+  </tbody>
+</table>
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="計劃表-其三后续"><span class="heading-counter">6.</span><span class="heading-label">計劃表-其三.后续</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+<p><code class="language-plaintext highlighter-rouge">jskyzero</code> <code class="language-plaintext highlighter-rouge">2021/08/20</code></p>
+
+<p>计划表二的完成情况，就很糟糕，所以这里计划表三会做出比较大的变动，具体就是不再涉及编程相关的内容，仅仅讨论设计相关。</p>
+
+<p>具体包括</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>标签</th>
+      <th>课题</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🚩已经完成</td>
+      <td>不务正业</td>
+      <td><a href="https://design.jskyzero.com/2021/11/14/possessiveness/">阅读《自制力》</a></td>
+    </tr>
+    <tr>
+      <td>🚩已经完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://https://design.jskyzero.com/recently/#%E6%A0%BC%E5%BC%8F">设计分析工具梳理：系统流转图</a></td>
+    </tr>
+    <tr>
+      <td>🚩已经完成</td>
+      <td>不务正业</td>
+      <td><a href="https://design.jskyzero.com/2021/08/26/self/#%E5%AD%A4%E8%BA%AB%E4%B8%80%E4%BA%BA%E2%80%94%E2%80%94%E5%85%B6%E5%8D%81%E5%85%AD">混吃等死之目标设定</a></td>
+    </tr>
+    <tr>
+      <td>🚩已经完成</td>
+      <td>不务正业</td>
+      <td><a href="https://design.jskyzero.com/2021/09/14/reading/#%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A">阅读《非暴力沟通》</a></td>
+    </tr>
+    <tr>
+      <td>🚩已经完成</td>
+      <td>不务正业</td>
+      <td><a href="https://design.jskyzero.com/2021/09/09/history-1/">阅读《高中历史-必修一》，制作历史年表</a></td>
+    </tr>
+    <tr>
+      <td>🚩已经完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2021/09/21/eastward/">游戏体验、设计分析《风来之国》</a></td>
+    </tr>
+    <tr>
+      <td>🚩已经完成</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2021/10/28/sekiro/">游戏体验、设计分析《SEKIRO》</a></td>
+    </tr>
+    <tr>
+      <td>🚩已经完成</td>
+      <td>不务正业</td>
+      <td>MoePicture.Electron 10%</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ## [計劃表-其三](https://docs.qq.com/sheet/DQUZHbE9TYVd3SFlI?tab=026ui2)
+`jskyzero` `2020/12/16` -->
+
+<!-- + 基础观念3：创新、沟通、学习、客户导向
++ 专业知识4：行业、理解、逻辑思维、关联知识
++ 专业技能8：规划、设计、数据分析、营销推广、危机预测、用户需求、用户管理、市场分析
++ 积累3：方法论、传承、培养 -->
+
+<!-- |时间|标签|课题|
+|--|--|--|
+|待定 待定|游戏设计|素材积累|
+|待定 待定|游戏设计|经济学入门|
+|待定 待定|游戏设计|心理学入门|
+|待定 待定|游戏设计|美学入门|
+|待定 待定|游戏设计|历史学入门|
+|待定 待定|引擎使用|UNREAL初步| -->
+
+<p>以下说明：</p>
+
+<ul>
+  <li>任何不能完成的计划都没有意义</li>
+  <li>当下不会做的事情以后也没法保证去做</li>
+  <li>游戏设计师不应该去玩游戏，而应该去分析游戏</li>
+</ul>
+
+<!-- 如何度过一天？
+早上：健身环、复习
+上午：工作
+中午：阅读
+下午：工作
+晚上：阅读，总结，健身环，生活 -->
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="計劃表-其二"><span class="heading-counter">7.</span><span class="heading-label">計劃表-其二</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+<p><code class="language-plaintext highlighter-rouge">jskyzero</code> <code class="language-plaintext highlighter-rouge">2019/06/25</code></p>
+
+<p>計劃表一到期了，趕緊開個計劃表二。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>标签</th>
+      <th>课题</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🚧2018/11/15 进行中</td>
+      <td>游戏设计</td>
+      <td><a href="https://github.com/Moons-Project/MarkovChain">Markov Chain</a></td>
+    </tr>
+    <tr>
+      <td>🏴‍☠️2019/03/21 待定</td>
+      <td>引擎使用</td>
+      <td><a href="https://github.com/Moons-Project/Unity.Graphics">Unity Shader</a></td>
+    </tr>
+    <tr>
+      <td>🏴‍☠️2019/10/25 待定</td>
+      <td>引擎使用</td>
+      <td><a href="https://github.com/oYOvOYo/Lua.Playground">Lua相关</a></td>
+    </tr>
+    <tr>
+      <td>🚩2019/10/25 2019/11/25</td>
+      <td>不务正业</td>
+      <td><a href="https://github.com/oYOvOYo/SpecialFont">Font Animation</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- |待定 待定|引擎使用|Graphics 2D & AI|
+|待定 待定|引擎使用|Graphics 3D & Physics|
+|待定 待定|游戏设计|经济学入门|
+|待定 待定|游戏设计|心理学入门|
+|待定 待定|游戏设计|美学入门|
+|待定 待定|游戏设计|历史学入门|
+|待定 待定|引擎使用|UNREAL初步| -->
+
+<!-- |2018/12/29 进行中|引擎使用|[Re:Release](https://moons-project.github.io/productions/)| -->
+
+<!-- 以下説明：
+
++ 想整理一下現在自己對編程方面的需求：
+  + Game Design / Implement
+    + GameEngine (UNITY/UNREAL, C#/C++/LUA)
+    + GameEngine Concept (OPENGL, C++)
+    + Pipeline Tool (Python, Shell)
+  + Other Programming
+    + GUI Apps (ELECTION/NATIVE APPS, TS/Others)
+    + Console Apps(FRONTEND / BACKEND, Others)
++ 在對設計層面：
+  + 自己也需要補充一些心理学、經濟學、美學（畫面構造）、歷史學等方面的知識。
+  + 參考一些之前的舊的藝術媒介，比如電影、繪畫、音樂等。
++ 推進方式
+  + 打算以日、周、月爲單位分別推進一些事情，周日常大概是主題，知識積纍：敘事、游戲體驗、文章閲讀等。 -->
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="計劃表-其一"><span class="heading-counter">8.</span><span class="heading-label">計劃表-其一</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+<p><code class="language-plaintext highlighter-rouge">jskyzero</code> <code class="language-plaintext highlighter-rouge">2018/11/15</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>标签</th>
+      <th>课题</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🏴‍☠️2019/05/15 进行中</td>
+      <td>引擎使用</td>
+      <td><a href="https://github.com/oYOvOYo/CLR.Via.CSharp">CLR Via C#</a></td>
+    </tr>
+    <tr>
+      <td>🏴‍☠️2018/11/15 进行中</td>
+      <td>游戏设计</td>
+      <td><a href="https://github.com/Moons-Project/Project.DL">Project.DL</a></td>
+    </tr>
+    <tr>
+      <td>🚩2019/05/25 2019/06/05</td>
+      <td>引擎使用</td>
+      <td><a href="https://github.com/oYOvOYo/Protobuf.CSharp.Example">Google Protobuf^</a></td>
+    </tr>
+    <tr>
+      <td>🚩2018/11/15 2019/03/05</td>
+      <td>引擎使用</td>
+      <td><a href="https://github.com/Moons-Project/Unity.ExtendEditor/tree/extend-editor.basic">Unity編輯器擴展^</a></td>
+    </tr>
+    <tr>
+      <td>🚩2019/02/05 2019/02/20</td>
+      <td>游戏设计</td>
+      <td><a href="https://design.jskyzero.com/2019/02/18/Excel/">Excel與表格字段設計^</a></td>
+    </tr>
+    <tr>
+      <td>🚩2018/12/15 2019/02/25</td>
+      <td>不务正业</td>
+      <td><a href="https://github.com/oYOvOYo/MoePicture.Electron">Electron &amp; React</a></td>
+    </tr>
+    <tr>
+      <td>🚩2019/01/15 2019/02/05</td>
+      <td>不务正业</td>
+      <td><a href="https://github.com/oYOvOYo/Cplusplus.TemplateMetaProgramming">模板元編程</a></td>
+    </tr>
+    <tr>
+      <td>🚩2019/04/01 2019/07/31</td>
+      <td>游戏设计</td>
+      <td><a href="https://www.google.com/search?q=體驗報告+site%3Adesign.jskyzero.com">日常遊戲體驗</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- 以下説明
+
++ 適用時間是即日起，到畢業正式工作為止。
++ 唔，目前是粗略的歸類成工作、游戲、編程三個模塊。
+  + 工作就主要是搬磚了。
+  + 游戲則包括游戲體驗、游戲設計和引擎使用，這一塊大概是未來的核心。
+  + 編程則主要是興趣愛好了，要説只能説是過去幾年做得太差還是要抽空給補起來，爲了更加高效的使用計算機，也爲了游戲中的引擎使用，目前看來包括基礎的計算機科學、編程語言或者其他的工具的使用。
+  + 另外考慮到可能的以後會被安排的一些工作，可以提前開展一些對應的課題。
++ 修改日誌
+    1. 2018/12/17：發覺以周為單位太高估自己，於是修改。另外功利的增加了一些課題。
+    2. 2019/03/05：發覺過去一些課題的完成度實在堪憂，仔細想想這也不是一個一蹴而就的東西，日後還需要完善。
+    3. 2019/04/13：总体上自己的完成度还是很成问题，各种层面上的成问题。
+    4. 2019/07/31：驚覺計劃快到期了，還沒做完，血炸。 -->
+
+<!-- ## 大體方向
+
+打算從兩個方面來講。
+
++ 設計者
+  + 目標：能設計出很棒的遊戲
+  + 具體方面：玩法：有趣的核心玩法；劇情：能打動人心的劇本故事；數值：合理的數值設計；系統：滿足需求的系統設計。
+  + 計劃：
+    + 「體驗」：體驗不同的遊戲并嘗試分析其內容，輸出體驗報告；
+    + 「設計」：嘗試設計出自己想做的遊戲并具體到每個細節，輸出策劃案；
+    + 「閱讀」：閱讀書籍，聽取他人意見，修正錯誤，輸出閱讀總結；
++ 實現者
+  + 目標：能實現出自己的想法，不會被“工具”所限制。
+  + 具體方面：遊戲引擎的使用、遊戲範式的實現、高級效果的實現
+  + 計劃：動手實踐，輸出成品。
+
+總之，加油吧，要做的事情還很多。
+
+
+## 具體事項 -->
+
+<!-- 
+大概是一直在嘴上説，還有很多想做的事情，所以這裏就把想做的事情大概枚舉一下。
+
++ 游戲相關：游戲設計與開發在相當長的範圍内都會是自己的飯碗相關的東西
+  + 收集與享受：把喜歡的游戲全部買買買、玩玩玩。
+  + 獨立游戲：上架一款“好評如潮”的獨立游戲。
+  + AAA游戲：參與製作一款AAA量級的游戲。 -->
+
+<!-- + 游戲製作人：成爲獨黨一面的游戲製作人。
++ 行業變革者：推動游戲行業向前進步。 -->
+
+<!-- + 編程相關
+  + 基礎數學：數學歷史與高等數學。
+  + 編程語言：若干種編程語言及其領域的熟練運用（面試與產品）。
+  + 計算機科學相關：傳統計算機科學學科深入理解與應用。 -->
+
+<p><!-- + 完整可用的操作系統：（虽然写上了但是不一定能做就是了） --></p>
+
+<!-- + 生活相關
+  + 樂器：鋼琴、小提琴。
+  + 繪畫：水彩、蠟筆畫。
+  + 健身：羽毛球、網球、武術、劍道。
+  + 純粹生活：著裝、烹飪 -->
+
+<!-- ## 落地相關
+
++ 時間安排
+  + 100小時入門，10000小時專業級別。
+  + 每天5小時，一周6天，一個月100小時，一年1000小時，10年。
++ 对于意义不大的单项，建议以100小时即一个月为单位。 -->
+
+</section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="备忘"><span class="heading-counter">9.</span><span class="heading-label">备忘</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
+
+<ul>
+  <li>游戏相关</li>
+</ul>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/others/about/1-480.webp 480w, /assets/generated/img/others/about/1-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/others/about/1.png" alt="" width="1036" height="1319" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+
+<ul>
+  <li>动画相关</li>
+</ul>
+
+<p><picture><source type="image/webp" srcset="/assets/generated/img/others/about/2-480.webp 480w, /assets/generated/img/others/about/2-760.webp 760w, /assets/generated/img/others/about/2-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/others/about/2.png" alt="" width="1305" height="1319" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+
+
+
+
+</section><div class="inline-outline toc-inline" id="toc-inline" hidden=""><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#计划表-其八">计划表-其八</a></li><li><a href="#计划表-其七">计划表-其七</a></li><li><a href="#计划表-其六">计划表-其六</a></li><li><a href="#计划表-其五">计划表-其五</a></li><li><a href="#计划表-其四">计划表-其四</a></li><li><a href="#計劃表-其三后续">計劃表-其三.后续</a></li><li><a href="#計劃表-其二">計劃表-其二</a></li><li><a href="#計劃表-其一">計劃表-其一</a></li><li><a href="#备忘">备忘</a></li></ul></nav></div><div class="git-log-window"><pre class="post-log post-content controls__inner git-log"><output>~: git log
+
+
+<img alt="Creative Commons License" src="/assets/img/CC.png">
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</output></pre></div>
+
+
+
+<div class="comment-guide git-log">
+  <p class="comment-guide__title">~: 你的看法很重要！</p>
+  <p class="comment-guide__text">读完这篇文章，你有什么新的想法、疑问，或者不同观点吗？</p>
+  <p class="comment-guide__text">欢迎在下方评论区分享你的故事、经验或建议。</p>
+  <p class="comment-guide__text">不管是几句话，还是长篇分析，都能让更多人受益！</p>
+  <p class="comment-guide__signature">😊我会认真阅读每一条留言。</p>
+</div>
+
+
+<div id="disqus_thread">
+</div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://design.jskyzero.com/project/';
+this.page.identifier = 'https://design.jskyzero.com/project/';
+};
+
+window.addEventListener('load', function () {
+var d = document, s = d.createElement('script');
+s.src = 'https://designer-notes.disqus.com/embed.js';
+s.async = true;
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+});
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+
+          </main>
+<footer class="site-footer">
+  <p class="site-footer__message">Enjoy :)</p>
+  <div class="site-footer__badges">
+    <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
+    <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
+  </div>
+  <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+</footer>
+</div>
+      </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
+          <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#计划表-其八">计划表-其八</a></li><li><a href="#计划表-其七">计划表-其七</a></li><li><a href="#计划表-其六">计划表-其六</a></li><li><a href="#计划表-其五">计划表-其五</a></li><li><a href="#计划表-其四">计划表-其四</a></li><li><a href="#計劃表-其三后续">計劃表-其三.后续</a></li><li><a href="#計劃表-其二">計劃表-其二</a></li><li><a href="#計劃表-其一">計劃表-其一</a></li><li><a href="#备忘">备忘</a></li></ul></nav>
+        </aside></div>
+    <script src="/assets/js/search.js" defer=""></script>
+    <script src="/assets/js/sidebar.js" defer=""></script>
+    <script src="/assets/js/toc-sidebar.js" defer=""></script>
+    <script src="/assets/js/post-format.js" defer=""></script>
+    <script src="/assets/js/header.js" defer=""></script>
+  
+
+</body></html>

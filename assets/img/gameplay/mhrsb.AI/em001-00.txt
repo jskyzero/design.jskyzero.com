@@ -1,0 +1,140 @@
+├─flow
+│      predator relevant action
+│      
+├─hub
+│  │  arrange
+│  │  arrange hyakuryu
+│  │  arrange normal
+│  │  attack stance flash
+│  │  attack stance flash hyakuryu
+│  │  attack stance no target routine
+│  │  attack stance out main zone
+│  │  attack stance return blockcenter routine
+│  │  attack stance same main
+│  │  attack stance same main down floor
+│  │  attack stance same main down wall
+│  │  attack stance same main high
+│  │  attack stance same main master
+│  │  attack stance same main up floor
+│  │  attack stance same main up wall
+│  │  bindwire routine
+│  │  block move basic
+│  │  block move main
+│  │  block move viapoint
+│  │  cancel
+│  │  cancel angerbegin routine
+│  │  cancel continuecombat routine
+│  │  cancel flashend routine
+│  │  cancel leadbegin routine
+│  │  cancel mysterymaximumactivityreleasefailed routine
+│  │  cancel tiredbegin routine
+│  │  cancel tiredend routine
+│  │  caution
+│  │  combat main
+│  │  demon puppet
+│  │  demon puppet stand
+│  │  exit normal routine
+│  │  flash routine
+│  │  grapple
+│  │  grapple cancel
+│  │  hyakuryu adaptertarget stance routine
+│  │  hyakuryu exitdamage stance routine
+│  │  hyakuryu exit damage
+│  │  hyakuryu exit routine
+│  │  hyakuryu floordownpl stance routine
+│  │  hyakuryu forttarget stance routine
+│  │  hyakuryu routine
+│  │  lead
+│  │  lead block move stance
+│  │  lead follow player main zone
+│  │  lead follow player out main
+│  │  lead lost stance
+│  │  lead main
+│  │  map meat eat
+│  │  marionetteOther routine
+│  │  marionette attack routine
+│  │  marionette routine
+│  │  mario attack stance routine
+│  │  meat eat routine
+│  │  object contact
+│  │  predator relevant main
+│  │  relation in main
+│  │  relation out main
+│  │  return block center
+│  │  same main quest routine
+│  │  self sleep
+│  │  set meat eat
+│  │  sp combatmonster routine
+│  │  target em combat
+│  │  target em escape
+│  │  target em grapplebegin
+│  │  target em routine
+│  │  think loop block
+│  │  think loop block mode
+│  │  walk around in block
+│  │  wire stance routine
+│  │  wire stance routine hyakuryu
+│  │  
+│  ├─damage
+│  │  ├─fly
+│  │  │      fly element weak damage
+│  │  │      fly em2em damage
+│  │  │      fly flash damage
+│  │  │      fly gimmick damage
+│  │  │      fly high parts damage
+│  │  │      fly marionette damage
+│  │  │      fly multi parts damage
+│  │  │      fly mystery maximum activity release damage
+│  │  │      fly paralyze damage
+│  │  │      fly parts break damage
+│  │  │      fly parts damage
+│  │  │      fly parts loss damage
+│  │  │      fly sleep damage
+│  │  │      fly stamina damage
+│  │  │      fly steel fang damage
+│  │  │      fly stun damage
+│  │  │      fly trap damage
+│  │  │      
+│  │  └─stand
+│  │          stand element weak damage
+│  │          stand em2em damage
+│  │          stand flash damage
+│  │          stand gimmick damage
+│  │          stand high parts damage
+│  │          stand marionette damage
+│  │          stand multi parts damage
+│  │          stand mystery maximum activity release damage
+│  │          stand paralyze damage
+│  │          stand parts break damage
+│  │          stand parts damage
+│  │          stand parts loss damage
+│  │          stand sleep damage
+│  │          stand stamina damage
+│  │          stand steel fang damage
+│  │          stand stun damage
+│  │          stand trap damage
+│  │          
+│  └─die
+│      ├─fly
+│      │      fly capture
+│      │      fly normal die
+│      │      
+│      └─stand
+│              stand capture
+│              stand normal die
+│              
+└─think
+        damage
+        die
+        fly damage
+        fly die
+        hyakuryu exit
+        hyakuryu exit damage
+        main
+        mario direct
+        mode
+        nonCombat
+        normal exit
+        stand damage
+        stand die
+        think interrupt
