@@ -13,6 +13,7 @@
 # ============================================================
 
 require 'open3'
+require 'pathname'
 
 module Jekyll
   module Revision
@@ -46,22 +47,32 @@ module Jekyll
       end
 
       # 返回修订记录数组：[{ date, author, message }, ...]
-      # 若条目过多则截断，保留最近记录 + 最早若干条 + 省略标记
+      # 仅取最近 max_count 条；若历史更长，末尾追加省略标记。
       def revisions
         return nil unless is_git_repo?
-        truncate(all_revisions)
+        return nil if all_revisions.empty?
+
+        if total_count > all_revisions.length
+          all_revisions + [{
+            "date"    => nil,
+            "author"  => nil,
+            "message" => "...",
+            "omitted" => true
+          }]
+        else
+          all_revisions
+        end
       end
 
       # 返回修订摘要：首次创建日期、最后修改日期、总次数
       def summary
         return nil unless is_git_repo?
-        revisions = all_revisions
-        return nil if revisions.empty?
+        return nil if all_revisions.empty?
 
         {
-          "created_at" => revisions.last["date"],
-          "updated_at" => revisions.first["date"],
-          "count" => revisions.length
+          "created_at" => all_revisions.last["date"],
+          "updated_at" => all_revisions.first["date"],
+          "count" => total_count
         }
       end
 
@@ -72,18 +83,15 @@ module Jekyll
         config['max_count'] || 20
       end
 
-      # 获取的条目总数（默认 1000），用于生成摘要时统计
-      def fetch_count
-        config['fetch_count'] || 1000
-      end
-
-      # 获取全部修订记录（带缓存）
+      # 获取最近 max_count 条修订记录（仅用于展示，早停，避免全量拉取）
       def all_revisions
         @all_revisions ||= begin
           logs = Executor.sh('git', 'log', '--follow',
                 '--pretty=%ci|%an|%s',
-                '--max-count=' + fetch_count.to_s,
+                '--max-count=' + max_count.to_s,
                 relative_path_from_git_dir)
+          return [] if logs.nil? || logs.empty?
+
           logs.lines.map do |line|
             parts = line.split('|')
             {
@@ -95,18 +103,13 @@ module Jekyll
         end
       end
 
-      # 截断过长的修订记录：保留最近 N-3 条 + "..." 省略 + 最早 3 条
-      def truncate(revisions)
-        return revisions if revisions.length <= max_count
-
-        oldest_count = 3
-        recent_count = [max_count - oldest_count, 1].max
-        revisions.first(recent_count) + [{
-          "date"    => nil,
-          "author"  => nil,
-          "message" => "...",
-          "omitted" => true
-        }] + revisions.last(oldest_count)
+      # 总修改次数：用 rev-list --count 精确计数（无 max-count 截断）。
+      # 注意 rev-list 不做 rename 追踪，重命名过的文件计数可能偏小。
+      def total_count
+        @total_count ||= begin
+          count = Executor.sh('git', 'rev-list', '--count', 'HEAD', '--', relative_path_from_git_dir)
+          (count && !count.empty?) ? count.to_i : all_revisions.length
+        end
       end
 
       # 检查当前目录是否位于 Git 仓库中
@@ -147,9 +150,13 @@ module Jekyll
 
     # Shell 命令执行器
     module Executor
+      # 执行命令并返回 stdout/stderr（合并后去空白）；
+      # 命令失败（非零退出码）时返回 nil，由调用方决定如何处理。
       def self.sh(*args)
         Open3.popen2e(*args) do |stdin, stdout_stderr, wait_thr|
           output = stdout_stderr.read
+          status = wait_thr.value
+          return nil unless status.success?
           output ? output.strip : nil
         end
       end

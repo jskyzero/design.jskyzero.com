@@ -31,3 +31,6 @@ gem "webrick", "~> 1.7"
 gem "jekyll-mermaid", "~> 1.0"
 gem 'jekyll-sass-converter', "~> 3.1"
 gem 'jekyll-seo-tag'
+
+# 用于在构建期对渲染后的 HTML 做可靠的 DOM 处理（标题编号/分节/TOC）
+gem "nokogiri", "~> 1.16"

@@ -1,6 +1,7 @@
 name: 🚀 触发 GDC.ACT 构建
 
 on:
+  workflow_dispatch: # 手动触发（始终可用，不受下方开关影响）
   push:
     branches:
       - jekyll # 监控的分支
@@ -11,11 +12,15 @@ jobs:
   trigger:
     name: 发送 Repository Dispatch
     runs-on: ubuntu-latest
+    # 自动触发开关：
+    #   在仓库 Settings → Secrets and variables → Actions → Variables
+    #   新建变量 GDC_TRIGGER_ENABLED 并设为 true 即开启 push 自动触发；
+    #   未设置该变量（或设为其他值）时自动触发默认关闭。
+    if: github.event_name == 'workflow_dispatch' || vars.GDC_TRIGGER_ENABLED == 'true'
     steps:
       - name: 触发远程仓库构建
-        # 使用 peter-evans 的 action 替代复杂的 curl 命令
         uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ secrets.GDC_PAT }}
+          token: "${{ secrets.GDC_PAT }}"
           repository: jskyzero/GDC.ACT
           event-type: trigger-build

@@ -1,4 +1,5 @@
 encoding: utf-8
+lang: zh-CN
 
 title: 设计者笔记
 email: jskyzero@outlook.com
@@ -76,6 +77,11 @@ plugins:
 mermaid:
   src: '/assets/js/mermaid.min.js'
 
+# 字体 CDN 地址集中管理，避免散落的魔法 URL
+fonts:
+  cjk_css: "https://fontsapi.zeoseven.com/159/main/result.css"
+  mono_css: "https://fonts.bunny.net/css?family=jetbrains-mono:400&display=swap"
+
 layouts_dir: _theme/_layouts
 includes_dir: _theme/_includes
 plugins_dir: _theme/_plugins
@@ -91,7 +97,6 @@ highlighter: rouge
 permalink: /:year/:month/:day/:title/
 
 exclude:
-  - _posts/日常
   - README.md
   - node_modules
   - package.json
@@ -101,5 +106,3 @@ exclude:
   - Gemfile.lock
   - vendor
   - npm-debug.log
-  - gulpfile.js
-  - sleek.jpg

@@ -25,10 +25,9 @@ layout: null
         </div>
       </div>
       {%- if page.layout == 'post' or page.layout == 'page' -%}
-        {%- assign sidebar_toc_content = page.content | markdownify -%}
         <aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录">
-            {% include toc.html html=sidebar_toc_content sanitize=true h_min=1 h_max=4 %}
+            <!-- 目录由 _theme/_plugins/section_processor.rb 在构建期填充 -->
           </nav>
         </aside>
       {%- else -%}

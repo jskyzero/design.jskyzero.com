@@ -26,7 +26,8 @@ jobs:
           # cache: 'pip' # 开启 pip 缓存
 
       - name: 安装依赖
-        run: pip install requests
+        # 锁定版本以保证可复现构建
+        run: pip install "requests==2.32.3"
 
       - name: 运行同步脚本
         env:

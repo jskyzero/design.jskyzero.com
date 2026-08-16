@@ -3,14 +3,13 @@ layout: default
 ---
 {% comment %}
   post.html —— 文章布局。
-  
-  通过 sectioned-content.html 在构建时插入 PRO 元数据 badge
-  和内联目录（紧接第一个 h1 之后）。
+
+  标题编号、章节卡片、PRO 元数据 badge 与内联目录，
+  由 _theme/_plugins/section_processor.rb 在构建期（post_render）
+  对渲染后的 HTML 统一处理。
   附带 Git 修订记录和 Disqus 评论区。
 {% endcomment %}
-{% assign article_content = content %}
-
-{% include sectioned-content.html html=article_content pro_html=content toc=true %}
+{{ content }}
 
 {% include log.html %}
 

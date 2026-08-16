@@ -2,7 +2,6 @@
 .bundle
 vendor
 .sass-cache
-Gemfile.lock
 .jekyll-cache
 .jekyll-metadata
 node_modules
@@ -12,5 +11,3 @@ _data/responsive_images.json
 _site
 *.drawio.bkp
 *.drawio.dtmp
-# Gemfile.lock excluded (can't compile native gems in this env)
-Gemfile.lock
