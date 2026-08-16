@@ -53,24 +53,11 @@ jobs:
       # 部署类步骤仅在实际 push 到 jekyll 分支时执行，避免 PR 触发发布。
       - name: 部署到 gh-pages 分支
         if: github.event_name == 'push' && github.ref == 'refs/heads/jekyll'
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        run: |
-          set -euo pipefail
-          SITE_DIR="$GITHUB_WORKSPACE/_site"
-          # 阻止 GitHub Pages 对已构建产物做二次 Jekyll 处理
-          touch "$SITE_DIR/.nojekyll"
-          cd "$SITE_DIR"
-          git init -q
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "站点无变更，跳过部署。"
-            exit 0
-          fi
-          git commit -q -m "deploy: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-          git push -f -q "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
 
       - name: 同步至远程服务器 (SSH)
         if: github.event_name == 'push' && github.ref == 'refs/heads/jekyll'
@@ -80,10 +67,9 @@ jobs:
           username: "${{ secrets.USERNAME }}"
           port: "${{ secrets.PORT }}"
           key: "${{ secrets.SSHKEY }}"
-          # 服务器强制同步到远程 jekyll 分支。
-          # 用 fetch + reset --hard 代替 git pull，避免服务器本地
-          # 与远程分支出现 divergent 时 git pull 报错退出。
+          # 服务器为 nginx 静态托管，同步 gh-pages 分支的构建产物。
+          # fetch + reset --hard 强制对齐，避免 divergent 报错。
           script: |
             cd "${{ secrets.PROJECT_PATH }}"
-            git fetch origin jekyll
-            git reset --hard origin/jekyll
+            git fetch origin gh-pages
+            git reset --hard origin/gh-pages
