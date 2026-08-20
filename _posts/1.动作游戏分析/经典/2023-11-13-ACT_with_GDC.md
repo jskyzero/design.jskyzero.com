@@ -13,6 +13,22 @@ categories: [动作游戏设计]
 
 GDC和其他地方动作游戏的分享
 
+> 重要的话说三遍
+
+> 
+> 2026年8月20日 Update：本页面将停止维护，请访问[动作游戏设计知识库.AI驱动](https://jskyzero.github.io/ActionGameDesign.ByAI/)，知识库首发50+分享，已经包括了本页面的全部文章，且更具有进步性。
+> 
+
+> 
+> 2026年8月20日 Update：本页面将停止维护，请访问[动作游戏设计知识库.AI驱动](https://jskyzero.github.io/ActionGameDesign.ByAI/)，知识库首发50+分享，已经包括了本页面的全部文章，且更具有进步性。
+> 
+
+> 
+> 2026年8月20日 Update：本页面将停止维护，请访问[动作游戏设计知识库.AI驱动](https://jskyzero.github.io/ActionGameDesign.ByAI/)，知识库首发50+分享，已经包括了本页面的全部文章，且更具有进步性。
+> 
+
+
+
 <!--
 ---
 layout: section

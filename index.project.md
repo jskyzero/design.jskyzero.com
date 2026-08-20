@@ -23,7 +23,7 @@ permalink: /project/
 
 |时间|标签|课题|
 |--|--|--|
-|进行中|游戏设计|机制设计-洛克王国|
+|🚩已完成|游戏设计|[动作游戏设计知识库.AI驱动](https://jskyzero.github.io/ActionGameDesign.ByAI/)|
 |进行中|游戏设计|动作游戏中的节奏感|
 
 
