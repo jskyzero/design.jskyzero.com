@@ -616,18 +616,34 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img id="hits-badge" alt="hits" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
-  <p class="site-footer__visits">
-    <!-- busuanzi（不蒜子）站点访问量统计，脚本加载成功后填充数字并显示 -->
-    <span id="busuanzi_container_site_pv" style="display:none">
-      <span style="color: green">hits</span>
-      <span id="busuanzi_value_site_pv" style="color: green"></span>
-    </span>
-  </p>
 </footer>
-<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
+  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
+  (function () {
+    var img = document.getElementById('hits-badge');
+    if (!img) return;
+    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
+    window[cb] = function (data) {
+      try {
+        var pv = data && data.site_pv;
+        if (pv) {
+          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
+          img.style.display = '';
+        }
+      } finally {
+        delete window[cb];
+      }
+    };
+    var s = document.createElement('script');
+    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
+    document.body.appendChild(s);
+  })();
+</script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#headers">Headers</a></li></ul><ul><li><a href="#h1">H1</a><ul><li><a href="#h2">H2</a><ul><li><a href="#h3">H3</a><ul><li><a href="#h4">H4</a></li></ul></li></ul></li></ul></li><li><a href="#alt-h1">Alt-H1</a><ul><li><a href="#alt-h2">Alt-H2</a></li><li><a href="#emphasis">Emphasis</a></li><li><a href="#lists">Lists</a></li><li><a href="#links">Links</a></li><li><a href="#images">Images</a></li><li><a href="#code-and-syntax-highlighting">Code and Syntax Highlighting</a></li><li><a href="#tables">Tables</a></li><li><a href="#blockquotes">Blockquotes</a></li><li><a href="#inline-html">Inline HTML</a></li><li><a href="#horizontal-rule">Horizontal Rule</a></li><li><a href="#line-breaks">Line Breaks</a></li><li><a href="#youtube-videos">Youtube videos</a></li></ul></li></ul></nav>

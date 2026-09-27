@@ -669,18 +669,34 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img id="hits-badge" alt="hits" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
-  <p class="site-footer__visits">
-    <!-- busuanzi（不蒜子）站点访问量统计，脚本加载成功后填充数字并显示 -->
-    <span id="busuanzi_container_site_pv" style="display:none">
-      <span style="color: green">hits</span>
-      <span id="busuanzi_value_site_pv" style="color: green"></span>
-    </span>
-  </p>
 </footer>
-<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
+  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
+  (function () {
+    var img = document.getElementById('hits-badge');
+    if (!img) return;
+    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
+    window[cb] = function (data) {
+      try {
+        var pv = data && data.site_pv;
+        if (pv) {
+          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
+          img.style.display = '';
+        }
+      } finally {
+        delete window[cb];
+      }
+    };
+    var s = document.createElement('script');
+    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
+    document.body.appendChild(s);
+  })();
+</script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#gdc动作游戏分享精选">GDC动作游戏分享精选</a><ul><li><a href="#capcom">Capcom</a><ul><li><a href="#2017-街霸-5">2017-街霸 5</a></li><li><a href="#2018-怪物猎人世界">2018-怪物猎人世界</a></li><li><a href="#2019-鬼泣5">2019-鬼泣5</a></li></ul></li><li><a href="#platinumgames">PlatinumGames</a><ul><li><a href="#2016-无国界act">2016-无国界ACT</a></li><li><a href="#2018-尼尔">2018-尼尔</a></li></ul></li><li><a href="#santa-monica-studio">Santa Monica Studio</a><ul><li><a href="#2019-战神-战斗系统">2019-战神-战斗系统</a></li><li><a href="#2019-战神-关卡">2019-战神-关卡</a></li><li><a href="#2019-战神-重启">2019-战神-重启</a></li><li><a href="#2023-战神-ai">2023-战神-AI</a></li></ul></li><li><a href="#ftg-相关">FTG 相关</a><ul><li><a href="#2014-骷髅女孩">2014-骷髅女孩</a></li><li><a href="#2015-骷髅女孩">2015-骷髅女孩</a></li><li><a href="#2015-罪恶装备-xrd">2015-罪恶装备 Xrd</a></li><li><a href="#2019-ftg-10年来的易玩性">2019-FTG 10年来的易玩性</a></li></ul></li><li><a href="#其他">其他</a><ul><li><a href="#2017-仁王">2017-仁王</a></li><li><a href="#2015-血源">2015-血源</a></li></ul></li><li><a href="#nintendo">Nintendo</a><ul><li><a href="#1999-宫本茂">1999-宫本茂</a></li><li><a href="#2005-岩田聪">2005-岩田聪</a></li><li><a href="#2017-zeldabotw">2017-Zelda:BotW</a></li></ul></li><li><a href="#非-gdc">非 GDC</a><ul><li><a href="#知久-温-关卡设计术语">知久 温-关卡设计术语</a></li><li><a href="#徳田优也-mhw-设计">徳田优也-MHW 设计</a></li><li><a href="#迪士尼-动画的12个原则">迪士尼-动画的12个原则</a></li><li><a href="#河森正治-原创性">河森正治-原创性</a></li></ul></li><li><a href="#设计者笔记">设计者笔记</a><ul><li><a href="#动作游戏的本质">动作游戏的本质</a></li><li><a href="#动作游戏设计的-sss-方法">动作游戏设计的 SSS 方法</a></li><li><a href="#dota2-的机制设计">DOTA2 的机制设计</a></li></ul></li></ul></li></ul></nav>

@@ -669,18 +669,34 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img id="hits-badge" alt="hits" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
-  <p class="site-footer__visits">
-    <!-- busuanzi（不蒜子）站点访问量统计，脚本加载成功后填充数字并显示 -->
-    <span id="busuanzi_container_site_pv" style="display:none">
-      <span style="color: green">hits</span>
-      <span id="busuanzi_value_site_pv" style="color: green"></span>
-    </span>
-  </p>
 </footer>
-<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
+  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
+  (function () {
+    var img = document.getElementById('hits-badge');
+    if (!img) return;
+    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
+    window[cb] = function (data) {
+      try {
+        var pv = data && data.site_pv;
+        if (pv) {
+          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
+          img.style.display = '';
+        }
+      } finally {
+        delete window[cb];
+      }
+    };
+    var s = document.createElement('script');
+    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
+    document.body.appendChild(s);
+  })();
+</script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#动作设计参考">动作设计参考</a><ul><li><a href="#new">NEW</a><ul><li><a href="#街霸vi">街霸VI</a></li><li><a href="#艾尔登法环">艾尔登法环</a></li><li><a href="#地平线2-西之绝境">地平线2 西之绝境</a></li></ul></li><li><a href="#常规">常规</a><ul><li><a href="#dnf">DNF</a></li><li><a href="#无双">无双</a><ul><li><a href="#鬼泣">鬼泣</a></li><li><a href="#战神">战神</a></li><li><a href="#猎天使魔女">猎天使魔女</a></li><li><a href="#忍者龙剑传">忍者龙剑传</a></li></ul></li><li><a href="#仁王">仁王</a></li><li><a href="#怪物猎人">怪物猎人</a></li><li><a href="#黑暗之魂">黑暗之魂</a></li><li><a href="#白金工作室">白金工作室</a></li><li><a href="#其他">其他</a></li></ul></li><li><a href="#手游">手游</a><ul><li><a href="#崩坏3">崩坏3</a></li><li><a href="#战双">战双</a></li><li><a href="#原神">原神</a></li></ul></li></ul></li></ul></nav>

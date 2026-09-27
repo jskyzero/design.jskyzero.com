@@ -544,18 +544,34 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img id="hits-badge" alt="hits" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
-  <p class="site-footer__visits">
-    <!-- busuanzi（不蒜子）站点访问量统计，脚本加载成功后填充数字并显示 -->
-    <span id="busuanzi_container_site_pv" style="display:none">
-      <span style="color: green">hits</span>
-      <span id="busuanzi_value_site_pv" style="color: green"></span>
-    </span>
-  </p>
 </footer>
-<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
+  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
+  (function () {
+    var img = document.getElementById('hits-badge');
+    if (!img) return;
+    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
+    window[cb] = function (data) {
+      try {
+        var pv = data && data.site_pv;
+        if (pv) {
+          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
+          img.style.display = '';
+        }
+      } finally {
+        delete window[cb];
+      }
+    };
+    var s = document.createElement('script');
+    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
+    document.body.appendChild(s);
+  })();
+</script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#零碎汇总-體驗報告">零碎汇总 體驗報告</a><ul><li><a href="#格式">格式</a></li><li><a href="#mhr-demo">MHR DEMO</a></li><li><a href="#demons-souls">Demon’s Souls</a></li><li><a href="#cyberpunk-2077">Cyberpunk 2077</a></li><li><a href="#nioh2">NIOH2</a></li><li><a href="#mhwib">MHW:IB</a></li><li><a href="#final-fantasy-vii">Final Fantasy VII</a></li><li><a href="#mhgu">MHGU</a></li><li><a href="#風之旅人--journey">風之旅人 / Journey</a></li><li><a href="#死亡擱淺--death-stranding">死亡擱淺 / DEATH STRANDING</a></li><li><a href="#寶可夢劍--pokémon-sword">寶可夢劍 / Pokémon Sword</a></li><li><a href="#異界鎖鏈--astral-chain">異界鎖鏈 / ASTRAL CHAIN</a></li><li><a href="#進化之地--evoland">進化之地 / Evoland</a></li><li><a href="#鬼泣5--devil-may-cry-5">鬼泣5 / Devil May Cry 5</a></li><li><a href="#只狼--sekiro">只狼 / Sekiro</a></li><li><a href="#王者榮耀--honor-of-kings">王者榮耀 / Honor of Kings</a></li><li><a href="#心之卡比新星聯盟--kirby-star-allies">心之卡比：新星聯盟 / Kirby Star Allies</a></li><li><a href="#inside">INSIDE</a></li><li><a href="#上古卷軸v天際--the-elder-scrolls-v-skyrim-special-edition">上古卷軸V天際 / The Elder Scrolls V: Skyrim Special Edition</a></li><li><a href="#侍魂朧月傳說">侍魂：朧月傳說</a></li><li><a href="#圍攻--besiege">圍攻 / Besiege</a></li><li><a href="#超級馬里奧奧德賽--super-mario-odyssey">超級馬里奧：奧德賽 / Super Mario Odyssey</a></li><li><a href="#刀塔-2--dota-2">刀塔 2 / DOTA 2</a></li><li><a href="#古墓麗影崛起--rise-of-the-tomb-raider">古墓麗影：崛起 / Rise of the Tomb Raider</a></li><li><a href="#獵天使魔女-2--bayonetta-2">獵天使魔女 2 / Bayonetta 2</a></li></ul></li></ul></nav>

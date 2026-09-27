@@ -833,18 +833,34 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
+    <img id="hits-badge" alt="hits" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
-  <p class="site-footer__visits">
-    <!-- busuanzi（不蒜子）站点访问量统计，脚本加载成功后填充数字并显示 -->
-    <span id="busuanzi_container_site_pv" style="display:none">
-      <span style="color: green">hits</span>
-      <span id="busuanzi_value_site_pv" style="color: green"></span>
-    </span>
-  </p>
 </footer>
-<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
+  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
+  (function () {
+    var img = document.getElementById('hits-badge');
+    if (!img) return;
+    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
+    window[cb] = function (data) {
+      try {
+        var pv = data && data.site_pv;
+        if (pv) {
+          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
+          img.style.display = '';
+        }
+      } finally {
+        delete window[cb];
+      }
+    };
+    var s = document.createElement('script');
+    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
+    document.body.appendChild(s);
+  })();
+</script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#机制设计以dota2中的25种状态效果为例">机制设计——以Dota2中的25种状态效果为例</a><ul><li><a href="#前言机制设计与dota2">前言：机制设计与DOTA2</a><ul><li><a href="#mda理论与机制设计">MDA理论与机制设计</a></li><li><a href="#困难的机制设计">困难的机制设计</a></li><li><a href="#dota2与机制的关系">Dota2与机制的关系</a><ul><li><a href="#为什么是dota2">为什么是Dota2</a></li><li><a href="#为什么讨论状态机制">为什么讨论状态机制</a></li></ul></li></ul></li><li><a href="#从眩晕状态开始">从“眩晕”状态开始</a><ul><li><a href="#状态的基础效果">状态的基础效果</a><ul><li><a href="#眩晕-无法移动和执行任何动作">眩晕-无法移动和执行任何动作</a></li><li><a href="#眩晕-打断当前动作">眩晕-打断当前动作</a></li></ul></li><li><a href="#状态之间叠加">状态之间叠加</a><ul><li><a href="#眩晕-重复叠加时取效果最强">眩晕-重复叠加时（取效果最强）</a></li></ul></li><li><a href="#提前结束状态驱散">提前结束状态：驱散</a></li><li><a href="#加速状态的流逝状态抗性">加速状态的流逝：状态抗性</a></li></ul></li><li><a href="#更多的状态效果">更多的状态效果</a><ul><li><a href="#从归类开始">从归类开始</a></li><li><a href="#状态效果的根基">状态效果的根基</a></li><li><a href="#单维度效果类">单维度效果类</a><ul><li><a href="#移动指令">移动指令</a></li><li><a href="#技能">技能</a></li><li><a href="#普通攻击">普通攻击</a></li><li><a href="#物品">物品</a></li><li><a href="#被动技能">被动技能</a></li></ul></li><li><a href="#复合效果类">复合效果类</a><ul><li><a href="#常规复合">常规复合</a></li><li><a href="#强制行为">强制行为</a></li><li><a href="#总结禁止类控制技能">总结——禁止类控制技能</a></li></ul></li><li><a href="#基础属性类">基础属性类</a><ul><li><a href="#移动速度">移动速度</a></li><li><a href="#移动速度极端化">移动速度（极端化）</a></li><li><a href="#攻击">攻击</a></li><li><a href="#基础属性">基础属性</a></li><li><a href="#无敌">无敌</a></li></ul></li></ul></li><li><a href="#简要总结">简要总结</a><ul><li><a href="#设计方法论要素-x-方式">设计方法论：要素 X 方式</a></li><li><a href="#对抗与涌现的乐趣">对抗与涌现的乐趣</a></li></ul></li><li><a href="#附录dota2的美学实现速览">附录：DOTA2的美学实现速览</a><ul><li><a href="#少就是多的动画">少就是多的动画</a></li><li><a href="#出现即巅峰的特效">出现即巅峰的特效</a></li></ul></li></ul></li></ul></nav>
