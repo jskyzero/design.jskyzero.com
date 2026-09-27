@@ -1078,7 +1078,15 @@ s.setAttribute('data-timestamp', +new Date());
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
+  <p class="site-footer__visits">
+    <!-- busuanzi（不蒜子）站点访问量统计，脚本加载成功后填充数字并显示 -->
+    <span id="busuanzi_container_site_pv" style="display:none">
+      <span style="color: green">hits</span>
+      <span id="busuanzi_value_site_pv" style="color: green"></span>
+    </span>
+  </p>
 </footer>
+<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#拆包看狮子猿ai设计">拆包看狮子猿AI设计</a><ul><li><a href="#相关阅读">相关阅读</a></li><li><a href="#初步的体验反推">初步的体验反推</a><ul><li><a href="#交错比例与招式cd">交错比例与招式CD</a></li><li><a href="#用行为树的简单拟合">用行为树的简单拟合</a></li><li><a href="#小结一定收获但局限">小结：一定收获但局限</a></li></ul></li><li><a href="#基于lua的架构设计">基于LUA的架构设计</a><ul><li><a href="#决策与逻辑分离">决策与逻辑分离</a><ul><li><a href="#高效复用">高效复用</a></li><li><a href="#分离逻辑">分离逻辑</a></li></ul></li><li><a href="#带条件检测的行为队列">带条件检测的行为队列</a><ul><li><a href="#行为队列">行为队列</a></li><li><a href="#条件检测的时效性">条件检测的时效性</a></li></ul></li><li><a href="#其他架构逻辑">其他架构逻辑</a><ul><li><a href="#行为概率与行为cd">行为概率与行为CD</a></li><li><a href="#信息感知与标记buff">信息感知与标记BUFF</a></li><li><a href="#计时器角色变量事件与打断">计时器/角色变量/事件与打断</a></li><li><a href="#封装">封装</a></li></ul></li><li><a href="#小结思路与格局打开">小结：思路与格局打开</a></li></ul></li><li><a href="#感受与细节设计">感受与细节设计</a><ul><li><a href="#行为逻辑">行为逻辑</a><ul><li><a href="#act01-96-r2230003001">Act01 9.6-R(2.2);3000;3001</a></li><li><a href="#act02-92-r22300334-3004">Act02 9.2-R(2.2);3003;3.4-&gt;3004</a></li><li><a href="#act03-268-r223008">Act03 26.8-R(2.2);…;3008</a></li><li><a href="#act04-以后">Act04 以后</a></li><li><a href="#简要小结">简要小结</a></li></ul></li><li><a href="#主决策逻辑">主决策逻辑</a><ul><li><a href="#前置行为">前置行为</a></li><li><a href="#决策部分-外围">决策部分-外围</a></li><li><a href="#决策部分-event1-10-or-1--1">决策部分-Event(1) 10 or 1 == 1</a></li><li><a href="#决策部分-默认">决策部分-默认</a></li><li><a href="#后置行为">后置行为</a></li></ul></li><li><a href="#剑戟弹刀逻辑等">剑戟（弹刀）逻辑等</a></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#全文总结">全文总结</a></li></ul></li></ul></nav>
