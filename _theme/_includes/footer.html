@@ -1,8 +1,8 @@
 {% comment %}
   footer.html —— 站点页脚。
-  
+
   将徽章排列在一行，形成紧凑的状态行末端风格。
-  包含 GitHub 最后提交、Clarity 统计和版权信息。
+  包含 GitHub 最后提交、Clarity 统计、busuanzi 访问量统计和版权信息。
 {% endcomment %}
 <footer class="site-footer">
   <p class="site-footer__message">{{ site.footer }}</p>
@@ -12,4 +12,12 @@
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">&copy; 2017-{{ site.time | date: '%Y' }} {{ site.title | escape }}. All rights reserved.</p>
+  <p class="site-footer__visits">
+    <!-- busuanzi（不蒜子）站点访问量统计，脚本加载成功后填充数字并显示 -->
+    <span id="busuanzi_container_site_pv" style="display:none">
+      <span style="color: green">hits</span>
+      <span id="busuanzi_value_site_pv" style="color: green"></span>
+    </span>
+  </p>
 </footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
