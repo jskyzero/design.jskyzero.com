@@ -1,46 +1,60 @@
-# ============================================================
-# Jekyll 插件：响应式图片替换
-#
-# 在构建完成后扫描页面输出的 <img> 标签，将其替换为
-# <picture> 元素，包含 WebP 格式的 srcset 响应式变体。
-#
-# 依赖：
-#   - _data/responsive_images.json（由 npm run images 生成）
-#   - 跳过 logo 和 CC 图标等固定小图
-# ============================================================
-
+# 响应式图片：保留原 img 属性，每轮构建只读取一次清单。
 require "json"
+require "nokogiri"
+
+module Jekyll
+  module ResponsiveImages
+    def self.manifest(site)
+      cached = site.instance_variable_get(:@responsive_images_manifest)
+      return cached unless cached.nil?
+      file = site.in_source_dir("_data", "responsive_images.json")
+      data = File.exist?(file) ? JSON.parse(File.read(file)) : {}
+      site.instance_variable_set(:@responsive_images_manifest, data)
+    end
+  end
+end
+
+# serve 重建时清空缓存，让新生成的清单生效。
+Jekyll::Hooks.register :site, :after_reset do |site|
+  site.instance_variable_set(:@responsive_images_manifest, nil)
+end
 
 Jekyll::Hooks.register [:posts, :pages], :post_render do |doc|
   next unless doc.output&.include?("<img")
-
-  manifest_path = doc.site.in_source_dir("_data", "responsive_images.json")
-  next unless File.exist?(manifest_path)
-
-  manifest = JSON.parse(File.read(manifest_path))
+  manifest = Jekyll::ResponsiveImages.manifest(doc.site)
   next if manifest.empty?
-
-  # 跳过固定的小图标
-  skipped_sources = ["/assets/img/logo.2.png", "/assets/img/CC.png"]
+  html = Nokogiri::HTML5(doc.output)
   first_content_image = true
+  changed = false
+  baseurl = doc.site.baseurl.to_s
 
-  doc.output = doc.output.gsub(/<img\b([^>]*?)>/i) do |tag|
-    attrs = Regexp.last_match(1)
-    src = attrs[/\bsrc=["']([^"']+)["']/i, 1]
-    next tag unless src
-
-    src_path = src.sub(%r{^#{Regexp.escape(doc.site.baseurl.to_s)}}, "")
-    next tag if skipped_sources.include?(src_path)
-
+  html.css('img').each do |img|
+    next if img.ancestors('picture').any?
+    src = img['src']
+    next unless src
+    src_path = src.sub(%r{^#{Regexp.escape(baseurl)}/}, '/')
+    next if ["/assets/img/logo.2.png", "/assets/img/CC.png"].include?(src_path)
     image = manifest[src_path]
-    next tag unless image && image["webp"] && image["webp"].any?
+    next unless image && image["webp"]&.any?
 
-    alt = attrs[/\balt=["']([^"']*)["']/i, 1] || ""
-    loading = first_content_image ? "eager" : "lazy"
-    priority = first_content_image ? "high" : "auto"
+    picture = Nokogiri::XML::Node.new('picture', html)
+    source = Nokogiri::XML::Node.new('source', html)
+    source['type'] = 'image/webp'
+    source['srcset'] = image['webp'].map do |variant|
+      "#{baseurl}#{variant['src']} #{variant['width']}w"
+    end.join(', ')
+    source['sizes'] = img['sizes'] || '(max-width: 640px) calc(100vw - 32px), 600px'
+    picture.add_child(source)
+
+    img['width'] ||= image['width'].to_s
+    img['height'] ||= image['height'].to_s
+    img['loading'] ||= first_content_image ? 'eager' : 'lazy'
+    img['decoding'] ||= 'async'
+    img['fetchpriority'] ||= first_content_image ? 'high' : 'auto'
     first_content_image = false
-    srcset = image["webp"].map { |variant| "#{variant["src"]} #{variant["width"]}w" }.join(", ")
-
-    "<picture><source type=\"image/webp\" srcset=\"#{srcset}\" sizes=\"(max-width: 640px) calc(100vw - 32px), 600px\"><img src=\"#{src}\" alt=\"#{alt}\" width=\"#{image["width"]}\" height=\"#{image["height"]}\" loading=\"#{loading}\" decoding=\"async\" fetchpriority=\"#{priority}\"></picture>"
+    img.replace(picture)
+    picture.add_child(img)
+    changed = true
   end
+  doc.output = html.to_html if changed
 end

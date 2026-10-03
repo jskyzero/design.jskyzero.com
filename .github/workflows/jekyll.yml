@@ -14,7 +14,6 @@ jobs:
       - name: 检出代码
         uses: actions/checkout@v4
         with:
-          ref: jekyll
           fetch-depth: 0 # 获取完整历史，供 log.rb 的 git log 插件使用
 
       - name: 设置 Node.js
@@ -29,9 +28,9 @@ jobs:
           path: |
             assets/generated/img
             _data/responsive_images.json
-          key: responsive-images-${{ runner.os }}-${{ hashFiles('assets/img/**/*') }}
+          key: responsive-images-v2-${{ runner.os }}-${{ hashFiles('scripts/generate-responsive-images.mjs', 'package.json', 'package-lock.json') }}-${{ hashFiles('assets/img/**/*') }}
           restore-keys: |
-            responsive-images-${{ runner.os }}-
+            responsive-images-v2-${{ runner.os }}-${{ hashFiles('scripts/generate-responsive-images.mjs', 'package.json', 'package-lock.json') }}-
 
       - name: 安装 Node 依赖
         run: npm ci
@@ -45,8 +44,11 @@ jobs:
           ruby-version: '3.3.0'
           bundler-cache: true # 自动运行 bundle install 并缓存 gems
 
+      - name: 验证 Ruby 插件
+        run: bundle exec ruby scripts/verify-plugins.rb
+
       - name: 构建 Jekyll 站点
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --config _config.yml,_config.production.yml
         env:
           JEKYLL_ENV: production
 

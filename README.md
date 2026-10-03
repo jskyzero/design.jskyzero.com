@@ -37,6 +37,21 @@ bundle exec jekyll serve
 
 Daily text/style edits usually only need `bundle exec jekyll serve`. Run `npm run images` again when new images are added, existing images are replaced, or image references change.
 
+Production builds use `bundle exec jekyll build --config _config.yml,_config.production.yml`.
+The production overlay excludes unused local fonts and design source files (PPTX,
+Drawio, XMind, PSD) from the published site only; they remain available in the
+repository and ordinary local builds. Keep the overlay's base exclusions in sync
+with `_config.yml`, because Jekyll replaces arrays when merging configuration.
+
+Run Ruby plugin regression checks with `bundle exec ruby scripts/verify-plugins.rb`.
+For WSL dependencies installed locally, prefix Bundler commands with
+`BUNDLE_PATH=vendor/bundle`.
+
+Responsive image filenames include a hash of source bytes and the conversion
+pipeline (script, locked dependencies, Sharp versions and parameters). Unchanged
+images are reused regardless of checkout timestamps; obsolete generated WebP
+files are removed after generating the new manifest.
+
 
 <!--
 

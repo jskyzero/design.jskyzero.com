@@ -1,0 +1,17 @@
+# 仅 CI 发布构建加载。Jekyll 合并配置时数组会替换，故保留基础 exclude。
+exclude:
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - scripts
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - npm-debug.log
+  - assets/font
+  - assets/draw.io
+  - '**/*.pptx'
+  - '**/*.drawio'
+  - '**/*.xmind'
+  - '**/*.psd'

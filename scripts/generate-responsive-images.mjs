@@ -1,12 +1,20 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
+import { createHash } from 'node:crypto';
+import { fileURLToPath } from 'node:url';
 
 const root = process.cwd();
 const sourceDir = path.join(root, 'assets/img');
 const outputDir = path.join(root, 'assets/generated/img');
 const manifestPath = path.join(root, '_data/responsive_images.json');
 const widths = [480, 760, 1140, 1520];
+const webpOptions = { quality: 82 };
+const pipelineHash = createHash('sha256')
+  .update(await fs.readFile(fileURLToPath(import.meta.url)))
+  .update(await fs.readFile(path.join(root, 'package-lock.json')))
+  .update(JSON.stringify({ widths, webpOptions, versions: sharp.versions }))
+  .digest('hex');
 const sourceExtensions = new Set(['.jpg', '.jpeg', '.png']);
 const contentExtensions = new Set(['.html', '.md', '.markdown']);
 const ignoredDirs = new Set(['.git', '_site', 'node_modules', 'vendor', 'assets/generated']);
@@ -66,21 +74,16 @@ function publicPath(filePath) {
   return '/' + toPosix(path.relative(root, filePath));
 }
 
-function outputPathFor(sourcePath, width) {
+function outputPathFor(sourcePath, width, hash) {
   const relative = path.relative(sourceDir, sourcePath);
   const parsed = path.parse(relative);
-  return path.join(outputDir, parsed.dir, `${parsed.name}-${width}.webp`);
-}
-
-async function shouldGenerate(sourceStat, targetPath) {
-  if (!await pathExists(targetPath)) return true;
-  const targetStat = await fs.stat(targetPath);
-  return targetStat.mtimeMs < sourceStat.mtimeMs;
+  return path.join(outputDir, parsed.dir, `${parsed.base}-${hash}-${width}.webp`);
 }
 
 async function processImage(sourcePath) {
-  const sourceStat = await fs.stat(sourcePath);
-  const metadata = await sharp(sourcePath, { failOn: 'none' }).metadata();
+  const source = await fs.readFile(sourcePath);
+  const hash = createHash('sha256').update(pipelineHash).update(source).digest('hex');
+  const metadata = await sharp(source, { failOn: 'none' }).metadata();
   if (!metadata.width || !metadata.height) return null;
 
   const variants = [];
@@ -88,13 +91,13 @@ async function processImage(sourcePath) {
   if (!targetWidths.length) targetWidths.push(metadata.width);
 
   for (const width of targetWidths) {
-    const targetPath = outputPathFor(sourcePath, width);
+    const targetPath = outputPathFor(sourcePath, width, hash);
     await fs.mkdir(path.dirname(targetPath), { recursive: true });
 
-    if (await shouldGenerate(sourceStat, targetPath)) {
-      await sharp(sourcePath, { failOn: 'none' })
+    if (!await pathExists(targetPath)) {
+      await sharp(source, { failOn: 'none' })
         .resize({ width, withoutEnlargement: true })
-        .webp({ quality: 82 })
+        .webp(webpOptions)
         .toFile(targetPath);
     }
 
@@ -113,7 +116,7 @@ async function main() {
   await fs.mkdir(path.dirname(manifestPath), { recursive: true });
   await fs.mkdir(outputDir, { recursive: true });
 
-  const files = await collectReferencedImages();
+  const files = (await collectReferencedImages()).sort();
   const manifest = {};
 
   for (const file of files) {
@@ -122,6 +125,17 @@ async function main() {
   }
 
   await fs.writeFile(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
+  // 清理失效版本，避免恢复旧缓存后将过期图片一起发布。
+  const retained = new Set(Object.values(manifest).flatMap((item) =>
+    item.webp.map((variant) => path.join(root, variant.src.slice(1)))));
+  async function prune(dir) {
+    for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
+      const file = path.join(dir, entry.name);
+      if (entry.isDirectory()) await prune(file);
+      else if (entry.name.endsWith('.webp') && !retained.has(file)) await fs.unlink(file);
+    }
+  }
+  await prune(outputDir);
   console.log(`Generated responsive image manifest for ${Object.keys(manifest).length} images.`);
 }
 

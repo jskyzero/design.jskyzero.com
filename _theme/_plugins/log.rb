@@ -21,7 +21,7 @@ module Jekyll
     # 主生成器 —— 在 Jekyll 构建时运行
     class Generator < Jekyll::Generator
       def generate(site)
-        return if site.data['git_log'] == false
+        return if site.config['git_log'] == false
         return if ARGV.include?("--no-revision")
 
         # 仅处理 posts（不处理 pages）
@@ -70,13 +70,22 @@ module Jekyll
         return nil if all_revisions.empty?
 
         {
-          "created_at" => all_revisions.last["date"],
+          "created_at" => created_at,
           "updated_at" => all_revisions.first["date"],
           "count" => total_count
         }
       end
 
       private
+
+      # 查询完整历史的最早日期，不能使用展示列表中截断后的最后一条。
+      def created_at
+        @created_at ||= begin
+          dates = Executor.sh('git', '-C', site_source, 'log', '--follow',
+                              '--format=%ci', '--', relative_path_from_git_dir)
+          dates.to_s.lines.last&.strip
+        end
+      end
 
       # 最大展示条目数（默认 20）
       def max_count
@@ -86,10 +95,10 @@ module Jekyll
       # 获取最近 max_count 条修订记录（仅用于展示，早停，避免全量拉取）
       def all_revisions
         @all_revisions ||= begin
-          logs = Executor.sh('git', 'log', '--follow',
+          logs = Executor.sh('git', '-C', site_source, 'log', '--follow',
                 '--pretty=%ci|%an|%s',
                 '--max-count=' + max_count.to_s,
-                relative_path_from_git_dir)
+                '--', relative_path_from_git_dir)
           return [] if logs.nil? || logs.empty?
 
           logs.lines.map do |line|
@@ -107,7 +116,7 @@ module Jekyll
       # 注意 rev-list 不做 rename 追踪，重命名过的文件计数可能偏小。
       def total_count
         @total_count ||= begin
-          count = Executor.sh('git', 'rev-list', '--count', 'HEAD', '--', relative_path_from_git_dir)
+          count = Executor.sh('git', '-C', site_source, 'rev-list', '--count', 'HEAD', '--', relative_path_from_git_dir)
           (count && !count.empty?) ? count.to_i : all_revisions.length
         end
       end
