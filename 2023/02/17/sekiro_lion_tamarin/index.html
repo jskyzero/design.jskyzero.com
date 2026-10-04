@@ -148,7 +148,7 @@
 
 <p>对只狼的拆包和分析分析过程可以参考下图，感兴趣的同学可以查看<a href="https://www.bilibili.com/video/BV1rf4y1h7QZ">只狼解包介绍</a>。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/1-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/1-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/1-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/1.jpg" alt="" width="1477" height="892" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/1.jpg-9155528f4a121f935767afd8334266497842282f3a6b9b72dc5d106d1c7b86ca-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/1.jpg-9155528f4a121f935767afd8334266497842282f3a6b9b72dc5d106d1c7b86ca-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/1.jpg-9155528f4a121f935767afd8334266497842282f3a6b9b72dc5d106d1c7b86ca-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/1.jpg" alt="" width="1477" height="892" loading="eager" decoding="async" fetchpriority="high"></picture></p>
 
 <p>考虑到逆向工程总是有损的，以及作者精力有限，部分猜想内容没有进行严格验证，本文还是希望将重点放在<strong>对动画的分析给设计带来的启发</strong>上。</p>
 
@@ -158,7 +158,7 @@
 
 <p>在对内容初步地分析综合后，得到了下面这个供参考的状态机，从状态机上我们也可以得到一些初步的结论</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/2-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/2-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/2-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/2-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/2.jpg" alt="" width="2412" height="1678" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/2.jpg-8ce370023a5f6517703225215b81744c7afa57f5473e8f147df4e36af95e8872-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/2.jpg-8ce370023a5f6517703225215b81744c7afa57f5473e8f147df4e36af95e8872-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/2.jpg-8ce370023a5f6517703225215b81744c7afa57f5473e8f147df4e36af95e8872-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/2.jpg-8ce370023a5f6517703225215b81744c7afa57f5473e8f147df4e36af95e8872-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/2.jpg" alt="" width="2412" height="1678" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="动作资产多到奢侈"><span class="heading-counter">1.1.</span><span class="heading-label">动作资产多到奢侈</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
@@ -205,7 +205,7 @@
 
 <p>更为可怕的是，动画中有意<strong>通过关键Pose来做衔接</strong>，可以回复idle，也可以衔接下一个攻击，派生可能性非常多。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/3-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/3-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/3-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/3-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/3.jpg" alt="" width="1917" height="812" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/3.jpg-bf3df21a6081dc8d52cac72fa3973d2091935067386a3ad657a1552627a1b86e-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/3.jpg-bf3df21a6081dc8d52cac72fa3973d2091935067386a3ad657a1552627a1b86e-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/3.jpg-bf3df21a6081dc8d52cac72fa3973d2091935067386a3ad657a1552627a1b86e-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/3.jpg-bf3df21a6081dc8d52cac72fa3973d2091935067386a3ad657a1552627a1b86e-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/3.jpg" alt="" width="1917" height="812" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="演出动作"><span class="heading-counter">2.</span><span class="heading-label">“演出”动作</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
 
@@ -213,7 +213,7 @@
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="5个待机"><span class="heading-counter">2.1.</span><span class="heading-label">5个“待机”</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/4-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/4-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/4-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/4-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/4.jpg" alt="" width="2275" height="868" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/4.jpg-c990f59f40a385d6c44df4f2c272bc17c3fcc630abe5f43a2f722b0d8457f8fe-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/4.jpg-c990f59f40a385d6c44df4f2c272bc17c3fcc630abe5f43a2f722b0d8457f8fe-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/4.jpg-c990f59f40a385d6c44df4f2c272bc17c3fcc630abe5f43a2f722b0d8457f8fe-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/4.jpg-c990f59f40a385d6c44df4f2c272bc17c3fcc630abe5f43a2f722b0d8457f8fe-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/4.jpg" alt="" width="2275" height="868" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>本文的初衷就是能力有限，找不到狮子猿的待机Pose，拆包的动画第一个看到就是待机，一个猿类的待机，身体与地面平行，很标准的idle，也很适合用做各种攻击的起手</p>
 
@@ -233,7 +233,7 @@
 
 <p>本以为idle能藏，基础的走跑跳，总能看得明白吧？看完以后发现还是天真了，走跑跳都玩出花。基础版本的动画像基础待机一样，存在感被压到了最低，几乎只会播放一次，不会持续停留，淹没在了诸多演出性质更强的移动动作中。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/8-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/8-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/8-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/8-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/8.jpg" alt="" width="2079" height="648" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/8.jpg-0cb099fbf0fa21fcb0bc7d49351cad8b8b3dd07e56835f2b8cb6dbb5963593d4-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/8.jpg-0cb099fbf0fa21fcb0bc7d49351cad8b8b3dd07e56835f2b8cb6dbb5963593d4-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/8.jpg-0cb099fbf0fa21fcb0bc7d49351cad8b8b3dd07e56835f2b8cb6dbb5963593d4-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/8.jpg-0cb099fbf0fa21fcb0bc7d49351cad8b8b3dd07e56835f2b8cb6dbb5963593d4-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/8.jpg" alt="" width="2079" height="648" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <ul>
   <li>转向动作：只狼标准的是【转90度、转180度两种】X【左右转两种】共计四个动画</li>
@@ -277,7 +277,7 @@
 
 <p>早期设计动作，大家一般会分为【前摇，攻击，后摇】3部分来描述动作的三个阶段。格斗游戏的帧数表中会管这三个阶段：发生Startup 持续Active 恢复Recovery，<a href="https://www.youtube.com/watch?v=ZC8znF3t718">樱井政博的“攻击动作分解”</a>中对其也有介绍。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/5-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/5-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/5-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/5-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/5.jpg" alt="" width="1664" height="355" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/5.jpg-c4c24bdf14d00c9b1d642ad9f2bff411b754e32d464d1ee55b4cc8f5fbfd8690-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/5.jpg-c4c24bdf14d00c9b1d642ad9f2bff411b754e32d464d1ee55b4cc8f5fbfd8690-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/5.jpg-c4c24bdf14d00c9b1d642ad9f2bff411b754e32d464d1ee55b4cc8f5fbfd8690-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/5.jpg-c4c24bdf14d00c9b1d642ad9f2bff411b754e32d464d1ee55b4cc8f5fbfd8690-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/5.jpg" alt="" width="1664" height="355" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>狮子猿的攻击动画当然也满足这个规律，但是看动作比较多以后，发现它<strong>在关键帧停顿</strong>这件事上做得更为刻意和夸张，停顿时长普遍有0.16秒到0.33秒（5-10帧，30帧/秒），这么理解下来，3个阶段被扩充到了5个：【起手，攻击前Pose，攻击，后摇Pose，后摇】。</p>
 
@@ -289,7 +289,7 @@
 
 <p>即：可以衔接回复idle，也可以衔接一轮新的攻击。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/6-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/6-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/6-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/6-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/6.jpg" alt="" width="3568" height="893" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/6.jpg-ee08fee376ca422090e2c238d05120acb68493180537469ae82342d9348acd3d-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/6.jpg-ee08fee376ca422090e2c238d05120acb68493180537469ae82342d9348acd3d-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/6.jpg-ee08fee376ca422090e2c238d05120acb68493180537469ae82342d9348acd3d-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/6.jpg-ee08fee376ca422090e2c238d05120acb68493180537469ae82342d9348acd3d-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/6.jpg" alt="" width="3568" height="893" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="优秀设计带位移的攻击"><span class="heading-counter">3.3.</span><span class="heading-label">优秀设计：带位移的攻击</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
@@ -305,7 +305,7 @@
   <li>给攻击<strong>添加位移</strong>：比如突进、后撤，体侧攻击等</li>
 </ul>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/7-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/7-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/7-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/7-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/7.jpg" alt="" width="3146" height="1119" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/7.jpg-9598765e58511b566fbe455fcd5f40a6fa0d6a75fb2d5cd2781d19e0f2c39324-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/7.jpg-9598765e58511b566fbe455fcd5f40a6fa0d6a75fb2d5cd2781d19e0f2c39324-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/7.jpg-9598765e58511b566fbe455fcd5f40a6fa0d6a75fb2d5cd2781d19e0f2c39324-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/7.jpg-9598765e58511b566fbe455fcd5f40a6fa0d6a75fb2d5cd2781d19e0f2c39324-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/7.jpg" alt="" width="3146" height="1119" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="特色动作"><span class="heading-counter">4.</span><span class="heading-label">特色动作</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
 
@@ -320,7 +320,7 @@
   <li>不然就是性能夸张，较难处理，比如“各种危”，中一次以后损血巨多，还可能直接被带走。</li>
 </ul>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/9-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/9-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/9-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/9.jpg" alt="" width="1348" height="840" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/9.jpg-6cd94b1239a194af0a9ca79ee6ad07a273c63fb47b405a0dfef9d99bf23f716c-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/9.jpg-6cd94b1239a194af0a9ca79ee6ad07a273c63fb47b405a0dfef9d99bf23f716c-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/9.jpg-6cd94b1239a194af0a9ca79ee6ad07a273c63fb47b405a0dfef9d99bf23f716c-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/9.jpg" alt="" width="1348" height="840" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="如何控制结合比例"><span class="heading-counter">4.2.</span><span class="heading-label">如何控制结合比例</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
@@ -330,7 +330,7 @@
 
 <p>我们回到一开始的状态机，你会发现这些招式大多单独存在，或者处于一套连招的最末尾。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/10-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/10-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/10-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/10-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/10.jpg" alt="" width="1690" height="1733" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/10.jpg-cc23afecf9bcf6e9716b1a6cf641e2ed58e4fff92b8e37883e6c47819e653462-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/10.jpg-cc23afecf9bcf6e9716b1a6cf641e2ed58e4fff92b8e37883e6c47819e653462-760.webp 760w, /assets/generated/img/gameplay/sekiro_lion_tamarion/10.jpg-cc23afecf9bcf6e9716b1a6cf641e2ed58e4fff92b8e37883e6c47819e653462-1140.webp 1140w, /assets/generated/img/gameplay/sekiro_lion_tamarion/10.jpg-cc23afecf9bcf6e9716b1a6cf641e2ed58e4fff92b8e37883e6c47819e653462-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/10.jpg" alt="" width="1690" height="1733" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>仔细想想也合理，以<strong>一个强力招式让连续攻击的回合迎来高潮和结束</strong>，化解了，那给玩家应得的收益，再喘口气，迎接新一回合；没接下来？那前期逐步把玩家逼入的劣势，这里一口气兑现给个大惩罚。</p>
 
@@ -350,7 +350,7 @@
 
 <p>举个例子可能会更好理解：</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/11-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/11-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/11.jpg" alt="" width="995" height="523" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/sekiro_lion_tamarion/11.jpg-6483ed175790ae6d7ec7b8a2d053833cc771653c18421c50779a2bd124e2cc18-480.webp 480w, /assets/generated/img/gameplay/sekiro_lion_tamarion/11.jpg-6483ed175790ae6d7ec7b8a2d053833cc771653c18421c50779a2bd124e2cc18-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/sekiro_lion_tamarion/11.jpg" alt="" width="995" height="523" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>拆包动画里面有两个挣扎的动作，应该是对应鞭炮和燃烧的两种硬直动画，比较有意思的是，有一个<strong>硬直动画还会衔接一个拍地攻击</strong>，仿佛已经看到：本来趁机输出狮子猿，然后因为没有及时开溜被打：“让你小子贪刀，拍你！”。</p>
 

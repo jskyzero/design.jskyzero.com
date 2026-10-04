@@ -142,7 +142,7 @@
 
 <h1 id="机制设计以dota2中的25种状态效果为例"><span class="heading-label">机制设计——以Dota2中的25种状态效果为例</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/专题报告-blue.svg?style=flat" alt="专题报告"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2024/01/26-brightgreen.svg?style=flat" alt="日期 2024/01/26"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#机制设计以dota2中的25种状态效果为例">机制设计——以Dota2中的25种状态效果为例</a><ul><li><a href="#前言机制设计与dota2">前言：机制设计与DOTA2</a><ul><li><a href="#mda理论与机制设计">MDA理论与机制设计</a></li><li><a href="#困难的机制设计">困难的机制设计</a></li><li><a href="#dota2与机制的关系">Dota2与机制的关系</a><ul><li><a href="#为什么是dota2">为什么是Dota2</a></li><li><a href="#为什么讨论状态机制">为什么讨论状态机制</a></li></ul></li></ul></li><li><a href="#从眩晕状态开始">从“眩晕”状态开始</a><ul><li><a href="#状态的基础效果">状态的基础效果</a><ul><li><a href="#眩晕-无法移动和执行任何动作">眩晕-无法移动和执行任何动作</a></li><li><a href="#眩晕-打断当前动作">眩晕-打断当前动作</a></li></ul></li><li><a href="#状态之间叠加">状态之间叠加</a><ul><li><a href="#眩晕-重复叠加时取效果最强">眩晕-重复叠加时（取效果最强）</a></li></ul></li><li><a href="#提前结束状态驱散">提前结束状态：驱散</a></li><li><a href="#加速状态的流逝状态抗性">加速状态的流逝：状态抗性</a></li></ul></li><li><a href="#更多的状态效果">更多的状态效果</a><ul><li><a href="#从归类开始">从归类开始</a></li><li><a href="#状态效果的根基">状态效果的根基</a></li><li><a href="#单维度效果类">单维度效果类</a><ul><li><a href="#移动指令">移动指令</a></li><li><a href="#技能">技能</a></li><li><a href="#普通攻击">普通攻击</a></li><li><a href="#物品">物品</a></li><li><a href="#被动技能">被动技能</a></li></ul></li><li><a href="#复合效果类">复合效果类</a><ul><li><a href="#常规复合">常规复合</a></li><li><a href="#强制行为">强制行为</a></li><li><a href="#总结禁止类控制技能">总结——禁止类控制技能</a></li></ul></li><li><a href="#基础属性类">基础属性类</a><ul><li><a href="#移动速度">移动速度</a></li><li><a href="#移动速度极端化">移动速度（极端化）</a></li><li><a href="#攻击">攻击</a></li><li><a href="#基础属性">基础属性</a></li><li><a href="#无敌">无敌</a></li></ul></li></ul></li><li><a href="#简要总结">简要总结</a><ul><li><a href="#设计方法论要素-x-方式">设计方法论：要素 X 方式</a></li><li><a href="#对抗与涌现的乐趣">对抗与涌现的乐趣</a></li></ul></li><li><a href="#附录dota2的美学实现速览">附录：DOTA2的美学实现速览</a><ul><li><a href="#少就是多的动画">少就是多的动画</a></li><li><a href="#出现即巅峰的特效">出现即巅峰的特效</a></li></ul></li></ul></li></ul></nav></div>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/1-480.webp 480w, /assets/generated/img/gameplay/dota2/1-760.webp 760w, /assets/generated/img/gameplay/dota2/1-1140.webp 1140w, /assets/generated/img/gameplay/dota2/1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/1.png" alt="" width="3326" height="1881" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/1.png-5e4a2e1f95cb9c8084c3aaef9d0a52ec631cc8cbbcfb21ad637f4db0ca8b98d7-480.webp 480w, /assets/generated/img/gameplay/dota2/1.png-5e4a2e1f95cb9c8084c3aaef9d0a52ec631cc8cbbcfb21ad637f4db0ca8b98d7-760.webp 760w, /assets/generated/img/gameplay/dota2/1.png-5e4a2e1f95cb9c8084c3aaef9d0a52ec631cc8cbbcfb21ad637f4db0ca8b98d7-1140.webp 1140w, /assets/generated/img/gameplay/dota2/1.png-5e4a2e1f95cb9c8084c3aaef9d0a52ec631cc8cbbcfb21ad637f4db0ca8b98d7-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/1.png" alt="" width="3326" height="1881" loading="eager" decoding="async" fetchpriority="high"></picture></p>
 
 <p>这是一篇相当长，内容相当多的文章，不得不提醒读者预留出时间&amp;精力，做好准备再开始阅读。也强烈推荐先右键点开章节⬆️的脑图查看，理清思路再进入细节。</p>
 
@@ -154,13 +154,13 @@
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="mda理论与机制设计"><span class="heading-counter">1.1.</span><span class="heading-label">MDA理论与机制设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-1-480.webp 480w, /assets/generated/img/gameplay/dota2/X-1-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-1.png" alt="" width="1124" height="363" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-1.png-c981dfd2b28e6de090b1e4f042f572250c33b10e1e475d3319057b3433952d60-480.webp 480w, /assets/generated/img/gameplay/dota2/X-1.png-c981dfd2b28e6de090b1e4f042f572250c33b10e1e475d3319057b3433952d60-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-1.png" alt="" width="1124" height="363" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>先从MDA开始聊起吧，也方便统一文章的描述语境。</p>
 
 <p>MDA框架是游戏设计中常用的理论框架，它将游戏划分为不同层次的多个概念，以此来让设计师更好地理解玩家的游玩过程，最终设计出更好的游戏。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/MDA-480.webp 480w, /assets/generated/img/gameplay/dota2/MDA-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/MDA.png" alt="" width="969" height="735" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/MDA.png-beae8c002be8bb7883682c49beb4ebbd5e63cbd22ec99ea2c73397d8b5c24ba9-480.webp 480w, /assets/generated/img/gameplay/dota2/MDA.png-beae8c002be8bb7883682c49beb4ebbd5e63cbd22ec99ea2c73397d8b5c24ba9-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/MDA.png" alt="" width="969" height="735" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>熟悉MDA框架的同学可能会知道，实际使用这个框架来指导设计时，从任意层次开始，都是可以的——当然从机制层面出发也是可以的。</p>
 
@@ -174,7 +174,7 @@
   <p>想到一个好的“概念”或许是简单的，但是将“概念”具体化为规则、放入游戏中，变成玩家接触到的信息，需要理解、思考、利用的规则，还要肩负起玩家长期的体验，这并不是一件简单的事情。</p>
 </blockquote>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/MDA2-480.webp 480w, /assets/generated/img/gameplay/dota2/MDA2-760.webp 760w, /assets/generated/img/gameplay/dota2/MDA2-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/MDA2.png" alt="" width="1337" height="754" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/MDA2.png-1dc68749b3949f77f2c37da1fecad511d9f679d8d47963abb1f799f84733a2c8-480.webp 480w, /assets/generated/img/gameplay/dota2/MDA2.png-1dc68749b3949f77f2c37da1fecad511d9f679d8d47963abb1f799f84733a2c8-760.webp 760w, /assets/generated/img/gameplay/dota2/MDA2.png-1dc68749b3949f77f2c37da1fecad511d9f679d8d47963abb1f799f84733a2c8-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/MDA2.png" alt="" width="1337" height="754" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>抛开难度的话题，从评价上来说，一个好的机制可能有以下五个特征：</p>
 
@@ -186,13 +186,13 @@
   <li>能互相作用：涌现出多样的情形</li>
 </ul>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/0-480.webp 480w, /assets/generated/img/gameplay/dota2/0-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/0.png" alt="" width="852" height="731" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/0.png-34e978b081d46b2da8c5b86b030c01cc1f187a59ea8f3970a73d85f879471875-480.webp 480w, /assets/generated/img/gameplay/dota2/0.png-34e978b081d46b2da8c5b86b030c01cc1f187a59ea8f3970a73d85f879471875-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/0.png" alt="" width="852" height="731" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>本文，试图从Dota2的25种状态机制为切入，以“一个体验丰富且成熟的MOBA游戏中，丰富的机制与其带来的体验”为例，希望能为读者带来一些启发，帮助读者设计出更好的机制。</p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="dota2与机制的关系"><span class="heading-counter">1.3.</span><span class="heading-label">Dota2与机制的关系</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-2-480.webp 480w, /assets/generated/img/gameplay/dota2/X-2-760.webp 760w, /assets/generated/img/gameplay/dota2/X-2-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-2-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-2.png" alt="" width="1616" height="296" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-2.png-d16add2f83686a589fbd77444ee27d4fa03493584e5887cb55f7aeea404c1ef0-480.webp 480w, /assets/generated/img/gameplay/dota2/X-2.png-d16add2f83686a589fbd77444ee27d4fa03493584e5887cb55f7aeea404c1ef0-760.webp 760w, /assets/generated/img/gameplay/dota2/X-2.png-d16add2f83686a589fbd77444ee27d4fa03493584e5887cb55f7aeea404c1ef0-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-2.png-d16add2f83686a589fbd77444ee27d4fa03493584e5887cb55f7aeea404c1ef0-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-2.png" alt="" width="1616" height="296" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>读者可能会好奇：</p>
 
@@ -216,7 +216,7 @@
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="从眩晕状态开始"><span class="heading-counter">2.</span><span class="heading-label">从“眩晕”状态开始</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-3-480.webp 480w, /assets/generated/img/gameplay/dota2/X-3-760.webp 760w, /assets/generated/img/gameplay/dota2/X-3-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-3-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-3.png" alt="" width="1951" height="410" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-3.png-979916038e8d0c738cbd0f01bb0832c0803a2c8509a8e89583818e0766c51e0e-480.webp 480w, /assets/generated/img/gameplay/dota2/X-3.png-979916038e8d0c738cbd0f01bb0832c0803a2c8509a8e89583818e0766c51e0e-760.webp 760w, /assets/generated/img/gameplay/dota2/X-3.png-979916038e8d0c738cbd0f01bb0832c0803a2c8509a8e89583818e0766c51e0e-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-3.png-979916038e8d0c738cbd0f01bb0832c0803a2c8509a8e89583818e0766c51e0e-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-3.png" alt="" width="1951" height="410" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>眩晕是最为基础（和常见）的状态机制，在眩晕期间，<strong>无法移动和执行任何动作</strong>。一个特殊的情况是，眩晕时<strong>当前当前正在进行的动作将会被打断</strong>。</p>
 
@@ -286,7 +286,7 @@
   <p>其一：游戏中的眩晕有三类，1类和3类符合传统眩晕的概念，两者区别是，1类添加的通用的眩晕标示，而3类一般是自定义的名字，但是带有眩晕的效果，这点可以打开战斗日志，留意对应的描述。而2类则是<a href="https://liquipedia.net/dota2game/Bash">重击类</a>，简单理解而言，重击类是普通攻击可能附带眩晕，由于普通攻击的高频性（甚至有一件道具可以赋予概率眩晕），又有着相当多的细节，这里不再展开。</p>
 
   <p>如图，大鱼人被动晕属于重击，可以与大晕锤的主动重击眩晕叠加。
-<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/7-480.webp 480w, /assets/generated/img/gameplay/dota2/7-760.webp 760w, /assets/generated/img/gameplay/dota2/7-1140.webp 1140w, /assets/generated/img/gameplay/dota2/7-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/7.png" alt="" width="1920" height="760" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/7.png-acbb28822e546dead025c52325caa02b27be5d190030ac5a241971d7b84c650e-480.webp 480w, /assets/generated/img/gameplay/dota2/7.png-acbb28822e546dead025c52325caa02b27be5d190030ac5a241971d7b84c650e-760.webp 760w, /assets/generated/img/gameplay/dota2/7.png-acbb28822e546dead025c52325caa02b27be5d190030ac5a241971d7b84c650e-1140.webp 1140w, /assets/generated/img/gameplay/dota2/7.png-acbb28822e546dead025c52325caa02b27be5d190030ac5a241971d7b84c650e-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/7.png" alt="" width="1920" height="760" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
   <p>其二：Dota2中，有时一些不可撤销不可以行动的技能前摇或发生过程，也会给自己施加对应的状态，比如虚空假面的跳、猴子的跳下、海民的雪球，这些技能都是有一个过程的，过程中“相当于自己在眩晕”。</p>
 </blockquote>
@@ -301,7 +301,7 @@
 
 <p>Dota2的驱散分为两种，强驱散和弱驱散（当然有些效果比如光环类是无法驱散的），一般都在技能中有相关描述。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/5-480.webp 480w, /assets/generated/img/gameplay/dota2/5-760.webp 760w, /assets/generated/img/gameplay/dota2/5-1140.webp 1140w, /assets/generated/img/gameplay/dota2/5-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/5.png" alt="" width="2161" height="770" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/5.png-f8183be16587dbfa647830624605509be807a4be18e3c921585f9f7beec98273-480.webp 480w, /assets/generated/img/gameplay/dota2/5.png-f8183be16587dbfa647830624605509be807a4be18e3c921585f9f7beec98273-760.webp 760w, /assets/generated/img/gameplay/dota2/5.png-f8183be16587dbfa647830624605509be807a4be18e3c921585f9f7beec98273-1140.webp 1140w, /assets/generated/img/gameplay/dota2/5.png-f8183be16587dbfa647830624605509be807a4be18e3c921585f9f7beec98273-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/5.png" alt="" width="2161" height="770" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <blockquote>
   <p>引申话题</p>
@@ -309,7 +309,7 @@
   <p>其一，驱散：作为结束手动结束状态机制的方法，有着相当多的细节，从作用上，可以分强弱驱散，从来源上，可以分为技能或者道具；从作用目标上，可以分为自身，敌人，队友。具体可以<a href="https://liquipedia.net/dota2game/Dispel">阅读参考</a>。</p>
 
   <p>其二，光环的生效与消失：测试是生效延迟一帧(0.033秒)，而消失是延迟0.5秒。
-<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/8-480.webp 480w, /assets/generated/img/gameplay/dota2/8-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/8.png" alt="" width="1017" height="432" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/8.png-0f782c6be92cd6a78c19b1e4dd3667e0a584cdad47c9f9084156028e15f6e723-480.webp 480w, /assets/generated/img/gameplay/dota2/8.png-0f782c6be92cd6a78c19b1e4dd3667e0a584cdad47c9f9084156028e15f6e723-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/8.png" alt="" width="1017" height="432" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 </blockquote>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="加速状态的流逝状态抗性"><span class="heading-counter">2.4.</span><span class="heading-label">加速状态的流逝：状态抗性</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
@@ -327,12 +327,12 @@
 
   <p>最近的7.36版本更新中，状态抗性被从散华等物品中移除，转而替代为只针对减速的减速抗性。这可能是因为上个版本肉核太过吃香，状态抗性一定程度上为肉核的生存提供了便利。削弱状态抗性也能一定程度上削弱肉核。</p>
 
-  <p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/6-480.webp 480w, /assets/generated/img/gameplay/dota2/6-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/6.png" alt="" width="1028" height="714" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+  <p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/6.png-c068f801fa8be0d78944cfc5759b81e1bfac821633f355c930ac305aef76ed8f-480.webp 480w, /assets/generated/img/gameplay/dota2/6.png-c068f801fa8be0d78944cfc5759b81e1bfac821633f355c930ac305aef76ed8f-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/6.png" alt="" width="1028" height="714" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 </blockquote>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="更多的状态效果"><span class="heading-counter">3.</span><span class="heading-label">更多的状态效果</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-4-480.webp 480w, /assets/generated/img/gameplay/dota2/X-4-760.webp 760w, /assets/generated/img/gameplay/dota2/X-4-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-4-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-4.png" alt="" width="1820" height="384" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-4.png-416d07600f1c250ae0f9297eeeb15cd0e1a7cf575205a7ab027c2ee4208f4bb7-480.webp 480w, /assets/generated/img/gameplay/dota2/X-4.png-416d07600f1c250ae0f9297eeeb15cd0e1a7cf575205a7ab027c2ee4208f4bb7-760.webp 760w, /assets/generated/img/gameplay/dota2/X-4.png-416d07600f1c250ae0f9297eeeb15cd0e1a7cf575205a7ab027c2ee4208f4bb7-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-4.png-416d07600f1c250ae0f9297eeeb15cd0e1a7cf575205a7ab027c2ee4208f4bb7-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-4.png" alt="" width="1820" height="384" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="从归类开始"><span class="heading-counter">3.1.</span><span class="heading-label">从归类开始</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
@@ -340,20 +340,20 @@
 
 <p>这个困境直到有一天，在对这些状态效果进行反复划分和归类时，得到了解决，最终得到了右边所示的、一个相对优雅的划分和思路，后文将沿着这个思路逐渐展开。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/11-480.webp 480w, /assets/generated/img/gameplay/dota2/11-760.webp 760w, /assets/generated/img/gameplay/dota2/11-1140.webp 1140w, /assets/generated/img/gameplay/dota2/11-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/11.png" alt="" width="2756" height="851" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/11.png-1293b48db73ef45e48d864b4eec788bd3a5de3b11f26776e0db82e6b87f61e89-480.webp 480w, /assets/generated/img/gameplay/dota2/11.png-1293b48db73ef45e48d864b4eec788bd3a5de3b11f26776e0db82e6b87f61e89-760.webp 760w, /assets/generated/img/gameplay/dota2/11.png-1293b48db73ef45e48d864b4eec788bd3a5de3b11f26776e0db82e6b87f61e89-1140.webp 1140w, /assets/generated/img/gameplay/dota2/11.png-1293b48db73ef45e48d864b4eec788bd3a5de3b11f26776e0db82e6b87f61e89-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/11.png" alt="" width="2756" height="851" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <blockquote>
 
   <p>有意思的是，事后才发现，Wiki中也有个类似的划分，早点发现也许就不用思考这么久了。</p>
 
-  <p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/12-480.webp 480w, /assets/generated/img/gameplay/dota2/12-760.webp 760w, /assets/generated/img/gameplay/dota2/12-1140.webp 1140w, /assets/generated/img/gameplay/dota2/12-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/12.png" alt="" width="1588" height="150" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+  <p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/12.png-3cfc71d0c04fa956b078108a9c3d7775a8add299cef0ac0908c22b08d7c535c1-480.webp 480w, /assets/generated/img/gameplay/dota2/12.png-3cfc71d0c04fa956b078108a9c3d7775a8add299cef0ac0908c22b08d7c535c1-760.webp 760w, /assets/generated/img/gameplay/dota2/12.png-3cfc71d0c04fa956b078108a9c3d7775a8add299cef0ac0908c22b08d7c535c1-1140.webp 1140w, /assets/generated/img/gameplay/dota2/12.png-3cfc71d0c04fa956b078108a9c3d7775a8add299cef0ac0908c22b08d7c535c1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/12.png" alt="" width="1588" height="150" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 </blockquote>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="状态效果的根基"><span class="heading-counter">3.2.</span><span class="heading-label">状态效果的根基</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
 <p>一切的起点是，这个游戏给了玩家的是什么？这里以“玩家动态操作，与角色静态属性”，两个维度进行一个划分：</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/13-480.webp 480w, /assets/generated/img/gameplay/dota2/13-760.webp 760w, /assets/generated/img/gameplay/dota2/13-1140.webp 1140w, /assets/generated/img/gameplay/dota2/13-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/13.png" alt="" width="1745" height="198" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/13.png-83408e7402a6318c8b7a9446a0b261a3f862955a4f844982896cb8cb151824be-480.webp 480w, /assets/generated/img/gameplay/dota2/13.png-83408e7402a6318c8b7a9446a0b261a3f862955a4f844982896cb8cb151824be-760.webp 760w, /assets/generated/img/gameplay/dota2/13.png-83408e7402a6318c8b7a9446a0b261a3f862955a4f844982896cb8cb151824be-1140.webp 1140w, /assets/generated/img/gameplay/dota2/13.png-83408e7402a6318c8b7a9446a0b261a3f862955a4f844982896cb8cb151824be-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/13.png" alt="" width="1745" height="198" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>在Dota2中，玩家的操作大类别上可以分为下达移动指令、使用普通攻击、使用技能，和使用物品；对于角色静态属性来说，攻防血蓝，移速等等这些也都是有的。</p>
 
@@ -369,7 +369,7 @@
 
 <p>先看一些简单的，单维度改变的效果：</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/14-480.webp 480w, /assets/generated/img/gameplay/dota2/14-760.webp 760w, /assets/generated/img/gameplay/dota2/14-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/14.png" alt="" width="1240" height="341" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/14.png-f9bc047110a4d32200be525091dcdade435f7ef0f19381ada623ae18ec385e19-480.webp 480w, /assets/generated/img/gameplay/dota2/14.png-f9bc047110a4d32200be525091dcdade435f7ef0f19381ada623ae18ec385e19-760.webp 760w, /assets/generated/img/gameplay/dota2/14.png-f9bc047110a4d32200be525091dcdade435f7ef0f19381ada623ae18ec385e19-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/14.png" alt="" width="1240" height="341" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="移动指令"><span class="heading-counter">3.3.1.</span><span class="heading-label">移动指令</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
 
@@ -445,7 +445,7 @@
   <p>引申话题：</p>
 
   <p>其一，新手教学：游戏内部的术语说明中，也有介绍这基础的5种状态（还有十分常见的眩晕和恐惧）。
-<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/17-480.webp 480w, /assets/generated/img/gameplay/dota2/17-760.webp 760w, /assets/generated/img/gameplay/dota2/17-1140.webp 1140w, /assets/generated/img/gameplay/dota2/17-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/17.png" alt="" width="1538" height="1164" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/17.png-c05528332b408cde6bca8cdd09c935d51d68175ad3f632c897a2fab6ba008c3c-480.webp 480w, /assets/generated/img/gameplay/dota2/17.png-c05528332b408cde6bca8cdd09c935d51d68175ad3f632c897a2fab6ba008c3c-760.webp 760w, /assets/generated/img/gameplay/dota2/17.png-c05528332b408cde6bca8cdd09c935d51d68175ad3f632c897a2fab6ba008c3c-1140.webp 1140w, /assets/generated/img/gameplay/dota2/17.png-c05528332b408cde6bca8cdd09c935d51d68175ad3f632c897a2fab6ba008c3c-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/17.png" alt="" width="1538" height="1164" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
   <p>其二，状态叠加时：时长大概是显示最久的？一些效果表现是叠加显示的。
 <img src="https://cdn.jsdelivr.net/gh/jskyzero/Assets.Image@main/assets/img/dota2-25/1.5.2.gif" alt="1"></p>
@@ -455,7 +455,7 @@
 
 <p>接下来我们看一些影响多维度的叠加状态。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/15-480.webp 480w, /assets/generated/img/gameplay/dota2/15-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/15.png" alt="" width="1006" height="1083" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/15.png-c93575c170d27e7e61093c7b3fb23b635b61ab9a19d1debf9b1d3d7f96120aec-480.webp 480w, /assets/generated/img/gameplay/dota2/15.png-c93575c170d27e7e61093c7b3fb23b635b61ab9a19d1debf9b1d3d7f96120aec-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/15.png" alt="" width="1006" height="1083" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="常规复合"><span class="heading-counter">3.4.1.</span><span class="heading-label">常规复合</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
 
@@ -555,7 +555,7 @@
 
 <p>Dota2 Wiki中有个单独的页面介绍了不同控制状态的区别，这里简单翻译整理如下。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/16-480.webp 480w, /assets/generated/img/gameplay/dota2/16-760.webp 760w, /assets/generated/img/gameplay/dota2/16-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/16.png" alt="" width="1419" height="1100" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/16.png-14a34be205013bcf9e7d4cfaac1c35ab5e8e6fc06752b0cc55e68995a7705049-480.webp 480w, /assets/generated/img/gameplay/dota2/16.png-14a34be205013bcf9e7d4cfaac1c35ab5e8e6fc06752b0cc55e68995a7705049-760.webp 760w, /assets/generated/img/gameplay/dota2/16.png-14a34be205013bcf9e7d4cfaac1c35ab5e8e6fc06752b0cc55e68995a7705049-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/16.png" alt="" width="1419" height="1100" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>单维度里面的就是前面提到的简单状态属性，数值类下文会进行介绍，复合类就是刚刚介绍的一些多重控制叠加的状态属性。</p>
 
@@ -717,7 +717,7 @@
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h2 id="简要总结"><span class="heading-counter">4.</span><span class="heading-label">简要总结</span><span class="svg-heading-rule" aria-hidden="true"></span></h2>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-5-480.webp 480w, /assets/generated/img/gameplay/dota2/X-5-760.webp 760w, /assets/generated/img/gameplay/dota2/X-5-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-5-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-5.png" alt="" width="1555" height="257" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/X-5.png-34ce2f5193a3b9b9b8c3ff04721f60b5838d048a5b01eac3fd4bbc810c00f31b-480.webp 480w, /assets/generated/img/gameplay/dota2/X-5.png-34ce2f5193a3b9b9b8c3ff04721f60b5838d048a5b01eac3fd4bbc810c00f31b-760.webp 760w, /assets/generated/img/gameplay/dota2/X-5.png-34ce2f5193a3b9b9b8c3ff04721f60b5838d048a5b01eac3fd4bbc810c00f31b-1140.webp 1140w, /assets/generated/img/gameplay/dota2/X-5.png-34ce2f5193a3b9b9b8c3ff04721f60b5838d048a5b01eac3fd4bbc810c00f31b-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/X-5.png" alt="" width="1555" height="257" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>简要总结一下：</p>
 
@@ -741,7 +741,7 @@
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="少就是多的动画"><span class="heading-counter">5.1.</span><span class="heading-label">少就是多的动画</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/10-480.webp 480w, /assets/generated/img/gameplay/dota2/10-760.webp 760w, /assets/generated/img/gameplay/dota2/10-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/10.png" alt="" width="1342" height="1239" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/10.png-2b21d11a63e5786a6710a50fb4031c5fadd5586df6258a543446255715c673bb-480.webp 480w, /assets/generated/img/gameplay/dota2/10.png-2b21d11a63e5786a6710a50fb4031c5fadd5586df6258a543446255715c673bb-760.webp 760w, /assets/generated/img/gameplay/dota2/10.png-2b21d11a63e5786a6710a50fb4031c5fadd5586df6258a543446255715c673bb-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/10.png" alt="" width="1342" height="1239" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>游戏中英雄的基础动画数并不多，以至宝冰女的动画为例，仅有5个定制动作与6个基础动作合计11个动画。（注意，上文可是提到了25种以上的状态机制，尤其是控制机制是会需要动画表现的！这个问题如何解决？）</p>
 
@@ -753,7 +753,7 @@
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="出现即巅峰的特效"><span class="heading-counter">5.2.</span><span class="heading-label">出现即巅峰的特效</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/9-480.webp 480w, /assets/generated/img/gameplay/dota2/9-760.webp 760w, /assets/generated/img/gameplay/dota2/9-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/9.png" alt="" width="1211" height="1160" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/gameplay/dota2/9.png-1c049fabaa6424988e9d826b3999ff74873e28dac968b06a9418744dac57e838-480.webp 480w, /assets/generated/img/gameplay/dota2/9.png-1c049fabaa6424988e9d826b3999ff74873e28dac968b06a9418744dac57e838-760.webp 760w, /assets/generated/img/gameplay/dota2/9.png-1c049fabaa6424988e9d826b3999ff74873e28dac968b06a9418744dac57e838-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/gameplay/dota2/9.png" alt="" width="1211" height="1160" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>Dota2是一个强竞技性游戏，留意道具的使用是没有抬手的，那么请问附加的特效表现是如何实现的？</p>
 
@@ -789,7 +789,7 @@
 2024-07-01 - jskyzero - 📝 add xmind
 ...
 
-<em>（本文编写于2024年7月，最后修改于2024年7月，共修改30次。）</em>
+<em>（本文编写于2024年1月，最后修改于2024年7月，共修改30次。）</em>
 
 <img alt="Creative Commons License" src="/assets/img/CC.png">
 

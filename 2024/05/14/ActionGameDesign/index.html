@@ -140,7 +140,7 @@
 
 <h1 id="动作游戏的本质与相关设计方法论"><span class="heading-label">动作游戏的本质，与相关设计方法论</span><span class="svg-heading-rule" aria-hidden="true"></span></h1><div class="post-meta-badges" id="pro"><img src="https://img.shields.io/badge/动作游戏设计-blue.svg?style=flat" alt="动作游戏设计"><img src="https://img.shields.io/badge/作者-jskyzero-brightgreen.svg?style=flat" alt="作者 jskyzero"><img src="https://img.shields.io/badge/日期-2024/05/14-brightgreen.svg?style=flat" alt="日期 2024/05/14"></div><div class="inline-outline toc-inline" id="toc-inline"><nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</a><ul><li><a href="#广义和狭义的动作游戏">广义和狭义的动作游戏</a><ul><li><a href="#动作游戏的分类">动作游戏的分类</a><ul><li><a href="#广义动作游戏">广义动作游戏</a></li><li><a href="#狭义日式动作游戏">狭义（日式）动作游戏</a></li><li><a href="#我们所讨论的是">我们所讨论的是</a></li></ul></li></ul></li><li><a href="#动作游戏的哲学与本质">动作游戏的哲学与本质</a><ul><li><a href="#设计方法论奖惩导向-上">设计方法论：奖惩导向 上</a><ul><li><a href="#控制的乐趣">控制的乐趣</a></li><li><a href="#奖惩导向">奖惩导向</a></li></ul></li><li><a href="#设计方法论奖惩导向-下">设计方法论：奖惩导向 下</a><ul><li><a href="#奖惩设计的基本要求">奖惩设计的基本要求</a></li><li><a href="#奖惩设计方向的取舍">奖惩设计方向的取舍</a></li><li><a href="#让奖惩设计长期有效">让奖惩设计长期有效</a></li></ul></li></ul></li><li><a href="#基于m-d-a理论的理解">基于M-D-A理论的理解</a><ul><li><a href="#设计方法论底层机制">设计方法论：底层机制</a><ul><li><a href="#状态机-逻辑轴-系统逻辑">状态机 逻辑轴 系统逻辑</a></li><li><a href="#一些比较典型的动作游戏的底层机制实现过程">一些比较典型的动作游戏的底层机制实现过程</a></li></ul></li><li><a href="#设计方法论微观循环">设计方法论：微观循环</a><ul><li><a href="#针对感知的设计">针对感知的设计</a></li><li><a href="#针对认知的设计">针对认知的设计</a></li><li><a href="#针对行动的设计">针对行动的设计</a></li><li><a href="#注意事项">注意事项</a></li></ul></li><li><a href="#设计方法论打击感">设计方法论：打击感</a></li></ul></li><li><a href="#从微观到宏观">从微观到宏观</a><ul><li><a href="#内容构建理论和工具">内容构建理论和工具</a><ul><li><a href="#体验蓝图与玩家阶段">体验蓝图与玩家阶段</a></li><li><a href="#叙事与英雄之旅">叙事与英雄之旅</a></li></ul></li></ul></li><li><a href="#简要总结">简要总结</a></li></ul></li></ul></nav></div>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/xmind-0-480.webp 480w, /assets/generated/img/act/2022/xmind-0-760.webp 760w, /assets/generated/img/act/2022/xmind-0-1140.webp 1140w, /assets/generated/img/act/2022/xmind-0-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/xmind-0.png" alt="" width="3111" height="1555" loading="eager" decoding="async" fetchpriority="high"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/xmind-0.png-83268efc163fcb4a5427ccb73db3e9c83583cbc75abe511586e6c67c5f54279e-480.webp 480w, /assets/generated/img/act/2022/xmind-0.png-83268efc163fcb4a5427ccb73db3e9c83583cbc75abe511586e6c67c5f54279e-760.webp 760w, /assets/generated/img/act/2022/xmind-0.png-83268efc163fcb4a5427ccb73db3e9c83583cbc75abe511586e6c67c5f54279e-1140.webp 1140w, /assets/generated/img/act/2022/xmind-0.png-83268efc163fcb4a5427ccb73db3e9c83583cbc75abe511586e6c67c5f54279e-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/xmind-0.png" alt="" width="3111" height="1555" loading="eager" decoding="async" fetchpriority="high"></picture></p>
 
 <!-- 🚧🚧🚧注意：本文有部分章节未补充详细案例，有待施工，但是本文结构是完整的。 -->
 
@@ -150,7 +150,7 @@
 
 <p>本节想先讨论一些远离具体的设计的、有关动作游戏的宏观理解，这些作为一些基础铺垫，帮助我们深入理解动作游戏的核心特征与乐趣，逐步导出下文的一些理解、设计方法论。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/03-480.webp 480w, /assets/generated/img/act/2022/03-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/03.jpg" alt="动作游戏核心体验" width="1045" height="354" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/03.jpg-1d4c94fd53b67edd6bcc4d2acc1c02224bb4a488eca51a41dc0d426a6e1e75eb-480.webp 480w, /assets/generated/img/act/2022/03.jpg-1d4c94fd53b67edd6bcc4d2acc1c02224bb4a488eca51a41dc0d426a6e1e75eb-760.webp 760w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/03.jpg" alt="动作游戏核心体验" width="1045" height="354" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="动作游戏的分类"><span class="heading-counter">1.1.</span><span class="heading-label">动作游戏的分类</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
@@ -188,7 +188,7 @@
 
 <p>动作游戏本质或者核心逻辑，抽象起来非常简单：<strong>玩家 控制 游戏角色 播放 动作。</strong></p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/03-1-480.webp 480w, /assets/generated/img/act/2022/03-1-760.webp 760w, /assets/generated/img/act/2022/03-1-1140.webp 1140w, /assets/generated/img/act/2022/03-1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/03-1.jpg" alt="动作游戏核心体验" width="1780" height="332" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/03-1.jpg-b78d2360ca4ec2080c463b4194982a95814ba3bb72d0c41f0eeba0d9f44d9810-480.webp 480w, /assets/generated/img/act/2022/03-1.jpg-b78d2360ca4ec2080c463b4194982a95814ba3bb72d0c41f0eeba0d9f44d9810-760.webp 760w, /assets/generated/img/act/2022/03-1.jpg-b78d2360ca4ec2080c463b4194982a95814ba3bb72d0c41f0eeba0d9f44d9810-1140.webp 1140w, /assets/generated/img/act/2022/03-1.jpg-b78d2360ca4ec2080c463b4194982a95814ba3bb72d0c41f0eeba0d9f44d9810-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/03-1.jpg" alt="动作游戏核心体验" width="1780" height="332" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="设计方法论奖惩导向-上"><span class="heading-counter">2.1.</span><span class="heading-label">设计方法论：奖惩导向 上</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
@@ -226,7 +226,7 @@
 
 <p>本节简单聊下对于动作游戏，奖惩导向一些需要注意的东西。</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/08-480.webp 480w, /assets/generated/img/act/2022/08-760.webp 760w, /assets/generated/img/act/2022/08-1140.webp 1140w, /assets/generated/img/act/2022/08-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/08.png" alt="" width="1890" height="271" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/08.png-2a0070ce2c5505df63d9445297c8d3473c9aabab1df4b569379afbd0f10f28c1-480.webp 480w, /assets/generated/img/act/2022/08.png-2a0070ce2c5505df63d9445297c8d3473c9aabab1df4b569379afbd0f10f28c1-760.webp 760w, /assets/generated/img/act/2022/08.png-2a0070ce2c5505df63d9445297c8d3473c9aabab1df4b569379afbd0f10f28c1-1140.webp 1140w, /assets/generated/img/act/2022/08.png-2a0070ce2c5505df63d9445297c8d3473c9aabab1df4b569379afbd0f10f28c1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/08.png" alt="" width="1890" height="271" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="奖惩设计的基本要求"><span class="heading-counter">2.2.1.</span><span class="heading-label">奖惩设计的基本要求</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
 
@@ -242,7 +242,7 @@
   <p>这里可以带入一些没那么好的游戏作为反向例子理解，比如：当一些游戏的动画看不清，就会影响玩家对信息的获取，然后干扰玩家的决策，导致结果不符合预期，给玩家带来不好的体验。</p>
 </blockquote>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/09-480.webp 480w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/09.png" alt="" width="634" height="283" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/09.png-5deaa757d71211d4df16e2181afbe9329ac41cb95eaaff1c68c1f596f510d590-480.webp 480w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/09.png" alt="" width="634" height="283" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="奖惩设计方向的取舍"><span class="heading-counter">2.2.2.</span><span class="heading-label">奖惩设计方向的取舍</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
 
@@ -260,7 +260,7 @@
   <p>这里我们没有说两者都非常重要，而是说两者相对均衡，是因为，一般不能要求玩家“左手画圆，同时右手画框”，如果俩都想要，那最好降低各自的难度，或者至少是逐步给玩家提高难度的。</p>
 </blockquote>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/10-480.webp 480w, /assets/generated/img/act/2022/10-760.webp 760w, /assets/generated/img/act/2022/10-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/10.png" alt="" width="1348" height="253" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/10.png-e0b00884ba4478cba757c6e317ed665a7724cd2d74c0b1b8c1eef82d92146c1f-480.webp 480w, /assets/generated/img/act/2022/10.png-e0b00884ba4478cba757c6e317ed665a7724cd2d74c0b1b8c1eef82d92146c1f-760.webp 760w, /assets/generated/img/act/2022/10.png-e0b00884ba4478cba757c6e317ed665a7724cd2d74c0b1b8c1eef82d92146c1f-1140.webp 1140w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/10.png" alt="" width="1348" height="253" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="让奖惩设计长期有效"><span class="heading-counter">2.2.3.</span><span class="heading-label">让奖惩设计长期有效</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
 
@@ -287,7 +287,7 @@
 
 <p>收一收，我们继续把“玩家 控制 游戏角色 播放 动作。”这个底层逻辑，放入<strong>M机制-D动态-A美学</strong>理论框架中：</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/03-2-480.webp 480w, /assets/generated/img/act/2022/03-2-760.webp 760w, /assets/generated/img/act/2022/03-2-1140.webp 1140w, /assets/generated/img/act/2022/03-2-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/03-2.jpg" alt="动作游戏核心体验" width="1747" height="493" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/03-2.jpg-24017329261b0b8dd5ec36dd51d1705abcc53092a638073cb6c6c6cc65331de9-480.webp 480w, /assets/generated/img/act/2022/03-2.jpg-24017329261b0b8dd5ec36dd51d1705abcc53092a638073cb6c6c6cc65331de9-760.webp 760w, /assets/generated/img/act/2022/03-2.jpg-24017329261b0b8dd5ec36dd51d1705abcc53092a638073cb6c6c6cc65331de9-1140.webp 1140w, /assets/generated/img/act/2022/03-2.jpg-24017329261b0b8dd5ec36dd51d1705abcc53092a638073cb6c6c6cc65331de9-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/03-2.jpg" alt="动作游戏核心体验" width="1747" height="493" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>这里给动作游戏的归纳了两种乐趣（不具备啥泛用性，可能也就在乐趣区分的时候有点用）</p>
 
@@ -298,7 +298,7 @@
 
 <p>我们可以尝试继续挖掘M-D-A三层：</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/04-480.webp 480w, /assets/generated/img/act/2022/04-760.webp 760w, /assets/generated/img/act/2022/04-1140.webp 1140w, /assets/generated/img/act/2022/04-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/04.jpg" alt="MDA框架" width="1743" height="905" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/04.jpg-5a8f809d371e62b306189c874e2bb71cd5108b20e382946312c4d49fbc0321ae-480.webp 480w, /assets/generated/img/act/2022/04.jpg-5a8f809d371e62b306189c874e2bb71cd5108b20e382946312c4d49fbc0321ae-760.webp 760w, /assets/generated/img/act/2022/04.jpg-5a8f809d371e62b306189c874e2bb71cd5108b20e382946312c4d49fbc0321ae-1140.webp 1140w, /assets/generated/img/act/2022/04.jpg-5a8f809d371e62b306189c874e2bb71cd5108b20e382946312c4d49fbc0321ae-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/04.jpg" alt="MDA框架" width="1743" height="905" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h3 id="设计方法论底层机制"><span class="heading-counter">3.1.</span><span class="heading-label">设计方法论：底层机制</span><span class="svg-heading-rule" aria-hidden="true"></span></h3>
 
@@ -363,7 +363,7 @@
 
 <p>可以引入信息传递模型：</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/05-480.webp 480w, /assets/generated/img/act/2022/05-760.webp 760w, /assets/generated/img/act/2022/05-1140.webp 1140w, /assets/generated/img/act/2022/05-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/05.jpg" alt="" width="1782" height="482" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/05.jpg-19d7d63d283c0cdaf433ac5cc8f4f97370a8d1af02d9a767b7e3eb12976cfdc4-480.webp 480w, /assets/generated/img/act/2022/05.jpg-19d7d63d283c0cdaf433ac5cc8f4f97370a8d1af02d9a767b7e3eb12976cfdc4-760.webp 760w, /assets/generated/img/act/2022/05.jpg-19d7d63d283c0cdaf433ac5cc8f4f97370a8d1af02d9a767b7e3eb12976cfdc4-1140.webp 1140w, /assets/generated/img/act/2022/05.jpg-19d7d63d283c0cdaf433ac5cc8f4f97370a8d1af02d9a767b7e3eb12976cfdc4-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/05.jpg" alt="" width="1782" height="482" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>针对发送、噪声、接收等环节都可以对应上一些具体的设计，这里不再具体举例。</p>
 
@@ -384,7 +384,7 @@
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="针对行动的设计"><span class="heading-counter">3.2.3.</span><span class="heading-label">针对行动的设计</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/05-1-480.webp 480w, /assets/generated/img/act/2022/05-1-760.webp 760w, /assets/generated/img/act/2022/05-1-1140.webp 1140w, /assets/generated/img/act/2022/05-1-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/05-1.jpg" alt="" width="1782" height="243" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/05-1.jpg-a737b4b27847abf49f9593aace0f14c9cd99c9f4209f1c738d5ddf52710cff90-480.webp 480w, /assets/generated/img/act/2022/05-1.jpg-a737b4b27847abf49f9593aace0f14c9cd99c9f4209f1c738d5ddf52710cff90-760.webp 760w, /assets/generated/img/act/2022/05-1.jpg-a737b4b27847abf49f9593aace0f14c9cd99c9f4209f1c738d5ddf52710cff90-1140.webp 1140w, /assets/generated/img/act/2022/05-1.jpg-a737b4b27847abf49f9593aace0f14c9cd99c9f4209f1c738d5ddf52710cff90-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/05-1.jpg" alt="" width="1782" height="243" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 <p>这部分主要是玩家控制的方式，事实上玩家也有着屏幕、键盘鼠标、手柄等多种输入设备，各自也有一些经典输入模式设计。</p>
 
@@ -414,7 +414,7 @@
 
 <p>在具体的组成方式上，也是相当具有技巧的（比如，如何控制玩家在心流区间），一种常见的，用于指导构建复杂体验的方式，是体验蓝图，如下图：</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/06-480.webp 480w, /assets/generated/img/act/2022/06-760.webp 760w, /assets/generated/img/act/2022/06-1140.webp 1140w, /assets/generated/img/act/2022/06-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/06.jpg" alt="宏观设计" width="1920" height="962" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/06.jpg-1beb9128663270f0d4cc9b46a51fbf01ac622e6534a60e9c4fffc5389e3f49d4-480.webp 480w, /assets/generated/img/act/2022/06.jpg-1beb9128663270f0d4cc9b46a51fbf01ac622e6534a60e9c4fffc5389e3f49d4-760.webp 760w, /assets/generated/img/act/2022/06.jpg-1beb9128663270f0d4cc9b46a51fbf01ac622e6534a60e9c4fffc5389e3f49d4-1140.webp 1140w, /assets/generated/img/act/2022/06.jpg-1beb9128663270f0d4cc9b46a51fbf01ac622e6534a60e9c4fffc5389e3f49d4-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/06.jpg" alt="宏观设计" width="1920" height="962" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 </section><div class="content-section-separator" aria-hidden="true"></div><section class="content-section"><div class="content-section-frame" aria-hidden="true"></div><h4 id="叙事与英雄之旅"><span class="heading-counter">4.1.2.</span><span class="heading-label">叙事与英雄之旅</span><span class="svg-heading-rule" aria-hidden="true"></span></h4>
 
@@ -426,7 +426,7 @@
 
 <p>一图流，如图：</p>
 
-<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/07-480.webp 480w, /assets/generated/img/act/2022/07-760.webp 760w, /assets/generated/img/act/2022/07-1140.webp 1140w, /assets/generated/img/act/2022/07-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/07.jpg" alt="简要总结" width="1818" height="687" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/assets/generated/img/act/2022/07.jpg-07a0864c80592d0dabaf4dc3269925673cbd6856972bda38681d3e90a726ba49-480.webp 480w, /assets/generated/img/act/2022/07.jpg-07a0864c80592d0dabaf4dc3269925673cbd6856972bda38681d3e90a726ba49-760.webp 760w, /assets/generated/img/act/2022/07.jpg-07a0864c80592d0dabaf4dc3269925673cbd6856972bda38681d3e90a726ba49-1140.webp 1140w, /assets/generated/img/act/2022/07.jpg-07a0864c80592d0dabaf4dc3269925673cbd6856972bda38681d3e90a726ba49-1520.webp 1520w" sizes="(max-width: 640px) calc(100vw - 32px), 600px"><img src="/assets/img/act/2022/07.jpg" alt="简要总结" width="1818" height="687" loading="lazy" decoding="async" fetchpriority="auto"></picture></p>
 
 
 
