@@ -9,7 +9,7 @@
     if (img.style.display !== 'none') return;
     img.src = img.getAttribute('data-fallback');
     img.style.display = '';
-    img.title = '访问量服务暂不可用';
+    img.title = 'Hits unavailable';
   }
 
   function show(pv, cached) {
