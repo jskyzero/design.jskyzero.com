@@ -589,7 +589,7 @@
 2019-10-10 - jskyzero - add 后记——如何分析一部影片
 2019-10-10 - jskyzero - 完成救猫咪w
 
-<em>（本文编写于2019年10月，最后修改于2024年10月，共修改1次。）</em>
+<em>（本文编写于2019年10月，最后修改于2024年10月，共修改16次。）</em>
 
 <img alt="Creative Commons License" src="/assets/img/CC.png">
 
@@ -633,34 +633,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
-    <img id="hits-badge" alt="hits" style="display:none">
+    <img id="hits-badge" alt="hits" data-fallback="/assets/img/hits-unavailable.svg" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
 </footer>
-<script>
-  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
-  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
-  (function () {
-    var img = document.getElementById('hits-badge');
-    if (!img) return;
-    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
-    window[cb] = function (data) {
-      try {
-        var pv = data && data.site_pv;
-        if (pv) {
-          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
-          img.style.display = '';
-        }
-      } finally {
-        delete window[cb];
-      }
-    };
-    var s = document.createElement('script');
-    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
-    document.body.appendChild(s);
-  })();
-</script>
+<script src="/assets/js/hits.js" defer=""></script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#前言">前言</a></li></ul><ul><li><a href="#救猫咪总结">《救猫咪》总结</a><ul><li><a href="#导论">导论</a></li><li><a href="#救猫咪的含义">“救猫咪”的含义</a></li><li><a href="#似而不同">似而不同</a></li><li><a href="#主角是谁">主角是谁</a></li><li><a href="#开始写剧本">开始写剧本</a></li><li><a href="#创造完美的野兽">创造完美的野兽</a></li><li><a href="#剧本写作的金科玉律">剧本写作的金科玉律</a></li><li><a href="#影片出了什么问题">影片出了什么问题</a></li><li><a href="#结尾淡出">结尾淡出</a></li><li><a href="#后记如何分析一部影片">后记——如何分析一部影片</a></li></ul></li></ul></nav>

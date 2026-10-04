@@ -304,7 +304,7 @@
 2019-10-17 - jskyzero - 更新封面和描述
 2019-10-15 - jskyzero - add reports
 
-<em>（本文编写于2019年10月，最后修改于2024年4月，共修改1次。）</em>
+<em>（本文编写于2019年10月，最后修改于2024年4月，共修改11次。）</em>
 
 <img alt="Creative Commons License" src="/assets/img/CC.png">
 
@@ -348,34 +348,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
-    <img id="hits-badge" alt="hits" style="display:none">
+    <img id="hits-badge" alt="hits" data-fallback="/assets/img/hits-unavailable.svg" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
 </footer>
-<script>
-  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
-  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
-  (function () {
-    var img = document.getElementById('hits-badge');
-    if (!img) return;
-    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
-    window[cb] = function (data) {
-      try {
-        var pv = data && data.site_pv;
-        if (pv) {
-          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
-          img.style.display = '';
-        }
-      } finally {
-        delete window[cb];
-      }
-    };
-    var s = document.createElement('script');
-    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
-    document.body.appendChild(s);
-  })();
-</script>
+<script src="/assets/js/hits.js" defer=""></script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#拟真的度开放世界游戏如何带给玩家好的体验">拟真的度——开放世界游戏如何带给玩家好的体验</a><ul><li><a href="#如何理解开放世界">如何理解开放世界</a><ul><li><a href="#开放广阔与自由">开放，广阔，与自由</a></li><li><a href="#开放世界的定义">开放世界的定义</a></li><li><a href="#玩法依然是最重要的">玩法依然是最重要的</a></li></ul></li><li><a href="#过分拟真什么都好就是不好玩">过分拟真：”什么都好，就是不好玩“</a><ul><li><a href="#荒野大镖客的失败">荒野大镖客的“失败”</a></li><li><a href="#玩家角度出发问题在哪">玩家角度出发，问题在哪？</a></li></ul></li><li><a href="#如何把握拟真的度">如何把握拟真的度</a><ul><li><a href="#玩家行为自由而非束缚">玩家行为：自由而非束缚</a></li><li><a href="#核心玩法聚焦而非发散">核心玩法：聚焦而非发散</a></li></ul></li><li><a href="#总结">总结</a></li></ul></li></ul></nav>

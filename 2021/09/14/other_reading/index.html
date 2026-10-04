@@ -658,11 +658,12 @@
 2022-04-15 - jskyzero - 📝 update title
 2022-03-16 - jskyzero - ✨ add text-indent
 2022-03-15 - jskyzero - 📝 add content
-2021-11-14 - jskyzero - 🎨 mv possessiveness to single page
-2021-11-14 - jskyzero - 📝 add 欲望 to 自制力
-2021-11-12 - jskyzero - 📝 udpate 自制力 in 阅读记录
+...
+2021-10-03 - jskyzero - 📝 add PART 4
+2021-09-21 - jskyzero - 🍱 update 杂谈 img
+2021-09-14 - jskyzero - 🚚 迁移 阅读记录 &amp; 问答总结
 
-<em>（本文编写于2021年9月，最后修改于2025年7月，共修改1次。）</em>
+<em>（本文编写于2021年9月，最后修改于2025年7月，共修改36次。）</em>
 
 <img alt="Creative Commons License" src="/assets/img/CC.png">
 
@@ -706,34 +707,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
-    <img id="hits-badge" alt="hits" style="display:none">
+    <img id="hits-badge" alt="hits" data-fallback="/assets/img/hits-unavailable.svg" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
 </footer>
-<script>
-  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
-  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
-  (function () {
-    var img = document.getElementById('hits-badge');
-    if (!img) return;
-    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
-    window[cb] = function (data) {
-      try {
-        var pv = data && data.site_pv;
-        if (pv) {
-          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
-          img.style.display = '';
-        }
-      } finally {
-        delete window[cb];
-      }
-    };
-    var s = document.createElement('script');
-    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
-    document.body.appendChild(s);
-  })();
-</script>
+<script src="/assets/js/hits.js" defer=""></script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#书籍作品">书籍作品</a><ul><li><a href="#非暴力沟通">非暴力沟通</a></li><li><a href="#月亮与六便士">月亮与六便士</a></li></ul></li><li><a href="#人的一生应该如何度过">人的一生应该如何度过</a><ul><li><a href="#part-1">PART 1</a></li><li><a href="#part-2">PART 2</a></li><li><a href="#part-3">PART 3</a></li><li><a href="#part-4">PART 4</a></li><li><a href="#part-5">PART 5</a></li><li><a href="#part-6">PART 6</a></li><li><a href="#part-7">PART 7</a></li><li><a href="#part-8">PART 8</a></li><li><a href="#part-9">PART 9</a></li><li><a href="#part-10">PART 10</a></li><li><a href="#part-11">PART 11</a></li><li><a href="#part-12">Part 12</a></li></ul></li></ul></nav>

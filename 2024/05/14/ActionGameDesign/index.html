@@ -452,7 +452,7 @@
 2024-05-14 - jskyzero - 📝 修措辞
 2024-05-14 - jskyzero - 📝 add 动作游戏的本质 &amp; update structure
 
-<em>（本文编写于2024年5月，最后修改于2025年9月，共修改13次。）</em>
+<em>（本文编写于2024年5月，最后修改于2025年9月，共修改19次。）</em>
 
 <img alt="Creative Commons License" src="/assets/img/CC.png">
 
@@ -496,34 +496,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
-    <img id="hits-badge" alt="hits" style="display:none">
+    <img id="hits-badge" alt="hits" data-fallback="/assets/img/hits-unavailable.svg" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
 </footer>
-<script>
-  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
-  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
-  (function () {
-    var img = document.getElementById('hits-badge');
-    if (!img) return;
-    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
-    window[cb] = function (data) {
-      try {
-        var pv = data && data.site_pv;
-        if (pv) {
-          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
-          img.style.display = '';
-        }
-      } finally {
-        delete window[cb];
-      }
-    };
-    var s = document.createElement('script');
-    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
-    document.body.appendChild(s);
-  })();
-</script>
+<script src="/assets/js/hits.js" defer=""></script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#动作游戏的本质与相关设计方法论">动作游戏的本质，与相关设计方法论</a><ul><li><a href="#广义和狭义的动作游戏">广义和狭义的动作游戏</a><ul><li><a href="#动作游戏的分类">动作游戏的分类</a><ul><li><a href="#广义动作游戏">广义动作游戏</a></li><li><a href="#狭义日式动作游戏">狭义（日式）动作游戏</a></li><li><a href="#我们所讨论的是">我们所讨论的是</a></li></ul></li></ul></li><li><a href="#动作游戏的哲学与本质">动作游戏的哲学与本质</a><ul><li><a href="#设计方法论奖惩导向-上">设计方法论：奖惩导向 上</a><ul><li><a href="#控制的乐趣">控制的乐趣</a></li><li><a href="#奖惩导向">奖惩导向</a></li></ul></li><li><a href="#设计方法论奖惩导向-下">设计方法论：奖惩导向 下</a><ul><li><a href="#奖惩设计的基本要求">奖惩设计的基本要求</a></li><li><a href="#奖惩设计方向的取舍">奖惩设计方向的取舍</a></li><li><a href="#让奖惩设计长期有效">让奖惩设计长期有效</a></li></ul></li></ul></li><li><a href="#基于m-d-a理论的理解">基于M-D-A理论的理解</a><ul><li><a href="#设计方法论底层机制">设计方法论：底层机制</a><ul><li><a href="#状态机-逻辑轴-系统逻辑">状态机 逻辑轴 系统逻辑</a></li><li><a href="#一些比较典型的动作游戏的底层机制实现过程">一些比较典型的动作游戏的底层机制实现过程</a></li></ul></li><li><a href="#设计方法论微观循环">设计方法论：微观循环</a><ul><li><a href="#针对感知的设计">针对感知的设计</a></li><li><a href="#针对认知的设计">针对认知的设计</a></li><li><a href="#针对行动的设计">针对行动的设计</a></li><li><a href="#注意事项">注意事项</a></li></ul></li><li><a href="#设计方法论打击感">设计方法论：打击感</a></li></ul></li><li><a href="#从微观到宏观">从微观到宏观</a><ul><li><a href="#内容构建理论和工具">内容构建理论和工具</a><ul><li><a href="#体验蓝图与玩家阶段">体验蓝图与玩家阶段</a></li><li><a href="#叙事与英雄之旅">叙事与英雄之旅</a></li></ul></li></ul></li><li><a href="#简要总结">简要总结</a></li></ul></li></ul></nav>

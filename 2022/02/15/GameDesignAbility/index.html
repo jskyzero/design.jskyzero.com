@@ -314,7 +314,7 @@ graph TD
 2022-02-15 - jskyzero - 📝 test build
 2022-02-15 - jskyzero - 📝 add 为什么要读这篇文章 to 游戏设计所需要的能力
 
-<em>（本文编写于2022年2月，最后修改于2024年1月，共修改1次。）</em>
+<em>（本文编写于2022年2月，最后修改于2024年1月，共修改14次。）</em>
 
 <img alt="Creative Commons License" src="/assets/img/CC.png">
 
@@ -358,34 +358,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
-    <img id="hits-badge" alt="hits" style="display:none">
+    <img id="hits-badge" alt="hits" data-fallback="/assets/img/hits-unavailable.svg" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
 </footer>
-<script>
-  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
-  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
-  (function () {
-    var img = document.getElementById('hits-badge');
-    if (!img) return;
-    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
-    window[cb] = function (data) {
-      try {
-        var pv = data && data.site_pv;
-        if (pv) {
-          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
-          img.style.display = '';
-        }
-      } finally {
-        delete window[cb];
-      }
-    };
-    var s = document.createElement('script');
-    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
-    document.body.appendChild(s);
-  })();
-</script>
+<script src="/assets/js/hits.js" defer=""></script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#游戏设计所需要的能力">游戏设计所需要的能力</a><ul><li><a href="#为什么要读这篇文章">为什么要读这篇文章</a></li><li><a href="#能力模型">能力模型</a><ul><li><a href="#硬实力说话客观能力">硬实力说话：客观能力</a><ul><li><a href="#持续变强的能力">持续变强的能力</a></li><li><a href="#创造新内容的能力">创造新内容的能力</a></li><li><a href="#了解过去的能力">了解过去的能力</a></li><li><a href="#专业设计能力">专业设计能力</a></li></ul></li><li><a href="#能力放大器主观意愿">能力放大器：主观意愿</a><ul><li><a href="#行动的意义">行动的意义</a></li><li><a href="#调整自身状态">调整自身状态</a></li></ul></li><li><a href="#拥抱现实协同合作">拥抱现实：协同合作</a><ul><li><a href="#沟通合作能力">沟通合作能力</a></li></ul></li></ul></li><li><a href="#附录冰山模型">附录：冰山模型</a></li><li><a href="#附录游戏开发过程">附录：游戏开发过程</a><ul><li><a href="#阶段划分">阶段划分</a></li><li><a href="#角色划分">角色划分</a></li><li><a href="#开发结果盈利">开发结果：盈利</a></li></ul></li><li><a href="#结语">结语</a></li></ul></li></ul></nav>

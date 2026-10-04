@@ -458,7 +458,7 @@
 2019-10-17 - jskyzero - 更新封面和描述
 2019-10-15 - jskyzero - add reports
 
-<em>（本文编写于2019年10月，最后修改于2024年4月，共修改1次。）</em>
+<em>（本文编写于2019年10月，最后修改于2024年4月，共修改11次。）</em>
 
 <img alt="Creative Commons License" src="/assets/img/CC.png">
 
@@ -502,34 +502,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
-    <img id="hits-badge" alt="hits" style="display:none">
+    <img id="hits-badge" alt="hits" data-fallback="/assets/img/hits-unavailable.svg" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
 </footer>
-<script>
-  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
-  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
-  (function () {
-    var img = document.getElementById('hits-badge');
-    if (!img) return;
-    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
-    window[cb] = function (data) {
-      try {
-        var pv = data && data.site_pv;
-        if (pv) {
-          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
-          img.style.display = '';
-        }
-      } finally {
-        delete window[cb];
-      }
-    };
-    var s = document.createElement('script');
-    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
-    document.body.appendChild(s);
-  })();
-</script>
+<script src="/assets/js/hits.js" defer=""></script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#多人共斗动作游戏在手游未来发展的可能解">多人共斗——动作游戏在手游未来发展的可能解</a><ul><li><a href="#多人共斗是动作类的可能解">多人共斗是动作类的可能解</a><ul><li><a href="#以魂系列游戏总结传统动作游戏">以魂系列游戏总结传统动作游戏</a></li><li><a href="#共斗类和传统动作的对比">共斗类和传统动作的对比</a></li><li><a href="#主机游戏高品质mmo的运营">主机游戏高品质+MMO的运营</a></li></ul></li><li><a href="#手游市场动作游戏仍待发展">手游市场动作游戏仍待发展</a><ul><li><a href="#历史原因缺少王者">历史原因缺少“王者”</a></li><li><a href="#横板格斗的局限与下一代产品">横板格斗的局限与下一代产品</a></li></ul></li><li><a href="#设计上如何展开">设计上如何展开</a><ul><li><a href="#足够丰富的核心体验">足够丰富的核心体验</a></li><li><a href="#mmo的运营思路">MMO的运营思路</a></li><li><a href="#冰原教你如何做dlc">冰原教你如何做DLC</a></li><li><a href="#移植手游还原经典超越经典">移植手游：“还原经典，超越经典”</a></li></ul></li></ul></li></ul></nav>

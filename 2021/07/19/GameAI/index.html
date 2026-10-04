@@ -826,11 +826,12 @@ void OnChildExecuted {
 2021-08-12 - jskyzero - fix wrong words
 2021-08-11 - jskyzero - fix wrong words
 2021-08-09 - jskyzero - 📝 format code
-2021-07-26 - jskyzero - 🐛 fix error
-2021-07-26 - jskyzero - 📝 Finish GAME AI
-2021-07-25 - jskyzero - 🚧 update GAME AI
+...
+2021-07-22 - jskyzero - update AI行为树
+2021-07-19 - jskyzero - 📝 update GameAI
+2021-07-19 - jskyzero - add AI 行为树
 
-<em>（本文编写于2021年7月，最后修改于2024年1月，共修改1次。）</em>
+<em>（本文编写于2021年7月，最后修改于2024年1月，共修改27次。）</em>
 
 <img alt="Creative Commons License" src="/assets/img/CC.png">
 
@@ -874,34 +875,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
-    <img id="hits-badge" alt="hits" style="display:none">
+    <img id="hits-badge" alt="hits" data-fallback="/assets/img/hits-unavailable.svg" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
 </footer>
-<script>
-  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
-  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
-  (function () {
-    var img = document.getElementById('hits-badge');
-    if (!img) return;
-    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
-    window[cb] = function (data) {
-      try {
-        var pv = data && data.site_pv;
-        if (pv) {
-          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
-          img.style.display = '';
-        }
-      } finally {
-        delete window[cb];
-      }
-    };
-    var s = document.createElement('script');
-    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
-    document.body.appendChild(s);
-  })();
-</script>
+<script src="/assets/js/hits.js" defer=""></script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#游戏ai与行为树">游戏AI与行为树</a><ul><li><a href="#游戏ai介绍">游戏AI介绍</a><ul><li><a href="#为什么需要ai">为什么需要AI</a></li><li><a href="#学术上的ai">学术上的AI</a></li><li><a href="#ai的部分特征">AI的部分特征</a></li><li><a href="#行为树历史概述">行为树历史概述</a></li><li><a href="#与有限状态机的对比">与有限状态机的对比</a></li></ul></li><li><a href="#行为树基础概念">行为树基础概念</a><ul><li><a href="#数据模型">数据模型</a></li><li><a href="#节点类型">节点类型</a></li><li><a href="#更多节点">更多节点</a></li></ul></li><li><a href="#行为树高级概念">行为树高级概念</a><ul><li><a href="#执行模型">执行模型</a></li><li><a href="#运行节点">运行节点</a></li><li><a href="#打断返回值">打断返回值</a></li><li><a href="#节点中运行与打断">节点中运行与打断</a></li><li><a href="#并行节点">并行节点</a></li></ul></li><li><a href="#动作游戏逻辑示例">动作游戏逻辑示例</a><ul><li><a href="#架构拆分">架构拆分</a></li><li><a href="#行为拆分">行为拆分</a></li></ul></li><li><a href="#ai的设计">AI的设计</a><ul><li><a href="#ooda循环">OODA循环</a></li></ul></li><li><a href="#练习思考参考解答">练习思考参考解答</a></li><li><a href="#本文参考">本文参考</a></li></ul></li></ul></nav>

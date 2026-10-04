@@ -428,11 +428,12 @@ graph TD;
 2021-08-18 - jskyzero - 📝 update 好的编辑器的若干特性
 2021-07-23 - jskyzero - update mermaid
 2021-06-27 - jskyzero - 🚧 format markdown code
-2021-06-25 - jskyzero - 📝 reset playmaker
-2021-06-25 - jskyzero - update  游戏专业概论 &amp; 更新mermaid
-2021-06-23 - jskyzero - 📝 update playmaker
+...
+2021-06-22 - jskyzero - 📝 update playmaker
+2021-06-17 - jskyzero - 📝 update mhr
+2021-06-15 - jskyzero - ✨ add PlayMaker
 
-<em>（本文编写于2021年6月，最后修改于2024年1月，共修改1次。）</em>
+<em>（本文编写于2021年6月，最后修改于2024年1月，共修改24次。）</em>
 
 <img alt="Creative Commons License" src="/assets/img/CC.png">
 
@@ -476,34 +477,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
-    <img id="hits-badge" alt="hits" style="display:none">
+    <img id="hits-badge" alt="hits" data-fallback="/assets/img/hits-unavailable.svg" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
 </footer>
-<script>
-  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
-  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
-  (function () {
-    var img = document.getElementById('hits-badge');
-    if (!img) return;
-    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
-    window[cb] = function (data) {
-      try {
-        var pv = data && data.site_pv;
-        if (pv) {
-          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
-          img.style.display = '';
-        }
-      } finally {
-        delete window[cb];
-      }
-    };
-    var s = document.createElement('script');
-    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
-    document.body.appendChild(s);
-  })();
-</script>
+<script src="/assets/js/hits.js" defer=""></script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#好的编辑器的若干特性">好的编辑器的若干特性</a><ul><li><a href="#工具的必要性">工具的必要性</a></li><li><a href="#评价的维度">评价的维度</a><ul><li><a href="#设计的角度">设计的角度</a></li><li><a href="#需求的角度">需求的角度</a></li></ul></li><li><a href="#好的若干特性">好的若干特性</a><ul><li><a href="#用户侧使用成本低">用户侧：使用成本低</a></li><li><a href="#设计侧表达能力强">设计侧：表达能力强</a></li><li><a href="#实现侧设计优雅">实现侧：设计优雅</a></li></ul></li><li><a href="#总结为游戏开发赋能">总结：为游戏开发赋能</a></li></ul></li></ul></nav>

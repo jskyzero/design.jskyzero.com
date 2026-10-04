@@ -295,7 +295,7 @@
 2019-12-27 - jskzyero - update tag system
 2018-11-27 - jskzyero - re:initial &amp; delete histories
 
-<em>（本文编写于2018年11月，最后修改于2024年10月，共修改2次。）</em>
+<em>（本文编写于2018年11月，最后修改于2024年10月，共修改9次。）</em>
 
 <img alt="Creative Commons License" src="/assets/img/CC.png">
 
@@ -339,34 +339,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
-    <img id="hits-badge" alt="hits" style="display:none">
+    <img id="hits-badge" alt="hits" data-fallback="/assets/img/hits-unavailable.svg" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
 </footer>
-<script>
-  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
-  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
-  (function () {
-    var img = document.getElementById('hits-badge');
-    if (!img) return;
-    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
-    window[cb] = function (data) {
-      try {
-        var pv = data && data.site_pv;
-        if (pv) {
-          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
-          img.style.display = '';
-        }
-      } finally {
-        delete window[cb];
-      }
-    };
-    var s = document.createElement('script');
-    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
-    document.body.appendChild(s);
-  })();
-</script>
+<script src="/assets/js/hits.js" defer=""></script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#the-fish-设计文档">The Fish 设计文档</a><ul><li><a href="#简介">简介</a></li><li><a href="#剧情与关卡">剧情与关卡</a><ul><li><a href="#序章-梦">序章 梦</a></li><li><a href="#第一章-起点">第一章 起点</a></li><li><a href="#第二章-黑暗森林">第二章 黑暗森林</a></li><li><a href="#第三章-断桥">第三章 断桥</a></li><li><a href="#第四章-沙海">第四章 沙海</a></li><li><a href="#第五章-山路">第五章 山路</a></li><li><a href="#第六章-神庙">第六章 神庙</a></li><li><a href="#第七章-黄金钟">第七章 黄金钟</a></li></ul></li><li><a href="#后记">后记</a></li></ul></li></ul></nav>

@@ -7323,11 +7323,12 @@
 2023-07-10 - jskyzero - ✨ almost finish arb
 2023-07-10 - jskyzero - 📝 update ARB
 2023-07-07 - jskyzero - 📝 update FF16
-2023-05-27 - jskyzero - 🚚 re:re:change file folder
-2023-05-27 - jskyzero - add 塞尔达传说王国之泪
-2023-05-27 - jskyzero - 🚚 test change file folder
+...
+2022-11-22 - jskyzero - update 动作设计参考
+2022-09-18 - jskyzero - add 动作设计参考与赏析·BOSS篇
+2022-09-13 - jskyzero - add 动作设计参考与赏析·BOSS篇
 
-<em>（本文编写于2022年9月，最后修改于2026年4月，共修改2次。）</em>
+<em>（本文编写于2022年9月，最后修改于2026年4月，共修改49次。）</em>
 
 <img alt="Creative Commons License" src="/assets/img/CC.png">
 
@@ -7371,34 +7372,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
-    <img id="hits-badge" alt="hits" style="display:none">
+    <img id="hits-badge" alt="hits" data-fallback="/assets/img/hits-unavailable.svg" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
 </footer>
-<script>
-  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
-  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
-  (function () {
-    var img = document.getElementById('hits-badge');
-    if (!img) return;
-    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
-    window[cb] = function (data) {
-      try {
-        var pv = data && data.site_pv;
-        if (pv) {
-          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
-          img.style.display = '';
-        }
-      } finally {
-        delete window[cb];
-      }
-    };
-    var s = document.createElement('script');
-    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
-    document.body.appendChild(s);
-  })();
-</script>
+<script src="/assets/js/hits.js" defer=""></script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#动作设计参考boss篇">动作设计参考·BOSS篇</a><ul><li><a href="#新增">新增</a><ul><li><a href="#装甲核心6">装甲核心6</a></li><li><a href="#狂野之心">狂野之心</a></li><li><a href="#final-fantasy-xvi">Final Fantasy XVI</a></li><li><a href="#战神诸神黄昏">战神诸神黄昏</a></li><li><a href="#塞尔达传说王国之泪">塞尔达传说王国之泪</a></li></ul></li><li><a href="#from-software">From Software</a><ul><li><a href="#恶魔之魂">恶魔之魂</a></li><li><a href="#黑暗灵魂1">黑暗灵魂1</a></li><li><a href="#黑暗灵魂2">黑暗灵魂2</a></li><li><a href="#黑暗灵魂3">黑暗灵魂3</a></li><li><a href="#血源">血源</a></li><li><a href="#只狼">只狼</a></li><li><a href="#艾尔登法环">艾尔登法环</a></li></ul></li><li><a href="#capcom">Capcom</a><ul><li><a href="#怪物猎人">怪物猎人</a></li><li><a href="#怪物猎人世界">怪物猎人世界</a></li><li><a href="#怪物猎人世界冰原">怪物猎人世界冰原</a></li><li><a href="#怪物猎人崛起">怪物猎人崛起</a></li><li><a href="#怪物猎人崛起曙光">怪物猎人崛起曙光</a></li><li><a href="#鬼泣4">鬼泣4</a></li><li><a href="#鬼泣dmc">鬼泣DMC</a></li><li><a href="#鬼泣v">鬼泣V</a></li></ul></li><li><a href="#teamninja">TeamNinja</a><ul><li><a href="#仁王">仁王</a></li><li><a href="#仁王2">仁王2</a></li><li><a href="#最终幻想起源">最终幻想起源</a></li><li><a href="#卧龙">卧龙</a></li></ul></li><li><a href="#横板">横板</a><ul><li><a href="#空洞骑士">空洞骑士</a></li></ul></li><li><a href="#总结">总结</a></li></ul></li></ul></nav>

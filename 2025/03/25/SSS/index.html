@@ -739,10 +739,10 @@
 2025-09-05 - jskyzero - 📝 update SSS
 2025-09-05 - jskyzero - 📝 update SSS
 2025-09-05 - jskyzero - 🎨 add 用于关卡设计
-2025-09-04 - jskyzero - 📝 📝 update SSS
-2025-09-04 - jskyzero - 📝 布局修改
-2025-09-04 - jskyzero - ✨ update SSS
 ...
+2025-03-31 - jskyzero - 📝 update SSS在强调内容的玩法设计
+2025-03-27 - jskyzero - 📝 add SSS在强调玩法的设计
+2025-03-25 - jskyzero - 📝 add 游戏设计的SSS方法
 
 <em>（本文编写于2025年3月，最后修改于2025年9月，共修改54次。）</em>
 
@@ -788,34 +788,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div class="site-footer__badges">
     <img src="https://img.shields.io/github/last-commit/jskyzero/design.jskyzero.com" alt="Last commit">
     <img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jskyzero/2b7d19a42054b8eff6e4b9b228a80079/raw/clarity-stats.json" alt="Clarity sessions">
-    <img id="hits-badge" alt="hits" style="display:none">
+    <img id="hits-badge" alt="hits" data-fallback="/assets/img/hits-unavailable.svg" style="display:none">
     <img src="https://img.shields.io/badge/made with-♥-red" alt="Made with heart">
   </div>
   <p class="site-footer__copyright">© 2017-2026 设计者笔记. All rights reserved.</p>
 </footer>
-<script>
-  // 通过 busuanzi（不蒜子）JSONP 获取站点 PV，动态生成 shields.io 绿色 hits 徽章。
-  // 纯前台实现，无需后端脚本；获取失败时徽章保持隐藏，不影响页面。
-  (function () {
-    var img = document.getElementById('hits-badge');
-    if (!img) return;
-    var cb = 'BusuanziCallback_' + Math.random().toString(36).slice(2);
-    window[cb] = function (data) {
-      try {
-        var pv = data && data.site_pv;
-        if (pv) {
-          img.src = 'https://img.shields.io/badge/hits-' + pv + '-blue';
-          img.style.display = '';
-        }
-      } finally {
-        delete window[cb];
-      }
-    };
-    var s = document.createElement('script');
-    s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb + '&type=site_pv';
-    document.body.appendChild(s);
-  })();
-</script>
+<script src="/assets/js/hits.js" defer=""></script>
 </div>
       </div><aside class="outline-sidebar toc-sidebar" id="toc-sidebar" aria-hidden="true">
           <nav class="toc-nav" aria-label="本文目录"><ul><li><a href="#动作游戏设计的sss方法">动作游戏设计的SSS方法</a><ul><li><a href="#上文方法论及其实操应用">上文：方法论及其实操应用</a><ul><li><a href="#确立基础情形与应对方式">确立基础情形与应对方式</a><ul><li><a href="#题外话-为什么需要总结范式">题外话-为什么需要总结“范式”</a></li><li><a href="#题外话-多种应对与风险回报理论">题外话-多种应对与风险回报理论</a></li><li><a href="#题外话-是先有的情形还是先有的解决">题外话-是先有的“情形”？还是先有的“解决”</a></li></ul></li><li><a href="#根据boss特点补充具体情形">根据BOSS特点补充具体情形</a><ul><li><a href="#题外话独特性的重要性">题外话：独特性的重要性</a></li><li><a href="#题外话从攻击来源来找灵感">题外话：从攻击来源来找灵感</a></li><li><a href="#题外话基础的难度递进方法">题外话：基础的难度递进方法</a></li></ul></li><li><a href="#编排整场战斗流程">编排整场战斗流程</a><ul><li><a href="#题外话从玩家感受角度的流程设计">题外话：从“玩家感受”角度的流程设计</a></li></ul></li><li><a href="#小结与一页设计案">小结与“一页设计案”</a></li></ul></li><li><a href="#下文理论探讨和知识补充">下文：理论探讨和知识补充</a><ul><li><a href="#当sss方法应用于更多场景">当SSS方法应用于更多场景</a><ul><li><a href="#用于流程boss战设计">用于流程BOSS战设计</a></li><li><a href="#用于关卡设计">用于关卡设计</a></li><li><a href="#情形-应对的本质">“情形-应对”的本质</a></li></ul></li><li><a href="#用奖惩导向为玩家控制赋予更多意义">用奖惩导向为玩家控制赋予更多意义</a><ul><li><a href="#奖惩导向让控制-奖励成为循环带来更多乐趣">奖惩导向让“控制-奖励”成为循环带来更多乐趣</a></li><li><a href="#奖惩导向是一个玩法层面的描述并不是游戏的全部">奖惩导向是一个“玩法层面”的描述，并不是游戏的全部</a></li><li><a href="#如何设计奖惩导向">如何设计奖惩导向？</a></li></ul></li><li><a href="#在动作游戏语境下的进一步讨论">在动作游戏语境下的进一步讨论</a><ul><li><a href="#克服困难带来的成就感和困难的必要性讨论">克服困难带来的成就感，和困难的必要性讨论</a></li><li><a href="#决定动作游戏怎么玩的底层逻辑">决定“动作游戏怎么玩”的底层逻辑</a></li><li><a href="#3d动作游戏攻击的避让模型和玩家对策">3D动作游戏攻击的避让模型和玩家对策</a></li><li><a href="#游戏里的第一个敌人和第一次奖惩">游戏里的第一个敌人和第一次奖惩</a></li></ul></li><li><a href="#附录其他游戏设计方法与对比">附录：其他游戏设计方法与对比</a><ul><li><a href="#什么是设计方法论">什么是设计方法论</a></li><li><a href="#普适流程">普适流程</a></li><li><a href="#设计思路">设计思路</a></li><li><a href="#sss方法的特别之处">SSS方法的特别之处</a></li></ul></li></ul></li><li><a href="#全文总结">全文总结</a></li></ul></li></ul></nav>

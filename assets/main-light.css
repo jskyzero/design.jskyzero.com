@@ -809,18 +809,27 @@ a:hover {
     top: 0;
     bottom: 0;
     z-index: 200;
-    width: 100vw;
+    right: 0;
+    width: auto;
     height: 100vh;
+    height: 100dvh;
+    padding-top: max(20px, env(safe-area-inset-top));
+    padding-bottom: max(20px, env(safe-area-inset-bottom));
+    animation: none;
+    visibility: hidden;
+    pointer-events: none;
     box-sizing: border-box;
     transform: translateX(-100%);
     opacity: 0;
     transition: opacity 1s ease;
   }
   .page-wrapper.no-sidebar .sidebar {
-    visibility: visible;
-    pointer-events: auto;
+    visibility: hidden;
+    pointer-events: none;
   }
   .sidebar.open {
+    visibility: visible;
+    pointer-events: auto;
     transform: translateX(0);
     opacity: 1;
   }
@@ -847,6 +856,9 @@ a:hover {
   .sidebar.open + .sidebar-overlay {
     opacity: 1;
     pointer-events: none;
+  }
+  body.sidebar-open .site-header {
+    visibility: hidden;
   }
   .toc-sidebar {
     opacity: 0 !important;
