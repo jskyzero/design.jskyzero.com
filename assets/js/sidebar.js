@@ -9,6 +9,24 @@ function setSidebarOpen(open) {
 }
 
 function initSidebar() {
+  // Safari 的 fixed 元素避免嵌在网格/内容层中；桌面恢复三栏位置。
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.querySelector('.sidebar-overlay');
+  if (!sidebar || !overlay) return;
+  const anchor = document.createComment('sidebar desktop position');
+  sidebar.before(anchor);
+  const media = window.matchMedia('(max-width: 1319px)');
+  function placeSidebar() {
+    setSidebarOpen(false);
+    if (media.matches) {
+      document.body.append(sidebar, overlay);
+    } else {
+      anchor.after(sidebar);
+      sidebar.after(overlay);
+    }
+  }
+  media.addEventListener('change', placeSidebar);
+  placeSidebar();
   document.querySelectorAll('[aria-controls="sidebar"]').forEach((button) => {
     button.addEventListener('click', () => {
       const sidebar = document.getElementById('sidebar');

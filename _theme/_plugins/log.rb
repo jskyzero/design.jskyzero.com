@@ -47,21 +47,18 @@ module Jekyll
       end
 
       # 返回修订记录数组：[{ date, author, message }, ...]
-      # 仅取最近 max_count 条；若历史更长，末尾追加省略标记。
+      # 超出 max_count 时展示最近条目、省略标记和最初 3 条。
       def revisions
         return nil unless is_git_repo?
         return nil if all_revisions.empty?
 
-        if total_count > all_revisions.length
-          all_revisions + [{
-            "date"    => nil,
-            "author"  => nil,
-            "message" => "...",
-            "omitted" => true
-          }]
-        else
-          all_revisions
-        end
+        return all_revisions if all_revisions.length <= max_count
+
+        oldest_count = 3
+        recent_count = [max_count - oldest_count, 1].max
+        all_revisions.first(recent_count) + [{
+          "date" => nil, "author" => nil, "message" => "...", "omitted" => true
+        }] + all_revisions.last(oldest_count)
       end
 
       # 返回修订摘要：首次创建日期、最后修改日期、总次数
@@ -70,7 +67,7 @@ module Jekyll
         return nil if all_revisions.empty?
 
         {
-          "created_at" => created_at,
+          "created_at" => all_revisions.last["date"],
           "updated_at" => all_revisions.first["date"],
           "count" => total_count
         }
@@ -78,26 +75,16 @@ module Jekyll
 
       private
 
-      # 查询完整历史的最早日期，不能使用展示列表中截断后的最后一条。
-      def created_at
-        @created_at ||= begin
-          dates = Executor.sh('git', '-C', site_source, 'log', '--follow',
-                              '--format=%ci', '--', relative_path_from_git_dir)
-          dates.to_s.lines.last&.strip
-        end
-      end
-
       # 最大展示条目数（默认 20）
       def max_count
-        config['max_count'] || 20
+        [config.fetch('max_count', 20).to_i, 4].max
       end
 
-      # 获取最近 max_count 条修订记录（仅用于展示，早停，避免全量拉取）
+      # 获取并缓存完整的重命名历史，展示时再截断
       def all_revisions
         @all_revisions ||= begin
           logs = Executor.sh('git', '-C', site_source, 'log', '--follow',
                 '--pretty=%ci|%an|%s',
-                '--max-count=' + max_count.to_s,
                 '--', relative_path_from_git_dir)
           return [] if logs.nil? || logs.empty?
 
@@ -112,13 +99,9 @@ module Jekyll
         end
       end
 
-      # 总修改次数：用 rev-list --count 精确计数（无 max-count 截断）。
-      # 注意 rev-list 不做 rename 追踪，重命名过的文件计数可能偏小。
+      # 展示、日期和计数共用同一次 --follow 查询，追踪文章移动/重命名。
       def total_count
-        @total_count ||= begin
-          count = Executor.sh('git', '-C', site_source, 'rev-list', '--count', 'HEAD', '--', relative_path_from_git_dir)
-          (count && !count.empty?) ? count.to_i : all_revisions.length
-        end
+        all_revisions.length
       end
 
       # 检查当前目录是否位于 Git 仓库中

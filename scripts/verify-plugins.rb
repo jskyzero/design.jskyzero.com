@@ -16,6 +16,13 @@ article = '_posts/2.游戏AI/2021-07-19-GameAI.md'
 logger = Jekyll::Revision::GitLogger.new(source, article, { 'max_count' => 2 })
 expected = Jekyll::Revision::Executor.sh('git', '-C', source, 'log', '--follow', '--format=%ci', '--', article).lines.last.strip
 verify(logger.summary['created_at'] == expected, 'Creation date must use full history')
+history = Jekyll::Revision::Executor.sh('git', '-C', source, 'log', '--follow', '--format=%ci', '--', article).lines
+verify(logger.summary['count'] == history.length, 'Count must include renamed paths')
+verify(logger.revisions.last(3).map { |rev| rev['date'] } == history.last(3).map(&:strip), 'Keep the oldest three entries after omission')
+verify(logger.revisions.count { |rev| rev['omitted'] } == 1, 'Long history must have one omission marker')
+default_logger = Jekyll::Revision::GitLogger.new(source, article)
+verify(default_logger.revisions.length == 21, 'Default long history displays 17 recent, omission, 3 oldest')
+verify(default_logger.revisions[17]['omitted'], 'Omission follows the recent 17 entries')
 verify(logger.summary['created_at'] != logger.revisions[1]['date'], 'Fixture must exceed display limit')
 disabled = Object.new
 def disabled.config; { 'git_log' => false }; end
